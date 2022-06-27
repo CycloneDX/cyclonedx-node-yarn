@@ -38,7 +38,7 @@ Run to have a proper test suite pass:
 Apply the coding style via:
 
 ```shell
-# .. TODO 
+yarn run cs-fix
 ```
 
 ## Sign your commits

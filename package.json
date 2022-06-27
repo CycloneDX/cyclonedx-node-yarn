@@ -12,6 +12,7 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "cs-fix": "eslint ."
+    "cs-fix": "ts-standard --fix",
+    "test:eslint": "eslint ."
   }
 }

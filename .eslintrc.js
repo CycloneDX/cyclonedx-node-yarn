@@ -4,11 +4,11 @@
  */
 module.exports = {
   extends: 'standard-with-typescript',
-  'parserOptions': {
+  parserOptions: {
     project: './tsconfig.json'
   },
-  "env": {
-    "browser": false,
-    "node": true,
+  env: {
+    browser: false,
+    node: true
   }
 }
