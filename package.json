@@ -1,0 +1,17 @@
+{
+  "name": "@cyclonedx/yarn-plugin",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "^1.0.0",
+    "xmlbuilder2": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "ts-standard": "^11.0.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "cs-fix": "eslint ."
+  }
+}
