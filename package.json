@@ -1,0 +1,29 @@
+{
+  "name": "yarn-plugin-cyclonedx",
+  "main": "./sources/index.js",
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "^4.0.0",
+    "@yarnpkg/cli": "^3",
+    "@yarnpkg/core": "^3"
+  },
+  "peerDependencies": {
+    "@yarnpkg/cli": "^3",
+    "clipanion": "^3",
+    "typanion": "^3"
+  },
+  "devDependencies": {
+    "@types/node": ">=16",
+    "@yarnpkg/builder": "^3",
+    "@yarnpkg/cli": "^3",
+    "clipanion": "^3",
+    "rimraf": "5.0.0",
+    "typanion": "^3"
+  },
+  "scripts": {
+    "t": "yarn CDX 1 2",
+    "build": "builder build plugin",
+    "build:dev": "builder build plugin --no-minify",
+    "clean": "rimraf bundles"
+  }
+}
