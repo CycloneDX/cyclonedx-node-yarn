@@ -1,0 +1,28 @@
+{
+  "name": "yarn-plugin-sbom",
+  "version": "1.0-dev",
+  "license": "Apache-2.0",
+  "main": "./sources/index.ts",
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "^6.3.1",
+    "@yarnpkg/cli": "^4.0.0",
+    "@yarnpkg/core": "^4.0.0",
+    "@yarnpkg/fslib": "^3.0.2",
+    "clipanion": "^4.0.0-rc.2",
+    "spdx-license-ids": "^3.0.17",
+    "xmlbuilder2": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@yarnpkg/builder": "^4.0.0",
+    "rimraf": "5.0.0",
+    "typescript": "5.3.0-beta"
+  },
+  "scripts": {
+    "build": "builder build plugin && yarn sbom --component-type=application --output-file=./sbom.cdx.json && yarn generate-components-licenses",
+    "build:dev": "builder build plugin --no-minify",
+    "clean": "rimraf bundles",
+    "generate-components-licenses": "node generate-components-licenses.mjs > bundles/components-licenses.md"
+  },
+  "packageManager": "yarn@4.1.0"
+}
