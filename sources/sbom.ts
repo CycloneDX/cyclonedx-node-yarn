@@ -44,7 +44,13 @@ export const generateSBOM = async (
   for (const pkgInfo of allDependencies) {
     const component = packageInfoToCycloneComponent(pkgInfo);
     componentModels.set(pkgInfo.package.locatorHash, component);
-    bom.components.add(component);
+    if (pkgInfo.package.locatorHash === workspace.anchoredLocator.locatorHash) {
+      // Set workspace as root component.
+      bom.metadata.component = component;
+      bom.metadata.component.type = outputOptions.componentType;
+    } else {
+      bom.components.add(component);
+    }
   }
   // Add dependencies to models.
   for (const pkgInfo of allDependencies) {
@@ -53,12 +59,6 @@ export const generateSBOM = async (
       component.dependencies.add(componentModels.get(dependencyLocator).bomRef);
     }
   }
-
-  // Set workspace as root component.
-  bom.metadata.component = componentModels.get(
-    workspace.anchoredLocator.locatorHash
-  );
-  bom.metadata.component.type = outputOptions.componentType;
 
   const serializeSpec = spec(outputOptions.specVersion);
   const serializedSBoM = serialize(
