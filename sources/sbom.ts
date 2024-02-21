@@ -27,6 +27,8 @@ export interface OutputOptions {
   /** Output file name. */
   outputFile: PortablePath | typeof stdOutOutput;
   componentType: CDX.Enums.ComponentType;
+  /** If component licenses shall be included. */
+  licenses: boolean;
 }
 
 export const generateSBOM = async (
@@ -38,11 +40,19 @@ export const generateSBOM = async (
   const bom = new CDX.Models.Bom();
   bom.metadata.timestamp = new Date();
 
-  const allDependencies = await traverseWorkspace(project, workspace, config);
+  const allDependencies = await traverseWorkspace(
+    project,
+    workspace,
+    config,
+    outputOptions.licenses
+  );
   const componentModels = new Map<LocatorHash, CDX.Models.Component>();
   // Build models without their dependencies.
   for (const pkgInfo of allDependencies) {
-    const component = packageInfoToCycloneComponent(pkgInfo);
+    const component = packageInfoToCycloneComponent(
+      pkgInfo,
+      outputOptions.licenses
+    );
     componentModels.set(pkgInfo.package.locatorHash, component);
     if (pkgInfo.package.locatorHash === workspace.anchoredLocator.locatorHash) {
       // Set workspace as root component.
@@ -108,7 +118,8 @@ function serialize(
  * @returns Model, but no dependencies set.
  */
 function packageInfoToCycloneComponent(
-  pkgInfo: PackageInfo
+  pkgInfo: PackageInfo,
+  licenses: boolean
 ): CDX.Models.Component {
   const pkg = pkgInfo.package;
   const manifest = pkgInfo.manifest;
@@ -139,6 +150,27 @@ function packageInfoToCycloneComponent(
       )
     );
   }
+  if (licenses) {
+    addLicenseInfo(manifest, pkgInfo, component);
+  }
+
+  const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(pkg);
+  if (devirtualizedLocator.reference.startsWith("npm:")) {
+    component.purl = npmPurlFactory.makeFromComponent(component);
+  } else {
+    // TODO Handle other Yarn protocols. How to convert them?
+  }
+  return component;
+}
+
+/**
+ * Adds license data to component if available.
+ */
+function addLicenseInfo(
+  manifest: Manifest,
+  pkgInfo: PackageInfo,
+  component: CDX.Models.Component
+) {
   if (manifest.license && !manifest.license.includes("SEE LICENSE")) {
     const license = licenseFactory.makeFromString(manifest.license);
     if (
@@ -150,16 +182,8 @@ function packageInfoToCycloneComponent(
     }
     component.licenses.add(license);
   } else {
-    attemptFallbackLicense(manifest, pkg, component);
+    attemptFallbackLicense(manifest, pkgInfo.package, component);
   }
-
-  const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(pkg);
-  if (devirtualizedLocator.reference.startsWith("npm:")) {
-    component.purl = npmPurlFactory.makeFromComponent(component);
-  } else {
-    // TODO Handle other Yarn protocols. How to convert them?
-  }
-  return component;
 }
 
 /**

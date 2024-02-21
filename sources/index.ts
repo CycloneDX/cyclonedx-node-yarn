@@ -15,27 +15,28 @@ class SBOMCommand extends BaseCommand {
   static readonly paths = [["sbom"]];
 
   static readonly usage: Usage = Command.Usage({
-    description: `Generates CycloneDX SBoM file for current workspace.`,
+    description: `Generates CycloneDX SBOM file for current workspace.`,
     details: `
-    Recursively scan workspace dependencies and emits them as SBoM file in CycloneDX's JSON format.
+    Recursively scan workspace dependencies and emits them as SBOM file in CycloneDX's JSON format.
     `,
     examples: [
       [
-        `Generate SBoM in JSON format for all dependencies and write it to standard output.`,
+        `Generate SBOM in JSON format for all dependencies and write it to standard output.`,
         `$0 sbom`,
       ],
       [
-        `Generate SBoM in JSON format for all dependencies and write it to standard output.`,
+        `Generate SBOM in JSON format for all dependencies and write it to standard output.`,
         `$0 sbom --component-type=library`,
       ],
       [
-        `Generate SBoM in JSON format for runtime dependencies but omit development dependencies.`,
+        `Generate SBOM in JSON format for runtime dependencies but omit development dependencies.`,
         `$0 sbom --component-type=application --output-file ./sbom-prod.cdx.json --production`,
       ],
       [
-        `Generate SBoM in XML format for runtime dependencies but omit development dependencies.`,
+        `Generate SBOM in XML format for runtime dependencies but omit development dependencies.`,
         `$0 sbom --component-type=application --output-file ./sbom-prod.cdx.json --output-format=XML --production`,
       ],
+      [`Generate SBOM with component licenses.`, `$0 sbom --licenses`],
     ],
   });
 
@@ -62,9 +63,15 @@ class SBOMCommand extends BaseCommand {
   });
 
   componentType = Option.String("--component-type", {
-    description: `Type of component described by the generated SBoM. (choices: "application", "framework", "library", "container", "platform", "device-driver")
+    description: `Type of component described by the generated SBOM. (choices: "application", "framework", "library", "container", "platform", "device-driver")
       
       Default: application`,
+  });
+
+  licenses = Option.Boolean(`--licenses`, false, {
+    description: `Include license information for components in generated SBOM. License information will always be absent for components that don't specify licenses unambigously.
+
+      Default: Licenses are not included in the SBOM.`,
   });
 
   async execute() {
@@ -90,6 +97,7 @@ class SBOMCommand extends BaseCommand {
       outputFormat: parseOutputFormat(this.outputFormat),
       outputFile: parseOutputFile(workspace.cwd, this.outputFile),
       componentType: parseComponenttype(this.componentType),
+      licenses: this.licenses,
     });
   }
 }

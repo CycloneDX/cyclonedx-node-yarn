@@ -19,7 +19,7 @@
     "typescript": "5.3.0-beta"
   },
   "scripts": {
-    "build": "builder build plugin && yarn sbom --output-file=./sbom.cdx.json && yarn generate-components-licenses",
+    "build": "builder build plugin && yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
     "build:dev": "builder build plugin --no-minify",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node generate-components-licenses.mjs > bundles/components-licenses.md"

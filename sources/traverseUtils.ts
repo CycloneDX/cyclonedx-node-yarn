@@ -25,7 +25,8 @@ export interface PackageInfo {
 export const traverseWorkspace = async (
   project: Project,
   workspace: Workspace,
-  config: Configuration
+  config: Configuration,
+  licenses: boolean
 ): Promise<Set<PackageInfo>> => {
   // Instantiate fetcher to be able to retrieve package manifest. Conversion to CycloneDX model needs this later.
   const cache = await Cache.find(config);
@@ -65,10 +66,12 @@ export const traverseWorkspace = async (
       manifest = await Manifest.find(fetchResult.prefixPath, {
         baseFs: fetchResult.packageFs,
       });
-      licenseFileContent = readLicenseFile(
-        fetchResult.prefixPath,
-        fetchResult.packageFs
-      );
+      if (licenses) {
+        licenseFileContent = readLicenseFile(
+          fetchResult.prefixPath,
+          fetchResult.packageFs
+        );
+      }
     } finally {
       fetchResult.releaseFs?.();
     }
