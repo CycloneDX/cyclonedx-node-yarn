@@ -29,6 +29,7 @@ export interface OutputOptions {
   componentType: CDX.Enums.ComponentType;
   /** If component licenses shall be included. */
   licenses: boolean;
+  reproducible: boolean;
 }
 
 export const generateSBOM = async (
@@ -38,7 +39,9 @@ export const generateSBOM = async (
   outputOptions: OutputOptions
 ) => {
   const bom = new CDX.Models.Bom();
-  bom.metadata.timestamp = new Date();
+  if (!outputOptions.reproducible) {
+    bom.metadata.timestamp = new Date();
+  }
 
   const allDependencies = await traverseWorkspace(
     project,
@@ -99,13 +102,16 @@ function serialize(
       );
       return serializer.serialize(bom, {
         space: 2,
+        sortLists: true,
       });
     }
     case CDX.Spec.Format.XML: {
       const serializer = new CDX.Serialize.XmlSerializer(
         new CDX.Serialize.XML.Normalize.Factory(serializeSpec)
       );
-      const e = serializer.normalizerFactory.makeForBom().normalize(bom, {});
+      const e = serializer.normalizerFactory.makeForBom().normalize(bom, {
+        sortLists: true,
+      });
       // CycloneDX's XML serializer cannot find its xmlbuilder2 dependency, at least when bundled as Yarn plugin.
       // Therefore convert here which is hopefully close enough.
       const doc = create();

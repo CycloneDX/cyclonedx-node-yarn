@@ -74,6 +74,12 @@ class SBOMCommand extends BaseCommand {
       Default: Licenses are not included in the SBOM.`,
   });
 
+  reproducible = Option.Boolean(`--reproducible`, false, {
+    description: `Omit anything random or time-based from SBOM. If enabled consecutive runs of will result in identical files.
+      
+      Default: false`,
+  });
+
   async execute() {
     const configuration = await Configuration.find(
       this.context.cwd,
@@ -98,6 +104,7 @@ class SBOMCommand extends BaseCommand {
       outputFile: parseOutputFile(workspace.cwd, this.outputFile),
       componentType: parseComponenttype(this.componentType),
       licenses: this.licenses,
+      reproducible: this.reproducible,
     });
   }
 }
