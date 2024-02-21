@@ -1,7 +1,7 @@
 # Components of yarn-plugin-sbom
 Version 1.0-dev
 
-Based on SBOM from 2024-02-21T20:38:28.508Z
+Based on SBOM from 2024-02-21T21:08:11.478Z
 
 ## Component of abbrev
 Version 1.1.1

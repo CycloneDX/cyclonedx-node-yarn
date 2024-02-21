@@ -58,6 +58,7 @@ export const generateSBOM = async (
       // Set workspace as root component.
       bom.metadata.component = component;
       bom.metadata.component.type = outputOptions.componentType;
+      bom.metadata.tools.add(component);
     } else {
       bom.components.add(component);
     }
