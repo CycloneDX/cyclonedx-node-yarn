@@ -22,7 +22,11 @@ class SBOMCommand extends BaseCommand {
     examples: [
       [
         `Generate SBoM in JSON format for all dependencies and write it to standard output.`,
-        `$0 sbom --component-type=application`,
+        `$0 sbom`,
+      ],
+      [
+        `Generate SBoM in JSON format for all dependencies and write it to standard output.`,
+        `$0 sbom --component-type=library`,
       ],
       [
         `Generate SBoM in JSON format for runtime dependencies but omit development dependencies.`,
@@ -36,27 +40,31 @@ class SBOMCommand extends BaseCommand {
   });
 
   specVersion = Option.String("--spec-version", {
-    description:
-      'Which version of CycloneDX spec to use. (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")',
+    description: `Which version of CycloneDX spec to use.
+
+      (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")`,
   });
 
   outputFormat = Option.String("--output-format", {
-    description:
-      'Which output format to use. (choices: "JSON", "XML", default: "JSON")',
+    description: `Which output format to use.
+
+      (choices: "JSON", "XML", default: "JSON")`,
   });
 
   outputFile = Option.String(`--output-file`, {
-    description: `Path to the output file. Set to "-" to write to STDOUT. (default: write to STDOUT)`,
+    description: `Path to the output file. Set to "-" to write to STDOUT.
+
+      (default: write to STDOUT)`,
   });
 
-  production = Option.Boolean(`--production`, false, {
-    description: `Exclude development dependencies`,
+  production = Option.Boolean(`--production,--prod`, false, {
+    description: `Exclude development dependencies.`,
   });
 
   componentType = Option.String("--component-type", {
-    description:
-      'Type of component described by the generated SBoM. (choices: "application", "framework", "library", "container", "platform", "device-driver")',
-    required: true,
+    description: `Type of component described by the generated SBoM. (choices: "application", "framework", "library", "container", "platform", "device-driver")
+      
+      Default: application`,
   });
 
   async execute() {
@@ -130,7 +138,11 @@ function parseOutputFile(
 }
 
 function parseComponenttype(componentType: string): CDX.Enums.ComponentType {
-  if (Object.values(CDX.Enums.ComponentType).includes(componentType as any)) {
+  if (!componentType) {
+    return CDX.Enums.ComponentType.Application;
+  } else if (
+    Object.values(CDX.Enums.ComponentType).includes(componentType as any)
+  ) {
     return componentType as CDX.Enums.ComponentType;
   } else {
     throw new Error(
