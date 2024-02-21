@@ -1,7 +1,7 @@
 # Components of yarn-plugin-sbom
 Version 1.0-dev
 
-Based on SBOM from 2024-02-20T21:21:30.644Z
+Based on SBOM from 2024-02-21T19:18:15.473Z
 
 ## Component of abbrev
 Version 1.1.1
@@ -174,62 +174,6 @@ Source code: [git+https://github.com/ajv-validator/ajv-formats.git](git+https://
 MIT License
 
 Copyright (c) 2020 Evgeny Poberezkin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
-## Component of ajv-formats
-Version 2.1.1
-Website: [https://github.com/ajv-validator/ajv-formats#readme](https://github.com/ajv-validator/ajv-formats#readme)
-Source code: [git+https://github.com/ajv-validator/ajv-formats.git](git+https://github.com/ajv-validator/ajv-formats.git)
-
-MIT License
-
-Copyright (c) 2020 Evgeny Poberezkin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
-## Component of ajv-formats-draft2019
-Version 1.6.1
-
-MIT License
-
-Copyright (c) 2020 Carlo Q
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -988,14 +932,6 @@ Source code: [https://github.com/arcanis/clipanion](https://github.com/arcanis/c
 License: [MIT](https://spdx.org/licenses/MIT.html)
 
 
-## Component of clipanion
-Version 4.0.0-rc.3
-Website: [https://mael.dev/clipanion/](https://mael.dev/clipanion/)
-Source code: [https://github.com/arcanis/clipanion](https://github.com/arcanis/clipanion)
-
-License: [MIT](https://spdx.org/licenses/MIT.html)
-
-
 ## Component of clone-response
 Version 1.0.3
 Source code: [git+https://github.com/sindresorhus/clone-response.git](git+https://github.com/sindresorhus/clone-response.git)
@@ -1299,33 +1235,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-
-## Component of debug
-Version 4.3.4
-Source code: [git://github.com/debug-js/debug.git](git://github.com/debug-js/debug.git)
-
-(The MIT License)
-
-Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
-Copyright (c) 2018-2021 Josh Junon
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-and associated documentation files (the 'Software'), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial
-portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 
 
 
@@ -3026,36 +2935,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-## Component of ink
-Version 3.2.0
-
-MIT License
-
-Copyright (c) Vadim Demedes <vdemedes@gmail.com> (github.com/vadimdemedes)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-## Component of ink-text-input
-Version 4.0.3
-
-MIT License
-
-Copyright (c) Vadim Demedes <vdemedes@gmail.com> (github.com/vadimdemedes)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
 ## Component of ink-text-input
 Version 4.0.3
 
@@ -4350,36 +4229,6 @@ SOFTWARE.
 
 
 
-## Component of node-fetch
-Version 2.7.0
-Website: [https://github.com/bitinn/node-fetch](https://github.com/bitinn/node-fetch)
-Source code: [https://github.com/bitinn/node-fetch.git](https://github.com/bitinn/node-fetch.git)
-
-The MIT License (MIT)
-
-Copyright (c) 2016 David Frank
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
-
 ## Component of node-gyp
 Version 10.0.1
 Source code: [git://github.com/nodejs/node-gyp.git](git://github.com/nodejs/node-gyp.git)
@@ -5151,35 +5000,6 @@ License: [MIT](https://spdx.org/licenses/MIT.html)
 
 ## Component of react-is
 Version 16.13.1
-Website: [https://reactjs.org/](https://reactjs.org/)
-Source code: [https://github.com/facebook/react.git](https://github.com/facebook/react.git)
-
-MIT License
-
-Copyright (c) Facebook, Inc. and its affiliates.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
-## Component of react-reconciler
-Version 0.26.2
 Website: [https://reactjs.org/](https://reactjs.org/)
 Source code: [https://github.com/facebook/react.git](https://github.com/facebook/react.git)
 
@@ -6868,34 +6688,6 @@ SOFTWARE.
 
 
 
-## Component of ws
-Version 7.5.9
-Website: [https://github.com/websockets/ws](https://github.com/websockets/ws)
-
-The MIT License (MIT)
-
-Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
 ## Component of xmlbuilder2
 Version 3.1.1
 Website: [http://github.com/oozcitak/xmlbuilder2](http://github.com/oozcitak/xmlbuilder2)
@@ -8324,22 +8116,8 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/cli
-Version 4.1.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/core
 Version 4.0.3
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/extensions
-Version 2.0.1
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8361,20 +8139,6 @@ License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 ## Component of @yarnpkg/libui
 Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/libui
-Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/libzip
-Version 3.0.1
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8408,29 +8172,8 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-compat
-Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-constraints
 Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-constraints
-Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-dlx
-Version 4.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8450,28 +8193,7 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-essentials
-Version 4.1.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-exec
-Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-exec
-Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-file
 Version 3.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
@@ -8492,29 +8214,8 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-git
-Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-github
 Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-github
-Version 3.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-http
-Version 3.0.1
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8534,29 +8235,8 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-init
-Version 4.0.1
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-interactive-tools
 Version 4.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-interactive-tools
-Version 4.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-link
-Version 3.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8576,20 +8256,6 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-nm
-Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-npm
-Version 3.0.1
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-npm
 Version 3.0.1
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
@@ -8599,20 +8265,6 @@ License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 ## Component of @yarnpkg/plugin-npm-cli
 Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-npm-cli
-Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-pack
-Version 4.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8652,49 +8304,8 @@ SOFTWARE.
 
 
 
-## Component of @yarnpkg/plugin-patch
-Version 4.0.1
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-Original work Copyright (c) 2017 David Sheldrick
-Modified work Copyright (c) 2019 Maël Nison 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-
 ## Component of @yarnpkg/plugin-pnp
 Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-pnp
-Version 4.0.2
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-pnpm
-Version 2.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
@@ -8714,20 +8325,6 @@ Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnp
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 
-## Component of @yarnpkg/plugin-stage
-Version 4.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-typescript
-Version 4.0.0
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
 ## Component of @yarnpkg/plugin-typescript
 Version 4.0.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
@@ -8737,20 +8334,6 @@ License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
 
 ## Component of @yarnpkg/plugin-version
 Version 4.0.1
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-version
-Version 4.0.1
-Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
-
-License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)
-
-
-## Component of @yarnpkg/plugin-workspace-tools
-Version 4.1.0
 Source code: [ssh://git@github.com/yarnpkg/berry.git](ssh://git@github.com/yarnpkg/berry.git)
 
 License: [BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)

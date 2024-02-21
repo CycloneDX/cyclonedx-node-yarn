@@ -7,7 +7,6 @@ import {
   Project,
   ThrowReport,
   Workspace,
-  structUtils,
 } from "@yarnpkg/core";
 import { FakeFS, PortablePath, ppath } from "@yarnpkg/fslib";
 
@@ -80,10 +79,6 @@ export const traverseWorkspace = async (
       licenseFileContent,
     };
     seen.set(hash, packageInfo);
-
-    if (structUtils.isVirtualLocator(pkg)) {
-      pass.push(structUtils.devirtualizeLocator(pkg).locatorHash);
-    }
 
     // pkg.dependencies has dependencies+peerDependencies for transitve dependencies but not their devDependencies.
     for (const dependency of pkg.dependencies.values()) {
