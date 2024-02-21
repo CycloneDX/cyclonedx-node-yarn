@@ -159,6 +159,7 @@ function packageInfoToCycloneComponent(
     component.purl = npmPurlFactory.makeFromComponent(component);
   } else {
     // TODO Handle other Yarn protocols. How to convert them?
+    // Default protocols are listed on https://yarnpkg.com/protocols of which the git protocol could be represented as PURL.
   }
   return component;
 }
