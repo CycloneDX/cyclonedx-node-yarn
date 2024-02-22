@@ -10,6 +10,7 @@ console.log(`# Components of ${formatNameVersion(sbom.metadata.component)}`);
 printVersion(sbom.metadata.component);
 printWebsite(sbom.metadata.component, "website", "Website");
 printWebsite(sbom.metadata.component, "vcs", "Source code");
+printLicenseInfo(sbom.metadata.component);
 console.log();
 console.log(`Based on SBOM from ${sbom.metadata.timestamp}`);
 
