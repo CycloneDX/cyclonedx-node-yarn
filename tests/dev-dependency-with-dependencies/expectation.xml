@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
+  <metadata xmlns="">
+    <tools>
+      <tool>
+        <name>dev-dependency-with-dependencies</name>
+        <version>0.0.1</version>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="cd56053c0bd49371ba0556d4c29fb53983c397bd2fb297f419f3427e3199b9b4f166eb90f985ea09c71c75b2ff0819b2afa9c21031ac51a28a8f50b8201a7478">
+      <name>dev-dependency-with-dependencies</name>
+      <version>0.0.1</version>
+    </component>
+  </metadata>
+  <components xmlns="">
+    <component type="library" bom-ref="0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad">
+      <author>Sindre Sorhus</author>
+      <name>is-fullwidth-code-point</name>
+      <version>1.0.0</version>
+      <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+      <purl>pkg:npm/is-fullwidth-code-point@1.0.0?</purl>
+    </component>
+    <component type="library" bom-ref="37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12">
+      <author>Sindre Sorhus</author>
+      <name>code-point-at</name>
+      <version>1.1.0</version>
+      <description>ES2015 `String#codePointAt()` ponyfill</description>
+      <purl>pkg:npm/code-point-at@1.1.0?</purl>
+    </component>
+    <component type="library" bom-ref="6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22">
+      <author>Sindre Sorhus</author>
+      <name>strip-ansi</name>
+      <version>3.0.1</version>
+      <description>Strip ANSI escape codes</description>
+      <purl>pkg:npm/strip-ansi@3.0.1?</purl>
+    </component>
+    <component type="library" bom-ref="845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f">
+      <author>Sindre Sorhus</author>
+      <name>number-is-nan</name>
+      <version>1.0.1</version>
+      <description>ES2015 Number.isNaN() ponyfill</description>
+      <purl>pkg:npm/number-is-nan@1.0.1?</purl>
+    </component>
+    <component type="library" bom-ref="877a267836875fa8456cf9931da5cf1ec09a8d087612f93c795cd1d33bfeb06105aec6a787f8c26147098ee826a8ccd5fb843de6f1bf92b4a9a0bfb2cdb883ef">
+      <author>Sindre Sorhus</author>
+      <name>string-width</name>
+      <version>1.0.0</version>
+      <description>Get the visual width of a string - the number of columns required to display it</description>
+      <purl>pkg:npm/string-width@1.0.0?</purl>
+    </component>
+    <component type="library" bom-ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b">
+      <name>lodash-es</name>
+      <version>4.17.21</version>
+      <description>Lodash exported as ES modules.</description>
+      <purl>pkg:npm/lodash-es@4.17.21?</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://lodash.com/custom-builds</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36">
+      <name>chalk</name>
+      <version>5.3.0</version>
+      <description>Terminal string styling done right</description>
+      <purl>pkg:npm/chalk@5.3.0?</purl>
+    </component>
+    <component type="library" bom-ref="ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122">
+      <author>Sindre Sorhus</author>
+      <name>ansi-regex</name>
+      <version>2.1.1</version>
+      <description>Regular expression for matching ANSI escape codes</description>
+      <purl>pkg:npm/ansi-regex@2.1.1?</purl>
+    </component>
+  </components>
+  <dependencies xmlns="">
+    <dependency ref="0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad">
+      <dependency ref="845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f"/>
+    </dependency>
+    <dependency ref="37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12"/>
+    <dependency ref="6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22">
+      <dependency ref="ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122"/>
+    </dependency>
+    <dependency ref="845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f"/>
+    <dependency ref="877a267836875fa8456cf9931da5cf1ec09a8d087612f93c795cd1d33bfeb06105aec6a787f8c26147098ee826a8ccd5fb843de6f1bf92b4a9a0bfb2cdb883ef">
+      <dependency ref="0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad"/>
+      <dependency ref="37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12"/>
+      <dependency ref="6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22"/>
+    </dependency>
+    <dependency ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"/>
+    <dependency ref="cd56053c0bd49371ba0556d4c29fb53983c397bd2fb297f419f3427e3199b9b4f166eb90f985ea09c71c75b2ff0819b2afa9c21031ac51a28a8f50b8201a7478">
+      <dependency ref="877a267836875fa8456cf9931da5cf1ec09a8d087612f93c795cd1d33bfeb06105aec6a787f8c26147098ee826a8ccd5fb843de6f1bf92b4a9a0bfb2cdb883ef"/>
+      <dependency ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"/>
+      <dependency ref="d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36"/>
+    </dependency>
+    <dependency ref="d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36"/>
+    <dependency ref="ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122"/>
+  </dependencies>
+</bom>
