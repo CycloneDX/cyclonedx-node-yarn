@@ -37,55 +37,38 @@ function executeTest(testDir) {
     throw new Error(`Failed to import plugin in ${testExecutionDir}`);
   }
 
-  generateAndCompare(
-    testExecutionDir,
-    "JSON",
-    "sbom.cdx.json",
-    "expectation.json"
-  );
-  generateAndCompare(
-    testExecutionDir,
-    "XML",
-    "sbom.cdx.xml",
-    "expectation.xml"
-  );
+  generateAndCompare(testExecutionDir);
 
   // Cleanup since no test failure.
   fs.rmSync(testExecutionDir, { recursive: true });
   console.log(`Testing ${testDir} completed without errors`);
 }
 
-function generateAndCompare(
-  testExecutionDir,
-  outputFormat,
-  generatedFileName,
-  expectationFileName
-) {
-  const sbomJsonResult = spawnSync(
-    "yarn",
-    [
-      "sbom",
-      "--reproducible",
-      "--output-file=" + generatedFileName,
-      "--output-format=" + outputFormat,
-    ],
-    {
+function generateAndCompare(testExecutionDir) {
+  const testParams = JSON.parse(
+    fs.readFileSync(path.join(testExecutionDir, "test-parameters.json"))
+  );
+  for (const testParam of testParams) {
+    console.log(` Running test ${JSON.stringify(testParam)}`);
+    const sbomJsonResult = spawnSync("yarn", testParam.parameters, {
       cwd: testExecutionDir,
       stdio: "pipe",
       shell: true,
+    });
+    if (sbomJsonResult.status !== 0) {
+      throw new Error(`Failed generate JSON SBOM in ${testExecutionDir}`);
     }
-  );
-  if (sbomJsonResult.status !== 0) {
-    throw new Error(`Failed generate JSON SBOM in ${testExecutionDir}`);
-  }
 
-  const pathExpected = path.join(testExecutionDir, expectationFileName);
-  const expectation = fs.readFileSync(pathExpected).toString().trim();
-  const pathActual = path.join(testExecutionDir, generatedFileName);
-  const actualSBOM = fs.readFileSync(pathActual).toString().trim();
-  if (expectation !== actualSBOM) {
-    throw new Error(
-      `Generated file ${pathActual} different from ${pathExpected}.`
-    );
+    const pathExpected = path.join(testExecutionDir, testParam.expectedResult);
+    const expectation = fs.readFileSync(pathExpected).toString().trim();
+    const generatedFileName =
+      testParam.parameters[testParam.parameters.indexOf("--output-file") + 1];
+    const pathActual = path.join(testExecutionDir, generatedFileName);
+    const actualSBOM = fs.readFileSync(pathActual).toString().trim();
+    if (expectation !== actualSBOM) {
+      throw new Error(
+        `Generated file ${pathActual} different from ${pathExpected}.`
+      );
+    }
   }
 }

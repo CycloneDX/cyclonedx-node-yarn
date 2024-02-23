@@ -7,6 +7,7 @@
         "lodash-es": "^4.17.21"
     },
     "devDependencies": {
+        "piscina": "4.1.0",
         "string-width": "1.0.0"
     }
 }

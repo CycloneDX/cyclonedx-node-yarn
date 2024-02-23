@@ -1,0 +1,32 @@
+[
+  {
+    "parameters": [
+      "sbom",
+      "--reproducible",
+      "--output-file",
+      "sbom.cdx.json"
+    ],
+    "expectedResult": "expectation.json"
+  },
+  {
+    "parameters": [
+      "sbom",
+      "--reproducible",
+      "--licenses",
+      "--output-file",
+      "sbom-with-licenses.cdx.json"
+    ],
+    "expectedResult": "expectation-with-licenses.json"
+  },
+  {
+    "parameters": [
+      "sbom",
+      "--reproducible",
+      "--output-file",
+      "sbom.cdx.xml",
+      "--output-format",
+      "XML"
+    ],
+    "expectedResult": "expectation.xml"
+  }
+]

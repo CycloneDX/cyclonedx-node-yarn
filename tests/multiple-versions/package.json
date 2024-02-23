@@ -1,0 +1,9 @@
+{
+    "name": "multiple-versions",
+    "version": "0.0.1",
+    "packageManager": "yarn@4.1.0",
+    "dependencies": {
+        "inquirer": "^9.2.15",
+        "ora": "5.4.1"
+    }
+}
