@@ -1,4 +1,4 @@
-# yarn-plugin-sbom
+# CycloneDX SBOM plugin for yarn
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[Yarn]_ projects.
 
