@@ -52,7 +52,7 @@ function generateAndCompare(testExecutionDir) {
     console.log(` Running test ${JSON.stringify(testParam)}`);
     const sbomJsonResult = spawnSync("yarn", testParam.parameters, {
       cwd: testExecutionDir,
-      stdio: "pipe",
+      stdio: "inherit",
       shell: true,
     });
     if (sbomJsonResult.status !== 0) {

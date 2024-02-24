@@ -26,7 +26,7 @@ export const traverseWorkspace = async (
   project: Project,
   workspace: Workspace,
   config: Configuration,
-  licenses: boolean
+  extractLicenses: boolean
 ): Promise<Set<PackageInfo>> => {
   // Instantiate fetcher to be able to retrieve package manifest. Conversion to CycloneDX model needs this later.
   const cache = await Cache.find(config);
@@ -40,22 +40,27 @@ export const traverseWorkspace = async (
     cacheOptions: { skipIntegrityCheck: true },
   };
 
-  const initialHash = workspace.anchoredLocator.locatorHash;
+  const workspaceHash = workspace.anchoredLocator.locatorHash;
 
-  const seen = new Map<LocatorHash, PackageInfo>();
+  /** Packages that have been added to allPackages. */
+  const seen = new Set<LocatorHash>();
+  const allPackages = new Set<PackageInfo>();
   /** Resolved dependencies that still need processing to find their dependencies. */
-  const pass = [initialHash];
+  const pending = [workspaceHash];
 
-  while (pass.length > 0) {
-    const hash = pass.shift()!;
-    if (seen.has(hash)) {
-      continue;
+  while (true) {
+    // pop to take most recently added job which traverses packages in depth-first style.
+    // Doing probably results in smaller 'pending' array which makes includes-search cheaper below.
+    const hash = pending.pop();
+    if (hash === undefined) {
+      // Nothing left to do as undefined value means no more item was in 'pending' array.
+      break;
     }
 
     const pkg = project.storedPackages.get(hash);
-    if (typeof pkg === `undefined`) {
+    if (pkg === undefined) {
       throw new Error(
-        `Assertion failed: Expected the package to be registered`
+        `All package locator hashes should be resovable for consistent lockfiles.`
       );
     }
 
@@ -66,7 +71,7 @@ export const traverseWorkspace = async (
       manifest = await Manifest.find(fetchResult.prefixPath, {
         baseFs: fetchResult.packageFs,
       });
-      if (licenses) {
+      if (extractLicenses) {
         licenseFileContent = readLicenseFile(
           fetchResult.prefixPath,
           fetchResult.packageFs
@@ -81,7 +86,8 @@ export const traverseWorkspace = async (
       dependencies: new Set(),
       licenseFileContent,
     };
-    seen.set(hash, packageInfo);
+    seen.add(hash);
+    allPackages.add(packageInfo);
 
     // pkg.dependencies has dependencies+peerDependencies for transitve dependencies but not their devDependencies.
     for (const dependency of pkg.dependencies.values()) {
@@ -90,16 +96,18 @@ export const traverseWorkspace = async (
       );
       if (typeof resolution === `undefined`) {
         throw new Error(
-          `Assertion failed: Expected the resolution to be registered`
+          `All package descriptor hashes should be resolvable for consistent lockfiles.`
         );
       }
-
-      pass.push(resolution);
       packageInfo.dependencies.add(resolution);
+
+      if (!seen.has(resolution) && !pending.includes(resolution)) {
+        pending.push(resolution);
+      }
     }
   }
 
-  return new Set(seen.values());
+  return allPackages;
 };
 
 const fileNameOptions = ["license", "licence", "unlicense", "unlicence"];
