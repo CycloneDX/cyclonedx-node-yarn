@@ -274,11 +274,8 @@ function convertXML(
   }
 }
 
-type SupportedSpec =
-  | typeof CDX.Spec.Spec1dot2
-  | typeof CDX.Spec.Spec1dot3
-  | typeof CDX.Spec.Spec1dot4
-  | typeof CDX.Spec.Spec1dot5;
+type ValueOf<T> = T[keyof T];
+type SupportedSpec = ValueOf<typeof CDX.Spec.SpecVersionDict> & object;
 function spec(specVersion: CDX.Spec.Version): SupportedSpec {
   switch (specVersion) {
     case CDX.Spec.Version.v1dot2:
