@@ -68,9 +68,11 @@ export const generateSBOM = async (
   }
   // Add dependencies to models.
   for (const pkgInfo of allDependencies) {
-    const component = componentModels.get(pkgInfo.package.locatorHash);
+    const component = componentModels.get(pkgInfo.package.locatorHash)!;
     for (const dependencyLocator of pkgInfo.dependencies) {
-      component.dependencies.add(componentModels.get(dependencyLocator).bomRef);
+      component.dependencies.add(
+        componentModels.get(dependencyLocator)!.bomRef
+      );
     }
   }
 
@@ -260,7 +262,7 @@ function convertXML(
   );
   if (["string", "number"].includes(typeof e.children)) {
     newParent.txt(String(e.children));
-  } else if (e.children?.[Symbol.iterator]) {
+  } else if ((e.children as any)?.[Symbol.iterator]) {
     for (const c of e.children as Iterable<
       | CDX.Serialize.XML.Types.SimpleXml.Comment
       | CDX.Serialize.XML.Types.SimpleXml.Element
@@ -297,11 +299,11 @@ function spec(specVersion: CDX.Spec.Version): SupportedSpec {
 function packageVersionWithManifestFallback(
   pkg: Package,
   manifest: Manifest
-): string {
+): string | undefined {
   // Yarn sets '0.0.0' for the root package for whatever reason. Also, packages references by local hardlinks don't result in expected versions.
   // These cases are replaces by version from the manifest under the assumption that the SBOM should reflect the current state.
-  if (["0.0.0", "0.0.0-use.local"].includes(pkg.version)) {
-    return manifest.version;
+  if (pkg.version && ["0.0.0", "0.0.0-use.local"].includes(pkg.version)) {
+    return manifest.version ?? undefined;
   } else {
     return pkg.version ?? undefined;
   }

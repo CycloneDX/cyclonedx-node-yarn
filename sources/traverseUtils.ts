@@ -66,7 +66,7 @@ export const traverseWorkspace = async (
 
     const fetchResult = await fetcher.fetch(pkg, fetcherOptions);
     let manifest: Manifest;
-    let licenseFileContent: string;
+    let licenseFileContent: string | undefined;
     try {
       manifest = await Manifest.find(fetchResult.prefixPath, {
         baseFs: fetchResult.packageFs,
@@ -116,7 +116,7 @@ const fileNameOptionsStart = fileNameOptions.map((name) => name + ".");
 function readLicenseFile(
   packageRoot: PortablePath,
   packageFs: FakeFS<PortablePath>
-): string {
+): string | undefined {
   const files = packageFs.readdirSync(packageRoot).filter((f) => {
     const lowerFileName = f.toLocaleLowerCase();
     return (
