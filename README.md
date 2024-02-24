@@ -18,6 +18,8 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) file first.
 
 ## Usage
 
+Run `yarn build:dev` or `yarn build` to create bundle. Then import the bundle into your project using `yarn import ...`.
+
 ```
 Generates CycloneDX SBOM file for current workspace.
 

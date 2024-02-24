@@ -1,5 +1,7 @@
 /**
  * This script is intended to be used with this repository only.
+ *
+ * It generates the /bundles/component-licenses.md file which contains a listing of all dependencies and their licenses.
  */
 
 import { readFileSync } from "node:fs";

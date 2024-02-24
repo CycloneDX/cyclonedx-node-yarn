@@ -9,6 +9,8 @@
 
 # Only used during production build.
 sbom.cdx.json
+# No bundles for now untils release process is clarified.
+bundles/**
 
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
