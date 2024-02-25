@@ -147,8 +147,8 @@ __metadata:
   linkType: hard
 
 "@cyclonedx/cyclonedx-library@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@cyclonedx/cyclonedx-library@npm:6.3.1"
+  version: 6.3.2
+  resolution: "@cyclonedx/cyclonedx-library@npm:6.3.2"
   dependencies:
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^2.1.1"
@@ -168,7 +168,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/fab02ed863e50bd32ca7a2118af06bb34d40af579e42717a89e3a2f203888ba02b70d844cef299306485588acbe4e7e73b356f66ca67e47b98fa8232e3249510
+  checksum: 10c0/bd57656be8b91f5ebd89eec139d04b087b96de3942267f59eb1eeaa2c22b7c6e8ba0a23593dae4b4677e776d024c689f386b98af2b82690fd7794a48d01c5f19
   languageName: node
   linkType: hard
 
@@ -350,20 +350,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^20.0.0":
-  version: 20.11.19
-  resolution: "@types/node@npm:20.11.19"
+  version: 20.11.20
+  resolution: "@types/node@npm:20.11.20"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
+  checksum: 10c0/8e8de211e6d54425c603388a9b5cc9c434101985d0a1c88aabbf65d10df2b1fccd71855c20e61ae8a75c7aea56cb0f64e722cf7914cff1247d0b62ce21996ac4
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.17.15":
-  version: 18.19.17
-  resolution: "@types/node@npm:18.19.17"
+  version: 18.19.18
+  resolution: "@types/node@npm:18.19.18"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/ac2e4910d5f2bb92cb2623f6d4d4d665a39cf1d425993347e6c3756c70a4def21a47241b86f49e1e4f441529753527bbd9be5f08f29fdac38c64035a26b847c7
+  checksum: 10c0/94c786bef8a4d02b1ea0b638a72ed77f16d732dec530d615fe729c72f0fa87191f82a2ac2b1c187f5354967dddfe49b1d5c177a8b3cfb6ba182c173a5e6d6b3d
   languageName: node
   linkType: hard
 
@@ -377,9 +377,9 @@ __metadata:
   linkType: hard
 
 "@types/semver@npm:^7.1.0":
-  version: 7.5.7
-  resolution: "@types/semver@npm:7.5.7"
-  checksum: 10c0/fb72d8b86a7779650f14ae89542f1da2ab624adb8188d98754b1d29a2fe3d41f0348bf9435b60ad145df1812fd2a09b3256779aa23b532c199f3dee59619a1eb
+  version: 7.5.8
+  resolution: "@types/semver@npm:7.5.8"
+  checksum: 10c0/8663ff927234d1c5fcc04b33062cb2b9fcfbe0f5f351ed26c4d1e1581657deebd506b41ff7fdf89e787e3d33ce05854bc01686379b89e9c49b564c4cfa988efa
   languageName: node
   linkType: hard
 
@@ -3008,12 +3008,12 @@ __metadata:
   linkType: hard
 
 "socks@npm:^2.7.1":
-  version: 2.8.0
-  resolution: "socks@npm:2.8.0"
+  version: 2.8.1
+  resolution: "socks@npm:2.8.1"
   dependencies:
     ip-address: "npm:^9.0.5"
     smart-buffer: "npm:^4.2.0"
-  checksum: 10c0/208fa5d5ae47857653c4fc039d47e4c1e76313b24052151a949aa98f027f9aaba8fc6c5dc0f7f2d9ceeb94e9940217581f2d9798436563c1494b67a6cb68611f
+  checksum: 10c0/ac77b515c260473cc7c4452f09b20939e22510ce3ae48385c516d1d5784374d5cc75be3cb18ff66cc985a7f4f2ef8fef84e984c5ec70aad58355ed59241f40a8
   languageName: node
   linkType: hard
 

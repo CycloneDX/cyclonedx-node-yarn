@@ -9,10 +9,8 @@ import {
   structUtils,
 } from "@yarnpkg/core";
 import { PortablePath, xfs } from "@yarnpkg/fslib";
-import { create } from "xmlbuilder2";
-import { XMLBuilder } from "xmlbuilder2/lib/interfaces";
-import { PackageInfo, traverseWorkspace } from "./traverseUtils";
 import * as ids from "spdx-license-ids/index.json";
+import { PackageInfo, traverseWorkspace } from "./traverseUtils";
 
 const licenseFactory = new CDX.Factories.LicenseFactory();
 const npmPurlFactory = new CDX.Factories.PackageUrlFactory("npm");
@@ -111,14 +109,9 @@ function serialize(
       const serializer = new CDX.Serialize.XmlSerializer(
         new CDX.Serialize.XML.Normalize.Factory(serializeSpec)
       );
-      const e = serializer.normalizerFactory.makeForBom().normalize(bom, {
+      return serializer.serialize(bom, {
         sortLists: true,
       });
-      // CycloneDX's XML serializer cannot find its xmlbuilder2 dependency, at least when bundled as Yarn plugin.
-      // Therefore convert here which is hopefully close enough.
-      const doc = create();
-      convertXML(doc, e);
-      return doc.end({ prettyPrint: true });
     }
   }
 }
@@ -241,34 +234,6 @@ function attemptFallbackLicense(
         component.licenses.add(
           licenseFactory.makeFromString(outdatedLicense.type)
         );
-      }
-    }
-  }
-}
-
-/**
- * Converts CycloneDX XML to xmlbuilder2 XML models.
- * @param parent Model of xmlbuilder2
- * @param e Model of CycloneDX
- */
-function convertXML(
-  parent: XMLBuilder,
-  e: CDX.Serialize.XML.Types.SimpleXml.Element
-) {
-  const newParent = parent.ele(
-    e.namespace?.toString() ?? null,
-    e.name,
-    e.attributes
-  );
-  if (["string", "number"].includes(typeof e.children)) {
-    newParent.txt(String(e.children));
-  } else if ((e.children as any)?.[Symbol.iterator]) {
-    for (const c of e.children as Iterable<
-      | CDX.Serialize.XML.Types.SimpleXml.Comment
-      | CDX.Serialize.XML.Types.SimpleXml.Element
-    >) {
-      if (c.type === "element") {
-        convertXML(newParent, c);
       }
     }
   }
