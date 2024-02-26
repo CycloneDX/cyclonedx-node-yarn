@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
-  <metadata xmlns="">
+  <metadata>
     <tools>
       <tool>
         <name>one-dependency</name>
@@ -12,7 +12,7 @@
       <version>0.0.1</version>
     </component>
   </metadata>
-  <components xmlns="">
+  <components>
     <component type="library" bom-ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b">
       <name>lodash-es</name>
       <version>4.17.21</version>
@@ -25,7 +25,7 @@
       </externalReferences>
     </component>
   </components>
-  <dependencies xmlns="">
+  <dependencies>
     <dependency ref="2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40">
       <dependency ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"/>
     </dependency>
