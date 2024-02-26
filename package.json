@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "main": "./sources/index.ts",
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^6.3.1",
+    "@cyclonedx/cyclonedx-library": "^6.3.2",
     "@yarnpkg/cli": "^4.0.0",
     "@yarnpkg/core": "^4.0.0",
     "@yarnpkg/fslib": "^3.0.2",

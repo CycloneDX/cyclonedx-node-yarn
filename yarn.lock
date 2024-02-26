@@ -146,7 +146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:^6.3.1":
+"@cyclonedx/cyclonedx-library@npm:^6.3.2":
   version: 6.3.2
   resolution: "@cyclonedx/cyclonedx-library@npm:6.3.2"
   dependencies:
@@ -3455,7 +3455,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "yarn-plugin-sbom@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^6.3.1"
+    "@cyclonedx/cyclonedx-library": "npm:^6.3.2"
     "@types/node": "npm:^20.0.0"
     "@yarnpkg/builder": "npm:^4.0.0"
     "@yarnpkg/cli": "npm:^4.0.0"
