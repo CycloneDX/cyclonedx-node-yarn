@@ -11,6 +11,9 @@
       <name>no-dependencies</name>
       <version>0.0.1</version>
     </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
   </metadata>
   <components/>
   <dependencies>

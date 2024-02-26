@@ -15,7 +15,13 @@
       "name": "one-dependency",
       "version": "0.0.1",
       "bom-ref": "2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40"
-    }
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
   },
   "components": [
     {

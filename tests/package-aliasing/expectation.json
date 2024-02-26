@@ -15,7 +15,13 @@
       "name": "package-aliasing",
       "version": "0.0.1",
       "bom-ref": "8f4a5adc26ea39c34e4c77de706e21a3e1d84346c9c8b0546396dcbc69bfcc7e4b07e797b97f5abcdc962fb6ec8cc4f1cbb15f4d7d725adefa09cdf7ae3b076b"
-    }
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
   },
   "components": [
     {

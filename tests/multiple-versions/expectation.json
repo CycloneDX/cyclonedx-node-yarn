@@ -15,7 +15,13 @@
       "name": "multiple-versions",
       "version": "0.0.1",
       "bom-ref": "29d9332beec359aba70ccecb2c0ae34e85a609da3cb6af408f24287ce2e2e39265f04706f78a80b6e5c7665a4afa6baba719871de3252a245389b83cbdf4b630"
-    }
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
   },
   "components": [
     {

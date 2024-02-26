@@ -146,9 +146,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:^6.3.2":
-  version: 6.3.2
-  resolution: "@cyclonedx/cyclonedx-library@npm:6.3.2"
+"@cyclonedx/cyclonedx-library@npm:^6.4.0":
+  version: 6.4.0
+  resolution: "@cyclonedx/cyclonedx-library@npm:6.4.0"
   dependencies:
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^2.1.1"
@@ -168,7 +168,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/bd57656be8b91f5ebd89eec139d04b087b96de3942267f59eb1eeaa2c22b7c6e8ba0a23593dae4b4677e776d024c689f386b98af2b82690fd7794a48d01c5f19
+  checksum: 10c0/1596088c5d5378ec87fbb75d99607dce19ee0325eded0054d4bc1b1751d6fd763cc3bc302827c18be8f359ee5d76a1d9a54051b4e3f5e4a2c289f9ddb9be9f24
   languageName: node
   linkType: hard
 
@@ -3455,7 +3455,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "yarn-plugin-sbom@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^6.3.2"
+    "@cyclonedx/cyclonedx-library": "npm:^6.4.0"
     "@types/node": "npm:^20.0.0"
     "@yarnpkg/builder": "npm:^4.0.0"
     "@yarnpkg/cli": "npm:^4.0.0"

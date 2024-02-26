@@ -37,7 +37,11 @@ export const generateSBOM = async (
   outputOptions: OutputOptions
 ) => {
   const bom = new CDX.Models.Bom();
-  if (!outputOptions.reproducible) {
+  if (outputOptions.reproducible) {
+    bom.metadata.properties.add(
+      new CDX.Models.Property("cdx:reproducible", "true")
+    );
+  } else {
     bom.metadata.timestamp = new Date();
   }
 

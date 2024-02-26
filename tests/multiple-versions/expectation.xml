@@ -11,6 +11,9 @@
       <name>multiple-versions</name>
       <version>0.0.1</version>
     </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
   </metadata>
   <components>
     <component type="library" bom-ref="025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac">
