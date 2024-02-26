@@ -110,6 +110,7 @@ function serialize(
         new CDX.Serialize.XML.Normalize.Factory(serializeSpec)
       );
       return serializer.serialize(bom, {
+        space: 2,
         sortLists: true,
       });
     }
