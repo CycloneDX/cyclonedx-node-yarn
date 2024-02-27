@@ -19,6 +19,7 @@
   </metadata>
   <components>
     <component type="library" bom-ref="b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b">
+      <author>John-David Dalton</author>
       <name>lodash-es</name>
       <version>4.17.21</version>
       <description>Lodash exported as ES modules.</description>

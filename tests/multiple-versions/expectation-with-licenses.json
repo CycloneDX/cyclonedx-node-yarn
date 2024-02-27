@@ -31,6 +31,7 @@
       "name": "color-name",
       "version": "1.1.4",
       "bom-ref": "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac",
+      "author": "DY",
       "description": "A list of color names and its values",
       "licenses": [
         {
@@ -59,6 +60,7 @@
       "name": "wcwidth",
       "version": "1.0.1",
       "bom-ref": "05fa596453d97ea3bea83b8c265063dcfa6bb824c73cc481ef3880065b2e5442fe86b8ea3658aab51c2923627f56b1c36dad6988c0184ee4964b562d74980fe2",
+      "author": "Tim Oxley",
       "description": "Port of C's wcwidth() and wcswidth()",
       "licenses": [
         {
@@ -125,6 +127,7 @@
       "name": "gopd",
       "version": "1.0.1",
       "bom-ref": "10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf",
+      "author": "Jordan Harband",
       "description": "`Object.getOwnPropertyDescriptor`, but accounts for IE's broken implementation.",
       "licenses": [
         {
@@ -182,6 +185,7 @@
       "name": "hasown",
       "version": "2.0.1",
       "bom-ref": "1bf102e91f1410727c7b9f4ef05b3f0bb8f2a7f1b63dc5fc28447cf2bbe31020c780f04d77fe85cbab8c1d22bc5a68831433a1d2296e0aeabd08b6f71adc34ae",
+      "author": "Jordan Harband",
       "description": "A robust, ES3 compatible, \"has own property\" predicate.",
       "licenses": [
         {
@@ -210,6 +214,7 @@
       "name": "get-intrinsic",
       "version": "1.2.4",
       "bom-ref": "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3",
+      "author": "Jordan Harband",
       "description": "Get and robustly cache all JS language-level intrinsics at first require time",
       "licenses": [
         {
@@ -330,6 +335,7 @@
       "name": "chardet",
       "version": "0.7.0",
       "bom-ref": "27933dd6c7ddbc4c89911be4b73c61168d9e229a5905d2bf20e5ed2449ef45ec467af09e511955c3a4390ae1263b410f5ff4752ff75be356701b8b869bb13280",
+      "author": "Dmitry Shirokov",
       "description": "Character detector",
       "licenses": [
         {
@@ -482,6 +488,7 @@
       "name": "rxjs",
       "version": "7.8.1",
       "bom-ref": "41c443a75b480e8a30163a1e298070f89e2ef4437ecef691fd48d80f22071dbfdf9bb8a0d9243445261cd2d7f9ffd1a2652a2078b4c59031702627a253115ab2",
+      "author": "Ben Lesh",
       "description": "Reactive Extensions for modern JavaScript",
       "licenses": [
         {
@@ -529,6 +536,7 @@
       "name": "define-data-property",
       "version": "1.1.4",
       "bom-ref": "4cbd8efc5142c75331a3f6e0dfb80685d173470f33d959418100d3b734997a61f12ec5d6cf6d5e3d5021186761bd7fe735c963e03a413506331dd03e97017f1d",
+      "author": "Jordan Harband",
       "description": "Define a data property on an object. Will fall back to assignment in an engine without descriptors.",
       "licenses": [
         {
@@ -595,6 +603,7 @@
       "name": "tslib",
       "version": "2.6.2",
       "bom-ref": "4fc8c068d92b37f42c39f3f6139ce14203af1e2ea88b8336eff5d6f9843025d93bbf6f8860423109d49ef4530654c2ef2151ceccd277d50a1d5f74c52c55267f",
+      "author": "Microsoft Corp.",
       "description": "Runtime library for TypeScript helper functions",
       "licenses": [
         {
@@ -623,6 +632,7 @@
       "name": "set-function-length",
       "version": "1.2.1",
       "bom-ref": "5131ef7312206f592eb1162341e797bd59f0c905151b106ce5b7714d9050e5ccae1a39d4e9ec96e43b82b9e69f0e26defb2739f74cc2e3bcce499de9203232fa",
+      "author": "Jordan Harband",
       "description": "Set a function's length property",
       "licenses": [
         {
@@ -732,6 +742,7 @@
       "name": "lodash",
       "version": "4.17.21",
       "bom-ref": "638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f",
+      "author": "John-David Dalton",
       "description": "Lodash modular utilities.",
       "licenses": [
         {
@@ -756,6 +767,7 @@
       "name": "call-bind",
       "version": "1.0.7",
       "bom-ref": "762763ef9679817f06258ccfd7dbf5cfb844189770dd14678ce5b7f635538db0209cbc2be1f7fc8dc6421a431906c3d6035f4b926e8383c428e460e80adeb984",
+      "author": "Jordan Harband",
       "description": "Robustly `.call.bind()` a function",
       "licenses": [
         {
@@ -784,6 +796,7 @@
       "name": "color-convert",
       "version": "2.0.1",
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
+      "author": "Heather Arthur",
       "description": "Plain color conversion functions",
       "licenses": [
         {
@@ -802,6 +815,7 @@
       "name": "function-bind",
       "version": "1.1.2",
       "bom-ref": "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+      "author": "Raynos",
       "description": "Implementation of Function.prototype.bind",
       "licenses": [
         {
@@ -830,6 +844,7 @@
       "name": "inquirer",
       "version": "9.2.15",
       "bom-ref": "7a7bdf64994cd27f37684c4596e4c9973921fc974fce1e7060c722dc29cee258a61baa098ac224d59d01c4a2bff79c590a7594098327ef90993d595c00c07b42",
+      "author": "Simon Boudrias",
       "description": "A collection of common interactive command line user interfaces.",
       "licenses": [
         {
@@ -924,6 +939,7 @@
       "name": "external-editor",
       "version": "3.1.0",
       "bom-ref": "878e7807af591f44ad7e6637d1edc08345cfb22aa4766a1da93bd50edb8c52b0156da6c90872cb5376799f9fddff17b09c5c7c5d4c9f3c5a2ad5fe6d2b3a5c7a",
+      "author": "Kevin Gravier",
       "description": "Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT",
       "licenses": [
         {
@@ -977,6 +993,7 @@
       "name": "clone",
       "version": "1.0.4",
       "bom-ref": "a610fcbcf9cb08a7ca5ee4029f5ab10339b6a7df5cde967f7adb8cee76ad8f528494367f0980241d7c457a18b5a221d72b2c61f022ba68085b0c3c0a09a3a874",
+      "author": "Paul Vorbach",
       "description": "deep cloning of objects and arrays",
       "licenses": [
         {
@@ -1002,6 +1019,7 @@
       "group": "@ljharb",
       "version": "2.3.12",
       "bom-ref": "aade88de55fd3080895b4fa398aae47f5038d206b926bbd4c7f9c023fd8f740c78a424b4e85b95d3a09abcea1b8d1aa613b161f62ce607e1af3dd35638af7b84",
+      "author": "Dominic Tarr",
       "description": "simplified stream construction",
       "licenses": [
         {
@@ -1030,6 +1048,7 @@
       "name": "base64-js",
       "version": "1.5.1",
       "bom-ref": "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d",
+      "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
         {
@@ -1058,6 +1077,7 @@
       "name": "has-proto",
       "version": "1.0.3",
       "bom-ref": "b598da29612d98662dc35345bd1a3579bf4a0de9ecd38fe1d5fd3467664e97ecfc69938b28117dacb6a98e9f3fa249705713578dcf02666bd0b3dd62f51110c8",
+      "author": "Jordan Harband",
       "description": "Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?",
       "licenses": [
         {
@@ -1086,6 +1106,7 @@
       "name": "mute-stream",
       "version": "1.0.0",
       "bom-ref": "b6e846d47148e2d6ca3e19dae4f463ca97f7224df81f0a155aa3f0b96da366ad307867633731e1be9d63cde1b570c9951e10321dd89a9aa05ab72591aa900e4a",
+      "author": "GitHub Inc.",
       "description": "Bytes go in, but they don't come out (when muted).",
       "licenses": [
         {
@@ -1128,6 +1149,7 @@
       "name": "tmp",
       "version": "0.0.33",
       "bom-ref": "bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753",
+      "author": "KARASZI István",
       "description": "Temporary file and directory creator",
       "licenses": [
         {
@@ -1152,6 +1174,7 @@
       "name": "signal-exit",
       "version": "3.0.7",
       "bom-ref": "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360",
+      "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
       "licenses": [
         {
@@ -1199,6 +1222,7 @@
       "name": "run-async",
       "version": "3.0.0",
       "bom-ref": "bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b",
+      "author": "Simon Boudrias",
       "description": "Utility method to run function either synchronously or asynchronously using the common `this.async()` style.",
       "licenses": [
         {
@@ -1217,6 +1241,7 @@
       "name": "cli-width",
       "version": "4.1.0",
       "bom-ref": "c08b53be836e628e200b27bf7b20b6859a14b75fb0d89d24aea283c172fedba528df494788397f1a827790179feabcac67c432c11a67c313fde64e1ce54165ba",
+      "author": "Ilya Radchenko",
       "description": "Get stdout window width, with two fallbacks, tty and then a default.",
       "licenses": [
         {
@@ -1245,6 +1270,7 @@
       "name": "iconv-lite",
       "version": "0.4.24",
       "bom-ref": "c5c4ac669553a295c4b951a8c896a4908ef4cd6fcd3eb45ec208551d2ef0f6ab9db382ab1483b2b99ac12f3351d14f0fdccbdcb1ce75c6382fe63a85fac757fb",
+      "author": "Alexander Shtuchkin",
       "description": "Convert character encodings in pure javascript.",
       "licenses": [
         {
@@ -1371,6 +1397,7 @@
       "name": "has-property-descriptors",
       "version": "1.0.2",
       "bom-ref": "d7077d09f18931b227b6edb9cc8371fc7b26f9fbac7e89f7da52155e918848dfa60b8354f4d9148980b92fb86bb6f654acf7b355b3c3a99d0f6994802e9f547d",
+      "author": "Jordan Harband",
       "description": "Does the environment have full property descriptor support? Handles IE 8's broken defineProperty/gOPD.",
       "licenses": [
         {
@@ -1399,6 +1426,7 @@
       "name": "es-define-property",
       "version": "1.0.0",
       "bom-ref": "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde",
+      "author": "Jordan Harband",
       "description": "`Object.defineProperty`, but not IE 8's broken one.",
       "licenses": [
         {
@@ -1446,6 +1474,7 @@
       "name": "util-deprecate",
       "version": "1.0.2",
       "bom-ref": "e3fe1a219c262e5f4439fabfc3240ca7d92d9254b8970e16c3fbc3c0c7de11bfb91486071399eab394f2c90e374bd04de4f6ab9eb510e0746cbf2e568cfc1a78",
+      "author": "Nathan Rajlich",
       "description": "The Node.js `util.deprecate()` function with browser support",
       "licenses": [
         {
@@ -1474,6 +1503,7 @@
       "name": "defaults",
       "version": "1.0.4",
       "bom-ref": "f3fbaf25284e585253bbfbe9da3a744f193b3f5d87e6483e1bc93d192226171dd462212cf084bd546548b9049b93abe3dc95bf0851f05765c7dba443d1f418b0",
+      "author": "Elijah Insua",
       "description": "merge single level defaults over a config object",
       "licenses": [
         {
@@ -1523,6 +1553,7 @@
       "name": "es-errors",
       "version": "1.3.0",
       "bom-ref": "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966",
+      "author": "Jordan Harband",
       "description": "A simple cache for a few of the JS Error constructors.",
       "licenses": [
         {

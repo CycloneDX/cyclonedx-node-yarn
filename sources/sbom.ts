@@ -144,6 +144,36 @@ function serialize(
 }
 
 /**
+ * @param manifestRawAuthor Raw value matching https://docs.npmjs.com/cli/v10/configuring-npm/package-json#people-fields-author-contributors
+ * @returns Name of author.
+ */
+function getAuthorName(manifestRawAuthor: unknown): string | undefined {
+  if (!manifestRawAuthor) {
+    return;
+  }
+
+  if (
+    typeof manifestRawAuthor === "object" &&
+    "name" in manifestRawAuthor &&
+    typeof manifestRawAuthor.name === "string"
+  ) {
+    return manifestRawAuthor.name;
+  }
+
+  if (typeof manifestRawAuthor === "string") {
+    const mail = manifestRawAuthor.indexOf("<");
+    const homepage = manifestRawAuthor.indexOf("(");
+    if (mail === -1 && homepage === -1) {
+      return manifestRawAuthor;
+    } else if (mail > 0 && (mail < homepage || homepage === -1)) {
+      return manifestRawAuthor.substring(0, mail).trimEnd();
+    } else if (homepage > 0 && (homepage < mail || mail === -1)) {
+      return manifestRawAuthor.substring(0, homepage).trimEnd();
+    }
+  }
+}
+
+/**
  * @returns Model, but no dependencies set.
  */
 function packageInfoToCycloneComponent(
@@ -159,7 +189,7 @@ function packageInfoToCycloneComponent(
       bomRef: pkgInfo.package.locatorHash,
       group: pkg.scope ? `@${pkg.scope}` : undefined,
       version: packageVersionWithManifestFallback(pkg, manifest),
-      author: manifest.raw.author?.name,
+      author: getAuthorName(manifest.raw.author),
       description: manifest.raw.description,
     }
   );

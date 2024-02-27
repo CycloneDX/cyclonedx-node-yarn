@@ -31,6 +31,7 @@
       "name": "color-name",
       "version": "1.1.4",
       "bom-ref": "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac",
+      "author": "DY",
       "description": "A list of color names and its values",
       "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
       "externalReferences": [
@@ -49,6 +50,7 @@
       "name": "exponential-backoff",
       "version": "3.1.1",
       "bom-ref": "04df458b307501552b33dd0082fa671eb5a3f6fa6d8c60937947b7103f2a330bd731b8d184d481a2a5a77589a6e9c78c036011171dacc7efa87c3f633a0c2952",
+      "author": "Sami Sayegh",
       "description": "A utility that allows retrying a function with an exponential delay between attempts.",
       "purl": "pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A//github.com/coveo/exponential-backoff.git",
       "externalReferences": [
@@ -67,6 +69,7 @@
       "name": "err-code",
       "version": "2.0.3",
       "bom-ref": "082e0ff9a7e80d1ba752c66f602b5eb756a9b60ed1eee69ee2500118c68c96c8bf9f902eba1a63acbe964cc74ec42550e191acc0ea7fee6150e662c9360f641a",
+      "author": "IndigoUnited",
       "description": "Create an error with a code",
       "purl": "pkg:npm/err-code@2.0.3?vcs_url=git%3A//github.com/IndigoUnited/js-err-code.git",
       "externalReferences": [
@@ -82,6 +85,7 @@
       "group": "@npmcli",
       "version": "3.1.0",
       "bom-ref": "0844a579782601a82c098b3436b238cd455f90663ecebf8b2a8445920b0d01ee56f8818f42ef0e70aec36b7f2e7907e16e841bd0acc6238032a32cde114d2343",
+      "author": "GitHub Inc.",
       "description": "filesystem utilities for the npm cli",
       "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A//github.com/npm/fs.git",
       "externalReferences": [
@@ -96,6 +100,7 @@
       "name": "hdr-histogram-percentiles-obj",
       "version": "3.0.0",
       "bom-ref": "08d46127d81d5267b4feaf8da47ff80c8bcda6428aea9ec397aca666297a0f4a862d69dae4e4159026a3dd0a12a007b2850af41bba68f84e68d2522472414f79",
+      "author": "Glen Keane",
       "description": "A little lib for turning hdr-histogram-js to objects",
       "purl": "pkg:npm/hdr-histogram-percentiles-obj@3.0.0?vcs_url=git%2Bhttps%3A//github.com/GlenTiki/hdr-histogram-percentiles-obj.git",
       "externalReferences": [
@@ -132,6 +137,7 @@
       "name": "abbrev",
       "version": "2.0.0",
       "bom-ref": "0eb38a17e5325348bf3d6ecea76d2ca99cc4142af9cea60f1a0c6141770f2d64de133f71212c5f81f61e433f1c6c647e04cebcdd2330ef78a636835b963c76f1",
+      "author": "GitHub Inc.",
       "description": "Like ruby's abbrev module, but in js",
       "purl": "pkg:npm/abbrev@2.0.0?vcs_url=https%3A//github.com/npm/abbrev-js.git",
       "externalReferences": [
@@ -146,6 +152,7 @@
       "name": "http-cache-semantics",
       "version": "4.1.1",
       "bom-ref": "1120131375ac7fd41b619768f97d8e8329b65a6b4631b5bc16c627d4909136ec38a586ed8a69de7855b33a88a9c514f6f0dedc20d6a720ab62f68583c7f9cb1e",
+      "author": "Kornel Lesiński",
       "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
       "purl": "pkg:npm/http-cache-semantics@4.1.1?"
     },
@@ -173,6 +180,7 @@
       "name": "ssri",
       "version": "10.0.5",
       "bom-ref": "1a7557d04d84c69eeebcc9299c1946654440ba6e18ba01d3efaec450fa6bbe3267f3411563835bcc6f3433d33357a677033a17d3c723ea065f2ba41b911a6ef6",
+      "author": "GitHub Inc.",
       "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
       "purl": "pkg:npm/ssri@10.0.5?vcs_url=https%3A//github.com/npm/ssri.git",
       "externalReferences": [
@@ -187,6 +195,7 @@
       "name": "jsbn",
       "version": "1.1.0",
       "bom-ref": "1da0181838e27411ce1b9f2cbb7a34aec6ebb12c9b6fb2a18d80ba5a17b523bbe875f081fa46f98c5098f951689da35685d5db4425c1a9a35ae75ddedf90fc5f",
+      "author": "Tom Wu",
       "description": "The jsbn library is a fast, portable implementation of large-number math in pure JavaScript, enabling public-key crypto and other applications on desktop and mobile browsers.",
       "purl": "pkg:npm/jsbn@1.1.0?vcs_url=https%3A//github.com/andyperlitch/jsbn.git",
       "externalReferences": [
@@ -210,6 +219,7 @@
       "name": "minipass-fetch",
       "version": "3.0.4",
       "bom-ref": "200ac7c66d708eac6d546074c10f94ac3981fe73a94ef0a61b7b339b12507adaf40dac5d864b852926948b238fb22aca6383eceff7146fc9c6762173e6bcc827",
+      "author": "GitHub Inc.",
       "description": "An implementation of window.fetch in Node.js using Minipass streams",
       "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A//github.com/npm/minipass-fetch.git",
       "externalReferences": [
@@ -252,6 +262,7 @@
       "name": "iconv-lite",
       "version": "0.6.3",
       "bom-ref": "24b8aae27ec1ad4f495118b68edf2d395f5e38d100c19f4e205a6b1fa3b28f17cb91917c44952002ccbfc6c12b4b3059d2c797b62874439abacaa1eca838373f",
+      "author": "Alexander Shtuchkin",
       "description": "Convert character encodings in pure javascript.",
       "purl": "pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
       "externalReferences": [
@@ -293,6 +304,7 @@
       "name": "hdr-histogram-js",
       "version": "2.0.3",
       "bom-ref": "2b1e3eb2a6d68f80bcb3d2f8a54fd2963e0f92764c4de5108a608faea1d822e0e7d0bf3bb7fb24f52f8452e6c70bf90d5e054fdc809c0feab70a9ac580c02792",
+      "author": "Alexandre Victoor",
       "description": "TypeScript port of HdrHistogram",
       "purl": "pkg:npm/hdr-histogram-js@2.0.3?vcs_url=git%2Bhttps%3A//github.com/HdrHistogram/HdrHistogramJS.git",
       "externalReferences": [
@@ -316,6 +328,7 @@
       "name": "minipass-sized",
       "version": "1.0.3",
       "bom-ref": "306d86f43239a0aaaef6ff7911ea3f82bcbf20016a8d3fdf9f622adf0bd34d7f5df2274acafbc691acf2a24d41818fd55f11e2d226b7d28da59a65364a3bf3bb",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
       "purl": "pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-sized.git",
       "externalReferences": [
@@ -330,6 +343,7 @@
       "name": "which",
       "version": "2.0.2",
       "bom-ref": "320ddf72f79a7090799aca262ad4287055a90b1bee1253c7e35528fd2903ac0557538dc8ea87d1f37fffc7ac564dc00eeba661e0cf618b35297b040ce649929f",
+      "author": "Isaac Z. Schlueter",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
       "purl": "pkg:npm/which@2.0.2?vcs_url=git%3A//github.com/isaacs/node-which.git",
       "externalReferences": [
@@ -367,6 +381,7 @@
       "name": "socks",
       "version": "2.8.1",
       "bom-ref": "3b253d7256cf25dd65d09ad931bd070ff216ed7d529fa04d78dfb925e4f005656b026231ead771fcd3426922d2d8b82d0238f4a44d6f9a107f6877f3994f8b0a",
+      "author": "Josh Glazebrook",
       "description": "Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.",
       "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A//github.com/JoshGlazebrook/socks.git",
       "externalReferences": [
@@ -385,6 +400,7 @@
       "name": "tar",
       "version": "6.2.0",
       "bom-ref": "3eb25205a70ecb97e5cd41c63817da0778541123db5dd06f139b0eed4b95191312b3e7697c300e4642f052712c066e27e6e3f5ab5c5a8a7610e4ee38128177ed",
+      "author": "GitHub Inc.",
       "description": "tar for node",
       "purl": "pkg:npm/tar@6.2.0?vcs_url=https%3A//github.com/isaacs/node-tar.git",
       "externalReferences": [
@@ -408,6 +424,7 @@
       "name": "jackspeak",
       "version": "2.3.6",
       "bom-ref": "42e1233172b32c881dc3ad06bb968b5a6886421839e5bd1028bbd4ee6fd555028e8df5ea415a9c06cba244a62a0084fcd27cc6e5f0bb3460d9e6cd85e44b1f5c",
+      "author": "Isaac Z. Schlueter",
       "description": "A very strict and proper argument parser.",
       "purl": "pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
       "externalReferences": [
@@ -431,6 +448,7 @@
       "name": "node-gyp",
       "version": "10.0.1",
       "bom-ref": "48708ce70bc76e1f879f77affa6f744312cff313a2af15712d70a94f1b5e9382a4e1566ac8a75fb8c82ddbad727beca280bb7610d278c54b8c2d6ccbab77d231",
+      "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
       "purl": "pkg:npm/node-gyp@10.0.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
       "externalReferences": [
@@ -445,6 +463,7 @@
       "name": "agent-base",
       "version": "7.1.0",
       "bom-ref": "4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1",
+      "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
       "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
       "externalReferences": [
@@ -459,6 +478,7 @@
       "name": "fs-minipass",
       "version": "2.1.0",
       "bom-ref": "501ef87306cdb906afd7ee55973e5a53e702081c56b0f3579d1873a694484757398746df4baaa79ed45c7cebc021da59179de1d5969b9ba427b7ccc51ba197d0",
+      "author": "Isaac Z. Schlueter",
       "description": "fs read and write streams based on minipass",
       "purl": "pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
@@ -477,6 +497,7 @@
       "name": "path-scurry",
       "version": "1.10.1",
       "bom-ref": "52bd946f2eb0da56a89c8135018af1e8196512f12cc4a2ee6d279095877969a573b21ab98df6d6423966858f8f3aa034d25f12eae77fff0c4aca463a89be3bb7",
+      "author": "Isaac Z. Schlueter",
       "description": "walk paths fast and efficiently",
       "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry",
       "externalReferences": [
@@ -491,6 +512,7 @@
       "name": "minipass-pipeline",
       "version": "1.2.4",
       "bom-ref": "5924cb077f05d10e9335b44ce94356b8fe54d261272545bbeed99a3325726fb1efb72282b0adbb257203a0a0991c6631e6be6b5fc5c295d50114e101158d3f13",
+      "author": "Isaac Z. Schlueter",
       "description": "create a pipeline of streams using Minipass",
       "purl": "pkg:npm/minipass-pipeline@1.2.4?"
     },
@@ -499,6 +521,7 @@
       "name": "smart-buffer",
       "version": "4.2.0",
       "bom-ref": "5ac3f668bb4a70b7dcd2a6e4a30b29fbc1b9eafbf9de99ae009eec9a2057af92e9473f59198b063443830ce8d81997a4385e389a3f88be1559dd014348779337",
+      "author": "Josh Glazebrook",
       "description": "smart-buffer is a Buffer wrapper that adds automatic read & write offset tracking, string operations, data insertions, and more.",
       "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A//github.com/JoshGlazebrook/smart-buffer.git",
       "externalReferences": [
@@ -536,6 +559,7 @@
       "name": "signal-exit",
       "version": "4.1.0",
       "bom-ref": "61fb957687a8bece8324d39e12feb5fc6bc916e4b1ab8d304d3d321f9e3d5275ab1b4e6e54d413975e7d2dc990dc546a25e6fd06c54397fc385a1dc5421bd4dd",
+      "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
       "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
       "externalReferences": [
@@ -550,6 +574,7 @@
       "name": "chownr",
       "version": "2.0.0",
       "bom-ref": "638f1c9c610eda26f11eab142557da45f59db8438d50bac44bf304e682e958d82227e80124294a48bee06a2cf956a925e5e79907f1118c6120f58795d84aeb3e",
+      "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
       "purl": "pkg:npm/chownr@2.0.0?vcs_url=git%3A//github.com/isaacs/chownr.git",
       "externalReferences": [
@@ -564,6 +589,7 @@
       "name": "http-proxy-agent",
       "version": "7.0.2",
       "bom-ref": "643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d",
+      "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
       "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
       "externalReferences": [
@@ -578,6 +604,7 @@
       "name": "nice-napi",
       "version": "1.0.2",
       "bom-ref": "693b1680c92aa9af1f2903fc1fc73c3cc41dec6ff9eff01aeebee0d3600e667db86f9f163c5192c5f59a32147767188e50d8c54ea373923efd81a71b0357a7a7",
+      "author": "Anna Henningsen",
       "description": "nice(2) bindings for Node.js",
       "purl": "pkg:npm/nice-napi@1.0.2?vcs_url=git%2Bhttps%3A//github.com/addaleax/nice-napi",
       "externalReferences": [
@@ -592,6 +619,7 @@
       "name": "minimatch",
       "version": "9.0.3",
       "bom-ref": "69d7d6fad5e7e50d998cb731123828bd1b74af8d275e603ea7ecacd87a0a76dbc9e572d2a3d44f15145621339f88eca9218c26ff7ff2a1bb1f240414fc0ccf6f",
+      "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
       "purl": "pkg:npm/minimatch@9.0.3?vcs_url=git%3A//github.com/isaacs/minimatch.git",
       "externalReferences": [
@@ -615,6 +643,7 @@
       "name": "retry",
       "version": "0.12.0",
       "bom-ref": "72ac7fb4cca2dd769aca9c6b7cd70507ce9193c0b1e1e9cc864cf105d79373258f92b49c962fdc1da0e3d9032d52f040b683f76167786ff2fc2e2c14ce3daeab",
+      "author": "Tim Koschützki",
       "description": "Abstraction for exponential and custom retry strategies for failed operations.",
       "purl": "pkg:npm/retry@0.12.0?vcs_url=git%3A//github.com/tim-kos/node-retry.git",
       "externalReferences": [
@@ -633,6 +662,7 @@
       "name": "minipass-collect",
       "version": "2.0.1",
       "bom-ref": "73d3907e40b3224d4cb2d02695db221650101ca0aa206aa4704af0704cd3126ac38050d44aeb715ef9dcc47d1daa911beee6ac01f781030698218bb55984d797",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
       "purl": "pkg:npm/minipass-collect@2.0.1?"
     },
@@ -650,6 +680,7 @@
       "name": "unique-filename",
       "version": "3.0.0",
       "bom-ref": "77d68e0a459b09ff2554a13fe3d9a10497e5a28a28304924fa65de1f55ab576603871c5ec6bd161720ac70b1f4ff610f9f25d5f2e3b4ad4f2185e973cf875cea",
+      "author": "GitHub Inc.",
       "description": "Generate a unique filename for use in temporary directories or caches.",
       "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A//github.com/npm/unique-filename.git",
       "externalReferences": [
@@ -668,6 +699,7 @@
       "name": "foreground-child",
       "version": "3.1.1",
       "bom-ref": "77e78ed7746b8bfec8193f223bb6a40e0bfb7dcd2a8101eafa5196e7c5d80201ff35df9b6c8f0d8c596658ccb869b87373cfbd5ddfedb2233a099028883da218",
+      "author": "Isaac Z. Schlueter",
       "description": "Run a child as if it's the foreground process. Give it stdio. Exit when it exits.",
       "purl": "pkg:npm/foreground-child@3.1.1?vcs_url=git%2Bhttps%3A//github.com/tapjs/foreground-child.git",
       "externalReferences": [
@@ -682,6 +714,7 @@
       "name": "color-convert",
       "version": "2.0.1",
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
+      "author": "Heather Arthur",
       "description": "Plain color conversion functions",
       "purl": "pkg:npm/color-convert@2.0.1?"
     },
@@ -690,6 +723,7 @@
       "name": "is-lambda",
       "version": "1.0.1",
       "bom-ref": "7ab55bc8a8a85ff8712758780d76e1adc73243bd3743cfd1b7d59c58376d61a0528ad27859e63c82a2dcee0d0860ebfee87f2dc83de2f22cecddea326731cf8c",
+      "author": "Thomas Watson Steen",
       "description": "Detect if your code is running on an AWS Lambda server",
       "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A//github.com/watson/is-lambda.git",
       "externalReferences": [
@@ -726,6 +760,7 @@
       "name": "encoding",
       "version": "0.1.13",
       "bom-ref": "82a1837d3023f9ee634932aad335538baf52c5b6324f68f9ac628cf886a6a299eb70f8a7b6e9290e9204a62bdc8bdaa10f5014336dcfafff75aa1dadb19115c0",
+      "author": "Andris Reinman",
       "description": "Convert encodings, uses iconv-lite",
       "purl": "pkg:npm/encoding@0.1.13?"
     },
@@ -743,6 +778,7 @@
       "name": "promise-retry",
       "version": "2.0.1",
       "bom-ref": "871f0b01b79290b68b35c03fc024989360788b01d244facb1d1670746f48a864fda3c148b0aa01053f87d9b4ddad1f17341a7e4c121c3b357f597e402e4c92be",
+      "author": "IndigoUnited",
       "description": "Retries a function that returns a promise, leveraging the power of the retry module.",
       "purl": "pkg:npm/promise-retry@2.0.1?vcs_url=git%3A//github.com/IndigoUnited/node-promise-retry.git",
       "externalReferences": [
@@ -776,6 +812,7 @@
       "group": "@npmcli",
       "version": "2.2.1",
       "bom-ref": "8af33193ae6a4a98663514720198b39ba07548b15557ad78d2547a9f7707139feaff1c1eb8218db812dd0e41f67f347feacf82d48c172009e3ef1813acd26a40",
+      "author": "GitHub Inc.",
       "description": "the http/https agent used by the npm cli",
       "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A//github.com/npm/agent.git",
       "externalReferences": [
@@ -818,6 +855,7 @@
       "name": "isexe",
       "version": "3.1.1",
       "bom-ref": "9c0061eeadb9219b2d9f385a4c21603069630eeed6c9d01e6891feb4ac189d490e21ffb6bafef6cf5bda5924bb9df5256f121e33dbb7b0c059278d75160d14ee",
+      "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
       "purl": "pkg:npm/isexe@3.1.1?"
     },
@@ -834,6 +872,7 @@
       "name": "ip-address",
       "version": "9.0.5",
       "bom-ref": "9fa024d42a672702b48ccc59b562ba52420637d29d3f8a898e3bd8734ea66f8c382e633a08005fb39fa1225cd684b2ddab2d38a291d992cc8a784c7a101f06a0",
+      "author": "Beau Gunderson",
       "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser.",
       "purl": "pkg:npm/ip-address@9.0.5?vcs_url=git%3A//github.com/beaugunderson/ip-address.git",
       "externalReferences": [
@@ -866,6 +905,7 @@
       "name": "https-proxy-agent",
       "version": "7.0.4",
       "bom-ref": "a51e13f5dcd8f6788fcef3adce290f5061f53539a22db054764827bf1f78be4ebfa2e8edcd096e22b8554fb128b249f365135e0a868fd6fa66afae336bd0f0f5",
+      "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
       "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
       "externalReferences": [
@@ -899,6 +939,7 @@
       "name": "proc-log",
       "version": "3.0.0",
       "bom-ref": "a8c21c2f0fdad8b0b5fd04df3687f5e1e4a8a0fc034035e0a8354d25aea7b54da98ba531c412d177f96953a8fc890577ee778775c538d17aa6e6582c4a5eeaf5",
+      "author": "GitHub Inc.",
       "description": "just emit 'log' events on the process object",
       "purl": "pkg:npm/proc-log@3.0.0?vcs_url=https%3A//github.com/npm/proc-log.git",
       "externalReferences": [
@@ -931,6 +972,7 @@
       "name": "base64-js",
       "version": "1.5.1",
       "bom-ref": "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d",
+      "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
       "externalReferences": [
@@ -949,6 +991,7 @@
       "name": "lodash-es",
       "version": "4.17.21",
       "bom-ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b",
+      "author": "John-David Dalton",
       "description": "Lodash exported as ES modules.",
       "purl": "pkg:npm/lodash-es@4.17.21?",
       "externalReferences": [
@@ -963,6 +1006,7 @@
       "name": "yallist",
       "version": "4.0.0",
       "bom-ref": "b493d9e907b07eb0053ce22a1cbe552eb468b397004cc3205290bbca97142b29a11409284f2898083f60251e9c00ee2d47e1bd733ef644edb3d1591e1a717466",
+      "author": "Isaac Z. Schlueter",
       "description": "Yet Another Linked List",
       "purl": "pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/yallist.git",
       "externalReferences": [
@@ -977,6 +1021,7 @@
       "name": "lru-cache",
       "version": "6.0.0",
       "bom-ref": "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
+      "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
       "purl": "pkg:npm/lru-cache@6.0.0?"
     },
@@ -985,6 +1030,7 @@
       "name": "isexe",
       "version": "2.0.0",
       "bom-ref": "b58870bd2e149e7cab4e3fa248c57a93dfb17ce6212e1aaba7271b64e8d4ba0ee714680334e855b29398b8d690e85ea4c8a5e70a1df7f3c05f49d42a880bc40d",
+      "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
       "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
       "externalReferences": [
@@ -1003,6 +1049,7 @@
       "name": "minipass",
       "version": "3.3.6",
       "bom-ref": "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58",
+      "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
@@ -1031,6 +1078,7 @@
       "name": "sprintf-js",
       "version": "1.1.3",
       "bom-ref": "b99efd75b29f521b0cde78b07542aeb33a77ae3b453a5bc071d862c94bbd5c987ec38b9159a28fe8479cf13d1e05018220a8e61713e3488b1f003ec14381aa7e",
+      "author": "Alexandru Mărășteanu",
       "description": "JavaScript sprintf implementation",
       "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A//github.com/alexei/sprintf.js.git",
       "externalReferences": [
@@ -1045,6 +1093,7 @@
       "name": "lru-cache",
       "version": "10.2.0",
       "bom-ref": "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
+      "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
       "purl": "pkg:npm/lru-cache@10.2.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
       "externalReferences": [
@@ -1068,6 +1117,7 @@
       "name": "eastasianwidth",
       "version": "0.2.0",
       "bom-ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
+      "author": "Masaki Komagata",
       "description": "Get East Asian Width from a character.",
       "purl": "pkg:npm/eastasianwidth@0.2.0?"
     },
@@ -1076,6 +1126,7 @@
       "name": "minipass",
       "version": "5.0.0",
       "bom-ref": "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
+      "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "purl": "pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
@@ -1127,6 +1178,7 @@
       "name": "fs-minipass",
       "version": "3.0.3",
       "bom-ref": "d148d6ac19a1876b46b90af311f1d7f7ea4b3656cc07d47debda98666cc5ee90e30fcfd47e74476eff8fc17935de46ec1fa9f66f63a318f7a3eedb1e06450677",
+      "author": "GitHub Inc.",
       "description": "fs read and write streams based on minipass",
       "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
@@ -1162,6 +1214,7 @@
       "name": "cacache",
       "version": "18.0.2",
       "bom-ref": "d6329a1b9de73a9597d46754f546cc3bf39efc36e3f88d4e0a2c0a9dea559c70bbe9af6dc00828a23ed2d947c4b3ff2e0976a05e36e6f2976efd096f34b1dcc6",
+      "author": "GitHub Inc.",
       "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.",
       "purl": "pkg:npm/cacache@18.0.2?vcs_url=https%3A//github.com/npm/cacache.git",
       "externalReferences": [
@@ -1177,6 +1230,7 @@
       "group": "@assemblyscript",
       "version": "0.10.1",
       "bom-ref": "d72c90e01a4b740dc1fbc787c41c04d8d57c2f0d494ed994c5c4f72777823db811d6fe5734390f6db336d68735d7bee6dfb80b0ceaa8cac2eb44891cb81d93a6",
+      "author": "Daniel Wirtz",
       "description": "A convenient loader for AssemblyScript modules.",
       "purl": "pkg:npm/%40assemblyscript/loader@0.10.1?vcs_url=https%3A//github.com/AssemblyScript/assemblyscript.git",
       "externalReferences": [
@@ -1195,6 +1249,7 @@
       "name": "glob",
       "version": "10.3.10",
       "bom-ref": "da1ef8b112597e3adc80e19daa33bfa067d47d556bd04a5f8f8c1dbe661a0dcbd103e2cc667fb1448c9553bc06c73232f451fc8c3fdbbf981816d44bf31bdc53",
+      "author": "Isaac Z. Schlueter",
       "description": "the most correct and second fastest glob implementation in JavaScript",
       "purl": "pkg:npm/glob@10.3.10?vcs_url=git%3A//github.com/isaacs/node-glob.git",
       "externalReferences": [
@@ -1209,6 +1264,7 @@
       "name": "which",
       "version": "4.0.0",
       "bom-ref": "dd31cd49289a39c7979925d4d4e532d0694d005488252e4d3c73e2431496ae71d769d40e93e8610e7e699d4ad2e501c30562f0294b8710eaa270a30c2193a90b",
+      "author": "GitHub Inc.",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
       "purl": "pkg:npm/which@4.0.0?vcs_url=https%3A//github.com/npm/node-which.git",
       "externalReferences": [
@@ -1223,6 +1279,7 @@
       "name": "nopt",
       "version": "7.2.0",
       "bom-ref": "dd734b678dc786272158f4df652218c11ca96c55b9877e14bb3ecfb869a5d0196951b77b4426bbe93580cc1c45ebf02898bd8d8df5ddb51697c887f066b6a8c4",
+      "author": "GitHub Inc.",
       "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
       "purl": "pkg:npm/nopt@7.2.0?vcs_url=https%3A//github.com/npm/nopt.git",
       "externalReferences": [
@@ -1246,6 +1303,7 @@
       "name": "eventemitter-asyncresource",
       "version": "1.0.0",
       "bom-ref": "de223b5f00934c511e8e41daf80342e796add275e10ec49dfe673a0b235d759726d3873b4e93fc5f836fd866f13413c94010fecca10cbabd09201905c855c37e",
+      "author": "Anna Henningsen",
       "description": "AsyncResource integration for EventEmitter",
       "purl": "pkg:npm/eventemitter-asyncresource@1.0.0?vcs_url=git%2Bhttps%3A//github.com/addaleax/eventemitter-asyncresource",
       "externalReferences": [
@@ -1275,6 +1333,7 @@
       "name": "cross-spawn",
       "version": "7.0.3",
       "bom-ref": "e4ff3e65b3c0bc13cbabd48fdef2e7800d325ba156062d6e60b7394059746b2e3d5bbe121d81cc190782606857958011c2da32a6d574425686f2d871acc12add",
+      "author": "André Cruz",
       "description": "Cross platform child_process#spawn and child_process#spawnSync",
       "purl": "pkg:npm/cross-spawn@7.0.3?vcs_url=git%40github.com%3Amoxystudio/node-cross-spawn.git",
       "externalReferences": [
@@ -1293,6 +1352,7 @@
       "name": "unique-slug",
       "version": "4.0.0",
       "bom-ref": "e6b08f28aa43781518fa4b1942de1c16cace22d5d36af25e6db3787970435c26a14c91ed974e0af3ab6de06a21e1ea8f3be52b52f5701c3b240e9f41ea5140d5",
+      "author": "GitHub Inc.",
       "description": "Generate a unique character string suitible for use in files and URLs.",
       "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=https%3A//github.com/npm/unique-slug.git",
       "externalReferences": [
@@ -1326,6 +1386,7 @@
       "name": "minizlib",
       "version": "2.1.2",
       "bom-ref": "ea89cd0cfb183909032f50f9ab09d7ab6e42edea3ea52c356c2b7e4ad7f68d9741bdf264a526882a4a991d8db857411aa7d376812a393b0fd3276342dc0d38d4",
+      "author": "Isaac Z. Schlueter",
       "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
       "purl": "pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minizlib.git",
       "externalReferences": [
@@ -1340,6 +1401,7 @@
       "name": "minipass",
       "version": "7.0.4",
       "bom-ref": "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
+      "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "purl": "pkg:npm/minipass@7.0.4?"
     },
@@ -1365,6 +1427,7 @@
       "name": "debug",
       "version": "4.3.4",
       "bom-ref": "ede24543b9967cfd40cabc994c366443348cbfb45469a7f74aefdd68eb77c748e262fb2daf9295d90bdfe6fb95b73380bad63f8f2f9197e037bb41537618fc94",
+      "author": "Josh Junon",
       "description": "Lightweight debugging utility for Node.js and the browser",
       "purl": "pkg:npm/debug@4.3.4?vcs_url=git%3A//github.com/debug-js/debug.git",
       "externalReferences": [
@@ -1379,6 +1442,7 @@
       "name": "minipass-flush",
       "version": "1.0.5",
       "bom-ref": "efe79d9826d0e1607da0b85dff6820c9841f796a2d6a18691fcd87941347b63e19f33fb5d30150fb096955e5a4ded250ad9fc1cf187f3f6e15c7a82b53889bb3",
+      "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that calls a flush function before emitting 'end'",
       "purl": "pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-flush.git",
       "externalReferences": [
@@ -1393,6 +1457,7 @@
       "name": "node-gyp-build",
       "version": "4.8.0",
       "bom-ref": "effd06d874a919f86ecf1f738efe3e43ac10ba6852de0b6c9b9d10223235a2f036fb4380fe3c69271a2b9ce2d69ccca64772cef3771aeb60097dbc980e99e17c",
+      "author": "Mathias Buus",
       "description": "Build tool and bindings loader for node-gyp that supports prebuilds",
       "purl": "pkg:npm/node-gyp-build@4.8.0?vcs_url=https%3A//github.com/prebuild/node-gyp-build.git",
       "externalReferences": [
@@ -1412,6 +1477,7 @@
       "group": "@isaacs",
       "version": "8.0.2",
       "bom-ref": "f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1",
+      "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
       "purl": "pkg:npm/%40isaacs/cliui@8.0.2?"
     },
@@ -1420,6 +1486,7 @@
       "name": "semver",
       "version": "7.6.0",
       "bom-ref": "f4630729f642c623297c9662bf759507ed6a838aede517aedd28d5649d2ca53f8e241644cab92d7e138553518d38d4bbd34584c448b354ed95e681f6a0f50aea",
+      "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "purl": "pkg:npm/semver@7.6.0?vcs_url=https%3A//github.com/npm/node-semver.git",
       "externalReferences": [
@@ -1434,6 +1501,7 @@
       "name": "make-fetch-happen",
       "version": "13.0.0",
       "bom-ref": "f87a92bb87e81de8b290fe413ae6178b99d84bba1d61e9a4a55a0bf4a9d653260eac58c7aa2624f57db6eaeb9330ad285ac0b9da66242ec7715196f25b8d8817",
+      "author": "GitHub Inc.",
       "description": "Opinionated, caching, retrying fetch client",
       "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A//github.com/npm/make-fetch-happen.git",
       "externalReferences": [
@@ -1448,6 +1516,7 @@
       "name": "piscina",
       "version": "4.1.0",
       "bom-ref": "f93f5e604ae591a0be4171894382cfdef89cacca38a44e6e843f7e93ed800a42dd8a5667a6fe089816b59c94ace57c2b11fe13f77d9b63533756cf1a1c04d4c2",
+      "author": "James M Snell",
       "description": "A fast, efficient Node.js Worker Thread Pool implementation",
       "purl": "pkg:npm/piscina@4.1.0?vcs_url=git%2Bhttps%3A//github.com/piscinajs/piscina.git",
       "externalReferences": [

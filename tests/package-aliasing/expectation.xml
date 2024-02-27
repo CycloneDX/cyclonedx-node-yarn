@@ -19,6 +19,7 @@
   </metadata>
   <components>
     <component type="library" bom-ref="025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac">
+      <author>DY</author>
       <name>color-name</name>
       <version>1.1.4</version>
       <description>A list of color names and its values</description>
@@ -80,6 +81,7 @@
       <purl>pkg:npm/strip-ansi@7.1.0?</purl>
     </component>
     <component type="library" bom-ref="79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702">
+      <author>Heather Arthur</author>
       <name>color-convert</name>
       <version>2.0.1</version>
       <description>Plain color conversion functions</description>
@@ -107,6 +109,7 @@
       <purl>pkg:npm/string-width@5.1.2?</purl>
     </component>
     <component type="library" bom-ref="c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c">
+      <author>Masaki Komagata</author>
       <name>eastasianwidth</name>
       <version>0.2.0</version>
       <description>Get East Asian Width from a character.</description>
@@ -149,6 +152,7 @@
       </externalReferences>
     </component>
     <component type="library" bom-ref="f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1">
+      <author>Ben Coe</author>
       <group>@isaacs</group>
       <name>cliui</name>
       <version>8.0.2</version>
