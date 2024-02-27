@@ -14,6 +14,12 @@ import { PackageInfo, traverseWorkspace } from "./traverseUtils";
 
 const licenseFactory = new CDX.Factories.LicenseFactory();
 const npmPurlFactory = new CDX.Factories.PackageUrlFactory("npm");
+const externalReferenceFactory =
+  new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory();
+const componentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(
+  externalReferenceFactory,
+  licenseFactory
+);
 
 /**
  * Denotes output to standard out is desired instead of writing files.
@@ -58,7 +64,8 @@ export const generateSBOM = async (
   for (const pkgInfo of allDependencies) {
     const component = packageInfoToCycloneComponent(
       pkgInfo,
-      outputOptions.licenses
+      outputOptions.licenses,
+      outputOptions.reproducible
     );
     componentModels.set(pkgInfo.package.locatorHash, component);
     if (pkgInfo.package.locatorHash === workspace.anchoredLocator.locatorHash) {
@@ -178,44 +185,37 @@ function getAuthorName(manifestRawAuthor: unknown): string | undefined {
  */
 function packageInfoToCycloneComponent(
   pkgInfo: PackageInfo,
-  licenses: boolean
+  licenses: boolean,
+  reproducible: OutputOptions["reproducible"]
 ): CDX.Models.Component {
-  const pkg = pkgInfo.package;
   const manifest = pkgInfo.manifest;
-  const component = new CDX.Models.Component(
-    CDX.Enums.ComponentType.Library,
-    pkg.name,
+  const component = componentBuilder.makeComponent(
     {
-      bomRef: pkgInfo.package.locatorHash,
-      group: pkg.scope ? `@${pkg.scope}` : undefined,
-      version: packageVersionWithManifestFallback(pkg, manifest),
-      author: getAuthorName(manifest.raw.author),
-      description: manifest.raw.description,
-    }
+      ...manifest.raw,
+      author: { name: getAuthorName(manifest.raw.author) },
+    },
+    CDX.Enums.ComponentType.Library
   );
-  if (manifest.raw.homepage) {
-    component.externalReferences.add(
-      new CDX.Models.ExternalReference(
-        manifest.raw.homepage,
-        CDX.Enums.ExternalReferenceType.Website
-      )
+  if (!component) {
+    throw new Error(
+      `Failed to parse manifest for ${structUtils.stringifyLocator(
+        pkgInfo.package
+      )}`
     );
   }
-  if (manifest.raw.repository?.url) {
-    component.externalReferences.add(
-      new CDX.Models.ExternalReference(
-        manifest.raw.repository?.url,
-        CDX.Enums.ExternalReferenceType.VCS
-      )
-    );
-  }
+  // BOM reference needs to be a stable value for reproducible output.
+  component.bomRef.value = pkgInfo.package.locatorHash;
   if (licenses) {
     addLicenseInfo(manifest, pkgInfo, component);
+  } else {
+    component.licenses.clear();
   }
 
-  const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(pkg);
+  const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(
+    pkgInfo.package
+  );
   if (devirtualizedLocator.reference.startsWith("npm:")) {
-    component.purl = npmPurlFactory.makeFromComponent(component);
+    component.purl = npmPurlFactory.makeFromComponent(component, reproducible);
   } else {
     // TODO Handle other Yarn protocols. How to convert them?
     // Default protocols are listed on https://yarnpkg.com/protocols of which the git protocol could be represented as PURL.
@@ -231,8 +231,8 @@ function addLicenseInfo(
   pkgInfo: PackageInfo,
   component: CDX.Models.Component
 ) {
-  if (manifest.license && !manifest.license.includes("SEE LICENSE")) {
-    const license = licenseFactory.makeFromString(manifest.license);
+  if (component.licenses.size === 1) {
+    const license = component.licenses.values().next().value;
     if (
       pkgInfo.licenseFileContent &&
       (license instanceof CDX.Models.NamedLicense ||
@@ -240,8 +240,7 @@ function addLicenseInfo(
     ) {
       license.text = new CDX.Models.Attachment(pkgInfo.licenseFileContent);
     }
-    component.licenses.add(license);
-  } else {
+  } else if (component.licenses.size === 0) {
     attemptFallbackLicense(manifest, pkgInfo.package, component);
   }
 }
@@ -312,18 +311,5 @@ function spec(specVersion: CDX.Spec.Version): SupportedSpec {
       throw new Error(
         `Unsupported CycloneDX specification version ${specVersion}`
       );
-  }
-}
-
-function packageVersionWithManifestFallback(
-  pkg: Package,
-  manifest: Manifest
-): string | undefined {
-  // Yarn sets '0.0.0' for the root package for whatever reason. Also, packages references by local hardlinks don't result in expected versions.
-  // These cases are replaces by version from the manifest under the assumption that the SBOM should reflect the current state.
-  if (pkg.version && ["0.0.0", "0.0.0-use.local"].includes(pkg.version)) {
-    return manifest.version ?? undefined;
-  } else {
-    return pkg.version ?? undefined;
   }
 }

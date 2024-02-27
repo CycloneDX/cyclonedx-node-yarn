@@ -25,8 +25,13 @@
       <description>A list of color names and its values</description>
       <purl>pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/colorjs/color-name/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="website">
           <url>https://github.com/colorjs/color-name</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -37,11 +42,17 @@
       <description>Port of C's wcwidth() and wcswidth()</description>
       <purl>pkg:npm/wcwidth@1.0.1?vcs_url=git%2Bhttps%3A//github.com/timoxley/wcwidth.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/timoxley/wcwidth/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/timoxley/wcwidth.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/timoxley/wcwidth#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -50,14 +61,26 @@
       <name>is-unicode-supported</name>
       <version>0.1.0</version>
       <description>Detect whether the terminal supports Unicode</description>
-      <purl>pkg:npm/is-unicode-supported@0.1.0?</purl>
+      <purl>pkg:npm/is-unicode-supported@0.1.0?vcs_url=sindresorhus/is-unicode-supported</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/is-unicode-supported</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="0a13492d8b4d44a0cfc7a5bdbd983fdba856fd36844d028150b9a6f2efdbf37a4a65771e45a441c76905b16e3181b2d2f8cdc4b105d6eba211f6ac4ea2542788">
       <author>Sindre Sorhus</author>
       <name>log-symbols</name>
       <version>4.1.0</version>
       <description>Colored symbols for various log levels. Example: `✔︎ Success`</description>
-      <purl>pkg:npm/log-symbols@4.1.0?</purl>
+      <purl>pkg:npm/log-symbols@4.1.0?vcs_url=sindresorhus/log-symbols</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/log-symbols</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf">
       <author>Jordan Harband</author>
@@ -66,11 +89,17 @@
       <description>`Object.getOwnPropertyDescriptor`, but accounts for IE's broken implementation.</description>
       <purl>pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/gopd.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/gopd/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/gopd.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/gopd#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -81,11 +110,17 @@
       <description>Determine if the JS environment has Symbol support. Supports spec, or shams.</description>
       <purl>pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/has-symbols/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/inspect-js/has-symbols.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/has-symbols#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -96,11 +131,17 @@
       <description>A robust, ES3 compatible, "has own property" predicate.</description>
       <purl>pkg:npm/hasown@2.0.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/hasOwn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/inspect-js/hasOwn.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/inspect-js/hasOwn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -111,11 +152,17 @@
       <description>Get and robustly cache all JS language-level intrinsics at first require time</description>
       <purl>pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/get-intrinsic.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/get-intrinsic/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/get-intrinsic.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/get-intrinsic#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -124,7 +171,13 @@
       <name>is-fullwidth-code-point</name>
       <version>3.0.0</version>
       <description>Check if the character represented by a given Unicode code point is fullwidth</description>
-      <purl>pkg:npm/is-fullwidth-code-point@3.0.0?</purl>
+      <purl>pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/is-fullwidth-code-point</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="213764015c61c168a6fbd45800c0a25dae13c2a2087c431aaaeeaa7fbf18222482891074eb8b9df5a81f54b3555dc3472fc9e0d21e5982f767c2a03b47d3a0f9">
       <author>Mathias Bynens</author>
@@ -133,11 +186,17 @@
       <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
       <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs"</comment>
+        </reference>
         <reference type="vcs">
           <url>https://github.com/mathiasbynens/emoji-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://mths.be/emoji-regex</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -149,9 +208,11 @@
       <externalReferences>
         <reference type="vcs">
           <url>git://github.com/nodejs/string_decoder.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/nodejs/string_decoder</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -160,7 +221,13 @@
       <name>ansi-styles</name>
       <version>4.3.0</version>
       <description>ANSI escape codes for styling strings in the terminal</description>
-      <purl>pkg:npm/ansi-styles@4.3.0?</purl>
+      <purl>pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/ansi-styles</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="27933dd6c7ddbc4c89911be4b73c61168d9e229a5905d2bf20e5ed2449ef45ec467af09e511955c3a4390ae1263b410f5ff4752ff75be356701b8b869bb13280">
       <author>Dmitry Shirokov</author>
@@ -169,8 +236,13 @@
       <description>Character detector</description>
       <purl>pkg:npm/chardet@0.7.0?vcs_url=git%40github.com%3Arunk/node-chardet.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/runk/node-chardet/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="website">
           <url>https://github.com/runk/node-chardet</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -179,21 +251,39 @@
       <name>string-width</name>
       <version>4.2.3</version>
       <description>Get the visual width of a string - the number of columns required to display it</description>
-      <purl>pkg:npm/string-width@4.2.3?</purl>
+      <purl>pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/string-width</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="3284de402fdb30a1d139b01b5cccee3de7e8fc767e47d5c83e239eaf38b130b5e72367061ad613b14e2e095fa57cc7f8a9986e4c65f380f67055f1bc8fd17c89">
       <author>Sindre Sorhus</author>
       <name>escape-string-regexp</name>
       <version>1.0.5</version>
       <description>Escape RegExp special characters</description>
-      <purl>pkg:npm/escape-string-regexp@1.0.5?</purl>
+      <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=sindresorhus/escape-string-regexp</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/escape-string-regexp</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="32af9f0536a974b227cea7887cd69d4024c6b2efc557c4b76c6fdc05fa2ab7b939ffcc4cbd60f3880d66b1e6ae8931e8928f9d5b49ae42294a783d6048d3b7df">
       <author>Sindre Sorhus</author>
       <name>has-flag</name>
       <version>4.0.0</version>
       <description>Check if argv has a specific flag</description>
-      <purl>pkg:npm/has-flag@4.0.0?</purl>
+      <purl>pkg:npm/has-flag@4.0.0?vcs_url=sindresorhus/has-flag</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/has-flag</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="3481c8aa9bf3e9431ea148a245d37b8c02be76f629657dd483952e9028624b14711f50038f4bb05557c57867e639cf721a477f487abe57cbe0d954860df06519">
       <author>Feross Aboukhadijeh</author>
@@ -202,11 +292,17 @@
       <description>Safer Node.js Buffer API</description>
       <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/safe-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/feross/safe-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/feross/safe-buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -215,14 +311,26 @@
       <name>ansi-escapes</name>
       <version>4.3.2</version>
       <description>ANSI escape codes for manipulating the terminal</description>
-      <purl>pkg:npm/ansi-escapes@4.3.2?</purl>
+      <purl>pkg:npm/ansi-escapes@4.3.2?vcs_url=sindresorhus/ansi-escapes</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/ansi-escapes</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="3ed148fa42ebe80bd87403c28398700a9a92e00a566b687d8e249f286ca606374534a354801acc930ef284c59b1d964e6d6f5af3cfc8d33759114143ae7b7e53">
       <author>Sindre Sorhus</author>
       <name>onetime</name>
       <version>5.1.2</version>
       <description>Ensure a function is only called once</description>
-      <purl>pkg:npm/onetime@5.1.2?</purl>
+      <purl>pkg:npm/onetime@5.1.2?vcs_url=sindresorhus/onetime</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/onetime</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="41c443a75b480e8a30163a1e298070f89e2ef4437ecef691fd48d80f22071dbfdf9bb8a0d9243445261cd2d7f9ffd1a2652a2078b4c59031702627a253115ab2">
       <author>Ben Lesh</author>
@@ -231,11 +339,17 @@
       <description>Reactive Extensions for modern JavaScript</description>
       <purl>pkg:npm/rxjs@7.8.1?vcs_url=https%3A//github.com/reactivex/rxjs.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ReactiveX/RxJS/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>https://github.com/reactivex/rxjs.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://rxjs.dev</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -244,7 +358,13 @@
       <name>wrap-ansi</name>
       <version>6.2.0</version>
       <description>Wordwrap a string with ANSI escape codes</description>
-      <purl>pkg:npm/wrap-ansi@6.2.0?</purl>
+      <purl>pkg:npm/wrap-ansi@6.2.0?vcs_url=chalk/wrap-ansi</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/wrap-ansi</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="4cbd8efc5142c75331a3f6e0dfb80685d173470f33d959418100d3b734997a61f12ec5d6cf6d5e3d5021186761bd7fe735c963e03a413506331dd03e97017f1d">
       <author>Jordan Harband</author>
@@ -253,11 +373,17 @@
       <description>Define a data property on an object. Will fall back to assignment in an engine without descriptors.</description>
       <purl>pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/define-data-property.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/define-data-property/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/define-data-property.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/define-data-property#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -266,14 +392,26 @@
       <name>ora</name>
       <version>5.4.1</version>
       <description>Elegant terminal spinner</description>
-      <purl>pkg:npm/ora@5.4.1?</purl>
+      <purl>pkg:npm/ora@5.4.1?vcs_url=sindresorhus/ora</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/ora</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="4fbeb3abb47349ed60ef8a8e0063933fb2e4243cc7f3ffbe1f78c670940b5ba1d3a7eab9dab8278fe5dfe0a1ac0b2135b6e047b9c0044965bba6e1c7be13cd2d">
       <author>Sindre Sorhus</author>
       <name>mimic-fn</name>
       <version>2.1.0</version>
       <description>Make a function mimic another one</description>
-      <purl>pkg:npm/mimic-fn@2.1.0?</purl>
+      <purl>pkg:npm/mimic-fn@2.1.0?vcs_url=sindresorhus/mimic-fn</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/mimic-fn</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="4fc8c068d92b37f42c39f3f6139ce14203af1e2ea88b8336eff5d6f9843025d93bbf6f8860423109d49ef4530654c2ef2151ceccd277d50a1d5f74c52c55267f">
       <author>Microsoft Corp.</author>
@@ -282,11 +420,17 @@
       <description>Runtime library for TypeScript helper functions</description>
       <purl>pkg:npm/tslib@2.6.2?vcs_url=https%3A//github.com/Microsoft/tslib.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Microsoft/TypeScript/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>https://github.com/Microsoft/tslib.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://www.typescriptlang.org/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -297,11 +441,17 @@
       <description>Set a function's length property</description>
       <purl>pkg:npm/set-function-length@1.2.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/set-function-length.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/set-function-length/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/set-function-length.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/set-function-length#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -312,11 +462,17 @@
       <description>Node.js Buffer API, for the browser</description>
       <purl>pkg:npm/buffer@5.7.1?vcs_url=git%3A//github.com/feross/buffer.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/feross/buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/feross/buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -325,31 +481,54 @@
       <name>restore-cursor</name>
       <version>3.1.0</version>
       <description>Gracefully restore the CLI cursor on exit</description>
-      <purl>pkg:npm/restore-cursor@3.1.0?</purl>
+      <purl>pkg:npm/restore-cursor@3.1.0?vcs_url=sindresorhus/restore-cursor</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/restore-cursor</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="5ff2a9c6fdee6be58ecc63ffa8c36220fb9e5f74797d80058623b9b66ceb4eddee4f8b70a5904fa8561b365e11788b6075e991a56474d831377be48d79f8b8bb">
       <author>Sindre Sorhus</author>
       <name>type-fest</name>
       <version>0.21.3</version>
       <description>A collection of essential TypeScript types</description>
-      <purl>pkg:npm/type-fest@0.21.3?</purl>
+      <purl>pkg:npm/type-fest@0.21.3?vcs_url=sindresorhus/type-fest</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/type-fest</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="606bfcf7da72e3aa5acbff222728fbfbe4808570fba5c4c128dba7cd9a5e9be520676773d904fb6c2a0c0ae6d8402068c8ac741b13e8d98773bb2afdd30e32c7">
       <author>Sindre Sorhus</author>
       <name>supports-color</name>
       <version>7.2.0</version>
       <description>Detect whether a terminal supports color</description>
-      <purl>pkg:npm/supports-color@7.2.0?</purl>
+      <purl>pkg:npm/supports-color@7.2.0?vcs_url=chalk/supports-color</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/supports-color</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f">
       <author>John-David Dalton</author>
       <name>lodash</name>
       <version>4.17.21</version>
       <description>Lodash modular utilities.</description>
-      <purl>pkg:npm/lodash@4.17.21?</purl>
+      <purl>pkg:npm/lodash@4.17.21?vcs_url=lodash/lodash</purl>
       <externalReferences>
+        <reference type="vcs">
+          <url>lodash/lodash</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
         <reference type="website">
           <url>https://lodash.com/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -360,11 +539,17 @@
       <description>Robustly `.call.bind()` a function</description>
       <purl>pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A//github.com/ljharb/call-bind.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/call-bind/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/call-bind.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/call-bind#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -373,7 +558,13 @@
       <name>color-convert</name>
       <version>2.0.1</version>
       <description>Plain color conversion functions</description>
-      <purl>pkg:npm/color-convert@2.0.1?</purl>
+      <purl>pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>Qix-/color-convert</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008">
       <author>Raynos</author>
@@ -382,11 +573,17 @@
       <description>Implementation of Function.prototype.bind</description>
       <purl>pkg:npm/function-bind@1.1.2?vcs_url=https%3A//github.com/Raynos/function-bind.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Raynos/function-bind/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>https://github.com/Raynos/function-bind.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/Raynos/function-bind</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -399,9 +596,11 @@
       <externalReferences>
         <reference type="vcs">
           <url>https://github.com/SBoudrias/Inquirer.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -413,9 +612,11 @@
       <externalReferences>
         <reference type="vcs">
           <url>https://github.com/rvagg/bl.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/rvagg/bl</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -424,14 +625,26 @@
       <name>is-interactive</name>
       <version>1.0.0</version>
       <description>Check if stdout or stderr is interactive</description>
-      <purl>pkg:npm/is-interactive@1.0.0?</purl>
+      <purl>pkg:npm/is-interactive@1.0.0?vcs_url=sindresorhus/is-interactive</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/is-interactive</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="85d357e9552f7511205d0aefa236e07f21a1876bdaf3a638d346bbea2aadc8846646cf11b65cd4d5c8b53c02c8ecd89438416b39a4dbba6b31d5cc9ef50979da">
       <author>Sindre Sorhus</author>
       <name>figures</name>
       <version>3.2.0</version>
       <description>Unicode symbols with Windows CMD fallbacks</description>
-      <purl>pkg:npm/figures@3.2.0?</purl>
+      <purl>pkg:npm/figures@3.2.0?vcs_url=sindresorhus/figures</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/figures</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="878e7807af591f44ad7e6637d1edc08345cfb22aa4766a1da93bd50edb8c52b0156da6c90872cb5376799f9fddff17b09c5c7c5d4c9f3c5a2ad5fe6d2b3a5c7a">
       <author>Kevin Gravier</author>
@@ -440,11 +653,17 @@
       <description>Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT</description>
       <purl>pkg:npm/external-editor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/mrkmg/node-external-editor.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/mrkmg/node-external-editor/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/mrkmg/node-external-editor.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/mrkmg/node-external-editor#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -455,8 +674,13 @@
       <description>Modern Buffer API polyfill without footguns</description>
       <purl>pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ChALkeR/safer-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ChALkeR/safer-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -467,8 +691,13 @@
       <description>deep cloning of objects and arrays</description>
       <purl>pkg:npm/clone@1.0.4?vcs_url=git%3A//github.com/pvorb/node-clone.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/pvorb/node-clone/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/pvorb/node-clone.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -482,9 +711,11 @@
       <externalReferences>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/through.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/through</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -495,11 +726,17 @@
       <description>Base64 encoding/decoding in pure JS</description>
       <purl>pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/beatgammit/base64-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/beatgammit/base64-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/beatgammit/base64-js</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -510,11 +747,17 @@
       <description>Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?</description>
       <purl>pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-proto.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/has-proto/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/inspect-js/has-proto.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/inspect-js/has-proto#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -527,6 +770,7 @@
       <externalReferences>
         <reference type="vcs">
           <url>https://github.com/npm/mute-stream.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -534,17 +778,32 @@
       <name>chalk</name>
       <version>4.1.2</version>
       <description>Terminal string styling done right</description>
-      <purl>pkg:npm/chalk@4.1.2?</purl>
+      <purl>pkg:npm/chalk@4.1.2?vcs_url=chalk/chalk</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/chalk</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753">
       <author>KARASZI István</author>
       <name>tmp</name>
       <version>0.0.33</version>
       <description>Temporary file and directory creator</description>
-      <purl>pkg:npm/tmp@0.0.33?</purl>
+      <purl>pkg:npm/tmp@0.0.33?vcs_url=raszi/node-tmp</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/raszi/node-tmp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>raszi/node-tmp</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
         <reference type="website">
           <url>http://github.com/raszi/node-tmp</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -555,11 +814,17 @@
       <description>when you want to fire an event no matter how a process exits.</description>
       <purl>pkg:npm/signal-exit@3.0.7?vcs_url=https%3A//github.com/tapjs/signal-exit.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/tapjs/signal-exit/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>https://github.com/tapjs/signal-exit.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/tapjs/signal-exit</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -568,14 +833,26 @@
       <name>cli-spinners</name>
       <version>2.9.2</version>
       <description>Spinners for use in the terminal</description>
-      <purl>pkg:npm/cli-spinners@2.9.2?</purl>
+      <purl>pkg:npm/cli-spinners@2.9.2?vcs_url=sindresorhus/cli-spinners</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/cli-spinners</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b">
       <author>Simon Boudrias</author>
       <name>run-async</name>
       <version>3.0.0</version>
       <description>Utility method to run function either synchronously or asynchronously using the common `this.async()` style.</description>
-      <purl>pkg:npm/run-async@3.0.0?</purl>
+      <purl>pkg:npm/run-async@3.0.0?vcs_url=SBoudrias/run-async</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>SBoudrias/run-async</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="c08b53be836e628e200b27bf7b20b6859a14b75fb0d89d24aea283c172fedba528df494788397f1a827790179feabcac67c432c11a67c313fde64e1ce54165ba">
       <author>Ilya Radchenko</author>
@@ -584,8 +861,13 @@
       <description>Get stdout window width, with two fallbacks, tty and then a default.</description>
       <purl>pkg:npm/cli-width@4.1.0?vcs_url=git%40github.com%3Aknownasilya/cli-width.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/knownasilya/cli-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="website">
           <url>https://github.com/knownasilya/cli-width</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -596,11 +878,17 @@
       <description>Convert character encodings in pure javascript.</description>
       <purl>pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
+          <comment>as detected from PackageJson property "bugs"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/ashtuchkin/iconv-lite.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ashtuchkin/iconv-lite</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -608,27 +896,51 @@
       <name>inherits</name>
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
-      <purl>pkg:npm/inherits@2.0.4?</purl>
+      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/inherits</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197">
       <author>Sindre Sorhus</author>
       <name>ansi-regex</name>
       <version>5.0.1</version>
       <description>Regular expression for matching ANSI escape codes</description>
-      <purl>pkg:npm/ansi-regex@5.0.1?</purl>
+      <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/ansi-regex</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551">
       <author>Sindre Sorhus</author>
       <name>strip-ansi</name>
       <version>6.0.1</version>
       <description>Strip ANSI escape codes from a string</description>
-      <purl>pkg:npm/strip-ansi@6.0.1?</purl>
+      <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/strip-ansi</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36">
       <name>chalk</name>
       <version>5.3.0</version>
       <description>Terminal string styling done right</description>
-      <purl>pkg:npm/chalk@5.3.0?</purl>
+      <purl>pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>chalk/chalk</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="d2a6069158b166a31adb6a740adc9ba2d0fa8fdc706cc97f27de82ecc7c9efe4980b117879037f2fd3629dc5fd06abd76c6919929feb6606ee4296aea119ede8">
       <name>readable-stream</name>
@@ -638,6 +950,7 @@
       <externalReferences>
         <reference type="vcs">
           <url>git://github.com/nodejs/readable-stream</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -648,11 +961,17 @@
       <description>Does the environment have full property descriptor support? Handles IE 8's broken defineProperty/gOPD.</description>
       <purl>pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-property-descriptors.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/has-property-descriptors/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/inspect-js/has-property-descriptors.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/inspect-js/has-property-descriptors#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -663,11 +982,17 @@
       <description>`Object.defineProperty`, but not IE 8's broken one.</description>
       <purl>pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-define-property.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/es-define-property/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/es-define-property.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/es-define-property#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -676,7 +1001,13 @@
       <name>os-tmpdir</name>
       <version>1.0.2</version>
       <description>Node.js os.tmpdir() ponyfill</description>
-      <purl>pkg:npm/os-tmpdir@1.0.2?</purl>
+      <purl>pkg:npm/os-tmpdir@1.0.2?vcs_url=sindresorhus/os-tmpdir</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/os-tmpdir</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <component type="library" bom-ref="e3fe1a219c262e5f4439fabfc3240ca7d92d9254b8970e16c3fbc3c0c7de11bfb91486071399eab394f2c90e374bd04de4f6ab9eb510e0746cbf2e568cfc1a78">
       <author>Nathan Rajlich</author>
@@ -685,11 +1016,17 @@
       <description>The Node.js `util.deprecate()` function with browser support</description>
       <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/util-deprecate/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/TooTallNate/util-deprecate.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/TooTallNate/util-deprecate</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -702,6 +1039,7 @@
       <externalReferences>
         <reference type="vcs">
           <url>git://github.com/sindresorhus/node-defaults.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -714,6 +1052,7 @@
       <externalReferences>
         <reference type="vcs">
           <url>git://github.com/feross/ieee754.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -724,11 +1063,17 @@
       <description>A simple cache for a few of the JS Error constructors.</description>
       <purl>pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-errors.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/es-errors/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git+https://github.com/ljharb/es-errors.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/ljharb/es-errors#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
@@ -737,7 +1082,13 @@
       <name>cli-cursor</name>
       <version>3.1.0</version>
       <description>Toggle the CLI cursor</description>
-      <purl>pkg:npm/cli-cursor@3.1.0?</purl>
+      <purl>pkg:npm/cli-cursor@3.1.0?vcs_url=sindresorhus/cli-cursor</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>sindresorhus/cli-cursor</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
+      </externalReferences>
     </component>
   </components>
   <dependencies>

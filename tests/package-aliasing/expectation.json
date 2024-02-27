@@ -36,12 +36,19 @@
       "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
       "externalReferences": [
         {
+          "url": "https://github.com/colorjs/color-name/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:colorjs/color-name.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/colorjs/color-name",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -52,7 +59,14 @@
       "bom-ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?"
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -64,12 +78,19 @@
       "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "https://github.com/mathiasbynens/emoji-regex.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://mths.be/emoji-regex",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -80,7 +101,14 @@
       "bom-ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
-      "purl": "pkg:npm/ansi-styles@4.3.0?"
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -89,7 +117,14 @@
       "bom-ref": "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
-      "purl": "pkg:npm/wrap-ansi@8.1.0?"
+      "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -98,7 +133,14 @@
       "bom-ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@4.2.3?"
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -107,7 +149,14 @@
       "bom-ref": "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
-      "purl": "pkg:npm/strip-ansi@7.1.0?"
+      "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -116,7 +165,14 @@
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
       "author": "Heather Arthur",
       "description": "Plain color conversion functions",
-      "purl": "pkg:npm/color-convert@2.0.1?"
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "externalReferences": [
+        {
+          "url": "Qix-/color-convert",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -125,7 +181,14 @@
       "bom-ref": "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@6.0.1?"
+      "purl": "pkg:npm/ansi-regex@6.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -134,7 +197,14 @@
       "bom-ref": "ad6e1a055442aa4f57c291a85c857a326c2cbdf582c3509243bee26fefe5569ec4621a0926d8b1ec4e34de4d4e58f04747d6ea242cac98510818acbf80414896",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
-      "purl": "pkg:npm/wrap-ansi@7.0.0?"
+      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -143,7 +213,14 @@
       "bom-ref": "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@5.1.2?"
+      "purl": "pkg:npm/string-width@5.1.2?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -152,7 +229,14 @@
       "bom-ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
       "author": "Masaki Komagata",
       "description": "Get East Asian Width from a character.",
-      "purl": "pkg:npm/eastasianwidth@0.2.0?"
+      "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/komagata/eastasianwidth.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -161,7 +245,14 @@
       "bom-ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@5.0.1?"
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -170,7 +261,14 @@
       "bom-ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
-      "purl": "pkg:npm/strip-ansi@6.0.1?"
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -179,7 +277,14 @@
       "bom-ref": "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
-      "purl": "pkg:npm/ansi-styles@6.2.1?"
+      "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -191,12 +296,19 @@
       "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "https://github.com/mathiasbynens/emoji-regex.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://mths.be/emoji-regex",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -208,7 +320,14 @@
       "bom-ref": "f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1",
       "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
-      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?"
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=yargs/cliui",
+      "externalReferences": [
+        {
+          "url": "yargs/cliui",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     }
   ],
   "dependencies": [

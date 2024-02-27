@@ -33,11 +33,22 @@
       "bom-ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b",
       "author": "John-David Dalton",
       "description": "Lodash exported as ES modules.",
-      "purl": "pkg:npm/lodash-es@4.17.21?",
+      "purl": "pkg:npm/lodash-es@4.17.21?vcs_url=lodash/lodash",
       "externalReferences": [
         {
+          "url": "https://github.com/lodash/lodash-cli/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
+          "url": "lodash/lodash",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
           "url": "https://lodash.com/custom-builds",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     }

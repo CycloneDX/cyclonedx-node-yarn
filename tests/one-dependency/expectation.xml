@@ -23,10 +23,19 @@
       <name>lodash-es</name>
       <version>4.17.21</version>
       <description>Lodash exported as ES modules.</description>
-      <purl>pkg:npm/lodash-es@4.17.21?</purl>
+      <purl>pkg:npm/lodash-es@4.17.21?vcs_url=lodash/lodash</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/lodash/lodash-cli/issues</url>
+          <comment>as detected from PackageJson property "bugs"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>lodash/lodash</url>
+          <comment>as detected from PackageJson property "repository"</comment>
+        </reference>
         <reference type="website">
           <url>https://lodash.com/custom-builds</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>

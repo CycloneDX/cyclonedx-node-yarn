@@ -36,12 +36,19 @@
       "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
       "externalReferences": [
         {
+          "url": "https://github.com/colorjs/color-name/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:colorjs/color-name.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/colorjs/color-name",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -55,12 +62,19 @@
       "purl": "pkg:npm/wcwidth@1.0.1?vcs_url=git%2Bhttps%3A//github.com/timoxley/wcwidth.git",
       "externalReferences": [
         {
+          "url": "https://github.com/timoxley/wcwidth/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/timoxley/wcwidth.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/timoxley/wcwidth#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -71,7 +85,14 @@
       "bom-ref": "0833e1bbfbabcf94f56b291a0426cff7595e4633c91c04f6f9c0dec99abce84f3cf7f0c04087aa35d3f8651e8b34e78a644ffbba07684a8fe72b7cb536ea634e",
       "author": "Sindre Sorhus",
       "description": "Detect whether the terminal supports Unicode",
-      "purl": "pkg:npm/is-unicode-supported@0.1.0?"
+      "purl": "pkg:npm/is-unicode-supported@0.1.0?vcs_url=sindresorhus/is-unicode-supported",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-unicode-supported",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -80,7 +101,14 @@
       "bom-ref": "0a13492d8b4d44a0cfc7a5bdbd983fdba856fd36844d028150b9a6f2efdbf37a4a65771e45a441c76905b16e3181b2d2f8cdc4b105d6eba211f6ac4ea2542788",
       "author": "Sindre Sorhus",
       "description": "Colored symbols for various log levels. Example: `✔︎ Success`",
-      "purl": "pkg:npm/log-symbols@4.1.0?"
+      "purl": "pkg:npm/log-symbols@4.1.0?vcs_url=sindresorhus/log-symbols",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/log-symbols",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -92,12 +120,19 @@
       "purl": "pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/gopd.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/gopd/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/gopd.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/gopd#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -111,12 +146,19 @@
       "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/has-symbols/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/inspect-js/has-symbols.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/has-symbols#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -130,12 +172,19 @@
       "purl": "pkg:npm/hasown@2.0.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git",
       "externalReferences": [
         {
+          "url": "https://github.com/inspect-js/hasOwn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/inspect-js/hasOwn.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/inspect-js/hasOwn#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -149,12 +198,19 @@
       "purl": "pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/get-intrinsic.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/get-intrinsic/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/get-intrinsic.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/get-intrinsic#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -165,7 +221,14 @@
       "bom-ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?"
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -177,12 +240,19 @@
       "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "https://github.com/mathiasbynens/emoji-regex.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://mths.be/emoji-regex",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -196,11 +266,13 @@
       "externalReferences": [
         {
           "url": "git://github.com/nodejs/string_decoder.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/nodejs/string_decoder",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -211,7 +283,14 @@
       "bom-ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
-      "purl": "pkg:npm/ansi-styles@4.3.0?"
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -223,12 +302,19 @@
       "purl": "pkg:npm/chardet@0.7.0?vcs_url=git%40github.com%3Arunk/node-chardet.git",
       "externalReferences": [
         {
+          "url": "http://github.com/runk/node-chardet/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:runk/node-chardet.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/runk/node-chardet",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -239,7 +325,14 @@
       "bom-ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@4.2.3?"
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -248,7 +341,14 @@
       "bom-ref": "3284de402fdb30a1d139b01b5cccee3de7e8fc767e47d5c83e239eaf38b130b5e72367061ad613b14e2e095fa57cc7f8a9986e4c65f380f67055f1bc8fd17c89",
       "author": "Sindre Sorhus",
       "description": "Escape RegExp special characters",
-      "purl": "pkg:npm/escape-string-regexp@1.0.5?"
+      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=sindresorhus/escape-string-regexp",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/escape-string-regexp",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -257,7 +357,14 @@
       "bom-ref": "32af9f0536a974b227cea7887cd69d4024c6b2efc557c4b76c6fdc05fa2ab7b939ffcc4cbd60f3880d66b1e6ae8931e8928f9d5b49ae42294a783d6048d3b7df",
       "author": "Sindre Sorhus",
       "description": "Check if argv has a specific flag",
-      "purl": "pkg:npm/has-flag@4.0.0?"
+      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=sindresorhus/has-flag",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/has-flag",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -269,12 +376,19 @@
       "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
       "externalReferences": [
         {
+          "url": "https://github.com/feross/safe-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/feross/safe-buffer.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/feross/safe-buffer",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -285,7 +399,14 @@
       "bom-ref": "3ad173702ffcbc873013ea6e4338887c2d774260fe5f3cb2dc0047a66a160a5e452880d062084be59848c1060904a52ead63a347bf5b5779dc45bffcf9d418f7",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for manipulating the terminal",
-      "purl": "pkg:npm/ansi-escapes@4.3.2?"
+      "purl": "pkg:npm/ansi-escapes@4.3.2?vcs_url=sindresorhus/ansi-escapes",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/ansi-escapes",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -294,7 +415,14 @@
       "bom-ref": "3ed148fa42ebe80bd87403c28398700a9a92e00a566b687d8e249f286ca606374534a354801acc930ef284c59b1d964e6d6f5af3cfc8d33759114143ae7b7e53",
       "author": "Sindre Sorhus",
       "description": "Ensure a function is only called once",
-      "purl": "pkg:npm/onetime@5.1.2?"
+      "purl": "pkg:npm/onetime@5.1.2?vcs_url=sindresorhus/onetime",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/onetime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -306,12 +434,19 @@
       "purl": "pkg:npm/rxjs@7.8.1?vcs_url=https%3A//github.com/reactivex/rxjs.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ReactiveX/RxJS/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/reactivex/rxjs.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://rxjs.dev",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -322,7 +457,14 @@
       "bom-ref": "439a7246d8013438fb4db642f9d86dcc0cc9fdf80411112793e4980cdedf4226db5544e93178d16661931ed3299bdfd9c68ac1508352f587676a3fd094ca5a38",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
-      "purl": "pkg:npm/wrap-ansi@6.2.0?"
+      "purl": "pkg:npm/wrap-ansi@6.2.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -334,12 +476,19 @@
       "purl": "pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/define-data-property.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/define-data-property/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/define-data-property.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/define-data-property#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -350,7 +499,14 @@
       "bom-ref": "4f0343adb71e5131dcec897d9b8b29bd048ae7e511948174b09ce00a69abda33c6a43cec6acfa99fc85566e836061b13be9ba2613e5bcb9d94370e729a1c7fa1",
       "author": "Sindre Sorhus",
       "description": "Elegant terminal spinner",
-      "purl": "pkg:npm/ora@5.4.1?"
+      "purl": "pkg:npm/ora@5.4.1?vcs_url=sindresorhus/ora",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/ora",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -359,7 +515,14 @@
       "bom-ref": "4fbeb3abb47349ed60ef8a8e0063933fb2e4243cc7f3ffbe1f78c670940b5ba1d3a7eab9dab8278fe5dfe0a1ac0b2135b6e047b9c0044965bba6e1c7be13cd2d",
       "author": "Sindre Sorhus",
       "description": "Make a function mimic another one",
-      "purl": "pkg:npm/mimic-fn@2.1.0?"
+      "purl": "pkg:npm/mimic-fn@2.1.0?vcs_url=sindresorhus/mimic-fn",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/mimic-fn",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -371,12 +534,19 @@
       "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A//github.com/Microsoft/tslib.git",
       "externalReferences": [
         {
+          "url": "https://github.com/Microsoft/TypeScript/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/Microsoft/tslib.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://www.typescriptlang.org/",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -390,12 +560,19 @@
       "purl": "pkg:npm/set-function-length@1.2.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/set-function-length.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/set-function-length/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/set-function-length.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/set-function-length#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -409,12 +586,19 @@
       "purl": "pkg:npm/buffer@5.7.1?vcs_url=git%3A//github.com/feross/buffer.git",
       "externalReferences": [
         {
+          "url": "https://github.com/feross/buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/feross/buffer.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/feross/buffer",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -425,7 +609,14 @@
       "bom-ref": "52c5a4c98f363a43f0a80d282f5db708f2f2581d891c636bdac543a596b3795fb68210d653bd82288ce8f11f4e02565425924ed80cb4831babee824d52dc643b",
       "author": "Sindre Sorhus",
       "description": "Gracefully restore the CLI cursor on exit",
-      "purl": "pkg:npm/restore-cursor@3.1.0?"
+      "purl": "pkg:npm/restore-cursor@3.1.0?vcs_url=sindresorhus/restore-cursor",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/restore-cursor",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -434,7 +625,14 @@
       "bom-ref": "5ff2a9c6fdee6be58ecc63ffa8c36220fb9e5f74797d80058623b9b66ceb4eddee4f8b70a5904fa8561b365e11788b6075e991a56474d831377be48d79f8b8bb",
       "author": "Sindre Sorhus",
       "description": "A collection of essential TypeScript types",
-      "purl": "pkg:npm/type-fest@0.21.3?"
+      "purl": "pkg:npm/type-fest@0.21.3?vcs_url=sindresorhus/type-fest",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/type-fest",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -443,7 +641,14 @@
       "bom-ref": "606bfcf7da72e3aa5acbff222728fbfbe4808570fba5c4c128dba7cd9a5e9be520676773d904fb6c2a0c0ae6d8402068c8ac741b13e8d98773bb2afdd30e32c7",
       "author": "Sindre Sorhus",
       "description": "Detect whether a terminal supports color",
-      "purl": "pkg:npm/supports-color@7.2.0?"
+      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=chalk/supports-color",
+      "externalReferences": [
+        {
+          "url": "chalk/supports-color",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -452,11 +657,17 @@
       "bom-ref": "638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f",
       "author": "John-David Dalton",
       "description": "Lodash modular utilities.",
-      "purl": "pkg:npm/lodash@4.17.21?",
+      "purl": "pkg:npm/lodash@4.17.21?vcs_url=lodash/lodash",
       "externalReferences": [
         {
+          "url": "lodash/lodash",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
           "url": "https://lodash.com/",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -470,12 +681,19 @@
       "purl": "pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A//github.com/ljharb/call-bind.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/call-bind/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/call-bind.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/call-bind#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -486,7 +704,14 @@
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
       "author": "Heather Arthur",
       "description": "Plain color conversion functions",
-      "purl": "pkg:npm/color-convert@2.0.1?"
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "externalReferences": [
+        {
+          "url": "Qix-/color-convert",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -498,12 +723,19 @@
       "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A//github.com/Raynos/function-bind.git",
       "externalReferences": [
         {
+          "url": "https://github.com/Raynos/function-bind/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/Raynos/function-bind.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/Raynos/function-bind",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -518,11 +750,13 @@
       "externalReferences": [
         {
           "url": "https://github.com/SBoudrias/Inquirer.js.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -536,11 +770,13 @@
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/bl.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/rvagg/bl",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -551,7 +787,14 @@
       "bom-ref": "7ff7c6e04a1a80efe6c6731c69623125359b38737a538af1171b6c1655d1f4abe552e43d06c4f161bca28cbf2812f99d1e1b9e3cd2a2665482a6f7176f63c661",
       "author": "Sindre Sorhus",
       "description": "Check if stdout or stderr is interactive",
-      "purl": "pkg:npm/is-interactive@1.0.0?"
+      "purl": "pkg:npm/is-interactive@1.0.0?vcs_url=sindresorhus/is-interactive",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-interactive",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -560,7 +803,14 @@
       "bom-ref": "85d357e9552f7511205d0aefa236e07f21a1876bdaf3a638d346bbea2aadc8846646cf11b65cd4d5c8b53c02c8ecd89438416b39a4dbba6b31d5cc9ef50979da",
       "author": "Sindre Sorhus",
       "description": "Unicode symbols with Windows CMD fallbacks",
-      "purl": "pkg:npm/figures@3.2.0?"
+      "purl": "pkg:npm/figures@3.2.0?vcs_url=sindresorhus/figures",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/figures",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -572,12 +822,19 @@
       "purl": "pkg:npm/external-editor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/mrkmg/node-external-editor.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mrkmg/node-external-editor/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/mrkmg/node-external-editor.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/mrkmg/node-external-editor#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -591,8 +848,14 @@
       "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ChALkeR/safer-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ChALkeR/safer-buffer.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -606,8 +869,14 @@
       "purl": "pkg:npm/clone@1.0.4?vcs_url=git%3A//github.com/pvorb/node-clone.git",
       "externalReferences": [
         {
+          "url": "https://github.com/pvorb/node-clone/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/pvorb/node-clone.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -623,11 +892,13 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/ljharb/through.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/through",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -641,12 +912,19 @@
       "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
       "externalReferences": [
         {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/beatgammit/base64-js.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/beatgammit/base64-js",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -660,12 +938,19 @@
       "purl": "pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-proto.git",
       "externalReferences": [
         {
+          "url": "https://github.com/inspect-js/has-proto/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/inspect-js/has-proto.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/inspect-js/has-proto#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -680,7 +965,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/mute-stream.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -690,7 +976,14 @@
       "version": "4.1.2",
       "bom-ref": "ba8b67ab80946173b706cb3d8e41fea09d58e71321d50bf12af7ba629492e43319d02c774281b4f22aa0d3e8c213a26f617cbe57fcf0eb4292f5777dcc0ceeec",
       "description": "Terminal string styling done right",
-      "purl": "pkg:npm/chalk@4.1.2?"
+      "purl": "pkg:npm/chalk@4.1.2?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -699,11 +992,22 @@
       "bom-ref": "bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753",
       "author": "KARASZI István",
       "description": "Temporary file and directory creator",
-      "purl": "pkg:npm/tmp@0.0.33?",
+      "purl": "pkg:npm/tmp@0.0.33?vcs_url=raszi/node-tmp",
       "externalReferences": [
         {
+          "url": "http://github.com/raszi/node-tmp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "raszi/node-tmp",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
           "url": "http://github.com/raszi/node-tmp",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -717,12 +1021,19 @@
       "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
       "externalReferences": [
         {
+          "url": "https://github.com/tapjs/signal-exit/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/tapjs/signal-exit.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/tapjs/signal-exit",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -733,7 +1044,14 @@
       "bom-ref": "be9c08efee22c96768d6a6919b89de666f426bde675c50826d90d341a5da4059bf9c0e56497d052aad02a111c64037d93b604da7daec5fd5a1f8fc1ce727ebb4",
       "author": "Sindre Sorhus",
       "description": "Spinners for use in the terminal",
-      "purl": "pkg:npm/cli-spinners@2.9.2?"
+      "purl": "pkg:npm/cli-spinners@2.9.2?vcs_url=sindresorhus/cli-spinners",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/cli-spinners",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -742,7 +1060,14 @@
       "bom-ref": "bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b",
       "author": "Simon Boudrias",
       "description": "Utility method to run function either synchronously or asynchronously using the common `this.async()` style.",
-      "purl": "pkg:npm/run-async@3.0.0?"
+      "purl": "pkg:npm/run-async@3.0.0?vcs_url=SBoudrias/run-async",
+      "externalReferences": [
+        {
+          "url": "SBoudrias/run-async",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -754,12 +1079,19 @@
       "purl": "pkg:npm/cli-width@4.1.0?vcs_url=git%40github.com%3Aknownasilya/cli-width.git",
       "externalReferences": [
         {
+          "url": "https://github.com/knownasilya/cli-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:knownasilya/cli-width.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/knownasilya/cli-width",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -773,12 +1105,19 @@
       "purl": "pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ashtuchkin/iconv-lite/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "git://github.com/ashtuchkin/iconv-lite.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ashtuchkin/iconv-lite",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -788,7 +1127,14 @@
       "version": "2.0.4",
       "bom-ref": "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3",
       "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
-      "purl": "pkg:npm/inherits@2.0.4?"
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits",
+      "externalReferences": [
+        {
+          "url": "git://github.com/isaacs/inherits",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -797,7 +1143,14 @@
       "bom-ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@5.0.1?"
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -806,7 +1159,14 @@
       "bom-ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
-      "purl": "pkg:npm/strip-ansi@6.0.1?"
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -814,7 +1174,14 @@
       "version": "5.3.0",
       "bom-ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
       "description": "Terminal string styling done right",
-      "purl": "pkg:npm/chalk@5.3.0?"
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -826,7 +1193,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/nodejs/readable-stream",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -840,12 +1208,19 @@
       "purl": "pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-property-descriptors.git",
       "externalReferences": [
         {
+          "url": "https://github.com/inspect-js/has-property-descriptors/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/inspect-js/has-property-descriptors.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/inspect-js/has-property-descriptors#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -859,12 +1234,19 @@
       "purl": "pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-define-property.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/es-define-property/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/es-define-property.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/es-define-property#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -875,7 +1257,14 @@
       "bom-ref": "e305b0689b1ff9ff8efa3d745fece7f2767c4a13e68ec03822eab4f75fd791405e2c4bfd7b04f5b9e6bea9e5050a11fd222f122f08766b86536be728769a78f6",
       "author": "Sindre Sorhus",
       "description": "Node.js os.tmpdir() ponyfill",
-      "purl": "pkg:npm/os-tmpdir@1.0.2?"
+      "purl": "pkg:npm/os-tmpdir@1.0.2?vcs_url=sindresorhus/os-tmpdir",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/os-tmpdir",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -887,12 +1276,19 @@
       "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
       "externalReferences": [
         {
+          "url": "https://github.com/TooTallNate/util-deprecate/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/TooTallNate/util-deprecate.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/TooTallNate/util-deprecate",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -907,7 +1303,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/sindresorhus/node-defaults.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -922,7 +1319,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/feross/ieee754.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -936,12 +1334,19 @@
       "purl": "pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-errors.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/es-errors/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/es-errors.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ljharb/es-errors#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -952,7 +1357,14 @@
       "bom-ref": "fee1e46b5e90637b07367f94ae298429b3160dc17f358d4774c3b15d11279849e777f16ef31ae508284b0dffde3a77d7601c3dc161d24c84a15a0a4d487cc04c",
       "author": "Sindre Sorhus",
       "description": "Toggle the CLI cursor",
-      "purl": "pkg:npm/cli-cursor@3.1.0?"
+      "purl": "pkg:npm/cli-cursor@3.1.0?vcs_url=sindresorhus/cli-cursor",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/cli-cursor",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     }
   ],
   "dependencies": [

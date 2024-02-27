@@ -36,12 +36,19 @@
       "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
       "externalReferences": [
         {
+          "url": "https://github.com/colorjs/color-name/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:colorjs/color-name.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/colorjs/color-name",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -55,12 +62,19 @@
       "purl": "pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A//github.com/coveo/exponential-backoff.git",
       "externalReferences": [
         {
+          "url": "https://github.com/coveo/exponential-backoff/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/coveo/exponential-backoff.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/coveo/exponential-backoff#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -74,8 +88,14 @@
       "purl": "pkg:npm/err-code@2.0.3?vcs_url=git%3A//github.com/IndigoUnited/js-err-code.git",
       "externalReferences": [
         {
+          "url": "https://github.com/IndigoUnited/js-err-code/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/IndigoUnited/js-err-code.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -91,7 +111,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -105,12 +126,19 @@
       "purl": "pkg:npm/hdr-histogram-percentiles-obj@3.0.0?vcs_url=git%2Bhttps%3A//github.com/GlenTiki/hdr-histogram-percentiles-obj.git",
       "externalReferences": [
         {
+          "url": "https://github.com/GlenTiki/hdr-histogram-percentiles-obj/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/GlenTiki/hdr-histogram-percentiles-obj.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/GlenTiki/hdr-histogram-percentiles-obj#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -121,7 +149,14 @@
       "bom-ref": "0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
-      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?"
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -130,7 +165,14 @@
       "bom-ref": "0e66ea8321579de5017d37b0bb63540a49a525e0cacd2b1176cbd26d994f2bc185bdf9308662dd787b8b735d5ed418f89e94010c08ccc2beaa27f1124fed2de4",
       "author": "Sindre Sorhus",
       "description": "Get the PATH environment variable key cross-platform",
-      "purl": "pkg:npm/path-key@3.1.1?"
+      "purl": "pkg:npm/path-key@3.1.1?vcs_url=sindresorhus/path-key",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/path-key",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -143,7 +185,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/abbrev-js.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -154,7 +197,14 @@
       "bom-ref": "1120131375ac7fd41b619768f97d8e8329b65a6b4631b5bc16c627d4909136ec38a586ed8a69de7855b33a88a9c514f6f0dedc20d6a720ab62f68583c7f9cb1e",
       "author": "Kornel Lesiński",
       "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
-      "purl": "pkg:npm/http-cache-semantics@4.1.1?"
+      "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=https%3A//github.com/kornelski/http-cache-semantics.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/kornelski/http-cache-semantics.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -167,11 +217,13 @@
       "externalReferences": [
         {
           "url": "git://github.com/juliangruber/brace-expansion.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/juliangruber/brace-expansion",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -186,7 +238,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/ssri.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -201,7 +254,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/andyperlitch/jsbn.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -212,7 +266,14 @@
       "bom-ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?"
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -225,7 +286,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/minipass-fetch.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -239,12 +301,19 @@
       "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "https://github.com/mathiasbynens/emoji-regex.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://mths.be/emoji-regex",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -255,7 +324,14 @@
       "bom-ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
-      "purl": "pkg:npm/ansi-styles@4.3.0?"
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -267,12 +343,19 @@
       "purl": "pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ashtuchkin/iconv-lite/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "git://github.com/ashtuchkin/iconv-lite.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/ashtuchkin/iconv-lite",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -286,7 +369,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-graceful-fs",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -297,7 +381,14 @@
       "bom-ref": "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
-      "purl": "pkg:npm/wrap-ansi@8.1.0?"
+      "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -310,7 +401,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/HdrHistogram/HdrHistogramJS.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -321,7 +413,14 @@
       "bom-ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@4.2.3?"
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -334,7 +433,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/minipass-sized.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -349,7 +449,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/isaacs/node-which.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -360,7 +461,14 @@
       "bom-ref": "37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12",
       "author": "Sindre Sorhus",
       "description": "ES2015 `String#codePointAt()` ponyfill",
-      "purl": "pkg:npm/code-point-at@1.1.0?"
+      "purl": "pkg:npm/code-point-at@1.1.0?vcs_url=sindresorhus/code-point-at",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/code-point-at",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -372,7 +480,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-mkdirp.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -386,12 +495,19 @@
       "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A//github.com/JoshGlazebrook/socks.git",
       "externalReferences": [
         {
+          "url": "https://github.com/JoshGlazebrook/socks/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/JoshGlazebrook/socks.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/JoshGlazebrook/socks/",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -406,7 +522,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-tar.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -417,7 +534,14 @@
       "bom-ref": "415a406f4ea391b867ab2b5e9438bebf4996f888a08431fe3379c442185f5af4d64ed106bc1f1b5983a07969c39ecf6933c911b66d39a2b37132f00305ea8649",
       "author": "Sindre Sorhus",
       "description": "Create an error from multiple errors",
-      "purl": "pkg:npm/aggregate-error@3.1.0?"
+      "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=sindresorhus/aggregate-error",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/aggregate-error",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -430,7 +554,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/jackspeak.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -441,7 +566,14 @@
       "bom-ref": "4677ae07c73d768e80ceba3af952c1a63948bbc521fb64de796d97dcbc403599027c1304563c755b36baaaef6290c05d5fbf03e9c7d15cc89ad224786adb774c",
       "author": "Sindre Sorhus",
       "description": "Map over promises concurrently",
-      "purl": "pkg:npm/p-map@4.0.0?"
+      "purl": "pkg:npm/p-map@4.0.0?vcs_url=sindresorhus/p-map",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/p-map",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -454,7 +586,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/nodejs/node-gyp.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -465,11 +598,12 @@
       "bom-ref": "4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1",
       "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
-      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
+      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git",
-          "type": "vcs"
+          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         }
       ]
     },
@@ -483,12 +617,19 @@
       "purl": "pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
         {
+          "url": "https://github.com/npm/fs-minipass/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/npm/fs-minipass.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/npm/fs-minipass#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -503,7 +644,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/path-scurry",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -526,12 +668,19 @@
       "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A//github.com/JoshGlazebrook/smart-buffer.git",
       "externalReferences": [
         {
+          "url": "https://github.com/JoshGlazebrook/smart-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/JoshGlazebrook/smart-buffer.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/JoshGlazebrook/smart-buffer/",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -545,12 +694,19 @@
       "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A//github.com/jensyt/imurmurhash-js",
       "externalReferences": [
         {
-          "url": "https://github.com/jensyt/imurmurhash-js",
-          "type": "vcs"
+          "url": "https://github.com/jensyt/imurmurhash-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "https://github.com/jensyt/imurmurhash-js",
-          "type": "website"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jensyt/imurmurhash-js",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -565,7 +721,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -580,7 +737,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/isaacs/chownr.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -591,11 +749,12 @@
       "bom-ref": "643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
-      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git",
-          "type": "vcs"
+          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         }
       ]
     },
@@ -610,7 +769,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/addaleax/nice-napi",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -625,7 +785,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/isaacs/minimatch.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -636,7 +797,14 @@
       "bom-ref": "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes",
-      "purl": "pkg:npm/strip-ansi@3.0.1?"
+      "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -649,11 +817,13 @@
       "externalReferences": [
         {
           "url": "git://github.com/tim-kos/node-retry.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/tim-kos/node-retry",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -664,7 +834,14 @@
       "bom-ref": "73d3907e40b3224d4cb2d02695db221650101ca0aa206aa4704af0704cd3126ac38050d44aeb715ef9dcc47d1daa911beee6ac01f781030698218bb55984d797",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
-      "purl": "pkg:npm/minipass-collect@2.0.1?"
+      "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=https%3A//github.com/isaacs/minipass-collect",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/minipass-collect",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -673,7 +850,14 @@
       "bom-ref": "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
-      "purl": "pkg:npm/strip-ansi@7.1.0?"
+      "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -685,12 +869,19 @@
       "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A//github.com/npm/unique-filename.git",
       "externalReferences": [
         {
+          "url": "https://github.com/iarna/unique-filename/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/npm/unique-filename.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/iarna/unique-filename",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -705,7 +896,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/tapjs/foreground-child.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -716,7 +908,14 @@
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
       "author": "Heather Arthur",
       "description": "Plain color conversion functions",
-      "purl": "pkg:npm/color-convert@2.0.1?"
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "externalReferences": [
+        {
+          "url": "Qix-/color-convert",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -728,12 +927,19 @@
       "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A//github.com/watson/is-lambda.git",
       "externalReferences": [
         {
+          "url": "https://github.com/watson/is-lambda/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/watson/is-lambda.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/watson/is-lambda",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -744,7 +950,14 @@
       "bom-ref": "7b717435b244f5f029b4c6cc4824106bcfffcd185e13a5bdfc0ad68d150303180169328d83d7f4421e8ed9647a8cbce24e5bc589fb0a2a409f5935dbe2cc6687",
       "author": "Sindre Sorhus",
       "description": "Indent each line in a string",
-      "purl": "pkg:npm/indent-string@4.0.0?"
+      "purl": "pkg:npm/indent-string@4.0.0?vcs_url=sindresorhus/indent-string",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/indent-string",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -753,7 +966,14 @@
       "bom-ref": "7c7577428c4f4c7a56f0f3b0f2a027375278a0b64cb2a3894163467313f31bed86cb2a498b6ab61e4b759864e9399266b816b40c19df12f8aa53906fe279426b",
       "author": "Sindre Sorhus",
       "description": "Get paths for storing things like data, config, cache, etc",
-      "purl": "pkg:npm/env-paths@2.2.1?"
+      "purl": "pkg:npm/env-paths@2.2.1?vcs_url=sindresorhus/env-paths",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/env-paths",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -762,7 +982,14 @@
       "bom-ref": "82a1837d3023f9ee634932aad335538baf52c5b6324f68f9ac628cf886a6a299eb70f8a7b6e9290e9204a62bdc8bdaa10f5014336dcfafff75aa1dadb19115c0",
       "author": "Andris Reinman",
       "description": "Convert encodings, uses iconv-lite",
-      "purl": "pkg:npm/encoding@0.1.13?"
+      "purl": "pkg:npm/encoding@0.1.13?vcs_url=https%3A//github.com/andris9/encoding.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/andris9/encoding.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -771,7 +998,14 @@
       "bom-ref": "845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f",
       "author": "Sindre Sorhus",
       "description": "ES2015 Number.isNaN() ponyfill",
-      "purl": "pkg:npm/number-is-nan@1.0.1?"
+      "purl": "pkg:npm/number-is-nan@1.0.1?vcs_url=sindresorhus/number-is-nan",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/number-is-nan",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -783,8 +1017,14 @@
       "purl": "pkg:npm/promise-retry@2.0.1?vcs_url=git%3A//github.com/IndigoUnited/node-promise-retry.git",
       "externalReferences": [
         {
+          "url": "https://github.com/IndigoUnited/node-promise-retry/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/IndigoUnited/node-promise-retry.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -795,7 +1035,14 @@
       "bom-ref": "877a267836875fa8456cf9931da5cf1ec09a8d087612f93c795cd1d33bfeb06105aec6a787f8c26147098ee826a8ccd5fb843de6f1bf92b4a9a0bfb2cdb883ef",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@1.0.0?"
+      "purl": "pkg:npm/string-width@1.0.0?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -804,7 +1051,14 @@
       "bom-ref": "899a0cd65e9e33a7a764304c6e4539ed5e025786df64f7f324c66f200a46eb47b46f0f57a90c1de94eccbc9d1a397f636b3ec96ccc7f76b3d326d3772e0247d9",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching a shebang line",
-      "purl": "pkg:npm/shebang-regex@3.0.0?"
+      "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=sindresorhus/shebang-regex",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/shebang-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -817,12 +1071,19 @@
       "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A//github.com/npm/agent.git",
       "externalReferences": [
         {
+          "url": "https://github.com/npm/agent/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/npm/agent.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/npm/agent#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -836,8 +1097,14 @@
       "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ChALkeR/safer-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ChALkeR/safer-buffer.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -848,7 +1115,14 @@
       "bom-ref": "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@6.0.1?"
+      "purl": "pkg:npm/ansi-regex@6.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -857,7 +1131,14 @@
       "bom-ref": "9c0061eeadb9219b2d9f385a4c21603069630eeed6c9d01e6891feb4ac189d490e21ffb6bafef6cf5bda5924bb9df5256f121e33dbb7b0c059278d75160d14ee",
       "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
-      "purl": "pkg:npm/isexe@3.1.1?"
+      "purl": "pkg:npm/isexe@3.1.1?vcs_url=https%3A//github.com/isaacs/isexe",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/isexe",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -865,7 +1146,14 @@
       "version": "0.6.3",
       "bom-ref": "9d50e361718e2cebc5f299f5848b4cb5c14b3fc0cf44455bcc6c0f14da1aa2c86a35ba7540580cdfd59886c845ce93ee172abb705aba1a4a04624ba24901f1c9",
       "description": "HTTP content negotiation",
-      "purl": "pkg:npm/negotiator@0.6.3?"
+      "purl": "pkg:npm/negotiator@0.6.3?vcs_url=jshttp/negotiator",
+      "externalReferences": [
+        {
+          "url": "jshttp/negotiator",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -878,7 +1166,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/beaugunderson/ip-address.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -891,12 +1180,19 @@
       "purl": "pkg:npm/node-addon-api@3.2.1?vcs_url=git%3A//github.com/nodejs/node-addon-api.git",
       "externalReferences": [
         {
+          "url": "https://github.com/nodejs/node-addon-api/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/node-addon-api.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/nodejs/node-addon-api",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -907,11 +1203,12 @@
       "bom-ref": "a51e13f5dcd8f6788fcef3adce290f5061f53539a22db054764827bf1f78be4ebfa2e8edcd096e22b8554fb128b249f365135e0a868fd6fa66afae336bd0f0f5",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
-      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
+      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git",
-          "type": "vcs"
+          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         }
       ]
     },
@@ -926,11 +1223,13 @@
       "externalReferences": [
         {
           "url": "git://github.com/juliangruber/balanced-match.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/juliangruber/balanced-match",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -945,7 +1244,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/proc-log.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -956,7 +1256,14 @@
       "bom-ref": "a8ce435a5c0d633166fb1af0bb67915b01f18a1f95cdb18fcfbc07cd8e666259be972a26471198120dab7f7471e785ec2c8f399ceb055f85db5b0ebef61309b1",
       "author": "Sindre Sorhus",
       "description": "Clean up error stack traces",
-      "purl": "pkg:npm/clean-stack@2.2.0?"
+      "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=sindresorhus/clean-stack",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/clean-stack",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -965,7 +1272,14 @@
       "bom-ref": "ad6e1a055442aa4f57c291a85c857a326c2cbdf582c3509243bee26fefe5569ec4621a0926d8b1ec4e34de4d4e58f04747d6ea242cac98510818acbf80414896",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
-      "purl": "pkg:npm/wrap-ansi@7.0.0?"
+      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -977,12 +1291,19 @@
       "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
       "externalReferences": [
         {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/beatgammit/base64-js.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/beatgammit/base64-js",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -993,11 +1314,22 @@
       "bom-ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b",
       "author": "John-David Dalton",
       "description": "Lodash exported as ES modules.",
-      "purl": "pkg:npm/lodash-es@4.17.21?",
+      "purl": "pkg:npm/lodash-es@4.17.21?vcs_url=lodash/lodash",
       "externalReferences": [
         {
+          "url": "https://github.com/lodash/lodash-cli/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
+          "url": "lodash/lodash",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
           "url": "https://lodash.com/custom-builds",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1012,7 +1344,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/yallist.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1023,7 +1356,14 @@
       "bom-ref": "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
       "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
-      "purl": "pkg:npm/lru-cache@6.0.0?"
+      "purl": "pkg:npm/lru-cache@6.0.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/isaacs/node-lru-cache.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1035,12 +1375,19 @@
       "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/isexe/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/isexe.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/isaacs/isexe#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1055,7 +1402,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/minipass.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1065,11 +1413,17 @@
       "version": "1.0.11",
       "bom-ref": "b8f1b69d3ece7c256fba93c7b8111ff8f840f1934b04030b27031c510647fdbb4d1de30d69b4f1e882efd10eecebd4b3c501987dc475b58d08d38190049c55e0",
       "description": "zlib port to javascript - fast, modularized, with browser support",
-      "purl": "pkg:npm/pako@1.0.11?",
+      "purl": "pkg:npm/pako@1.0.11?vcs_url=nodeca/pako",
       "externalReferences": [
         {
+          "url": "nodeca/pako",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
           "url": "https://github.com/nodeca/pako",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1084,7 +1438,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/alexei/sprintf.js.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1099,7 +1454,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/isaacs/node-lru-cache.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1110,7 +1466,14 @@
       "bom-ref": "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
-      "purl": "pkg:npm/string-width@5.1.2?"
+      "purl": "pkg:npm/string-width@5.1.2?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1119,7 +1482,14 @@
       "bom-ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
       "author": "Masaki Komagata",
       "description": "Get East Asian Width from a character.",
-      "purl": "pkg:npm/eastasianwidth@0.2.0?"
+      "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/komagata/eastasianwidth.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1132,7 +1502,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/minipass.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1143,7 +1514,14 @@
       "bom-ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@5.0.1?"
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1152,7 +1530,14 @@
       "bom-ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
-      "purl": "pkg:npm/strip-ansi@6.0.1?"
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1164,12 +1549,19 @@
       "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%40github.com%3Apkgjs/parseargs.git",
       "externalReferences": [
         {
+          "url": "https://github.com/pkgjs/parseargs/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git@github.com:pkgjs/parseargs.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/pkgjs/parseargs#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1183,12 +1575,19 @@
       "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
         {
+          "url": "https://github.com/npm/fs-minipass/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/npm/fs-minipass.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/npm/fs-minipass#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1198,7 +1597,14 @@
       "version": "5.3.0",
       "bom-ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
       "description": "Terminal string styling done right",
-      "purl": "pkg:npm/chalk@5.3.0?"
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1207,7 +1613,14 @@
       "bom-ref": "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
-      "purl": "pkg:npm/ansi-styles@6.2.1?"
+      "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1220,7 +1633,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/cacache.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1232,15 +1646,22 @@
       "bom-ref": "d72c90e01a4b740dc1fbc787c41c04d8d57c2f0d494ed994c5c4f72777823db811d6fe5734390f6db336d68735d7bee6dfb80b0ceaa8cac2eb44891cb81d93a6",
       "author": "Daniel Wirtz",
       "description": "A convenient loader for AssemblyScript modules.",
-      "purl": "pkg:npm/%40assemblyscript/loader@0.10.1?vcs_url=https%3A//github.com/AssemblyScript/assemblyscript.git",
+      "purl": "pkg:npm/%40assemblyscript/loader@0.10.1?vcs_url=https%3A//github.com/AssemblyScript/assemblyscript.git#lib/loader",
       "externalReferences": [
         {
-          "url": "https://github.com/AssemblyScript/assemblyscript.git",
-          "type": "vcs"
+          "url": "https://github.com/AssemblyScript/assemblyscript/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/AssemblyScript/assemblyscript.git#lib/loader",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },
         {
           "url": "https://assemblyscript.org",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1255,7 +1676,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/isaacs/node-glob.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1270,7 +1692,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-which.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1285,7 +1708,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1296,7 +1720,14 @@
       "bom-ref": "ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
-      "purl": "pkg:npm/ansi-regex@2.1.1?"
+      "purl": "pkg:npm/ansi-regex@2.1.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1309,7 +1740,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/addaleax/eventemitter-asyncresource",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1320,11 +1752,12 @@
       "bom-ref": "df165543cffb2d6e35f16d45212fdb281088fd79692edd2c9ff4e9798618ab0de16f1934f966ce833dcc524fbd5226aaa3aeebcfe5c4dc387e5bc9d7b8ef0a27",
       "author": "Nathan Rajlich",
       "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
-      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git",
-          "type": "vcs"
+          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         }
       ]
     },
@@ -1339,11 +1772,13 @@
       "externalReferences": [
         {
           "url": "git@github.com:moxystudio/node-cross-spawn.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/moxystudio/node-cross-spawn",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1358,7 +1793,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/unique-slug.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1372,12 +1808,19 @@
       "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
           "url": "https://github.com/mathiasbynens/emoji-regex.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://mths.be/emoji-regex",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1392,7 +1835,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/minizlib.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1403,7 +1847,14 @@
       "bom-ref": "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
-      "purl": "pkg:npm/minipass@7.0.4?"
+      "purl": "pkg:npm/minipass@7.0.4?vcs_url=https%3A//github.com/isaacs/minipass",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/minipass",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1412,7 +1863,14 @@
       "bom-ref": "eb2b01921d5450abfabec95da7be40968f4aeecbb395dc8eaabe5d57229f0efe1b85730a4944607ec29d3680cd22df70422a003bd93b08e3c7fd0595b12c126a",
       "author": "Kevin Mårtensson",
       "description": "Get the command from a shebang",
-      "purl": "pkg:npm/shebang-command@2.0.0?"
+      "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=kevva/shebang-command",
+      "externalReferences": [
+        {
+          "url": "kevva/shebang-command",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1420,7 +1878,14 @@
       "version": "2.1.2",
       "bom-ref": "ec0c1512fff06fb30c5c968fe85c7d9ff8d963ea1fde8b3c092518c7e2fb204d6397752a7ef493e5b8e1fbd4caeebb22f9345432a0a977792cb36fcbd94af37b",
       "description": "Tiny millisecond conversion utility",
-      "purl": "pkg:npm/ms@2.1.2?"
+      "purl": "pkg:npm/ms@2.1.2?vcs_url=zeit/ms",
+      "externalReferences": [
+        {
+          "url": "zeit/ms",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1433,7 +1898,8 @@
       "externalReferences": [
         {
           "url": "git://github.com/debug-js/debug.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1448,7 +1914,8 @@
       "externalReferences": [
         {
           "url": "git+https://github.com/isaacs/minipass-flush.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1462,12 +1929,19 @@
       "purl": "pkg:npm/node-gyp-build@4.8.0?vcs_url=https%3A//github.com/prebuild/node-gyp-build.git",
       "externalReferences": [
         {
+          "url": "https://github.com/prebuild/node-gyp-build/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "https://github.com/prebuild/node-gyp-build.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/prebuild/node-gyp-build",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1479,7 +1953,14 @@
       "bom-ref": "f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1",
       "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
-      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?"
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=yargs/cliui",
+      "externalReferences": [
+        {
+          "url": "yargs/cliui",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     },
     {
       "type": "library",
@@ -1492,7 +1973,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1507,7 +1989,8 @@
       "externalReferences": [
         {
           "url": "https://github.com/npm/make-fetch-happen.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -1521,12 +2004,19 @@
       "purl": "pkg:npm/piscina@4.1.0?vcs_url=git%2Bhttps%3A//github.com/piscinajs/piscina.git",
       "externalReferences": [
         {
+          "url": "https://github.com/piscinajs/piscina/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/piscinajs/piscina.git",
-          "type": "vcs"
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/piscinajs/piscina#readme",
-          "type": "website"
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     }
