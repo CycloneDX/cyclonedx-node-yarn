@@ -13,6 +13,8 @@ To start developing simply run to install dev-dependencies and tools:
 yarn install --immutable
 ```
 
+Then add SDKs for you preferred editor as described on https://yarnpkg.com/getting-started/editor-sdks if you want IDE support.
+
 ## Build from source
 
 Build bundle (unminified)
