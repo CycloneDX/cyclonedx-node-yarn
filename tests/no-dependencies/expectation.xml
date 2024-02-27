@@ -3,8 +3,10 @@
   <metadata>
     <tools>
       <tool>
-        <name>no-dependencies</name>
-        <version>0.0.1</version>
+        <name>yarn-plugin-sbom</name>
+      </tool>
+      <tool>
+        <name>cyclonedx-library</name>
       </tool>
     </tools>
     <component type="application" bom-ref="a15880a930a4e65124c64b72f8a359ae7edcdd7017bcda2e79cb3238f20703ebfce7a183e579a1eeb16a37623d421159d902a0bdea1a00d2851913675b891671">

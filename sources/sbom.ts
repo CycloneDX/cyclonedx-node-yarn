@@ -37,6 +37,8 @@ export const generateSBOM = async (
   outputOptions: OutputOptions
 ) => {
   const bom = new CDX.Models.Bom();
+  addMetadataTools(bom);
+
   if (outputOptions.reproducible) {
     bom.metadata.properties.add(
       new CDX.Models.Property("cdx:reproducible", "true")
@@ -63,7 +65,6 @@ export const generateSBOM = async (
       // Set workspace as root component.
       bom.metadata.component = component;
       bom.metadata.component.type = outputOptions.componentType;
-      bom.metadata.tools.add(component);
     } else {
       bom.components.add(component);
     }
@@ -90,6 +91,25 @@ export const generateSBOM = async (
     return xfs.writeFilePromise(outputOptions.outputFile, serializedSBoM);
   }
 };
+
+function addMetadataTools(bom: CDX.Models.Bom) {
+  bom.metadata.tools.add(
+    new CDX.Models.Component(
+      CDX.Enums.ComponentType.Library,
+      "cyclonedx-library",
+      {
+        // TODO Group is ignored by normalizer/serializer.
+        group: "@cyclonedx",
+      }
+    )
+  );
+  bom.metadata.tools.add(
+    new CDX.Models.Component(
+      CDX.Enums.ComponentType.Application,
+      "yarn-plugin-sbom"
+    )
+  );
+}
 
 /**
  * @returns String representation of SBoM, either JSON or XML.
