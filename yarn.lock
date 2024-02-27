@@ -349,7 +349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.0.0":
+"@types/node@npm:*, @types/node@npm:^20.11.20":
   version: 20.11.20
   resolution: "@types/node@npm:20.11.20"
   dependencies:
@@ -415,7 +415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/cli@npm:^4.0.0":
+"@yarnpkg/cli@npm:^4.0.0, @yarnpkg/cli@npm:^4.1.0":
   version: 4.1.0
   resolution: "@yarnpkg/cli@npm:4.1.0"
   dependencies:
@@ -1770,7 +1770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10":
+"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
   dependencies:
@@ -2841,14 +2841,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:5.0.0":
-  version: 5.0.0
-  resolution: "rimraf@npm:5.0.0"
+"rimraf@npm:5.x":
+  version: 5.0.5
+  resolution: "rimraf@npm:5.0.5"
   dependencies:
-    glob: "npm:^10.0.0"
+    glob: "npm:^10.3.7"
   bin:
-    rimraf: dist/cjs/src/bin.js
-  checksum: 10c0/965dcd7928334a86eeb02dc59874c6d1bf1a1361da4f55561083e5d216bfc52b933c14dae69450bea6943e52d0f704445e8f80c428c3390bd905f15daefdb0f7
+    rimraf: dist/esm/bin.mjs
+  checksum: 10c0/d50dbe724f33835decd88395b25ed35995077c60a50ae78ded06e0185418914e555817aad1b4243edbff2254548c2f6ad6f70cc850040bebb4da9e8cc016f586
   languageName: node
   linkType: hard
 
@@ -3259,23 +3259,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.3.0-beta":
-  version: 5.3.0-beta
-  resolution: "typescript@npm:5.3.0-beta"
+"typescript@npm:5.x":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/c350c30c7bd50071a8d4d596a6f49af682d711c671c30bd277f288d64bab4006ce67c6fd522bfde36120ff8b2d94e9e6b819d5a0f86f1039ae6c44c8cb502f6a
+  checksum: 10c0/e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.3.0-beta#optional!builtin<compat/typescript>":
-  version: 5.3.0-beta
-  resolution: "typescript@patch:typescript@npm%3A5.3.0-beta#optional!builtin<compat/typescript>::version=5.3.0-beta&hash=29ae49"
+"typescript@patch:typescript@npm%3A5.x#optional!builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/456074fc54625146190dce9bbca90c63e15bc4587508281a7df7c952fe5c9842f38d14a9044c794255458d0ef3fddb17a29fea996060425b83f2571806c3b161
+  checksum: 10c0/1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
   languageName: node
   linkType: hard
 
@@ -3456,15 +3456,15 @@ __metadata:
   resolution: "yarn-plugin-sbom@workspace:."
   dependencies:
     "@cyclonedx/cyclonedx-library": "npm:^6.4.0"
-    "@types/node": "npm:^20.0.0"
+    "@types/node": "npm:^20.11.20"
     "@yarnpkg/builder": "npm:^4.0.0"
-    "@yarnpkg/cli": "npm:^4.0.0"
-    "@yarnpkg/core": "npm:^4.0.0"
+    "@yarnpkg/cli": "npm:^4.1.0"
+    "@yarnpkg/core": "npm:^4.0.3"
     "@yarnpkg/fslib": "npm:^3.0.2"
     clipanion: "npm:^4.0.0-rc.2"
-    rimraf: "npm:5.0.0"
+    rimraf: "npm:5.x"
     spdx-license-ids: "npm:^3.0.17"
-    typescript: "npm:5.3.0-beta"
+    typescript: "npm:5.x"
     xmlbuilder2: "npm:^3.1.1"
   languageName: unknown
   linkType: soft

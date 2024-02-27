@@ -5,18 +5,18 @@
   "main": "./sources/index.ts",
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.4.0",
-    "@yarnpkg/cli": "^4.0.0",
-    "@yarnpkg/core": "^4.0.0",
+    "@yarnpkg/cli": "^4.1.0",
+    "@yarnpkg/core": "^4.0.3",
     "@yarnpkg/fslib": "^3.0.2",
     "clipanion": "^4.0.0-rc.2",
     "spdx-license-ids": "^3.0.17",
     "xmlbuilder2": "^3.1.1"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@types/node": "^20.11.20",
     "@yarnpkg/builder": "^4.0.0",
-    "rimraf": "5.0.0",
-    "typescript": "5.3.0-beta"
+    "rimraf": "5.x",
+    "typescript": "5.x"
   },
   "scripts": {
     "build": "builder build plugin && yarn test && yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
