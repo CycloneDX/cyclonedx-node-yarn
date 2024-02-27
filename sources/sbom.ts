@@ -83,7 +83,8 @@ export const generateSBOM = async (
   const serializedSBoM = serialize(
     bom,
     serializeSpec,
-    outputOptions.outputFormat
+    outputOptions.outputFormat,
+    outputOptions.reproducible
   );
   if (outputOptions.outputFile === stdOutOutput) {
     console.log(serializedSBoM);
@@ -117,7 +118,8 @@ function addMetadataTools(bom: CDX.Models.Bom) {
 function serialize(
   bom: CDX.Models.Bom,
   serializeSpec: SupportedSpec,
-  outputFormat: OutputOptions["outputFormat"]
+  outputFormat: OutputOptions["outputFormat"],
+  reproducible: OutputOptions["reproducible"]
 ): string {
   switch (outputFormat) {
     case CDX.Spec.Format.JSON: {
@@ -126,7 +128,7 @@ function serialize(
       );
       return serializer.serialize(bom, {
         space: 2,
-        sortLists: true,
+        sortLists: reproducible,
       });
     }
     case CDX.Spec.Format.XML: {
@@ -135,7 +137,7 @@ function serialize(
       );
       return serializer.serialize(bom, {
         space: 2,
-        sortLists: true,
+        sortLists: reproducible,
       });
     }
   }
