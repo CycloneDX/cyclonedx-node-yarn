@@ -6,10 +6,13 @@
   "metadata": {
     "tools": [
       {
-        "name": "yarn-plugin-sbom"
+        "name": "yarn-plugin-sbom",
+        "version": "1.0-dev"
       },
       {
-        "name": "cyclonedx-library"
+        "vendor": "cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "6.4.0"
       }
     ],
     "component": {

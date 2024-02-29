@@ -4,9 +4,12 @@
     <tools>
       <tool>
         <name>yarn-plugin-sbom</name>
+        <version>1.0-dev</version>
       </tool>
       <tool>
+        <vendor>cyclonedx</vendor>
         <name>cyclonedx-library</name>
+        <version>6.4.0</version>
       </tool>
     </tools>
     <component type="application" bom-ref="29d9332beec359aba70ccecb2c0ae34e85a609da3cb6af408f24287ce2e2e39265f04706f78a80b6e5c7665a4afa6baba719871de3252a245389b83cbdf4b630">

@@ -2,12 +2,27 @@ import fs from "node:fs";
 import path from "node:path";
 import { tmpdir } from "node:os";
 import { spawnSync } from "node:child_process";
+import { parseArgs } from "node:util";
 
 const testRoot = import.meta.dirname;
 const testDirs = fs
   .readdirSync(testRoot)
   .map((name) => path.join(testRoot, name))
   .filter((path) => fs.lstatSync(path).isDirectory());
+
+const refreshExpectations = parseArgs({
+  options: {
+    // Overwrites test expection files with actual test run output.
+    refresh: {
+      type: "boolean",
+      default: false,
+    },
+  },
+}).values.refresh;
+if (refreshExpectations) {
+  // Set error code to fail build if no assertions verified.
+  process.exitCode = 1;
+}
 
 const bundle = path.join(
   testRoot,
@@ -37,14 +52,14 @@ function executeTest(testDir) {
     throw new Error(`Failed to import plugin in ${testExecutionDir}`);
   }
 
-  generateAndCompare(testExecutionDir);
+  generateAndCompare(testExecutionDir, testDir);
 
   // Cleanup since no test failure.
   fs.rmSync(testExecutionDir, { recursive: true });
   console.log(`Testing ${testDir} completed without errors`);
 }
 
-function generateAndCompare(testExecutionDir) {
+function generateAndCompare(testExecutionDir, testDir) {
   const testParams = JSON.parse(
     fs.readFileSync(path.join(testExecutionDir, "test-parameters.json"))
   );
@@ -65,7 +80,10 @@ function generateAndCompare(testExecutionDir) {
       testParam.parameters[testParam.parameters.indexOf("--output-file") + 1];
     const pathActual = path.join(testExecutionDir, generatedFileName);
     const actualSBOM = fs.readFileSync(pathActual).toString().trim();
-    if (expectation !== actualSBOM) {
+    if (refreshExpectations) {
+      const expectationFilePath = path.join(testDir, testParam.expectedResult);
+      fs.writeFileSync(expectationFilePath, actualSBOM);
+    } else if (expectation !== actualSBOM) {
       throw new Error(
         `Generated file ${pathActual} different from ${pathExpected}.`
       );

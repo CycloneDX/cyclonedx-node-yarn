@@ -19,10 +19,11 @@
     "typescript": "5.x"
   },
   "scripts": {
-    "build": "builder build plugin && yarn test && yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
+    "build": "yarn buildtime-dependencies && builder build plugin && yarn test && yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
     "build:dev": "builder build plugin --no-minify",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node generate-components-licenses.mjs > bundles/components-licenses.md",
+    "buildtime-dependencies": "yarn info yarn-plugin-sbom --dependents --json > sources/buildtime-dependencies.json",
     "test": "node tests/run-all.mjs"
   },
   "packageManager": "yarn@4.1.0"

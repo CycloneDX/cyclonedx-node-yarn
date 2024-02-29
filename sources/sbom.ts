@@ -10,7 +10,11 @@ import {
 } from "@yarnpkg/core";
 import { PortablePath, xfs } from "@yarnpkg/fslib";
 import * as ids from "spdx-license-ids/index.json";
-import { PackageInfo, traverseWorkspace } from "./traverseUtils";
+import {
+  BuildtimeDependencies,
+  PackageInfo,
+  traverseWorkspace,
+} from "./traverseUtils";
 
 const licenseFactory = new CDX.Factories.LicenseFactory();
 const npmPurlFactory = new CDX.Factories.PackageUrlFactory("npm");
@@ -43,7 +47,7 @@ export const generateSBOM = async (
   outputOptions: OutputOptions
 ) => {
   const bom = new CDX.Models.Bom();
-  addMetadataTools(bom);
+  await addMetadataTools(bom);
 
   if (outputOptions.reproducible) {
     bom.metadata.properties.add(
@@ -100,22 +104,28 @@ export const generateSBOM = async (
   }
 };
 
-function addMetadataTools(bom: CDX.Models.Bom) {
-  bom.metadata.tools.add(
-    new CDX.Models.Component(
-      CDX.Enums.ComponentType.Library,
-      "cyclonedx-library",
-      {
-        // TODO Group is ignored by normalizer/serializer.
-        group: "@cyclonedx",
-      }
-    )
+async function addMetadataTools(bom: CDX.Models.Bom) {
+  let buildtimeDependencies: BuildtimeDependencies | undefined;
+  try {
+    buildtimeDependencies = await import("./buildtime-dependencies.json");
+  } catch {
+    // Dependency info not required during development.
+  }
+  const cdxDependency = buildtimeDependencies?.children.Dependencies.find(
+    (dep) => dep.locator.startsWith("@cyclonedx/cyclonedx-library@")
   );
   bom.metadata.tools.add(
-    new CDX.Models.Component(
-      CDX.Enums.ComponentType.Application,
-      "yarn-plugin-sbom"
-    )
+    new CDX.Models.Tool({
+      vendor: "cyclonedx",
+      name: "cyclonedx-library",
+      version: cdxDependency?.locator?.replace(/^.+@npm:/, ""),
+    })
+  );
+  bom.metadata.tools.add(
+    new CDX.Models.Tool({
+      name: "yarn-plugin-sbom",
+      version: buildtimeDependencies?.children.Version,
+    })
   );
 }
 

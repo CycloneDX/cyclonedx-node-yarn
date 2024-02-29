@@ -12,6 +12,7 @@
 
 # Only used during production build.
 sbom.cdx.json
+sources/buildtime-dependencies.json
 # No bundles for now untils release process is clarified.
 bundles/**
 

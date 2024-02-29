@@ -10,6 +10,17 @@ import {
 } from "@yarnpkg/core";
 import { FakeFS, PortablePath, ppath } from "@yarnpkg/fslib";
 
+/**
+ * Output structure of "yarn info --json"
+ */
+export interface BuildtimeDependencies {
+  value: string;
+  children: {
+    Version: string;
+    Dependencies: { descriptor: string; locator: string }[];
+  };
+}
+
 export interface PackageInfo {
   package: Package;
   manifest: Manifest;
