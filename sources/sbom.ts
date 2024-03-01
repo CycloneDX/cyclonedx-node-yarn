@@ -1,6 +1,7 @@
 import * as CDX from "@cyclonedx/cyclonedx-library";
 import {
   Configuration,
+  Locator,
   LocatorHash,
   Manifest,
   Package,
@@ -15,6 +16,7 @@ import {
   PackageInfo,
   traverseWorkspace,
 } from "./traverseUtils";
+import { PackageURL } from "packageurl-js";
 
 const licenseFactory = new CDX.Factories.LicenseFactory();
 const npmPurlFactory = new CDX.Factories.PackageUrlFactory("npm");
@@ -226,11 +228,34 @@ function packageInfoToCycloneComponent(
   );
   if (devirtualizedLocator.reference.startsWith("npm:")) {
     component.purl = npmPurlFactory.makeFromComponent(component, reproducible);
-  } else {
-    // TODO Handle other Yarn protocols. How to convert them?
-    // Default protocols are listed on https://yarnpkg.com/protocols of which the git protocol could be represented as PURL.
+  } else if (
+    devirtualizedLocator.reference.startsWith("https://github.com/") ||
+    devirtualizedLocator.reference.startsWith("github:")
+  ) {
+    component.purl = gitHubPackagePurl(devirtualizedLocator);
   }
   return component;
+}
+
+function gitHubPackagePurl(
+  devirtualizedLocator: Locator
+): PackageURL | undefined {
+  const yarnGitUrlPattern =
+    /(?<namespace>[^/:]+)\/(?<name>[^/:]+)\.git#commit=(?<commit>[a-fA-F0-9]{1,40})$/;
+  const matches = yarnGitUrlPattern.exec(
+    devirtualizedLocator.reference
+  )?.groups;
+  if (matches?.namespace && matches?.name && matches?.commit) {
+    // https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github
+    return new PackageURL(
+      "github",
+      matches.namespace.toLowerCase(),
+      matches.name.toLowerCase(),
+      matches.commit.toLowerCase(),
+      null,
+      null
+    );
+  }
 }
 
 /**

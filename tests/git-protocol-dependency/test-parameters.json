@@ -1,0 +1,12 @@
+[
+  {
+    "parameters": [
+      "sbom",
+      "--reproducible",
+      "--licenses",
+      "--output-file",
+      "sbom.cdx.json"
+    ],
+    "expectedResult": "expectation-with-licenses.json"
+  }
+]

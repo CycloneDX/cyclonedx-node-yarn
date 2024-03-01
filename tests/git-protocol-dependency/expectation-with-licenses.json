@@ -1,0 +1,71 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "name": "yarn-plugin-sbom",
+        "version": "1.0-dev"
+      },
+      {
+        "vendor": "cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "6.4.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "git-protocol-dependency",
+      "version": "0.0.1",
+      "bom-ref": "eb46369236dd0ece91caba45218ddfaf6b247da6c36d1f9b3b16b691fcbe1f34b6312cf0ab8086b74d071379ba5ac759df41505f4221060925cd6d4a0f3348eb"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "typanion",
+      "version": "3.14.0",
+      "bom-ref": "bd232be383a0db8ed3a04151e15275715e177b45c4dbbab314a83c3433bfea37abd71379592f8d7d273eb7ac3cf2e77215e78aea41a80afb425246863bb4f23b",
+      "description": "Simple runtime TypeScript validator library",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:github/arcanis/typanion@ab9f045afc697c998aff66992ad48cb8ba3478a4",
+      "externalReferences": [
+        {
+          "url": "https://github.com/arcanis/typanion",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://mael.dev/typanion/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "bd232be383a0db8ed3a04151e15275715e177b45c4dbbab314a83c3433bfea37abd71379592f8d7d273eb7ac3cf2e77215e78aea41a80afb425246863bb4f23b"
+    },
+    {
+      "ref": "eb46369236dd0ece91caba45218ddfaf6b247da6c36d1f9b3b16b691fcbe1f34b6312cf0ab8086b74d071379ba5ac759df41505f4221060925cd6d4a0f3348eb",
+      "dependsOn": [
+        "bd232be383a0db8ed3a04151e15275715e177b45c4dbbab314a83c3433bfea37abd71379592f8d7d273eb7ac3cf2e77215e78aea41a80afb425246863bb4f23b"
+      ]
+    }
+  ]
+}

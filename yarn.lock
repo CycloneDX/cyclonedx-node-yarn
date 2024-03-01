@@ -2569,7 +2569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"packageurl-js@npm:>=0.0.6 <0.0.8 || ^1":
+"packageurl-js@npm:>=0.0.6 <0.0.8 || ^1, packageurl-js@npm:^1.2.1":
   version: 1.2.1
   resolution: "packageurl-js@npm:1.2.1"
   checksum: 10c0/52e45da7704a2bc70baa3f2643dc48bbf60787379318781d84336954dc6b14c34ad9697f11a47798410d7cafaec3f4b8b878707cccf5edb62a6a5fa4fdb50491
@@ -3462,6 +3462,7 @@ __metadata:
     "@yarnpkg/core": "npm:^4.0.3"
     "@yarnpkg/fslib": "npm:^3.0.2"
     clipanion: "npm:^4.0.0-rc.2"
+    packageurl-js: "npm:^1.2.1"
     rimraf: "npm:5.x"
     spdx-license-ids: "npm:^3.0.17"
     typescript: "npm:5.x"
