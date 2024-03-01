@@ -7,6 +7,8 @@ first.
 
 ## Setup
 
+You need to create an empty file at bundles/@yarnpkg/plugin-sbom.js before invoking `yarn`. It will be replaced by the build output automatically.
+
 To start developing simply run to install dev-dependencies and tools:
 
 ```shell
