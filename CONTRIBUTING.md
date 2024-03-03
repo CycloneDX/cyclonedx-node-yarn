@@ -10,27 +10,31 @@ first.
 To start developing simply run to install dev-dependencies and tools:
 
 ```shell
-# .. TODO 
+yarn install --immutable
 ```
+
+Then add SDKs for you preferred editor as described on https://yarnpkg.com/getting-started/editor-sdks if you want IDE support.
 
 ## Build from source
 
+Build bundle (unminified)
+
 ```shell
-# .. TODO 
+yarn build:dev
+```
+
+Build release bundle (minified + `component-licenses.md` file)
+
+```shell
+yarn build
 ```
 
 ## Testing
 
-Set up the tests once, via:
-
-```shell
-# .. TODO 
-```
-
 Run to have a proper test suite pass:
 
 ```shell
-# .. TODO 
+yarn test
 ```
 
 ## Coding Style guide & standard
@@ -38,7 +42,7 @@ Run to have a proper test suite pass:
 Apply the coding style via:
 
 ```shell
-# .. TODO 
+# .. TODO
 ```
 
 ## Sign off your commits
@@ -49,3 +53,5 @@ Please sign off your commits, to show that you agree to publish your changes und
 ```shell
 git commit --signoff ...
 ```
+
+Doing so adds a message to your commit message as described in https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s

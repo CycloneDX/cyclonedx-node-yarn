@@ -1,0 +1,8 @@
+{
+    "name": "package-aliasing",
+    "version": "0.0.1",
+    "packageManager": "yarn@4.1.0",
+    "dependencies": {
+        "@isaacs/cliui": "8.0.2"
+    }
+}

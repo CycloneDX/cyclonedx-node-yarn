@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>yarn-plugin-sbom</name>
+        <version>1.0-dev</version>
+      </tool>
+      <tool>
+        <vendor>cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>6.4.0</version>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="a15880a930a4e65124c64b72f8a359ae7edcdd7017bcda2e79cb3238f20703ebfce7a183e579a1eeb16a37623d421159d902a0bdea1a00d2851913675b891671">
+      <name>no-dependencies</name>
+      <version>0.0.1</version>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components/>
+  <dependencies>
+    <dependency ref="a15880a930a4e65124c64b72f8a359ae7edcdd7017bcda2e79cb3238f20703ebfce7a183e579a1eeb16a37623d421159d902a0bdea1a00d2851913675b891671"/>
+  </dependencies>
+</bom>

@@ -1,0 +1,2372 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "name": "yarn-plugin-sbom",
+        "version": "1.0-dev"
+      },
+      {
+        "vendor": "cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "6.4.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "multiple-versions",
+      "version": "0.0.1",
+      "bom-ref": "29d9332beec359aba70ccecb2c0ae34e85a609da3cb6af408f24287ce2e2e39265f04706f78a80b6e5c7665a4afa6baba719871de3252a245389b83cbdf4b630"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "color-name",
+      "version": "1.1.4",
+      "bom-ref": "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac",
+      "author": "DY",
+      "description": "A list of color names and its values",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\r\nCopyright (c) 2015 Dmitry Ivanov\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/colorjs/color-name/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git@github.com:colorjs/color-name.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/colorjs/color-name",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "wcwidth",
+      "version": "1.0.1",
+      "bom-ref": "05fa596453d97ea3bea83b8c265063dcfa6bb824c73cc481ef3880065b2e5442fe86b8ea3658aab51c2923627f56b1c36dad6988c0184ee4964b562d74980fe2",
+      "author": "Tim Oxley",
+      "description": "Port of C's wcwidth() and wcswidth()",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "wcwidth.js: JavaScript Portng of Markus Kuhn's wcwidth() Implementation\n=======================================================================\n\nCopyright (C) 2012 by Jun Woong.\n\nThis package is a JavaScript porting of `wcwidth()` implementation\n[by Markus Kuhn](http://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c).\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\n\nTHIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,\nINCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND\nFITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR\nOR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\nEXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR\nBUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER\nIN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\nARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\nPOSSIBILITY OF SUCH DAMAGE.\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/wcwidth@1.0.1?vcs_url=git%2Bhttps%3A//github.com/timoxley/wcwidth.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/timoxley/wcwidth/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/timoxley/wcwidth.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/timoxley/wcwidth#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-unicode-supported",
+      "version": "0.1.0",
+      "bom-ref": "0833e1bbfbabcf94f56b291a0426cff7595e4633c91c04f6f9c0dec99abce84f3cf7f0c04087aa35d3f8651e8b34e78a644ffbba07684a8fe72b7cb536ea634e",
+      "author": "Sindre Sorhus",
+      "description": "Detect whether the terminal supports Unicode",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-unicode-supported@0.1.0?vcs_url=sindresorhus/is-unicode-supported",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-unicode-supported",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "log-symbols",
+      "version": "4.1.0",
+      "bom-ref": "0a13492d8b4d44a0cfc7a5bdbd983fdba856fd36844d028150b9a6f2efdbf37a4a65771e45a441c76905b16e3181b2d2f8cdc4b105d6eba211f6ac4ea2542788",
+      "author": "Sindre Sorhus",
+      "description": "Colored symbols for various log levels. Example: `✔︎ Success`",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/log-symbols@4.1.0?vcs_url=sindresorhus/log-symbols",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/log-symbols",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gopd",
+      "version": "1.0.1",
+      "bom-ref": "10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf",
+      "author": "Jordan Harband",
+      "description": "`Object.getOwnPropertyDescriptor`, but accounts for IE's broken implementation.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2022 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/gopd.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/gopd/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/gopd.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/gopd#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-symbols",
+      "version": "1.0.3",
+      "bom-ref": "1986bff2c46cb1a351f80027a51f55f5f887651317690130a9f59f267871169b484cd6737e0866bad2dd963147239f72d9bfe6f442d4dd1f458ccfa2cdac7a76",
+      "author": "Jordan Harband",
+      "description": "Determine if the JS environment has Symbol support. Supports spec, or shams.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2016 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/has-symbols/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/inspect-js/has-symbols.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/has-symbols#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hasown",
+      "version": "2.0.1",
+      "bom-ref": "1bf102e91f1410727c7b9f4ef05b3f0bb8f2a7f1b63dc5fc28447cf2bbe31020c780f04d77fe85cbab8c1d22bc5a68831433a1d2296e0aeabd08b6f71adc34ae",
+      "author": "Jordan Harband",
+      "description": "A robust, ES3 compatible, \"has own property\" predicate.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Jordan Harband and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/hasown@2.0.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/hasOwn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/hasOwn.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/hasOwn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "get-intrinsic",
+      "version": "1.2.4",
+      "bom-ref": "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3",
+      "author": "Jordan Harband",
+      "description": "Get and robustly cache all JS language-level intrinsics at first require time",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2020 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/get-intrinsic.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/get-intrinsic/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/get-intrinsic.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/get-intrinsic#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "bom-ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
+      "author": "Sindre Sorhus",
+      "description": "Check if the character represented by a given Unicode code point is fullwidth",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "bom-ref": "213764015c61c168a6fbd45800c0a25dae13c2a2087c431aaaeeaa7fbf18222482891074eb8b9df5a81f54b3555dc3472fc9e0d21e5982f767c2a03b47d3a0f9",
+      "author": "Mathias Bynens",
+      "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
+          "url": "https://github.com/mathiasbynens/emoji-regex.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://mths.be/emoji-regex",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "bom-ref": "2422117fd007fe66dc804c187faffee81bb67358eae325f67dc4bad8e004036010214213381cf23b5962a8bd7ff9c3d6318ff621d3e0755785b195da2be7909a",
+      "description": "The string_decoder module from Node core",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Node.js is licensed for use as follows:\n\n\"\"\"\nCopyright Node.js contributors. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n\"\"\"\n\nThis license applies to parts of Node.js originating from the\nhttps://github.com/joyent/node repository:\n\n\"\"\"\nCopyright Joyent, Inc. and other Node contributors. All rights reserved.\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n\"\"\"\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/nodejs/string_decoder.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/string_decoder",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "bom-ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
+      "author": "Sindre Sorhus",
+      "description": "ANSI escape codes for styling strings in the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-styles",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chardet",
+      "version": "0.7.0",
+      "bom-ref": "27933dd6c7ddbc4c89911be4b73c61168d9e229a5905d2bf20e5ed2449ef45ec467af09e511955c3a4390ae1263b410f5ff4752ff75be356701b8b869bb13280",
+      "author": "Dmitry Shirokov",
+      "description": "Character detector",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright (C) 2018 Dmitry Shirokov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/chardet@0.7.0?vcs_url=git%40github.com%3Arunk/node-chardet.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/runk/node-chardet/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git@github.com:runk/node-chardet.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/runk/node-chardet",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "string-width",
+      "version": "4.2.3",
+      "bom-ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
+      "author": "Sindre Sorhus",
+      "description": "Get the visual width of a string - the number of columns required to display it",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "escape-string-regexp",
+      "version": "1.0.5",
+      "bom-ref": "3284de402fdb30a1d139b01b5cccee3de7e8fc767e47d5c83e239eaf38b130b5e72367061ad613b14e2e095fa57cc7f8a9986e4c65f380f67055f1bc8fd17c89",
+      "author": "Sindre Sorhus",
+      "description": "Escape RegExp special characters",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=sindresorhus/escape-string-regexp",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/escape-string-regexp",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-flag",
+      "version": "4.0.0",
+      "bom-ref": "32af9f0536a974b227cea7887cd69d4024c6b2efc557c4b76c6fdc05fa2ab7b939ffcc4cbd60f3880d66b1e6ae8931e8928f9d5b49ae42294a783d6048d3b7df",
+      "author": "Sindre Sorhus",
+      "description": "Check if argv has a specific flag",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=sindresorhus/has-flag",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/has-flag",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "bom-ref": "3481c8aa9bf3e9431ea148a245d37b8c02be76f629657dd483952e9028624b14711f50038f4bb05557c57867e639cf721a477f487abe57cbe0d954860df06519",
+      "author": "Feross Aboukhadijeh",
+      "description": "Safer Node.js Buffer API",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) Feross Aboukhadijeh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/safe-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/feross/safe-buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/feross/safe-buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-escapes",
+      "version": "4.3.2",
+      "bom-ref": "3ad173702ffcbc873013ea6e4338887c2d774260fe5f3cb2dc0047a66a160a5e452880d062084be59848c1060904a52ead63a347bf5b5779dc45bffcf9d418f7",
+      "author": "Sindre Sorhus",
+      "description": "ANSI escape codes for manipulating the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/ansi-escapes@4.3.2?vcs_url=sindresorhus/ansi-escapes",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/ansi-escapes",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "onetime",
+      "version": "5.1.2",
+      "bom-ref": "3ed148fa42ebe80bd87403c28398700a9a92e00a566b687d8e249f286ca606374534a354801acc930ef284c59b1d964e6d6f5af3cfc8d33759114143ae7b7e53",
+      "author": "Sindre Sorhus",
+      "description": "Ensure a function is only called once",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/onetime@5.1.2?vcs_url=sindresorhus/onetime",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/onetime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rxjs",
+      "version": "7.8.1",
+      "bom-ref": "41c443a75b480e8a30163a1e298070f89e2ef4437ecef691fd48d80f22071dbfdf9bb8a0d9243445261cd2d7f9ffd1a2652a2078b4c59031702627a253115ab2",
+      "author": "Ben Lesh",
+      "description": "Reactive Extensions for modern JavaScript",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "text": {
+              "content": "                               Apache License\n                         Version 2.0, January 2004\n                      http://www.apache.org/licenses/\n\n TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n 1. Definitions.\n\n    \"License\" shall mean the terms and conditions for use, reproduction,\n    and distribution as defined by Sections 1 through 9 of this document.\n\n    \"Licensor\" shall mean the copyright owner or entity authorized by\n    the copyright owner that is granting the License.\n\n    \"Legal Entity\" shall mean the union of the acting entity and all\n    other entities that control, are controlled by, or are under common\n    control with that entity. For the purposes of this definition,\n    \"control\" means (i) the power, direct or indirect, to cause the\n    direction or management of such entity, whether by contract or\n    otherwise, or (ii) ownership of fifty percent (50%) or more of the\n    outstanding shares, or (iii) beneficial ownership of such entity.\n\n    \"You\" (or \"Your\") shall mean an individual or Legal Entity\n    exercising permissions granted by this License.\n\n    \"Source\" form shall mean the preferred form for making modifications,\n    including but not limited to software source code, documentation\n    source, and configuration files.\n\n    \"Object\" form shall mean any form resulting from mechanical\n    transformation or translation of a Source form, including but\n    not limited to compiled object code, generated documentation,\n    and conversions to other media types.\n\n    \"Work\" shall mean the work of authorship, whether in Source or\n    Object form, made available under the License, as indicated by a\n    copyright notice that is included in or attached to the work\n    (an example is provided in the Appendix below).\n\n    \"Derivative Works\" shall mean any work, whether in Source or Object\n    form, that is based on (or derived from) the Work and for which the\n    editorial revisions, annotations, elaborations, or other modifications\n    represent, as a whole, an original work of authorship. For the purposes\n    of this License, Derivative Works shall not include works that remain\n    separable from, or merely link (or bind by name) to the interfaces of,\n    the Work and Derivative Works thereof.\n\n    \"Contribution\" shall mean any work of authorship, including\n    the original version of the Work and any modifications or additions\n    to that Work or Derivative Works thereof, that is intentionally\n    submitted to Licensor for inclusion in the Work by the copyright owner\n    or by an individual or Legal Entity authorized to submit on behalf of\n    the copyright owner. For the purposes of this definition, \"submitted\"\n    means any form of electronic, verbal, or written communication sent\n    to the Licensor or its representatives, including but not limited to\n    communication on electronic mailing lists, source code control systems,\n    and issue tracking systems that are managed by, or on behalf of, the\n    Licensor for the purpose of discussing and improving the Work, but\n    excluding communication that is conspicuously marked or otherwise\n    designated in writing by the copyright owner as \"Not a Contribution.\"\n\n    \"Contributor\" shall mean Licensor and any individual or Legal Entity\n    on behalf of whom a Contribution has been received by Licensor and\n    subsequently incorporated within the Work.\n\n 2. Grant of Copyright License. Subject to the terms and conditions of\n    this License, each Contributor hereby grants to You a perpetual,\n    worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n    copyright license to reproduce, prepare Derivative Works of,\n    publicly display, publicly perform, sublicense, and distribute the\n    Work and such Derivative Works in Source or Object form.\n\n 3. Grant of Patent License. Subject to the terms and conditions of\n    this License, each Contributor hereby grants to You a perpetual,\n    worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n    (except as stated in this section) patent license to make, have made,\n    use, offer to sell, sell, import, and otherwise transfer the Work,\n    where such license applies only to those patent claims licensable\n    by such Contributor that are necessarily infringed by their\n    Contribution(s) alone or by combination of their Contribution(s)\n    with the Work to which such Contribution(s) was submitted. If You\n    institute patent litigation against any entity (including a\n    cross-claim or counterclaim in a lawsuit) alleging that the Work\n    or a Contribution incorporated within the Work constitutes direct\n    or contributory patent infringement, then any patent licenses\n    granted to You under this License for that Work shall terminate\n    as of the date such litigation is filed.\n\n 4. Redistribution. You may reproduce and distribute copies of the\n    Work or Derivative Works thereof in any medium, with or without\n    modifications, and in Source or Object form, provided that You\n    meet the following conditions:\n\n    (a) You must give any other recipients of the Work or\n        Derivative Works a copy of this License; and\n\n    (b) You must cause any modified files to carry prominent notices\n        stating that You changed the files; and\n\n    (c) You must retain, in the Source form of any Derivative Works\n        that You distribute, all copyright, patent, trademark, and\n        attribution notices from the Source form of the Work,\n        excluding those notices that do not pertain to any part of\n        the Derivative Works; and\n\n    (d) If the Work includes a \"NOTICE\" text file as part of its\n        distribution, then any Derivative Works that You distribute must\n        include a readable copy of the attribution notices contained\n        within such NOTICE file, excluding those notices that do not\n        pertain to any part of the Derivative Works, in at least one\n        of the following places: within a NOTICE text file distributed\n        as part of the Derivative Works; within the Source form or\n        documentation, if provided along with the Derivative Works; or,\n        within a display generated by the Derivative Works, if and\n        wherever such third-party notices normally appear. The contents\n        of the NOTICE file are for informational purposes only and\n        do not modify the License. You may add Your own attribution\n        notices within Derivative Works that You distribute, alongside\n        or as an addendum to the NOTICE text from the Work, provided\n        that such additional attribution notices cannot be construed\n        as modifying the License.\n\n    You may add Your own copyright statement to Your modifications and\n    may provide additional or different license terms and conditions\n    for use, reproduction, or distribution of Your modifications, or\n    for any such Derivative Works as a whole, provided Your use,\n    reproduction, and distribution of the Work otherwise complies with\n    the conditions stated in this License.\n\n 5. Submission of Contributions. Unless You explicitly state otherwise,\n    any Contribution intentionally submitted for inclusion in the Work\n    by You to the Licensor shall be under the terms and conditions of\n    this License, without any additional terms or conditions.\n    Notwithstanding the above, nothing herein shall supersede or modify\n    the terms of any separate license agreement you may have executed\n    with Licensor regarding such Contributions.\n\n 6. Trademarks. This License does not grant permission to use the trade\n    names, trademarks, service marks, or product names of the Licensor,\n    except as required for reasonable and customary use in describing the\n    origin of the Work and reproducing the content of the NOTICE file.\n\n 7. Disclaimer of Warranty. Unless required by applicable law or\n    agreed to in writing, Licensor provides the Work (and each\n    Contributor provides its Contributions) on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n    implied, including, without limitation, any warranties or conditions\n    of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n    PARTICULAR PURPOSE. You are solely responsible for determining the\n    appropriateness of using or redistributing the Work and assume any\n    risks associated with Your exercise of permissions under this License.\n\n 8. Limitation of Liability. In no event and under no legal theory,\n    whether in tort (including negligence), contract, or otherwise,\n    unless required by applicable law (such as deliberate and grossly\n    negligent acts) or agreed to in writing, shall any Contributor be\n    liable to You for damages, including any direct, indirect, special,\n    incidental, or consequential damages of any character arising as a\n    result of this License or out of the use or inability to use the\n    Work (including but not limited to damages for loss of goodwill,\n    work stoppage, computer failure or malfunction, or any and all\n    other commercial damages or losses), even if such Contributor\n    has been advised of the possibility of such damages.\n\n 9. Accepting Warranty or Additional Liability. While redistributing\n    the Work or Derivative Works thereof, You may choose to offer,\n    and charge a fee for, acceptance of support, warranty, indemnity,\n    or other liability obligations and/or rights consistent with this\n    License. However, in accepting such obligations, You may act only\n    on Your own behalf and on Your sole responsibility, not on behalf\n    of any other Contributor, and only if You agree to indemnify,\n    defend, and hold each Contributor harmless for any liability\n    incurred by, or claims asserted against, such Contributor by reason\n    of your accepting any such warranty or additional liability.\n\n END OF TERMS AND CONDITIONS\n\n APPENDIX: How to apply the Apache License to your work.\n\n    To apply the Apache License to your work, attach the following\n    boilerplate notice, with the fields enclosed by brackets \"[]\"\n    replaced with your own identifying information. (Don't include\n    the brackets!)  The text should be enclosed in the appropriate\n    comment syntax for the file format. We also recommend that a\n    file or class name and description of purpose be included on the\n    same \"printed page\" as the copyright notice for easier\n    identification within third-party archives.\n\n Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors\n\n Licensed under the Apache License, Version 2.0 (the \"License\");\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an \"AS IS\" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n \n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=https%3A//github.com/reactivex/rxjs.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ReactiveX/RxJS/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/reactivex/rxjs.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://rxjs.dev",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "wrap-ansi",
+      "version": "6.2.0",
+      "bom-ref": "439a7246d8013438fb4db642f9d86dcc0cc9fdf80411112793e4980cdedf4226db5544e93178d16661931ed3299bdfd9c68ac1508352f587676a3fd094ca5a38",
+      "author": "Sindre Sorhus",
+      "description": "Wordwrap a string with ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/wrap-ansi@6.2.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "bom-ref": "4cbd8efc5142c75331a3f6e0dfb80685d173470f33d959418100d3b734997a61f12ec5d6cf6d5e3d5021186761bd7fe735c963e03a413506331dd03e97017f1d",
+      "author": "Jordan Harband",
+      "description": "Define a data property on an object. Will fall back to assignment in an engine without descriptors.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2023 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/define-data-property.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/define-data-property/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/define-data-property.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/define-data-property#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ora",
+      "version": "5.4.1",
+      "bom-ref": "4f0343adb71e5131dcec897d9b8b29bd048ae7e511948174b09ce00a69abda33c6a43cec6acfa99fc85566e836061b13be9ba2613e5bcb9d94370e729a1c7fa1",
+      "author": "Sindre Sorhus",
+      "description": "Elegant terminal spinner",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/ora@5.4.1?vcs_url=sindresorhus/ora",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/ora",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mimic-fn",
+      "version": "2.1.0",
+      "bom-ref": "4fbeb3abb47349ed60ef8a8e0063933fb2e4243cc7f3ffbe1f78c670940b5ba1d3a7eab9dab8278fe5dfe0a1ac0b2135b6e047b9c0044965bba6e1c7be13cd2d",
+      "author": "Sindre Sorhus",
+      "description": "Make a function mimic another one",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/mimic-fn@2.1.0?vcs_url=sindresorhus/mimic-fn",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/mimic-fn",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tslib",
+      "version": "2.6.2",
+      "bom-ref": "4fc8c068d92b37f42c39f3f6139ce14203af1e2ea88b8336eff5d6f9843025d93bbf6f8860423109d49ef4530654c2ef2151ceccd277d50a1d5f74c52c55267f",
+      "author": "Microsoft Corp.",
+      "description": "Runtime library for TypeScript helper functions",
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "text": {
+              "content": "Copyright (c) Microsoft Corporation.\r\n\r\nPermission to use, copy, modify, and/or distribute this software for any\r\npurpose with or without fee is hereby granted.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\r\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY\r\nAND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\r\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\r\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\r\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\r\nPERFORMANCE OF THIS SOFTWARE."
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A//github.com/Microsoft/tslib.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Microsoft/TypeScript/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/Microsoft/tslib.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://www.typescriptlang.org/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "set-function-length",
+      "version": "1.2.1",
+      "bom-ref": "5131ef7312206f592eb1162341e797bd59f0c905151b106ce5b7714d9050e5ccae1a39d4e9ec96e43b82b9e69f0e26defb2739f74cc2e3bcce499de9203232fa",
+      "author": "Jordan Harband",
+      "description": "Set a function's length property",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Jordan Harband and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/set-function-length@1.2.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/set-function-length.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/set-function-length/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/set-function-length.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/set-function-length#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "buffer",
+      "version": "5.7.1",
+      "bom-ref": "513ef8259e20ad1a441c1589dd76a95071b1216335b99a97108ddf97e0127c287eede41b1996b02cf48e08945f1124c6edf17d6c2f85e9b1964cd9984c6bf133",
+      "author": "Feross Aboukhadijeh",
+      "description": "Node.js Buffer API, for the browser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) Feross Aboukhadijeh, and other contributors.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/buffer@5.7.1?vcs_url=git%3A//github.com/feross/buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/feross/buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/feross/buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "restore-cursor",
+      "version": "3.1.0",
+      "bom-ref": "52c5a4c98f363a43f0a80d282f5db708f2f2581d891c636bdac543a596b3795fb68210d653bd82288ce8f11f4e02565425924ed80cb4831babee824d52dc643b",
+      "author": "Sindre Sorhus",
+      "description": "Gracefully restore the CLI cursor on exit",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/restore-cursor@3.1.0?vcs_url=sindresorhus/restore-cursor",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/restore-cursor",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "type-fest",
+      "version": "0.21.3",
+      "bom-ref": "5ff2a9c6fdee6be58ecc63ffa8c36220fb9e5f74797d80058623b9b66ceb4eddee4f8b70a5904fa8561b365e11788b6075e991a56474d831377be48d79f8b8bb",
+      "author": "Sindre Sorhus",
+      "description": "A collection of essential TypeScript types",
+      "licenses": [
+        {
+          "expression": "(MIT OR CC0-1.0)"
+        }
+      ],
+      "purl": "pkg:npm/type-fest@0.21.3?vcs_url=sindresorhus/type-fest",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/type-fest",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "supports-color",
+      "version": "7.2.0",
+      "bom-ref": "606bfcf7da72e3aa5acbff222728fbfbe4808570fba5c4c128dba7cd9a5e9be520676773d904fb6c2a0c0ae6d8402068c8ac741b13e8d98773bb2afdd30e32c7",
+      "author": "Sindre Sorhus",
+      "description": "Detect whether a terminal supports color",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=chalk/supports-color",
+      "externalReferences": [
+        {
+          "url": "chalk/supports-color",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.21",
+      "bom-ref": "638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f",
+      "author": "John-David Dalton",
+      "description": "Lodash modular utilities.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright OpenJS Foundation and other contributors <https://openjsf.org/>\n\nBased on Underscore.js, copyright Jeremy Ashkenas,\nDocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>\n\nThis software consists of voluntary contributions made by many\nindividuals. For exact contribution history, see the revision history\navailable at https://github.com/lodash/lodash\n\nThe following license applies to all parts of this software except as\ndocumented below:\n\n====\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n====\n\nCopyright and related rights for sample code are waived via CC0. Sample\ncode is defined as all source code displayed within the prose of the\ndocumentation.\n\nCC0: http://creativecommons.org/publicdomain/zero/1.0/\n\n====\n\nFiles located in the node_modules and vendor directories are externally\nmaintained libraries used by this software which have their own\nlicenses; we recommend you read them, as their terms may differ from the\nterms above.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/lodash@4.17.21?vcs_url=lodash/lodash",
+      "externalReferences": [
+        {
+          "url": "lodash/lodash",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
+          "url": "https://lodash.com/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "call-bind",
+      "version": "1.0.7",
+      "bom-ref": "762763ef9679817f06258ccfd7dbf5cfb844189770dd14678ce5b7f635538db0209cbc2be1f7fc8dc6421a431906c3d6035f4b926e8383c428e460e80adeb984",
+      "author": "Jordan Harband",
+      "description": "Robustly `.call.bind()` a function",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2020 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A//github.com/ljharb/call-bind.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/call-bind/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/call-bind.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/call-bind#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "color-convert",
+      "version": "2.0.1",
+      "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
+      "author": "Heather Arthur",
+      "description": "Plain color conversion functions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "externalReferences": [
+        {
+          "url": "Qix-/color-convert",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "function-bind",
+      "version": "1.1.2",
+      "bom-ref": "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+      "author": "Raynos",
+      "description": "Implementation of Function.prototype.bind",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright (c) 2013 Raynos.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A//github.com/Raynos/function-bind.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Raynos/function-bind/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/Raynos/function-bind.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Raynos/function-bind",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "inquirer",
+      "version": "9.2.15",
+      "bom-ref": "7a7bdf64994cd27f37684c4596e4c9973921fc974fce1e7060c722dc29cee258a61baa098ac224d59d01c4a2bff79c590a7594098327ef90993d595c00c07b42",
+      "author": "Simon Boudrias",
+      "description": "A collection of common interactive command line user interfaces.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright (c) 2023 Simon Boudrias\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=https%3A//github.com/SBoudrias/Inquirer.js.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/SBoudrias/Inquirer.js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bl",
+      "version": "4.1.0",
+      "bom-ref": "7f94cdcf3fb95e9b99ca303036e8ca8bb6012b21cc034d328cbede663b491626bc754d1469c5ad82061d26df78bb0eeed546e15a67500404a1d9c522366c1b45",
+      "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n=====================\n\nCopyright (c) 2013-2019 bl contributors\n----------------------------------\n\n*bl contributors listed at <https://github.com/rvagg/bl#contributors>*\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/bl@4.1.0?vcs_url=https%3A//github.com/rvagg/bl.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rvagg/bl.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/rvagg/bl",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-interactive",
+      "version": "1.0.0",
+      "bom-ref": "7ff7c6e04a1a80efe6c6731c69623125359b38737a538af1171b6c1655d1f4abe552e43d06c4f161bca28cbf2812f99d1e1b9e3cd2a2665482a6f7176f63c661",
+      "author": "Sindre Sorhus",
+      "description": "Check if stdout or stderr is interactive",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-interactive@1.0.0?vcs_url=sindresorhus/is-interactive",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-interactive",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "figures",
+      "version": "3.2.0",
+      "bom-ref": "85d357e9552f7511205d0aefa236e07f21a1876bdaf3a638d346bbea2aadc8846646cf11b65cd4d5c8b53c02c8ecd89438416b39a4dbba6b31d5cc9ef50979da",
+      "author": "Sindre Sorhus",
+      "description": "Unicode symbols with Windows CMD fallbacks",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/figures@3.2.0?vcs_url=sindresorhus/figures",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/figures",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "external-editor",
+      "version": "3.1.0",
+      "bom-ref": "878e7807af591f44ad7e6637d1edc08345cfb22aa4766a1da93bd50edb8c52b0156da6c90872cb5376799f9fddff17b09c5c7c5d4c9f3c5a2ad5fe6d2b3a5c7a",
+      "author": "Kevin Gravier",
+      "description": "Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) 2016 Kevin Gravier\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/external-editor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/mrkmg/node-external-editor.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/mrkmg/node-external-editor/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/mrkmg/node-external-editor.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mrkmg/node-external-editor#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "safer-buffer",
+      "version": "2.1.2",
+      "bom-ref": "8d5c0b705e23aeef7cc341f3c51668b5b659cb3ee0d5a4331f73c7cf857d21f0acc50a0c7e315679b546d67eab2b14124d694c8f836a7ec9f498ae4d27135c3d",
+      "author": "Nikita Skovoroda",
+      "description": "Modern Buffer API polyfill without footguns",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2018 Nikita Skovoroda <chalkerx@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ChALkeR/safer-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ChALkeR/safer-buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "clone",
+      "version": "1.0.4",
+      "bom-ref": "a610fcbcf9cb08a7ca5ee4029f5ab10339b6a7df5cde967f7adb8cee76ad8f528494367f0980241d7c457a18b5a221d72b2c61f022ba68085b0c3c0a09a3a874",
+      "author": "Paul Vorbach",
+      "description": "deep cloning of objects and arrays",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright © 2011-2015 Paul Vorbach <paul@vorba.ch>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the “Software”), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/clone@1.0.4?vcs_url=git%3A//github.com/pvorb/node-clone.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/pvorb/node-clone/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/pvorb/node-clone.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "through",
+      "group": "@ljharb",
+      "version": "2.3.12",
+      "bom-ref": "aade88de55fd3080895b4fa398aae47f5038d206b926bbd4c7f9c023fd8f740c78a424b4e85b95d3a09abcea1b8d1aa613b161f62ce607e1af3dd35638af7b84",
+      "author": "Dominic Tarr",
+      "description": "simplified stream construction",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License\n\nCopyright (c) 2011 Dominic Tarr\n\nPermission is hereby granted, free of charge,\nto any person obtaining a copy of this software and\nassociated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify,\nmerge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom\nthe Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR\nANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40ljharb/through@2.3.12?vcs_url=git%2Bhttps%3A//github.com/ljharb/through.git",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/ljharb/through.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/through",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "bom-ref": "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d",
+      "author": "T. Jameson Little",
+      "description": "Base64 encoding/decoding in pure JS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) 2014 Jameson Little\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/beatgammit/base64-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/beatgammit/base64-js",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-proto",
+      "version": "1.0.3",
+      "bom-ref": "b598da29612d98662dc35345bd1a3579bf4a0de9ecd38fe1d5fd3467664e97ecfc69938b28117dacb6a98e9f3fa249705713578dcf02666bd0b3dd62f51110c8",
+      "author": "Jordan Harband",
+      "description": "Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2022 Inspect JS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-proto.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/has-proto/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/has-proto.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/has-proto#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mute-stream",
+      "version": "1.0.0",
+      "bom-ref": "b6e846d47148e2d6ca3e19dae4f463ca97f7224df81f0a155aa3f0b96da366ad307867633731e1be9d63cde1b570c9951e10321dd89a9aa05ab72591aa900e4a",
+      "author": "GitHub Inc.",
+      "description": "Bytes go in, but they don't come out (when muted).",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "text": {
+              "content": "The ISC License\n\nCopyright (c) Isaac Z. Schlueter and Contributors\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR\nIN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=https%3A//github.com/npm/mute-stream.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/npm/mute-stream.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chalk",
+      "version": "4.1.2",
+      "bom-ref": "ba8b67ab80946173b706cb3d8e41fea09d58e71321d50bf12af7ba629492e43319d02c774281b4f22aa0d3e8c213a26f617cbe57fcf0eb4292f5777dcc0ceeec",
+      "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/chalk@4.1.2?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tmp",
+      "version": "0.0.33",
+      "bom-ref": "bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753",
+      "author": "KARASZI István",
+      "description": "Temporary file and directory creator",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) 2014 KARASZI István\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/tmp@0.0.33?vcs_url=raszi/node-tmp",
+      "externalReferences": [
+        {
+          "url": "http://github.com/raszi/node-tmp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "raszi/node-tmp",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
+          "url": "http://github.com/raszi/node-tmp",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "signal-exit",
+      "version": "3.0.7",
+      "bom-ref": "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360",
+      "author": "Ben Coe",
+      "description": "when you want to fire an event no matter how a process exits.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "text": {
+              "content": "The ISC License\n\nCopyright (c) 2015, Contributors\n\nPermission to use, copy, modify, and/or distribute this software\nfor any purpose with or without fee is hereby granted, provided\nthat the above copyright notice and this permission notice\nappear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES\nOF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE\nLIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES\nOR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,\nWHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,\nARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/tapjs/signal-exit/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/signal-exit.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/signal-exit",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cli-spinners",
+      "version": "2.9.2",
+      "bom-ref": "be9c08efee22c96768d6a6919b89de666f426bde675c50826d90d341a5da4059bf9c0e56497d052aad02a111c64037d93b604da7daec5fd5a1f8fc1ce727ebb4",
+      "author": "Sindre Sorhus",
+      "description": "Spinners for use in the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/cli-spinners@2.9.2?vcs_url=sindresorhus/cli-spinners",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/cli-spinners",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "run-async",
+      "version": "3.0.0",
+      "bom-ref": "bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b",
+      "author": "Simon Boudrias",
+      "description": "Utility method to run function either synchronously or asynchronously using the common `this.async()` style.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) 2014 Simon Boudrias\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/run-async@3.0.0?vcs_url=SBoudrias/run-async",
+      "externalReferences": [
+        {
+          "url": "SBoudrias/run-async",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cli-width",
+      "version": "4.1.0",
+      "bom-ref": "c08b53be836e628e200b27bf7b20b6859a14b75fb0d89d24aea283c172fedba528df494788397f1a827790179feabcac67c432c11a67c313fde64e1ce54165ba",
+      "author": "Ilya Radchenko",
+      "description": "Get stdout window width, with two fallbacks, tty and then a default.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "text": {
+              "content": "Copyright (c) 2015, Ilya Radchenko <knownasilya@gmail.com>\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/cli-width@4.1.0?vcs_url=git%40github.com%3Aknownasilya/cli-width.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/knownasilya/cli-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git@github.com:knownasilya/cli-width.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/knownasilya/cli-width",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "iconv-lite",
+      "version": "0.4.24",
+      "bom-ref": "c5c4ac669553a295c4b951a8c896a4908ef4cd6fcd3eb45ec208551d2ef0f6ab9db382ab1483b2b99ac12f3351d14f0fdccbdcb1ce75c6382fe63a85fac757fb",
+      "author": "Alexander Shtuchkin",
+      "description": "Convert character encodings in pure javascript.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Copyright (c) 2011 Alexander Shtuchkin\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ashtuchkin/iconv-lite/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs\""
+        },
+        {
+          "url": "git://github.com/ashtuchkin/iconv-lite.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ashtuchkin/iconv-lite",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "inherits",
+      "version": "2.0.4",
+      "bom-ref": "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3",
+      "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "text": {
+              "content": "The ISC License\n\nCopyright (c) Isaac Z. Schlueter\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND\nFITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THIS SOFTWARE.\n\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits",
+      "externalReferences": [
+        {
+          "url": "git://github.com/isaacs/inherits",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "bom-ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197",
+      "author": "Sindre Sorhus",
+      "description": "Regular expression for matching ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "bom-ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
+      "author": "Sindre Sorhus",
+      "description": "Strip ANSI escape codes from a string",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chalk",
+      "version": "5.3.0",
+      "bom-ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
+      "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "bom-ref": "d2a6069158b166a31adb6a740adc9ba2d0fa8fdc706cc97f27de82ecc7c9efe4980b117879037f2fd3629dc5fd06abd76c6919929feb6606ee4296aea119ede8",
+      "description": "Streams3, a user-land copy of the stream library from Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "Node.js is licensed for use as follows:\n\n\"\"\"\nCopyright Node.js contributors. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n\"\"\"\n\nThis license applies to parts of Node.js originating from the\nhttps://github.com/joyent/node repository:\n\n\"\"\"\nCopyright Joyent, Inc. and other Node contributors. All rights reserved.\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n\"\"\"\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream",
+      "externalReferences": [
+        {
+          "url": "git://github.com/nodejs/readable-stream",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "bom-ref": "d7077d09f18931b227b6edb9cc8371fc7b26f9fbac7e89f7da52155e918848dfa60b8354f4d9148980b92fb86bb6f654acf7b355b3c3a99d0f6994802e9f547d",
+      "author": "Jordan Harband",
+      "description": "Does the environment have full property descriptor support? Handles IE 8's broken defineProperty/gOPD.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2022 Inspect JS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-property-descriptors.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/has-property-descriptors/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/has-property-descriptors.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/has-property-descriptors#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "es-define-property",
+      "version": "1.0.0",
+      "bom-ref": "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde",
+      "author": "Jordan Harband",
+      "description": "`Object.defineProperty`, but not IE 8's broken one.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2024 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-define-property.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/es-define-property/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/es-define-property.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/es-define-property#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "os-tmpdir",
+      "version": "1.0.2",
+      "bom-ref": "e305b0689b1ff9ff8efa3d745fece7f2767c4a13e68ec03822eab4f75fd791405e2c4bfd7b04f5b9e6bea9e5050a11fd222f122f08766b86536be728769a78f6",
+      "author": "Sindre Sorhus",
+      "description": "Node.js os.tmpdir() ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/os-tmpdir@1.0.2?vcs_url=sindresorhus/os-tmpdir",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/os-tmpdir",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "bom-ref": "e3fe1a219c262e5f4439fabfc3240ca7d92d9254b8970e16c3fbc3c0c7de11bfb91486071399eab394f2c90e374bd04de4f6ab9eb510e0746cbf2e568cfc1a78",
+      "author": "Nathan Rajlich",
+      "description": "The Node.js `util.deprecate()` function with browser support",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "(The MIT License)\n\nCopyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/TooTallNate/util-deprecate.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "defaults",
+      "version": "1.0.4",
+      "bom-ref": "f3fbaf25284e585253bbfbe9da3a744f193b3f5d87e6483e1bc93d192226171dd462212cf084bd546548b9049b93abe3dc95bf0851f05765c7dba443d1f418b0",
+      "author": "Elijah Insua",
+      "description": "merge single level defaults over a config object",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "The MIT License (MIT)\n\nCopyright (c) 2022 Sindre Sorhus\nCopyright (c) 2015 Elijah Insua\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/defaults@1.0.4?vcs_url=git%3A//github.com/sindresorhus/node-defaults.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/sindresorhus/node-defaults.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ieee754",
+      "version": "1.2.1",
+      "bom-ref": "fb63b3caeb83e85d817f30f1490b7fc35ab1709aff863692ce0b6bfa76c4c6eef09be11d009e3940595196ae5611bb65e43ec8c8f39b661d52df82e8f40b7e63",
+      "author": "Feross Aboukhadijeh",
+      "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "text": {
+              "content": "Copyright 2008 Fair Oaks Labs, Inc.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/feross/ieee754.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "es-errors",
+      "version": "1.3.0",
+      "bom-ref": "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966",
+      "author": "Jordan Harband",
+      "description": "A simple cache for a few of the JS Error constructors.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) 2024 Jordan Harband\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-errors.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/es-errors/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ljharb/es-errors.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/es-errors#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cli-cursor",
+      "version": "3.1.0",
+      "bom-ref": "fee1e46b5e90637b07367f94ae298429b3160dc17f358d4774c3b15d11279849e777f16ef31ae508284b0dffde3a77d7601c3dc161d24c84a15a0a4d487cc04c",
+      "author": "Sindre Sorhus",
+      "description": "Toggle the CLI cursor",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "text": {
+              "content": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+            }
+          }
+        }
+      ],
+      "purl": "pkg:npm/cli-cursor@3.1.0?vcs_url=sindresorhus/cli-cursor",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/cli-cursor",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac"
+    },
+    {
+      "ref": "05fa596453d97ea3bea83b8c265063dcfa6bb824c73cc481ef3880065b2e5442fe86b8ea3658aab51c2923627f56b1c36dad6988c0184ee4964b562d74980fe2",
+      "dependsOn": [
+        "f3fbaf25284e585253bbfbe9da3a744f193b3f5d87e6483e1bc93d192226171dd462212cf084bd546548b9049b93abe3dc95bf0851f05765c7dba443d1f418b0"
+      ]
+    },
+    {
+      "ref": "0833e1bbfbabcf94f56b291a0426cff7595e4633c91c04f6f9c0dec99abce84f3cf7f0c04087aa35d3f8651e8b34e78a644ffbba07684a8fe72b7cb536ea634e"
+    },
+    {
+      "ref": "0a13492d8b4d44a0cfc7a5bdbd983fdba856fd36844d028150b9a6f2efdbf37a4a65771e45a441c76905b16e3181b2d2f8cdc4b105d6eba211f6ac4ea2542788",
+      "dependsOn": [
+        "0833e1bbfbabcf94f56b291a0426cff7595e4633c91c04f6f9c0dec99abce84f3cf7f0c04087aa35d3f8651e8b34e78a644ffbba07684a8fe72b7cb536ea634e",
+        "ba8b67ab80946173b706cb3d8e41fea09d58e71321d50bf12af7ba629492e43319d02c774281b4f22aa0d3e8c213a26f617cbe57fcf0eb4292f5777dcc0ceeec"
+      ]
+    },
+    {
+      "ref": "10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf",
+      "dependsOn": [
+        "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3"
+      ]
+    },
+    {
+      "ref": "1986bff2c46cb1a351f80027a51f55f5f887651317690130a9f59f267871169b484cd6737e0866bad2dd963147239f72d9bfe6f442d4dd1f458ccfa2cdac7a76"
+    },
+    {
+      "ref": "1bf102e91f1410727c7b9f4ef05b3f0bb8f2a7f1b63dc5fc28447cf2bbe31020c780f04d77fe85cbab8c1d22bc5a68831433a1d2296e0aeabd08b6f71adc34ae",
+      "dependsOn": [
+        "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008"
+      ]
+    },
+    {
+      "ref": "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3",
+      "dependsOn": [
+        "1986bff2c46cb1a351f80027a51f55f5f887651317690130a9f59f267871169b484cd6737e0866bad2dd963147239f72d9bfe6f442d4dd1f458ccfa2cdac7a76",
+        "1bf102e91f1410727c7b9f4ef05b3f0bb8f2a7f1b63dc5fc28447cf2bbe31020c780f04d77fe85cbab8c1d22bc5a68831433a1d2296e0aeabd08b6f71adc34ae",
+        "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+        "b598da29612d98662dc35345bd1a3579bf4a0de9ecd38fe1d5fd3467664e97ecfc69938b28117dacb6a98e9f3fa249705713578dcf02666bd0b3dd62f51110c8",
+        "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966"
+      ]
+    },
+    {
+      "ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c"
+    },
+    {
+      "ref": "213764015c61c168a6fbd45800c0a25dae13c2a2087c431aaaeeaa7fbf18222482891074eb8b9df5a81f54b3555dc3472fc9e0d21e5982f767c2a03b47d3a0f9"
+    },
+    {
+      "ref": "2422117fd007fe66dc804c187faffee81bb67358eae325f67dc4bad8e004036010214213381cf23b5962a8bd7ff9c3d6318ff621d3e0755785b195da2be7909a",
+      "dependsOn": [
+        "3481c8aa9bf3e9431ea148a245d37b8c02be76f629657dd483952e9028624b14711f50038f4bb05557c57867e639cf721a477f487abe57cbe0d954860df06519"
+      ]
+    },
+    {
+      "ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
+      "dependsOn": [
+        "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702"
+      ]
+    },
+    {
+      "ref": "27933dd6c7ddbc4c89911be4b73c61168d9e229a5905d2bf20e5ed2449ef45ec467af09e511955c3a4390ae1263b410f5ff4752ff75be356701b8b869bb13280"
+    },
+    {
+      "ref": "29d9332beec359aba70ccecb2c0ae34e85a609da3cb6af408f24287ce2e2e39265f04706f78a80b6e5c7665a4afa6baba719871de3252a245389b83cbdf4b630",
+      "dependsOn": [
+        "4f0343adb71e5131dcec897d9b8b29bd048ae7e511948174b09ce00a69abda33c6a43cec6acfa99fc85566e836061b13be9ba2613e5bcb9d94370e729a1c7fa1",
+        "7a7bdf64994cd27f37684c4596e4c9973921fc974fce1e7060c722dc29cee258a61baa098ac224d59d01c4a2bff79c590a7594098327ef90993d595c00c07b42"
+      ]
+    },
+    {
+      "ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
+      "dependsOn": [
+        "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
+        "213764015c61c168a6fbd45800c0a25dae13c2a2087c431aaaeeaa7fbf18222482891074eb8b9df5a81f54b3555dc3472fc9e0d21e5982f767c2a03b47d3a0f9",
+        "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551"
+      ]
+    },
+    {
+      "ref": "3284de402fdb30a1d139b01b5cccee3de7e8fc767e47d5c83e239eaf38b130b5e72367061ad613b14e2e095fa57cc7f8a9986e4c65f380f67055f1bc8fd17c89"
+    },
+    {
+      "ref": "32af9f0536a974b227cea7887cd69d4024c6b2efc557c4b76c6fdc05fa2ab7b939ffcc4cbd60f3880d66b1e6ae8931e8928f9d5b49ae42294a783d6048d3b7df"
+    },
+    {
+      "ref": "3481c8aa9bf3e9431ea148a245d37b8c02be76f629657dd483952e9028624b14711f50038f4bb05557c57867e639cf721a477f487abe57cbe0d954860df06519"
+    },
+    {
+      "ref": "3ad173702ffcbc873013ea6e4338887c2d774260fe5f3cb2dc0047a66a160a5e452880d062084be59848c1060904a52ead63a347bf5b5779dc45bffcf9d418f7",
+      "dependsOn": [
+        "5ff2a9c6fdee6be58ecc63ffa8c36220fb9e5f74797d80058623b9b66ceb4eddee4f8b70a5904fa8561b365e11788b6075e991a56474d831377be48d79f8b8bb"
+      ]
+    },
+    {
+      "ref": "3ed148fa42ebe80bd87403c28398700a9a92e00a566b687d8e249f286ca606374534a354801acc930ef284c59b1d964e6d6f5af3cfc8d33759114143ae7b7e53",
+      "dependsOn": [
+        "4fbeb3abb47349ed60ef8a8e0063933fb2e4243cc7f3ffbe1f78c670940b5ba1d3a7eab9dab8278fe5dfe0a1ac0b2135b6e047b9c0044965bba6e1c7be13cd2d"
+      ]
+    },
+    {
+      "ref": "41c443a75b480e8a30163a1e298070f89e2ef4437ecef691fd48d80f22071dbfdf9bb8a0d9243445261cd2d7f9ffd1a2652a2078b4c59031702627a253115ab2",
+      "dependsOn": [
+        "4fc8c068d92b37f42c39f3f6139ce14203af1e2ea88b8336eff5d6f9843025d93bbf6f8860423109d49ef4530654c2ef2151ceccd277d50a1d5f74c52c55267f"
+      ]
+    },
+    {
+      "ref": "439a7246d8013438fb4db642f9d86dcc0cc9fdf80411112793e4980cdedf4226db5544e93178d16661931ed3299bdfd9c68ac1508352f587676a3fd094ca5a38",
+      "dependsOn": [
+        "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
+        "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
+        "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551"
+      ]
+    },
+    {
+      "ref": "4cbd8efc5142c75331a3f6e0dfb80685d173470f33d959418100d3b734997a61f12ec5d6cf6d5e3d5021186761bd7fe735c963e03a413506331dd03e97017f1d",
+      "dependsOn": [
+        "10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf",
+        "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde",
+        "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966"
+      ]
+    },
+    {
+      "ref": "4f0343adb71e5131dcec897d9b8b29bd048ae7e511948174b09ce00a69abda33c6a43cec6acfa99fc85566e836061b13be9ba2613e5bcb9d94370e729a1c7fa1",
+      "dependsOn": [
+        "05fa596453d97ea3bea83b8c265063dcfa6bb824c73cc481ef3880065b2e5442fe86b8ea3658aab51c2923627f56b1c36dad6988c0184ee4964b562d74980fe2",
+        "0833e1bbfbabcf94f56b291a0426cff7595e4633c91c04f6f9c0dec99abce84f3cf7f0c04087aa35d3f8651e8b34e78a644ffbba07684a8fe72b7cb536ea634e",
+        "0a13492d8b4d44a0cfc7a5bdbd983fdba856fd36844d028150b9a6f2efdbf37a4a65771e45a441c76905b16e3181b2d2f8cdc4b105d6eba211f6ac4ea2542788",
+        "7f94cdcf3fb95e9b99ca303036e8ca8bb6012b21cc034d328cbede663b491626bc754d1469c5ad82061d26df78bb0eeed546e15a67500404a1d9c522366c1b45",
+        "7ff7c6e04a1a80efe6c6731c69623125359b38737a538af1171b6c1655d1f4abe552e43d06c4f161bca28cbf2812f99d1e1b9e3cd2a2665482a6f7176f63c661",
+        "ba8b67ab80946173b706cb3d8e41fea09d58e71321d50bf12af7ba629492e43319d02c774281b4f22aa0d3e8c213a26f617cbe57fcf0eb4292f5777dcc0ceeec",
+        "be9c08efee22c96768d6a6919b89de666f426bde675c50826d90d341a5da4059bf9c0e56497d052aad02a111c64037d93b604da7daec5fd5a1f8fc1ce727ebb4",
+        "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
+        "fee1e46b5e90637b07367f94ae298429b3160dc17f358d4774c3b15d11279849e777f16ef31ae508284b0dffde3a77d7601c3dc161d24c84a15a0a4d487cc04c"
+      ]
+    },
+    {
+      "ref": "4fbeb3abb47349ed60ef8a8e0063933fb2e4243cc7f3ffbe1f78c670940b5ba1d3a7eab9dab8278fe5dfe0a1ac0b2135b6e047b9c0044965bba6e1c7be13cd2d"
+    },
+    {
+      "ref": "4fc8c068d92b37f42c39f3f6139ce14203af1e2ea88b8336eff5d6f9843025d93bbf6f8860423109d49ef4530654c2ef2151ceccd277d50a1d5f74c52c55267f"
+    },
+    {
+      "ref": "5131ef7312206f592eb1162341e797bd59f0c905151b106ce5b7714d9050e5ccae1a39d4e9ec96e43b82b9e69f0e26defb2739f74cc2e3bcce499de9203232fa",
+      "dependsOn": [
+        "10c1d0b534746b9c28fc64e3aedccb1339e566be9439d146e13a074cf4fd3d900b49e336ed7b33fc9f38044eeba0911dd074319b3c6ee4323db61fab4c0a6aaf",
+        "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3",
+        "4cbd8efc5142c75331a3f6e0dfb80685d173470f33d959418100d3b734997a61f12ec5d6cf6d5e3d5021186761bd7fe735c963e03a413506331dd03e97017f1d",
+        "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+        "d7077d09f18931b227b6edb9cc8371fc7b26f9fbac7e89f7da52155e918848dfa60b8354f4d9148980b92fb86bb6f654acf7b355b3c3a99d0f6994802e9f547d",
+        "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966"
+      ]
+    },
+    {
+      "ref": "513ef8259e20ad1a441c1589dd76a95071b1216335b99a97108ddf97e0127c287eede41b1996b02cf48e08945f1124c6edf17d6c2f85e9b1964cd9984c6bf133",
+      "dependsOn": [
+        "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d",
+        "fb63b3caeb83e85d817f30f1490b7fc35ab1709aff863692ce0b6bfa76c4c6eef09be11d009e3940595196ae5611bb65e43ec8c8f39b661d52df82e8f40b7e63"
+      ]
+    },
+    {
+      "ref": "52c5a4c98f363a43f0a80d282f5db708f2f2581d891c636bdac543a596b3795fb68210d653bd82288ce8f11f4e02565425924ed80cb4831babee824d52dc643b",
+      "dependsOn": [
+        "3ed148fa42ebe80bd87403c28398700a9a92e00a566b687d8e249f286ca606374534a354801acc930ef284c59b1d964e6d6f5af3cfc8d33759114143ae7b7e53",
+        "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360"
+      ]
+    },
+    {
+      "ref": "5ff2a9c6fdee6be58ecc63ffa8c36220fb9e5f74797d80058623b9b66ceb4eddee4f8b70a5904fa8561b365e11788b6075e991a56474d831377be48d79f8b8bb"
+    },
+    {
+      "ref": "606bfcf7da72e3aa5acbff222728fbfbe4808570fba5c4c128dba7cd9a5e9be520676773d904fb6c2a0c0ae6d8402068c8ac741b13e8d98773bb2afdd30e32c7",
+      "dependsOn": [
+        "32af9f0536a974b227cea7887cd69d4024c6b2efc557c4b76c6fdc05fa2ab7b939ffcc4cbd60f3880d66b1e6ae8931e8928f9d5b49ae42294a783d6048d3b7df"
+      ]
+    },
+    {
+      "ref": "638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f"
+    },
+    {
+      "ref": "762763ef9679817f06258ccfd7dbf5cfb844189770dd14678ce5b7f635538db0209cbc2be1f7fc8dc6421a431906c3d6035f4b926e8383c428e460e80adeb984",
+      "dependsOn": [
+        "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3",
+        "5131ef7312206f592eb1162341e797bd59f0c905151b106ce5b7714d9050e5ccae1a39d4e9ec96e43b82b9e69f0e26defb2739f74cc2e3bcce499de9203232fa",
+        "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+        "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde",
+        "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966"
+      ]
+    },
+    {
+      "ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
+      "dependsOn": [
+        "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac"
+      ]
+    },
+    {
+      "ref": "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008"
+    },
+    {
+      "ref": "7a7bdf64994cd27f37684c4596e4c9973921fc974fce1e7060c722dc29cee258a61baa098ac224d59d01c4a2bff79c590a7594098327ef90993d595c00c07b42",
+      "dependsOn": [
+        "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
+        "3ad173702ffcbc873013ea6e4338887c2d774260fe5f3cb2dc0047a66a160a5e452880d062084be59848c1060904a52ead63a347bf5b5779dc45bffcf9d418f7",
+        "41c443a75b480e8a30163a1e298070f89e2ef4437ecef691fd48d80f22071dbfdf9bb8a0d9243445261cd2d7f9ffd1a2652a2078b4c59031702627a253115ab2",
+        "439a7246d8013438fb4db642f9d86dcc0cc9fdf80411112793e4980cdedf4226db5544e93178d16661931ed3299bdfd9c68ac1508352f587676a3fd094ca5a38",
+        "4f0343adb71e5131dcec897d9b8b29bd048ae7e511948174b09ce00a69abda33c6a43cec6acfa99fc85566e836061b13be9ba2613e5bcb9d94370e729a1c7fa1",
+        "638245151928505084c02e403851d42621f4a8174703e05d0288606379486e5c15bb19c7f00d6509e1e6561bd8b7039531bc5a869b3d7a645a04995e3835084f",
+        "85d357e9552f7511205d0aefa236e07f21a1876bdaf3a638d346bbea2aadc8846646cf11b65cd4d5c8b53c02c8ecd89438416b39a4dbba6b31d5cc9ef50979da",
+        "878e7807af591f44ad7e6637d1edc08345cfb22aa4766a1da93bd50edb8c52b0156da6c90872cb5376799f9fddff17b09c5c7c5d4c9f3c5a2ad5fe6d2b3a5c7a",
+        "aade88de55fd3080895b4fa398aae47f5038d206b926bbd4c7f9c023fd8f740c78a424b4e85b95d3a09abcea1b8d1aa613b161f62ce607e1af3dd35638af7b84",
+        "b6e846d47148e2d6ca3e19dae4f463ca97f7224df81f0a155aa3f0b96da366ad307867633731e1be9d63cde1b570c9951e10321dd89a9aa05ab72591aa900e4a",
+        "bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b",
+        "c08b53be836e628e200b27bf7b20b6859a14b75fb0d89d24aea283c172fedba528df494788397f1a827790179feabcac67c432c11a67c313fde64e1ce54165ba",
+        "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
+        "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
+        "fee1e46b5e90637b07367f94ae298429b3160dc17f358d4774c3b15d11279849e777f16ef31ae508284b0dffde3a77d7601c3dc161d24c84a15a0a4d487cc04c"
+      ]
+    },
+    {
+      "ref": "7f94cdcf3fb95e9b99ca303036e8ca8bb6012b21cc034d328cbede663b491626bc754d1469c5ad82061d26df78bb0eeed546e15a67500404a1d9c522366c1b45",
+      "dependsOn": [
+        "513ef8259e20ad1a441c1589dd76a95071b1216335b99a97108ddf97e0127c287eede41b1996b02cf48e08945f1124c6edf17d6c2f85e9b1964cd9984c6bf133",
+        "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3",
+        "d2a6069158b166a31adb6a740adc9ba2d0fa8fdc706cc97f27de82ecc7c9efe4980b117879037f2fd3629dc5fd06abd76c6919929feb6606ee4296aea119ede8"
+      ]
+    },
+    {
+      "ref": "7ff7c6e04a1a80efe6c6731c69623125359b38737a538af1171b6c1655d1f4abe552e43d06c4f161bca28cbf2812f99d1e1b9e3cd2a2665482a6f7176f63c661"
+    },
+    {
+      "ref": "85d357e9552f7511205d0aefa236e07f21a1876bdaf3a638d346bbea2aadc8846646cf11b65cd4d5c8b53c02c8ecd89438416b39a4dbba6b31d5cc9ef50979da",
+      "dependsOn": [
+        "3284de402fdb30a1d139b01b5cccee3de7e8fc767e47d5c83e239eaf38b130b5e72367061ad613b14e2e095fa57cc7f8a9986e4c65f380f67055f1bc8fd17c89"
+      ]
+    },
+    {
+      "ref": "878e7807af591f44ad7e6637d1edc08345cfb22aa4766a1da93bd50edb8c52b0156da6c90872cb5376799f9fddff17b09c5c7c5d4c9f3c5a2ad5fe6d2b3a5c7a",
+      "dependsOn": [
+        "27933dd6c7ddbc4c89911be4b73c61168d9e229a5905d2bf20e5ed2449ef45ec467af09e511955c3a4390ae1263b410f5ff4752ff75be356701b8b869bb13280",
+        "bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753",
+        "c5c4ac669553a295c4b951a8c896a4908ef4cd6fcd3eb45ec208551d2ef0f6ab9db382ab1483b2b99ac12f3351d14f0fdccbdcb1ce75c6382fe63a85fac757fb"
+      ]
+    },
+    {
+      "ref": "8d5c0b705e23aeef7cc341f3c51668b5b659cb3ee0d5a4331f73c7cf857d21f0acc50a0c7e315679b546d67eab2b14124d694c8f836a7ec9f498ae4d27135c3d"
+    },
+    {
+      "ref": "a610fcbcf9cb08a7ca5ee4029f5ab10339b6a7df5cde967f7adb8cee76ad8f528494367f0980241d7c457a18b5a221d72b2c61f022ba68085b0c3c0a09a3a874"
+    },
+    {
+      "ref": "aade88de55fd3080895b4fa398aae47f5038d206b926bbd4c7f9c023fd8f740c78a424b4e85b95d3a09abcea1b8d1aa613b161f62ce607e1af3dd35638af7b84",
+      "dependsOn": [
+        "762763ef9679817f06258ccfd7dbf5cfb844189770dd14678ce5b7f635538db0209cbc2be1f7fc8dc6421a431906c3d6035f4b926e8383c428e460e80adeb984"
+      ]
+    },
+    {
+      "ref": "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d"
+    },
+    {
+      "ref": "b598da29612d98662dc35345bd1a3579bf4a0de9ecd38fe1d5fd3467664e97ecfc69938b28117dacb6a98e9f3fa249705713578dcf02666bd0b3dd62f51110c8"
+    },
+    {
+      "ref": "b6e846d47148e2d6ca3e19dae4f463ca97f7224df81f0a155aa3f0b96da366ad307867633731e1be9d63cde1b570c9951e10321dd89a9aa05ab72591aa900e4a"
+    },
+    {
+      "ref": "ba8b67ab80946173b706cb3d8e41fea09d58e71321d50bf12af7ba629492e43319d02c774281b4f22aa0d3e8c213a26f617cbe57fcf0eb4292f5777dcc0ceeec",
+      "dependsOn": [
+        "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
+        "606bfcf7da72e3aa5acbff222728fbfbe4808570fba5c4c128dba7cd9a5e9be520676773d904fb6c2a0c0ae6d8402068c8ac741b13e8d98773bb2afdd30e32c7"
+      ]
+    },
+    {
+      "ref": "bcbf65df2a5f05ad2f7b99f5c7fc90c06e7b8ee895e97e47d86f1c1c53bf19575cf4a3ff3704bd711530dac9a6a02110c4531e26789dfc2b6bfb71f1b1bce753",
+      "dependsOn": [
+        "e305b0689b1ff9ff8efa3d745fece7f2767c4a13e68ec03822eab4f75fd791405e2c4bfd7b04f5b9e6bea9e5050a11fd222f122f08766b86536be728769a78f6"
+      ]
+    },
+    {
+      "ref": "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360"
+    },
+    {
+      "ref": "be9c08efee22c96768d6a6919b89de666f426bde675c50826d90d341a5da4059bf9c0e56497d052aad02a111c64037d93b604da7daec5fd5a1f8fc1ce727ebb4"
+    },
+    {
+      "ref": "bfba9a6e474788c108e89c9bbda691d03d4165e32900562494edc65ec152afae172c34be0dfa09424bba0978ca8a65ec91b4616c7de8578c3ed126dfb6b8cb3b"
+    },
+    {
+      "ref": "c08b53be836e628e200b27bf7b20b6859a14b75fb0d89d24aea283c172fedba528df494788397f1a827790179feabcac67c432c11a67c313fde64e1ce54165ba"
+    },
+    {
+      "ref": "c5c4ac669553a295c4b951a8c896a4908ef4cd6fcd3eb45ec208551d2ef0f6ab9db382ab1483b2b99ac12f3351d14f0fdccbdcb1ce75c6382fe63a85fac757fb",
+      "dependsOn": [
+        "8d5c0b705e23aeef7cc341f3c51668b5b659cb3ee0d5a4331f73c7cf857d21f0acc50a0c7e315679b546d67eab2b14124d694c8f836a7ec9f498ae4d27135c3d"
+      ]
+    },
+    {
+      "ref": "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3"
+    },
+    {
+      "ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197"
+    },
+    {
+      "ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
+      "dependsOn": [
+        "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197"
+      ]
+    },
+    {
+      "ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36"
+    },
+    {
+      "ref": "d2a6069158b166a31adb6a740adc9ba2d0fa8fdc706cc97f27de82ecc7c9efe4980b117879037f2fd3629dc5fd06abd76c6919929feb6606ee4296aea119ede8",
+      "dependsOn": [
+        "2422117fd007fe66dc804c187faffee81bb67358eae325f67dc4bad8e004036010214213381cf23b5962a8bd7ff9c3d6318ff621d3e0755785b195da2be7909a",
+        "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3",
+        "e3fe1a219c262e5f4439fabfc3240ca7d92d9254b8970e16c3fbc3c0c7de11bfb91486071399eab394f2c90e374bd04de4f6ab9eb510e0746cbf2e568cfc1a78"
+      ]
+    },
+    {
+      "ref": "d7077d09f18931b227b6edb9cc8371fc7b26f9fbac7e89f7da52155e918848dfa60b8354f4d9148980b92fb86bb6f654acf7b355b3c3a99d0f6994802e9f547d",
+      "dependsOn": [
+        "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde"
+      ]
+    },
+    {
+      "ref": "e23aa9b242674fda7fada089daba060fa96df0f065a7762dbde6304d8e9c327dd148f4ddd7d1cf19edefae8842a90b7806728fc0bb724e8939d7584074bf1cde",
+      "dependsOn": [
+        "1dad3427b23164513c86d008d449ead8724abdbec580082a49644ba2c5cc1356ee6eff04228039416a8a0febe67e05bcf90bb800b5c0b0151f15509e2227c1b3"
+      ]
+    },
+    {
+      "ref": "e305b0689b1ff9ff8efa3d745fece7f2767c4a13e68ec03822eab4f75fd791405e2c4bfd7b04f5b9e6bea9e5050a11fd222f122f08766b86536be728769a78f6"
+    },
+    {
+      "ref": "e3fe1a219c262e5f4439fabfc3240ca7d92d9254b8970e16c3fbc3c0c7de11bfb91486071399eab394f2c90e374bd04de4f6ab9eb510e0746cbf2e568cfc1a78"
+    },
+    {
+      "ref": "f3fbaf25284e585253bbfbe9da3a744f193b3f5d87e6483e1bc93d192226171dd462212cf084bd546548b9049b93abe3dc95bf0851f05765c7dba443d1f418b0",
+      "dependsOn": [
+        "a610fcbcf9cb08a7ca5ee4029f5ab10339b6a7df5cde967f7adb8cee76ad8f528494367f0980241d7c457a18b5a221d72b2c61f022ba68085b0c3c0a09a3a874"
+      ]
+    },
+    {
+      "ref": "fb63b3caeb83e85d817f30f1490b7fc35ab1709aff863692ce0b6bfa76c4c6eef09be11d009e3940595196ae5611bb65e43ec8c8f39b661d52df82e8f40b7e63"
+    },
+    {
+      "ref": "fda0c9b8a85ddfbfbabab4d99d8dcfe8de35ec8d55e8f8c1e091df2a0d278dda5f271243d90b35406772892b43d2bf8cbdfc2dedf0f7d749e4be4b3b7ba27966"
+    },
+    {
+      "ref": "fee1e46b5e90637b07367f94ae298429b3160dc17f358d4774c3b15d11279849e777f16ef31ae508284b0dffde3a77d7601c3dc161d24c84a15a0a4d487cc04c",
+      "dependsOn": [
+        "52c5a4c98f363a43f0a80d282f5db708f2f2581d891c636bdac543a596b3795fb68210d653bd82288ce8f11f4e02565425924ed80cb4831babee824d52dc643b"
+      ]
+    }
+  ]
+}
