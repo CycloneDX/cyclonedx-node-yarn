@@ -20,7 +20,7 @@
     "typescript": "5.x"
   },
   "scripts": {
-    "build": "yarn buildtime-dependencies && builder build plugin && yarn test && yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
+    "build": "yarn buildtime-dependencies && builder build plugin && yarn test && YARN_PLUGINS=./bundles/@yarnpkg/plugin-sbom.js yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
     "build:dev": "builder build plugin --no-minify",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node generate-components-licenses.mjs > bundles/components-licenses.md",
