@@ -1,0 +1,12 @@
+# yarn stuff
+/.yarn/**
+/.pnp.cjs
+/.pnp.loader.mjs
+
+# generated files: dist and docs
+/reports/**
+/bundles/**
+/docs/**
+
+
+!/sources/**

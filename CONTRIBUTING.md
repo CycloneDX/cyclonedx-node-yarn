@@ -42,7 +42,7 @@ yarn test
 Apply the coding style via:
 
 ```shell
-# .. TODO
+yarn cs-fix
 ```
 
 ## Sign off your commits
