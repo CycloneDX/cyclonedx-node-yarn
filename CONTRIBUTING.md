@@ -20,12 +20,6 @@ Then add SDKs for you preferred editor as described on https://yarnpkg.com/getti
 Build bundle (unminified)
 
 ```shell
-yarn build:dev
-```
-
-Build release bundle (minified + `component-licenses.md` file)
-
-```shell
 yarn build
 ```
 

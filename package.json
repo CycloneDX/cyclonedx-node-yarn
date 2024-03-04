@@ -20,12 +20,14 @@
     "typescript": "5.x"
   },
   "scripts": {
-    "build": "yarn buildtime-dependencies && builder build plugin && yarn test && YARN_PLUGINS=./bundles/@yarnpkg/plugin-sbom.js yarn sbom --licenses --output-file=./sbom.cdx.json && yarn generate-components-licenses",
-    "build:dev": "builder build plugin --no-minify",
+    "build": "yarn build:btd && yarn build:plugin",
+    "build:btd": "yarn gather-buildtime-dependencies",
+    "build:plugin": "yarn builder build plugin --source-map",
     "clean": "rimraf bundles",
-    "generate-components-licenses": "node generate-components-licenses.mjs > bundles/components-licenses.md",
-    "buildtime-dependencies": "yarn info yarn-plugin-sbom --dependents --json > sources/buildtime-dependencies.json",
-    "test": "node tests/run-all.mjs"
+    "generate-components-licenses": "node tools/generate-components-licenses.mjs > bundles/components-licenses.md",
+    "gather-buildtime-dependencies": "yarn info --json --dependents $npm_package_name > sources/buildtime-dependencies.json",
+    "test": "node tests/run-all.mjs",
+    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-sbom.js yarn sbom"
   },
   "packageManager": "yarn@4.1.0"
 }
