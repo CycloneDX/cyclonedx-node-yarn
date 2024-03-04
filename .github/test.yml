@@ -88,7 +88,16 @@ jobs:
         run: yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
-      # TODO
+      - name: setup-tests
+        run: yarn setup-tests
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: run tests
+        run: yarn test
 
 
   dogfooding:
@@ -119,6 +128,12 @@ jobs:
         run: yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
       - name: dogfooding
         run: >
           yarn dogfooding
