@@ -64,7 +64,7 @@ class SBOMCommand extends BaseCommand {
 
   componentType = Option.String("--component-type", {
     description: `Type of component described by the generated SBOM. (choices: "application", "framework", "library", "container", "platform", "device-driver")
-      
+
       Default: application`,
   });
 
@@ -76,7 +76,7 @@ class SBOMCommand extends BaseCommand {
 
   reproducible = Option.Boolean(`--reproducible`, false, {
     description: `Omit anything random or time-based from SBOM. If enabled consecutive runs of will result in identical files.
-      
+
       Default: false`,
   });
 
@@ -115,12 +115,11 @@ function parseSpecVersion(
   if (specVersion === undefined) {
     return CDX.Spec.Version.v1dot5;
   }
-  const spec = CDX.Spec.SpecVersionDict[specVersion];
-  if (spec) {
-    return spec;
+  if (specVersion in CDX.Spec.SpecVersionDict) {
+    return specVersion;
   } else {
     throw new Error(
-      `${specVersion} not a recognized CycloneDX specification version.`
+      `${specVersion} is not supported CycloneDX specification version.`
     );
   }
 }
@@ -131,7 +130,7 @@ function parseOutputFormat(
   if (outputFormat === undefined) {
     return CDX.Spec.Format.JSON;
   }
-  const format = CDX.Spec.Format[outputFormat];
+  const format = CDX.Spec.Format[outputFormat.toUpperCase()];
   if (format) {
     return format;
   } else {

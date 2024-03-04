@@ -1,0 +1,22 @@
+{
+  "all": false,
+  "src": ["sources"],
+  "exclude": [
+    "**/.yarn/**", "**/.pnp.cjs", "**/.pnp.loader.mjs",
+    "**/*.{spec,test}.{js,cjs,mjs}",
+    "**/*.cache/**",
+    "{,CI_}reports/**",
+    "test{,s}/**",
+    "**/{ava,babel,nyc}.config.{js,cjs,mjs}",
+    "**/jest.config.{js,cjs,mjs,ts}",
+    "**/{karma,rollup,webpack}.config.js",
+    "**/.{eslint,mocha}rc.{js,cjs}"
+  ],
+  "reporter": ["text", "clover", "html"],
+  "reporterOptions": {
+    "clover": {"file": "coverage.clover.xml"},
+    "html": {"subdir": "coverage.html"}
+  },
+  "reports-dir": "./reports/coverage",
+  "temp-directory": "./.c8.cache"
+}
