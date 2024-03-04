@@ -1,23 +1,19 @@
-# Rules for Yarn 4 per https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-#!.yarn/sdks
-!.yarn/versions
+# yarn stuff - for now, until setup is hardened
+# see also: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+/.pnp.*
+/.yarn/
+/.yarnrc.yml
 
-# Yarn editor SDKs.
-.vscode
+
+# No bundles for now untils release process is clarified.
+/bundles/
+
 
 # Only used during production build.
-sbom.cdx.json
-sources/buildtime-dependencies.json
-# No bundles for now untils release process is clarified.
-bundles/**
+/sources/buildtime-dependencies.json
+
 
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
-
 # Logs
 logs
 *.log
@@ -141,3 +137,10 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
