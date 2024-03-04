@@ -1,15 +1,57 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "module": "commonjs",
+    /* Visit https://aka.ms/tsconfig.resolveJsonModule to read more about this file */
+
+    /* Language and Environment */
     "target": "ES2021",
-    "lib": [
-      "ES2021"
-    ],
-    "strict": true
+
+    /* Modules */
+    "module": "CommonJS",
+    "rootDir": "sources",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+
+    /* JavaScript Support */
+    "allowJs": false,
+
+    /* Emit */
+    "declaration": false,
+    "sourceMap": false,
+    "removeComments": true,
+
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false,
+
+    /* Completeness */
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": false,
+
+    /* yarn foo */
+    "experimentalDecorators": true,
   },
-  "include": [
-    "sources/**/*.ts"
+  "files": [
+    "sources/index.ts",
+  ],
+  "exclude": [
+    ".yarn",
+    "**/*.spec.ts", "**/*.test.ts"
   ]
 }
