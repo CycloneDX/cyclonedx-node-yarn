@@ -40,7 +40,9 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: yarn set version ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -85,7 +87,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           # cache: 'npm'
       - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: yarn set version ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
@@ -137,7 +141,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: yarn set version ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
       - name: fetch build artifact
