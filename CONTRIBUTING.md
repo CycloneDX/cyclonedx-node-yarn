@@ -17,13 +17,19 @@ Then add SDKs for you preferred editor as described on https://yarnpkg.com/getti
 
 ## Build from source
 
-Build bundle (unminified)
+Build bundle
 
 ```shell
-yarn build
+yarn build  # options: --source-map --no-minify
 ```
 
 ## Testing
+
+Set up the tests once, via:
+
+```shell
+yarn setup-tests
+```
 
 Run to have a proper test suite pass:
 

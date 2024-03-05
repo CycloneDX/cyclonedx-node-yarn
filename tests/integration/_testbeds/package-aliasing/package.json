@@ -1,0 +1,15 @@
+{
+  "name": "package-aliasing",
+  "description": "demo: a package is aliased with a different name",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "@isaacs/cliui": "8.0.2",
+    "cdx-lib": "npm:@cyclonedx/cyclonedx-library@6.4.0"
+  },
+  "packageManager": "yarn@4.1.0",
+  "engines": {
+    "yarn": ">=4",
+    "node": ">=18"
+  }
+}

@@ -13,6 +13,8 @@
 /sources/buildtime-dependencies.json
 
 
+/.*.cache
+
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 # Logs
 logs

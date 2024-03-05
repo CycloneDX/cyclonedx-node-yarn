@@ -92,10 +92,9 @@ export const generateSBOM = async (
     }
   }
 
-  const serializeSpec = spec(outputOptions.specVersion);
   const serializedSBoM = serialize(
     bom,
-    serializeSpec,
+    outputOptions.specVersion,
     outputOptions.outputFormat,
     outputOptions.reproducible
   );
@@ -136,14 +135,15 @@ async function addMetadataTools(bom: CDX.Models.Bom) {
  */
 function serialize(
   bom: CDX.Models.Bom,
-  serializeSpec: SupportedSpec,
+  specVersion: OutputOptions["specVersion"],
   outputFormat: OutputOptions["outputFormat"],
   reproducible: OutputOptions["reproducible"]
 ): string {
+  const spec = CDX.Spec.SpecVersionDict[specVersion]
   switch (outputFormat) {
     case CDX.Spec.Format.JSON: {
       const serializer = new CDX.Serialize.JsonSerializer(
-        new CDX.Serialize.JSON.Normalize.Factory(serializeSpec)
+        new CDX.Serialize.JSON.Normalize.Factory(spec)
       );
       return serializer.serialize(bom, {
         space: 2,
@@ -152,7 +152,7 @@ function serialize(
     }
     case CDX.Spec.Format.XML: {
       const serializer = new CDX.Serialize.XmlSerializer(
-        new CDX.Serialize.XML.Normalize.Factory(serializeSpec)
+        new CDX.Serialize.XML.Normalize.Factory(spec)
       );
       return serializer.serialize(bom, {
         space: 2,
@@ -327,24 +327,5 @@ function attemptFallbackLicense(
         );
       }
     }
-  }
-}
-
-type ValueOf<T> = T[keyof T];
-type SupportedSpec = ValueOf<typeof CDX.Spec.SpecVersionDict> & object;
-function spec(specVersion: CDX.Spec.Version): SupportedSpec {
-  switch (specVersion) {
-    case CDX.Spec.Version.v1dot2:
-      return CDX.Spec.Spec1dot2;
-    case CDX.Spec.Version.v1dot3:
-      return CDX.Spec.Spec1dot3;
-    case CDX.Spec.Version.v1dot4:
-      return CDX.Spec.Spec1dot4;
-    case CDX.Spec.Version.v1dot5:
-      return CDX.Spec.Spec1dot5;
-    default:
-      throw new Error(
-        `Unsupported CycloneDX specification version ${specVersion}`
-      );
   }
 }

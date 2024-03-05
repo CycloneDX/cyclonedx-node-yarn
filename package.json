@@ -3,30 +3,38 @@
   "version": "1.0-dev",
   "license": "Apache-2.0",
   "main": "./sources/index.ts",
+  "engines": {
+    "yarn": ">=4",
+    "node": ">=18"
+  },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.4.0",
     "@yarnpkg/cli": "^4.1.0",
     "@yarnpkg/core": "^4.0.3",
     "@yarnpkg/fslib": "^3.0.2",
-    "clipanion": "^4.0.0-rc.2",
+    "clipanion": "^4.0.0-rc.3",
     "packageurl-js": "^1.2.1",
     "spdx-license-ids": "^3.0.17",
     "xmlbuilder2": "^3.1.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.20",
-    "@yarnpkg/builder": "^4.0.0",
-    "rimraf": "5.x",
-    "typescript": "5.x"
+    "@types/mocha": "^10",
+    "@types/node": "ts5.3",
+    "@yarnpkg/builder": "4.0.0",
+    "c8": "^9",
+    "mocha": "10.3.0",
+    "rimraf": "^5",
+    "typescript": "5.3.3"
   },
   "scripts": {
     "build": "yarn build:btd && yarn build:plugin",
     "build:btd": "yarn gather-buildtime-dependencies",
-    "build:plugin": "yarn builder build plugin --source-map",
+    "build:plugin": "yarn builder build plugin",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node tools/generate-components-licenses.mjs > bundles/components-licenses.md",
     "gather-buildtime-dependencies": "yarn info --json --dependents $npm_package_name > sources/buildtime-dependencies.json",
-    "test": "node tests/run-all.mjs",
+    "setup-tests": "node tests/integration/setup.js",
+    "test": "c8 mocha -p",
     "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-sbom.js yarn sbom"
   },
   "packageManager": "yarn@4.1.0"
