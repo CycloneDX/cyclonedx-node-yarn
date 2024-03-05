@@ -134,7 +134,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - run: mkdir ${{ env.REPORTS_DIR }}
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
