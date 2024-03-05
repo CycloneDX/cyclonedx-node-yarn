@@ -118,7 +118,7 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding npm ${{ matrix.npm-version }}
+    name: dogfooding
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
