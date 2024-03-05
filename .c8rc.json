@@ -1,8 +1,7 @@
 {
-  "all": false,
+  "all": true,
   "src": ["sources"],
   "exclude": [
-    "**/.yarn/**", "**/.pnp.cjs", "**/.pnp.loader.mjs",
     "**/*.{spec,test}.{js,cjs,mjs}",
     "**/*.cache/**",
     "{,CI_}reports/**",
@@ -10,8 +9,10 @@
     "**/{ava,babel,nyc}.config.{js,cjs,mjs}",
     "**/jest.config.{js,cjs,mjs,ts}",
     "**/{karma,rollup,webpack}.config.js",
-    "**/.{eslint,mocha}rc.{js,cjs}"
+    "**/.{eslint,mocha}rc.{js,cjs}",
+    ".yarn/**", ".pnp.*"
   ],
+  "exclude-after-remap": true,
   "reporter": ["text", "clover", "html"],
   "reporterOptions": {
     "clover": {"file": "coverage.clover.xml"},
