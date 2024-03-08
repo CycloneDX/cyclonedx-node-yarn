@@ -29,6 +29,7 @@ import {
 import { PortablePath, ppath } from "@yarnpkg/fslib";
 import { Command, Option, Usage } from "clipanion";
 import { OutputOptions, generateSBOM, stdOutOutput } from "./sbom";
+import * as process from "process";
 
 class SBOMCommand extends BaseCommand {
   static readonly paths = [
@@ -43,7 +44,7 @@ class SBOMCommand extends BaseCommand {
   });
 
   specVersion = Option.String("--spec-version", {
-    description: `Which version of CycloneDX spec to use.
+    description: `Which version of CycloneDX to use.
 
       (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")`,
   });
@@ -60,8 +61,14 @@ class SBOMCommand extends BaseCommand {
       (default: write to STDOUT)`,
   });
 
-  production = Option.Boolean(`--production,--prod`, false, {
-    description: `Exclude development dependencies.`,
+  /* mimic option from yarn.
+    - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
+    - see https://yarnpkg.com/cli/workspaces/focus
+   */
+  production = Option.Boolean(`--production,--prod`, process.env.NODE_ENV=='production', {
+    description: `Exclude development dependencies.
+
+    (defaults to 'true' if the environment variable "NODE_ENV" is set to "production"')`,
   });
 
   componentType = Option.String("--component-type", {
