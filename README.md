@@ -49,11 +49,11 @@ YARN_PLUGINS=.../bundles/@yarnpkg/plugin-sbom.js yarn sbom --help
 The help page:
 
 ```text
-Generates CycloneDX SBOM file for current workspace.
+Generates CycloneDX SBOM for current workspace.
 
 ━━━ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  $ yarn sbom
+$ yarn CycloneDX make-sbom
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -73,25 +73,8 @@ Generates CycloneDX SBOM file for current workspace.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Recursively scan workspace dependencies and emits them as SBOM file in 
-CycloneDX's JSON format.
-
-━━━ Examples ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Generate SBOM in JSON format for all dependencies and write it to standard output.
-  $ yarn sbom
-
-Generate SBOM in JSON format for all dependencies and write it to standard output.
-  $ yarn sbom --component-type=library
-
-Generate SBOM in JSON format for runtime dependencies but omit development dependencies.
-  $ yarn sbom --component-type=application --output-file ./sbom-prod.cdx.json --production
-
-Generate SBOM in XML format for runtime dependencies but omit development dependencies.
-  $ yarn sbom --component-type=application --output-file ./sbom-prod.cdx.json --output-format=XML --production
-
-Generate SBOM with component licenses.
-  $ yarn sbom --licenses
+Recursively scan workspace dependencies and emits them as 
+Software-Bill-of-Materials(SBOM) in CycloneDX format.
 ```
 
 

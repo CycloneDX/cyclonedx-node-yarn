@@ -38,29 +38,8 @@ class SBOMCommand extends BaseCommand {
   ];
 
   static readonly usage: Usage = Command.Usage({
-    description: `Generates CycloneDX SBOM file for current workspace.`,
-    details: `
-    Recursively scan workspace dependencies and emits them as SBOM file in CycloneDX's JSON format.
-    `,
-    examples: [
-      [
-        `Generate SBOM in JSON format for all dependencies and write it to standard output.`,
-        `$0 sbom`,
-      ],
-      [
-        `Generate SBOM in JSON format for all dependencies and write it to standard output.`,
-        `$0 sbom --component-type=library`,
-      ],
-      [
-        `Generate SBOM in JSON format for runtime dependencies but omit development dependencies.`,
-        `$0 sbom --component-type=application --output-file ./sbom-prod.cdx.json --production`,
-      ],
-      [
-        `Generate SBOM in XML format for runtime dependencies but omit development dependencies.`,
-        `$0 sbom --component-type=application --output-file ./sbom-prod.cdx.json --output-format=XML --production`,
-      ],
-      [`Generate SBOM with component licenses.`, `$0 sbom --licenses`],
-    ],
+    description: `Generates CycloneDX SBOM for current workspace.`,
+    details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.',
   });
 
   specVersion = Option.String("--spec-version", {
