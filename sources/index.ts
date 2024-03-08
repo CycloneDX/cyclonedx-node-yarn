@@ -44,21 +44,15 @@ class SBOMCommand extends BaseCommand {
   });
 
   specVersion = Option.String("--spec-version", {
-    description: `Which version of CycloneDX to use.
-
-      (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")`,
+    description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")',
   });
 
   outputFormat = Option.String("--output-format", {
-    description: `Which output format to use.
-
-      (choices: "JSON", "XML", default: "JSON")`,
+    description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")',
   });
 
   outputFile = Option.String(`--output-file`, {
-    description: `Path to the output file. Set to "-" to write to STDOUT.
-
-      (default: write to STDOUT)`,
+    description: `Path to the output file.\nSet to "-" to write to STDOUT\n(default: write to STDOUT)`,
   });
 
   /* mimic option from yarn.
@@ -66,27 +60,19 @@ class SBOMCommand extends BaseCommand {
     - see https://yarnpkg.com/cli/workspaces/focus
    */
   production = Option.Boolean(`--production,--prod`, process.env.NODE_ENV=='production', {
-    description: `Exclude development dependencies.
-
-    (defaults to 'true' if the environment variable "NODE_ENV" is set to "production"')`,
+    description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)',
   });
 
-  componentType = Option.String("--component-type", {
-    description: `Type of component described by the generated SBOM. (choices: "application", "framework", "library", "container", "platform", "device-driver")
-
-      Default: application`,
+  componentType = Option.String("--mc-type", {
+    description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")',
   });
 
   licenses = Option.Boolean(`--licenses`, false, {
-    description: `Include license information for components in generated SBOM. License information will always be absent for components that don't specify licenses unambigously.
-
-      Default: Licenses are not included in the SBOM.`,
+    description: `Include license information for components in generated SBOM.\nLicense information will always be absent for components that don't specify licenses unambiguously.`,
   });
 
   reproducible = Option.Boolean(`--reproducible`, false, {
-    description: `Omit anything random or time-based from SBOM. If enabled consecutive runs of will result in identical files.
-
-      Default: false`,
+    description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.',
   });
 
   async execute() {
