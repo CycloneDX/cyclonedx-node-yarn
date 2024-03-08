@@ -57,13 +57,21 @@ $ yarn CycloneDX make-sbom
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --spec-version #0      Which version of CycloneDX to use. (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")
-  --output-format #0     Which output format to use. (choices: "JSON", "XML", default: "JSON")
-  --output-file #0       Path to the output file. Set to "-" to write to STDOUT (default: write to STDOUT)
-  --production,--prod    Exclude development dependencies. (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
-  --mc-type #0           Type of the main component. (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
-  --licenses             Include license information for components in generated SBOM. License information will always be absent for components that don't specify licenses unambiguously.
-  --reproducible         Whether to go the extra mile and make the output reproducible. This might result in loss of time- and random-based values.
+  --spec-version #0      Which version of CycloneDX to use.
+                         (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")
+  --output-format #0     Which output format to use.
+                         (choices: "JSON", "XML", default: "JSON")
+  --output-file #0       Path to the output file.
+                         Set to "-" to write to STDOUT.
+                         (default: write to STDOUT)
+  --production,--prod    Exclude development dependencies.
+                         (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
+  --mc-type #0           Type of the main component.
+                         (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
+  --licenses             Include license information for components in generated SBOM.
+                         License information will always be absent for components that don't specify licenses unambiguously.
+  --reproducible         Whether to go the extra mile and make the output reproducible.
+                         This might result in loss of time- and random-based values.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

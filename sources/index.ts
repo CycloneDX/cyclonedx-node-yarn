@@ -43,6 +43,7 @@ class SBOMCommand extends BaseCommand {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.',
   });
 
+  // @TODO limit to all supported versions - not hardcoded
   specVersion = Option.String("--spec-version", {
     description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")',
   });
@@ -52,7 +53,7 @@ class SBOMCommand extends BaseCommand {
   });
 
   outputFile = Option.String(`--output-file`, {
-    description: `Path to the output file.\nSet to "-" to write to STDOUT\n(default: write to STDOUT)`,
+    description: `Path to the output file.\nSet to "-" to write to STDOUT.\n(default: write to STDOUT)`,
   });
 
   /* mimic option from yarn.
@@ -63,6 +64,7 @@ class SBOMCommand extends BaseCommand {
     description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)',
   });
 
+  // @TODO limit to hardcoded: "application", "firmware", "library"
   componentType = Option.String("--mc-type", {
     description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")',
   });
