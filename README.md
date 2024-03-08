@@ -38,7 +38,7 @@ Currently, there are no releases nor pre-builds. This means, the only way to tes
 1. create the bundle: run  `yarn build`
 
 Then, import the bundle into your project using `yarn import ...`,
-or reference it in [YARN_PLUGINS](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
+or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
 
 ```shell
 YARN_PLUGINS=.../bundles/@yarnpkg/plugin-sbom.js yarn sbom --help
