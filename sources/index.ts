@@ -31,7 +31,11 @@ import { Command, Option, Usage } from "clipanion";
 import { OutputOptions, generateSBOM, stdOutOutput } from "./sbom";
 
 class SBOMCommand extends BaseCommand {
-  static readonly paths = [["sbom"]];
+  static readonly paths = [
+    ['CycloneDX', 'make-sbom'],
+    ['cyclonedx'],
+    ['sbom']
+  ];
 
   static readonly usage: Usage = Command.Usage({
     description: `Generates CycloneDX SBOM file for current workspace.`,
