@@ -1,0 +1,17 @@
+# Config for Codacy
+# See https://docs.codacy.com/repositories-configure/codacy-configuration-file/
+---
+engines:
+# engine `eslint-8` shall be disabled, since it fails due to incapability to load custom/own plugins
+# this engine is run via CI/CT anyway...
+exclude_paths:
+  # ignore all non-shipped files
+  - "docs/dev/**"
+  - "examples/**"
+  ## tests
+  - "tests/**"
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  ## dot-files & dot-folders
+  - ".*"
+  - ".*/**"

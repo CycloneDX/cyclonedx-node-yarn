@@ -20,7 +20,7 @@ Then add SDKs for you preferred editor as described on https://yarnpkg.com/getti
 Build bundle
 
 ```shell
-yarn build  # options: --source-map --no-minify
+yarn run build
 ```
 
 ## Testing
@@ -28,7 +28,13 @@ yarn build  # options: --source-map --no-minify
 Set up the tests once, via:
 
 ```shell
-yarn setup-tests
+yarn run setup-tests
+```
+
+Build with source-map for testing: 
+
+```shell
+yarn run build:bundle-dev
 ```
 
 Run to have a proper test suite pass:
@@ -42,7 +48,7 @@ yarn test
 Apply the coding style via:
 
 ```shell
-# .. TODO
+yarn run cs-fix
 ```
 
 ## Sign off your commits
