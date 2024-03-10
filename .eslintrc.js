@@ -17,9 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/* eslint-disable jsdoc/valid-types */
+
 /**
  * @type {import('eslint').Linter.Config}
- * @see {@link https://eslint.org/}
+ * @see https://eslint.org/
  */
 module.exports = {
   root: true,
