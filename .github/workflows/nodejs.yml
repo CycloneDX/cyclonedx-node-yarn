@@ -66,6 +66,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -78,8 +79,8 @@ jobs:
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
-      - name: make reports dir
-        run: mkdir -p "$REPORTS_DIR"
+      - name: build
+        run: yarn run build:gbtd
       - name: test
         run: >
           yarn run test:standard
@@ -108,6 +109,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -120,8 +122,8 @@ jobs:
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --immutable
-      - name: make reports dir
-        run: mkdir -p "$REPORTS_DIR"
+      - name: build
+        run: yarn run build:gbtd
       - name: test
         run: yarn run test:lint
 
