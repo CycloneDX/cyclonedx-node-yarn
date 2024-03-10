@@ -40,14 +40,14 @@
     "typescript": "5.3.3"
   },
   "scripts": {
-    "build": "npm-run-all -s -n build:gbtd build:bundle",
+    "build": "run-s -n build:gbtd build:bundle",
     "build:gbtd": "yarn info --json --dependents $npm_package_name > sources/buildtime-dependencies.json",
-    "build:bundle": "yarn builder build plugin",
+    "build:bundle": "builder build plugin",
     "build:bundle-dev": "yarn build:bundle --source-map",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node tools/generate-components-licenses.mjs > bundles/components-licenses.md",
     "setup-tests": "node tests/integration/setup.js",
-    "test": "npm-run-all -p --aggregate-output -lc test:\\*",
+    "test": "run-p --aggregate-output -lc test:\\*",
     "test:standard": "eslint .",
     "test:node": "c8 mocha -p",
     "cs-fix": "eslint --fix .",

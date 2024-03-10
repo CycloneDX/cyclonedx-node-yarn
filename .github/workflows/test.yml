@@ -46,7 +46,7 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: build
-        run: yarn build --source-map
+        run: yarn run build --source-map
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
@@ -55,12 +55,52 @@ jobs:
           path: ${{ env.DIST_DIR }}
           if-no-files-found: error
 
-  #  test-standards:
-  #    # TODO
+  test-standard:
+    name: test standard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
+      - name: Setup subject
+        run: yarn install --immutable
+      - name: make reports dir
+        run: mkdir -p "$REPORTS_DIR"
+      - name: test
+        run: >
+          yarn run test:standard
+          --format checkstyle
+          --output-file "$REPORTS_DIR/eslint.xml"
+      - name: Publish Checkstyle report
+        # see https://github.com/Juuxel/publish-checkstyle-report
+        uses: Juuxel/publish-checkstyle-report@v1
+        if: ${{ failure() || success() }}
+        with:
+          reports: ${{ env.REPORTS_DIR }}/eslint.xml
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        if: ${{ failure() }}
+        with:
+          name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+
 
   test-node:
     needs: [ 'build' ]
-    name: jest (node${{ matrix.node-version }} ${{ matrix.os }})
+    name: test (node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -93,7 +133,7 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
-        run: yarn setup-tests
+        run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
@@ -101,11 +141,11 @@ jobs:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
       - name: run tests
-        run: yarn test
+        run: yarn run test:node
       - name: collect coverage
         if: ${{ failure() || success() }}
         run: >
-          yarn c8 report
+          yarn exec c8 report
           --reporter clover
           --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}'
       - name: artifact test reports
@@ -155,7 +195,7 @@ jobs:
           path: ${{ env.DIST_DIR }}
       - name: dogfooding
         run: >
-          yarn dogfooding
+          yarn run dogfooding
           --production
           --output-file=${{ env.REPORTS_DIR }}/bom.json
       - name: artifact test reports
