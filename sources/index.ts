@@ -86,7 +86,7 @@ class SBOMCommand extends BaseCommand {
       configuration,
       this.context.cwd
     )
-    if (workspace === null) { throw new RangeError('missing workspace')}
+    if (workspace === null) { throw new RangeError('missing workspace') }
 
     if (this.production) {
       workspace.manifest.devDependencies.clear()
