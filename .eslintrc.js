@@ -34,7 +34,29 @@ module.exports = {
     commonjs: true,
     node: true
   },
+  rules: {
+    // region sort imports/exports
+    /** disable other sorters in favour of `simple-import-sort` **/
+    'import/order': 0,
+    'sort-imports': 0,
+    /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    // endregion sort imports/exports
+    // region license-header
+    /* see https://github.com/Stuk/eslint-plugin-header#readme */
+    'header/header': ['error', '.license-header.js']
+    // endregion license-header
+  },
   overrides: [
+    {
+      files: ['*.spec.*', '*.test.*'],
+      env: {
+        mocha: true,
+        commonjs: true,
+        node: true,
+      }
+    },
     {
       files: ['*.ts'],
       extends: [
@@ -50,20 +72,50 @@ module.exports = {
           ignoreStatic: true
         }]
       }
+    },
+    {
+      files: ['*.js', '*.mjs', '*.cjs'],
+      extends: [
+        /* see https://www.npmjs.com/package/eslint-config-standard */
+        'standard',
+        /* see https://github.com/gajus/eslint-plugin-jsdoc */
+        'plugin:jsdoc/recommended'
+      ],
+      plugins: [
+        /* see https://github.com/gajus/eslint-plugin-jsdoc/ */
+        'jsdoc'
+      ],
+      rules: {
+        /* see https://github.com/gajus/eslint-plugin-jsdoc */
+        'jsdoc/no-undefined-types': 'error',
+        'jsdoc/check-tag-names': 0,
+        'jsdoc/check-types': 'error',
+        'jsdoc/require-hyphen-before-param-description': ['error', 'always'],
+        'jsdoc/require-jsdoc': 0,
+        'jsdoc/require-param': 0,
+        'jsdoc/require-param-description': 0,
+        'jsdoc/require-param-name': 'error',
+        'jsdoc/require-param-type': 'error',
+        'jsdoc/require-property': 0,
+        'jsdoc/require-property-description': 0,
+        'jsdoc/require-property-name': 'error',
+        'jsdoc/require-property-type': 'error',
+        'jsdoc/require-returns': 0,
+        'jsdoc/require-returns-check': 'error',
+        'jsdoc/require-returns-description': 0,
+        'jsdoc/require-returns-type': 'error',
+        'jsdoc/require-throws': 'error',
+        'jsdoc/require-yields': 0,
+        'jsdoc/require-yields-check': 'error',
+        'jsdoc/sort-tags': 'warn'
+        // region docs
+      },
+      settings: {
+        jsdoc: {
+          /* see https://github.com/gajus/eslint-plugin-jsdoc */
+          mode: 'jsdoc'
+        }
+      }
     }
-  ],
-  rules: {
-    // region sort imports/exports
-    /** disable other sorters in favour of `simple-import-sort` **/
-    'import/order': 0,
-    'sort-imports': 0,
-    /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    // endregion sort imports/exports
-    // region license-header
-    /* see https://github.com/Stuk/eslint-plugin-header#readme */
-    'header/header': ['error', '.license-header.js']
-    // endregion license-header
-  }
+  ]
 }
