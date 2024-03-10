@@ -100,6 +100,31 @@ jobs:
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 
+  test-lint:
+    name: test standard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
+      - name: Setup subject
+        run: yarn install --immutable
+      - name: make reports dir
+        run: mkdir -p "$REPORTS_DIR"
+      - name: test
+        run: yarn run test:lint
+
   test-node:
     needs: [ 'build' ]
     name: test (node${{ matrix.node-version }} ${{ matrix.os }})

@@ -50,7 +50,8 @@ const componentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(
 /**
  * Denotes output to standard out is desired instead of writing files.
  */
-export const stdOutOutput = Symbol()
+export const stdOutOutput = Symbol('__cdxyp_out2stdout')
+
 export interface OutputOptions {
   specVersion: CDX.Spec.Version
   outputFormat: CDX.Spec.Format
@@ -62,12 +63,12 @@ export interface OutputOptions {
   reproducible: boolean
 }
 
-export const generateSBOM = async (
+export async function generateSBOM (
   project: Project,
   workspace: Workspace,
   config: Configuration,
   outputOptions: OutputOptions
-) => {
+): Promise<void> {
   const bom = new CDX.Models.Bom()
   await addMetadataTools(bom)
 
@@ -104,11 +105,16 @@ export const generateSBOM = async (
   }
   // Add dependencies to models.
   for (const pkgInfo of allDependencies) {
-    const component = componentModels.get(pkgInfo.package.locatorHash)!
+    const component = componentModels.get(pkgInfo.package.locatorHash)
+    if (component === undefined) {
+      throw new RangeError('unexpected value for component')
+    }
     for (const dependencyLocator of pkgInfo.dependencies) {
-      component.dependencies.add(
-        componentModels.get(dependencyLocator)!.bomRef
-      )
+      const depComponent = componentModels.get(dependencyLocator)
+      if (depComponent === undefined) {
+        throw new RangeError('unexpected value for depComponent')
+      }
+      component.dependencies.add(depComponent.bomRef)
     }
   }
 
@@ -125,7 +131,7 @@ export const generateSBOM = async (
   }
 }
 
-async function addMetadataTools (bom: CDX.Models.Bom) {
+async function addMetadataTools (bom: CDX.Models.Bom): Promise<void> {
   let buildtimeDependencies: BuildtimeDependencies | undefined
   try {
     buildtimeDependencies = await import('./buildtime-dependencies.json')
@@ -160,6 +166,7 @@ function serialize (
   reproducible: OutputOptions['reproducible']
 ): string {
   const spec = CDX.Spec.SpecVersionDict[specVersion]
+  if (spec === undefined) { throw new RangeError('undefined specVersion') }
   switch (outputFormat) {
     case CDX.Spec.Format.JSON: {
       const serializer = new CDX.Serialize.JsonSerializer(
@@ -187,12 +194,10 @@ function serialize (
  * @returns Name of author.
  */
 function getAuthorName (manifestRawAuthor: unknown): string | undefined {
-  if (!manifestRawAuthor) {
-    return
-  }
+  // @FIXME wtf is this for? why not use already normalized values?!
 
   if (
-    typeof manifestRawAuthor === 'object' &&
+    typeof manifestRawAuthor === 'object' && manifestRawAuthor !== null &&
     'name' in manifestRawAuthor &&
     typeof manifestRawAuthor.name === 'string'
   ) {
@@ -204,12 +209,16 @@ function getAuthorName (manifestRawAuthor: unknown): string | undefined {
     const homepage = manifestRawAuthor.indexOf('(')
     if (mail === -1 && homepage === -1) {
       return manifestRawAuthor
-    } else if (mail > 0 && (mail < homepage || homepage === -1)) {
+    }
+    if (mail > 0 && (mail < homepage || homepage === -1)) {
       return manifestRawAuthor.substring(0, mail).trimEnd()
-    } else if (homepage > 0 && (homepage < mail || mail === -1)) {
+    }
+    if (homepage > 0 && (homepage < mail || mail === -1)) {
       return manifestRawAuthor.substring(0, homepage).trimEnd()
     }
   }
+
+  return undefined
 }
 
 /**
@@ -228,7 +237,7 @@ function packageInfoToCycloneComponent (
     },
     CDX.Enums.ComponentType.Library
   )
-  if (!component) {
+  if (component === undefined) {
     throw new Error(
       `Failed to parse manifest for ${structUtils.stringifyLocator(
         pkgInfo.package
@@ -236,10 +245,13 @@ function packageInfoToCycloneComponent (
     )
   }
   // BOM reference needs to be a stable value for reproducible output.
+  // @FIXME dont use any `locatorhash` for this purpose - but maybe something that is actually universally reproducible?
+  // -- like `package-name@version` - which is a discriminated unique value for yarn universe
   component.bomRef.value = pkgInfo.package.locatorHash
   if (licenses) {
     addLicenseInfo(manifest, pkgInfo, component)
   } else {
+    // @FIXME why should this be needed anyway?
     component.licenses.clear()
   }
 
@@ -260,12 +272,14 @@ function packageInfoToCycloneComponent (
 function gitHubPackagePurl (
   devirtualizedLocator: Locator
 ): PackageURL | undefined {
+  // @TODO find the docs for this format
+  // @TODO -- is this really universal in yarn??? RESEARCH needed!
   const yarnGitUrlPattern =
     /(?<namespace>[^/:]+)\/(?<name>[^/:]+)\.git#commit=(?<commit>[a-fA-F0-9]{1,40})$/
   const matches = yarnGitUrlPattern.exec(
     devirtualizedLocator.reference
   )?.groups
-  if (matches?.namespace && matches?.name && matches?.commit) {
+  if (matches !== undefined) {
     // https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst#github
     return new PackageURL(
       'github',
@@ -276,20 +290,22 @@ function gitHubPackagePurl (
       null
     )
   }
+  return undefined
 }
 
 /**
  * Adds license data to component if available.
+ * @FIXME remove this license attachment as it isi just wrong
  */
 function addLicenseInfo (
   manifest: Manifest,
   pkgInfo: PackageInfo,
   component: CDX.Models.Component
-) {
+): void {
   if (component.licenses.size === 1) {
     const license = component.licenses.values().next().value
-    if (
-      pkgInfo.licenseFileContent &&
+    // eslint-disable-next-line  @typescript-eslint/strict-boolean-expressions
+    if (pkgInfo.licenseFileContent &&
       (license instanceof CDX.Models.NamedLicense ||
         license instanceof CDX.Models.SpdxLicense)
     ) {
@@ -302,18 +318,21 @@ function addLicenseInfo (
 
 /**
  * Attempts to parse bogus but unambigous licenses and augments the component model.
+ * @FIXME remove this license guessing as iti is incomplete and wrong
  */
 function attemptFallbackLicense (
   manifest: Manifest,
   pkg: Package,
   component: CDX.Models.Component
-) {
+): void {
+  // eslint-disable-next-line  @typescript-eslint/strict-boolean-expressions
   if (manifest.raw.license) {
     process.stderr.write(
       `Package ${structUtils.stringifyLocator(
         pkg
       )} has invalid "license" property. See https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license\n`
     )
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     if (ids.includes(manifest.raw.license?.type)) {
       process.stderr.write(
         `Adding ${
@@ -321,31 +340,36 @@ function attemptFallbackLicense (
         } as fallback for ${structUtils.stringifyLocator(pkg)}\n`
       )
       component.licenses.add(
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         licenseFactory.makeFromString(manifest.raw.license?.type)
       )
     }
-  } else if (manifest.raw.licenses) {
-    process.stderr.write(
+  } else
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    if (manifest.raw.licenses) {
+      process.stderr.write(
       `Package ${structUtils.stringifyLocator(
         pkg
       )} has invalid "licenses" property. See https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license\n`
-    )
-    if (
-      Array.isArray(manifest.raw.licenses) &&
+      )
+      if (
+        Array.isArray(manifest.raw.licenses) &&
       manifest.raw.licenses.every((outdatedLicense) =>
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         ids.includes(outdatedLicense.type)
       )
-    ) {
-      for (const outdatedLicense of manifest.raw.licenses) {
-        process.stderr.write(
+      ) {
+        for (const outdatedLicense of manifest.raw.licenses) {
+          process.stderr.write(
           `Adding ${
             outdatedLicense.type
           } as fallback for ${structUtils.stringifyLocator(pkg)}\n`
-        )
-        component.licenses.add(
-          licenseFactory.makeFromString(outdatedLicense.type)
-        )
+          )
+          component.licenses.add(
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+            licenseFactory.makeFromString(outdatedLicense.type)
+          )
+        }
       }
     }
-  }
 }

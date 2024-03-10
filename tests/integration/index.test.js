@@ -44,7 +44,7 @@ const latestCdxSpecVersion = '1.5'
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
-  const this_yarn_plugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-sbom.js')
+  const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-sbom.js')
 
   suite('make SBOM', () => {
     testSetups.forEach((testSetup) => {
@@ -65,7 +65,7 @@ suite('integration', () => {
             env: {
               PATH: process.env.PATH,
               CI: '1',
-              YARN_PLUGINS: this_yarn_plugin
+              YARN_PLUGINS: thisYarnPlugin
             }
           })
         assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr.toString())
@@ -87,6 +87,7 @@ suite('integration', () => {
  * @param {string} format
  * @param {*} data
  * @returns {string}
+ * @throws {RangeError} when format unexpected
  */
 function makeReproducible (format, data) {
   switch (format.toLowerCase()) {

@@ -27,19 +27,18 @@ import {
   ThrowReport
 } from '@yarnpkg/core'
 import { type PortablePath, ppath } from '@yarnpkg/fslib'
-import { Command, Option, type Usage } from 'clipanion'
-import * as process from 'process'
+import { Command, Option } from 'clipanion'
 
 import { generateSBOM, type OutputOptions, stdOutOutput } from './sbom'
 
 class SBOMCommand extends BaseCommand {
-  static readonly paths = [
+  static override readonly paths = [
     ['CycloneDX', 'make-sbom'],
     ['cyclonedx'],
     ['sbom']
   ]
 
-  static readonly usage: Usage = Command.Usage({
+  static override readonly usage = Command.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
@@ -61,7 +60,7 @@ class SBOMCommand extends BaseCommand {
     - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
     - see https://yarnpkg.com/cli/workspaces/focus
    */
-  production = Option.Boolean('--production,--prod', process.env.NODE_ENV == 'production', {
+  production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
     description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
@@ -78,7 +77,7 @@ class SBOMCommand extends BaseCommand {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
 
-  async execute () {
+  async execute (): Promise<void> {
     const configuration = await Configuration.find(
       this.context.cwd,
       this.context.plugins
@@ -87,6 +86,7 @@ class SBOMCommand extends BaseCommand {
       configuration,
       this.context.cwd
     )
+    if (workspace === null) { throw new RangeError('missing workspace')}
 
     if (this.production) {
       workspace.manifest.devDependencies.clear()
@@ -114,7 +114,7 @@ function parseSpecVersion (
     return CDX.Spec.Version.v1dot5
   }
   if (specVersion in CDX.Spec.SpecVersionDict) {
-    return specVersion
+    return specVersion as CDX.Spec.Version
   } else {
     throw new Error(
       `${specVersion} is not supported CycloneDX specification version.`
@@ -128,39 +128,38 @@ function parseOutputFormat (
   if (outputFormat === undefined) {
     return CDX.Spec.Format.JSON
   }
-  const format = CDX.Spec.Format[outputFormat.toUpperCase()]
-  if (format) {
-    return format
-  } else {
+  /* @ts-expect-error TS7053 */
+  const format: CDX.Spec.Format | undefined = CDX.Spec.Format[outputFormat.toUpperCase()]
+  if (format === undefined) {
     throw new Error(
       `${outputFormat} not a recognized CycloneDX specification format.`
     )
   }
+  return format
 }
 
 function parseOutputFile (
   cwd: PortablePath,
-  outputFile: string
+  outputFile: string | undefined
 ): OutputOptions['outputFile'] {
-  if (outputFile === '-' || outputFile === undefined) {
+  if (outputFile === undefined || outputFile === '-') {
     return stdOutOutput
   } else {
     return ppath.resolve(cwd, outputFile)
   }
 }
 
-function parseComponenttype (componentType: string): CDX.Enums.ComponentType {
-  if (!componentType) {
+function parseComponenttype (componentType: string | undefined): CDX.Enums.ComponentType {
+  if (componentType === undefined || componentType.length === 0) {
     return CDX.Enums.ComponentType.Application
-  } else if (
-    Object.values(CDX.Enums.ComponentType).includes(componentType as any)
-  ) {
-    return componentType as CDX.Enums.ComponentType
-  } else {
-    throw new Error(
-      `${componentType} not a recognized CycloneDX component type.`
-    )
   }
+  /* @ts-expect-error TS2345 */
+  if (Object.values(CDX.Enums.ComponentType).includes(componentType)) {
+    return componentType as CDX.Enums.ComponentType
+  }
+  throw new Error(
+    `${componentType} not a recognized CycloneDX component type.`
+  )
 }
 
 const plugin: Plugin = {

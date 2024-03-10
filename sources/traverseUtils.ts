@@ -52,12 +52,12 @@ export interface PackageInfo {
  * Recursively traveses workspace and its transitive dependencies.
  * @returns Packages and their resolved dependencies.
  */
-export const traverseWorkspace = async (
+export async function traverseWorkspace (
   project: Project,
   workspace: Workspace,
   config: Configuration,
   extractLicenses: boolean
-): Promise<Set<PackageInfo>> => {
+): Promise<Set<PackageInfo>> {
   // Instantiate fetcher to be able to retrieve package manifest. Conversion to CycloneDX model needs this later.
   const cache = await Cache.find(config)
   const fetcher = config.makeFetcher()
@@ -160,4 +160,5 @@ function readLicenseFile (
       return packageFs.readFileSync(path).toString()
     }
   }
+  return undefined
 }
