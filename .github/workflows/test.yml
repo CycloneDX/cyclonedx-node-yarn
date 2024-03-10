@@ -46,7 +46,9 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: build
-        run: yarn run build --source-map
+        run: yarn run build:gbtd
+      - name: build
+        run: yarn run build:bundle-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3

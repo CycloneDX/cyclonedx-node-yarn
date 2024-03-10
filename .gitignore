@@ -1,3 +1,12 @@
+/.*.cache
+
+/reports/
+/CI_reports/
+/bundles/
+/CI_bundles/
+
+
+
 # yarn stuff - for now, until setup is hardened
 # see also: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 /.pnp.*
@@ -5,15 +14,9 @@
 /.yarnrc.yml
 
 
-# No bundles for now untils release process is clarified.
-/bundles/
-
-
 # Only used during production build.
 /sources/buildtime-dependencies.json
 
-
-/.*.cache
 
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 # Logs
