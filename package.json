@@ -43,6 +43,7 @@
     "build": "npm-run-all -s -n build:gbtd build:bundle",
     "build:gbtd": "yarn info --json --dependents $npm_package_name > sources/buildtime-dependencies.json",
     "build:bundle": "yarn builder build plugin",
+    "build:bundle-dev": "yarn build:bundle --source-map",
     "clean": "rimraf bundles",
     "generate-components-licenses": "node tools/generate-components-licenses.mjs > bundles/components-licenses.md",
     "setup-tests": "node tests/integration/setup.js",

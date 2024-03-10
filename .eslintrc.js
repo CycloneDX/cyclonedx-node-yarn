@@ -17,10 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-
 /**
- * @see {@link https://eslint.org/}
  * @type {import('eslint').Linter.Config}
+ * @see {@link https://eslint.org/}
  */
 module.exports = {
   root: true,
@@ -36,7 +35,7 @@ module.exports = {
   },
   rules: {
     // region sort imports/exports
-    /** disable other sorters in favour of `simple-import-sort` **/
+    /** disable other sorters in favour of `simple-import-sort` */
     'import/order': 0,
     'sort-imports': 0,
     /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
@@ -54,7 +53,7 @@ module.exports = {
       env: {
         mocha: true,
         commonjs: true,
-        node: true,
+        node: true
       }
     },
     {
