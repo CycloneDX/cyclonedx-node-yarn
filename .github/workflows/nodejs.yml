@@ -1,7 +1,7 @@
 # For details of what checks are run for PRs please refer below
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-name: CI/CT
+name: Node CI
 
 on:
   push:
@@ -23,6 +23,7 @@ env:
   DIST_DIR: bundles
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
+  STANDARD_REPORTS_ARTIFACT: cs-reports
 
 jobs:
   build:
@@ -98,7 +99,6 @@ jobs:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
-
 
   test-node:
     needs: [ 'build' ]
