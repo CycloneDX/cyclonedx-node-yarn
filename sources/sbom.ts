@@ -22,15 +22,12 @@ import {
   type Configuration,
   type Locator,
   type LocatorHash,
-  type Manifest,
-  type Package,
   type Project,
   structUtils,
   type Workspace
 } from '@yarnpkg/core'
 import { type PortablePath, xfs } from '@yarnpkg/fslib'
 import { PackageURL } from 'packageurl-js'
-import * as ids from 'spdx-license-ids/index.json'
 
 import {
   type BuildtimeDependencies,
@@ -40,8 +37,7 @@ import {
 
 const licenseFactory = new CDX.Factories.LicenseFactory()
 const npmPurlFactory = new CDX.Factories.PackageUrlFactory('npm')
-const externalReferenceFactory =
-  new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
+const externalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
 const componentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(
   externalReferenceFactory,
   licenseFactory
@@ -58,8 +54,6 @@ export interface OutputOptions {
   /** Output file name. */
   outputFile: PortablePath | typeof stdOutOutput
   componentType: CDX.Enums.ComponentType
-  /** If component licenses shall be included. */
-  licenses: boolean
   reproducible: boolean
 }
 
@@ -83,15 +77,13 @@ export async function generateSBOM (
   const allDependencies = await traverseWorkspace(
     project,
     workspace,
-    config,
-    outputOptions.licenses
+    config
   )
   const componentModels = new Map<LocatorHash, CDX.Models.Component>()
   // Build models without their dependencies.
   for (const pkgInfo of allDependencies) {
     const component = packageInfoToCycloneComponent(
       pkgInfo,
-      outputOptions.licenses,
       outputOptions.reproducible
     )
     componentModels.set(pkgInfo.package.locatorHash, component)
@@ -226,7 +218,6 @@ function getAuthorName (manifestRawAuthor: unknown): string | undefined {
  */
 function packageInfoToCycloneComponent (
   pkgInfo: PackageInfo,
-  licenses: boolean,
   reproducible: OutputOptions['reproducible']
 ): CDX.Models.Component {
   const manifest = pkgInfo.manifest
@@ -248,12 +239,6 @@ function packageInfoToCycloneComponent (
   // @FIXME dont use any `locatorhash` for this purpose - but maybe something that is actually universally reproducible?
   // -- like `package-name@version` - which is a discriminated unique value for yarn universe
   component.bomRef.value = pkgInfo.package.locatorHash
-  if (licenses) {
-    addLicenseInfo(manifest, pkgInfo, component)
-  } else {
-    // @FIXME why should this be needed anyway?
-    component.licenses.clear()
-  }
 
   const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(
     pkgInfo.package
@@ -291,85 +276,4 @@ function gitHubPackagePurl (
     )
   }
   return undefined
-}
-
-/**
- * Adds license data to component if available.
- * @FIXME remove this license attachment as it isi just wrong
- */
-function addLicenseInfo (
-  manifest: Manifest,
-  pkgInfo: PackageInfo,
-  component: CDX.Models.Component
-): void {
-  if (component.licenses.size === 1) {
-    const license = component.licenses.values().next().value
-    // eslint-disable-next-line  @typescript-eslint/strict-boolean-expressions
-    if (pkgInfo.licenseFileContent &&
-      (license instanceof CDX.Models.NamedLicense ||
-        license instanceof CDX.Models.SpdxLicense)
-    ) {
-      license.text = new CDX.Models.Attachment(pkgInfo.licenseFileContent)
-    }
-  } else if (component.licenses.size === 0) {
-    attemptFallbackLicense(manifest, pkgInfo.package, component)
-  }
-}
-
-/**
- * Attempts to parse bogus but unambigous licenses and augments the component model.
- * @FIXME remove this license guessing as iti is incomplete and wrong
- */
-function attemptFallbackLicense (
-  manifest: Manifest,
-  pkg: Package,
-  component: CDX.Models.Component
-): void {
-  // eslint-disable-next-line  @typescript-eslint/strict-boolean-expressions
-  if (manifest.raw.license) {
-    process.stderr.write(
-      `Package ${structUtils.stringifyLocator(
-        pkg
-      )} has invalid "license" property. See https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license\n`
-    )
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    if (ids.includes(manifest.raw.license?.type)) {
-      process.stderr.write(
-        `Adding ${
-          manifest.raw.license?.type
-        } as fallback for ${structUtils.stringifyLocator(pkg)}\n`
-      )
-      component.licenses.add(
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        licenseFactory.makeFromString(manifest.raw.license?.type)
-      )
-    }
-  } else
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-    if (manifest.raw.licenses) {
-      process.stderr.write(
-      `Package ${structUtils.stringifyLocator(
-        pkg
-      )} has invalid "licenses" property. See https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license\n`
-      )
-      if (
-        Array.isArray(manifest.raw.licenses) &&
-      manifest.raw.licenses.every((outdatedLicense) =>
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        ids.includes(outdatedLicense.type)
-      )
-      ) {
-        for (const outdatedLicense of manifest.raw.licenses) {
-          process.stderr.write(
-          `Adding ${
-            outdatedLicense.type
-          } as fallback for ${structUtils.stringifyLocator(pkg)}\n`
-          )
-          component.licenses.add(
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-            licenseFactory.makeFromString(outdatedLicense.type)
-          )
-        }
-      }
-    }
 }

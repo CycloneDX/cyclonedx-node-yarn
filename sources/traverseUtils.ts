@@ -27,7 +27,6 @@ import {
   ThrowReport,
   type Workspace
 } from '@yarnpkg/core'
-import { type FakeFS, type PortablePath, ppath } from '@yarnpkg/fslib'
 
 /**
  * Output structure of "yarn info --json"
@@ -44,7 +43,6 @@ export interface PackageInfo {
   package: Package
   manifest: Manifest
   dependencies: Set<LocatorHash>
-  licenseFileContent?: string
 }
 
 // Modelled after traverseWorkspace in https://github.com/yarnpkg/berry/blob/master/packages/plugin-essentials/sources/commands/info.ts#L88
@@ -55,8 +53,7 @@ export interface PackageInfo {
 export async function traverseWorkspace (
   project: Project,
   workspace: Workspace,
-  config: Configuration,
-  extractLicenses: boolean
+  config: Configuration
 ): Promise<Set<PackageInfo>> {
   // Instantiate fetcher to be able to retrieve package manifest. Conversion to CycloneDX model needs this later.
   const cache = await Cache.find(config)
@@ -96,38 +93,28 @@ export async function traverseWorkspace (
 
     const fetchResult = await fetcher.fetch(pkg, fetcherOptions)
     let manifest: Manifest
-    let licenseFileContent: string | undefined
     try {
       manifest = await Manifest.find(fetchResult.prefixPath, {
         baseFs: fetchResult.packageFs
       })
-      if (extractLicenses) {
-        licenseFileContent = readLicenseFile(
-          fetchResult.prefixPath,
-          fetchResult.packageFs
-        )
-      }
     } finally {
       fetchResult.releaseFs?.()
     }
     const packageInfo: PackageInfo = {
       package: pkg,
       manifest,
-      dependencies: new Set(),
-      licenseFileContent
+      dependencies: new Set()
     }
     seen.add(hash)
     allPackages.add(packageInfo)
 
-    // pkg.dependencies has dependencies+peerDependencies for transitve dependencies but not their devDependencies.
+    // pkg.dependencies has dependencies+peerDependencies for transitive dependencies but not their devDependencies.
     for (const dependency of pkg.dependencies.values()) {
       const resolution = project.storedResolutions.get(
         dependency.descriptorHash
       )
       if (typeof resolution === 'undefined') {
-        throw new Error(
-          'All package descriptor hashes should be resolvable for consistent lockfiles.'
-        )
+        throw new Error('All package descriptor hashes should be resolvable for consistent lockfiles.')
       }
       packageInfo.dependencies.add(resolution)
 
@@ -138,27 +125,4 @@ export async function traverseWorkspace (
   }
 
   return allPackages
-}
-
-const fileNameOptions = ['license', 'licence', 'unlicense', 'unlicence']
-const fileNameOptionsStart = fileNameOptions.map((name) => name + '.')
-
-function readLicenseFile (
-  packageRoot: PortablePath,
-  packageFs: FakeFS<PortablePath>
-): string | undefined {
-  const files = packageFs.readdirSync(packageRoot).filter((f) => {
-    const lowerFileName = f.toLocaleLowerCase()
-    return (
-      fileNameOptions.includes(lowerFileName) ||
-      fileNameOptionsStart.some((option) => lowerFileName.startsWith(option))
-    )
-  })
-  for (const licenseFile of files) {
-    const path = ppath.join(packageRoot, licenseFile)
-    if (packageFs.existsSync(path)) {
-      return packageFs.readFileSync(path).toString()
-    }
-  }
-  return undefined
 }

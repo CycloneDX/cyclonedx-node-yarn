@@ -68,8 +68,6 @@ $ yarn CycloneDX make-sbom
                          (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
   --mc-type #0           Type of the main component.
                          (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
-  --licenses             Include license information for components in generated SBOM.
-                         License information will always be absent for components that don't specify licenses unambiguously.
   --reproducible         Whether to go the extra mile and make the output reproducible.
                          This might result in loss of time- and random-based values.
 
