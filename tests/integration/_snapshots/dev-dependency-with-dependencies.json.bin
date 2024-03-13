@@ -36,6 +36,13 @@
       "bom-ref": "025792b0ea7c8fca7dcdbd33105be95919b259fb3263a7ecd13ebc51a5c813b8956ae9fa4540ef179a154ec98b408006011b650dfcf15b64c71e1334b04affac",
       "author": "DY",
       "description": "A list of color names and its values",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
       "externalReferences": [
         {
@@ -62,6 +69,13 @@
       "bom-ref": "04df458b307501552b33dd0082fa671eb5a3f6fa6d8c60937947b7103f2a330bd731b8d184d481a2a5a77589a6e9c78c036011171dacc7efa87c3f633a0c2952",
       "author": "Sami Sayegh",
       "description": "A utility that allows retrying a function with an exponential delay between attempts.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A//github.com/coveo/exponential-backoff.git",
       "externalReferences": [
         {
@@ -88,6 +102,13 @@
       "bom-ref": "082e0ff9a7e80d1ba752c66f602b5eb756a9b60ed1eee69ee2500118c68c96c8bf9f902eba1a63acbe964cc74ec42550e191acc0ea7fee6150e662c9360f641a",
       "author": "IndigoUnited",
       "description": "Create an error with a code",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/err-code@2.0.3?vcs_url=git%3A//github.com/IndigoUnited/js-err-code.git",
       "externalReferences": [
         {
@@ -110,6 +131,13 @@
       "bom-ref": "0844a579782601a82c098b3436b238cd455f90663ecebf8b2a8445920b0d01ee56f8818f42ef0e70aec36b7f2e7907e16e841bd0acc6238032a32cde114d2343",
       "author": "GitHub Inc.",
       "description": "filesystem utilities for the npm cli",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A//github.com/npm/fs.git",
       "externalReferences": [
         {
@@ -126,6 +154,13 @@
       "bom-ref": "08d46127d81d5267b4feaf8da47ff80c8bcda6428aea9ec397aca666297a0f4a862d69dae4e4159026a3dd0a12a007b2850af41bba68f84e68d2522472414f79",
       "author": "Glen Keane",
       "description": "A little lib for turning hdr-histogram-js to objects",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/hdr-histogram-percentiles-obj@3.0.0?vcs_url=git%2Bhttps%3A//github.com/GlenTiki/hdr-histogram-percentiles-obj.git",
       "externalReferences": [
         {
@@ -152,6 +187,13 @@
       "bom-ref": "0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
       "externalReferences": [
         {
@@ -168,6 +210,13 @@
       "bom-ref": "0e66ea8321579de5017d37b0bb63540a49a525e0cacd2b1176cbd26d994f2bc185bdf9308662dd787b8b735d5ed418f89e94010c08ccc2beaa27f1124fed2de4",
       "author": "Sindre Sorhus",
       "description": "Get the PATH environment variable key cross-platform",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/path-key@3.1.1?vcs_url=sindresorhus/path-key",
       "externalReferences": [
         {
@@ -184,6 +233,13 @@
       "bom-ref": "0eb38a17e5325348bf3d6ecea76d2ca99cc4142af9cea60f1a0c6141770f2d64de133f71212c5f81f61e433f1c6c647e04cebcdd2330ef78a636835b963c76f1",
       "author": "GitHub Inc.",
       "description": "Like ruby's abbrev module, but in js",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/abbrev@2.0.0?vcs_url=https%3A//github.com/npm/abbrev-js.git",
       "externalReferences": [
         {
@@ -200,6 +256,13 @@
       "bom-ref": "1120131375ac7fd41b619768f97d8e8329b65a6b4631b5bc16c627d4909136ec38a586ed8a69de7855b33a88a9c514f6f0dedc20d6a720ab62f68583c7f9cb1e",
       "author": "Kornel Lesiński",
       "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
       "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=https%3A//github.com/kornelski/http-cache-semantics.git",
       "externalReferences": [
         {
@@ -216,6 +279,13 @@
       "bom-ref": "17aa2616f9a3528cb0223873abc463bbd4918a43857c9698b06db3fe5d8639801cb8230431cd437b622b530456efaa22986d9eb0f7801d7b56191da9122b0c86",
       "author": "Julian Gruber",
       "description": "Brace expansion as known from sh/bash",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A//github.com/juliangruber/brace-expansion.git",
       "externalReferences": [
         {
@@ -237,6 +307,13 @@
       "bom-ref": "1a7557d04d84c69eeebcc9299c1946654440ba6e18ba01d3efaec450fa6bbe3267f3411563835bcc6f3433d33357a677033a17d3c723ea065f2ba41b911a6ef6",
       "author": "GitHub Inc.",
       "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/ssri@10.0.5?vcs_url=https%3A//github.com/npm/ssri.git",
       "externalReferences": [
         {
@@ -253,6 +330,13 @@
       "bom-ref": "1da0181838e27411ce1b9f2cbb7a34aec6ebb12c9b6fb2a18d80ba5a17b523bbe875f081fa46f98c5098f951689da35685d5db4425c1a9a35ae75ddedf90fc5f",
       "author": "Tom Wu",
       "description": "The jsbn library is a fast, portable implementation of large-number math in pure JavaScript, enabling public-key crypto and other applications on desktop and mobile browsers.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/jsbn@1.1.0?vcs_url=https%3A//github.com/andyperlitch/jsbn.git",
       "externalReferences": [
         {
@@ -269,6 +353,13 @@
       "bom-ref": "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
       "author": "Sindre Sorhus",
       "description": "Check if the character represented by a given Unicode code point is fullwidth",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
       "externalReferences": [
         {
@@ -285,6 +376,13 @@
       "bom-ref": "200ac7c66d708eac6d546074c10f94ac3981fe73a94ef0a61b7b339b12507adaf40dac5d864b852926948b238fb22aca6383eceff7146fc9c6762173e6bcc827",
       "author": "GitHub Inc.",
       "description": "An implementation of window.fetch in Node.js using Minipass streams",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A//github.com/npm/minipass-fetch.git",
       "externalReferences": [
         {
@@ -301,6 +399,13 @@
       "bom-ref": "213764015c61c168a6fbd45800c0a25dae13c2a2087c431aaaeeaa7fbf18222482891074eb8b9df5a81f54b3555dc3472fc9e0d21e5982f767c2a03b47d3a0f9",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
@@ -327,6 +432,13 @@
       "bom-ref": "245c7d42c7b39194ff4dadd214ab9fa64298b6a90610c730197b78c53305ab4ab633c2ed94fe542e536e8f065a54d2231f6b8ebc295f744307ec3b5f4de11496",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
       "externalReferences": [
         {
@@ -343,6 +455,13 @@
       "bom-ref": "24b8aae27ec1ad4f495118b68edf2d395f5e38d100c19f4e205a6b1fa3b28f17cb91917c44952002ccbfc6c12b4b3059d2c797b62874439abacaa1eca838373f",
       "author": "Alexander Shtuchkin",
       "description": "Convert character encodings in pure javascript.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git",
       "externalReferences": [
         {
@@ -368,6 +487,13 @@
       "version": "4.2.11",
       "bom-ref": "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76",
       "description": "A drop-in replacement for fs, making various improvements.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A//github.com/isaacs/node-graceful-fs",
       "externalReferences": [
         {
@@ -384,6 +510,13 @@
       "bom-ref": "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=chalk/wrap-ansi",
       "externalReferences": [
         {
@@ -400,6 +533,13 @@
       "bom-ref": "2b1e3eb2a6d68f80bcb3d2f8a54fd2963e0f92764c4de5108a608faea1d822e0e7d0bf3bb7fb24f52f8452e6c70bf90d5e054fdc809c0feab70a9ac580c02792",
       "author": "Alexandre Victoor",
       "description": "TypeScript port of HdrHistogram",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD"
+          }
+        }
+      ],
       "purl": "pkg:npm/hdr-histogram-js@2.0.3?vcs_url=git%2Bhttps%3A//github.com/HdrHistogram/HdrHistogramJS.git",
       "externalReferences": [
         {
@@ -416,6 +556,13 @@
       "bom-ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
       "externalReferences": [
         {
@@ -432,6 +579,13 @@
       "bom-ref": "306d86f43239a0aaaef6ff7911ea3f82bcbf20016a8d3fdf9f622adf0bd34d7f5df2274acafbc691acf2a24d41818fd55f11e2d226b7d28da59a65364a3bf3bb",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that raises an error if you get a different number of bytes than expected",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-sized.git",
       "externalReferences": [
         {
@@ -448,6 +602,13 @@
       "bom-ref": "320ddf72f79a7090799aca262ad4287055a90b1bee1253c7e35528fd2903ac0557538dc8ea87d1f37fffc7ac564dc00eeba661e0cf618b35297b040ce649929f",
       "author": "Isaac Z. Schlueter",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/which@2.0.2?vcs_url=git%3A//github.com/isaacs/node-which.git",
       "externalReferences": [
         {
@@ -464,6 +625,13 @@
       "bom-ref": "37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12",
       "author": "Sindre Sorhus",
       "description": "ES2015 `String#codePointAt()` ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/code-point-at@1.1.0?vcs_url=sindresorhus/code-point-at",
       "externalReferences": [
         {
@@ -479,6 +647,13 @@
       "version": "1.0.4",
       "bom-ref": "37f6ef56b9c6ba4b34be26d6248c9b6588ac8ad0b14234be97b6e2492ea6fdcd77a0ae708da578958cfd30f57b057e3b6903d626a43850b50b0d98feeae11afe",
       "description": "Recursively mkdir, like `mkdir -p`",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=https%3A//github.com/isaacs/node-mkdirp.git",
       "externalReferences": [
         {
@@ -495,6 +670,13 @@
       "bom-ref": "3b253d7256cf25dd65d09ad931bd070ff216ed7d529fa04d78dfb925e4f005656b026231ead771fcd3426922d2d8b82d0238f4a44d6f9a107f6877f3994f8b0a",
       "author": "Josh Glazebrook",
       "description": "Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A//github.com/JoshGlazebrook/socks.git",
       "externalReferences": [
         {
@@ -521,6 +703,13 @@
       "bom-ref": "3eb25205a70ecb97e5cd41c63817da0778541123db5dd06f139b0eed4b95191312b3e7697c300e4642f052712c066e27e6e3f5ab5c5a8a7610e4ee38128177ed",
       "author": "GitHub Inc.",
       "description": "tar for node",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/tar@6.2.0?vcs_url=https%3A//github.com/isaacs/node-tar.git",
       "externalReferences": [
         {
@@ -537,6 +726,13 @@
       "bom-ref": "415a406f4ea391b867ab2b5e9438bebf4996f888a08431fe3379c442185f5af4d64ed106bc1f1b5983a07969c39ecf6933c911b66d39a2b37132f00305ea8649",
       "author": "Sindre Sorhus",
       "description": "Create an error from multiple errors",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=sindresorhus/aggregate-error",
       "externalReferences": [
         {
@@ -553,6 +749,13 @@
       "bom-ref": "42e1233172b32c881dc3ad06bb968b5a6886421839e5bd1028bbd4ee6fd555028e8df5ea415a9c06cba244a62a0084fcd27cc6e5f0bb3460d9e6cd85e44b1f5c",
       "author": "Isaac Z. Schlueter",
       "description": "A very strict and proper argument parser.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BlueOak-1.0.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
       "externalReferences": [
         {
@@ -569,6 +772,13 @@
       "bom-ref": "4677ae07c73d768e80ceba3af952c1a63948bbc521fb64de796d97dcbc403599027c1304563c755b36baaaef6290c05d5fbf03e9c7d15cc89ad224786adb774c",
       "author": "Sindre Sorhus",
       "description": "Map over promises concurrently",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/p-map@4.0.0?vcs_url=sindresorhus/p-map",
       "externalReferences": [
         {
@@ -585,6 +795,13 @@
       "bom-ref": "48708ce70bc76e1f879f77affa6f744312cff313a2af15712d70a94f1b5e9382a4e1566ac8a75fb8c82ddbad727beca280bb7610d278c54b8c2d6ccbab77d231",
       "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/node-gyp@10.0.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
       "externalReferences": [
         {
@@ -601,6 +818,13 @@
       "bom-ref": "4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1",
       "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
       "externalReferences": [
         {
@@ -617,6 +841,13 @@
       "bom-ref": "501ef87306cdb906afd7ee55973e5a53e702081c56b0f3579d1873a694484757398746df4baaa79ed45c7cebc021da59179de1d5969b9ba427b7ccc51ba197d0",
       "author": "Isaac Z. Schlueter",
       "description": "fs read and write streams based on minipass",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
         {
@@ -643,6 +874,13 @@
       "bom-ref": "52bd946f2eb0da56a89c8135018af1e8196512f12cc4a2ee6d279095877969a573b21ab98df6d6423966858f8f3aa034d25f12eae77fff0c4aca463a89be3bb7",
       "author": "Isaac Z. Schlueter",
       "description": "walk paths fast and efficiently",
+      "licenses": [
+        {
+          "license": {
+            "id": "BlueOak-1.0.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry",
       "externalReferences": [
         {
@@ -659,6 +897,13 @@
       "bom-ref": "5924cb077f05d10e9335b44ce94356b8fe54d261272545bbeed99a3325726fb1efb72282b0adbb257203a0a0991c6631e6be6b5fc5c295d50114e101158d3f13",
       "author": "Isaac Z. Schlueter",
       "description": "create a pipeline of streams using Minipass",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass-pipeline@1.2.4?"
     },
     {
@@ -668,6 +913,13 @@
       "bom-ref": "5ac3f668bb4a70b7dcd2a6e4a30b29fbc1b9eafbf9de99ae009eec9a2057af92e9473f59198b063443830ce8d81997a4385e389a3f88be1559dd014348779337",
       "author": "Josh Glazebrook",
       "description": "smart-buffer is a Buffer wrapper that adds automatic read & write offset tracking, string operations, data insertions, and more.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A//github.com/JoshGlazebrook/smart-buffer.git",
       "externalReferences": [
         {
@@ -694,6 +946,13 @@
       "bom-ref": "610c5068a0a0d45e2dd49e17ca993f0a8ad0942fb350aef416497685e8bb48646263caa3261cb7374b5714f43ac35248f146eddc8aa076fdc3b27f578939baf2",
       "author": "Jens Taylor",
       "description": "An incremental implementation of MurmurHash3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A//github.com/jensyt/imurmurhash-js",
       "externalReferences": [
         {
@@ -720,6 +979,13 @@
       "bom-ref": "61fb957687a8bece8324d39e12feb5fc6bc916e4b1ab8d304d3d321f9e3d5275ab1b4e6e54d413975e7d2dc990dc546a25e6fd06c54397fc385a1dc5421bd4dd",
       "author": "Ben Coe",
       "description": "when you want to fire an event no matter how a process exits.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
       "externalReferences": [
         {
@@ -736,6 +1002,13 @@
       "bom-ref": "638f1c9c610eda26f11eab142557da45f59db8438d50bac44bf304e682e958d82227e80124294a48bee06a2cf956a925e5e79907f1118c6120f58795d84aeb3e",
       "author": "Isaac Z. Schlueter",
       "description": "like `chown -R`",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/chownr@2.0.0?vcs_url=git%3A//github.com/isaacs/chownr.git",
       "externalReferences": [
         {
@@ -752,6 +1025,13 @@
       "bom-ref": "643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTP",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
       "externalReferences": [
         {
@@ -768,6 +1048,13 @@
       "bom-ref": "693b1680c92aa9af1f2903fc1fc73c3cc41dec6ff9eff01aeebee0d3600e667db86f9f163c5192c5f59a32147767188e50d8c54ea373923efd81a71b0357a7a7",
       "author": "Anna Henningsen",
       "description": "nice(2) bindings for Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/nice-napi@1.0.2?vcs_url=git%2Bhttps%3A//github.com/addaleax/nice-napi",
       "externalReferences": [
         {
@@ -784,6 +1071,13 @@
       "bom-ref": "69d7d6fad5e7e50d998cb731123828bd1b74af8d275e603ea7ecacd87a0a76dbc9e572d2a3d44f15145621339f88eca9218c26ff7ff2a1bb1f240414fc0ccf6f",
       "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minimatch@9.0.3?vcs_url=git%3A//github.com/isaacs/minimatch.git",
       "externalReferences": [
         {
@@ -800,6 +1094,13 @@
       "bom-ref": "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=chalk/strip-ansi",
       "externalReferences": [
         {
@@ -816,6 +1117,13 @@
       "bom-ref": "72ac7fb4cca2dd769aca9c6b7cd70507ce9193c0b1e1e9cc864cf105d79373258f92b49c962fdc1da0e3d9032d52f040b683f76167786ff2fc2e2c14ce3daeab",
       "author": "Tim Koschützki",
       "description": "Abstraction for exponential and custom retry strategies for failed operations.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/retry@0.12.0?vcs_url=git%3A//github.com/tim-kos/node-retry.git",
       "externalReferences": [
         {
@@ -837,6 +1145,13 @@
       "bom-ref": "73d3907e40b3224d4cb2d02695db221650101ca0aa206aa4704af0704cd3126ac38050d44aeb715ef9dcc47d1daa911beee6ac01f781030698218bb55984d797",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that collects all the data into a single chunk",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=https%3A//github.com/isaacs/minipass-collect",
       "externalReferences": [
         {
@@ -853,6 +1168,13 @@
       "bom-ref": "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=chalk/strip-ansi",
       "externalReferences": [
         {
@@ -869,6 +1191,13 @@
       "bom-ref": "77d68e0a459b09ff2554a13fe3d9a10497e5a28a28304924fa65de1f55ab576603871c5ec6bd161720ac70b1f4ff610f9f25d5f2e3b4ad4f2185e973cf875cea",
       "author": "GitHub Inc.",
       "description": "Generate a unique filename for use in temporary directories or caches.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A//github.com/npm/unique-filename.git",
       "externalReferences": [
         {
@@ -895,6 +1224,13 @@
       "bom-ref": "77e78ed7746b8bfec8193f223bb6a40e0bfb7dcd2a8101eafa5196e7c5d80201ff35df9b6c8f0d8c596658ccb869b87373cfbd5ddfedb2233a099028883da218",
       "author": "Isaac Z. Schlueter",
       "description": "Run a child as if it's the foreground process. Give it stdio. Exit when it exits.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/foreground-child@3.1.1?vcs_url=git%2Bhttps%3A//github.com/tapjs/foreground-child.git",
       "externalReferences": [
         {
@@ -911,6 +1247,13 @@
       "bom-ref": "79730e935b7dbe9bc6ee9732ae85fe2ba61790f04175d4e055863d3afb9eaa871594a8d72c07e6e0b710302882f3acec06c21d7b02602f2046f2d7d8a3328702",
       "author": "Heather Arthur",
       "description": "Plain color conversion functions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
       "externalReferences": [
         {
@@ -927,6 +1270,13 @@
       "bom-ref": "7ab55bc8a8a85ff8712758780d76e1adc73243bd3743cfd1b7d59c58376d61a0528ad27859e63c82a2dcee0d0860ebfee87f2dc83de2f22cecddea326731cf8c",
       "author": "Thomas Watson Steen",
       "description": "Detect if your code is running on an AWS Lambda server",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A//github.com/watson/is-lambda.git",
       "externalReferences": [
         {
@@ -953,6 +1303,13 @@
       "bom-ref": "7b717435b244f5f029b4c6cc4824106bcfffcd185e13a5bdfc0ad68d150303180169328d83d7f4421e8ed9647a8cbce24e5bc589fb0a2a409f5935dbe2cc6687",
       "author": "Sindre Sorhus",
       "description": "Indent each line in a string",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/indent-string@4.0.0?vcs_url=sindresorhus/indent-string",
       "externalReferences": [
         {
@@ -969,6 +1326,13 @@
       "bom-ref": "7c7577428c4f4c7a56f0f3b0f2a027375278a0b64cb2a3894163467313f31bed86cb2a498b6ab61e4b759864e9399266b816b40c19df12f8aa53906fe279426b",
       "author": "Sindre Sorhus",
       "description": "Get paths for storing things like data, config, cache, etc",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/env-paths@2.2.1?vcs_url=sindresorhus/env-paths",
       "externalReferences": [
         {
@@ -985,6 +1349,13 @@
       "bom-ref": "82a1837d3023f9ee634932aad335538baf52c5b6324f68f9ac628cf886a6a299eb70f8a7b6e9290e9204a62bdc8bdaa10f5014336dcfafff75aa1dadb19115c0",
       "author": "Andris Reinman",
       "description": "Convert encodings, uses iconv-lite",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/encoding@0.1.13?vcs_url=https%3A//github.com/andris9/encoding.git",
       "externalReferences": [
         {
@@ -1001,6 +1372,13 @@
       "bom-ref": "845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f",
       "author": "Sindre Sorhus",
       "description": "ES2015 Number.isNaN() ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/number-is-nan@1.0.1?vcs_url=sindresorhus/number-is-nan",
       "externalReferences": [
         {
@@ -1017,6 +1395,13 @@
       "bom-ref": "871f0b01b79290b68b35c03fc024989360788b01d244facb1d1670746f48a864fda3c148b0aa01053f87d9b4ddad1f17341a7e4c121c3b357f597e402e4c92be",
       "author": "IndigoUnited",
       "description": "Retries a function that returns a promise, leveraging the power of the retry module.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/promise-retry@2.0.1?vcs_url=git%3A//github.com/IndigoUnited/node-promise-retry.git",
       "externalReferences": [
         {
@@ -1038,6 +1423,13 @@
       "bom-ref": "877a267836875fa8456cf9931da5cf1ec09a8d087612f93c795cd1d33bfeb06105aec6a787f8c26147098ee826a8ccd5fb843de6f1bf92b4a9a0bfb2cdb883ef",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/string-width@1.0.0?vcs_url=sindresorhus/string-width",
       "externalReferences": [
         {
@@ -1054,6 +1446,13 @@
       "bom-ref": "899a0cd65e9e33a7a764304c6e4539ed5e025786df64f7f324c66f200a46eb47b46f0f57a90c1de94eccbc9d1a397f636b3ec96ccc7f76b3d326d3772e0247d9",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching a shebang line",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=sindresorhus/shebang-regex",
       "externalReferences": [
         {
@@ -1071,6 +1470,13 @@
       "bom-ref": "8af33193ae6a4a98663514720198b39ba07548b15557ad78d2547a9f7707139feaff1c1eb8218db812dd0e41f67f347feacf82d48c172009e3ef1813acd26a40",
       "author": "GitHub Inc.",
       "description": "the http/https agent used by the npm cli",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A//github.com/npm/agent.git",
       "externalReferences": [
         {
@@ -1097,6 +1503,13 @@
       "bom-ref": "8d5c0b705e23aeef7cc341f3c51668b5b659cb3ee0d5a4331f73c7cf857d21f0acc50a0c7e315679b546d67eab2b14124d694c8f836a7ec9f498ae4d27135c3d",
       "author": "Nikita Skovoroda",
       "description": "Modern Buffer API polyfill without footguns",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git",
       "externalReferences": [
         {
@@ -1118,6 +1531,13 @@
       "bom-ref": "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-regex@6.0.1?vcs_url=chalk/ansi-regex",
       "externalReferences": [
         {
@@ -1134,6 +1554,13 @@
       "bom-ref": "9c0061eeadb9219b2d9f385a4c21603069630eeed6c9d01e6891feb4ac189d490e21ffb6bafef6cf5bda5924bb9df5256f121e33dbb7b0c059278d75160d14ee",
       "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/isexe@3.1.1?vcs_url=https%3A//github.com/isaacs/isexe",
       "externalReferences": [
         {
@@ -1149,6 +1576,13 @@
       "version": "0.6.3",
       "bom-ref": "9d50e361718e2cebc5f299f5848b4cb5c14b3fc0cf44455bcc6c0f14da1aa2c86a35ba7540580cdfd59886c845ce93ee172abb705aba1a4a04624ba24901f1c9",
       "description": "HTTP content negotiation",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/negotiator@0.6.3?vcs_url=jshttp/negotiator",
       "externalReferences": [
         {
@@ -1165,6 +1599,13 @@
       "bom-ref": "9fa024d42a672702b48ccc59b562ba52420637d29d3f8a898e3bd8734ea66f8c382e633a08005fb39fa1225cd684b2ddab2d38a291d992cc8a784c7a101f06a0",
       "author": "Beau Gunderson",
       "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ip-address@9.0.5?vcs_url=git%3A//github.com/beaugunderson/ip-address.git",
       "externalReferences": [
         {
@@ -1180,6 +1621,13 @@
       "version": "3.2.1",
       "bom-ref": "a29528f81d7aa51096c85b5e4e25647db66ba289c903c5bdce34ee6c7b884c39ddfa9d0a6e96dca6e346e883c4f05d9b7d0c2919ac08a3ac3c1de7c95f1b7058",
       "description": "Node.js API (Node-API)",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/node-addon-api@3.2.1?vcs_url=git%3A//github.com/nodejs/node-addon-api.git",
       "externalReferences": [
         {
@@ -1206,6 +1654,13 @@
       "bom-ref": "a51e13f5dcd8f6788fcef3adce290f5061f53539a22db054764827bf1f78be4ebfa2e8edcd096e22b8554fb128b249f365135e0a868fd6fa66afae336bd0f0f5",
       "author": "Nathan Rajlich",
       "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
       "externalReferences": [
         {
@@ -1222,6 +1677,13 @@
       "bom-ref": "a53c12645932fbcd2b9bb55a23f6fe201ebda7f05c092d60305697c20109f802a640dac2c4624b4621f38bcdcebf72c431aae62d0ff49ad8973e97d40342ab3c",
       "author": "Julian Gruber",
       "description": "Match balanced character pairs, like \"{\" and \"}\"",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/balanced-match@1.0.2?vcs_url=git%3A//github.com/juliangruber/balanced-match.git",
       "externalReferences": [
         {
@@ -1243,6 +1705,13 @@
       "bom-ref": "a8c21c2f0fdad8b0b5fd04df3687f5e1e4a8a0fc034035e0a8354d25aea7b54da98ba531c412d177f96953a8fc890577ee778775c538d17aa6e6582c4a5eeaf5",
       "author": "GitHub Inc.",
       "description": "just emit 'log' events on the process object",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/proc-log@3.0.0?vcs_url=https%3A//github.com/npm/proc-log.git",
       "externalReferences": [
         {
@@ -1259,6 +1728,13 @@
       "bom-ref": "a8ce435a5c0d633166fb1af0bb67915b01f18a1f95cdb18fcfbc07cd8e666259be972a26471198120dab7f7471e785ec2c8f399ceb055f85db5b0ebef61309b1",
       "author": "Sindre Sorhus",
       "description": "Clean up error stack traces",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=sindresorhus/clean-stack",
       "externalReferences": [
         {
@@ -1275,6 +1751,13 @@
       "bom-ref": "ad6e1a055442aa4f57c291a85c857a326c2cbdf582c3509243bee26fefe5569ec4621a0926d8b1ec4e34de4d4e58f04747d6ea242cac98510818acbf80414896",
       "author": "Sindre Sorhus",
       "description": "Wordwrap a string with ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=chalk/wrap-ansi",
       "externalReferences": [
         {
@@ -1291,6 +1774,13 @@
       "bom-ref": "b2f727564160bb902867ef4cfce433ada58adfe782f4bb1c8c27da7df73084a0da4f03c2be1b2f41e4c4c98d88e47d178839b49b5db69a5bc3911a2052a9479d",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
       "externalReferences": [
         {
@@ -1317,6 +1807,13 @@
       "bom-ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b",
       "author": "John-David Dalton",
       "description": "Lodash exported as ES modules.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/lodash-es@4.17.21?vcs_url=lodash/lodash",
       "externalReferences": [
         {
@@ -1343,6 +1840,13 @@
       "bom-ref": "b493d9e907b07eb0053ce22a1cbe552eb468b397004cc3205290bbca97142b29a11409284f2898083f60251e9c00ee2d47e1bd733ef644edb3d1591e1a717466",
       "author": "Isaac Z. Schlueter",
       "description": "Yet Another Linked List",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/yallist.git",
       "externalReferences": [
         {
@@ -1359,6 +1863,13 @@
       "bom-ref": "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
       "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/lru-cache@6.0.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
       "externalReferences": [
         {
@@ -1375,6 +1886,13 @@
       "bom-ref": "b58870bd2e149e7cab4e3fa248c57a93dfb17ce6212e1aaba7271b64e8d4ba0ee714680334e855b29398b8d690e85ea4c8a5e70a1df7f3c05f49d42a880bc40d",
       "author": "Isaac Z. Schlueter",
       "description": "Minimal module to check if a file is executable.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
       "externalReferences": [
         {
@@ -1401,6 +1919,13 @@
       "bom-ref": "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
         {
@@ -1416,6 +1941,11 @@
       "version": "1.0.11",
       "bom-ref": "b8f1b69d3ece7c256fba93c7b8111ff8f840f1934b04030b27031c510647fdbb4d1de30d69b4f1e882efd10eecebd4b3c501987dc475b58d08d38190049c55e0",
       "description": "zlib port to javascript - fast, modularized, with browser support",
+      "licenses": [
+        {
+          "expression": "(MIT AND Zlib)"
+        }
+      ],
       "purl": "pkg:npm/pako@1.0.11?vcs_url=nodeca/pako",
       "externalReferences": [
         {
@@ -1437,6 +1967,13 @@
       "bom-ref": "b99efd75b29f521b0cde78b07542aeb33a77ae3b453a5bc071d862c94bbd5c987ec38b9159a28fe8479cf13d1e05018220a8e61713e3488b1f003ec14381aa7e",
       "author": "Alexandru Mărășteanu",
       "description": "JavaScript sprintf implementation",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
       "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A//github.com/alexei/sprintf.js.git",
       "externalReferences": [
         {
@@ -1453,6 +1990,13 @@
       "bom-ref": "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
       "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/lru-cache@10.2.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
       "externalReferences": [
         {
@@ -1469,6 +2013,13 @@
       "bom-ref": "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
       "author": "Sindre Sorhus",
       "description": "Get the visual width of a string - the number of columns required to display it",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/string-width@5.1.2?vcs_url=sindresorhus/string-width",
       "externalReferences": [
         {
@@ -1485,6 +2036,13 @@
       "bom-ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
       "author": "Masaki Komagata",
       "description": "Get East Asian Width from a character.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git",
       "externalReferences": [
         {
@@ -1501,6 +2059,13 @@
       "bom-ref": "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
         {
@@ -1517,6 +2082,13 @@
       "bom-ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
       "externalReferences": [
         {
@@ -1533,6 +2105,13 @@
       "bom-ref": "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
       "author": "Sindre Sorhus",
       "description": "Strip ANSI escape codes from a string",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
       "externalReferences": [
         {
@@ -1549,6 +2128,13 @@
       "version": "0.11.0",
       "bom-ref": "cd2a3fe9485dcd34876d73347f226acd6f09a62e799abcd94b042dc71de7297f8b0161622105d7ef658ae3e9bda9aa59607d174875756bcbd840434d9c2e4ffd",
       "description": "Polyfill of future proposal for `util.parseArgs()`",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%40github.com%3Apkgjs/parseargs.git",
       "externalReferences": [
         {
@@ -1575,6 +2161,13 @@
       "bom-ref": "d148d6ac19a1876b46b90af311f1d7f7ea4b3656cc07d47debda98666cc5ee90e30fcfd47e74476eff8fc17935de46ec1fa9f66f63a318f7a3eedb1e06450677",
       "author": "GitHub Inc.",
       "description": "fs read and write streams based on minipass",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A//github.com/npm/fs-minipass.git",
       "externalReferences": [
         {
@@ -1600,6 +2193,13 @@
       "version": "5.3.0",
       "bom-ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
       "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
       "externalReferences": [
         {
@@ -1616,6 +2216,13 @@
       "bom-ref": "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9",
       "author": "Sindre Sorhus",
       "description": "ANSI escape codes for styling strings in the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=chalk/ansi-styles",
       "externalReferences": [
         {
@@ -1632,6 +2239,13 @@
       "bom-ref": "d6329a1b9de73a9597d46754f546cc3bf39efc36e3f88d4e0a2c0a9dea559c70bbe9af6dc00828a23ed2d947c4b3ff2e0976a05e36e6f2976efd096f34b1dcc6",
       "author": "GitHub Inc.",
       "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/cacache@18.0.2?vcs_url=https%3A//github.com/npm/cacache.git",
       "externalReferences": [
         {
@@ -1649,6 +2263,13 @@
       "bom-ref": "d72c90e01a4b740dc1fbc787c41c04d8d57c2f0d494ed994c5c4f72777823db811d6fe5734390f6db336d68735d7bee6dfb80b0ceaa8cac2eb44891cb81d93a6",
       "author": "Daniel Wirtz",
       "description": "A convenient loader for AssemblyScript modules.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40assemblyscript/loader@0.10.1?vcs_url=https%3A//github.com/AssemblyScript/assemblyscript.git#lib/loader",
       "externalReferences": [
         {
@@ -1675,6 +2296,13 @@
       "bom-ref": "da1ef8b112597e3adc80e19daa33bfa067d47d556bd04a5f8f8c1dbe661a0dcbd103e2cc667fb1448c9553bc06c73232f451fc8c3fdbbf981816d44bf31bdc53",
       "author": "Isaac Z. Schlueter",
       "description": "the most correct and second fastest glob implementation in JavaScript",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/glob@10.3.10?vcs_url=git%3A//github.com/isaacs/node-glob.git",
       "externalReferences": [
         {
@@ -1691,6 +2319,13 @@
       "bom-ref": "dd31cd49289a39c7979925d4d4e532d0694d005488252e4d3c73e2431496ae71d769d40e93e8610e7e699d4ad2e501c30562f0294b8710eaa270a30c2193a90b",
       "author": "GitHub Inc.",
       "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/which@4.0.0?vcs_url=https%3A//github.com/npm/node-which.git",
       "externalReferences": [
         {
@@ -1707,6 +2342,13 @@
       "bom-ref": "dd734b678dc786272158f4df652218c11ca96c55b9877e14bb3ecfb869a5d0196951b77b4426bbe93580cc1c45ebf02898bd8d8df5ddb51697c887f066b6a8c4",
       "author": "GitHub Inc.",
       "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/nopt@7.2.0?vcs_url=https%3A//github.com/npm/nopt.git",
       "externalReferences": [
         {
@@ -1723,6 +2365,13 @@
       "bom-ref": "ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122",
       "author": "Sindre Sorhus",
       "description": "Regular expression for matching ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ansi-regex@2.1.1?vcs_url=chalk/ansi-regex",
       "externalReferences": [
         {
@@ -1739,6 +2388,13 @@
       "bom-ref": "de223b5f00934c511e8e41daf80342e796add275e10ec49dfe673a0b235d759726d3873b4e93fc5f836fd866f13413c94010fecca10cbabd09201905c855c37e",
       "author": "Anna Henningsen",
       "description": "AsyncResource integration for EventEmitter",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/eventemitter-asyncresource@1.0.0?vcs_url=git%2Bhttps%3A//github.com/addaleax/eventemitter-asyncresource",
       "externalReferences": [
         {
@@ -1755,6 +2411,13 @@
       "bom-ref": "df165543cffb2d6e35f16d45212fdb281088fd79692edd2c9ff4e9798618ab0de16f1934f966ce833dcc524fbd5226aaa3aeebcfe5c4dc387e5bc9d7b8ef0a27",
       "author": "Nathan Rajlich",
       "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
       "externalReferences": [
         {
@@ -1771,6 +2434,13 @@
       "bom-ref": "e4ff3e65b3c0bc13cbabd48fdef2e7800d325ba156062d6e60b7394059746b2e3d5bbe121d81cc190782606857958011c2da32a6d574425686f2d871acc12add",
       "author": "André Cruz",
       "description": "Cross platform child_process#spawn and child_process#spawnSync",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/cross-spawn@7.0.3?vcs_url=git%40github.com%3Amoxystudio/node-cross-spawn.git",
       "externalReferences": [
         {
@@ -1792,6 +2462,13 @@
       "bom-ref": "e6b08f28aa43781518fa4b1942de1c16cace22d5d36af25e6db3787970435c26a14c91ed974e0af3ab6de06a21e1ea8f3be52b52f5701c3b240e9f41ea5140d5",
       "author": "GitHub Inc.",
       "description": "Generate a unique character string suitible for use in files and URLs.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=https%3A//github.com/npm/unique-slug.git",
       "externalReferences": [
         {
@@ -1808,6 +2485,13 @@
       "bom-ref": "e6fac8d058ff670b96f6a3f6655d132630dcb2820a96961eaf9aa952722d353bbc82f37cc820fa3cc838ccd1fe5ebb27bf7ff61a9b180033d6a6b4508615e4a9",
       "author": "Mathias Bynens",
       "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
@@ -1834,6 +2518,13 @@
       "bom-ref": "ea89cd0cfb183909032f50f9ab09d7ab6e42edea3ea52c356c2b7e4ad7f68d9741bdf264a526882a4a991d8db857411aa7d376812a393b0fd3276342dc0d38d4",
       "author": "Isaac Z. Schlueter",
       "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minizlib.git",
       "externalReferences": [
         {
@@ -1850,6 +2541,13 @@
       "bom-ref": "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass@7.0.4?vcs_url=https%3A//github.com/isaacs/minipass",
       "externalReferences": [
         {
@@ -1866,6 +2564,13 @@
       "bom-ref": "eb2b01921d5450abfabec95da7be40968f4aeecbb395dc8eaabe5d57229f0efe1b85730a4944607ec29d3680cd22df70422a003bd93b08e3c7fd0595b12c126a",
       "author": "Kevin Mårtensson",
       "description": "Get the command from a shebang",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=kevva/shebang-command",
       "externalReferences": [
         {
@@ -1881,6 +2586,13 @@
       "version": "2.1.2",
       "bom-ref": "ec0c1512fff06fb30c5c968fe85c7d9ff8d963ea1fde8b3c092518c7e2fb204d6397752a7ef493e5b8e1fbd4caeebb22f9345432a0a977792cb36fcbd94af37b",
       "description": "Tiny millisecond conversion utility",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/ms@2.1.2?vcs_url=zeit/ms",
       "externalReferences": [
         {
@@ -1897,6 +2609,13 @@
       "bom-ref": "ede24543b9967cfd40cabc994c366443348cbfb45469a7f74aefdd68eb77c748e262fb2daf9295d90bdfe6fb95b73380bad63f8f2f9197e037bb41537618fc94",
       "author": "Josh Junon",
       "description": "Lightweight debugging utility for Node.js and the browser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/debug@4.3.4?vcs_url=git%3A//github.com/debug-js/debug.git",
       "externalReferences": [
         {
@@ -1913,6 +2632,13 @@
       "bom-ref": "efe79d9826d0e1607da0b85dff6820c9841f796a2d6a18691fcd87941347b63e19f33fb5d30150fb096955e5a4ded250ad9fc1cf187f3f6e15c7a82b53889bb3",
       "author": "Isaac Z. Schlueter",
       "description": "A Minipass stream that calls a flush function before emitting 'end'",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-flush.git",
       "externalReferences": [
         {
@@ -1929,6 +2655,13 @@
       "bom-ref": "effd06d874a919f86ecf1f738efe3e43ac10ba6852de0b6c9b9d10223235a2f036fb4380fe3c69271a2b9ce2d69ccca64772cef3771aeb60097dbc980e99e17c",
       "author": "Mathias Buus",
       "description": "Build tool and bindings loader for node-gyp that supports prebuilds",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/node-gyp-build@4.8.0?vcs_url=https%3A//github.com/prebuild/node-gyp-build.git",
       "externalReferences": [
         {
@@ -1956,6 +2689,13 @@
       "bom-ref": "f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1",
       "author": "Ben Coe",
       "description": "easily create complex multi-column command-line-interfaces",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=yargs/cliui",
       "externalReferences": [
         {
@@ -1972,6 +2712,13 @@
       "bom-ref": "f4630729f642c623297c9662bf759507ed6a838aede517aedd28d5649d2ca53f8e241644cab92d7e138553518d38d4bbd34584c448b354ed95e681f6a0f50aea",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/semver@7.6.0?vcs_url=https%3A//github.com/npm/node-semver.git",
       "externalReferences": [
         {
@@ -1988,6 +2735,13 @@
       "bom-ref": "f87a92bb87e81de8b290fe413ae6178b99d84bba1d61e9a4a55a0bf4a9d653260eac58c7aa2624f57db6eaeb9330ad285ac0b9da66242ec7715196f25b8d8817",
       "author": "GitHub Inc.",
       "description": "Opinionated, caching, retrying fetch client",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
       "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A//github.com/npm/make-fetch-happen.git",
       "externalReferences": [
         {
@@ -2004,6 +2758,13 @@
       "bom-ref": "f93f5e604ae591a0be4171894382cfdef89cacca38a44e6e843f7e93ed800a42dd8a5667a6fe089816b59c94ace57c2b11fe13f77d9b63533756cf1a1c04d4c2",
       "author": "James M Snell",
       "description": "A fast, efficient Node.js Worker Thread Pool implementation",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
       "purl": "pkg:npm/piscina@4.1.0?vcs_url=git%2Bhttps%3A//github.com/piscinajs/piscina.git",
       "externalReferences": [
         {
