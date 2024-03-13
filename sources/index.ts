@@ -69,10 +69,6 @@ class SBOMCommand extends BaseCommand {
     description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")'
   })
 
-  licenses = Option.Boolean('--licenses', false, {
-    description: 'Include license information for components in generated SBOM.\nLicense information will always be absent for components that don\'t specify licenses unambiguously.'
-  })
-
   reproducible = Option.Boolean('--reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
@@ -101,7 +97,6 @@ class SBOMCommand extends BaseCommand {
       outputFormat: parseOutputFormat(this.outputFormat),
       outputFile: parseOutputFile(workspace.cwd, this.outputFile),
       componentType: parseComponenttype(this.componentType),
-      licenses: this.licenses,
       reproducible: this.reproducible
     })
   }
