@@ -32,7 +32,7 @@ import { PackageURL } from 'packageurl-js'
 import {
   type BuildtimeDependencies,
   type PackageInfo,
-  traverseWorkspace
+  traverseWorkspaces
 } from './traverseUtils'
 
 const licenseFactory = new CDX.Factories.LicenseFactory()
@@ -55,6 +55,7 @@ export interface OutputOptions {
   outputFile: PortablePath | typeof stdOutOutput
   componentType: CDX.Enums.ComponentType
   reproducible: boolean
+  recursive: boolean
 }
 
 export async function generateSBOM (
@@ -74,9 +75,9 @@ export async function generateSBOM (
     bom.metadata.timestamp = new Date()
   }
 
-  const allDependencies = await traverseWorkspace(
+  const allDependencies = await traverseWorkspaces(
     project,
-    workspace,
+    outputOptions.recursive ? project.workspaces : [workspace],
     config
   )
   const componentModels = new Map<LocatorHash, CDX.Models.Component>()
@@ -153,9 +154,9 @@ async function addMetadataTools (bom: CDX.Models.Bom): Promise<void> {
  */
 function serialize (
   bom: CDX.Models.Bom,
-  specVersion: OutputOptions['specVersion'],
-  outputFormat: OutputOptions['outputFormat'],
-  reproducible: OutputOptions['reproducible']
+  specVersion: OutputOptions[ 'specVersion' ],
+  outputFormat: OutputOptions[ 'outputFormat' ],
+  reproducible: OutputOptions[ 'reproducible' ]
 ): string {
   const spec = CDX.Spec.SpecVersionDict[specVersion]
   if (spec === undefined) { throw new RangeError('undefined specVersion') }
@@ -218,7 +219,7 @@ function getAuthorName (manifestRawAuthor: unknown): string | undefined {
  */
 function packageInfoToCycloneComponent (
   pkgInfo: PackageInfo,
-  reproducible: OutputOptions['reproducible']
+  reproducible: OutputOptions[ 'reproducible' ]
 ): CDX.Models.Component {
   const manifest = pkgInfo.manifest
   const component = componentBuilder.makeComponent(
