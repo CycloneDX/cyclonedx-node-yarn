@@ -1,7 +1,6 @@
 # yarn stuff
 /.yarn/**
-/.pnp.cjs
-/.pnp.loader.mjs
+/.pnp.*
 
 # generated files: dist and docs
 /reports/**

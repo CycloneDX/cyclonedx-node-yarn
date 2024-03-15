@@ -46,13 +46,13 @@
     "skipLibCheck": false,
 
     /* yarn foo */
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   },
   "files": [
     "sources/index.ts",
   ],
   "exclude": [
-    ".yarn",
+    ".yarn", ".pnp.*",
     "**/*.spec.ts", "**/*.test.ts"
   ]
 }
