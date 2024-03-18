@@ -36,7 +36,7 @@
     "mocha": "10.3.0",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "scripts": {
     "build": "run-s -n build:gbtd build:bundle",
