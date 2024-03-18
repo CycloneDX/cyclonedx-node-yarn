@@ -49,7 +49,7 @@
     "experimentalDecorators": true
   },
   "files": [
-    "sources/index.ts",
+    "sources/index.ts"
   ],
   "exclude": [
     ".yarn", ".pnp.*",
