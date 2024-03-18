@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
-    "@types/node": "ts5.3",
+    "@types/node": "ts5.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "@yarnpkg/builder": "4.0.0",
@@ -36,7 +36,7 @@
     "mocha": "10.3.0",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "scripts": {
     "build": "run-s -n build:gbtd build:bundle",
