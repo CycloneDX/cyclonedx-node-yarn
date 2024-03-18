@@ -1,0 +1,8 @@
+{
+    "name": "nested-workspace-2",
+    "version": "0.0.1",
+    "dependencies": {
+        "inquirer": "^9.2.15",
+        "nested-workspace-1": "workspace:^"
+    }
+}

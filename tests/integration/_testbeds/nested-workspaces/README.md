@@ -1,0 +1,1 @@
+This project contains multiple workspaces, while the SBOM is generated at top level, and should include all dependencies from all of the workspaces

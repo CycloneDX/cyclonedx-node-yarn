@@ -30,7 +30,8 @@ const testSetups = [
   'multiple-versions',
   'no-dependencies',
   'one-dependency',
-  'package-aliasing'
+  'package-aliasing',
+  'nested-workspaces'
   /* endregion functional tests */
   /* region regression tests */
   // ... none so far
@@ -56,7 +57,8 @@ suite('integration', () => {
             '--reproducible',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
             '--spec-version', latestCdxSpecVersion,
-            '--output-format', 'JSON'
+            '--output-format', 'JSON',
+            '--recursive'
           ], {
             cwd: path.resolve(__dirname, '_testbeds', testSetup),
             stdio: ['ignore', 'pipe', 'pipe'],
