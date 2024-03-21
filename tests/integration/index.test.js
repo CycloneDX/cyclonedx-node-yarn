@@ -53,6 +53,7 @@ suite('integration', () => {
 
         const makeSBOM = spawnSync(
           'yarn', ['sbom',
+            '-vvv',
             '--reproducible',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
             '--spec-version', latestCdxSpecVersion,
@@ -70,7 +71,7 @@ suite('integration', () => {
           })
         assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr.toString())
 
-        const actualOutput = makeReproducible('json', makeSBOM.output.toString())
+        const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
 
         if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
           writeFileSync(expectedOutSnap, actualOutput, 'utf8')

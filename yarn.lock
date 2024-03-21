@@ -5897,7 +5897,6 @@ __metadata:
     "@yarnpkg/builder": "npm:4.0.0"
     "@yarnpkg/cli": "npm:^4.1.0"
     "@yarnpkg/core": "npm:^4.0.3"
-    "@yarnpkg/fslib": "npm:^3.0.2"
     c8: "npm:^9.1.0"
     clipanion: "npm:^4.0.0-rc.3"
     eslint: "npm:8.57.0"
