@@ -1,6 +1,6 @@
 {
   "all": true,
-  "src": ["sources"],
+  "src": ["src"],
   "exclude": [
     "**/*.{spec,test}.{js,cjs,mjs}",
     "**/*.cache/**",

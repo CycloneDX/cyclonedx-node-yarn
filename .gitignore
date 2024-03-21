@@ -15,7 +15,7 @@
 
 
 # Only used during production build.
-/sources/buildtime-dependencies.json
+/src/buildtime-dependencies.json
 
 
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore

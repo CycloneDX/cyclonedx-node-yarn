@@ -49,7 +49,7 @@
       "url": "https://github.com/jkowalleck"
     }
   ],
-  "main": "./sources/plugin.ts",
+  "main": "./src/plugin.ts",
   "exports": "./index.cjs",
   "type": "commonjs",
   "engines": {
@@ -87,7 +87,7 @@
   },
   "scripts": {
     "build": "run-s -n build:gbtd build:bundle",
-    "build:gbtd": "yarn info --json --dependents $npm_package_name > sources/buildtime-dependencies.json",
+    "build:gbtd": "yarn info --json --dependents $npm_package_name > src/buildtime-dependencies.json",
     "build:bundle": "builder build plugin",
     "build:bundle-dev": "yarn build:bundle --source-map",
     "clean": "rimraf bundles",

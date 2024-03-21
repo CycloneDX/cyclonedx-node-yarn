@@ -1,7 +1,7 @@
 # Tests
 
 Tests are written in plain JavaScript.  
-Tests are intended to test the build result(`bundles/**`), instead of the source(`sources/`).
+Tests are intended to test the build result(`bundles/**`), instead of the source(`src/`).
 
 The test runner will NOT build the project; you need to do so manually on demand.
 See the [dedicated contributing docs](../CONTRIBUTING.md) for details and advanced instructions.
