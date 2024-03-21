@@ -49,7 +49,9 @@
       "url": "https://github.com/jkowalleck"
     }
   ],
-  "main": "./sources/index.ts",
+  "main": "./sources/plugin.ts",
+  "exports": "./index.cjs",
+  "type": "commonjs",
   "engines": {
     "yarn": ">=4",
     "node": ">=18"
