@@ -26,9 +26,12 @@ import {
   structUtils,
   type Workspace
 } from '@yarnpkg/core'
-import { type PortablePath, xfs } from '@yarnpkg/fslib'
+import { openSync } from 'fs'
 import { PackageURL } from 'packageurl-js'
+import { resolve } from 'path'
+import * as process from 'process'
 
+import { writeAllSync } from './_helpers'
 import {
   type BuildtimeDependencies,
   type PackageInfo,
@@ -43,26 +46,25 @@ const componentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(
   licenseFactory
 )
 
-/**
- * Denotes output to standard out is desired instead of writing files.
- */
-export const stdOutOutput = Symbol('__cdxyp_out2stdout')
+export const OutputStdOut = '-'
 
 export interface OutputOptions {
   specVersion: CDX.Spec.Version
   outputFormat: CDX.Spec.Format
-  /** Output file name. */
-  outputFile: PortablePath | typeof stdOutOutput
+  outputFile: string
   componentType: CDX.Enums.ComponentType
   reproducible: boolean
 }
 
 export async function generateSBOM (
+  myConsole: Console,
   project: Project,
   workspace: Workspace,
   config: Configuration,
   outputOptions: OutputOptions
 ): Promise<void> {
+  myConsole.debug('DEBUG | outputOptions:', outputOptions)
+
   const bom = new CDX.Models.Bom()
   await addMetadataTools(bom)
 
@@ -116,11 +118,15 @@ export async function generateSBOM (
     outputOptions.outputFormat,
     outputOptions.reproducible
   )
-  if (outputOptions.outputFile === stdOutOutput) {
-    console.log(serializedSBoM)
-  } else {
-    await xfs.writeFilePromise(outputOptions.outputFile, serializedSBoM)
-  }
+
+  myConsole.log('LOG   | writing BOM to', outputOptions.outputFile)
+  const written = await writeAllSync(
+    outputOptions.outputFile === OutputStdOut
+      ? process.stdout.fd
+      : openSync(resolve(process.cwd(), outputOptions.outputFile), 'w'),
+    serializedSBoM
+  )
+  myConsole.info('INFO  | wrote %d bytes to %s', written, outputOptions.outputFile)
 }
 
 async function addMetadataTools (bom: CDX.Models.Bom): Promise<void> {
@@ -158,7 +164,9 @@ function serialize (
   reproducible: OutputOptions['reproducible']
 ): string {
   const spec = CDX.Spec.SpecVersionDict[specVersion]
-  if (spec === undefined) { throw new RangeError('undefined specVersion') }
+  if (spec === undefined) {
+    throw new RangeError('undefined specVersion')
+  }
   switch (outputFormat) {
     case CDX.Spec.Format.JSON: {
       const serializer = new CDX.Serialize.JsonSerializer(

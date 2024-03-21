@@ -70,6 +70,8 @@ $ yarn CycloneDX make-sbom
                          (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
   --reproducible         Whether to go the extra mile and make the output reproducible.
                          This might result in loss of time- and random-based values.
+  --verbose,-v           Increase the verbosity of messages.
+                         Use multiple times to increase the verbosity even more.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -12,7 +12,6 @@
     "@cyclonedx/cyclonedx-library": "^6.4.0",
     "@yarnpkg/cli": "^4.1.0",
     "@yarnpkg/core": "^4.0.3",
-    "@yarnpkg/fslib": "^3.0.2",
     "clipanion": "^4.0.0-rc.3",
     "packageurl-js": "^1.2.1",
     "xmlbuilder2": "^3.1.1"

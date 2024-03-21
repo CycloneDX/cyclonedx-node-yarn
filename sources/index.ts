@@ -26,10 +26,10 @@ import {
   Project,
   ThrowReport
 } from '@yarnpkg/core'
-import { type PortablePath, ppath } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 
-import { generateSBOM, type OutputOptions, stdOutOutput } from './sbom'
+import { makeConsoleLogger } from './logger'
+import { generateSBOM, type OutputOptions, OutputStdOut } from './sbom'
 
 class SBOMCommand extends BaseCommand {
   static override readonly paths = [
@@ -52,8 +52,8 @@ class SBOMCommand extends BaseCommand {
     description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")'
   })
 
-  outputFile = Option.String('--output-file', {
-    description: 'Path to the output file.\nSet to "-" to write to STDOUT.\n(default: write to STDOUT)'
+  outputFile = Option.String('--output-file', OutputStdOut, {
+    description: `Path to the output file.\nSet to "${OutputStdOut}" to write to STDOUT.\n(default: write to STDOUT)`
   })
 
   /* mimic option from yarn.
@@ -73,7 +73,13 @@ class SBOMCommand extends BaseCommand {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
 
+  verbosity = Option.Counter('--verbose,-v', 1, {
+    description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
+  })
+
   async execute (): Promise<void> {
+    const myConsole = makeConsoleLogger(this.verbosity, this.context)
+
     const configuration = await Configuration.find(
       this.context.cwd,
       this.context.plugins
@@ -92,10 +98,10 @@ class SBOMCommand extends BaseCommand {
       await project.restoreInstallState()
     }
 
-    await generateSBOM(project, workspace, configuration, {
+    await generateSBOM(myConsole, project, workspace, configuration, {
       specVersion: parseSpecVersion(this.specVersion),
       outputFormat: parseOutputFormat(this.outputFormat),
-      outputFile: parseOutputFile(workspace.cwd, this.outputFile),
+      outputFile: this.outputFile,
       componentType: parseComponenttype(this.componentType),
       reproducible: this.reproducible
     })
@@ -131,17 +137,6 @@ function parseOutputFormat (
     )
   }
   return format
-}
-
-function parseOutputFile (
-  cwd: PortablePath,
-  outputFile: string | undefined
-): OutputOptions['outputFile'] {
-  if (outputFile === undefined || outputFile === '-') {
-    return stdOutOutput
-  } else {
-    return ppath.resolve(cwd, outputFile)
-  }
 }
 
 function parseComponenttype (componentType: string | undefined): CDX.Enums.ComponentType {
