@@ -24,7 +24,8 @@ import {
   Configuration,
   type Plugin,
   Project,
-  ThrowReport
+  ThrowReport,
+  type Workspace
 } from '@yarnpkg/core'
 import { type PortablePath, ppath } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
@@ -73,6 +74,10 @@ class SBOMCommand extends BaseCommand {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
 
+  recursive = Option.Boolean('--recursive', false, {
+    description: 'Resolve dependencies from all nested workspaces within the current one.'
+  })
+
   async execute (): Promise<void> {
     const configuration = await Configuration.find(
       this.context.cwd,
@@ -86,6 +91,9 @@ class SBOMCommand extends BaseCommand {
 
     if (this.production) {
       workspace.manifest.devDependencies.clear()
+      if (this.recursive) {
+        project.workspaces.forEach((w: Workspace) => { w.manifest.devDependencies.clear() })
+      }
       const cache = await Cache.find(project.configuration)
       await project.resolveEverything({ report: new ThrowReport(), cache })
     } else {
@@ -97,14 +105,15 @@ class SBOMCommand extends BaseCommand {
       outputFormat: parseOutputFormat(this.outputFormat),
       outputFile: parseOutputFile(workspace.cwd, this.outputFile),
       componentType: parseComponenttype(this.componentType),
-      reproducible: this.reproducible
+      reproducible: this.reproducible,
+      recursive: this.recursive
     })
   }
 }
 
 function parseSpecVersion (
   specVersion: string | undefined
-): OutputOptions['specVersion'] {
+): OutputOptions[ 'specVersion' ] {
   if (specVersion === undefined) {
     return CDX.Spec.Version.v1dot5
   }
@@ -119,7 +128,7 @@ function parseSpecVersion (
 
 function parseOutputFormat (
   outputFormat: string | undefined
-): OutputOptions['outputFormat'] {
+): OutputOptions[ 'outputFormat' ] {
   if (outputFormat === undefined) {
     return CDX.Spec.Format.JSON
   }
@@ -136,7 +145,7 @@ function parseOutputFormat (
 function parseOutputFile (
   cwd: PortablePath,
   outputFile: string | undefined
-): OutputOptions['outputFile'] {
+): OutputOptions[ 'outputFile' ] {
   if (outputFile === undefined || outputFile === '-') {
     return stdOutOutput
   } else {

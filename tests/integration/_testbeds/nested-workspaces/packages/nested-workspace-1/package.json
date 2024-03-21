@@ -1,0 +1,7 @@
+{
+    "name": "nested-workspace-1",
+    "version": "0.0.1",
+    "dependencies": {
+        "ora": "5.4.1"
+    }
+}

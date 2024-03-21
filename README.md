@@ -70,6 +70,7 @@ $ yarn CycloneDX make-sbom
                          (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
   --reproducible         Whether to go the extra mile and make the output reproducible.
                          This might result in loss of time- and random-based values.
+  --recursive            Scan all nested workspaces within the current project, rather than just the one in the current working directory.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
