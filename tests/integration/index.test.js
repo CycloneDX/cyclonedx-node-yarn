@@ -44,7 +44,7 @@ const latestCdxSpecVersion = '1.5'
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
-  const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-sbom.js')
+  const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
 
   suite('make SBOM', () => {
     testSetups.forEach((testSetup) => {
@@ -52,7 +52,7 @@ suite('integration', () => {
         const expectedOutSnap = path.resolve(__dirname, '_snapshots', `${testSetup}.json.bin`)
 
         const makeSBOM = spawnSync(
-          'yarn', ['sbom',
+          'yarn', ['cyclonedx',
             '-vvv',
             '--reproducible',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
@@ -69,7 +69,7 @@ suite('integration', () => {
               YARN_PLUGINS: thisYarnPlugin
             }
           })
-        assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr.toString())
+        assert.strictEqual(makeSBOM.status, 0, makeSBOM.stdout)
 
         const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
 

@@ -1,8 +1,54 @@
 {
   "private": true,
-  "name": "yarn-plugin-sbom",
+  "name": "@cyclonedx/yarn-plugin-cyclonedx",
   "version": "1.0-dev",
+  "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
   "license": "Apache-2.0",
+  "keywords": [
+    "CycloneDX",
+    "SBOM",
+    "BOM",
+    "inventory",
+    "bill-of-materials",
+    "software-bill-of-materials",
+    "component",
+    "dependency",
+    "package-url",
+    "PURL",
+    "spdx",
+    "node",
+    "yarn"
+  ],
+  "homepage": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues"
+  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "url": "https://github.com/jkowalleck"
+    },
+    {
+      "name": "Augustus Kling",
+      "url": "https://github.com/AugustusKling"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Jan Kowalleck",
+      "url": "https://github.com/jkowalleck"
+    }
+  ],
   "main": "./sources/index.ts",
   "engines": {
     "yarn": ">=4",
@@ -50,7 +96,7 @@
     "test:lint": "tsc --noEmit",
     "test:node": "c8 mocha -p",
     "cs-fix": "eslint --fix .",
-    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-sbom.js yarn sbom"
+    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "packageManager": "yarn@4.1.0"
 }
