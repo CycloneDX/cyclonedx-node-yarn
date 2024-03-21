@@ -33,8 +33,8 @@ import { generateSBOM, type OutputOptions, OutputStdOut } from './sbom'
 
 class SBOMCommand extends BaseCommand {
   static override readonly paths = [
+    ['cyclonedx'], // <-- this is the preferred entry point
     ['CycloneDX', 'make-sbom'],
-    ['cyclonedx'],
     ['sbom']
   ]
 

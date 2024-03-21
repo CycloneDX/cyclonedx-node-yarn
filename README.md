@@ -41,7 +41,7 @@ Then, import the bundle into your project using `yarn import ...`,
 or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
 
 ```shell
-YARN_PLUGINS=.../bundles/@yarnpkg/plugin-sbom.js yarn sbom --help
+YARN_PLUGINS=.../bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
 ```
 
 ## Usage
@@ -53,7 +53,7 @@ Generates CycloneDX SBOM for current workspace.
 
 ━━━ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-$ yarn CycloneDX make-sbom
+$ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
