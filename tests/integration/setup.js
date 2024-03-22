@@ -21,7 +21,7 @@ const { spawnSync } = require('child_process')
 const path = require('path');
 
 (function () {
-  const REQUIRES_YARN_INSTALL = [
+  const REQUIRES_INSTALL = [
     /* region functional tests */
     'dev-dependency-with-dependencies',
     // 'git-protocol-dependency',
@@ -43,7 +43,7 @@ const path = require('path');
 
   process.exitCode = 0
 
-  for (const DIR of REQUIRES_YARN_INSTALL) {
+  for (const DIR of REQUIRES_INSTALL) {
     console.log('>>> setup with yarn:', DIR)
     const done = spawnSync(
       'yarn', ['install', '--immutable'], {
