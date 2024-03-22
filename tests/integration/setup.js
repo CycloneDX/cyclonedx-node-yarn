@@ -42,11 +42,10 @@ const path = require('path');
   `)
 
   process.exitCode = 0
-  let done
 
   for (const DIR of REQUIRES_YARN_INSTALL) {
     console.log('>>> setup with yarn:', DIR)
-    done = spawnSync(
+    const done = spawnSync(
       'yarn', ['install', '--immutable'], {
         cwd: path.resolve(__dirname, '_testbeds', DIR),
         stdio: 'inherit',
