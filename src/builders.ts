@@ -63,7 +63,11 @@ export class BomBuilder {
       bom.metadata.tools.add(tool)
     }
 
-    if (!this.reproducible) {
+    if (this.reproducible) {
+      bom.metadata.properties.add(
+        new Models.Property('cdx:reproducible', 'true')
+      )
+    } else {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
