@@ -92,7 +92,17 @@ class CycloneCommand extends BaseCommand {
 
   async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
+    myConsole.debug('DEBUG | options: %j', {
+      specVersion: this.specVersion,
+      outputFormat: this.outputFormat,
+      outputFile: this.outputFile,
+      production: this.production,
+      mcType: this.mcType,
+      outputReproducible: this.outputReproducible,
+      verbosity: this.verbosity,
+    })
 
+    myConsole.info('INFO  | gathering project & workspace ...')
     const { project, workspace } = await Project.find(
       await Configuration.find(this.context.cwd, this.context.plugins),
       this.context.cwd)
@@ -135,14 +145,14 @@ class CycloneCommand extends BaseCommand {
       space: 2
     })
 
-    myConsole.log('LOG   | writing BOM to', this.outputFile)
+    myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(
       this.outputFile === OutputStdOut
         ? process.stdout.fd
         : openSync(resolve(process.cwd(), this.outputFile), 'w'),
       serialized
     )
-    myConsole.info('INFO  | wrote %d bytes to %s', written, this.outputFile)
+    myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
 
     return written > 0
       ? ExitCode.SUCCESS
