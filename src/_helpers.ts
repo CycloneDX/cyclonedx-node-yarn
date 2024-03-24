@@ -16,6 +16,7 @@ limitations under the License.
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
+
 import { writeSync } from 'fs'
 
 export async function writeAllSync (fd: number, data: string): Promise<number> {

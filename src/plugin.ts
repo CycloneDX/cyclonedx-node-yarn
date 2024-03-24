@@ -17,21 +17,31 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
-import { BaseCommand } from '@yarnpkg/cli'
-import {
-  Cache,
-  Configuration,
-  type Plugin,
-  Project,
-  ThrowReport
-} from '@yarnpkg/core'
+import { Builders, type Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
+import { Configuration, type Plugin, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
+import { openSync } from 'fs'
+import { resolve } from 'path'
 
+import { writeAllSync } from './_helpers'
+import { BomBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
-import { generateSBOM, type OutputOptions, OutputStdOut } from './sbom'
 
-class SBOMCommand extends BaseCommand {
+const OutputStdOut = '-'
+
+enum OutputFormat {
+  JSON = 'JSON',
+  XML = 'XML',
+}
+
+const ExitCode: Readonly<Record<string, number>> = Object.freeze({
+  SUCCESS: 0,
+  FAILURE: 1,
+  INVALID: 2
+})
+
+class CycloneCommand extends BaseCommand {
   static override readonly paths = [
     ['cyclonedx'], // <-- this is the preferred entry point
     ['CycloneDX', 'make-sbom'],
@@ -44,11 +54,13 @@ class SBOMCommand extends BaseCommand {
   })
 
   // @TODO limit to all supported versions - not hardcoded
-  specVersion = Option.String('--spec-version', {
+  // @TODO input validator with typanion
+  specVersion = Option.String('--spec-version', Spec.Version.v1dot5, {
     description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")'
   })
 
-  outputFormat = Option.String('--output-format', {
+  // @TODO input validator with typanion
+  outputFormat = Option.String('--output-format', OutputFormat.JSON, {
     description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")'
   })
 
@@ -65,11 +77,12 @@ class SBOMCommand extends BaseCommand {
   })
 
   // @TODO limit to hardcoded: "application", "firmware", "library"
-  componentType = Option.String('--mc-type', {
+  // @TODO input validator with typanion
+  mcType = Option.String('--mc-type', {
     description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")'
   })
 
-  reproducible = Option.Boolean('--reproducible', false, {
+  outputReproducible = Option.Boolean('--output-reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
 
@@ -77,83 +90,66 @@ class SBOMCommand extends BaseCommand {
     description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
   })
 
-  async execute (): Promise<void> {
+  async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
 
-    const configuration = await Configuration.find(
-      this.context.cwd,
-      this.context.plugins
-    )
     const { project, workspace } = await Project.find(
-      configuration,
-      this.context.cwd
-    )
-    if (workspace === null) { throw new RangeError('missing workspace') }
+      await Configuration.find(this.context.cwd, this.context.plugins),
+      this.context.cwd)
+    if (workspace == null) {
+      throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
+    }
+    await project.restoreInstallState()
 
-    if (this.production) {
-      workspace.manifest.devDependencies.clear()
-      const cache = await Cache.find(project.configuration)
-      await project.resolveEverything({ report: new ThrowReport(), cache })
-    } else {
-      await project.restoreInstallState()
+    const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
+
+    myConsole.log('LOG   | gathering BOM data ...')
+    const bom = new BomBuilder(
+      new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
+      new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
+      {
+        metaComponentType: this.mcType as Enums.ComponentType,
+        reproducible: this.outputReproducible
+      },
+      myConsole
+    ).buildFromProjectWorkspace(project, workspace)
+
+    const spec = Spec.SpecVersionDict[this.specVersion as Spec.Version]
+    if (undefined === spec) {
+      throw new Error('unsupported spec-version')
     }
 
-    await generateSBOM(myConsole, project, workspace, configuration, {
-      specVersion: parseSpecVersion(this.specVersion),
-      outputFormat: parseOutputFormat(this.outputFormat),
-      outputFile: this.outputFile,
-      componentType: parseComponenttype(this.componentType),
-      reproducible: this.reproducible
+    let serializer: Serialize.Types.Serializer
+    switch (this.outputFormat as OutputFormat) {
+      case OutputFormat.XML:
+        serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+        break
+      case OutputFormat.JSON:
+        serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+        break
+    }
+
+    myConsole.log('LOG   | serializing BOM ...')
+    const serialized = serializer.serialize(bom, {
+      sortLists: this.outputReproducible,
+      space: 2
     })
-  }
-}
 
-function parseSpecVersion (
-  specVersion: string | undefined
-): OutputOptions['specVersion'] {
-  if (specVersion === undefined) {
-    return CDX.Spec.Version.v1dot5
-  }
-  if (specVersion in CDX.Spec.SpecVersionDict) {
-    return specVersion as CDX.Spec.Version
-  } else {
-    throw new Error(
-      `${specVersion} is not supported CycloneDX specification version.`
+    myConsole.log('LOG   | writing BOM to', this.outputFile)
+    const written = await writeAllSync(
+      this.outputFile === OutputStdOut
+        ? process.stdout.fd
+        : openSync(resolve(process.cwd(), this.outputFile), 'w'),
+      serialized
     )
+    myConsole.info('INFO  | wrote %d bytes to %s', written, this.outputFile)
+
+    return written > 0
+      ? ExitCode.SUCCESS
+      : ExitCode.FAILURE
   }
 }
 
-function parseOutputFormat (
-  outputFormat: string | undefined
-): OutputOptions['outputFormat'] {
-  if (outputFormat === undefined) {
-    return CDX.Spec.Format.JSON
-  }
-  /* @ts-expect-error TS7053 */
-  const format: CDX.Spec.Format | undefined = CDX.Spec.Format[outputFormat.toUpperCase()]
-  if (format === undefined) {
-    throw new Error(
-      `${outputFormat} not a recognized CycloneDX specification format.`
-    )
-  }
-  return format
-}
-
-function parseComponenttype (componentType: string | undefined): CDX.Enums.ComponentType {
-  if (componentType === undefined || componentType.length === 0) {
-    return CDX.Enums.ComponentType.Application
-  }
-  /* @ts-expect-error TS2345 */
-  if (Object.values(CDX.Enums.ComponentType).includes(componentType)) {
-    return componentType as CDX.Enums.ComponentType
-  }
-  throw new Error(
-    `${componentType} not a recognized CycloneDX component type.`
-  )
-}
-
-const plugin: Plugin = {
-  commands: [SBOMCommand]
-}
-
-export default plugin
+export default {
+  commands: [CycloneCommand]
+} satisfies Plugin

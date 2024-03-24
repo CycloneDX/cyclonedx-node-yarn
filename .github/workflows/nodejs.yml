@@ -47,7 +47,7 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: build
-        run: yarn run build:gbtd
+        run: yarn run build:gbti
       - name: build
         run: yarn run build:bundle-dev
       - name: artifact build result
@@ -80,7 +80,7 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: build
-        run: yarn run build:gbtd
+        run: yarn run build:gbti
       - name: test
         run: >
           yarn run test:standard
@@ -123,7 +123,7 @@ jobs:
       - name: Setup subject
         run: yarn install --immutable
       - name: build
-        run: yarn run build:gbtd
+        run: yarn run build:gbti
       - name: test
         run: yarn run test:lint
 
