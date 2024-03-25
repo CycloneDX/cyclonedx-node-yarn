@@ -99,7 +99,7 @@ class CycloneCommand extends BaseCommand {
       production: this.production,
       mcType: this.mcType,
       outputReproducible: this.outputReproducible,
-      verbosity: this.verbosity,
+      verbosity: this.verbosity
     })
 
     myConsole.info('INFO  | gathering project & workspace ...')
@@ -116,10 +116,15 @@ class CycloneCommand extends BaseCommand {
     myConsole.log('LOG   | gathering BOM data ...')
     const bom = new BomBuilder(
       new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
+      new Builders.FromNodePackageJson.ComponentBuilder(
+        extRefFactory,
+        new Factories.LicenseFactory()
+      ),
       new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
       {
         metaComponentType: this.mcType as Enums.ComponentType,
         reproducible: this.outputReproducible
+        // @TODO shortPURLs: this.shortPURLs
       },
       myConsole
     ).buildFromProjectWorkspace(project, workspace)
@@ -144,6 +149,8 @@ class CycloneCommand extends BaseCommand {
       sortLists: this.outputReproducible,
       space: 2
     })
+
+    // @TODO validate BOM
 
     myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(
