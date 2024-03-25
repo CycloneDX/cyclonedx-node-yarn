@@ -110,11 +110,12 @@ class CycloneCommand extends BaseCommand {
       throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
     }
     await project.restoreInstallState()
+    // @TODO omit dev-deps
 
     const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
     myConsole.log('LOG   | gathering BOM data ...')
-    const bom = new BomBuilder(
+    const bom = await new BomBuilder(
       new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
       new Builders.FromNodePackageJson.ComponentBuilder(
         extRefFactory,
