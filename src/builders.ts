@@ -68,7 +68,7 @@ export class BomBuilder {
     const rootComponent: Models.Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
       new DummyComponent(this.metaComponentType, 'RootComponent')
     const allComponents: AllComponents = new Map([[workspace.anchoredLocator.locatorHash, rootComponent]])
-    this.gatherDependencies(allComponents, project)
+    this.gatherDependencies(allComponents, workspace.anchoredLocator.locatorHash, project)
 
     const bom = new Models.Bom()
 
@@ -128,27 +128,15 @@ export class BomBuilder {
     }
 
     // even private packages may have a PURL for identification
-    component.purl = this.makePurl(locator, component)
+    component.purl = this.makePurl(component)
 
     component.bomRef.value = structUtils.prettyLocatorNoColors(locator)
 
     return component
   }
 
-  private makePurl (locator: Locator, component: Models.Component): PackageURL | undefined {
-    locator = structUtils.ensureDevirtualizedLocator(locator)
-
-    let purl: PackageURL | undefined
-    switch (true) {
-      case locator.reference.startsWith('npm:'):
-      case locator.reference.startsWith('workspace:'):
-        purl = this.purlFactory.makeFromComponent(component, this.reproducible)
-        break
-      case locator.reference.startsWith('github:'):
-      case locator.reference.startsWith('https://github.com/'):
-        // @TODO
-        break
-    }
+  private makePurl (component: Models.Component): PackageURL | undefined {
+    const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
     }
