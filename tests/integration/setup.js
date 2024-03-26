@@ -28,7 +28,8 @@ const path = require('path');
     'multiple-versions',
     'no-dependencies',
     'one-dependency',
-    'package-aliasing'
+    'package-aliasing',
+    'juice-shop'
     /* endregion functional tests */
     /* region regression tests */
     // ... none so far

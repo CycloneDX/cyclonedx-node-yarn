@@ -22,6 +22,9 @@ const { suite, test } = require('mocha')
 const { spawnSync } = require('child_process')
 const path = require('path')
 const { existsSync, writeFileSync, readFileSync } = require('fs')
+const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+
+const { version: thisVersion } = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -30,21 +33,27 @@ const testSetups = [
   'multiple-versions',
   'no-dependencies',
   'one-dependency',
-  'package-aliasing'
+  'package-aliasing',
+  'juice-shop'
   /* endregion functional tests */
   /* region regression tests */
   // ... none so far
   /* endregion regression tests */
 ]
 
-const { version: thisVersion } = require('../../package.json')
-
 const latestCdxSpecVersion = '1.5'
+
+const testRootPath = path.resolve(__dirname, '..')
+const projectRootPath = path.resolve(testRootPath, '..')
+const snapshotsPath = path.join(testRootPath, '_data', 'snapshots')
+const testbedsPath = path.join(testRootPath, '_data', 'testbeds')
 
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
-  const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
+  const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
+
+  const longTestTimeout = 15000
 
   /**
    * @param {string} purpose
@@ -56,7 +65,7 @@ suite('integration', () => {
     purpose, testSetup,
     additionalArgs = [], additionalEnv = {}
   ) {
-    const expectedOutSnap = path.resolve(__dirname, '_snapshots', `${purpose}_${testSetup}.json.bin`)
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
 
     const makeSBOM = spawnSync(
       'yarn', ['cyclonedx',
@@ -67,9 +76,10 @@ suite('integration', () => {
         '--output-format', 'JSON',
         ...additionalArgs
       ], {
-        cwd: path.resolve(__dirname, '_testbeds', testSetup),
+        cwd: path.join(testbedsPath, testSetup),
         stdio: ['ignore', 'pipe', 'pipe'],
         encoding: 'utf8',
+        maxBuffer: BUFFER_MAX_LENGTH,
         shell: true,
         env: {
           ...additionalEnv,
@@ -78,7 +88,8 @@ suite('integration', () => {
           YARN_PLUGINS: thisYarnPlugin
         }
       })
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stdout)
+    assert.strictEqual(makeSBOM.error, undefined)
+    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr)
 
     const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
 
@@ -93,7 +104,7 @@ suite('integration', () => {
   suite('make SBOM', () => {
     suite('plain', () => {
       testSetups.forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('plain', testSetup))
+        test(`${testSetup}`, () => runTest('plain', testSetup)).timeout(longTestTimeout)
       })
     })
     suite('prod_arg', () => {
