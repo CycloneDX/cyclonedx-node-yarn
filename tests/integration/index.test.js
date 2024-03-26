@@ -145,20 +145,20 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       // replace metadata.tools.version
-      // '        "vendor": "@cyclonedx",\n' +
-      '        "name": "yarn-plugin-sbom",\n' +
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-cyclonedx",\n' +
       `        "version": ${JSON.stringify(thisVersion)}\n`,
-      // '        "vendor": "@cyclonedx",\n' +
-      '        "name": "yarn-plugin-sbom",\n' +
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-cyclonedx",\n' +
       '        "version": "thisVersion-testing"\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        "vendor": "cyclonedx",\n' +
+        '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
         '        "version": ".+?"\n'
       ),
-      '        "vendor": "cyclonedx",\n' +
+      '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
       '        "version": "libVersion-testing"\n'
     )
@@ -174,11 +174,11 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      // '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>yarn-plugin-sbom</name>\n' +
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-cyclonedx</name>\n' +
       `        <version>${thisVersion}</version>`,
-      // '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>yarn-plugin-sbom</name>\n' +
+      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-cyclonedx</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
       // replace metadata.tools.version
