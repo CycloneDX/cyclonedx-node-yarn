@@ -5,21 +5,48 @@
   "version": 1,
   "metadata": {
     "tools": [
+      {},
       {
-        "name": "yarn-plugin-sbom",
-        "version": "1.0-dev"
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       },
       {
-        "vendor": "cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "6.4.0"
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "1.0.0-alpha",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       }
     ],
     "component": {
       "type": "application",
       "name": "one-dependency",
       "version": "0.0.1",
-      "bom-ref": "2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40"
+      "bom-ref": "2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40",
+      "purl": "pkg:npm/one-dependency@0.0.1"
     },
     "properties": [
       {
@@ -43,17 +70,17 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash-es@4.17.21?vcs_url=lodash/lodash",
+      "purl": "pkg:npm/lodash-es@4.17.21?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git",
       "externalReferences": [
         {
           "url": "https://github.com/lodash/lodash-cli/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "lodash/lodash",
+          "url": "git+https://github.com/lodash/lodash.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://lodash.com/custom-builds",

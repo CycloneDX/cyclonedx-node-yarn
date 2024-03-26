@@ -5,14 +5,40 @@
   "version": 1,
   "metadata": {
     "tools": [
+      {},
       {
-        "name": "yarn-plugin-sbom",
-        "version": "1.0-dev"
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       },
       {
-        "vendor": "cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "6.4.0"
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "1.0.0-alpha",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       }
     ],
     "component": {
@@ -20,7 +46,8 @@
       "name": "package-aliasing",
       "version": "0.0.1",
       "bom-ref": "8f4a5adc26ea39c34e4c77de706e21a3e1d84346c9c8b0546396dcbc69bfcc7e4b07e797b97f5abcdc962fb6ec8cc4f1cbb15f4d7d725adefa09cdf7ae3b076b",
-      "description": "demo: a package is aliased with a different name"
+      "description": "demo: a package is aliased with a different name",
+      "purl": "pkg:npm/package-aliasing@0.0.1"
     },
     "properties": [
       {
@@ -44,7 +71,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
+      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A//git%40github.com/colorjs/color-name.git",
       "externalReferences": [
         {
           "url": "https://github.com/colorjs/color-name/issues",
@@ -52,7 +79,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git@github.com:colorjs/color-name.git",
+          "url": "git+ssh://git@github.com/colorjs/color-name.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -77,12 +104,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@2.0.2?vcs_url=git%3A//github.com/lovell/detect-libc",
+      "purl": "pkg:npm/detect-libc@2.0.2?vcs_url=git%3A//github.com/lovell/detect-libc.git",
       "externalReferences": [
         {
-          "url": "git://github.com/lovell/detect-libc",
+          "url": "https://github.com/lovell/detect-libc/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/lovell/detect-libc.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/lovell/detect-libc#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -144,6 +181,11 @@
           "url": "git://github.com/IndigoUnited/js-err-code.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/IndigoUnited/js-err-code#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -162,12 +204,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A//github.com/npm/fs.git",
+      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/fs.git",
+          "url": "https://github.com/npm/fs/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/fs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/fs#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -188,9 +240,19 @@
       "purl": "pkg:npm/ret@0.1.15?vcs_url=git%3A//github.com/fent/ret.js.git",
       "externalReferences": [
         {
+          "url": "https://github.com/fent/ret.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/fent/ret.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fent/ret.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -208,12 +270,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-key@3.1.1?vcs_url=sindresorhus/path-key",
+      "purl": "pkg:npm/path-key@3.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-key.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/path-key",
+          "url": "https://github.com/sindresorhus/path-key/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/path-key.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/path-key#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -231,12 +303,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=https%3A//github.com/npm/abbrev-js.git",
+      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/abbrev-js.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/abbrev-js.git",
+          "url": "https://github.com/npm/abbrev-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/abbrev-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/abbrev-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -254,12 +336,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-assign@4.1.1?vcs_url=sindresorhus/object-assign",
+      "purl": "pkg:npm/object-assign@4.1.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/object-assign.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/object-assign",
+          "url": "https://github.com/sindresorhus/object-assign/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/object-assign.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/object-assign#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -310,7 +402,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=https%3A//github.com/jquery/esprima.git",
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
       "externalReferences": [
         {
           "url": "https://github.com/jquery/esprima/issues",
@@ -318,7 +410,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/jquery/esprima.git",
+          "url": "git+https://github.com/jquery/esprima.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -343,12 +435,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=https%3A//github.com/kornelski/http-cache-semantics.git",
+      "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=git%2Bhttps%3A//github.com/kornelski/http-cache-semantics.git",
       "externalReferences": [
         {
-          "url": "https://github.com/kornelski/http-cache-semantics.git",
+          "url": "https://github.com/kornelski/http-cache-semantics/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kornelski/http-cache-semantics.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kornelski/http-cache-semantics#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -368,6 +470,11 @@
       ],
       "purl": "pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A//github.com/juliangruber/brace-expansion.git",
       "externalReferences": [
+        {
+          "url": "https://github.com/juliangruber/brace-expansion/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
           "url": "git://github.com/juliangruber/brace-expansion.git",
           "type": "vcs",
@@ -394,12 +501,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ssri@10.0.5?vcs_url=https%3A//github.com/npm/ssri.git",
+      "purl": "pkg:npm/ssri@10.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/ssri.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/ssri.git",
+          "url": "https://github.com/npm/ssri/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/ssri.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/ssri#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -417,12 +534,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-expression-parse@4.0.0?vcs_url=jslicense/spdx-expression-parse.js",
+      "purl": "pkg:npm/spdx-expression-parse@4.0.0?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-expression-parse.js.git",
       "externalReferences": [
         {
-          "url": "jslicense/spdx-expression-parse.js",
+          "url": "https://github.com/jslicense/spdx-expression-parse.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jslicense/spdx-expression-parse.js.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jslicense/spdx-expression-parse.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -440,12 +567,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=https%3A//github.com/andyperlitch/jsbn.git",
+      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=git%2Bhttps%3A//github.com/andyperlitch/jsbn.git",
       "externalReferences": [
         {
-          "url": "https://github.com/andyperlitch/jsbn.git",
+          "url": "https://github.com/andyperlitch/jsbn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/andyperlitch/jsbn.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/andyperlitch/jsbn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -463,12 +600,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/is-fullwidth-code-point",
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-fullwidth-code-point.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -486,12 +633,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A//github.com/npm/minipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/minipass-fetch.git",
+          "url": "https://github.com/npm/minipass-fetch/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/minipass-fetch.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/minipass-fetch#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -509,15 +666,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/emoji-regex.git",
+          "url": "git+https://github.com/mathiasbynens/emoji-regex.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -545,9 +702,19 @@
       "purl": "pkg:npm/debug@4.3.4?vcs_url=git%3A//github.com/debug-js/debug.git",
       "externalReferences": [
         {
+          "url": "https://github.com/debug-js/debug/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/debug-js/debug.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/debug-js/debug#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -600,6 +767,11 @@
       "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
       "externalReferences": [
         {
+          "url": "https://github.com/nodejs/string_decoder/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/string_decoder.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -625,12 +797,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git",
       "externalReferences": [
         {
-          "url": "chalk/ansi-styles",
+          "url": "https://github.com/chalk/ansi-styles/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-styles.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-styles#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -653,7 +835,7 @@
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/ashtuchkin/iconv-lite.git",
@@ -680,35 +862,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A//github.com/isaacs/node-graceful-fs",
+      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git",
       "externalReferences": [
         {
-          "url": "https://github.com/isaacs/node-graceful-fs",
+          "url": "https://github.com/isaacs/node-graceful-fs/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-graceful-fs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "wrap-ansi",
-      "version": "8.1.0",
-      "bom-ref": "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
-      "author": "Sindre Sorhus",
-      "description": "Wordwrap a string with ANSI escape codes",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=chalk/wrap-ansi",
-      "externalReferences": [
-        {
-          "url": "chalk/wrap-ansi",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "url": "https://github.com/isaacs/node-graceful-fs#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -726,12 +895,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/string-width",
+          "url": "https://github.com/sindresorhus/string-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/string-width.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/string-width#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -752,32 +931,19 @@
       "purl": "pkg:npm/rimraf@3.0.2?vcs_url=git%3A//github.com/isaacs/rimraf.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/rimraf/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/rimraf.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "glob",
-      "version": "7.2.3",
-      "bom-ref": "2d866d17a57be1139f6b6d57971cb6b26d2dff36b0ee93d17ac7567cdb319cfda37ea602de7146ded6bb8fafb66f47f08e40663334dabfff696367fed14a5702",
-      "author": "Isaac Z. Schlueter",
-      "description": "a little globber",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/glob@7.2.3?vcs_url=git%3A//github.com/isaacs/node-glob.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/isaacs/node-glob.git",
-          "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/rimraf#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -795,35 +961,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/nearley@2.20.1?vcs_url=https%3A//github.com/hardmath123/nearley.git",
+      "purl": "pkg:npm/nearley@2.20.1?vcs_url=git%2Bhttps%3A//github.com/hardmath123/nearley.git",
       "externalReferences": [
         {
-          "url": "https://github.com/hardmath123/nearley.git",
+          "url": "https://github.com/hardmath123/nearley/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/hardmath123/nearley.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "nopt",
-      "version": "5.0.0",
-      "bom-ref": "304b40fbfeba2e02eda56141d23e8432fe2da37fbdddc6e33db4cf44853021a82f8978090b67aac5420b729d5ecb53808ea18deaee77d9bfb7a11baac6bf10b9",
-      "author": "Isaac Z. Schlueter",
-      "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/nopt@5.0.0?vcs_url=https%3A//github.com/npm/nopt.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/npm/nopt.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
+          "url": "https://github.com/hardmath123/nearley#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -844,55 +997,19 @@
       "purl": "pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-sized.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/minipass-sized/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minipass-sized.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "path-is-absolute",
-      "version": "1.0.1",
-      "bom-ref": "31bc695ffd83e32d5957c850b83690923ddfe03b88c451607d6b33cdaab52154fe639b51cd6ecae5e63dfe969f50d64b882a199f2d204ccb3a22518589bb1200",
-      "author": "Sindre Sorhus",
-      "description": "Node.js 0.12 path.isAbsolute() ponyfill",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/path-is-absolute@1.0.1?vcs_url=sindresorhus/path-is-absolute",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/path-is-absolute",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "which",
-      "version": "2.0.2",
-      "bom-ref": "320ddf72f79a7090799aca262ad4287055a90b1bee1253c7e35528fd2903ac0557538dc8ea87d1f37fffc7ac564dc00eeba661e0cf618b35297b040ce649929f",
-      "author": "Isaac Z. Schlueter",
-      "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/which@2.0.2?vcs_url=git%3A//github.com/isaacs/node-which.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/isaacs/node-which.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
+          "url": "https://github.com/isaacs/minipass-sized#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -931,29 +1048,6 @@
     },
     {
       "type": "library",
-      "name": "abbrev",
-      "version": "1.1.1",
-      "bom-ref": "3659247eab67bf0395c15d45b4c0287aff58dbbb923d4e3ca84f8c036fc62e7d38206e661fa5695d3ef477b05dd38b614f42f37deeac62964c65b1afc9f92d64",
-      "author": "Isaac Z. Schlueter",
-      "description": "Like ruby's abbrev module, but in js",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/abbrev@1.1.1?vcs_url=http%3A//github.com/isaacs/abbrev-js",
-      "externalReferences": [
-        {
-          "url": "http://github.com/isaacs/abbrev-js",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "npmlog",
       "version": "5.0.1",
       "bom-ref": "366cab64a2060de3f6c9ebe226889db94432b64042c349297d8eaa0036150d692bf0b787bb70351a12e49eeaccccbb7045c545668506b7b9ee0397d8112a9c37",
@@ -966,12 +1060,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/npmlog@5.0.1?vcs_url=https%3A//github.com/npm/npmlog.git",
+      "purl": "pkg:npm/npmlog@5.0.1?vcs_url=git%2Bhttps%3A//github.com/npm/npmlog.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/npmlog.git",
+          "url": "https://github.com/npm/npmlog/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/npmlog.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/npmlog#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -989,12 +1093,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/whatwg-url@5.0.0?vcs_url=jsdom/whatwg-url",
+      "purl": "pkg:npm/whatwg-url@5.0.0?vcs_url=git%2Bhttps%3A//github.com/jsdom/whatwg-url.git",
       "externalReferences": [
         {
-          "url": "jsdom/whatwg-url",
+          "url": "https://github.com/jsdom/whatwg-url/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jsdom/whatwg-url.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsdom/whatwg-url#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1011,12 +1125,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=https%3A//github.com/isaacs/node-mkdirp.git",
+      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-mkdirp.git",
       "externalReferences": [
         {
-          "url": "https://github.com/isaacs/node-mkdirp.git",
+          "url": "https://github.com/isaacs/node-mkdirp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-mkdirp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-mkdirp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1034,7 +1158,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A//github.com/JoshGlazebrook/socks.git",
+      "purl": "pkg:npm/socks@2.8.1?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/socks/issues",
@@ -1042,7 +1166,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/JoshGlazebrook/socks.git",
+          "url": "git+https://github.com/JoshGlazebrook/socks.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1070,9 +1194,19 @@
       "purl": "pkg:npm/color-support@1.1.3?vcs_url=git%2Bhttps%3A//github.com/isaacs/color-support.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/color-support/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/color-support.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/color-support#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1090,17 +1224,17 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv@8.12.0?vcs_url=ajv-validator/ajv",
+      "purl": "pkg:npm/ajv@8.12.0?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv.git",
       "externalReferences": [
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "ajv-validator/ajv",
+          "url": "git+https://github.com/ajv-validator/ajv.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://ajv.js.org",
@@ -1123,12 +1257,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@6.2.0?vcs_url=https%3A//github.com/isaacs/node-tar.git",
+      "purl": "pkg:npm/tar@6.2.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-tar.git",
       "externalReferences": [
         {
-          "url": "https://github.com/isaacs/node-tar.git",
+          "url": "https://github.com/isaacs/node-tar/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/node-tar.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-tar#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1146,68 +1290,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=sindresorhus/aggregate-error",
+      "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/aggregate-error.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/aggregate-error",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "agent-base",
-      "version": "6.0.2",
-      "bom-ref": "428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3",
-      "author": "Nathan Rajlich",
-      "description": "Turn a function into an `http.Agent` instance",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/agent-base@6.0.2?vcs_url=git%3A//github.com/TooTallNate/node-agent-base.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/TooTallNate/node-agent-base/issues",
+          "url": "https://github.com/sindresorhus/aggregate-error/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git://github.com/TooTallNate/node-agent-base.git",
+          "url": "git+https://github.com/sindresorhus/aggregate-error.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "https-proxy-agent",
-      "version": "5.0.1",
-      "bom-ref": "42d65f358ee3030abf8cf2d8c052363694d990823251ce89e481eebf318d9f914e7ef0bb4d319703db1c948811aa80d1f86d1ab91d0dcc13d1aa2fe558423203",
-      "author": "Nathan Rajlich",
-      "description": "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/https-proxy-agent@5.0.1?vcs_url=git%3A//github.com/TooTallNate/node-https-proxy-agent.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/TooTallNate/node-https-proxy-agent/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git://github.com/TooTallNate/node-https-proxy-agent.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
+          "url": "https://github.com/sindresorhus/aggregate-error#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1228,9 +1326,19 @@
       "purl": "pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/jackspeak/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/jackspeak.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/jackspeak#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1248,12 +1356,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/p-map@4.0.0?vcs_url=sindresorhus/p-map",
+      "purl": "pkg:npm/p-map@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/p-map.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/p-map",
+          "url": "https://github.com/sindresorhus/p-map/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/p-map.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/p-map#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1308,9 +1426,19 @@
       "purl": "pkg:npm/node-gyp@10.0.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
       "externalReferences": [
         {
+          "url": "https://github.com/nodejs/node-gyp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/node-gyp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/node-gyp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1328,12 +1456,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-license-ids@3.0.17?vcs_url=jslicense/spdx-license-ids",
+      "purl": "pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git",
       "externalReferences": [
         {
-          "url": "jslicense/spdx-license-ids",
+          "url": "https://github.com/jslicense/spdx-license-ids/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jslicense/spdx-license-ids.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jslicense/spdx-license-ids#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1384,12 +1522,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/agent-base",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1407,12 +1555,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=https%3A//github.com/luzlab/ajv-formats-draft2019.git",
+      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=git%2Bhttps%3A//github.com/luzlab/ajv-formats-draft2019.git",
       "externalReferences": [
         {
-          "url": "https://github.com/luzlab/ajv-formats-draft2019.git",
+          "url": "https://github.com/luzlab/ajv-formats-draft2019/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/luzlab/ajv-formats-draft2019.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/luzlab/ajv-formats-draft2019#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1462,12 +1620,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/argparse@1.0.10?vcs_url=nodeca/argparse",
+      "purl": "pkg:npm/argparse@1.0.10?vcs_url=git%2Bhttps%3A//github.com/nodeca/argparse.git",
       "externalReferences": [
         {
-          "url": "nodeca/argparse",
+          "url": "https://github.com/nodeca/argparse/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/nodeca/argparse.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodeca/argparse#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1485,12 +1653,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry",
+      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git",
       "externalReferences": [
         {
-          "url": "git+https://github.com/isaacs/path-scurry",
+          "url": "https://github.com/isaacs/path-scurry/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/path-scurry.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/path-scurry#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1512,9 +1690,19 @@
       "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11?vcs_url=git%3A//github.com/mapbox/node-pre-gyp.git",
       "externalReferences": [
         {
+          "url": "https://github.com/mapbox/node-pre-gyp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/mapbox/node-pre-gyp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mapbox/node-pre-gyp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1532,7 +1720,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/discontinuous-range@1.0.0?vcs_url=https%3A//github.com/dtudury/discontinuous-range.git",
+      "purl": "pkg:npm/discontinuous-range@1.0.0?vcs_url=git%2Bhttps%3A//github.com/dtudury/discontinuous-range.git",
       "externalReferences": [
         {
           "url": "https://github.com/dtudury/discontinuous-range/issues",
@@ -1540,7 +1728,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/dtudury/discontinuous-range.git",
+          "url": "git+https://github.com/dtudury/discontinuous-range.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1565,7 +1753,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-pipeline@1.2.4?"
+      "purl": "pkg:npm/minipass-pipeline@1.2.4"
     },
     {
       "type": "library",
@@ -1581,7 +1769,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A//github.com/JoshGlazebrook/smart-buffer.git",
+      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/smart-buffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/smart-buffer/issues",
@@ -1589,7 +1777,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/JoshGlazebrook/smart-buffer.git",
+          "url": "git+https://github.com/JoshGlazebrook/smart-buffer.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1617,6 +1805,11 @@
       "purl": "pkg:npm/randexp@0.4.6?vcs_url=git%3A//github.com/fent/randexp.js.git",
       "externalReferences": [
         {
+          "url": "https://github.com/fent/randexp.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/fent/randexp.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -1642,12 +1835,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/webidl-conversions@3.0.1?vcs_url=jsdom/webidl-conversions",
+      "purl": "pkg:npm/webidl-conversions@3.0.1?vcs_url=git%2Bhttps%3A//github.com/jsdom/webidl-conversions.git",
       "externalReferences": [
         {
-          "url": "jsdom/webidl-conversions",
+          "url": "https://github.com/jsdom/webidl-conversions/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jsdom/webidl-conversions.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsdom/webidl-conversions#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1665,7 +1868,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A//github.com/jensyt/imurmurhash-js",
+      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=git%2Bhttps%3A//github.com/jensyt/imurmurhash-js.git",
       "externalReferences": [
         {
           "url": "https://github.com/jensyt/imurmurhash-js/issues",
@@ -1673,7 +1876,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/jensyt/imurmurhash-js",
+          "url": "git+https://github.com/jensyt/imurmurhash-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1698,12 +1901,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
+      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=git%2Bhttps%3A//github.com/tapjs/signal-exit.git",
       "externalReferences": [
         {
-          "url": "https://github.com/tapjs/signal-exit.git",
+          "url": "https://github.com/tapjs/signal-exit/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/tapjs/signal-exit.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/signal-exit#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1758,9 +1971,19 @@
       "purl": "pkg:npm/chownr@2.0.0?vcs_url=git%3A//github.com/isaacs/chownr.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/chownr/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/chownr.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/chownr#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1778,12 +2001,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/http-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1801,7 +2034,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-fetch@2.7.0?vcs_url=https%3A//github.com/bitinn/node-fetch.git",
+      "purl": "pkg:npm/node-fetch@2.7.0?vcs_url=git%2Bhttps%3A//github.com/bitinn/node-fetch.git",
       "externalReferences": [
         {
           "url": "https://github.com/bitinn/node-fetch/issues",
@@ -1809,7 +2042,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/bitinn/node-fetch.git",
+          "url": "git+https://github.com/bitinn/node-fetch.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1834,7 +2067,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=http%3A//github.com/garycourt/uri-js",
+      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=git%2Bssh%3A//git%40github.com/garycourt/uri-js.git",
       "externalReferences": [
         {
           "url": "https://github.com/garycourt/uri-js/issues",
@@ -1842,7 +2075,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "http://github.com/garycourt/uri-js",
+          "url": "git+ssh://git@github.com/garycourt/uri-js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1870,9 +2103,19 @@
       "purl": "pkg:npm/minimatch@9.0.3?vcs_url=git%3A//github.com/isaacs/minimatch.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/minimatch/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/minimatch.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minimatch#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1890,12 +2133,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-exceptions@2.5.0?vcs_url=kemitchell/spdx-exceptions.json",
+      "purl": "pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git",
       "externalReferences": [
         {
-          "url": "kemitchell/spdx-exceptions.json",
+          "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kemitchell/spdx-exceptions.json.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kemitchell/spdx-exceptions.json#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1915,6 +2168,11 @@
       ],
       "purl": "pkg:npm/retry@0.12.0?vcs_url=git%3A//github.com/tim-kos/node-retry.git",
       "externalReferences": [
+        {
+          "url": "https://github.com/tim-kos/node-retry/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
           "url": "git://github.com/tim-kos/node-retry.git",
           "type": "vcs",
@@ -1941,12 +2199,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=https%3A//github.com/isaacs/minipass-collect",
+      "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-collect.git",
       "externalReferences": [
         {
-          "url": "https://github.com/isaacs/minipass-collect",
+          "url": "https://github.com/isaacs/minipass-collect/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/minipass-collect.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass-collect#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1964,35 +2232,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=https%3A//github.com/alexei/sprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=git%2Bhttps%3A//github.com/alexei/sprintf.js.git",
       "externalReferences": [
         {
-          "url": "https://github.com/alexei/sprintf.js.git",
+          "url": "https://github.com/alexei/sprintf.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/alexei/sprintf.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "strip-ansi",
-      "version": "7.1.0",
-      "bom-ref": "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
-      "author": "Sindre Sorhus",
-      "description": "Strip ANSI escape codes from a string",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=chalk/strip-ansi",
-      "externalReferences": [
-        {
-          "url": "chalk/strip-ansi",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "url": "https://github.com/alexei/sprintf.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2043,7 +2298,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A//github.com/npm/unique-filename.git",
+      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-filename.git",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/unique-filename/issues",
@@ -2051,7 +2306,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/unique-filename.git",
+          "url": "git+https://github.com/npm/unique-filename.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2079,9 +2334,19 @@
       "purl": "pkg:npm/foreground-child@3.1.1?vcs_url=git%2Bhttps%3A//github.com/tapjs/foreground-child.git",
       "externalReferences": [
         {
+          "url": "https://github.com/tapjs/foreground-child/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/tapjs/foreground-child.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tapjs/foreground-child#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2132,12 +2397,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A//github.com/Qix-/color-convert.git",
       "externalReferences": [
         {
-          "url": "Qix-/color-convert",
+          "url": "https://github.com/Qix-/color-convert/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/Qix-/color-convert.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Qix-/color-convert#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2155,7 +2430,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A//github.com/watson/is-lambda.git",
+      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=git%2Bhttps%3A//github.com/watson/is-lambda.git",
       "externalReferences": [
         {
           "url": "https://github.com/watson/is-lambda/issues",
@@ -2163,7 +2438,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/watson/is-lambda.git",
+          "url": "git+https://github.com/watson/is-lambda.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2188,12 +2463,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/indent-string@4.0.0?vcs_url=sindresorhus/indent-string",
+      "purl": "pkg:npm/indent-string@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/indent-string.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/indent-string",
+          "url": "https://github.com/sindresorhus/indent-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/indent-string.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/indent-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2244,12 +2529,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/env-paths@2.2.1?vcs_url=sindresorhus/env-paths",
+      "purl": "pkg:npm/env-paths@2.2.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/env-paths.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/env-paths",
+          "url": "https://github.com/sindresorhus/env-paths/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/env-paths.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/env-paths#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2267,7 +2562,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/are-we-there-yet@2.0.0?vcs_url=https%3A//github.com/npm/are-we-there-yet.git",
+      "purl": "pkg:npm/are-we-there-yet@2.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/are-we-there-yet.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/are-we-there-yet/issues",
@@ -2275,7 +2570,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/are-we-there-yet.git",
+          "url": "git+https://github.com/npm/are-we-there-yet.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2300,12 +2595,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/encoding@0.1.13?vcs_url=https%3A//github.com/andris9/encoding.git",
+      "purl": "pkg:npm/encoding@0.1.13?vcs_url=git%2Bhttps%3A//github.com/andris9/encoding.git",
       "externalReferences": [
         {
-          "url": "https://github.com/andris9/encoding.git",
+          "url": "https://github.com/andris9/encoding/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/andris9/encoding.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/andris9/encoding#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2323,35 +2628,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-from-string@2.0.2?vcs_url=floatdrop/require-from-string",
+      "purl": "pkg:npm/require-from-string@2.0.2?vcs_url=git%2Bhttps%3A//github.com/floatdrop/require-from-string.git",
       "externalReferences": [
         {
-          "url": "floatdrop/require-from-string",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "concat-map",
-      "version": "0.0.1",
-      "bom-ref": "85a921b7eeda4e67717e2784169faf299a3586a0de8596454b735ce7781b7df9822d6499fd68e4e7461fe591bd8b5a5664dae04de10bfc79727c63107c930d27",
-      "author": "James Halliday",
-      "description": "concatenative mapdashery",
-      "licenses": [
+          "url": "https://github.com/floatdrop/require-from-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/concat-map@0.0.1?vcs_url=git%3A//github.com/substack/node-concat-map.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/substack/node-concat-map.git",
+          "url": "git+https://github.com/floatdrop/require-from-string.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/floatdrop/require-from-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2369,7 +2661,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aproba@2.0.0?vcs_url=https%3A//github.com/iarna/aproba",
+      "purl": "pkg:npm/aproba@2.0.0?vcs_url=git%2Bhttps%3A//github.com/iarna/aproba.git",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/aproba/issues",
@@ -2377,7 +2669,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/iarna/aproba",
+          "url": "git+https://github.com/iarna/aproba.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2413,6 +2705,11 @@
           "url": "git://github.com/IndigoUnited/node-promise-retry.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/IndigoUnited/node-promise-retry#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2430,12 +2727,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/wide-align@1.1.5?vcs_url=https%3A//github.com/iarna/wide-align",
+      "purl": "pkg:npm/wide-align@1.1.5?vcs_url=git%2Bhttps%3A//github.com/iarna/wide-align.git",
       "externalReferences": [
         {
-          "url": "https://github.com/iarna/wide-align",
+          "url": "https://github.com/iarna/wide-align/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/iarna/wide-align.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/iarna/wide-align#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2453,7 +2760,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-unicode@2.0.1?vcs_url=https%3A//github.com/iarna/has-unicode",
+      "purl": "pkg:npm/has-unicode@2.0.1?vcs_url=git%2Bhttps%3A//github.com/iarna/has-unicode.git",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/has-unicode/issues",
@@ -2461,7 +2768,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/iarna/has-unicode",
+          "url": "git+https://github.com/iarna/has-unicode.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2486,12 +2793,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=sindresorhus/shebang-regex",
+      "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/shebang-regex.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/shebang-regex",
+          "url": "https://github.com/sindresorhus/shebang-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/shebang-regex.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/shebang-regex#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2510,7 +2827,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A//github.com/npm/agent.git",
+      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/agent/issues",
@@ -2518,7 +2835,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/agent.git",
+          "url": "git+https://github.com/npm/agent.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2554,29 +2871,11 @@
           "url": "git+https://github.com/ChALkeR/safer-buffer.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "ansi-regex",
-      "version": "6.0.1",
-      "bom-ref": "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47",
-      "author": "Sindre Sorhus",
-      "description": "Regular expression for matching ANSI escape codes",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ansi-regex@6.0.1?vcs_url=chalk/ansi-regex",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-regex",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "url": "https://github.com/ChALkeR/safer-buffer#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2594,68 +2893,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/moo@0.5.2?vcs_url=https%3A//github.com/tjvr/moo.git",
+      "purl": "pkg:npm/moo@0.5.2?vcs_url=git%2Bhttps%3A//github.com/tjvr/moo.git",
       "externalReferences": [
         {
-          "url": "https://github.com/tjvr/moo.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "wrappy",
-      "version": "1.0.2",
-      "bom-ref": "916de4d4b37b63c4e053b6b4e078c32be0012c31db73cacea4afd3cd3d9ff4f76db104b79c63f21872199e656e9192acbda758afa7b92802111fa743921f7e78",
-      "author": "Isaac Z. Schlueter",
-      "description": "Callback wrapping utility",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/wrappy@1.0.2?vcs_url=https%3A//github.com/npm/wrappy",
-      "externalReferences": [
-        {
-          "url": "https://github.com/npm/wrappy/issues",
+          "url": "https://github.com/tjvr/moo/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/wrappy",
+          "url": "git+https://github.com/tjvr/moo.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
-          "url": "https://github.com/npm/wrappy",
+          "url": "https://github.com/tjvr/moo#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "minimatch",
-      "version": "3.1.2",
-      "bom-ref": "9405269906c6793d8dc7bee60819fa5679f860b7ce0955cfa9a6710711ef945c9f3c2f452320ba037afa6c67c260290e0d1956dafd77d5905f6866ac91a61a7f",
-      "author": "Isaac Z. Schlueter",
-      "description": "a glob matcher in javascript",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/minimatch@3.1.2?vcs_url=git%3A//github.com/isaacs/minimatch.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/isaacs/minimatch.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -2706,15 +2959,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/punycode@2.3.1?vcs_url=https%3A//github.com/mathiasbynens/punycode.js.git",
+      "purl": "pkg:npm/punycode@2.3.1?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/punycode.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/punycode.js/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/punycode.js.git",
+          "url": "git+https://github.com/mathiasbynens/punycode.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2738,12 +2991,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/delegates@1.0.0?vcs_url=visionmedia/node-delegates",
+      "purl": "pkg:npm/delegates@1.0.0?vcs_url=git%2Bhttps%3A//github.com/visionmedia/node-delegates.git",
       "externalReferences": [
         {
-          "url": "visionmedia/node-delegates",
+          "url": "https://github.com/visionmedia/node-delegates/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/visionmedia/node-delegates.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/visionmedia/node-delegates#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2761,12 +3024,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/isexe@3.1.1?vcs_url=https%3A//github.com/isaacs/isexe",
+      "purl": "pkg:npm/isexe@3.1.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
       "externalReferences": [
         {
-          "url": "https://github.com/isaacs/isexe",
+          "url": "https://github.com/isaacs/isexe/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/isaacs/isexe.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/isexe#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2783,12 +3056,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/negotiator@0.6.3?vcs_url=jshttp/negotiator",
+      "purl": "pkg:npm/negotiator@0.6.3?vcs_url=git%2Bhttps%3A//github.com/jshttp/negotiator.git",
       "externalReferences": [
         {
-          "url": "jshttp/negotiator",
+          "url": "https://github.com/jshttp/negotiator/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/jshttp/negotiator.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jshttp/negotiator#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2806,7 +3089,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gauge@3.0.2?vcs_url=https%3A//github.com/iarna/gauge",
+      "purl": "pkg:npm/gauge@3.0.2?vcs_url=git%2Bhttps%3A//github.com/iarna/gauge.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/gauge/issues",
@@ -2814,7 +3097,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/iarna/gauge",
+          "url": "git+https://github.com/iarna/gauge.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -2842,9 +3125,19 @@
       "purl": "pkg:npm/ip-address@9.0.5?vcs_url=git%3A//github.com/beaugunderson/ip-address.git",
       "externalReferences": [
         {
+          "url": "https://github.com/beaugunderson/ip-address/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/beaugunderson/ip-address.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/beaugunderson/ip-address#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2862,12 +3155,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
+      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/https-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2887,9 +3190,19 @@
       "purl": "pkg:npm/nan@2.18.0?vcs_url=git%3A//github.com/nodejs/nan.git",
       "externalReferences": [
         {
+          "url": "https://github.com/nodejs/nan/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/nan.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/nan#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2909,6 +3222,11 @@
       ],
       "purl": "pkg:npm/balanced-match@1.0.2?vcs_url=git%3A//github.com/juliangruber/balanced-match.git",
       "externalReferences": [
+        {
+          "url": "https://github.com/juliangruber/balanced-match/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
           "url": "git://github.com/juliangruber/balanced-match.git",
           "type": "vcs",
@@ -2935,12 +3253,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/proc-log@3.0.0?vcs_url=https%3A//github.com/npm/proc-log.git",
+      "purl": "pkg:npm/proc-log@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/proc-log.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/proc-log.git",
+          "url": "https://github.com/npm/proc-log/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/proc-log.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/proc-log#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2958,12 +3286,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=sindresorhus/clean-stack",
+      "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/clean-stack.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/clean-stack",
+          "url": "https://github.com/sindresorhus/clean-stack/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/clean-stack.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/clean-stack#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -2981,7 +3319,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/railroad-diagrams@1.0.0?vcs_url=https%3A//github.com/tabatkins/railroad-diagrams.git",
+      "purl": "pkg:npm/railroad-diagrams@1.0.0?vcs_url=git%2Bhttps%3A//github.com/tabatkins/railroad-diagrams.git",
       "externalReferences": [
         {
           "url": "https://github.com/tabatkins/railroad-diagrams/issues",
@@ -2989,7 +3327,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/tabatkins/railroad-diagrams.git",
+          "url": "git+https://github.com/tabatkins/railroad-diagrams.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -3014,12 +3352,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=chalk/wrap-ansi",
+      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git",
       "externalReferences": [
         {
-          "url": "chalk/wrap-ansi",
+          "url": "https://github.com/chalk/wrap-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/wrap-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/wrap-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3040,9 +3388,19 @@
       "purl": "pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/yallist.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/yallist/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/yallist.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/yallist#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3063,65 +3421,19 @@
       "purl": "pkg:npm/lru-cache@6.0.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
       "externalReferences": [
         {
-          "url": "git://github.com/isaacs/node-lru-cache.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "isexe",
-      "version": "2.0.0",
-      "bom-ref": "b58870bd2e149e7cab4e3fa248c57a93dfb17ce6212e1aaba7271b64e8d4ba0ee714680334e855b29398b8d690e85ea4c8a5e70a1df7f3c05f49d42a880bc40d",
-      "author": "Isaac Z. Schlueter",
-      "description": "Minimal module to check if a file is executable.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/isexe.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/isaacs/isexe/issues",
+          "url": "https://github.com/isaacs/node-lru-cache/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git+https://github.com/isaacs/isexe.git",
+          "url": "git://github.com/isaacs/node-lru-cache.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
-          "url": "https://github.com/isaacs/isexe#readme",
+          "url": "https://github.com/isaacs/node-lru-cache#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "minipass",
-      "version": "3.3.6",
-      "bom-ref": "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58",
-      "author": "Isaac Z. Schlueter",
-      "description": "minimal implementation of a PassThrough stream",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
-      "externalReferences": [
-        {
-          "url": "git+https://github.com/isaacs/minipass.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -3139,117 +3451,20 @@
           }
         }
       ],
-      "purl": "pkg:npm/js-yaml@3.14.1?vcs_url=nodeca/js-yaml",
+      "purl": "pkg:npm/js-yaml@3.14.1?vcs_url=git%2Bhttps%3A//github.com/nodeca/js-yaml.git",
       "externalReferences": [
         {
-          "url": "nodeca/js-yaml",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        },
-        {
-          "url": "https://github.com/nodeca/js-yaml",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "sprintf-js",
-      "version": "1.1.3",
-      "bom-ref": "b99efd75b29f521b0cde78b07542aeb33a77ae3b453a5bc071d862c94bbd5c987ec38b9159a28fe8479cf13d1e05018220a8e61713e3488b1f003ec14381aa7e",
-      "author": "Alexandru Mărășteanu",
-      "description": "JavaScript sprintf implementation",
-      "licenses": [
-        {
-          "license": {
-            "id": "BSD-3-Clause"
-          }
-        }
-      ],
-      "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A//github.com/alexei/sprintf.js.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/alexei/sprintf.js.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lru-cache",
-      "version": "10.2.0",
-      "bom-ref": "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
-      "author": "Isaac Z. Schlueter",
-      "description": "A cache object that deletes the least-recently-used items.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lru-cache@10.2.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/isaacs/node-lru-cache.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "semver",
-      "version": "6.3.1",
-      "bom-ref": "bcba31fdbed5203cbf1fe8269621bc2e2bcb8d28a236b82953df32bbbf28d5df59d4bc539a42263d45e4fcf1446dfa5a63e55e2049411bf6254c72ceecc640e2",
-      "author": "GitHub Inc.",
-      "description": "The semantic version parser used by npm.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/semver@6.3.1?vcs_url=https%3A//github.com/npm/node-semver.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/npm/node-semver.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "signal-exit",
-      "version": "3.0.7",
-      "bom-ref": "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360",
-      "author": "Ben Coe",
-      "description": "when you want to fire an event no matter how a process exits.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/tapjs/signal-exit/issues",
+          "url": "https://github.com/nodeca/js-yaml/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/tapjs/signal-exit.git",
+          "url": "git+https://github.com/nodeca/js-yaml.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
-          "url": "https://github.com/tapjs/signal-exit",
+          "url": "https://github.com/nodeca/js-yaml",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
@@ -3290,52 +3505,6 @@
     },
     {
       "type": "library",
-      "name": "string-width",
-      "version": "5.1.2",
-      "bom-ref": "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
-      "author": "Sindre Sorhus",
-      "description": "Get the visual width of a string - the number of columns required to display it",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/string-width@5.1.2?vcs_url=sindresorhus/string-width",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/string-width",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "eastasianwidth",
-      "version": "0.2.0",
-      "bom-ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
-      "author": "Masaki Komagata",
-      "description": "Get East Asian Width from a character.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A//github.com/komagata/eastasianwidth.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/komagata/eastasianwidth.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "minipass",
       "version": "5.0.0",
       "bom-ref": "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
@@ -3351,9 +3520,19 @@
       "purl": "pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/minipass/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minipass.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3370,35 +3549,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits",
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
       "externalReferences": [
         {
-          "url": "git://github.com/isaacs/inherits",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "fs.realpath",
-      "version": "1.0.0",
-      "bom-ref": "c8f05d8126ce333247c84c6c1dc69dbd5b85bc715d67f3862bb2bf298fcc84013611040c88f0963278953e63e3147747a4c790573eed15698afd96511910e7df",
-      "author": "Isaac Z. Schlueter",
-      "description": "Use node's fs.realpath, but fall back to the JS implementation if the native one fails",
-      "licenses": [
+          "url": "https://github.com/isaacs/inherits/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/fs.realpath@1.0.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/fs.realpath.git",
-      "externalReferences": [
-        {
-          "url": "git+https://github.com/isaacs/fs.realpath.git",
+          "url": "git://github.com/isaacs/inherits.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/inherits#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3416,12 +3582,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
       "externalReferences": [
         {
-          "url": "chalk/ansi-regex",
+          "url": "https://github.com/chalk/ansi-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-regex.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-regex#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3473,68 +3649,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git",
       "externalReferences": [
         {
-          "url": "chalk/strip-ansi",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "inflight",
-      "version": "1.0.6",
-      "bom-ref": "ccedb4b908cdbd594b152651aa81c9e0e9ebcaf2829ebf566013d512d59033ab78f03e2c9a7b77b3c165d08de0ad9235706f3740358a80ca507271155a757ea8",
-      "author": "Isaac Z. Schlueter",
-      "description": "Add callbacks to requests in flight to avoid async duplication",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/inflight@1.0.6?vcs_url=https%3A//github.com/npm/inflight.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/isaacs/inflight/issues",
+          "url": "https://github.com/chalk/strip-ansi/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/npm/inflight.git",
+          "url": "git+https://github.com/chalk/strip-ansi.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
-          "url": "https://github.com/isaacs/inflight",
+          "url": "https://github.com/chalk/strip-ansi#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "once",
-      "version": "1.4.0",
-      "bom-ref": "ccf03ef07af39983cfd90210b458f6f39f464bfca9a20392375a2e76f85cbcd0812b7621ea07d23e8a3be9a644fcbe1d939bf5d4745a0a11badf7df80eb48e98",
-      "author": "Isaac Z. Schlueter",
-      "description": "Run a function exactly one time",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/once@1.4.0?vcs_url=git%3A//github.com/isaacs/once",
-      "externalReferences": [
-        {
-          "url": "git://github.com/isaacs/once",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
         }
       ]
     },
@@ -3552,7 +3682,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%40github.com%3Apkgjs/parseargs.git",
+      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%2Bssh%3A//git%40github.com/pkgjs/parseargs.git",
       "externalReferences": [
         {
           "url": "https://github.com/pkgjs/parseargs/issues",
@@ -3560,45 +3690,12 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git@github.com:pkgjs/parseargs.git",
+          "url": "git+ssh://git@github.com/pkgjs/parseargs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://github.com/pkgjs/parseargs#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "fs-minipass",
-      "version": "3.0.3",
-      "bom-ref": "d148d6ac19a1876b46b90af311f1d7f7ea4b3656cc07d47debda98666cc5ee90e30fcfd47e74476eff8fc17935de46ec1fa9f66f63a318f7a3eedb1e06450677",
-      "author": "GitHub Inc.",
-      "description": "fs read and write streams based on minipass",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A//github.com/npm/fs-minipass.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/npm/fs-minipass/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "https://github.com/npm/fs-minipass.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/npm/fs-minipass#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
@@ -3618,12 +3715,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-dir@3.1.0?vcs_url=sindresorhus/make-dir",
+      "purl": "pkg:npm/make-dir@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/make-dir.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/make-dir",
+          "url": "https://github.com/sindresorhus/make-dir/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/make-dir.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/make-dir#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3640,35 +3747,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
       "externalReferences": [
         {
-          "url": "git://github.com/nodejs/readable-stream",
+          "url": "https://github.com/nodejs/readable-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/nodejs/readable-stream.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "ansi-styles",
-      "version": "6.2.1",
-      "bom-ref": "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9",
-      "author": "Sindre Sorhus",
-      "description": "ANSI escape codes for styling strings in the terminal",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=chalk/ansi-styles",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-styles",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "url": "https://github.com/nodejs/readable-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3686,12 +3780,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacache@18.0.2?vcs_url=https%3A//github.com/npm/cacache.git",
+      "purl": "pkg:npm/cacache@18.0.2?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/cacache.git",
+          "url": "https://github.com/npm/cacache/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/cacache.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/cacache#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3742,12 +3846,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/commander@2.20.3?vcs_url=https%3A//github.com/tj/commander.js.git",
+      "purl": "pkg:npm/commander@2.20.3?vcs_url=git%2Bhttps%3A//github.com/tj/commander.js.git",
       "externalReferences": [
         {
-          "url": "https://github.com/tj/commander.js.git",
+          "url": "https://github.com/tj/commander.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/tj/commander.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/tj/commander.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3768,9 +3882,19 @@
       "purl": "pkg:npm/glob@10.3.10?vcs_url=git%3A//github.com/isaacs/node-glob.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/node-glob/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/isaacs/node-glob.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/node-glob#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3788,12 +3912,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@4.0.0?vcs_url=https%3A//github.com/npm/node-which.git",
+      "purl": "pkg:npm/which@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-which.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/node-which.git",
+          "url": "https://github.com/npm/node-which/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/node-which.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/node-which#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3811,12 +3945,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@7.2.0?vcs_url=https%3A//github.com/npm/nopt.git",
+      "purl": "pkg:npm/nopt@7.2.0?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/nopt.git",
+          "url": "https://github.com/npm/nopt/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/nopt.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/nopt#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3867,12 +4011,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
       "externalReferences": [
         {
-          "url": "https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+          "url": "https://github.com/TooTallNate/proxy-agents/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/proxy-agents#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3890,12 +4044,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/extend@3.0.2?vcs_url=https%3A//github.com/justmoon/node-extend.git",
+      "purl": "pkg:npm/extend@3.0.2?vcs_url=git%2Bhttps%3A//github.com/justmoon/node-extend.git",
       "externalReferences": [
         {
-          "url": "https://github.com/justmoon/node-extend.git",
+          "url": "https://github.com/justmoon/node-extend/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/justmoon/node-extend.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/justmoon/node-extend#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3913,12 +4077,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/console-control-strings@1.1.0?vcs_url=https%3A//github.com/iarna/console-control-strings",
+      "purl": "pkg:npm/console-control-strings@1.1.0?vcs_url=git%2Bhttps%3A//github.com/iarna/console-control-strings.git",
       "externalReferences": [
         {
-          "url": "https://github.com/iarna/console-control-strings",
+          "url": "https://github.com/iarna/console-control-strings/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/iarna/console-control-strings.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/iarna/console-control-strings#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -3969,10 +4143,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/cross-spawn@7.0.3?vcs_url=git%40github.com%3Amoxystudio/node-cross-spawn.git",
+      "purl": "pkg:npm/cross-spawn@7.0.3?vcs_url=git%2Bssh%3A//git%40github.com/moxystudio/node-cross-spawn.git",
       "externalReferences": [
         {
-          "url": "git@github.com:moxystudio/node-cross-spawn.git",
+          "url": "https://github.com/moxystudio/node-cross-spawn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -3997,7 +4176,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/libxmljs2@0.33.0?vcs_url=http%3A//github.com/marudor/libxmljs2.git",
+      "purl": "pkg:npm/libxmljs2@0.33.0?vcs_url=git%2Bssh%3A//git%40github.com/marudor/libxmljs2.git",
       "externalReferences": [
         {
           "url": "http://github.com/marudor/libxmljs2/issues",
@@ -4005,9 +4184,14 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "http://github.com/marudor/libxmljs2.git",
+          "url": "git+ssh://git@github.com/marudor/libxmljs2.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/marudor/libxmljs2#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4025,43 +4209,20 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=https%3A//github.com/npm/unique-slug.git",
+      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/unique-slug.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/unique-slug.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "emoji-regex",
-      "version": "9.2.2",
-      "bom-ref": "e6fac8d058ff670b96f6a3f6655d132630dcb2820a96961eaf9aa952722d353bbc82f37cc820fa3cc838ccd1fe5ebb27bf7ff61a9b180033d6a6b4508615e4a9",
-      "author": "Mathias Bynens",
-      "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/mathiasbynens/emoji-regex/issues",
+          "url": "https://github.com/npm/unique-slug/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/emoji-regex.git",
+          "url": "git+https://github.com/npm/unique-slug.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
-          "url": "https://mths.be/emoji-regex",
+          "url": "https://github.com/npm/unique-slug#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
@@ -4118,32 +4279,19 @@
       "purl": "pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minizlib.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/minizlib/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minizlib.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "minipass",
-      "version": "7.0.4",
-      "bom-ref": "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
-      "author": "Isaac Z. Schlueter",
-      "description": "minimal implementation of a PassThrough stream",
-      "licenses": [
+        },
         {
-          "license": {
-            "id": "ISC"
-          }
-        }
-      ],
-      "purl": "pkg:npm/minipass@7.0.4?vcs_url=https%3A//github.com/isaacs/minipass",
-      "externalReferences": [
-        {
-          "url": "https://github.com/isaacs/minipass",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "url": "https://github.com/isaacs/minizlib#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4161,12 +4309,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=kevva/shebang-command",
+      "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=git%2Bhttps%3A//github.com/kevva/shebang-command.git",
       "externalReferences": [
         {
-          "url": "kevva/shebang-command",
+          "url": "https://github.com/kevva/shebang-command/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/kevva/shebang-command.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kevva/shebang-command#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4183,12 +4341,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ms@2.1.2?vcs_url=zeit/ms",
+      "purl": "pkg:npm/ms@2.1.2?vcs_url=git%2Bhttps%3A//github.com/zeit/ms.git",
       "externalReferences": [
         {
-          "url": "zeit/ms",
+          "url": "https://github.com/zeit/ms/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/zeit/ms.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/zeit/ms#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4243,9 +4411,19 @@
       "purl": "pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass-flush.git",
       "externalReferences": [
         {
+          "url": "https://github.com/isaacs/minipass-flush/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/isaacs/minipass-flush.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/minipass-flush#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4264,12 +4442,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=yargs/cliui",
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=git%2Bhttps%3A//github.com/yargs/cliui.git",
       "externalReferences": [
         {
-          "url": "yargs/cliui",
+          "url": "https://github.com/yargs/cliui/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/yargs/cliui.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/yargs/cliui#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4287,12 +4475,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.6.0?vcs_url=https%3A//github.com/npm/node-semver.git",
+      "purl": "pkg:npm/semver@7.6.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/node-semver.git",
+          "url": "https://github.com/npm/node-semver/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/node-semver.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/node-semver#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4310,12 +4508,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A//github.com/npm/make-fetch-happen.git",
+      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/make-fetch-happen.git",
+          "url": "https://github.com/npm/make-fetch-happen/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/make-fetch-happen.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/make-fetch-happen#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -4347,34 +4555,6 @@
         },
         {
           "url": "https://github.com/epoberezkin/json-schema-traverse#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "brace-expansion",
-      "version": "1.1.11",
-      "bom-ref": "fb95eb05adfee0d22acce2255f500ab008157bf4ba29ebc4a9b40aefcab7aef31ebba24933b40e5f204df1321616150b3c8815901edeedafdcf86568a2a0efb3",
-      "author": "Julian Gruber",
-      "description": "Brace expansion as known from sh/bash",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/brace-expansion@1.1.11?vcs_url=git%3A//github.com/juliangruber/brace-expansion.git",
-      "externalReferences": [
-        {
-          "url": "git://github.com/juliangruber/brace-expansion.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/juliangruber/brace-expansion",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
@@ -4430,7 +4610,7 @@
     {
       "ref": "1a7557d04d84c69eeebcc9299c1946654440ba6e18ba01d3efaec450fa6bbe3267f3411563835bcc6f3433d33357a677033a17d3c723ea065f2ba41b911a6ef6",
       "dependsOn": [
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
@@ -4451,8 +4631,8 @@
       "dependsOn": [
         "306d86f43239a0aaaef6ff7911ea3f82bcbf20016a8d3fdf9f622adf0bd34d7f5df2274acafbc691acf2a24d41818fd55f11e2d226b7d28da59a65364a3bf3bb",
         "82a1837d3023f9ee634932aad335538baf52c5b6324f68f9ac628cf886a6a299eb70f8a7b6e9290e9204a62bdc8bdaa10f5014336dcfafff75aa1dadb19115c0",
-        "ea89cd0cfb183909032f50f9ab09d7ab6e42edea3ea52c356c2b7e4ad7f68d9741bdf264a526882a4a991d8db857411aa7d376812a393b0fd3276342dc0d38d4",
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
+        "ea89cd0cfb183909032f50f9ab09d7ab6e42edea3ea52c356c2b7e4ad7f68d9741bdf264a526882a4a991d8db857411aa7d376812a393b0fd3276342dc0d38d4"
       ]
     },
     {
@@ -4492,14 +4672,6 @@
       "ref": "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76"
     },
     {
-      "ref": "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
-      "dependsOn": [
-        "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
-        "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
-        "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9"
-      ]
-    },
-    {
       "ref": "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
       "dependsOn": [
         "1ecf4ebee53801b064c54196d5c852e94cc13ca5c8590b2f04c7b853d1b06cfa75bff0552470056a9e5b6355db6f357f4e1cda0764bc6674ebe0abfdd4eae78c",
@@ -4510,18 +4682,7 @@
     {
       "ref": "2cb7dac69af59fdfc88b3f3cc5c43c3522357f5a6b1fad029a5df2234a5755ed705fcbae23cabc19d661f35d79c90656009b3e6069b9fdb895cc650b3bb4efd0",
       "dependsOn": [
-        "2d866d17a57be1139f6b6d57971cb6b26d2dff36b0ee93d17ac7567cdb319cfda37ea602de7146ded6bb8fafb66f47f08e40663334dabfff696367fed14a5702"
-      ]
-    },
-    {
-      "ref": "2d866d17a57be1139f6b6d57971cb6b26d2dff36b0ee93d17ac7567cdb319cfda37ea602de7146ded6bb8fafb66f47f08e40663334dabfff696367fed14a5702",
-      "dependsOn": [
-        "31bc695ffd83e32d5957c850b83690923ddfe03b88c451607d6b33cdaab52154fe639b51cd6ecae5e63dfe969f50d64b882a199f2d204ccb3a22518589bb1200",
-        "9405269906c6793d8dc7bee60819fa5679f860b7ce0955cfa9a6710711ef945c9f3c2f452320ba037afa6c67c260290e0d1956dafd77d5905f6866ac91a61a7f",
-        "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3",
-        "c8f05d8126ce333247c84c6c1dc69dbd5b85bc715d67f3862bb2bf298fcc84013611040c88f0963278953e63e3147747a4c790573eed15698afd96511910e7df",
-        "ccedb4b908cdbd594b152651aa81c9e0e9ebcaf2829ebf566013d512d59033ab78f03e2c9a7b77b3c165d08de0ad9235706f3740358a80ca507271155a757ea8",
-        "ccf03ef07af39983cfd90210b458f6f39f464bfca9a20392375a2e76f85cbcd0812b7621ea07d23e8a3be9a644fcbe1d939bf5d4745a0a11badf7df80eb48e98"
+        "da1ef8b112597e3adc80e19daa33bfa067d47d556bd04a5f8f8c1dbe661a0dcbd103e2cc667fb1448c9553bc06c73232f451fc8c3fdbbf981816d44bf31bdc53"
       ]
     },
     {
@@ -4534,31 +4695,13 @@
       ]
     },
     {
-      "ref": "304b40fbfeba2e02eda56141d23e8432fe2da37fbdddc6e33db4cf44853021a82f8978090b67aac5420b729d5ecb53808ea18deaee77d9bfb7a11baac6bf10b9",
-      "dependsOn": [
-        "3659247eab67bf0395c15d45b4c0287aff58dbbb923d4e3ca84f8c036fc62e7d38206e661fa5695d3ef477b05dd38b614f42f37deeac62964c65b1afc9f92d64"
-      ]
-    },
-    {
       "ref": "306d86f43239a0aaaef6ff7911ea3f82bcbf20016a8d3fdf9f622adf0bd34d7f5df2274acafbc691acf2a24d41818fd55f11e2d226b7d28da59a65364a3bf3bb",
       "dependsOn": [
-        "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58"
-      ]
-    },
-    {
-      "ref": "31bc695ffd83e32d5957c850b83690923ddfe03b88c451607d6b33cdaab52154fe639b51cd6ecae5e63dfe969f50d64b882a199f2d204ccb3a22518589bb1200"
-    },
-    {
-      "ref": "320ddf72f79a7090799aca262ad4287055a90b1bee1253c7e35528fd2903ac0557538dc8ea87d1f37fffc7ac564dc00eeba661e0cf618b35297b040ce649929f",
-      "dependsOn": [
-        "b58870bd2e149e7cab4e3fa248c57a93dfb17ce6212e1aaba7271b64e8d4ba0ee714680334e855b29398b8d690e85ea4c8a5e70a1df7f3c05f49d42a880bc40d"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
       "ref": "3481c8aa9bf3e9431ea148a245d37b8c02be76f629657dd483952e9028624b14711f50038f4bb05557c57867e639cf721a477f487abe57cbe0d954860df06519"
-    },
-    {
-      "ref": "3659247eab67bf0395c15d45b4c0287aff58dbbb923d4e3ca84f8c036fc62e7d38206e661fa5695d3ef477b05dd38b614f42f37deeac62964c65b1afc9f92d64"
     },
     {
       "ref": "366cab64a2060de3f6c9ebe226889db94432b64042c349297d8eaa0036150d692bf0b787bb70351a12e49eeaccccbb7045c545668506b7b9ee0397d8112a9c37",
@@ -4614,19 +4757,6 @@
       "dependsOn": [
         "7b717435b244f5f029b4c6cc4824106bcfffcd185e13a5bdfc0ad68d150303180169328d83d7f4421e8ed9647a8cbce24e5bc589fb0a2a409f5935dbe2cc6687",
         "a8ce435a5c0d633166fb1af0bb67915b01f18a1f95cdb18fcfbc07cd8e666259be972a26471198120dab7f7471e785ec2c8f399ceb055f85db5b0ebef61309b1"
-      ]
-    },
-    {
-      "ref": "428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3",
-      "dependsOn": [
-        "218613e2180c721d4cbdf3fcd86e11eb7e2fb43c5213feab479d2ee1ca9b2957e9212cb5dca1b7447ce51f2d0fedba3caf7601de9cc46547b2d8c11fb0f313e6"
-      ]
-    },
-    {
-      "ref": "42d65f358ee3030abf8cf2d8c052363694d990823251ce89e481eebf318d9f914e7ef0bb4d319703db1c948811aa80d1f86d1ab91d0dcc13d1aa2fe558423203",
-      "dependsOn": [
-        "218613e2180c721d4cbdf3fcd86e11eb7e2fb43c5213feab479d2ee1ca9b2957e9212cb5dca1b7447ce51f2d0fedba3caf7601de9cc46547b2d8c11fb0f313e6",
-        "428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3"
       ]
     },
     {
@@ -4690,7 +4820,7 @@
     {
       "ref": "501ef87306cdb906afd7ee55973e5a53e702081c56b0f3579d1873a694484757398746df4baaa79ed45c7cebc021da59179de1d5969b9ba427b7ccc51ba197d0",
       "dependsOn": [
-        "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
@@ -4702,8 +4832,8 @@
     {
       "ref": "52bd946f2eb0da56a89c8135018af1e8196512f12cc4a2ee6d279095877969a573b21ab98df6d6423966858f8f3aa034d25f12eae77fff0c4aca463a89be3bb7",
       "dependsOn": [
-        "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
+        "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
@@ -4711,12 +4841,12 @@
       "dependsOn": [
         "03afa59137677fa40703ab3fde11957ff5ad690c7b81b3a2e669937deeac3d3a5b0808651bd24b22540fc8f2fdc53c268ec0f85be897a0e0a8ffa07e4e400999",
         "2cb7dac69af59fdfc88b3f3cc5c43c3522357f5a6b1fad029a5df2234a5755ed705fcbae23cabc19d661f35d79c90656009b3e6069b9fdb895cc650b3bb4efd0",
-        "304b40fbfeba2e02eda56141d23e8432fe2da37fbdddc6e33db4cf44853021a82f8978090b67aac5420b729d5ecb53808ea18deaee77d9bfb7a11baac6bf10b9",
         "366cab64a2060de3f6c9ebe226889db94432b64042c349297d8eaa0036150d692bf0b787bb70351a12e49eeaccccbb7045c545668506b7b9ee0397d8112a9c37",
         "3eb25205a70ecb97e5cd41c63817da0778541123db5dd06f139b0eed4b95191312b3e7697c300e4642f052712c066e27e6e3f5ab5c5a8a7610e4ee38128177ed",
-        "42d65f358ee3030abf8cf2d8c052363694d990823251ce89e481eebf318d9f914e7ef0bb4d319703db1c948811aa80d1f86d1ab91d0dcc13d1aa2fe558423203",
         "64b33d0816593398d907fc91a979a2d24a378acbace519b953286e6eca81974a1aaf5fb04013e9abc9e100c468025045086280b81751da28a8a3226463ac98c1",
+        "a51e13f5dcd8f6788fcef3adce290f5061f53539a22db054764827bf1f78be4ebfa2e8edcd096e22b8554fb128b249f365135e0a868fd6fa66afae336bd0f0f5",
         "d1d7505142cd030ad7e53b51392cdee649a95b276a98ac538e5f7beeeeece1247c5881a94ffef9e6d5378592f1d49f4f4b38701a1e5e688218829e885ed185b2",
+        "dd734b678dc786272158f4df652218c11ca96c55b9877e14bb3ecfb869a5d0196951b77b4426bbe93580cc1c45ebf02898bd8d8df5ddb51697c887f066b6a8c4",
         "f4630729f642c623297c9662bf759507ed6a838aede517aedd28d5649d2ca53f8e241644cab92d7e138553518d38d4bbd34584c448b354ed95e681f6a0f50aea"
       ]
     },
@@ -4726,7 +4856,7 @@
     {
       "ref": "5924cb077f05d10e9335b44ce94356b8fe54d261272545bbeed99a3325726fb1efb72282b0adbb257203a0a0991c6631e6be6b5fc5c295d50114e101158d3f13",
       "dependsOn": [
-        "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
@@ -4791,17 +4921,11 @@
     {
       "ref": "73d3907e40b3224d4cb2d02695db221650101ca0aa206aa4704af0704cd3126ac38050d44aeb715ef9dcc47d1daa911beee6ac01f781030698218bb55984d797",
       "dependsOn": [
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
       "ref": "73f0a322faaefe9b5c0b5afb943701a6312706a6fdbdecef7dd62ce055ffe485c80ef899a27c46295f2886ba9042afa1d6b3b465be0d311cb15f3a43d0af1b0d"
-    },
-    {
-      "ref": "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
-      "dependsOn": [
-        "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47"
-      ]
     },
     {
       "ref": "77ce1d213c4765eff5ab631cbe135867bc6d69b8b6bc913f1f8d3c6d51bb25d5a0a4b15508ce2d869016fedcf59473cafc813a3a85dee56ce6fbfe8d20460c92",
@@ -4860,9 +4984,6 @@
       "ref": "8557e0db1263ac4af91580db39a65a5ce56b4c4cfc6ffded73984e3dae423d724a7793bc1ae94eac72e0e561036474dfe871f849e8658b8a73790e20ac747bd9"
     },
     {
-      "ref": "85a921b7eeda4e67717e2784169faf299a3586a0de8596454b735ce7781b7df9822d6499fd68e4e7461fe591bd8b5a5664dae04de10bfc79727c63107c930d27"
-    },
-    {
       "ref": "8716bcfde62a1a7e10ed6c0b8250de4bf6214298b23ff96bd1063381373d22ea8843e06205e3cf40b99796cc2bab5dc8a311b9b8b00f012b1d2b13b20255329d"
     },
     {
@@ -4890,15 +5011,12 @@
         "4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1",
         "643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d",
         "a51e13f5dcd8f6788fcef3adce290f5061f53539a22db054764827bf1f78be4ebfa2e8edcd096e22b8554fb128b249f365135e0a868fd6fa66afae336bd0f0f5",
-        "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
+        "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
         "df165543cffb2d6e35f16d45212fdb281088fd79692edd2c9ff4e9798618ab0de16f1934f966ce833dcc524fbd5226aaa3aeebcfe5c4dc387e5bc9d7b8ef0a27"
       ]
     },
     {
       "ref": "8d5c0b705e23aeef7cc341f3c51668b5b659cb3ee0d5a4331f73c7cf857d21f0acc50a0c7e315679b546d67eab2b14124d694c8f836a7ec9f498ae4d27135c3d"
-    },
-    {
-      "ref": "8d663a607d40cb2e55ece3a898bcfd3018425dacee074d375e6e2d14fe415fdda62f1dedb9a5633017a4b8d3e5014e93335a5ebe0d1783e4c982e83fdb1b6a47"
     },
     {
       "ref": "8f4a5adc26ea39c34e4c77de706e21a3e1d84346c9c8b0546396dcbc69bfcc7e4b07e797b97f5abcdc962fb6ec8cc4f1cbb15f4d7d725adefa09cdf7ae3b076b",
@@ -4909,15 +5027,6 @@
     },
     {
       "ref": "8fca66e02ba44e3844ef42b7d319c99f7d8d99b20be63ab35b870afb946f04fd639f599ff5a613eb1c95d06a1c20c60b06d274e6848eed75fd57086de873e86f"
-    },
-    {
-      "ref": "916de4d4b37b63c4e053b6b4e078c32be0012c31db73cacea4afd3cd3d9ff4f76db104b79c63f21872199e656e9192acbda758afa7b92802111fa743921f7e78"
-    },
-    {
-      "ref": "9405269906c6793d8dc7bee60819fa5679f860b7ce0955cfa9a6710711ef945c9f3c2f452320ba037afa6c67c260290e0d1956dafd77d5905f6866ac91a61a7f",
-      "dependsOn": [
-        "fb95eb05adfee0d22acce2255f500ab008157bf4ba29ebc4a9b40aefcab7aef31ebba24933b40e5f204df1321616150b3c8815901edeedafdcf86568a2a0efb3"
-      ]
     },
     {
       "ref": "958bfff07088310e7c4ea7a226fa08c44eddbdd5d1ed20f02951deac340e9309a0b46b05b856ae9f3f36a0852f0295a57d7ce259a74cb5fedc0a253dcb033786",
@@ -4943,10 +5052,10 @@
         "1004ad6decdb21fc030dc283aea0b8f491ed61ad6e7afd752774446aebf73f7fe7745b13838e8a4a5df738ddcde2833e56f0ee05c34a8277a58362620a76f6c3",
         "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
         "3be5c5345589a210f2bbd6eb4289313e266b65aea4c3dc40f230ab403afc2eb3a261a64c53df48c915516a48a5290678a3e58ff65287433a694368d716676c59",
+        "61fb957687a8bece8324d39e12feb5fc6bc916e4b1ab8d304d3d321f9e3d5275ab1b4e6e54d413975e7d2dc990dc546a25e6fd06c54397fc385a1dc5421bd4dd",
         "8716bcfde62a1a7e10ed6c0b8250de4bf6214298b23ff96bd1063381373d22ea8843e06205e3cf40b99796cc2bab5dc8a311b9b8b00f012b1d2b13b20255329d",
         "889d77e5929ed8015c56f6a0caf1a474c79f241985140b20be091ec9f654b2891b8b236e42b19b35169949f71b3b81641b7508af6d7557d326a56576327b86fd",
         "893adb4747c95d00290e4944f339d50be5110314751329dd9069f80d99007c9c79d1158270a2691489c0b59daa01f11848130b26d2f6210d966c1df9d7f6fa76",
-        "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360",
         "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551",
         "e3160e52757a6499e2d92c619b9ed7b5748cef2c6f546bec14e6a62ce6416122da4f84cfb90b868f77110efdcb0d4391f13e7059d60ae1512dfba699210fbd2a"
       ]
@@ -4955,7 +5064,7 @@
       "ref": "9fa024d42a672702b48ccc59b562ba52420637d29d3f8a898e3bd8734ea66f8c382e633a08005fb39fa1225cd684b2ddab2d38a291d992cc8a784c7a101f06a0",
       "dependsOn": [
         "1da0181838e27411ce1b9f2cbb7a34aec6ebb12c9b6fb2a18d80ba5a17b523bbe875f081fa46f98c5098f951689da35685d5db4425c1a9a35ae75ddedf90fc5f",
-        "b99efd75b29f521b0cde78b07542aeb33a77ae3b453a5bc071d862c94bbd5c987ec38b9159a28fe8479cf13d1e05018220a8e61713e3488b1f003ec14381aa7e"
+        "73f0a322faaefe9b5c0b5afb943701a6312706a6fdbdecef7dd62ce055ffe485c80ef899a27c46295f2886ba9042afa1d6b3b465be0d311cb15f3a43d0af1b0d"
       ]
     },
     {
@@ -5001,32 +5110,11 @@
       ]
     },
     {
-      "ref": "b58870bd2e149e7cab4e3fa248c57a93dfb17ce6212e1aaba7271b64e8d4ba0ee714680334e855b29398b8d690e85ea4c8a5e70a1df7f3c05f49d42a880bc40d"
-    },
-    {
-      "ref": "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58",
-      "dependsOn": [
-        "b493d9e907b07eb0053ce22a1cbe552eb468b397004cc3205290bbca97142b29a11409284f2898083f60251e9c00ee2d47e1bd733ef644edb3d1591e1a717466"
-      ]
-    },
-    {
       "ref": "b968c6095e5e9a2352b9ecebd143e49fd9f28b8ec30443d9fc2e6af3188c8edafd6c530772cb5ffd0825f1c31c37ec37258f69ef883a840a164969e48dca504e",
       "dependsOn": [
         "1084e98778e6bbfc6030e25c69ecf654c90c3036e2df7c8aad0db618115ed0e414d1496a0ca559b7bf87c97163af3869235250e299a9e8454868c515b7b7a7d3",
         "528934e59d5d722dfa530c8503f7c1af92c4174eafd63527c1b179980282c626345249dbe85eed68f130227d9b60be2da95e3adbae22ee2c2795b8d097775560"
       ]
-    },
-    {
-      "ref": "b99efd75b29f521b0cde78b07542aeb33a77ae3b453a5bc071d862c94bbd5c987ec38b9159a28fe8479cf13d1e05018220a8e61713e3488b1f003ec14381aa7e"
-    },
-    {
-      "ref": "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d"
-    },
-    {
-      "ref": "bcba31fdbed5203cbf1fe8269621bc2e2bcb8d28a236b82953df32bbbf28d5df59d4bc539a42263d45e4fcf1446dfa5a63e55e2049411bf6254c72ceecc640e2"
-    },
-    {
-      "ref": "bd270458a3c58ebc61fe01fdabf46bfc9321dd72fc59aa224361b05e0653c5823a49d8c3dcee1e0accf61b2cc36660b9e935ad0b3ba9de4da6183e00ede53360"
     },
     {
       "ref": "be9c1453ac3d7887ae8051c481d6a7c7a3b8452313fa8b2add9d9cb3a58113b667154e296d01fb114748f1f321dff0879ae712f4a5e638bf26e98ec9f3d4598b",
@@ -5035,24 +5123,10 @@
       ]
     },
     {
-      "ref": "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
-      "dependsOn": [
-        "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
-        "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c",
-        "e6fac8d058ff670b96f6a3f6655d132630dcb2820a96961eaf9aa952722d353bbc82f37cc820fa3cc838ccd1fe5ebb27bf7ff61a9b180033d6a6b4508615e4a9"
-      ]
-    },
-    {
-      "ref": "c37eb16bd1b2f30991013f79d00ce858e0c5108c934e654477115a28476eacdd2ed3c613625d1dbdb06ae844f6a3d661d8bf1e8fcac275c5c868615c2ee8130c"
-    },
-    {
       "ref": "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
     },
     {
       "ref": "c66b3957a0ea25fd0756e3154f1037d48052b77084be20842cf0996815b3e355b4faed49ec2cc3d3ef80b6a359e1c1542591847cd78c4205ebe3f2db69e9f2a3"
-    },
-    {
-      "ref": "c8f05d8126ce333247c84c6c1dc69dbd5b85bc715d67f3862bb2bf298fcc84013611040c88f0963278953e63e3147747a4c790573eed15698afd96511910e7df"
     },
     {
       "ref": "c963a4861595be8acc66d0515f33b91fcc16f768d31f55dc589573c83afd027f1d80ddef590aa710cec3a8284eb358502d97ded1479478b8222bdcc55aa81197"
@@ -5067,31 +5141,12 @@
       ]
     },
     {
-      "ref": "ccedb4b908cdbd594b152651aa81c9e0e9ebcaf2829ebf566013d512d59033ab78f03e2c9a7b77b3c165d08de0ad9235706f3740358a80ca507271155a757ea8",
-      "dependsOn": [
-        "916de4d4b37b63c4e053b6b4e078c32be0012c31db73cacea4afd3cd3d9ff4f76db104b79c63f21872199e656e9192acbda758afa7b92802111fa743921f7e78",
-        "ccf03ef07af39983cfd90210b458f6f39f464bfca9a20392375a2e76f85cbcd0812b7621ea07d23e8a3be9a644fcbe1d939bf5d4745a0a11badf7df80eb48e98"
-      ]
-    },
-    {
-      "ref": "ccf03ef07af39983cfd90210b458f6f39f464bfca9a20392375a2e76f85cbcd0812b7621ea07d23e8a3be9a644fcbe1d939bf5d4745a0a11badf7df80eb48e98",
-      "dependsOn": [
-        "916de4d4b37b63c4e053b6b4e078c32be0012c31db73cacea4afd3cd3d9ff4f76db104b79c63f21872199e656e9192acbda758afa7b92802111fa743921f7e78"
-      ]
-    },
-    {
       "ref": "cd2a3fe9485dcd34876d73347f226acd6f09a62e799abcd94b042dc71de7297f8b0161622105d7ef658ae3e9bda9aa59607d174875756bcbd840434d9c2e4ffd"
-    },
-    {
-      "ref": "d148d6ac19a1876b46b90af311f1d7f7ea4b3656cc07d47debda98666cc5ee90e30fcfd47e74476eff8fc17935de46ec1fa9f66f63a318f7a3eedb1e06450677",
-      "dependsOn": [
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
-      ]
     },
     {
       "ref": "d1d7505142cd030ad7e53b51392cdee649a95b276a98ac538e5f7beeeeece1247c5881a94ffef9e6d5378592f1d49f4f4b38701a1e5e688218829e885ed185b2",
       "dependsOn": [
-        "bcba31fdbed5203cbf1fe8269621bc2e2bcb8d28a236b82953df32bbbf28d5df59d4bc539a42263d45e4fcf1446dfa5a63e55e2049411bf6254c72ceecc640e2"
+        "f4630729f642c623297c9662bf759507ed6a838aede517aedd28d5649d2ca53f8e241644cab92d7e138553518d38d4bbd34584c448b354ed95e681f6a0f50aea"
       ]
     },
     {
@@ -5103,22 +5158,19 @@
       ]
     },
     {
-      "ref": "d43647018c09876cc2f750ce207191fcaae015edc9275579d659cfdf3492e8b488917eb677eeee69614862eeaf0f7788885446f4d643af27b00b09bc479f4cd9"
-    },
-    {
       "ref": "d6329a1b9de73a9597d46754f546cc3bf39efc36e3f88d4e0a2c0a9dea559c70bbe9af6dc00828a23ed2d947c4b3ff2e0976a05e36e6f2976efd096f34b1dcc6",
       "dependsOn": [
         "0844a579782601a82c098b3436b238cd455f90663ecebf8b2a8445920b0d01ee56f8818f42ef0e70aec36b7f2e7907e16e841bd0acc6238032a32cde114d2343",
         "1a7557d04d84c69eeebcc9299c1946654440ba6e18ba01d3efaec450fa6bbe3267f3411563835bcc6f3433d33357a677033a17d3c723ea065f2ba41b911a6ef6",
         "3eb25205a70ecb97e5cd41c63817da0778541123db5dd06f139b0eed4b95191312b3e7697c300e4642f052712c066e27e6e3f5ab5c5a8a7610e4ee38128177ed",
         "4677ae07c73d768e80ceba3af952c1a63948bbc521fb64de796d97dcbc403599027c1304563c755b36baaaef6290c05d5fbf03e9c7d15cc89ad224786adb774c",
+        "501ef87306cdb906afd7ee55973e5a53e702081c56b0f3579d1873a694484757398746df4baaa79ed45c7cebc021da59179de1d5969b9ba427b7ccc51ba197d0",
         "5924cb077f05d10e9335b44ce94356b8fe54d261272545bbeed99a3325726fb1efb72282b0adbb257203a0a0991c6631e6be6b5fc5c295d50114e101158d3f13",
         "73d3907e40b3224d4cb2d02695db221650101ca0aa206aa4704af0704cd3126ac38050d44aeb715ef9dcc47d1daa911beee6ac01f781030698218bb55984d797",
         "77d68e0a459b09ff2554a13fe3d9a10497e5a28a28304924fa65de1f55ab576603871c5ec6bd161720ac70b1f4ff610f9f25d5f2e3b4ad4f2185e973cf875cea",
-        "b9f6b447406fcfbc4cc0caadb9657917d6afa4349c0d6af618657853e481af2d0b245180e6bd35b465658814cd3fc1088a0bced5555f69fe6b9dcf6a4672642d",
-        "d148d6ac19a1876b46b90af311f1d7f7ea4b3656cc07d47debda98666cc5ee90e30fcfd47e74476eff8fc17935de46ec1fa9f66f63a318f7a3eedb1e06450677",
+        "b4c8668fe16155ec6f3f2e5029e050aef31923505b2e3233189878d7211240434a16f1fabed484da6b845f9ce3c3bb42fb7bb49464e6463a90fdac657d355c0c",
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
         "da1ef8b112597e3adc80e19daa33bfa067d47d556bd04a5f8f8c1dbe661a0dcbd103e2cc667fb1448c9553bc06c73232f451fc8c3fdbbf981816d44bf31bdc53",
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
         "efe79d9826d0e1607da0b85dff6820c9841f796a2d6a18691fcd87941347b63e19f33fb5d30150fb096955e5a4ded250ad9fc1cf187f3f6e15c7a82b53889bb3"
       ]
     },
@@ -5141,7 +5193,7 @@
         "52bd946f2eb0da56a89c8135018af1e8196512f12cc4a2ee6d279095877969a573b21ab98df6d6423966858f8f3aa034d25f12eae77fff0c4aca463a89be3bb7",
         "69d7d6fad5e7e50d998cb731123828bd1b74af8d275e603ea7ecacd87a0a76dbc9e572d2a3d44f15145621339f88eca9218c26ff7ff2a1bb1f240414fc0ccf6f",
         "77e78ed7746b8bfec8193f223bb6a40e0bfb7dcd2a8101eafa5196e7c5d80201ff35df9b6c8f0d8c596658ccb869b87373cfbd5ddfedb2233a099028883da218",
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
@@ -5180,7 +5232,7 @@
       "ref": "e4ff3e65b3c0bc13cbabd48fdef2e7800d325ba156062d6e60b7394059746b2e3d5bbe121d81cc190782606857958011c2da32a6d574425686f2d871acc12add",
       "dependsOn": [
         "0e66ea8321579de5017d37b0bb63540a49a525e0cacd2b1176cbd26d994f2bc185bdf9308662dd787b8b735d5ed418f89e94010c08ccc2beaa27f1124fed2de4",
-        "320ddf72f79a7090799aca262ad4287055a90b1bee1253c7e35528fd2903ac0557538dc8ea87d1f37fffc7ac564dc00eeba661e0cf618b35297b040ce649929f",
+        "dd31cd49289a39c7979925d4d4e532d0694d005488252e4d3c73e2431496ae71d769d40e93e8610e7e699d4ad2e501c30562f0294b8710eaa270a30c2193a90b",
         "eb2b01921d5450abfabec95da7be40968f4aeecbb395dc8eaabe5d57229f0efe1b85730a4944607ec29d3680cd22df70422a003bd93b08e3c7fd0595b12c126a"
       ]
     },
@@ -5199,9 +5251,6 @@
       ]
     },
     {
-      "ref": "e6fac8d058ff670b96f6a3f6655d132630dcb2820a96961eaf9aa952722d353bbc82f37cc820fa3cc838ccd1fe5ebb27bf7ff61a9b180033d6a6b4508615e4a9"
-    },
-    {
       "ref": "e8c391307a2f358f7d731818524a8df525a81e1e8058cda176beadaf882040bca6ba582cf9f159b9dfef90a6499dcdac8407327e9ec449420d8a9913de6646cd",
       "dependsOn": [
         "6355a89e7491534cba7e74041433af1db6ea94ebbce44a69d08f6c4f6dfaaffb17d97dbda34840898a897e09fefdb446fc103e0aba9dd2e7953474e61cbc6f17",
@@ -5212,11 +5261,8 @@
       "ref": "ea89cd0cfb183909032f50f9ab09d7ab6e42edea3ea52c356c2b7e4ad7f68d9741bdf264a526882a4a991d8db857411aa7d376812a393b0fd3276342dc0d38d4",
       "dependsOn": [
         "b493d9e907b07eb0053ce22a1cbe552eb468b397004cc3205290bbca97142b29a11409284f2898083f60251e9c00ee2d47e1bd733ef644edb3d1591e1a717466",
-        "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
-    },
-    {
-      "ref": "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb"
     },
     {
       "ref": "eb2b01921d5450abfabec95da7be40968f4aeecbb395dc8eaabe5d57229f0efe1b85730a4944607ec29d3680cd22df70422a003bd93b08e3c7fd0595b12c126a",
@@ -5242,17 +5288,14 @@
     {
       "ref": "efe79d9826d0e1607da0b85dff6820c9841f796a2d6a18691fcd87941347b63e19f33fb5d30150fb096955e5a4ded250ad9fc1cf187f3f6e15c7a82b53889bb3",
       "dependsOn": [
-        "b8d93a945ba5c5b0634ddc59f2995d4925f6052b09c1a9246e11ce56f9644c19c59fc6df91446ca06080e9876701b74510ba969f464113271a4c637ae85b4b58"
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495"
       ]
     },
     {
       "ref": "f4364666d5811b65c3c066d7df49ec870229c3c801bad57a79438707bae822ad8612ce85f0d9d86342d18c473bd4a402b5b693d257e9efc979e8835794d55ce1",
       "dependsOn": [
-        "26a4e6ae2854be99603f4397708e7e0d6ebb47ef4d7a67f91fea030faae7445101b21ef6a7046b6e6f6f1b5e029b19948146cbf946387735be36072f8b8c3d68",
         "2c27177bae17c12df99210456fca902c57791c74a9a6a520b257c0858a70c9ebf89d15f856ef6a729efc49bfa66732b3330a1fde6a78884366004a1901611111",
-        "7453b80b79de35b5547bae0f85e882d4cd3a5f49c0973bc81438f68d22302f8ef39dc1eb311d94b04ebd9a29dc4c9e2e2835ed1e142c65153d80f7f00e672681",
         "ad6e1a055442aa4f57c291a85c857a326c2cbdf582c3509243bee26fefe5569ec4621a0926d8b1ec4e34de4d4e58f04747d6ea242cac98510818acbf80414896",
-        "bf60531341e9032ee9a73344847bb98eac72230d371b95481ace67cb8e4f40e97f9156f6875ae75d5afbbf696be7b2a205e9ab4f0acdd5a8839f1efa418c6a4f",
         "caddc7cb4044bedf0225d22e3dfc9121ef6f428104f2e3fa714a80bb1a08ccbae9c63c5ba61c24a9472ee51837b21fe1c83ac4f6415790509b26444eebfcd551"
       ]
     },
@@ -5273,20 +5316,13 @@
         "871f0b01b79290b68b35c03fc024989360788b01d244facb1d1670746f48a864fda3c148b0aa01053f87d9b4ddad1f17341a7e4c121c3b357f597e402e4c92be",
         "8af33193ae6a4a98663514720198b39ba07548b15557ad78d2547a9f7707139feaff1c1eb8218db812dd0e41f67f347feacf82d48c172009e3ef1813acd26a40",
         "9d50e361718e2cebc5f299f5848b4cb5c14b3fc0cf44455bcc6c0f14da1aa2c86a35ba7540580cdfd59886c845ce93ee172abb705aba1a4a04624ba24901f1c9",
+        "c64fb63c9299f2b659734078d90eb20ed35e38d79ed629629f41da273157c0655f05336b744167926c91715cf7564d986158310d0111eac1f6d4ce2bcfb20495",
         "d6329a1b9de73a9597d46754f546cc3bf39efc36e3f88d4e0a2c0a9dea559c70bbe9af6dc00828a23ed2d947c4b3ff2e0976a05e36e6f2976efd096f34b1dcc6",
-        "eacb4e042ea691383e22aa75ca18af517f71602d2fb36259a5f2f957bd6da64f735488dc53e851d59bf724c2de0b0f7df598ab08253a4f561e6a5cbc297868eb",
         "efe79d9826d0e1607da0b85dff6820c9841f796a2d6a18691fcd87941347b63e19f33fb5d30150fb096955e5a4ded250ad9fc1cf187f3f6e15c7a82b53889bb3"
       ]
     },
     {
       "ref": "fb3684f4f0032bb5e4195de7c887f346c111e390f2800ebf6449262496117f0a1cbf1318afaf09cd613d2a79e142e42d372869cd071e994cb9f87c58974b4bc2"
-    },
-    {
-      "ref": "fb95eb05adfee0d22acce2255f500ab008157bf4ba29ebc4a9b40aefcab7aef31ebba24933b40e5f204df1321616150b3c8815901edeedafdcf86568a2a0efb3",
-      "dependsOn": [
-        "85a921b7eeda4e67717e2784169faf299a3586a0de8596454b735ce7781b7df9822d6499fd68e4e7461fe591bd8b5a5664dae04de10bfc79727c63107c930d27",
-        "a53c12645932fbcd2b9bb55a23f6fe201ebda7f05c092d60305697c20109f802a640dac2c4624b4621f38bcdcebf72c431aae62d0ff49ad8973e97d40342ab3c"
-      ]
     }
   ]
 }

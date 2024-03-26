@@ -54,7 +54,7 @@ suite('integration', () => {
         const makeSBOM = spawnSync(
           'yarn', ['cyclonedx',
             '-vvv',
-            '--reproducible',
+            '--output-reproducible',
             // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
             '--spec-version', latestCdxSpecVersion,
             '--output-format', 'JSON'

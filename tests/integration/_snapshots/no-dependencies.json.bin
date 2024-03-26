@@ -5,21 +5,48 @@
   "version": 1,
   "metadata": {
     "tools": [
+      {},
       {
-        "name": "yarn-plugin-sbom",
-        "version": "1.0-dev"
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       },
       {
-        "vendor": "cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "6.4.0"
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "1.0.0-alpha",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       }
     ],
     "component": {
       "type": "application",
       "name": "no-dependencies",
       "version": "0.0.1",
-      "bom-ref": "a15880a930a4e65124c64b72f8a359ae7edcdd7017bcda2e79cb3238f20703ebfce7a183e579a1eeb16a37623d421159d902a0bdea1a00d2851913675b891671"
+      "bom-ref": "a15880a930a4e65124c64b72f8a359ae7edcdd7017bcda2e79cb3238f20703ebfce7a183e579a1eeb16a37623d421159d902a0bdea1a00d2851913675b891671",
+      "purl": "pkg:npm/no-dependencies@0.0.1"
     },
     "properties": [
       {
