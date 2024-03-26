@@ -150,6 +150,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"concurrent-versions@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "concurrent-versions@workspace:."
+  dependencies:
+    inquirer: "npm:^9.2.15"
+    ora: "npm:5.4.1"
+  languageName: unknown
+  linkType: soft
+
 "defaults@npm:^1.0.3":
   version: 1.0.4
   resolution: "defaults@npm:1.0.4"
@@ -378,15 +387,6 @@ __metadata:
   checksum: 10c0/b26f5479d7ec6cc2bce275a08f146cf78f5e7b661b18114e2506dd91ec7ec47e7a25bf4360e5438094db0560bcc868079fb3b1fb3892b833c1ecbf63f80c95a4
   languageName: node
   linkType: hard
-
-"multiple-versions@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "multiple-versions@workspace:."
-  dependencies:
-    inquirer: "npm:^9.2.15"
-    ora: "npm:5.4.1"
-  languageName: unknown
-  linkType: soft
 
 "mute-stream@npm:1.0.0":
   version: 1.0.0

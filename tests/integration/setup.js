@@ -26,13 +26,15 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
 (function () {
   const REQUIRES_YARN_INSTALL = [
     /* region functional tests */
-    'dev-dependency-with-dependencies',
-    // 'git-protocol-dependency',
-    'multiple-versions',
-    'no-dependencies',
-    'one-dependency',
+    'bundled-dependencies',
+    'concurrent-versions',
+    'dev-dependencies',
+    'git-protocol-dependency',
+    'juice-shop',
+    'local-dependencies',
+    'local-workspaces',
     'package-aliasing',
-    'juice-shop'
+    'package-with-build-id'
     /* endregion functional tests */
     /* region regression tests */
     // ... none so far

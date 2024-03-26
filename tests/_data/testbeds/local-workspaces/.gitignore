@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!/README.md
+!/package.json
+!/yarn.lock
+!/workspaces/
