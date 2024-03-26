@@ -41,8 +41,6 @@ interface BomBuilderOptions {
   shortPURLs?: BomBuilder['shortPURLs']
 }
 
-type AllComponents = Map<IdentHash, [Package, Models.Component]>
-
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
@@ -88,19 +86,6 @@ export class BomBuilder {
     const rootComponent: Models.Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
       new DummyComponent(this.metaComponentType, 'RootComponent')
 
-    const allComponents: AllComponents = new Map([[
-      workspace.anchoredPackage.identHash,
-      [workspace.anchoredPackage, rootComponent]
-    ]])
-    for (const dep of this.getDeps(workspace.anchoredPackage, project)) {
-      allComponents.set(dep.identHash, [dep,
-        /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
-         * as we need to enforce a proper root component to enable all features of SBOM */
-        await this.makeComponentFromPackage(dep, fetcher, fetcherOptions) ||
-        new DummyComponent(Enums.ComponentType.Library, structUtils.prettyLocatorNoColors(dep))
-      ])
-    }
-
     const bom = new Models.Bom()
 
     // region metadata
@@ -124,11 +109,12 @@ export class BomBuilder {
 
     // region components
 
-    for (const [, c] of allComponents.values()) {
-      if (c === rootComponent) {
-        continue
-      }
-      bom.components.add(c)
+    for await (const component of this.gatherDependencies(
+      rootComponent, workspace.anchoredPackage,
+      project,
+      fetcher, fetcherOptions
+    )) {
+      bom.components.add(component)
     }
 
     // endregion components
@@ -145,13 +131,10 @@ export class BomBuilder {
     fetcher: Fetcher, fetcherOptions: FetchOptions,
     type?: Enums.ComponentType | undefined
   ): Promise<Models.Component | false | undefined> {
-    // @TODO make switch to dsisavle load from fs
+    // @TODO make switch to disable load from fs
     const { packageFs, prefixPath } = await fetcher.fetch(pkg, fetcherOptions)
     const manifestPath = ppath.join(prefixPath, 'package.json')
-    const _d = JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
-    console.debug(_d)
-
-    const data: any = {}
+    const data = JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
     data.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
@@ -182,7 +165,8 @@ export class BomBuilder {
     // even private packages may have a PURL for identification
     component.purl = this.makePurl(component)
 
-    component.bomRef.value = structUtils.prettyLocatorNoColors(locator)
+    // @TODO use structUtils.prettyLocatorNoColors(locator)
+    component.bomRef.value = locator.locatorHash
 
     return component
   }
@@ -221,6 +205,32 @@ export class BomBuilder {
         throw new Error(`missing depPackage for depRes: ${depRes}`)
       }
       yield depPackage
+    }
+  }
+
+  async * gatherDependencies (
+    component: Models.Component, pkg: Package,
+    project: Project,
+    fetcher: Fetcher, fetcherOptions: FetchOptions
+  ): AsyncGenerator<Models.Component> {
+    const knownComponents = new Map<IdentHash, Models.Component>([[pkg.identHash, component]])
+    const pending: [[Package, Models.Component]] = [[pkg, component]]
+
+    let pendingEntry
+    while ((pendingEntry = pending.pop()) !== undefined) {
+      const [pendingPkg, pendingComponent] = pendingEntry
+      for (const depPkg of this.getDeps(pendingPkg, project)) {
+        let depComponent = knownComponents.get(depPkg.identHash)
+        if (depComponent === undefined) {
+          /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
+           * as we need to enforce a proper component to enable all features of SBOM */
+          yield depComponent = await this.makeComponentFromPackage(depPkg, fetcher, fetcherOptions) ||
+            new DummyComponent(Enums.ComponentType.Library, structUtils.prettyLocatorNoColors(depPkg))
+          knownComponents.set(depPkg.identHash, depComponent)
+          pending.push([depPkg, depComponent])
+        }
+        pendingComponent.dependencies.add(depComponent.bomRef)
+      }
     }
   }
 }
