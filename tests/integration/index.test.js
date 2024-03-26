@@ -22,6 +22,9 @@ const { suite, test } = require('mocha')
 const { spawnSync } = require('child_process')
 const path = require('path')
 const { existsSync, writeFileSync, readFileSync } = require('fs')
+const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+
+const { version: thisVersion } = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -30,55 +33,88 @@ const testSetups = [
   'multiple-versions',
   'no-dependencies',
   'one-dependency',
-  'package-aliasing'
+  'package-aliasing',
+  'juice-shop'
   /* endregion functional tests */
   /* region regression tests */
   // ... none so far
   /* endregion regression tests */
 ]
 
-const { version: thisVersion } = require('../../package.json')
-
 const latestCdxSpecVersion = '1.5'
+
+const testRootPath = path.resolve(__dirname, '..')
+const projectRootPath = path.resolve(testRootPath, '..')
+const snapshotsPath = path.join(testRootPath, '_data', 'snapshots')
+const testbedsPath = path.join(testRootPath, '_data', 'testbeds')
 
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
-  const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
+  const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
+
+  const longTestTimeout = 30000
+
+  /**
+   * @param {string} purpose
+   * @param {string} testSetup
+   * @param {string[]} [additionalArgs]
+   * @param {Object<string, string>} [additionalEnv]
+   */
+  function runTest (
+    purpose, testSetup,
+    additionalArgs = [], additionalEnv = {}
+  ) {
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
+
+    const makeSBOM = spawnSync(
+      'yarn', ['cyclonedx',
+        '-vvv',
+        '--reproducible',
+        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+        '--spec-version', latestCdxSpecVersion,
+        '--output-format', 'JSON',
+        ...additionalArgs
+      ], {
+        cwd: path.join(testbedsPath, testSetup),
+        stdio: ['ignore', 'pipe', 'pipe'],
+        encoding: 'utf8',
+        maxBuffer: BUFFER_MAX_LENGTH,
+        shell: true,
+        env: {
+          ...additionalEnv,
+          PATH: process.env.PATH,
+          CI: '1',
+          YARN_PLUGINS: thisYarnPlugin
+        }
+      })
+    assert.strictEqual(makeSBOM.error, undefined)
+    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr)
+
+    const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
+
+    if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
+      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+    }
+    assert.strictEqual(actualOutput,
+      readFileSync(expectedOutSnap, 'utf8'),
+      `output should equal ${expectedOutSnap}`)
+  }
 
   suite('make SBOM', () => {
-    testSetups.forEach((testSetup) => {
-      test(`${testSetup}`, () => {
-        const expectedOutSnap = path.resolve(__dirname, '_snapshots', `${testSetup}.json.bin`)
-
-        const makeSBOM = spawnSync(
-          'yarn', ['cyclonedx',
-            '-vvv',
-            '--reproducible',
-            // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            '--spec-version', latestCdxSpecVersion,
-            '--output-format', 'JSON'
-          ], {
-            cwd: path.resolve(__dirname, '_testbeds', testSetup),
-            stdio: ['ignore', 'pipe', 'pipe'],
-            encoding: 'utf8',
-            shell: true,
-            env: {
-              PATH: process.env.PATH,
-              CI: '1',
-              YARN_PLUGINS: thisYarnPlugin
-            }
-          })
-        assert.strictEqual(makeSBOM.status, 0, makeSBOM.stdout)
-
-        const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
-
-        if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-          writeFileSync(expectedOutSnap, actualOutput, 'utf8')
-        }
-        assert.strictEqual(actualOutput,
-          readFileSync(expectedOutSnap, 'utf8'),
-          `output should equal ${expectedOutSnap}`)
+    suite('plain', () => {
+      testSetups.forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('plain', testSetup)).timeout(longTestTimeout)
+      })
+    })
+    suite('prod_arg', () => {
+      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('prod_arg', testSetup, ['--prod']))
+      })
+    })
+    suite('prod_env', () => {
+      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('prod_env', testSetup, [], { NODE_ENV: 'production' }))
       })
     })
   })
@@ -109,22 +145,22 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       // replace metadata.tools.version
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "webpack-plugin",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "webpack-plugin",\n' +
-      '        "version": "thisVersion-testing",\n'
+      // '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-sbom",\n' +
+      `        "version": ${JSON.stringify(thisVersion)}\n`,
+      // '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-sbom",\n' +
+      '        "version": "thisVersion-testing"\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        "vendor": "@cyclonedx",\n' +
+        '        "vendor": "cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?",\n'
+        '        "version": ".+?"\n'
       ),
-      '        "vendor": "@cyclonedx",\n' +
+      '        "vendor": "cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing",\n'
+      '        "version": "libVersion-testing"\n'
     )
 }
 
@@ -138,20 +174,20 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>webpack-plugin</name>\n' +
+      // '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-sbom</name>\n' +
       `        <version>${thisVersion}</version>`,
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>webpack-plugin</name>\n' +
+      // '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-sbom</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        <vendor>@cyclonedx</vendor>\n' +
+        '        <vendor>cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
         '        <version>.+?</version>'
       ),
-      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <vendor>cyclonedx</vendor>\n' +
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     )

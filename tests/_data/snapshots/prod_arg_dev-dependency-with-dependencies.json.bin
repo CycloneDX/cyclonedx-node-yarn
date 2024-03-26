@@ -7,19 +7,19 @@
     "tools": [
       {
         "name": "yarn-plugin-sbom",
-        "version": "1.0-dev"
+        "version": "thisVersion-testing"
       },
       {
         "vendor": "cyclonedx",
         "name": "cyclonedx-library",
-        "version": "6.4.0"
+        "version": "libVersion-testing"
       }
     ],
     "component": {
       "type": "application",
-      "name": "one-dependency",
+      "name": "dev-dependency-with-dependencies",
       "version": "0.0.1",
-      "bom-ref": "2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40"
+      "bom-ref": "cd56053c0bd49371ba0556d4c29fb53983c397bd2fb297f419f3427e3199b9b4f166eb90f985ea09c71c75b2ff0819b2afa9c21031ac51a28a8f50b8201a7478"
     },
     "properties": [
       {
@@ -61,17 +61,43 @@
           "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "chalk",
+      "version": "5.3.0",
+      "bom-ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36",
+      "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
+      "externalReferences": [
+        {
+          "url": "chalk/chalk",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
     }
   ],
   "dependencies": [
     {
-      "ref": "2969298307f5884d75829e96ec87fceebdb49c246d2e1dc86c85ffc167432d5926ba2921b6ed9dc94e49e727b6d4d0b5dab317bd97bb36e048b234228a6bbd40",
+      "ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"
+    },
+    {
+      "ref": "cd56053c0bd49371ba0556d4c29fb53983c397bd2fb297f419f3427e3199b9b4f166eb90f985ea09c71c75b2ff0819b2afa9c21031ac51a28a8f50b8201a7478",
       "dependsOn": [
-        "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"
+        "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b",
+        "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36"
       ]
     },
     {
-      "ref": "b45832dfcec8c690acbfa64af49e90952d9e50ff8682c4d8e88bf5378bff2cb8d4fed04c80512bbbf72f4159ef99f54376f13c0275f870694844469288f7bb6b"
+      "ref": "d181999efbcb0157e2121bca57a5510f16586ffb25fa152cc6560df626f2045d2a946079334c7ad891581bd30cd9c99dcd34dbf03ea6ec46ede0d0747f4afa36"
     }
   ]
 }
