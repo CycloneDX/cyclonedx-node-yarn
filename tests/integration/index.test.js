@@ -145,22 +145,22 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       // replace metadata.tools.version
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "webpack-plugin",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
-      '        "vendor": "@cyclonedx",\n' +
-      '        "name": "webpack-plugin",\n' +
-      '        "version": "thisVersion-testing",\n'
+      // '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-sbom",\n' +
+      `        "version": ${JSON.stringify(thisVersion)}\n`,
+      // '        "vendor": "@cyclonedx",\n' +
+      '        "name": "yarn-plugin-sbom",\n' +
+      '        "version": "thisVersion-testing"\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        "vendor": "@cyclonedx",\n' +
+        '        "vendor": "cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?",\n'
+        '        "version": ".+?"\n'
       ),
-      '        "vendor": "@cyclonedx",\n' +
+      '        "vendor": "cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing",\n'
+      '        "version": "libVersion-testing"\n'
     )
 }
 
@@ -174,20 +174,20 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>webpack-plugin</name>\n' +
+      // '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-sbom</name>\n' +
       `        <version>${thisVersion}</version>`,
-      '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>webpack-plugin</name>\n' +
+      // '        <vendor>@cyclonedx</vendor>\n' +
+      '        <name>yarn-plugin-sbom</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        <vendor>@cyclonedx</vendor>\n' +
+        '        <vendor>cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
         '        <version>.+?</version>'
       ),
-      '        <vendor>@cyclonedx</vendor>\n' +
+      '        <vendor>cyclonedx</vendor>\n' +
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     )
