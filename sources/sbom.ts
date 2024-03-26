@@ -141,14 +141,15 @@ async function addMetadataTools (bom: CDX.Models.Bom): Promise<void> {
   )
   bom.metadata.tools.add(
     new CDX.Models.Tool({
-      vendor: 'cyclonedx',
+      vendor: '@cyclonedx',
       name: 'cyclonedx-library',
       version: cdxDependency?.locator?.replace(/^.+@npm:/, '')
     })
   )
   bom.metadata.tools.add(
     new CDX.Models.Tool({
-      name: 'yarn-plugin-sbom',
+      vendor: '@cyclonedx',
+      name: 'yarn-plugin-cyclonedx',
       version: buildtimeDependencies?.children.Version
     })
   )
