@@ -46,39 +46,64 @@ suite('integration', () => {
 
   const thisYarnPlugin = path.resolve(__dirname, '..', '..', 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
 
-  suite('make SBOM', () => {
-    testSetups.forEach((testSetup) => {
-      test(`${testSetup}`, () => {
-        const expectedOutSnap = path.resolve(__dirname, '_snapshots', `${testSetup}.json.bin`)
+  /**
+   * @param {string} purpose
+   * @param {string} testSetup
+   * @param {string[]} [additionalArgs]
+   * @param {Object<string, string>} [additionalEnv]
+   */
+  function runTest (
+    purpose, testSetup,
+    additionalArgs = [], additionalEnv = {}
+  ) {
+    const expectedOutSnap = path.resolve(__dirname, '_snapshots', `${purpose}_${testSetup}.json.bin`)
 
-        const makeSBOM = spawnSync(
-          'yarn', ['cyclonedx',
-            '-vvv',
-            '--reproducible',
-            // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-            '--spec-version', latestCdxSpecVersion,
-            '--output-format', 'JSON'
-          ], {
-            cwd: path.resolve(__dirname, '_testbeds', testSetup),
-            stdio: ['ignore', 'pipe', 'pipe'],
-            encoding: 'utf8',
-            shell: true,
-            env: {
-              PATH: process.env.PATH,
-              CI: '1',
-              YARN_PLUGINS: thisYarnPlugin
-            }
-          })
-        assert.strictEqual(makeSBOM.status, 0, makeSBOM.stdout)
-
-        const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
-
-        if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-          writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+    const makeSBOM = spawnSync(
+      'yarn', ['cyclonedx',
+        '-vvv',
+        '--reproducible',
+        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+        '--spec-version', latestCdxSpecVersion,
+        '--output-format', 'JSON',
+        ...additionalArgs
+      ], {
+        cwd: path.resolve(__dirname, '_testbeds', testSetup),
+        stdio: ['ignore', 'pipe', 'pipe'],
+        encoding: 'utf8',
+        shell: true,
+        env: {
+          ...additionalEnv,
+          PATH: process.env.PATH,
+          CI: '1',
+          YARN_PLUGINS: thisYarnPlugin
         }
-        assert.strictEqual(actualOutput,
-          readFileSync(expectedOutSnap, 'utf8'),
-          `output should equal ${expectedOutSnap}`)
+      })
+    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stdout)
+
+    const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
+
+    if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
+      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+    }
+    assert.strictEqual(actualOutput,
+      readFileSync(expectedOutSnap, 'utf8'),
+      `output should equal ${expectedOutSnap}`)
+  }
+
+  suite('make SBOM', () => {
+    suite('plain', () => {
+      testSetups.forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('plain', testSetup))
+      })
+    })
+    suite('prod_arg', () => {
+      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('prod_arg', testSetup, ['--prod']))
+      })
+    })
+    suite('prod_env', () => {
+      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
+        test(`${testSetup}`, () => runTest('prod_env', testSetup, [], { NODE_ENV: 'production' }))
       })
     })
   })
