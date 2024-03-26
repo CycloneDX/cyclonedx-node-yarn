@@ -1,0 +1,11 @@
+{
+  "name": "demo-local-deps",
+  "description": "demo: demo-local-deps -- showcase how local dependencies look like",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "my-local-a": "portal:packages/my-local-a",
+    "my-noname": "portal:packages/my-noname"
+  }
+}

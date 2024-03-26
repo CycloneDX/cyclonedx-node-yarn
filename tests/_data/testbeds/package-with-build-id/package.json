@@ -1,0 +1,6 @@
+{
+  "name": "demo-package-with-build-id",
+  "description": "demo: package-with-build-id -- show how buildID in the version looks like",
+  "private": true,
+  "version": "1.0.0-123+456"
+}

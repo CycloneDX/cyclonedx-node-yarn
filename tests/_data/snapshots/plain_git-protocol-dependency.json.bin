@@ -42,11 +42,18 @@
     ],
     "component": {
       "type": "application",
-      "name": "package-aliasing",
-      "version": "0.0.1",
-      "bom-ref": "package-aliasing@workspace:.",
-      "description": "demo: a package is aliased with a different name",
-      "purl": "pkg:npm/package-aliasing@0.0.1"
+      "name": "git-protocol-dependency",
+      "version": "0.0.0",
+      "bom-ref": "git-protocol-dependency@workspace:.",
+      "description": "demo: git-protocol-dependency -- showcase how install via git protocol looks like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/git-protocol-dependency@0.0.0"
     },
     "properties": [
       {
@@ -60,8 +67,8 @@
       "type": "library",
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
-      "version": "6.4.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library@npm:6.4.0",
+      "version": "6.4.2",
+      "bom-ref": "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "author": "Jan Kowalleck",
       "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
       "licenses": [
@@ -71,7 +78,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
@@ -498,7 +505,7 @@
       "type": "library",
       "name": "ajv-formats-draft2019",
       "version": "1.6.1",
-      "bom-ref": "ajv-formats-draft2019@npm:1.6.1 [eccf6]",
+      "bom-ref": "ajv-formats-draft2019@npm:1.6.1 [f1690]",
       "author": "Carlo Quinonez",
       "description": "Plugin for AJV that adds support for some of string formats adding in the draft2019 JSON Schema.",
       "licenses": [
@@ -531,7 +538,7 @@
       "type": "library",
       "name": "ajv-formats",
       "version": "2.1.1",
-      "bom-ref": "ajv-formats@npm:2.1.1 [eccf6]",
+      "bom-ref": "ajv-formats@npm:2.1.1 [f1690]",
       "author": "Evgeny Poberezkin",
       "description": "Format validation for Ajv v7+",
       "licenses": [
@@ -1221,8 +1228,8 @@
     {
       "type": "library",
       "name": "detect-libc",
-      "version": "2.0.2",
-      "bom-ref": "detect-libc@npm:2.0.2",
+      "version": "2.0.3",
+      "bom-ref": "detect-libc@npm:2.0.3",
       "author": "Lovell Fuller",
       "description": "Node.js module to detect the C standard library (libc) implementation family and version",
       "licenses": [
@@ -1232,7 +1239,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@2.0.2?vcs_url=git%3A//github.com/lovell/detect-libc.git",
+      "purl": "pkg:npm/detect-libc@2.0.3?vcs_url=git%3A//github.com/lovell/detect-libc.git",
       "externalReferences": [
         {
           "url": "https://github.com/lovell/detect-libc/issues",
@@ -2881,8 +2888,8 @@
     {
       "type": "library",
       "name": "node-gyp",
-      "version": "10.0.1",
-      "bom-ref": "node-gyp@npm:10.0.1",
+      "version": "10.1.0",
+      "bom-ref": "node-gyp@npm:10.1.0",
       "author": "Nathan Rajlich",
       "description": "Node.js native addon build tool",
       "licenses": [
@@ -2892,7 +2899,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-gyp@10.0.1?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
+      "purl": "pkg:npm/node-gyp@10.1.0?vcs_url=git%3A//github.com/nodejs/node-gyp.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/node-gyp/issues",
@@ -4133,8 +4140,8 @@
     {
       "type": "library",
       "name": "tar",
-      "version": "6.2.0",
-      "bom-ref": "tar@npm:6.2.0",
+      "version": "6.2.1",
+      "bom-ref": "tar@npm:6.2.1",
       "author": "GitHub Inc.",
       "description": "tar for node",
       "licenses": [
@@ -4144,7 +4151,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@6.2.0?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-tar.git",
+      "purl": "pkg:npm/tar@6.2.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-tar.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-tar/issues",
@@ -4562,10 +4569,10 @@
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/cyclonedx-library@npm:6.4.0",
+      "ref": "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "dependsOn": [
-        "ajv-formats-draft2019@npm:1.6.1 [eccf6]",
-        "ajv-formats@npm:2.1.1 [eccf6]",
+        "ajv-formats-draft2019@npm:1.6.1 [f1690]",
+        "ajv-formats@npm:2.1.1 [f1690]",
         "ajv@npm:8.12.0",
         "libxmljs2@npm:0.33.0",
         "packageurl-js@npm:1.2.1",
@@ -4584,7 +4591,7 @@
     {
       "ref": "@mapbox/node-pre-gyp@npm:1.0.11",
       "dependsOn": [
-        "detect-libc@npm:2.0.2",
+        "detect-libc@npm:2.0.3",
         "https-proxy-agent@npm:7.0.4",
         "make-dir@npm:3.1.0",
         "node-fetch@npm:2.7.0 [5547f]",
@@ -4592,7 +4599,7 @@
         "npmlog@npm:5.0.1",
         "rimraf@npm:3.0.2",
         "semver@npm:7.6.0",
-        "tar@npm:6.2.0"
+        "tar@npm:6.2.1"
       ]
     },
     {
@@ -4655,7 +4662,7 @@
       ]
     },
     {
-      "ref": "ajv-formats-draft2019@npm:1.6.1 [eccf6]",
+      "ref": "ajv-formats-draft2019@npm:1.6.1 [f1690]",
       "dependsOn": [
         "ajv@npm:8.12.0",
         "punycode@npm:2.3.1",
@@ -4665,7 +4672,7 @@
       ]
     },
     {
-      "ref": "ajv-formats@npm:2.1.1 [eccf6]",
+      "ref": "ajv-formats@npm:2.1.1 [f1690]",
       "dependsOn": [
         "ajv@npm:8.12.0"
       ]
@@ -4732,7 +4739,7 @@
         "minipass@npm:5.0.0",
         "p-map@npm:4.0.0",
         "ssri@npm:10.0.5",
-        "tar@npm:6.2.0",
+        "tar@npm:6.2.1",
         "unique-filename@npm:3.0.0"
       ]
     },
@@ -4778,7 +4785,7 @@
       "ref": "delegates@npm:1.0.0"
     },
     {
-      "ref": "detect-libc@npm:2.0.2"
+      "ref": "detect-libc@npm:2.0.3"
     },
     {
       "ref": "discontinuous-range@npm:1.0.0"
@@ -4838,6 +4845,12 @@
         "string-width@npm:4.2.3",
         "strip-ansi@npm:6.0.1",
         "wide-align@npm:1.1.5"
+      ]
+    },
+    {
+      "ref": "git-protocol-dependency@workspace:.",
+      "dependsOn": [
+        "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7"
       ]
     },
     {
@@ -5021,7 +5034,7 @@
     {
       "ref": "nan@npm:2.18.0",
       "dependsOn": [
-        "node-gyp@npm:10.0.1"
+        "node-gyp@npm:10.1.0"
       ]
     },
     {
@@ -5043,7 +5056,7 @@
       ]
     },
     {
-      "ref": "node-gyp@npm:10.0.1",
+      "ref": "node-gyp@npm:10.1.0",
       "dependsOn": [
         "env-paths@npm:2.2.1",
         "exponential-backoff@npm:3.1.1",
@@ -5053,7 +5066,7 @@
         "nopt@npm:7.2.0",
         "proc-log@npm:3.0.0",
         "semver@npm:7.6.0",
-        "tar@npm:6.2.0",
+        "tar@npm:6.2.1",
         "which@npm:4.0.0"
       ]
     },
@@ -5079,13 +5092,6 @@
       "ref": "p-map@npm:4.0.0",
       "dependsOn": [
         "aggregate-error@npm:3.1.0"
-      ]
-    },
-    {
-      "ref": "package-aliasing@workspace:.",
-      "dependsOn": [
-        "@cyclonedx/cyclonedx-library@npm:6.4.0",
-        "@isaacs/cliui@npm:8.0.2"
       ]
     },
     {
@@ -5247,7 +5253,7 @@
       ]
     },
     {
-      "ref": "tar@npm:6.2.0",
+      "ref": "tar@npm:6.2.1",
       "dependsOn": [
         "chownr@npm:2.0.0",
         "fs-minipass@npm:2.1.0",

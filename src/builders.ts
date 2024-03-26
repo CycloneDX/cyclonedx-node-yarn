@@ -165,8 +165,7 @@ export class BomBuilder {
     // even private packages may have a PURL for identification
     component.purl = this.makePurl(component)
 
-    // @TODO use structUtils.prettyLocatorNoColors(locator)
-    component.bomRef.value = locator.locatorHash
+    component.bomRef.value = structUtils.prettyLocatorNoColors(locator)
 
     return component
   }

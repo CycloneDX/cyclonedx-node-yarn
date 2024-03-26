@@ -1,0 +1,150 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-local-deps",
+      "version": "0.0.0",
+      "bom-ref": "demo-local-deps@workspace:.",
+      "description": "demo: demo-local-deps -- showcase how local dependencies look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-local-deps@0.0.0"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "my-local-a",
+      "version": "0.0.0",
+      "bom-ref": "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
+      "description": "demo: my-local-a",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A.",
+      "description": "demo: my-local-b-off - a package with a different name than its dir",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "my-noname",
+      "version": "0.0.0",
+      "bom-ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
+      "description": "demo: with no/empty name",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/my-noname@0.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "demo-local-deps@workspace:.",
+      "dependsOn": [
+        "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
+        "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A."
+      ]
+    },
+    {
+      "ref": "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
+      "dependsOn": [
+        "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A."
+      ]
+    },
+    {
+      "ref": "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A."
+    },
+    {
+      "ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A."
+    }
+  ]
+}

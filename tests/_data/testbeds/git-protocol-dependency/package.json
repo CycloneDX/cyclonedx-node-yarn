@@ -1,8 +1,11 @@
 {
-    "name": "git-protocol-dependency",
-    "version": "0.0.1",
-    "packageManager": "yarn@4.1.0",
-    "dependencies": {
-        "typanion": "git+https://github.com/arcanis/typanion.git"
-    }
+  "name": "git-protocol-dependency",
+  "description": "demo: git-protocol-dependency -- showcase how install via git protocol looks like",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2"
+  }
 }
