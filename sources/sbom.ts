@@ -236,6 +236,8 @@ function packageInfoToCycloneComponent (
       author: { name: getAuthorName(manifest.raw.author) }
     },
     CDX.Enums.ComponentType.Library
+  ) ?? new DummyComponent(CDX.Enums.ComponentType.Library,
+    structUtils.prettyLocatorNoColors(pkgInfo.package)
   )
   if (component === undefined) {
     throw new Error(
@@ -285,4 +287,13 @@ function gitHubPackagePurl (
     )
   }
   return undefined
+}
+
+class DummyComponent extends CDX.Models.Component {
+  constructor (type: CDX.Models.Component['type'], name: CDX.Models.Component['name']) {
+    super(type, `DummyComponent.${name}`, {
+      bomRef: `DummyComponent.${name}`,
+      description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`
+    })
+  }
 }

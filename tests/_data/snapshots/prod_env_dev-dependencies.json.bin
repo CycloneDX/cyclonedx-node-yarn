@@ -1,0 +1,135 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-dev-dependencies",
+      "version": "0.0.0",
+      "bom-ref": "2ec289e0f26d81189ffaf77ca8960c310c834e68fd532e72a460b5b5ddb28d263b61c6ef7a08fef5f9406726a5eee34420451c47ed41e7a6bde2746009cb3869",
+      "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "uuid",
+      "group": "@types",
+      "version": "8.3.4",
+      "bom-ref": "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d",
+      "description": "TypeScript definitions for uuid",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "externalReferences": [
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuid",
+      "version": "8.3.2",
+      "bom-ref": "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/uuid@8.3.2?vcs_url=https%3A//github.com/uuidjs/uuid.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/uuidjs/uuid.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuidv4",
+      "version": "6.2.13",
+      "bom-ref": "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f",
+      "description": "uuidv4 creates v4 UUIDs.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/thenativeweb/uuidv4.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "2ec289e0f26d81189ffaf77ca8960c310c834e68fd532e72a460b5b5ddb28d263b61c6ef7a08fef5f9406726a5eee34420451c47ed41e7a6bde2746009cb3869",
+      "dependsOn": [
+        "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f"
+      ]
+    },
+    {
+      "ref": "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d"
+    },
+    {
+      "ref": "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59"
+    },
+    {
+      "ref": "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f",
+      "dependsOn": [
+        "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d",
+        "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59"
+      ]
+    }
+  ]
+}
