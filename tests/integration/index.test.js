@@ -147,20 +147,20 @@ function makeJsonReproducible (json) {
       // replace metadata.tools.version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      `        "version": ${JSON.stringify(thisVersion)}\n`,
+      `        "version": ${JSON.stringify(thisVersion)},\n`,
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      '        "version": "thisVersion-testing"\n'
+      '        "version": "thisVersion-testing",\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?"\n'
+        '        "version": ".+?",\n'
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing"\n'
+      '        "version": "libVersion-testing",\n'
     )
 }
 
