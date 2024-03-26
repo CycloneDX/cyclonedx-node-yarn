@@ -109,14 +109,14 @@ suite('integration', () => {
         test(`${testSetup}`, () => runTest('plain', testSetup)).timeout(longTestTimeout)
       })
     })
-    suite('prod_arg', () => {
+    suite('prod-arg', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod_arg', testSetup, ['--prod']))
+        test(`${testSetup}`, () => runTest('prod-arg', testSetup, ['--prod']))
       })
     })
-    suite('prod_env', () => {
+    suite('prod-env', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod_env', testSetup, [], { NODE_ENV: 'production' }))
+        test(`${testSetup}`, () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' }))
       })
     })
   })
