@@ -1,0 +1,1680 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-bundled-deps",
+      "version": "0.0.0",
+      "bom-ref": "f2d3548b3db70ff1d9c4ebaf97e3751b05c3777548e89d8c03d2e8c648585b7bd59f79d55cb2b132f37d836302b60de71cdec95ab75d00264630e5c05c87fe38",
+      "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "which-module",
+      "version": "1.0.0",
+      "bom-ref": "006a29cce39b6fd1c4aa2ffad6ee66e771dc5525ac6b851ba12fc29a2777b7b067c0df071eb2befa061ab18e5aa5135737b1ee0e93f9cce5a93ca2c5ef0283d0",
+      "author": "nexdrew",
+      "description": "Find the module object for something that was require()d",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/which-module@1.0.0?vcs_url=git%2Bhttps%3A//github.com/nexdrew/which-module.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/nexdrew/which-module/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/nexdrew/which-module.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nexdrew/which-module#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "string-width",
+      "version": "1.0.2",
+      "bom-ref": "01031f9addd3e69bc3debd04343c27f4cc51db5583832791c1cf6c13711afcc55b62bd57f0e04e154c2d559b4e7be93f7410c79e8b686e07bdf76e468b1c88a4",
+      "author": "Sindre Sorhus",
+      "description": "Get the visual width of a string - the number of columns required to display it",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/string-width@1.0.2?vcs_url=sindresorhus/string-width",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/string-width",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lcid",
+      "version": "1.0.0",
+      "bom-ref": "02d845072b622b56f4ca3d96563056d4c5d70568865122c1c5d3626e00565b2f36ec473bb2cdfd0fadfdaea34a2aeb9ef20c7bc9501de69afe97d9de85adec9f",
+      "author": "Sindre Sorhus",
+      "description": "Mapping between standard locale identifiers and Windows locale identifiers (LCID)",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/lcid@1.0.0?vcs_url=sindresorhus/lcid",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/lcid",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie-promise",
+      "version": "2.0.1",
+      "bom-ref": "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483",
+      "author": "Vsevolod Strukchinsky",
+      "description": "ES2015 Promise ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pinkie-promise@2.0.1?vcs_url=floatdrop/pinkie-promise",
+      "externalReferences": [
+        {
+          "url": "floatdrop/pinkie-promise",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-parse",
+      "version": "1.0.7",
+      "bom-ref": "09564527b7820736d49274c86cbcd9d7b374b7f2635eb98d5583e3de0f73a073e41359bbf0b9323dc7aa810ecc6b906ed9e99cd654b30c5d3da9aab127e7b7f0",
+      "author": "Javier Blanco",
+      "description": "Node.js path.parse() ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/path-parse@1.0.7?vcs_url=https%3A//github.com/jbgutierrez/path-parse.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/jbgutierrez/path-parse/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/jbgutierrez/path-parse.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jbgutierrez/path-parse#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "camelcase",
+      "version": "3.0.0",
+      "bom-ref": "0c65af0c7f1e9e7cc8339688c8e5182b7f4480cabd7a3dc868505f9476b73e3cfbf5d0ae0943c0a5648039ae1d384e48b0b134311601f1cbfee2db36c02d9886",
+      "author": "Sindre Sorhus",
+      "description": "Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/camelcase@3.0.0?vcs_url=sindresorhus/camelcase",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/camelcase",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-fullwidth-code-point",
+      "version": "1.0.0",
+      "bom-ref": "0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad",
+      "author": "Sindre Sorhus",
+      "description": "Check if the character represented by a given Unicode code point is fullwidth",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/is-fullwidth-code-point",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "read-pkg",
+      "version": "1.1.0",
+      "bom-ref": "11237fa82f96e622c2a3b8960d8e809687f032e22edc42193142c4d4f96d3f4a6effaa539ac91b6be2136085a855a2a57c042f2ab0aa7531846f861fd58530e6",
+      "author": "Sindre Sorhus",
+      "description": "Read a package.json file",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/read-pkg@1.1.0?vcs_url=sindresorhus/read-pkg",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/read-pkg",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "invert-kv",
+      "version": "1.0.0",
+      "bom-ref": "114e48e2896e09d9358ee1de949ace0fe15e7da66743d70a96f5ef90a5eebfe7c37c653166a4992a5670ee31a403017d05fcbb842a12dfa5271dc85dfcd427cc",
+      "author": "Sindre Sorhus",
+      "description": "Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/invert-kv@1.0.0?vcs_url=sindresorhus/invert-kv",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/invert-kv",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash.assign",
+      "version": "4.2.0",
+      "bom-ref": "18b16126b913e9cb3f3192975ada2b01feaee9ad0ac5c385bf14cb52f33bb9f62e6b9c0a6406253643a6146c67917c04c0a9946cb0e3260b055ea407dcaa3e57",
+      "author": "John-David Dalton",
+      "description": "The lodash method `_.assign` exported as a module.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/lodash.assign@4.2.0?vcs_url=lodash/lodash",
+      "externalReferences": [
+        {
+          "url": "lodash/lodash",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
+          "url": "https://lodash.com/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "wrap-ansi",
+      "version": "2.1.0",
+      "bom-ref": "1fd9d509730dc5189302e13360c8c3d016545490f642239a0718fa4203acebc95b1fa6cb3a409383898b46a8ca40535cb7ca41efb10599d04686599aabca3438",
+      "author": "Sindre Sorhus",
+      "description": "Wordwrap a string with ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/wrap-ansi@2.1.0?vcs_url=chalk/wrap-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/wrap-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "find-up",
+      "version": "1.1.2",
+      "bom-ref": "22f047c6a94609ff7b7e8e6e20ea03897fb406c2aad1e0a5d6152bf0f05b6ff3d98846dc58c72daaf0616db80af6c06f4b72c5aa7f4511c2bc23238a68c61a57",
+      "author": "Sindre Sorhus",
+      "description": "Find a file by walking up parent directories",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/find-up@1.1.2?vcs_url=sindresorhus/find-up",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/find-up",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-arrayish",
+      "version": "0.2.1",
+      "bom-ref": "23927dfb15c07417ae3ba4fc849e7e3e3c5a5a8ff182b41a3a65c8cf703904b13fe8adf7790a707d86daac7096a0b9b19c17d4c0c2ccc948d6948388bc916c4a",
+      "author": "Qix",
+      "description": "Determines if an object can be used as an array",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=https%3A//github.com/qix-/node-is-arrayish.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/qix-/node-is-arrayish.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "graceful-fs",
+      "version": "4.2.11",
+      "bom-ref": "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76",
+      "description": "A drop-in replacement for fs, making various improvements.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A//github.com/isaacs/node-graceful-fs",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/node-graceful-fs",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yargs",
+      "version": "4.8.1",
+      "bom-ref": "3412e4101bd1b9578f5221110d79e86efd6ccc5a20b05ed9525d913646a819ca7898b9762733058175a4888a7076b2d7556e9462ee38a55a861b4b30def9b28c",
+      "description": "yargs the modern, pirate-themed, successor to optimist.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/yargs@4.8.1?vcs_url=http%3A//github.com/yargs/yargs.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/yargs/yargs.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "http://yargs.js.org/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-core-module",
+      "version": "2.13.1",
+      "bom-ref": "36e17434f9f5e904ec00c9c6ffeb48c30094dcbd44f7d16714c8646bb1900e3452c41e5882f0871074538f5729bcc311b62e9b0db9a217063ebe6531a8d4bac7",
+      "author": "Jordan Harband",
+      "description": "Is this specifier a node.js core module?",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-core-module@2.13.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/is-core-module.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/is-core-module/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/is-core-module.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/is-core-module",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "code-point-at",
+      "version": "1.1.0",
+      "bom-ref": "37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12",
+      "author": "Sindre Sorhus",
+      "description": "ES2015 `String#codePointAt()` ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/code-point-at@1.1.0?vcs_url=sindresorhus/code-point-at",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/code-point-at",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-type",
+      "version": "1.1.0",
+      "bom-ref": "3949afd6c1448af7ab0ca5038044088ccd5b35b48a8a01ba499f6f594b9364e8472bf7efb8ece0e0501bc9e69d5a73450786bc9b623f4c4c7d70b1d2092a6545",
+      "author": "Sindre Sorhus",
+      "description": "Check if a path is a file, directory, or symlink",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/path-type@1.1.0?vcs_url=sindresorhus/path-type",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/path-type",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bundle-dependencies",
+      "version": "1.0.2",
+      "bom-ref": "3cecd2a132ae02b3110c02e84acb37d01e01cd680b731c23d47cca89d37b01a8b2654b1cf2bd0978c302ed63306ea10b9e304c29a629d571127a638f6b619ccd",
+      "author": "Gajus Kuizinas",
+      "description": "Generates bundledDependencies package.json value using values of the dependencies property.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/bundle-dependencies@1.0.2?vcs_url=https%3A//github.com/gajus/bundle-dependencies",
+      "externalReferences": [
+        {
+          "url": "https://github.com/gajus/bundle-dependencies",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "resolve",
+      "version": "1.22.8",
+      "bom-ref": "4254c24959690314f0760e563bbec96984e6a8a43379ea0f8e109f7f3b78502629cbf2644154f81a50a82546a808cc8c6702a440e1dbf2b9776b67be7422e3be",
+      "author": "James Halliday",
+      "description": "resolve like require.resolve() on behalf of files asynchronously and synchronously",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "git://github.com/browserify/resolve.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "load-json-file",
+      "version": "1.1.0",
+      "bom-ref": "455d5470c20a675ec33d40222d970161bb533a20bec33335051e3faa582538472355574db37a5def64d88fd827802d96420d44e4fc59360a679367418a8fbe76",
+      "author": "Sindre Sorhus",
+      "description": "Read and parse a JSON file",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/load-json-file@1.1.0?vcs_url=sindresorhus/load-json-file",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/load-json-file",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-utf8",
+      "version": "0.2.1",
+      "bom-ref": "46ab364e2f62186cc0e6e875d4cce2025c543baf68e426ea3974a8af3de3ed6ff2d560885a33fcc2f892a351743f7667f64343387d591dee8410ef1eb1dc3d1d",
+      "author": "wayfind",
+      "description": "Detect if a buffer is utf8 encoded.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-utf8@0.2.1?vcs_url=https%3A//github.com/wayfind/is-utf8.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/wayfind/is-utf8.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-license-ids",
+      "version": "3.0.17",
+      "bom-ref": "49dca9aba1d71e5b7db4c4be4e8c24078536cc838a3750d889b43ab0b733e068566ea9dd992639ed26ce03f99c7718c4a887a96617c29d977aa9a0ce7a31db22",
+      "author": "Shinnosuke Watanabe",
+      "description": "A list of SPDX license identifiers",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/spdx-license-ids@3.0.17?vcs_url=jslicense/spdx-license-ids",
+      "externalReferences": [
+        {
+          "url": "jslicense/spdx-license-ids",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "set-blocking",
+      "version": "2.0.0",
+      "bom-ref": "49e2cffa241db9536d9b92721cace29f6008eb5edc2cee9485dd456cdb8822d67173b5f0dcc4ec798dfe45127f99a9b547315f93b4e8f1dfcd2dcae274adb218",
+      "author": "Ben Coe",
+      "description": "set blocking stdio and stderr ensuring that terminal output does not truncate",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A//github.com/yargs/set-blocking.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/yargs/set-blocking/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/yargs/set-blocking.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/yargs/set-blocking#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "error-ex",
+      "version": "1.3.2",
+      "bom-ref": "5654f80c0f00c422efae94d751fb711fb2fa54931fad7041a3ffd1a5ce3230de855988b3e41d129ac484ff03003b6f01039ca14e41f88a5cc9eb7c760032f5b5",
+      "description": "Easy error subclassing and stack customization",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/error-ex@1.3.2?vcs_url=qix-/node-error-ex",
+      "externalReferences": [
+        {
+          "url": "qix-/node-error-ex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "read-pkg-up",
+      "version": "1.0.1",
+      "bom-ref": "5b23d2a7ab9482ffb4115305360e95d68b29b7d8c240652a929e6a50f7846b84a9bd7a651366ae6445cb807675b5da1f31e8d6a893f8a06a759a874c6b2c631c",
+      "author": "Sindre Sorhus",
+      "description": "Read the closest package.json file",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/read-pkg-up@1.0.1?vcs_url=sindresorhus/read-pkg-up",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/read-pkg-up",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-bom",
+      "version": "2.0.0",
+      "bom-ref": "5c4b64ed5a06d9c1159a62b6b8c40189b235d3dd71e52e423313bd2ddf46b5d5020b5368e7df439fc04044aaf3284b9edcea2d4c705d6c9f45758d9d7ebe89af",
+      "author": "Sindre Sorhus",
+      "description": "Strip UTF-8 byte order mark (BOM) from a string/buffer",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/strip-bom@2.0.0?vcs_url=sindresorhus/strip-bom",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/strip-bom",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yargs-parser",
+      "version": "2.4.1",
+      "bom-ref": "6224919c77064b7e74adb9af148eec1361112efebab66f52428338ee362f13b01057fb337122fae5369069bdd8cd1b1318546d85c4318015fee63c1474a96081",
+      "author": "Ben Coe",
+      "description": "the mighty option parser used by yargs",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/yargs-parser@2.4.1?vcs_url=git%40github.com%3Ayargs/yargs-parser.git",
+      "externalReferences": [
+        {
+          "url": "git@github.com:yargs/yargs-parser.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hosted-git-info",
+      "version": "2.8.9",
+      "bom-ref": "62c44fa93fa8730cd69d15fc84d549422c6610dd4914b046181b857834f525bcaf2b6ee4ecb259304516ded504cca49386f654c01048620f93a5f6ee245cf204",
+      "author": "Rebecca Turner",
+      "description": "Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/hosted-git-info@2.8.9?vcs_url=git%2Bhttps%3A//github.com/npm/hosted-git-info.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/npm/hosted-git-info/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/hosted-git-info.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/hosted-git-info",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-ansi",
+      "version": "3.0.1",
+      "bom-ref": "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22",
+      "author": "Sindre Sorhus",
+      "description": "Strip ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/strip-ansi@3.0.1?vcs_url=chalk/strip-ansi",
+      "externalReferences": [
+        {
+          "url": "chalk/strip-ansi",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-exceptions",
+      "version": "2.5.0",
+      "bom-ref": "718ed4b7d6c0402c66704cb02ce9d423d4677c13ba4a9915231758d909c8b7cb8b513867216374be29852f129691d51773d6b6f6c8291b60e855a5ab6aa3ef6b",
+      "author": "The Linux Foundation",
+      "description": "list of SPDX standard license exceptions",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC-BY-3.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/spdx-exceptions@2.5.0?vcs_url=kemitchell/spdx-exceptions.json",
+      "externalReferences": [
+        {
+          "url": "kemitchell/spdx-exceptions.json",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "function-bind",
+      "version": "1.1.2",
+      "bom-ref": "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008",
+      "author": "Raynos",
+      "description": "Implementation of Function.prototype.bind",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A//github.com/Raynos/function-bind.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Raynos/function-bind/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://github.com/Raynos/function-bind.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Raynos/function-bind",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "validate-npm-package-license",
+      "version": "3.0.4",
+      "bom-ref": "7af8adc7a8bbfd9aa77a75271e50304a690c23c2b9bd827f353dd8ae6749dda298acf9739831bbc6dce8d54f1b25b2cc33f716bb25cc37125e5520836e9392e4",
+      "author": "Kyle E. Mitchell",
+      "description": "Give me a string and I'll tell you if it's a valid npm package license string",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/validate-npm-package-license@3.0.4?vcs_url=kemitchell/validate-npm-package-license.js",
+      "externalReferences": [
+        {
+          "url": "kemitchell/validate-npm-package-license.js",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hasown",
+      "version": "2.0.2",
+      "bom-ref": "80fe6c99012913d047029afc7c90e374206b8188c10cfd057ad3b06b2dba16324f2b56e4d500d19b96c8e47d64dfd4cca28b8667bc499c16aba4f8de6800f32a",
+      "author": "Jordan Harband",
+      "description": "A robust, ES3 compatible, \"has own property\" predicate.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/hasown@2.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/hasOwn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/hasOwn.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/hasOwn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "number-is-nan",
+      "version": "1.0.1",
+      "bom-ref": "845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f",
+      "author": "Sindre Sorhus",
+      "description": "ES2015 Number.isNaN() ponyfill",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/number-is-nan@1.0.1?vcs_url=sindresorhus/number-is-nan",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/number-is-nan",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "require-directory",
+      "version": "2.1.1",
+      "bom-ref": "8608aee50bd8ab92ea21a8dd63895cc1d574d77c1a4c98f062ee78825f02f761c6252cb1d3dc7c5bc03cacf1ca1d50fa1faa2295b27f964c76298f8b5dca9e2d",
+      "author": "Troy Goode",
+      "description": "Recursively iterates over specified directory, require()'ing each file, and returning a nested hash structure containing those modules.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/require-directory@2.1.1?vcs_url=git%3A//github.com/troygoode/node-require-directory.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/troygoode/node-require-directory/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/troygoode/node-require-directory.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/troygoode/node-require-directory/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pify",
+      "version": "2.3.0",
+      "bom-ref": "8b6331093412ce5e21c37ad009133187af275d5995064337a9386dffbfaf8921bc8c0b18a6b70fcfffd5fd8b32b4e5ae9f01e0d02e29b9c33602ab5c11bde5e1",
+      "author": "Sindre Sorhus",
+      "description": "Promisify a callback-style function",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pify@2.3.0?vcs_url=sindresorhus/pify",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/pify",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "os-locale",
+      "version": "1.4.0",
+      "bom-ref": "924760b837ca146279255a9279c09bd02a76ada432fa494f3729406051fa16f707fa625cd0be0483f59dce4c91944f24e94d3ff12a1a3ed13e6b77490445324e",
+      "author": "Sindre Sorhus",
+      "description": "Get the system locale",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/os-locale@1.4.0?vcs_url=sindresorhus/os-locale",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/os-locale",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "5.7.2",
+      "bom-ref": "938ee91eaa029a24a7d4e32bc4ac217b48af43166e2d8de71c9448a711d251bd572bb580d5836606e755e1ec907c0766f4ffe345ae1da4eb89b7cf69f4c12f2a",
+      "author": "GitHub Inc.",
+      "description": "The semantic version parser used by npm.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/semver@5.7.2?vcs_url=https%3A//github.com/npm/node-semver.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/npm/node-semver.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "require-main-filename",
+      "version": "1.0.1",
+      "bom-ref": "a5028aafe644012d5ea404ca9e2570a11cda6a279486084df94c10b70ce976fe2441ab42f876e20ed50ba0ca6c0c597f2dc7a36479a30fa77ec574e8f793ba48",
+      "author": "Ben Coe",
+      "description": "shim for require.main.filename() that works in as many environments as possible",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/require-main-filename.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/yargs/require-main-filename/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/yargs/require-main-filename.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/yargs/require-main-filename#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "normalize-package-data",
+      "version": "2.5.0",
+      "bom-ref": "af0345deed1114e976cdc836efb2a02b037234892c03e7e852cba05a91a10714ca7cffa44fc517a4761d7f3039038ef6060235f465e4006d42f8a89261889e87",
+      "author": "Meryn Stol",
+      "description": "Normalizes data that can be found in package.json files.",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/normalize-package-data@2.5.0?vcs_url=git%3A//github.com/npm/normalize-package-data.git",
+      "externalReferences": [
+        {
+          "url": "git://github.com/npm/normalize-package-data.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cliui",
+      "version": "3.2.0",
+      "bom-ref": "b68c4dcdcb5aa2ade6d1b62e474c509e22b6a75fb5c983bb3675fea47574d7dcc597817bee54cde1e11ac1a30831485a0df2907ad0e6aadff055c4a73674ad7c",
+      "author": "Ben Coe",
+      "description": "easily create complex multi-column command-line-interfaces",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cliui@3.2.0?vcs_url=http%3A//github.com/yargs/cliui.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/yargs/cliui.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-expression-parse",
+      "version": "3.0.1",
+      "bom-ref": "b718cbb35a21127feee0da5f8f331d4efbffdb813d351850b310d00cc1808e6ea37cdd14a41958e1e614783ccfd9cc4e2f393601f797d6760b6099c0e5041170",
+      "author": "Kyle E. Mitchell",
+      "description": "parse SPDX license expressions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/spdx-expression-parse@3.0.1?vcs_url=jslicense/spdx-expression-parse.js",
+      "externalReferences": [
+        {
+          "url": "jslicense/spdx-expression-parse.js",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "window-size",
+      "version": "0.2.0",
+      "bom-ref": "bcae1f172abe0ddae2e1c79c3d24a1382baa0449673e36103b0ad3f993cb8d563abf088677d4b80da0e24e11fbec681c9be18a610464976ce0bbc49c0a9f26ba",
+      "author": "Jon Schlinkert",
+      "description": "Reliable way to to get the height and width of the terminal/console in a node.js environment.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/window-size@0.2.0?vcs_url=jonschlinkert/window-size",
+      "externalReferences": [
+        {
+          "url": "https://github.com/jonschlinkert/window-size/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "jonschlinkert/window-size",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        },
+        {
+          "url": "https://github.com/jonschlinkert/window-size",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-exists",
+      "version": "2.1.0",
+      "bom-ref": "be4aa2cccc3c1e23770b82e4ee57695e16c299f800856408514cb0c673e4e8a7b67cbe3c43fc0d9f7b25e4c7bb78d9865ade0ebdb36d502eb2504e5c51510a4d",
+      "author": "Sindre Sorhus",
+      "description": "Check if a path exists",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/path-exists@2.1.0?vcs_url=sindresorhus/path-exists",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/path-exists",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decamelize",
+      "version": "1.2.0",
+      "bom-ref": "c5a2fdc6225a1ca261e46ec51c96b52babe302c90c72db02fdb480ea883162f2850df33bcd63f58220fe6422e49b1cdfffccae7e43a76b7e599e7be0fd28e316",
+      "author": "Sindre Sorhus",
+      "description": "Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/decamelize@1.2.0?vcs_url=sindresorhus/decamelize",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/decamelize",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pinkie",
+      "version": "2.0.4",
+      "bom-ref": "cffce4fb099fbcf2e5c36a03541d3bb693bb3236881cef110f70cdbc0f2f60e07b46164713e5940f87d5f5ee478bb3eac8eccc0bf73849f885bafc93c6da9681",
+      "author": "Vsevolod Strukchinsky",
+      "description": "Itty bitty little widdle twinkie pinkie ES2015 Promise implementation",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pinkie@2.0.4?vcs_url=floatdrop/pinkie",
+      "externalReferences": [
+        {
+          "url": "floatdrop/pinkie",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-regex",
+      "version": "2.1.1",
+      "bom-ref": "ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122",
+      "author": "Sindre Sorhus",
+      "description": "Regular expression for matching ANSI escape codes",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ansi-regex@2.1.1?vcs_url=chalk/ansi-regex",
+      "externalReferences": [
+        {
+          "url": "chalk/ansi-regex",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "get-caller-file",
+      "version": "1.0.3",
+      "bom-ref": "df430e70751265306b66feb852faa163934d435894d837cecb4ef0d52e11aa27d66855bb8b36e01b1c7b78f151e30b10cd3b4360e6b91ffef99abb7012518bd3",
+      "author": "Stefan Penner",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/get-caller-file@1.0.3?vcs_url=git%2Bhttps%3A//github.com/stefanpenner/get-caller-file.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/stefanpenner/get-caller-file/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/stefanpenner/get-caller-file.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/stefanpenner/get-caller-file#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "supports-preserve-symlinks-flag",
+      "version": "1.0.0",
+      "bom-ref": "f17c4d002896b41c514bc0dd98227326ac3087f75eec30fe7085fcf85c4a2e76fd6a2bb8823a96a5948777ed3dc4925547449a0cdb9d5e83e7ef171715c1ce11",
+      "author": "Jordan Harband",
+      "description": "Determine if the current node version supports the `--preserve-symlinks` flag.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0?vcs_url=git%2Bhttps%3A//github.com/inspect-js/node-supports-preserve-symlinks-flag.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/node-supports-preserve-symlinks-flag.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parse-json",
+      "version": "2.2.0",
+      "bom-ref": "f7c91e74a78d68d7b6f76933f2925133cb0e7fb58c7ca8614c8f6759b1e18c5b78282aaec7f0849170738b1d26c19c8c3f07d1beca3a1dffe0efa6d4a022e390",
+      "author": "Sindre Sorhus",
+      "description": "Parse JSON with more helpful errors",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/parse-json@2.2.0?vcs_url=sindresorhus/parse-json",
+      "externalReferences": [
+        {
+          "url": "sindresorhus/parse-json",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "y18n",
+      "version": "3.2.2",
+      "bom-ref": "f9b6b421010804367be9f5a15a8fb6132a8839dc3c531d06aaeb77357a7b836de746b6f5da1fcf8a7f0d98c648445137c6a0f99dc09624a338034168c7711c4c",
+      "author": "Ben Coe",
+      "description": "the bare-bones internationalization library used by yargs",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/y18n@3.2.2?vcs_url=git%40github.com%3Ayargs/y18n.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/yargs/y18n/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git@github.com:yargs/y18n.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/yargs/y18n",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spdx-correct",
+      "version": "3.2.0",
+      "bom-ref": "ffae0084843d21403bf593e2bacc30f5bf70a68e56784a9f7bf8b7754bf6ad31dd80472349cabab13016e4bede124b6fd2a7bd87de7ad433a5628ca0815a42b8",
+      "description": "correct invalid SPDX expressions",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/spdx-correct@3.2.0?vcs_url=jslicense/spdx-correct.js",
+      "externalReferences": [
+        {
+          "url": "jslicense/spdx-correct.js",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "006a29cce39b6fd1c4aa2ffad6ee66e771dc5525ac6b851ba12fc29a2777b7b067c0df071eb2befa061ab18e5aa5135737b1ee0e93f9cce5a93ca2c5ef0283d0"
+    },
+    {
+      "ref": "01031f9addd3e69bc3debd04343c27f4cc51db5583832791c1cf6c13711afcc55b62bd57f0e04e154c2d559b4e7be93f7410c79e8b686e07bdf76e468b1c88a4",
+      "dependsOn": [
+        "0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad",
+        "37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12",
+        "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22"
+      ]
+    },
+    {
+      "ref": "02d845072b622b56f4ca3d96563056d4c5d70568865122c1c5d3626e00565b2f36ec473bb2cdfd0fadfdaea34a2aeb9ef20c7bc9501de69afe97d9de85adec9f",
+      "dependsOn": [
+        "114e48e2896e09d9358ee1de949ace0fe15e7da66743d70a96f5ef90a5eebfe7c37c653166a4992a5670ee31a403017d05fcbb842a12dfa5271dc85dfcd427cc"
+      ]
+    },
+    {
+      "ref": "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483",
+      "dependsOn": [
+        "cffce4fb099fbcf2e5c36a03541d3bb693bb3236881cef110f70cdbc0f2f60e07b46164713e5940f87d5f5ee478bb3eac8eccc0bf73849f885bafc93c6da9681"
+      ]
+    },
+    {
+      "ref": "09564527b7820736d49274c86cbcd9d7b374b7f2635eb98d5583e3de0f73a073e41359bbf0b9323dc7aa810ecc6b906ed9e99cd654b30c5d3da9aab127e7b7f0"
+    },
+    {
+      "ref": "0c65af0c7f1e9e7cc8339688c8e5182b7f4480cabd7a3dc868505f9476b73e3cfbf5d0ae0943c0a5648039ae1d384e48b0b134311601f1cbfee2db36c02d9886"
+    },
+    {
+      "ref": "0e436ba1efe8423b85d6fb13cf24aadf26d73f0eacc9fcfa7e9ac2805834c85e1bf336c9d6c99cc1ba08aeae138162c4060fc20ed6d8f451b3930a14eeb16bad",
+      "dependsOn": [
+        "845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f"
+      ]
+    },
+    {
+      "ref": "11237fa82f96e622c2a3b8960d8e809687f032e22edc42193142c4d4f96d3f4a6effaa539ac91b6be2136085a855a2a57c042f2ab0aa7531846f861fd58530e6",
+      "dependsOn": [
+        "3949afd6c1448af7ab0ca5038044088ccd5b35b48a8a01ba499f6f594b9364e8472bf7efb8ece0e0501bc9e69d5a73450786bc9b623f4c4c7d70b1d2092a6545",
+        "455d5470c20a675ec33d40222d970161bb533a20bec33335051e3faa582538472355574db37a5def64d88fd827802d96420d44e4fc59360a679367418a8fbe76",
+        "af0345deed1114e976cdc836efb2a02b037234892c03e7e852cba05a91a10714ca7cffa44fc517a4761d7f3039038ef6060235f465e4006d42f8a89261889e87"
+      ]
+    },
+    {
+      "ref": "114e48e2896e09d9358ee1de949ace0fe15e7da66743d70a96f5ef90a5eebfe7c37c653166a4992a5670ee31a403017d05fcbb842a12dfa5271dc85dfcd427cc"
+    },
+    {
+      "ref": "18b16126b913e9cb3f3192975ada2b01feaee9ad0ac5c385bf14cb52f33bb9f62e6b9c0a6406253643a6146c67917c04c0a9946cb0e3260b055ea407dcaa3e57"
+    },
+    {
+      "ref": "1fd9d509730dc5189302e13360c8c3d016545490f642239a0718fa4203acebc95b1fa6cb3a409383898b46a8ca40535cb7ca41efb10599d04686599aabca3438",
+      "dependsOn": [
+        "01031f9addd3e69bc3debd04343c27f4cc51db5583832791c1cf6c13711afcc55b62bd57f0e04e154c2d559b4e7be93f7410c79e8b686e07bdf76e468b1c88a4",
+        "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22"
+      ]
+    },
+    {
+      "ref": "22f047c6a94609ff7b7e8e6e20ea03897fb406c2aad1e0a5d6152bf0f05b6ff3d98846dc58c72daaf0616db80af6c06f4b72c5aa7f4511c2bc23238a68c61a57",
+      "dependsOn": [
+        "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483",
+        "be4aa2cccc3c1e23770b82e4ee57695e16c299f800856408514cb0c673e4e8a7b67cbe3c43fc0d9f7b25e4c7bb78d9865ade0ebdb36d502eb2504e5c51510a4d"
+      ]
+    },
+    {
+      "ref": "23927dfb15c07417ae3ba4fc849e7e3e3c5a5a8ff182b41a3a65c8cf703904b13fe8adf7790a707d86daac7096a0b9b19c17d4c0c2ccc948d6948388bc916c4a"
+    },
+    {
+      "ref": "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76"
+    },
+    {
+      "ref": "3412e4101bd1b9578f5221110d79e86efd6ccc5a20b05ed9525d913646a819ca7898b9762733058175a4888a7076b2d7556e9462ee38a55a861b4b30def9b28c",
+      "dependsOn": [
+        "006a29cce39b6fd1c4aa2ffad6ee66e771dc5525ac6b851ba12fc29a2777b7b067c0df071eb2befa061ab18e5aa5135737b1ee0e93f9cce5a93ca2c5ef0283d0",
+        "01031f9addd3e69bc3debd04343c27f4cc51db5583832791c1cf6c13711afcc55b62bd57f0e04e154c2d559b4e7be93f7410c79e8b686e07bdf76e468b1c88a4",
+        "18b16126b913e9cb3f3192975ada2b01feaee9ad0ac5c385bf14cb52f33bb9f62e6b9c0a6406253643a6146c67917c04c0a9946cb0e3260b055ea407dcaa3e57",
+        "49e2cffa241db9536d9b92721cace29f6008eb5edc2cee9485dd456cdb8822d67173b5f0dcc4ec798dfe45127f99a9b547315f93b4e8f1dfcd2dcae274adb218",
+        "5b23d2a7ab9482ffb4115305360e95d68b29b7d8c240652a929e6a50f7846b84a9bd7a651366ae6445cb807675b5da1f31e8d6a893f8a06a759a874c6b2c631c",
+        "6224919c77064b7e74adb9af148eec1361112efebab66f52428338ee362f13b01057fb337122fae5369069bdd8cd1b1318546d85c4318015fee63c1474a96081",
+        "8608aee50bd8ab92ea21a8dd63895cc1d574d77c1a4c98f062ee78825f02f761c6252cb1d3dc7c5bc03cacf1ca1d50fa1faa2295b27f964c76298f8b5dca9e2d",
+        "924760b837ca146279255a9279c09bd02a76ada432fa494f3729406051fa16f707fa625cd0be0483f59dce4c91944f24e94d3ff12a1a3ed13e6b77490445324e",
+        "a5028aafe644012d5ea404ca9e2570a11cda6a279486084df94c10b70ce976fe2441ab42f876e20ed50ba0ca6c0c597f2dc7a36479a30fa77ec574e8f793ba48",
+        "b68c4dcdcb5aa2ade6d1b62e474c509e22b6a75fb5c983bb3675fea47574d7dcc597817bee54cde1e11ac1a30831485a0df2907ad0e6aadff055c4a73674ad7c",
+        "bcae1f172abe0ddae2e1c79c3d24a1382baa0449673e36103b0ad3f993cb8d563abf088677d4b80da0e24e11fbec681c9be18a610464976ce0bbc49c0a9f26ba",
+        "c5a2fdc6225a1ca261e46ec51c96b52babe302c90c72db02fdb480ea883162f2850df33bcd63f58220fe6422e49b1cdfffccae7e43a76b7e599e7be0fd28e316",
+        "df430e70751265306b66feb852faa163934d435894d837cecb4ef0d52e11aa27d66855bb8b36e01b1c7b78f151e30b10cd3b4360e6b91ffef99abb7012518bd3",
+        "f9b6b421010804367be9f5a15a8fb6132a8839dc3c531d06aaeb77357a7b836de746b6f5da1fcf8a7f0d98c648445137c6a0f99dc09624a338034168c7711c4c"
+      ]
+    },
+    {
+      "ref": "36e17434f9f5e904ec00c9c6ffeb48c30094dcbd44f7d16714c8646bb1900e3452c41e5882f0871074538f5729bcc311b62e9b0db9a217063ebe6531a8d4bac7",
+      "dependsOn": [
+        "80fe6c99012913d047029afc7c90e374206b8188c10cfd057ad3b06b2dba16324f2b56e4d500d19b96c8e47d64dfd4cca28b8667bc499c16aba4f8de6800f32a"
+      ]
+    },
+    {
+      "ref": "37de5fe566766abe9cf4a84d9935ea4ec37864a4c5e898456f5b74eec65356ac8a9667597a283b083a8ff2931089cc6cdf76244178510e031c11d15538057e12"
+    },
+    {
+      "ref": "3949afd6c1448af7ab0ca5038044088ccd5b35b48a8a01ba499f6f594b9364e8472bf7efb8ece0e0501bc9e69d5a73450786bc9b623f4c4c7d70b1d2092a6545",
+      "dependsOn": [
+        "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483",
+        "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76",
+        "8b6331093412ce5e21c37ad009133187af275d5995064337a9386dffbfaf8921bc8c0b18a6b70fcfffd5fd8b32b4e5ae9f01e0d02e29b9c33602ab5c11bde5e1"
+      ]
+    },
+    {
+      "ref": "3cecd2a132ae02b3110c02e84acb37d01e01cd680b731c23d47cca89d37b01a8b2654b1cf2bd0978c302ed63306ea10b9e304c29a629d571127a638f6b619ccd",
+      "dependsOn": [
+        "3412e4101bd1b9578f5221110d79e86efd6ccc5a20b05ed9525d913646a819ca7898b9762733058175a4888a7076b2d7556e9462ee38a55a861b4b30def9b28c"
+      ]
+    },
+    {
+      "ref": "4254c24959690314f0760e563bbec96984e6a8a43379ea0f8e109f7f3b78502629cbf2644154f81a50a82546a808cc8c6702a440e1dbf2b9776b67be7422e3be",
+      "dependsOn": [
+        "09564527b7820736d49274c86cbcd9d7b374b7f2635eb98d5583e3de0f73a073e41359bbf0b9323dc7aa810ecc6b906ed9e99cd654b30c5d3da9aab127e7b7f0",
+        "36e17434f9f5e904ec00c9c6ffeb48c30094dcbd44f7d16714c8646bb1900e3452c41e5882f0871074538f5729bcc311b62e9b0db9a217063ebe6531a8d4bac7",
+        "f17c4d002896b41c514bc0dd98227326ac3087f75eec30fe7085fcf85c4a2e76fd6a2bb8823a96a5948777ed3dc4925547449a0cdb9d5e83e7ef171715c1ce11"
+      ]
+    },
+    {
+      "ref": "455d5470c20a675ec33d40222d970161bb533a20bec33335051e3faa582538472355574db37a5def64d88fd827802d96420d44e4fc59360a679367418a8fbe76",
+      "dependsOn": [
+        "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483",
+        "24bb648a68ce4f7ee63e91ffe6dc114534d258014ca0c4f122ea0259759e9eb295b15e798c34bd89775cd0eb3f7a4a113fa272b81203a79071f803e101f27c76",
+        "5c4b64ed5a06d9c1159a62b6b8c40189b235d3dd71e52e423313bd2ddf46b5d5020b5368e7df439fc04044aaf3284b9edcea2d4c705d6c9f45758d9d7ebe89af",
+        "8b6331093412ce5e21c37ad009133187af275d5995064337a9386dffbfaf8921bc8c0b18a6b70fcfffd5fd8b32b4e5ae9f01e0d02e29b9c33602ab5c11bde5e1",
+        "f7c91e74a78d68d7b6f76933f2925133cb0e7fb58c7ca8614c8f6759b1e18c5b78282aaec7f0849170738b1d26c19c8c3f07d1beca3a1dffe0efa6d4a022e390"
+      ]
+    },
+    {
+      "ref": "46ab364e2f62186cc0e6e875d4cce2025c543baf68e426ea3974a8af3de3ed6ff2d560885a33fcc2f892a351743f7667f64343387d591dee8410ef1eb1dc3d1d"
+    },
+    {
+      "ref": "49dca9aba1d71e5b7db4c4be4e8c24078536cc838a3750d889b43ab0b733e068566ea9dd992639ed26ce03f99c7718c4a887a96617c29d977aa9a0ce7a31db22"
+    },
+    {
+      "ref": "49e2cffa241db9536d9b92721cace29f6008eb5edc2cee9485dd456cdb8822d67173b5f0dcc4ec798dfe45127f99a9b547315f93b4e8f1dfcd2dcae274adb218"
+    },
+    {
+      "ref": "5654f80c0f00c422efae94d751fb711fb2fa54931fad7041a3ffd1a5ce3230de855988b3e41d129ac484ff03003b6f01039ca14e41f88a5cc9eb7c760032f5b5",
+      "dependsOn": [
+        "23927dfb15c07417ae3ba4fc849e7e3e3c5a5a8ff182b41a3a65c8cf703904b13fe8adf7790a707d86daac7096a0b9b19c17d4c0c2ccc948d6948388bc916c4a"
+      ]
+    },
+    {
+      "ref": "5b23d2a7ab9482ffb4115305360e95d68b29b7d8c240652a929e6a50f7846b84a9bd7a651366ae6445cb807675b5da1f31e8d6a893f8a06a759a874c6b2c631c",
+      "dependsOn": [
+        "11237fa82f96e622c2a3b8960d8e809687f032e22edc42193142c4d4f96d3f4a6effaa539ac91b6be2136085a855a2a57c042f2ab0aa7531846f861fd58530e6",
+        "22f047c6a94609ff7b7e8e6e20ea03897fb406c2aad1e0a5d6152bf0f05b6ff3d98846dc58c72daaf0616db80af6c06f4b72c5aa7f4511c2bc23238a68c61a57"
+      ]
+    },
+    {
+      "ref": "5c4b64ed5a06d9c1159a62b6b8c40189b235d3dd71e52e423313bd2ddf46b5d5020b5368e7df439fc04044aaf3284b9edcea2d4c705d6c9f45758d9d7ebe89af",
+      "dependsOn": [
+        "46ab364e2f62186cc0e6e875d4cce2025c543baf68e426ea3974a8af3de3ed6ff2d560885a33fcc2f892a351743f7667f64343387d591dee8410ef1eb1dc3d1d"
+      ]
+    },
+    {
+      "ref": "6224919c77064b7e74adb9af148eec1361112efebab66f52428338ee362f13b01057fb337122fae5369069bdd8cd1b1318546d85c4318015fee63c1474a96081",
+      "dependsOn": [
+        "0c65af0c7f1e9e7cc8339688c8e5182b7f4480cabd7a3dc868505f9476b73e3cfbf5d0ae0943c0a5648039ae1d384e48b0b134311601f1cbfee2db36c02d9886",
+        "18b16126b913e9cb3f3192975ada2b01feaee9ad0ac5c385bf14cb52f33bb9f62e6b9c0a6406253643a6146c67917c04c0a9946cb0e3260b055ea407dcaa3e57"
+      ]
+    },
+    {
+      "ref": "62c44fa93fa8730cd69d15fc84d549422c6610dd4914b046181b857834f525bcaf2b6ee4ecb259304516ded504cca49386f654c01048620f93a5f6ee245cf204"
+    },
+    {
+      "ref": "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22",
+      "dependsOn": [
+        "ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122"
+      ]
+    },
+    {
+      "ref": "718ed4b7d6c0402c66704cb02ce9d423d4677c13ba4a9915231758d909c8b7cb8b513867216374be29852f129691d51773d6b6f6c8291b60e855a5ab6aa3ef6b"
+    },
+    {
+      "ref": "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008"
+    },
+    {
+      "ref": "7af8adc7a8bbfd9aa77a75271e50304a690c23c2b9bd827f353dd8ae6749dda298acf9739831bbc6dce8d54f1b25b2cc33f716bb25cc37125e5520836e9392e4",
+      "dependsOn": [
+        "b718cbb35a21127feee0da5f8f331d4efbffdb813d351850b310d00cc1808e6ea37cdd14a41958e1e614783ccfd9cc4e2f393601f797d6760b6099c0e5041170",
+        "ffae0084843d21403bf593e2bacc30f5bf70a68e56784a9f7bf8b7754bf6ad31dd80472349cabab13016e4bede124b6fd2a7bd87de7ad433a5628ca0815a42b8"
+      ]
+    },
+    {
+      "ref": "80fe6c99012913d047029afc7c90e374206b8188c10cfd057ad3b06b2dba16324f2b56e4d500d19b96c8e47d64dfd4cca28b8667bc499c16aba4f8de6800f32a",
+      "dependsOn": [
+        "7a55be9b0376e70ce8e7c90335e83d670704787f37e36e55e19b8a590ca09898458bd9b9ff2aab7ce277757a9e339a39958914c226feb75f36bf59cd40550008"
+      ]
+    },
+    {
+      "ref": "845325a0fef70d370d9f4d87b1f370126778c0283feec26cc90ebdf2a916931f0d6f6ff57f9bc6de874c2cfea8b40c2a0e03255b572c48f222edf481e7fc146f"
+    },
+    {
+      "ref": "8608aee50bd8ab92ea21a8dd63895cc1d574d77c1a4c98f062ee78825f02f761c6252cb1d3dc7c5bc03cacf1ca1d50fa1faa2295b27f964c76298f8b5dca9e2d"
+    },
+    {
+      "ref": "8b6331093412ce5e21c37ad009133187af275d5995064337a9386dffbfaf8921bc8c0b18a6b70fcfffd5fd8b32b4e5ae9f01e0d02e29b9c33602ab5c11bde5e1"
+    },
+    {
+      "ref": "924760b837ca146279255a9279c09bd02a76ada432fa494f3729406051fa16f707fa625cd0be0483f59dce4c91944f24e94d3ff12a1a3ed13e6b77490445324e",
+      "dependsOn": [
+        "02d845072b622b56f4ca3d96563056d4c5d70568865122c1c5d3626e00565b2f36ec473bb2cdfd0fadfdaea34a2aeb9ef20c7bc9501de69afe97d9de85adec9f"
+      ]
+    },
+    {
+      "ref": "938ee91eaa029a24a7d4e32bc4ac217b48af43166e2d8de71c9448a711d251bd572bb580d5836606e755e1ec907c0766f4ffe345ae1da4eb89b7cf69f4c12f2a"
+    },
+    {
+      "ref": "a5028aafe644012d5ea404ca9e2570a11cda6a279486084df94c10b70ce976fe2441ab42f876e20ed50ba0ca6c0c597f2dc7a36479a30fa77ec574e8f793ba48"
+    },
+    {
+      "ref": "af0345deed1114e976cdc836efb2a02b037234892c03e7e852cba05a91a10714ca7cffa44fc517a4761d7f3039038ef6060235f465e4006d42f8a89261889e87",
+      "dependsOn": [
+        "4254c24959690314f0760e563bbec96984e6a8a43379ea0f8e109f7f3b78502629cbf2644154f81a50a82546a808cc8c6702a440e1dbf2b9776b67be7422e3be",
+        "62c44fa93fa8730cd69d15fc84d549422c6610dd4914b046181b857834f525bcaf2b6ee4ecb259304516ded504cca49386f654c01048620f93a5f6ee245cf204",
+        "7af8adc7a8bbfd9aa77a75271e50304a690c23c2b9bd827f353dd8ae6749dda298acf9739831bbc6dce8d54f1b25b2cc33f716bb25cc37125e5520836e9392e4",
+        "938ee91eaa029a24a7d4e32bc4ac217b48af43166e2d8de71c9448a711d251bd572bb580d5836606e755e1ec907c0766f4ffe345ae1da4eb89b7cf69f4c12f2a"
+      ]
+    },
+    {
+      "ref": "b68c4dcdcb5aa2ade6d1b62e474c509e22b6a75fb5c983bb3675fea47574d7dcc597817bee54cde1e11ac1a30831485a0df2907ad0e6aadff055c4a73674ad7c",
+      "dependsOn": [
+        "01031f9addd3e69bc3debd04343c27f4cc51db5583832791c1cf6c13711afcc55b62bd57f0e04e154c2d559b4e7be93f7410c79e8b686e07bdf76e468b1c88a4",
+        "1fd9d509730dc5189302e13360c8c3d016545490f642239a0718fa4203acebc95b1fa6cb3a409383898b46a8ca40535cb7ca41efb10599d04686599aabca3438",
+        "6aec1365b9dab0547252d7f1bb8d150bead96f89cb909ba9607394f67e3c1030b5a0659ea94fc129791589d998eb27934da0f518f1be3d79fbb1cffa42ae6b22"
+      ]
+    },
+    {
+      "ref": "b718cbb35a21127feee0da5f8f331d4efbffdb813d351850b310d00cc1808e6ea37cdd14a41958e1e614783ccfd9cc4e2f393601f797d6760b6099c0e5041170",
+      "dependsOn": [
+        "49dca9aba1d71e5b7db4c4be4e8c24078536cc838a3750d889b43ab0b733e068566ea9dd992639ed26ce03f99c7718c4a887a96617c29d977aa9a0ce7a31db22",
+        "718ed4b7d6c0402c66704cb02ce9d423d4677c13ba4a9915231758d909c8b7cb8b513867216374be29852f129691d51773d6b6f6c8291b60e855a5ab6aa3ef6b"
+      ]
+    },
+    {
+      "ref": "bcae1f172abe0ddae2e1c79c3d24a1382baa0449673e36103b0ad3f993cb8d563abf088677d4b80da0e24e11fbec681c9be18a610464976ce0bbc49c0a9f26ba"
+    },
+    {
+      "ref": "be4aa2cccc3c1e23770b82e4ee57695e16c299f800856408514cb0c673e4e8a7b67cbe3c43fc0d9f7b25e4c7bb78d9865ade0ebdb36d502eb2504e5c51510a4d",
+      "dependsOn": [
+        "095439b8c51557c9f60a1912b8416d0f37f4a376d7cc1f9161e9980b81b968714205d8fb2d133cb673df038c64694025631a0d9607b370a9648314f05cf17483"
+      ]
+    },
+    {
+      "ref": "c5a2fdc6225a1ca261e46ec51c96b52babe302c90c72db02fdb480ea883162f2850df33bcd63f58220fe6422e49b1cdfffccae7e43a76b7e599e7be0fd28e316"
+    },
+    {
+      "ref": "cffce4fb099fbcf2e5c36a03541d3bb693bb3236881cef110f70cdbc0f2f60e07b46164713e5940f87d5f5ee478bb3eac8eccc0bf73849f885bafc93c6da9681"
+    },
+    {
+      "ref": "ddd24d102bd21dc8500ebfd0a92f2619b2ca51042dc17b59180b4692f21cb8de9a744b928c7e70690f38b86b67f8a5db2f064d263abb842f8c663db2f672e122"
+    },
+    {
+      "ref": "df430e70751265306b66feb852faa163934d435894d837cecb4ef0d52e11aa27d66855bb8b36e01b1c7b78f151e30b10cd3b4360e6b91ffef99abb7012518bd3"
+    },
+    {
+      "ref": "f17c4d002896b41c514bc0dd98227326ac3087f75eec30fe7085fcf85c4a2e76fd6a2bb8823a96a5948777ed3dc4925547449a0cdb9d5e83e7ef171715c1ce11"
+    },
+    {
+      "ref": "f2d3548b3db70ff1d9c4ebaf97e3751b05c3777548e89d8c03d2e8c648585b7bd59f79d55cb2b132f37d836302b60de71cdec95ab75d00264630e5c05c87fe38",
+      "dependsOn": [
+        "3cecd2a132ae02b3110c02e84acb37d01e01cd680b731c23d47cca89d37b01a8b2654b1cf2bd0978c302ed63306ea10b9e304c29a629d571127a638f6b619ccd"
+      ]
+    },
+    {
+      "ref": "f7c91e74a78d68d7b6f76933f2925133cb0e7fb58c7ca8614c8f6759b1e18c5b78282aaec7f0849170738b1d26c19c8c3f07d1beca3a1dffe0efa6d4a022e390",
+      "dependsOn": [
+        "5654f80c0f00c422efae94d751fb711fb2fa54931fad7041a3ffd1a5ce3230de855988b3e41d129ac484ff03003b6f01039ca14e41f88a5cc9eb7c760032f5b5"
+      ]
+    },
+    {
+      "ref": "f9b6b421010804367be9f5a15a8fb6132a8839dc3c531d06aaeb77357a7b836de746b6f5da1fcf8a7f0d98c648445137c6a0f99dc09624a338034168c7711c4c"
+    },
+    {
+      "ref": "ffae0084843d21403bf593e2bacc30f5bf70a68e56784a9f7bf8b7754bf6ad31dd80472349cabab13016e4bede124b6fd2a7bd87de7ad433a5628ca0815a42b8",
+      "dependsOn": [
+        "49dca9aba1d71e5b7db4c4be4e8c24078536cc838a3750d889b43ab0b733e068566ea9dd992639ed26ce03f99c7718c4a887a96617c29d977aa9a0ce7a31db22",
+        "b718cbb35a21127feee0da5f8f331d4efbffdb813d351850b310d00cc1808e6ea37cdd14a41958e1e614783ccfd9cc4e2f393601f797d6760b6099c0e5041170"
+      ]
+    }
+  ]
+}

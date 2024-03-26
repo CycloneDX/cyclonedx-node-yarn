@@ -1,0 +1,39 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-package-with-build-id",
+      "version": "1.0.0-123+456",
+      "bom-ref": "46a7874d41ab9094efc1ef57a544792a31da71b4def1ccbd1365ea55ee51570211882665ef3acf806f383fd785a9acc24d51994755aaafe66d4349d0f3a9ce03",
+      "description": "demo: package-with-build-id -- show how buildID in the version looks like"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "46a7874d41ab9094efc1ef57a544792a31da71b4def1ccbd1365ea55ee51570211882665ef3acf806f383fd785a9acc24d51994755aaafe66d4349d0f3a9ce03"
+    }
+  ]
+}
