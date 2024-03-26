@@ -40,23 +40,9 @@
   "components": [
     {
       "type": "library",
-      "name": "my-local-b-off",
-      "version": "0.0.0",
-      "bom-ref": "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90",
-      "description": "demo: my-local-b-off - a package with a different name than its dir",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "my-local-a",
       "version": "0.0.0",
-      "bom-ref": "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
+      "bom-ref": "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b",
       "description": "demo: my-local-a",
       "licenses": [
         {
@@ -75,30 +61,44 @@
     },
     {
       "type": "library",
-      "name": "DummyComponent.my-noname@file:packages/my-noname#packages/my-noname::hash=9a75d0&locator=demo-local-deps%40workspace%3A.",
-      "bom-ref": "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e",
-      "description": "This is a dummy component \"my-noname@file:packages/my-noname#packages/my-noname::hash=9a75d0&locator=demo-local-deps%40workspace%3A.\" that fills the gap where the actual built failed."
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38",
+      "description": "demo: my-local-b-off - a package with a different name than its dir",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DummyComponent.my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
+      "bom-ref": "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6",
+      "description": "This is a dummy component \"my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.\" that fills the gap where the actual built failed."
     }
   ],
   "dependencies": [
     {
+      "ref": "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6"
+    },
+    {
       "ref": "47fb14efd826d78857374cd1a63a04f8359ee2c08e7554ba4e91f12674257e57a12d767962fed3ecc19751b0064a26f0574559060b1e5d10055f3831f6ec93e6",
       "dependsOn": [
-        "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
-        "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e"
+        "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6",
+        "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b"
       ]
     },
     {
-      "ref": "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90"
-    },
-    {
-      "ref": "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
+      "ref": "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b",
       "dependsOn": [
-        "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90"
+        "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38"
       ]
     },
     {
-      "ref": "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e"
+      "ref": "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38"
     }
   ]
 }
