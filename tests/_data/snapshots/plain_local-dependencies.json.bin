@@ -1,0 +1,104 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-local-deps",
+      "version": "0.0.0",
+      "bom-ref": "47fb14efd826d78857374cd1a63a04f8359ee2c08e7554ba4e91f12674257e57a12d767962fed3ecc19751b0064a26f0574559060b1e5d10055f3831f6ec93e6",
+      "description": "demo: demo-local-deps -- showcase how local dependencies look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90",
+      "description": "demo: my-local-b-off - a package with a different name than its dir",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "my-local-a",
+      "version": "0.0.0",
+      "bom-ref": "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
+      "description": "demo: my-local-a",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DummyComponent.my-noname@file:packages/my-noname#packages/my-noname::hash=9a75d0&locator=demo-local-deps%40workspace%3A.",
+      "bom-ref": "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e",
+      "description": "This is a dummy component \"my-noname@file:packages/my-noname#packages/my-noname::hash=9a75d0&locator=demo-local-deps%40workspace%3A.\" that fills the gap where the actual built failed."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "47fb14efd826d78857374cd1a63a04f8359ee2c08e7554ba4e91f12674257e57a12d767962fed3ecc19751b0064a26f0574559060b1e5d10055f3831f6ec93e6",
+      "dependsOn": [
+        "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
+        "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e"
+      ]
+    },
+    {
+      "ref": "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90"
+    },
+    {
+      "ref": "b2d85f33cddab9b067b42744318f7478fde0017d8016144376c8554b1129291b5e7e40fbcf45aa87066db1a41616b15c2e6bbb8c6bd3ca67db19f4d2c5d5f034",
+      "dependsOn": [
+        "83e7830274c69d6ce0a8c2cefacff2b6c189772c0616f67a2b0eca06c50b5a117eae3f182bc31c1f4a5abaa678632e5c8300ceb8722b3c7ea4390d274b52ee90"
+      ]
+    },
+    {
+      "ref": "d7de7f86d1e32e1f7ce31618bf1707f8154f9ad91e32c0c0cddc36800b8fdedab4dcdd8a3067c5a4376671075514fef9d8786be818208fbf5061d400c93f578e"
+    }
+  ]
+}
