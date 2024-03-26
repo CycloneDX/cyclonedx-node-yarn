@@ -12,7 +12,7 @@
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.
 
-## 🚧 🏗️ this project is an early development stage
+## 🚧 🏗️ this project is in early development stage
 
 See the projects issues, discussions, pull requests and milestone for the progress.
 
@@ -49,7 +49,7 @@ YARN_PLUGINS=.../bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
 The help page:
 
 ```text
-Generates CycloneDX SBOM for current workspace.
+Generates CycloneDX SBOM for current workspace.                                                                                                                   2131ms  2024-03-26 10:25:29
 
 ━━━ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -57,21 +57,21 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --spec-version #0      Which version of CycloneDX to use.
-                         (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")
-  --output-format #0     Which output format to use.
-                         (choices: "JSON", "XML", default: "JSON")
-  --output-file #0       Path to the output file.
-                         Set to "-" to write to STDOUT.
-                         (default: write to STDOUT)
-  --production,--prod    Exclude development dependencies.
-                         (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
-  --mc-type #0           Type of the main component.
-                         (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
-  --reproducible         Whether to go the extra mile and make the output reproducible.
-                         This might result in loss of time- and random-based values.
-  --verbose,-v           Increase the verbosity of messages.
-                         Use multiple times to increase the verbosity even more.
+  --spec-version #0        Which version of CycloneDX to use. 
+                           (choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")
+  --output-format #0       Which output format to use. 
+                           (choices: "JSON", "XML", default: "JSON")
+  --output-file #0         Path to the output file. 
+                           Set to "-" to write to STDOUT. 
+                           (default: write to STDOUT)
+  --production,--prod      Exclude development dependencies. 
+                           (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
+  --mc-type #0             Type of the main component. 
+                           (choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")
+  --output-reproducible    Whether to go the extra mile and make the output reproducible. 
+                           This might result in loss of time- and random-based values.
+  --verbose,-v             Increase the verbosity of messages.
+                           Use multiple times to increase the verbosity even more.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
