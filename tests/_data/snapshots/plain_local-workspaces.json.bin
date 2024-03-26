@@ -20,7 +20,7 @@
       "type": "application",
       "name": "demo-workspaces",
       "version": "0.0.0",
-      "bom-ref": "be205da633ca42a8de9f314c9455d68f67e833f3b36c1ee07dc975fdd0711dfb39258b2e04e24219cf881156faed6f296fe1ee932fab915a054a983a1fc0768a",
+      "bom-ref": "demo-workspaces@workspace:.",
       "description": "demo: demo-workspaces -- showcase how workspaces look like",
       "licenses": [
         {
@@ -42,7 +42,7 @@
       "type": "library",
       "name": "my-local-a",
       "version": "0.1.0",
-      "bom-ref": "1b5090f780754e6176616e1d12ed87a3dfa8a81963ac68260ac7e6b4458266e8e57c09a4604575acd09ab77d7321c0bae1f0edd07f1c9c8f91899be56b9bd6f5",
+      "bom-ref": "my-local-a@workspace:workspaces/my-local-a",
       "description": "demo: my-local-a",
       "licenses": [
         {
@@ -63,7 +63,7 @@
       "type": "library",
       "name": "my-local-b-off",
       "version": "0.0.0",
-      "bom-ref": "6b68ae25a1872d49fa9c0bc3064bef34a53affdc002daf45539637ac63f4687f119e11a9abc6c131da5a35f47acbfe319b06ebcaddfc3d25943a4e088d142bff",
+      "bom-ref": "my-local-b-off@workspace:workspaces/my-local-b",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -76,19 +76,19 @@
   ],
   "dependencies": [
     {
-      "ref": "1b5090f780754e6176616e1d12ed87a3dfa8a81963ac68260ac7e6b4458266e8e57c09a4604575acd09ab77d7321c0bae1f0edd07f1c9c8f91899be56b9bd6f5",
+      "ref": "demo-workspaces@workspace:.",
       "dependsOn": [
-        "6b68ae25a1872d49fa9c0bc3064bef34a53affdc002daf45539637ac63f4687f119e11a9abc6c131da5a35f47acbfe319b06ebcaddfc3d25943a4e088d142bff"
+        "my-local-a@workspace:workspaces/my-local-a"
       ]
     },
     {
-      "ref": "6b68ae25a1872d49fa9c0bc3064bef34a53affdc002daf45539637ac63f4687f119e11a9abc6c131da5a35f47acbfe319b06ebcaddfc3d25943a4e088d142bff"
+      "ref": "my-local-a@workspace:workspaces/my-local-a",
+      "dependsOn": [
+        "my-local-b-off@workspace:workspaces/my-local-b"
+      ]
     },
     {
-      "ref": "be205da633ca42a8de9f314c9455d68f67e833f3b36c1ee07dc975fdd0711dfb39258b2e04e24219cf881156faed6f296fe1ee932fab915a054a983a1fc0768a",
-      "dependsOn": [
-        "1b5090f780754e6176616e1d12ed87a3dfa8a81963ac68260ac7e6b4458266e8e57c09a4604575acd09ab77d7321c0bae1f0edd07f1c9c8f91899be56b9bd6f5"
-      ]
+      "ref": "my-local-b-off@workspace:workspaces/my-local-b"
     }
   ]
 }

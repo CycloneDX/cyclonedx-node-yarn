@@ -239,17 +239,9 @@ function packageInfoToCycloneComponent (
   ) ?? new DummyComponent(CDX.Enums.ComponentType.Library,
     structUtils.prettyLocatorNoColors(pkgInfo.package)
   )
-  if (component === undefined) {
-    throw new Error(
-      `Failed to parse manifest for ${structUtils.stringifyLocator(
-        pkgInfo.package
-      )}`
-    )
-  }
   // BOM reference needs to be a stable value for reproducible output.
-  // @FIXME dont use any `locatorhash` for this purpose - but maybe something that is actually universally reproducible?
   // -- like `package-name@version` - which is a discriminated unique value for yarn universe
-  component.bomRef.value = pkgInfo.package.locatorHash
+  component.bomRef.value = structUtils.prettyLocatorNoColors(pkgInfo.package)
 
   const devirtualizedLocator = structUtils.ensureDevirtualizedLocator(
     pkgInfo.package
