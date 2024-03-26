@@ -33,7 +33,7 @@ import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
 import { isString } from './_helpers'
-import * as buildtimeInfo from './buildtimeInfo.json'
+import buildtimeInfo from './buildtimeInfo.json'
 
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']
