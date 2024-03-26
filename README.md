@@ -49,7 +49,7 @@ YARN_PLUGINS=.../bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
 The help page:
 
 ```text
-Generates CycloneDX SBOM for current workspace.                                                                                                                   2131ms  2024-03-26 10:25:29
+Generates CycloneDX SBOM for current workspace.
 
 ━━━ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
