@@ -20,7 +20,7 @@
       "type": "application",
       "name": "demo-local-deps",
       "version": "0.0.0",
-      "bom-ref": "47fb14efd826d78857374cd1a63a04f8359ee2c08e7554ba4e91f12674257e57a12d767962fed3ecc19751b0064a26f0574559060b1e5d10055f3831f6ec93e6",
+      "bom-ref": "demo-local-deps@workspace:.",
       "description": "demo: demo-local-deps -- showcase how local dependencies look like",
       "licenses": [
         {
@@ -42,7 +42,7 @@
       "type": "library",
       "name": "my-local-a",
       "version": "0.0.0",
-      "bom-ref": "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b",
+      "bom-ref": "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
       "description": "demo: my-local-a",
       "licenses": [
         {
@@ -63,7 +63,7 @@
       "type": "library",
       "name": "my-local-b-off",
       "version": "0.0.0",
-      "bom-ref": "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38",
+      "bom-ref": "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A.",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
@@ -76,29 +76,29 @@
     {
       "type": "library",
       "name": "DummyComponent.my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
-      "bom-ref": "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6",
+      "bom-ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
       "description": "This is a dummy component \"my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.\" that fills the gap where the actual built failed."
     }
   ],
   "dependencies": [
     {
-      "ref": "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6"
-    },
-    {
-      "ref": "47fb14efd826d78857374cd1a63a04f8359ee2c08e7554ba4e91f12674257e57a12d767962fed3ecc19751b0064a26f0574559060b1e5d10055f3831f6ec93e6",
+      "ref": "demo-local-deps@workspace:.",
       "dependsOn": [
-        "3ffa5798ba0a61a8278084aa222455cbee093cc994ad96d3d45b31a6f8a41b3d7c9b53eb09d2a09193d983cb42a609983683810a0b5c537ef5d4b158200428c6",
-        "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b"
+        "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
+        "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A."
       ]
     },
     {
-      "ref": "6ba93bd38d7281eaeec722cf204767a111f6649dda14c92a34b1fe95f3f4b70dc6cf2434204a4b6ba1f43925a0522c6fa5d6c76ce0f349e8c646a43083e1202b",
+      "ref": "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
       "dependsOn": [
-        "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38"
+        "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A."
       ]
     },
     {
-      "ref": "d581108393e2a7e6c25aaf80fb6e3b0a1f3a684b3467a04e2f2a167f1eb9900797312fb5d2c93205ad9c6eab3ca41f5adfa85020b860ba7f5eb9ad9fcf8eed38"
+      "ref": "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A."
+    },
+    {
+      "ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A."
     }
   ]
 }

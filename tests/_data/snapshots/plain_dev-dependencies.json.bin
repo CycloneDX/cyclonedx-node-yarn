@@ -20,7 +20,7 @@
       "type": "application",
       "name": "demo-dev-dependencies",
       "version": "0.0.0",
-      "bom-ref": "2ec289e0f26d81189ffaf77ca8960c310c834e68fd532e72a460b5b5ddb28d263b61c6ef7a08fef5f9406726a5eee34420451c47ed41e7a6bde2746009cb3869",
+      "bom-ref": "demo-dev-dependencies@workspace:.",
       "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
       "licenses": [
         {
@@ -40,38 +40,10 @@
   "components": [
     {
       "type": "library",
-      "name": "uuid",
-      "group": "@types",
-      "version": "8.3.4",
-      "bom-ref": "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d",
-      "description": "TypeScript definitions for uuid",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
-      "externalReferences": [
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
-        },
-        {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "node",
       "group": "@types",
       "version": "20.11.30",
-      "bom-ref": "b20dd3f11f9de367d26db1caaba04a3473fef1c96b36d1bb0be6260cb80445c8f86071dea39337c22c25415209ce1a05cfc2bf672ac0eef3a1afbfb7ddfe7422",
+      "bom-ref": "@types/node@npm:20.11.30",
       "description": "TypeScript definitions for node",
       "licenses": [
         {
@@ -96,9 +68,37 @@
     },
     {
       "type": "library",
+      "name": "uuid",
+      "group": "@types",
+      "version": "8.3.4",
+      "bom-ref": "@types/uuid@npm:8.3.4",
+      "description": "TypeScript definitions for uuid",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "externalReferences": [
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "undici-types",
       "version": "5.26.5",
-      "bom-ref": "de4f7c7bb943ab9ceb43163855bbfe5b630926aaab0d58eb39de717c9ffe25e6c8d634761e372db5da25693cae27b66a37aaac9e577a37191751b9e0dd758009",
+      "bom-ref": "undici-types@npm:5.26.5",
       "description": "A stand-alone types package for Undici",
       "licenses": [
         {
@@ -130,7 +130,7 @@
       "type": "library",
       "name": "uuid",
       "version": "8.3.2",
-      "bom-ref": "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59",
+      "bom-ref": "uuid@npm:8.3.2",
       "description": "RFC4122 (v1, v4, and v5) UUIDs",
       "licenses": [
         {
@@ -152,7 +152,7 @@
       "type": "library",
       "name": "uuidv4",
       "version": "6.2.13",
-      "bom-ref": "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f",
+      "bom-ref": "uuidv4@npm:6.2.13",
       "description": "uuidv4 creates v4 UUIDs.",
       "licenses": [
         {
@@ -173,34 +173,34 @@
   ],
   "dependencies": [
     {
-      "ref": "2ec289e0f26d81189ffaf77ca8960c310c834e68fd532e72a460b5b5ddb28d263b61c6ef7a08fef5f9406726a5eee34420451c47ed41e7a6bde2746009cb3869",
+      "ref": "@types/node@npm:20.11.30",
       "dependsOn": [
-        "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d",
-        "b20dd3f11f9de367d26db1caaba04a3473fef1c96b36d1bb0be6260cb80445c8f86071dea39337c22c25415209ce1a05cfc2bf672ac0eef3a1afbfb7ddfe7422",
-        "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59",
-        "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f"
+        "undici-types@npm:5.26.5"
       ]
     },
     {
-      "ref": "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d"
+      "ref": "@types/uuid@npm:8.3.4"
     },
     {
-      "ref": "b20dd3f11f9de367d26db1caaba04a3473fef1c96b36d1bb0be6260cb80445c8f86071dea39337c22c25415209ce1a05cfc2bf672ac0eef3a1afbfb7ddfe7422",
+      "ref": "demo-dev-dependencies@workspace:.",
       "dependsOn": [
-        "de4f7c7bb943ab9ceb43163855bbfe5b630926aaab0d58eb39de717c9ffe25e6c8d634761e372db5da25693cae27b66a37aaac9e577a37191751b9e0dd758009"
+        "@types/node@npm:20.11.30",
+        "@types/uuid@npm:8.3.4",
+        "uuid@npm:8.3.2",
+        "uuidv4@npm:6.2.13"
       ]
     },
     {
-      "ref": "de4f7c7bb943ab9ceb43163855bbfe5b630926aaab0d58eb39de717c9ffe25e6c8d634761e372db5da25693cae27b66a37aaac9e577a37191751b9e0dd758009"
+      "ref": "undici-types@npm:5.26.5"
     },
     {
-      "ref": "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59"
+      "ref": "uuid@npm:8.3.2"
     },
     {
-      "ref": "fb8632083a416dc19f6855ac21d77808e98cd35c1dc60dbe63ced1d06e7c22a74422aef139b70ce13b7d5a389ccbe338f2c8d4d65679575b7c94683e11b34f0f",
+      "ref": "uuidv4@npm:6.2.13",
       "dependsOn": [
-        "7547f4402c71f9c3c0acbed43f3bd4e8763f9365cd23483b10b826640ced4497cd6dfe9be3d9ca3ea6afd952a58b099ca180b309a51b6fd9ade1802ae2e5878d",
-        "eca0baba53545903488ca2b99fcc182f99467b4df92bb3a69a7efb1fb6e6d0c08ae1675e27165ae679d6b22adb575ec75202df749c438f2b0c818c5478a09c59"
+        "@types/uuid@npm:8.3.4",
+        "uuid@npm:8.3.2"
       ]
     }
   ]
