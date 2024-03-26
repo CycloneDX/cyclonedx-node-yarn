@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "license": "Apache-2.0",
   "dependencies": {
-    "my-local-a": "file:packages/my-local-a",
-    "my-noname": "file:packages/my-noname"
+    "my-local-a": "portal:packages/my-local-a",
+    "my-noname": "portal:packages/my-noname"
   }
 }

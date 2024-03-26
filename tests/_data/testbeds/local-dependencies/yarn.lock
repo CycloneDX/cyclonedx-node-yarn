@@ -9,30 +9,27 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "demo-local-deps@workspace:."
   dependencies:
-    my-local-a: "file:packages/my-local-a"
-    my-noname: "file:packages/my-noname"
+    my-local-a: "portal:packages/my-local-a"
+    my-noname: "portal:packages/my-noname"
   languageName: unknown
   linkType: soft
 
-"my-local-a@file:packages/my-local-a::locator=demo-local-deps%40workspace%3A.":
-  version: 0.0.0
-  resolution: "my-local-a@file:packages/my-local-a#packages/my-local-a::hash=593239&locator=demo-local-deps%40workspace%3A."
+"my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A."
   dependencies:
-    my-local-b-off: "file:../my-local-b"
-  checksum: 10c0/e71fc9e3c912586966162ded926216b524ae566489956baeb677ad4d8b1520a4d35c51d123ecff3df75cf6e9eca44d5f9c2712f6e111303b17d54425c467758d
+    my-local-b-off: "portal:../my-local-b"
   languageName: node
-  linkType: hard
+  linkType: soft
 
-"my-local-b-off@file:../my-local-b::locator=my-local-a%40file%3Apackages%2Fmy-local-a%23packages%2Fmy-local-a%3A%3Ahash%3D593239%26locator%3Ddemo-local-deps%2540workspace%253A.":
-  version: 0.0.0
-  resolution: "my-local-b-off@file:../my-local-b#../my-local-b::hash=b29156&locator=my-local-a%40file%3Apackages%2Fmy-local-a%23packages%2Fmy-local-a%3A%3Ahash%3D593239%26locator%3Ddemo-local-deps%2540workspace%253A."
-  checksum: 10c0/ac3620c68da8e304e894979cbfd8027f5b0c8c83eb4b9a08057e5935f90364b2a17cd4ed6c458b15ffc2f4a3ed28887cc9319b7cf5b36dc3668ed05562313530
+"my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A.":
+  version: 0.0.0-use.local
+  resolution: "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A."
   languageName: node
-  linkType: hard
+  linkType: soft
 
-"my-noname@file:packages/my-noname::locator=demo-local-deps%40workspace%3A.":
-  version: 0.0.0
-  resolution: "my-noname@file:packages/my-noname#packages/my-noname::hash=9a75d0&locator=demo-local-deps%40workspace%3A."
-  checksum: 10c0/5b1b918b52980047a2e84800cc642dbfa447a53664cdbaaa7702d6d4eeeed0e15e17835a023182233f0eda2938a69bbbb2eba20d1065ea2451836a5fcb2892bc
+"my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A."
   languageName: node
-  linkType: hard
+  linkType: soft

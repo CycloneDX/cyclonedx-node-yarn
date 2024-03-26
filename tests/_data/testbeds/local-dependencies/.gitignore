@@ -5,5 +5,3 @@
 !/yarn.lock
 !/packages/
 !/packages/**
-
-!/.yarnrc.yml

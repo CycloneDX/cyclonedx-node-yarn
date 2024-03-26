@@ -10,6 +10,6 @@
     "directory": "demo/local-deps/project/packages/my-local-a"
   },
   "dependencies": {
-    "my-local-b-off": "file:../my-local-b"
+    "my-local-b-off": "portal:../my-local-b"
   }
 }
