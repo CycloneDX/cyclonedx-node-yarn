@@ -18,7 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const path = require('path');
+const path = require('path')
+
+const testRootPath = path.resolve(__dirname, '..')
+const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
 
 (function () {
   const REQUIRES_INSTALL = [
@@ -28,7 +31,8 @@ const path = require('path');
     'multiple-versions',
     'no-dependencies',
     'one-dependency',
-    'package-aliasing'
+    'package-aliasing',
+    'juice-shop'
     /* endregion functional tests */
     /* region regression tests */
     // ... none so far
@@ -47,7 +51,7 @@ const path = require('path');
     console.log('>>> setup with yarn:', DIR)
     const done = spawnSync(
       'yarn', ['install', '--immutable'], {
-        cwd: path.resolve(__dirname, '_testbeds', DIR),
+        cwd: path.join(testbedsPath, DIR),
         stdio: 'inherit',
         shell: true
       }
