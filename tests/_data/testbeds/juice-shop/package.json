@@ -105,5 +105,8 @@
   },
   "engines": {
     "node": "18 - 21"
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   }
 }

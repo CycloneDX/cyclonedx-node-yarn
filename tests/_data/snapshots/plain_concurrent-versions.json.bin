@@ -354,6 +354,38 @@
     },
     {
       "type": "library",
+      "name": "chalk",
+      "version": "5.3.0",
+      "bom-ref": "chalk@npm:5.3.0",
+      "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/chalk.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/chalk/chalk/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/chalk.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/chalk#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "chardet",
       "version": "0.7.0",
       "bom-ref": "chardet@npm:0.7.0",
@@ -2221,6 +2253,9 @@
       ]
     },
     {
+      "ref": "chalk@npm:5.3.0"
+    },
+    {
       "ref": "chardet@npm:0.7.0"
     },
     {
@@ -2354,7 +2389,7 @@
       "dependsOn": [
         "@ljharb/through@npm:2.3.12",
         "ansi-escapes@npm:4.3.2",
-        "chalk@npm:4.1.2",
+        "chalk@npm:5.3.0",
         "cli-cursor@npm:3.1.0",
         "cli-width@npm:4.1.0",
         "external-editor@npm:3.1.0",

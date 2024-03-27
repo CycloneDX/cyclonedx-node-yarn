@@ -18,16 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
-import {
-  Cache,
-  type FetchOptions,
-  type IdentHash,
-  type Locator,
-  type Package,
-  type Project,
-  structUtils, ThrowReport,
-  type Workspace
-} from '@yarnpkg/core'
+import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
@@ -229,19 +220,20 @@ export class BomBuilder {
     project: Project,
     fetchManifest: ManifestFetcher
   ): AsyncGenerator<Models.Component> {
-    const knownComponents = new Map<IdentHash, Models.Component>([[pkg.identHash, component]])
+    // ATTENTION: multiple packages may have the same `identHash`, but the `locatorHash` is unique.
+    const knownComponents = new Map<LocatorHash, Models.Component>([[pkg.locatorHash, component]])
     const pending: [[Package, Models.Component]] = [[pkg, component]]
     let pendingEntry
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
       for (const depPkg of this.getDeps(pendingPkg, project)) {
-        let depComponent = knownComponents.get(depPkg.identHash)
+        let depComponent = knownComponents.get(depPkg.locatorHash)
         if (depComponent === undefined) {
           /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
            * as we need to enforce a proper component to enable all features of SBOM */
           yield depComponent = await this.makeComponentFromPackage(depPkg, fetchManifest) ||
             new DummyComponent(Enums.ComponentType.Library, structUtils.prettyLocatorNoColors(depPkg))
-          knownComponents.set(depPkg.identHash, depComponent)
+          knownComponents.set(depPkg.locatorHash, depComponent)
           pending.push([depPkg, depComponent])
         }
         pendingComponent.dependencies.add(depComponent.bomRef)
