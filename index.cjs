@@ -16,21 +16,24 @@ limitations under the License.
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
-import { writeSync } from 'fs'
 
-export async function writeAllSync (fd: number, data: string): Promise<number> {
-  const b = Buffer.from(data)
-  const l = b.byteLength
-  let w = 0
-  while (w < l) {
-    try {
-      w += writeSync(fd, b, w)
-    } catch (error: any) {
-      if (error.code !== 'EAGAIN') {
-        throw error
-      }
-      await new Promise((resolve) => setTimeout(resolve, 100))
-    }
-  }
-  return w
-}
+console.warn(`
+There is no public API. Instead, there is a well-thought, stable CLI.
+Call it programmatically like so:
+    const { execFileSync } = require('child_process')
+    const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+    const sbom = JSON.parse(execFileSync('yarn', [
+      'cyclonedx',
+      '--output-format', 'JSON',
+      '--output-file', '-'
+      // additional CLI args
+    ], {
+      env: { 'YARN_PLUGINS': '../path/to/this/package/bundles/@yarnpkg/plugin-cyclonedx.js' },
+      stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH
+    }))
+`)
+
+/*
+Intentionally, here are no exports.
+See above!
+*/

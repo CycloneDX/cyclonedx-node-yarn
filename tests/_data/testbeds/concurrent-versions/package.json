@@ -7,5 +7,8 @@
   "dependencies": {
     "inquirer": "^9.2.15",
     "ora": "5.4.1"
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   }
 }

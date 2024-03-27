@@ -24,7 +24,7 @@ const testRootPath = path.resolve(__dirname, '..')
 const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
 
 (function () {
-  const REQUIRES_YARN_INSTALL = [
+  const REQUIRES_INSTALL = [
     /* region functional tests */
     'bundled-dependencies',
     'concurrent-versions',
@@ -48,11 +48,10 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   `)
 
   process.exitCode = 0
-  let done
 
-  for (const DIR of REQUIRES_YARN_INSTALL) {
+  for (const DIR of REQUIRES_INSTALL) {
     console.log('>>> setup with yarn:', DIR)
-    done = spawnSync(
+    const done = spawnSync(
       'yarn', ['install', '--immutable'], {
         cwd: path.join(testbedsPath, DIR),
         stdio: 'inherit',

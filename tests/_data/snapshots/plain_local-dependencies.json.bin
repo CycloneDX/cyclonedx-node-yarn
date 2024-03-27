@@ -8,12 +8,36 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "libVersion-testing"
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       },
       {
         "vendor": "@cyclonedx",
         "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing"
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       }
     ],
     "component": {
@@ -28,7 +52,8 @@
             "id": "Apache-2.0"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/demo-local-deps@0.0.0"
     },
     "properties": [
       {
@@ -51,11 +76,22 @@
           }
         }
       ],
+      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
       "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
         {
           "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -71,13 +107,23 @@
             "id": "Apache-2.0"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
     },
     {
       "type": "library",
-      "name": "DummyComponent.my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
+      "name": "my-noname",
+      "version": "0.0.0",
       "bom-ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
-      "description": "This is a dummy component \"my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.\" that fills the gap where the actual built failed."
+      "description": "demo: with no/empty name",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/my-noname@0.0.0"
     }
   ],
   "dependencies": [

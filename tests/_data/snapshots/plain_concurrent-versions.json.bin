@@ -8,12 +8,36 @@
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
-        "version": "libVersion-testing"
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       },
       {
         "vendor": "@cyclonedx",
         "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing"
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
       }
     ],
     "component": {
@@ -21,7 +45,8 @@
       "name": "concurrent-versions",
       "version": "0.0.1",
       "bom-ref": "concurrent-versions@workspace:.",
-      "description": "demo: multiple dependencies requiring concurrent versions of `chalk`"
+      "description": "demo: multiple dependencies requiring concurrent versions of `chalk`",
+      "purl": "pkg:npm/concurrent-versions@0.0.1"
     },
     "properties": [
       {
@@ -49,6 +74,11 @@
       "purl": "pkg:npm/%40ljharb/through@2.3.12?vcs_url=git%2Bhttps%3A//github.com/ljharb/through.git",
       "externalReferences": [
         {
+          "url": "https://github.com/ljharb/through/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git+https://github.com/ljharb/through.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -74,12 +104,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-escapes@4.3.2?vcs_url=sindresorhus/ansi-escapes",
+      "purl": "pkg:npm/ansi-escapes@4.3.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ansi-escapes.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/ansi-escapes",
+          "url": "https://github.com/sindresorhus/ansi-escapes/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/ansi-escapes.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/ansi-escapes#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -97,12 +137,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=chalk/ansi-regex",
+      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git",
       "externalReferences": [
         {
-          "url": "chalk/ansi-regex",
+          "url": "https://github.com/chalk/ansi-regex/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-regex.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-regex#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -120,12 +170,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=chalk/ansi-styles",
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git",
       "externalReferences": [
         {
-          "url": "chalk/ansi-styles",
+          "url": "https://github.com/chalk/ansi-styles/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-styles.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-styles#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -175,10 +235,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@4.1.0?vcs_url=https%3A//github.com/rvagg/bl.git",
+      "purl": "pkg:npm/bl@4.1.0?vcs_url=git%2Bhttps%3A//github.com/rvagg/bl.git",
       "externalReferences": [
         {
-          "url": "https://github.com/rvagg/bl.git",
+          "url": "https://github.com/rvagg/bl/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/rvagg/bl.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -268,12 +333,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/chalk@4.1.2?vcs_url=chalk/chalk",
+      "purl": "pkg:npm/chalk@4.1.2?vcs_url=git%2Bhttps%3A//github.com/chalk/chalk.git",
       "externalReferences": [
         {
-          "url": "chalk/chalk",
+          "url": "https://github.com/chalk/chalk/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/chalk.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/chalk#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -290,12 +365,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/chalk@5.3.0?vcs_url=chalk/chalk",
+      "purl": "pkg:npm/chalk@5.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/chalk.git",
       "externalReferences": [
         {
-          "url": "chalk/chalk",
+          "url": "https://github.com/chalk/chalk/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/chalk.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/chalk#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -313,7 +398,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chardet@0.7.0?vcs_url=git%40github.com%3Arunk/node-chardet.git",
+      "purl": "pkg:npm/chardet@0.7.0?vcs_url=git%2Bssh%3A//git%40github.com/runk/node-chardet.git",
       "externalReferences": [
         {
           "url": "http://github.com/runk/node-chardet/issues",
@@ -321,7 +406,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git@github.com:runk/node-chardet.git",
+          "url": "git+ssh://git@github.com/runk/node-chardet.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -346,12 +431,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-cursor@3.1.0?vcs_url=sindresorhus/cli-cursor",
+      "purl": "pkg:npm/cli-cursor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/cli-cursor.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/cli-cursor",
+          "url": "https://github.com/sindresorhus/cli-cursor/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/cli-cursor.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/cli-cursor#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -369,12 +464,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-spinners@2.9.2?vcs_url=sindresorhus/cli-spinners",
+      "purl": "pkg:npm/cli-spinners@2.9.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/cli-spinners.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/cli-spinners",
+          "url": "https://github.com/sindresorhus/cli-spinners/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/cli-spinners.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/cli-spinners#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -392,7 +497,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-width@4.1.0?vcs_url=git%40github.com%3Aknownasilya/cli-width.git",
+      "purl": "pkg:npm/cli-width@4.1.0?vcs_url=git%2Bssh%3A//git%40github.com/knownasilya/cli-width.git",
       "externalReferences": [
         {
           "url": "https://github.com/knownasilya/cli-width/issues",
@@ -400,7 +505,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git@github.com:knownasilya/cli-width.git",
+          "url": "git+ssh://git@github.com/knownasilya/cli-width.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -436,6 +541,11 @@
           "url": "git://github.com/pvorb/node-clone.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pvorb/node-clone#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -453,12 +563,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=Qix-/color-convert",
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A//github.com/Qix-/color-convert.git",
       "externalReferences": [
         {
-          "url": "Qix-/color-convert",
+          "url": "https://github.com/Qix-/color-convert/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/Qix-/color-convert.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Qix-/color-convert#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -476,7 +596,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%40github.com%3Acolorjs/color-name.git",
+      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A//git%40github.com/colorjs/color-name.git",
       "externalReferences": [
         {
           "url": "https://github.com/colorjs/color-name/issues",
@@ -484,7 +604,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "git@github.com:colorjs/color-name.git",
+          "url": "git+ssh://git@github.com/colorjs/color-name.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -512,9 +632,19 @@
       "purl": "pkg:npm/defaults@1.0.4?vcs_url=git%3A//github.com/sindresorhus/node-defaults.git",
       "externalReferences": [
         {
+          "url": "https://github.com/sindresorhus/node-defaults/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/sindresorhus/node-defaults.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/node-defaults#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -565,15 +695,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A//github.com/mathiasbynens/emoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/mathiasbynens/emoji-regex.git",
+          "url": "git+https://github.com/mathiasbynens/emoji-regex.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -664,12 +794,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=sindresorhus/escape-string-regexp",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/escape-string-regexp.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/escape-string-regexp",
+          "url": "https://github.com/sindresorhus/escape-string-regexp/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/escape-string-regexp.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/escape-string-regexp#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -720,12 +860,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/figures@3.2.0?vcs_url=sindresorhus/figures",
+      "purl": "pkg:npm/figures@3.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/figures.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/figures",
+          "url": "https://github.com/sindresorhus/figures/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/figures.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/figures#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -743,7 +893,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A//github.com/Raynos/function-bind.git",
+      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=git%2Bhttps%3A//github.com/Raynos/function-bind.git",
       "externalReferences": [
         {
           "url": "https://github.com/Raynos/function-bind/issues",
@@ -751,7 +901,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/Raynos/function-bind.git",
+          "url": "git+https://github.com/Raynos/function-bind.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -842,12 +992,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=sindresorhus/has-flag",
+      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/has-flag.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/has-flag",
+          "url": "https://github.com/sindresorhus/has-flag/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/has-flag.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/has-flag#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1002,7 +1162,7 @@
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
           "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs\""
+          "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
           "url": "git://github.com/ashtuchkin/iconv-lite.git",
@@ -1033,9 +1193,19 @@
       "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
       "externalReferences": [
         {
+          "url": "https://github.com/feross/ieee754/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/feross/ieee754.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/feross/ieee754#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1052,12 +1222,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits",
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
       "externalReferences": [
         {
-          "url": "git://github.com/isaacs/inherits",
+          "url": "https://github.com/isaacs/inherits/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/isaacs/inherits.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/isaacs/inherits#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1075,10 +1255,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=https%3A//github.com/SBoudrias/Inquirer.js.git",
+      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=git%2Bhttps%3A//github.com/SBoudrias/Inquirer.js.git",
       "externalReferences": [
         {
-          "url": "https://github.com/SBoudrias/Inquirer.js.git",
+          "url": "https://github.com/SBoudrias/Inquirer.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/SBoudrias/Inquirer.js.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1103,12 +1288,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=sindresorhus/is-fullwidth-code-point",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/is-fullwidth-code-point",
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-fullwidth-code-point.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-fullwidth-code-point#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1126,12 +1321,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-interactive@1.0.0?vcs_url=sindresorhus/is-interactive",
+      "purl": "pkg:npm/is-interactive@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-interactive.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/is-interactive",
+          "url": "https://github.com/sindresorhus/is-interactive/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-interactive.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-interactive#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1149,12 +1354,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-unicode-supported@0.1.0?vcs_url=sindresorhus/is-unicode-supported",
+      "purl": "pkg:npm/is-unicode-supported@0.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-unicode-supported.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/is-unicode-supported",
+          "url": "https://github.com/sindresorhus/is-unicode-supported/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/is-unicode-supported.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/is-unicode-supported#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1172,12 +1387,17 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash@4.17.21?vcs_url=lodash/lodash",
+      "purl": "pkg:npm/lodash@4.17.21?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git",
       "externalReferences": [
         {
-          "url": "lodash/lodash",
+          "url": "https://github.com/lodash/lodash/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/lodash/lodash.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "https://lodash.com/",
@@ -1200,12 +1420,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/log-symbols@4.1.0?vcs_url=sindresorhus/log-symbols",
+      "purl": "pkg:npm/log-symbols@4.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/log-symbols.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/log-symbols",
+          "url": "https://github.com/sindresorhus/log-symbols/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/log-symbols.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/log-symbols#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1223,12 +1453,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/mimic-fn@2.1.0?vcs_url=sindresorhus/mimic-fn",
+      "purl": "pkg:npm/mimic-fn@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/mimic-fn.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/mimic-fn",
+          "url": "https://github.com/sindresorhus/mimic-fn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/mimic-fn.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/mimic-fn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1246,12 +1486,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=https%3A//github.com/npm/mute-stream.git",
+      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/mute-stream.git",
       "externalReferences": [
         {
-          "url": "https://github.com/npm/mute-stream.git",
+          "url": "https://github.com/npm/mute-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/mute-stream.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/mute-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1269,12 +1519,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/onetime@5.1.2?vcs_url=sindresorhus/onetime",
+      "purl": "pkg:npm/onetime@5.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/onetime.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/onetime",
+          "url": "https://github.com/sindresorhus/onetime/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/onetime.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/onetime#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1292,12 +1552,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/ora@5.4.1?vcs_url=sindresorhus/ora",
+      "purl": "pkg:npm/ora@5.4.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ora.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/ora",
+          "url": "https://github.com/sindresorhus/ora/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/ora.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/ora#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1315,12 +1585,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/os-tmpdir@1.0.2?vcs_url=sindresorhus/os-tmpdir",
+      "purl": "pkg:npm/os-tmpdir@1.0.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-tmpdir.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/os-tmpdir",
+          "url": "https://github.com/sindresorhus/os-tmpdir/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/os-tmpdir.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/os-tmpdir#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1337,12 +1617,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
       "externalReferences": [
         {
-          "url": "git://github.com/nodejs/readable-stream",
+          "url": "https://github.com/nodejs/readable-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/nodejs/readable-stream.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nodejs/readable-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1360,12 +1650,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/restore-cursor@3.1.0?vcs_url=sindresorhus/restore-cursor",
+      "purl": "pkg:npm/restore-cursor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/restore-cursor.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/restore-cursor",
+          "url": "https://github.com/sindresorhus/restore-cursor/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/restore-cursor.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/restore-cursor#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1383,12 +1683,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/run-async@3.0.0?vcs_url=SBoudrias/run-async",
+      "purl": "pkg:npm/run-async@3.0.0?vcs_url=git%2Bhttps%3A//github.com/SBoudrias/run-async.git",
       "externalReferences": [
         {
-          "url": "SBoudrias/run-async",
+          "url": "https://github.com/SBoudrias/run-async/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/SBoudrias/run-async.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/SBoudrias/run-async#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1406,7 +1716,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=https%3A//github.com/reactivex/rxjs.git",
+      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git",
       "externalReferences": [
         {
           "url": "https://github.com/ReactiveX/RxJS/issues",
@@ -1414,7 +1724,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/reactivex/rxjs.git",
+          "url": "git+https://github.com/reactivex/rxjs.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1483,6 +1793,11 @@
           "url": "git+https://github.com/ChALkeR/safer-buffer.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ChALkeR/safer-buffer#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1533,7 +1848,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A//github.com/tapjs/signal-exit.git",
+      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=git%2Bhttps%3A//github.com/tapjs/signal-exit.git",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -1541,7 +1856,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/tapjs/signal-exit.git",
+          "url": "git+https://github.com/tapjs/signal-exit.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1568,6 +1883,11 @@
       "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
       "externalReferences": [
         {
+          "url": "https://github.com/nodejs/string_decoder/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/nodejs/string_decoder.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
@@ -1593,12 +1913,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@4.2.3?vcs_url=sindresorhus/string-width",
+      "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/string-width",
+          "url": "https://github.com/sindresorhus/string-width/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/string-width.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/string-width#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1616,12 +1946,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=chalk/strip-ansi",
+      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git",
       "externalReferences": [
         {
-          "url": "chalk/strip-ansi",
+          "url": "https://github.com/chalk/strip-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/strip-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/strip-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1639,12 +1979,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=chalk/supports-color",
+      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=git%2Bhttps%3A//github.com/chalk/supports-color.git",
       "externalReferences": [
         {
-          "url": "chalk/supports-color",
+          "url": "https://github.com/chalk/supports-color/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/supports-color.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/supports-color#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1662,7 +2012,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tmp@0.0.33?vcs_url=raszi/node-tmp",
+      "purl": "pkg:npm/tmp@0.0.33?vcs_url=git%2Bhttps%3A//github.com/raszi/node-tmp.git",
       "externalReferences": [
         {
           "url": "http://github.com/raszi/node-tmp/issues",
@@ -1670,9 +2020,9 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "raszi/node-tmp",
+          "url": "git+https://github.com/raszi/node-tmp.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
         },
         {
           "url": "http://github.com/raszi/node-tmp",
@@ -1695,7 +2045,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A//github.com/Microsoft/tslib.git",
+      "purl": "pkg:npm/tslib@2.6.2?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -1703,7 +2053,7 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://github.com/Microsoft/tslib.git",
+          "url": "git+https://github.com/Microsoft/tslib.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -1726,12 +2076,22 @@
           "expression": "(MIT OR CC0-1.0)"
         }
       ],
-      "purl": "pkg:npm/type-fest@0.21.3?vcs_url=sindresorhus/type-fest",
+      "purl": "pkg:npm/type-fest@0.21.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/type-fest.git",
       "externalReferences": [
         {
-          "url": "sindresorhus/type-fest",
+          "url": "https://github.com/sindresorhus/type-fest/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/type-fest.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/type-fest#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     },
@@ -1815,12 +2175,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@6.2.0?vcs_url=chalk/wrap-ansi",
+      "purl": "pkg:npm/wrap-ansi@6.2.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git",
       "externalReferences": [
         {
-          "url": "chalk/wrap-ansi",
+          "url": "https://github.com/chalk/wrap-ansi/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/wrap-ansi.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository\""
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/wrap-ansi#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
     }

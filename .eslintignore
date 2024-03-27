@@ -8,4 +8,5 @@
 /docs/**
 
 
-!/sources/**
+!/src/**
+/src/buildtime*

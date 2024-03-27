@@ -72,7 +72,7 @@ suite('integration', () => {
     const makeSBOM = spawnSync(
       'yarn', ['cyclonedx',
         '-vvv',
-        '--reproducible',
+        '--output-reproducible',
         // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
         '--spec-version', latestCdxSpecVersion,
         '--output-format', 'JSON',
@@ -91,7 +91,7 @@ suite('integration', () => {
         }
       })
     assert.strictEqual(makeSBOM.error, undefined)
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr)
+    assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
 
     const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
 
@@ -106,17 +106,19 @@ suite('integration', () => {
   suite('make SBOM', () => {
     suite('plain', () => {
       testSetups.forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('plain', testSetup)).timeout(longTestTimeout)
+        test(`${testSetup}`, () => {
+          runTest('plain', testSetup)
+        }).timeout(longTestTimeout)
       })
     })
-    suite('prod-arg', () => {
+    suite('prod', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod-arg', testSetup, ['--prod']))
-      })
-    })
-    suite('prod-env', () => {
-      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' }))
+        test(`arg: ${testSetup}`, () => {
+          runTest('prod-arg', testSetup, ['--prod'])
+        })
+        test(`env: ${testSetup}`, () => {
+          runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
+        })
       })
     })
   })
@@ -149,20 +151,20 @@ function makeJsonReproducible (json) {
       // replace metadata.tools.version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      `        "version": ${JSON.stringify(thisVersion)}\n`,
+      `        "version": ${JSON.stringify(thisVersion)},\n`,
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      '        "version": "thisVersion-testing"\n'
+      '        "version": "thisVersion-testing",\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?"\n'
+        '        "version": ".+?",\n'
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing"\n'
+      '        "version": "libVersion-testing",\n'
     )
 }
 
