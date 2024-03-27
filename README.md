@@ -23,6 +23,8 @@ Development will happen in branch `1.0-dev`.
 Feel free to contribute, write issues, create pull requests, or start discussions.  
 Please read the [CONTRIBUTING][contributing_file] file first.
 
+----
+
 ## Requirements
 
 !! to be clarified ...
