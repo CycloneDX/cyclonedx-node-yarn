@@ -38,6 +38,7 @@ import buildtimeInfo from './buildtimeInfo.json'
 type ManifestFetcher = (pkg: Package) => Promise<any>
 
 interface BomBuilderOptions {
+  omitDevDependencies?: BomBuilder['omitDevDependencies']
   metaComponentType?: BomBuilder['metaComponentType']
   reproducible?: BomBuilder['reproducible']
   shortPURLs?: BomBuilder['shortPURLs']
@@ -48,6 +49,7 @@ export class BomBuilder {
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
+  omitDevDependencies: boolean
   metaComponentType: Enums.ComponentType
   reproducible: boolean
   shortPURLs: boolean
@@ -65,6 +67,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.purlFactory = purlFactory
 
+    this.omitDevDependencies = options.omitDevDependencies ?? false
     this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Application
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
@@ -72,9 +75,9 @@ export class BomBuilder {
     this.console = console_
   }
 
-  async buildFromProjectWorkspace (project: Project, workspace: Workspace): Promise<Models.Bom> {
+  async buildFromWorkspace (workspace: Workspace): Promise<Models.Bom> {
     // @TODO make switch to disable load from fs
-    const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(project)
+    const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(workspace.project)
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
      * as we need to enforce a proper root component to enable all features of SBOM */
@@ -104,10 +107,20 @@ export class BomBuilder {
 
     // region components
 
+    const rootPackage = workspace.anchoredPackage
+    if (this.omitDevDependencies) {
+      for (const dep of rootPackage.dependencies.keys()) {
+        // !! do not iterate over `workspace.manifest.devDependencies`
+        // what if a dependency was a dev-dependency and a prod-dependency at the same time?
+        if (!(dep in workspace.manifest.dependencies)) {
+          rootPackage.dependencies.delete(dep)
+        }
+      }
+    }
+
     for await (const component of this.gatherDependencies(
-      rootComponent, workspace.anchoredPackage,
-      project,
-      fetchManifest
+      rootComponent, rootPackage,
+      workspace.project, fetchManifest
     )) {
       bom.components.add(component)
     }
@@ -131,7 +144,7 @@ export class BomBuilder {
       report: new ThrowReport(),
       cacheOptions: { skipIntegrityCheck: true }
     }
-    return async function (pkg: Package): Promise <any> {
+    return async function (pkg: Package): Promise<any> {
       const { packageFs, prefixPath } = await fetcher.fetch(pkg, fetcherOptions)
       const manifestPath = ppath.join(prefixPath, 'package.json')
       return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))

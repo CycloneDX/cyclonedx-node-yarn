@@ -91,7 +91,7 @@ suite('integration', () => {
         }
       })
     assert.strictEqual(makeSBOM.error, undefined)
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.stderr)
+    assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
 
     const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
 
@@ -106,17 +106,19 @@ suite('integration', () => {
   suite('make SBOM', () => {
     suite('plain', () => {
       testSetups.forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('plain', testSetup)).timeout(longTestTimeout)
+        test(`${testSetup}`, () => {
+          runTest('plain', testSetup)
+        }).timeout(longTestTimeout)
       })
     })
-    suite('prod-arg', () => {
+    suite('prod', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod-arg', testSetup, ['--prod']))
-      })
-    })
-    suite('prod-env', () => {
-      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`${testSetup}`, () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' }))
+        test(`arg: ${testSetup}`, () => {
+          runTest('prod-arg', testSetup, ['--prod'])
+        })
+        test(`env: ${testSetup}`, () => {
+          runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
+        })
       })
     })
   })

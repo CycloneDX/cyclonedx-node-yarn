@@ -109,8 +109,7 @@ class CycloneCommand extends BaseCommand {
     if (workspace == null) {
       throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
     }
-    await project.restoreInstallState()
-    // @TODO omit dev-deps
+    await workspace.project.restoreInstallState()
 
     const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
@@ -123,12 +122,13 @@ class CycloneCommand extends BaseCommand {
       ),
       new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
       {
+        omitDevDependencies: this.production,
         metaComponentType: this.mcType as Enums.ComponentType,
         reproducible: this.outputReproducible
         // @TODO shortPURLs: this.shortPURLs
       },
       myConsole
-    ).buildFromProjectWorkspace(project, workspace)
+    ).buildFromWorkspace(workspace)
 
     const spec = Spec.SpecVersionDict[this.specVersion as Spec.Version]
     if (undefined === spec) {
