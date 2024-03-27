@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import {
   Cache,
-  type Fetcher, type FetchOptions,
+  type FetchOptions,
   type IdentHash,
   type Locator,
   type Package,
@@ -34,6 +34,8 @@ import type { PackageURL } from 'packageurl-js'
 
 import { isString } from './_helpers'
 import buildtimeInfo from './buildtimeInfo.json'
+
+type ManifestFetcher = (pkg: Package) => Promise<any>
 
 interface BomBuilderOptions {
   metaComponentType?: BomBuilder['metaComponentType']
@@ -71,15 +73,8 @@ export class BomBuilder {
   }
 
   async buildFromProjectWorkspace (project: Project, workspace: Workspace): Promise<Models.Bom> {
-    const fetcher = project.configuration.makeFetcher()
-    const fetcherOptions: FetchOptions = {
-      project,
-      fetcher,
-      cache: await Cache.find(project.configuration),
-      checksums: project.storedChecksums,
-      report: new ThrowReport(),
-      cacheOptions: { skipIntegrityCheck: true }
-    }
+    // @TODO make switch to disable load from fs
+    const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(project)
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
      * as we need to enforce a proper root component to enable all features of SBOM */
@@ -112,7 +107,7 @@ export class BomBuilder {
     for await (const component of this.gatherDependencies(
       rootComponent, workspace.anchoredPackage,
       project,
-      fetcher, fetcherOptions
+      fetchManifest
     )) {
       bom.components.add(component)
     }
@@ -126,20 +121,33 @@ export class BomBuilder {
     return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
+  private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
+    const fetcher = project.configuration.makeFetcher()
+    const fetcherOptions: FetchOptions = {
+      project,
+      fetcher,
+      cache: await Cache.find(project.configuration),
+      checksums: project.storedChecksums,
+      report: new ThrowReport(),
+      cacheOptions: { skipIntegrityCheck: true }
+    }
+    return async function (pkg: Package): Promise <any> {
+      const { packageFs, prefixPath } = await fetcher.fetch(pkg, fetcherOptions)
+      const manifestPath = ppath.join(prefixPath, 'package.json')
+      return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+    }
+  }
+
   private async makeComponentFromPackage (
     pkg: Package,
-    fetcher: Fetcher, fetcherOptions: FetchOptions,
+    fetchManifest: ManifestFetcher,
     type?: Enums.ComponentType | undefined
   ): Promise<Models.Component | false | undefined> {
-    // @TODO make switch to disable load from fs
-    const { packageFs, prefixPath } = await fetcher.fetch(pkg, fetcherOptions)
-    const manifestPath = ppath.join(prefixPath, 'package.json')
-    const data = JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
-
+    const data = await fetchManifest(pkg)
+    // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
     data.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
     data.version = pkg.version
-
     return this.makeComponent(pkg, data, type)
   }
 
@@ -210,11 +218,10 @@ export class BomBuilder {
   async * gatherDependencies (
     component: Models.Component, pkg: Package,
     project: Project,
-    fetcher: Fetcher, fetcherOptions: FetchOptions
+    fetchManifest: ManifestFetcher
   ): AsyncGenerator<Models.Component> {
     const knownComponents = new Map<IdentHash, Models.Component>([[pkg.identHash, component]])
     const pending: [[Package, Models.Component]] = [[pkg, component]]
-
     let pendingEntry
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
@@ -223,7 +230,7 @@ export class BomBuilder {
         if (depComponent === undefined) {
           /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
            * as we need to enforce a proper component to enable all features of SBOM */
-          yield depComponent = await this.makeComponentFromPackage(depPkg, fetcher, fetcherOptions) ||
+          yield depComponent = await this.makeComponentFromPackage(depPkg, fetchManifest) ||
             new DummyComponent(Enums.ComponentType.Library, structUtils.prettyLocatorNoColors(depPkg))
           knownComponents.set(depPkg.identHash, depComponent)
           pending.push([depPkg, depComponent])
