@@ -102,5 +102,5 @@
     "cs-fix": "eslint --fix .",
     "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.1.1"
 }
