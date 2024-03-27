@@ -34,6 +34,7 @@ import type { PackageURL } from 'packageurl-js'
 
 import { isString } from './_helpers'
 import buildtimeInfo from './buildtimeInfo.json'
+import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
 
@@ -96,7 +97,7 @@ export class BomBuilder {
 
     if (this.reproducible) {
       bom.metadata.properties.add(
-        new Models.Property('cdx:reproducible', 'true')
+        new Models.Property(PropertyNames.Reproducible, PropertyValueBool.True)
       )
     } else {
       bom.serialNumber = Utils.BomUtility.randomSerialNumber()
@@ -109,15 +110,10 @@ export class BomBuilder {
 
     const rootPackage = workspace.anchoredPackage
     if (this.omitDevDependencies) {
-      for (const dep of rootPackage.dependencies.keys()) {
-        // !! do not iterate over `workspace.manifest.devDependencies`
-        // what if a dependency was a dev-dependency and a prod-dependency at the same time?
-        if (!(dep in workspace.manifest.dependencies)) {
-          rootPackage.dependencies.delete(dep)
-        }
+      for (const dep of workspace.manifest.devDependencies.keys()) {
+        rootPackage.dependencies.delete(dep)
       }
     }
-
     for await (const component of this.gatherDependencies(
       rootComponent, rootPackage,
       workspace.project, fetchManifest

@@ -62,10 +62,124 @@
       }
     ]
   },
-  "components": [],
+  "components": [
+    {
+      "type": "library",
+      "name": "uuid",
+      "group": "@types",
+      "version": "8.3.4",
+      "bom-ref": "@types/uuid@npm:8.3.4",
+      "description": "TypeScript definitions for uuid",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "externalReferences": [
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuid",
+      "version": "8.3.2",
+      "bom-ref": "uuid@npm:8.3.2",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/uuidjs/uuid/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/uuidjs/uuid.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/uuidjs/uuid#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uuidv4",
+      "version": "6.2.13",
+      "bom-ref": "uuidv4@npm:6.2.13",
+      "description": "uuidv4 creates v4 UUIDs.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/thenativeweb/uuidv4/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/thenativeweb/uuidv4.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/thenativeweb/uuidv4#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    }
+  ],
   "dependencies": [
     {
-      "ref": "demo-dev-dependencies@workspace:."
+      "ref": "@types/uuid@npm:8.3.4"
+    },
+    {
+      "ref": "demo-dev-dependencies@workspace:.",
+      "dependsOn": [
+        "uuidv4@npm:6.2.13"
+      ]
+    },
+    {
+      "ref": "uuid@npm:8.3.2"
+    },
+    {
+      "ref": "uuidv4@npm:6.2.13",
+      "dependsOn": [
+        "@types/uuid@npm:8.3.4",
+        "uuid@npm:8.3.2"
+      ]
     }
   ]
 }
