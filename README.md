@@ -12,7 +12,7 @@
 
 Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.
 
-## 🚧 🏗️ this project is in early development stage
+## 🚧 🏗️ this project is in alpha stage
 
 See the projects issues, discussions, pull requests and milestone for the progress.
 
