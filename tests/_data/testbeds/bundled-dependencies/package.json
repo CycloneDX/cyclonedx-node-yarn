@@ -1,0 +1,13 @@
+{
+  "name": "demo-bundled-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bundle-dependencies": "1.0.2"
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+  }
+}

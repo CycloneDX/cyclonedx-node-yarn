@@ -1,0 +1,12 @@
+# yarn stuff
+/.yarn/**
+/.pnp.*
+
+# generated files: dist and docs
+/reports/**
+/bundles/**
+/docs/**
+
+
+!/src/**
+/src/buildtime*
