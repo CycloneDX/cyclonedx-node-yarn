@@ -24,6 +24,8 @@ const path = require('path')
 const { existsSync, writeFileSync, readFileSync } = require('fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 
+const { Validation, Spec } = require('@cyclonedx/cyclonedx-library')
+
 const { name: thisName, version: thisVersion } = require('../../package.json')
 
 const testSetups = [
@@ -63,7 +65,7 @@ suite('integration', () => {
    * @param {string[]} [additionalArgs]
    * @param {Object<string, string>} [additionalEnv]
    */
-  function runTest (
+  async function runTest (
     purpose, testSetup,
     additionalArgs = [], additionalEnv = {}
   ) {
@@ -93,7 +95,14 @@ suite('integration', () => {
     assert.strictEqual(makeSBOM.error, undefined)
     assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
 
-    const actualOutput = makeReproducible('json', makeSBOM.stdout.toString())
+    let actualOutput = makeSBOM.stdout.toString()
+
+    // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
+    // At least we do validate here
+    const validationErrors = await validate('json', actualOutput)
+    assert.strictEqual(validationErrors, null)
+
+    actualOutput = makeReproducible('json', actualOutput)
 
     if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
       writeFileSync(expectedOutSnap, actualOutput, 'utf8')
@@ -106,20 +115,20 @@ suite('integration', () => {
   suite('make SBOM', () => {
     suite('plain', () => {
       testSetups.forEach((testSetup) => {
-        test(`${testSetup}`, () => {
-          runTest('plain', testSetup)
-        }).timeout(longTestTimeout)
+        test(`${testSetup}`,
+          () => runTest('plain', testSetup)
+        ).timeout(longTestTimeout)
       })
     })
 
     suite('prod', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`arg: ${testSetup}`, () => {
-          runTest('prod-arg', testSetup, ['--prod'])
-        })
-        test(`env: ${testSetup}`, () => {
-          runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-        })
+        test(`arg: ${testSetup}`,
+          () => runTest('prod-arg', testSetup, ['--prod'])
+        )
+        test(`env: ${testSetup}`,
+          () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
+        )
       })
     })
 
@@ -142,6 +151,23 @@ suite('integration', () => {
     })
   })
 })
+
+/**
+ * @param {string} format
+ * @param {string} value
+ * @return {Promise<any>}
+ */
+async function validate (format, value) {
+  const specVersion = Spec.Version.v1dot5
+  switch (format.toLowerCase()) {
+    case 'xml':
+      return await new Validation.XmlValidator(specVersion).validate(value)
+    case 'json':
+      return await new Validation.JsonStrictValidator(specVersion).validate(value)
+    default:
+      throw new RangeError(`unexpected format: ${format}`)
+  }
+}
 
 /**
  * @param {string} format
