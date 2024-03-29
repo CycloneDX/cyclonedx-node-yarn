@@ -97,6 +97,8 @@ suite('integration', () => {
 
     let actualOutput = makeSBOM.stdout.toString()
 
+    // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
+    // At least we do validate here
     const validationErrors = await validate('json', actualOutput)
     assert.strictEqual(validationErrors, null)
 
