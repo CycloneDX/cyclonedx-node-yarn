@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, type Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Builders, type Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
 import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
 import { Configuration, type Plugin, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
@@ -86,6 +86,11 @@ class CycloneCommand extends BaseCommand {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
   })
 
+  validate = Option.Boolean('--validate', {
+    description: 'Validate resulting BOM before outputting.',
+    required: false
+  })
+
   verbosity = Option.Counter('--verbose,-v', 1, {
     description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
   })
@@ -99,6 +104,7 @@ class CycloneCommand extends BaseCommand {
       production: this.production,
       mcType: this.mcType,
       outputReproducible: this.outputReproducible,
+      validate: this.validate,
       verbosity: this.verbosity
     })
 
@@ -136,12 +142,15 @@ class CycloneCommand extends BaseCommand {
     }
 
     let serializer: Serialize.Types.Serializer
+    let validator: Validation.Types.Validator
     switch (this.outputFormat as OutputFormat) {
       case OutputFormat.XML:
         serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+        validator = new Validation.XmlValidator(spec.version)
         break
       case OutputFormat.JSON:
         serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+        validator = new Validation.JsonValidator(spec.version)
         break
     }
 
@@ -151,7 +160,35 @@ class CycloneCommand extends BaseCommand {
       space: 2
     })
 
-    // @TODO validate BOM
+    if (this.validate ?? true) {
+      myConsole.log('LOG   | try validating BOM result ...')
+      try {
+        const validationErrors = await validator.validate(serialized)
+        if (validationErrors === null) {
+          myConsole.info('INFO  | BOM result appears valid')
+        } else {
+          myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
+          myConsole.error('ERROR | Failed to generate valid BOM.')
+          myConsole.warn(
+            'WARN  | Please report the issue and provide the yarn lock file of the current project to:\n' +
+            '      | https://github.com/CycloneDX/cyclonedx-node-yarnn/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+          return ExitCode.FAILURE
+        }
+      } catch (err) {
+        if (err instanceof Validation.MissingOptionalDependencyError) {
+          if (this.validate === true) {
+            myConsole.error('ERROR  | failed validating BOM:', err.message)
+            return ExitCode.FAILURE
+          } else {
+            myConsole.info('INFO  | skipped validating BOM:', err.message)
+          }
+        } else {
+          myConsole.debug('ERROR | unexpected error:', err)
+          myConsole.error('ERROR | unexpected error')
+          throw err
+        }
+      }
+    }
 
     myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(
