@@ -50,14 +50,11 @@ const selfNfo = JSON.parse(fs.readFileSync(
 
 let buildMeta = ''
 try {
-  buildMeta = '+git.' + execFileSync('git',
-    ['rev-parse', 'HEAD'],
-    {
-      cwd: projectRootPath,
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'ignore']
-    }
-  ).trim().substring(0, 7)
+  buildMeta = '+git.' + execFileSync('git', ['rev-parse', 'HEAD'], {
+    cwd: projectRootPath,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'ignore']
+  }).trim().substring(0, 7)
 } catch (err) {
   console.debug('failed fetching guild meta ...', err)
 }

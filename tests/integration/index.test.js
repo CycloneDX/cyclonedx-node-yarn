@@ -24,7 +24,7 @@ const path = require('path')
 const { existsSync, writeFileSync, readFileSync } = require('fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 
-const { version: thisVersion } = require('../../package.json')
+const { name: thisName, version: thisVersion } = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -111,6 +111,7 @@ suite('integration', () => {
         }).timeout(longTestTimeout)
       })
     })
+
     suite('prod', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
         test(`arg: ${testSetup}`, () => {
@@ -120,6 +121,24 @@ suite('integration', () => {
           runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
         })
       })
+    })
+
+    test('version', () => {
+      const res = spawnSync(
+        'yarn', ['cyclonedx', '--version'], {
+          cwd: projectRootPath,
+          stdio: ['ignore', 'pipe', 'pipe'],
+          encoding: 'utf8',
+          shell: true,
+          env: {
+            PATH: process.env.PATH,
+            CI: '1',
+            YARN_PLUGINS: thisYarnPlugin
+          }
+        })
+      assert.strictEqual(res.error, undefined)
+      assert.strictEqual(res.status, 0, res.output)
+      assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
     })
   })
 })
