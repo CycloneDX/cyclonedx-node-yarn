@@ -48,10 +48,24 @@ const selfNfo = JSON.parse(fs.readFileSync(
   path.join(projectRootPath, 'package.json'),
   'utf8'))
 
+let buildMeta = ''
+try {
+  buildMeta = '+git.' + execFileSync('git',
+    ['rev-parse', 'HEAD'],
+    {
+      cwd: projectRootPath,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore']
+    }
+  ).trim().substring(0, 7)
+} catch (err) {
+  console.debug('failed fetching guild meta ...', err)
+}
+
 const data = {
   self: {
     name: selfNfo.name,
-    version: selfNfo.version,
+    version: selfNfo.version + buildMeta,
     homepage: selfNfo.homepage,
     repository: selfNfo.repository,
     bugs: selfNfo.bugs
