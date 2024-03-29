@@ -20,7 +20,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing",
+        "version": "1.0.0-alpha+git.c5da1a1",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",

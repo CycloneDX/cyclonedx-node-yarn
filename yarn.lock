@@ -200,6 +200,9 @@ __metadata:
     "@yarnpkg/cli": "npm:^4.1.0"
     "@yarnpkg/core": "npm:^4.0.3"
     "@yarnpkg/fslib": "npm:^3.0.2"
+    ajv: "npm:^8.12.0"
+    ajv-formats: "npm:^2.1.1"
+    ajv-formats-draft2019: "npm:^1.6.1"
     c8: "npm:^9.1.0"
     clipanion: "npm:^4.0.0-rc.3"
     eslint: "npm:8.57.0"
@@ -211,6 +214,7 @@ __metadata:
     eslint-plugin-n: "npm:16.6.2"
     eslint-plugin-promise: "npm:6.1.1"
     eslint-plugin-simple-import-sort: "npm:12.0.0"
+    libxmljs2: "npm:^0.31||^0.32||^0.33"
     mocha: "npm:10.3.0"
     normalize-package-data: "npm:^3||^4||^5||^6"
     npm-run-all2: "npm:^6.1.2"
@@ -3887,7 +3891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libxmljs2@npm:^0.31 || ^0.32 || ^0.33":
+"libxmljs2@npm:^0.31 || ^0.32 || ^0.33, libxmljs2@npm:^0.31||^0.32||^0.33":
   version: 0.33.0
   resolution: "libxmljs2@npm:0.33.0"
   dependencies:
