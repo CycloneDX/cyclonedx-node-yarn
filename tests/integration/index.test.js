@@ -24,7 +24,7 @@ const path = require('path')
 const { existsSync, writeFileSync, readFileSync } = require('fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 
-const { version: thisVersion } = require('../../package.json')
+const { name: thisName, version: thisVersion } = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -111,6 +111,7 @@ suite('integration', () => {
         }).timeout(longTestTimeout)
       })
     })
+
     suite('prod', () => {
       testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
         test(`arg: ${testSetup}`, () => {
@@ -120,6 +121,24 @@ suite('integration', () => {
           runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
         })
       })
+    })
+
+    test('version', () => {
+      const res = spawnSync(
+        'yarn', ['cyclonedx', '--version'], {
+          cwd: projectRootPath,
+          stdio: ['ignore', 'pipe', 'pipe'],
+          encoding: 'utf8',
+          shell: true,
+          env: {
+            PATH: process.env.PATH,
+            CI: '1',
+            YARN_PLUGINS: thisYarnPlugin
+          }
+        })
+      assert.strictEqual(res.error, undefined)
+      assert.strictEqual(res.status, 0, res.output)
+      assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
     })
   })
 })
@@ -149,9 +168,11 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       // replace metadata.tools.version
-      '        "vendor": "@cyclonedx",\n' +
+      new RegExp(
+        '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
+      `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+.+)?",\n`
+      ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
       '        "version": "thisVersion-testing",\n'
@@ -178,9 +199,11 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>\n' +
+      new RegExp(
+        '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
-      `        <version>${thisVersion}</version>`,
+      `        <version>${thisVersion}(?:\\+.+)?</version>`
+      ),
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
       '        <version>thisVersion-testing</version>'

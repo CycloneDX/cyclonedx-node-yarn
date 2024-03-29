@@ -24,8 +24,8 @@ Steps to reproduce the behavior:
 
 ## Environment
 
-- _@cyclonedx/yarn-plugin-cyclonedx_ version: <!-- e.g. `1.0.0-alpha+4c1de92` -->
-- yarn version: <!-- get via `yarn -v` -->
+- _@cyclonedx/yarn-plugin-cyclonedx_ version: <!-- e.g. `v1.0.0-alpha+4c1de92`, get via `yarn cyclonedx --version` -->
+- yarn version: <!-- get via `yarn --version` -->
 - Node version: <!-- get via `node --version` -->
 - OS: <!-- e.g. windows 11, ubuntu linux, ... -->
  

@@ -168,6 +168,15 @@ class CycloneCommand extends BaseCommand {
   }
 }
 
+export class CycloneVersionCommand extends Command<any> {
+  static override readonly paths = CycloneCommand.paths.map(p => [...p, '--version'])
+
+  async execute (): Promise<void> {
+    const { self } = await import('./buildtimeInfo.json')
+    this.context.stdout.write(`${self.name} v${self.version}\n`)
+  }
+}
+
 export default {
-  commands: [CycloneCommand]
+  commands: [CycloneCommand, CycloneVersionCommand]
 } satisfies Plugin
