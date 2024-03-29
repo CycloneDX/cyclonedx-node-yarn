@@ -168,9 +168,11 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       // replace metadata.tools.version
-      '        "vendor": "@cyclonedx",\n' +
+      new RegExp(
+        '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
+      `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+.+)?",\n`
+      ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
       '        "version": "thisVersion-testing",\n'
@@ -197,9 +199,11 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       // replace metadata.tools.version
-      '        <vendor>@cyclonedx</vendor>\n' +
+      new RegExp(
+        '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
-      `        <version>${thisVersion}</version>`,
+      `        <version>${thisVersion}(?:\\+.+)?</version>`
+      ),
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
       '        <version>thisVersion-testing</version>'
