@@ -2,6 +2,8 @@
 
 /reports/
 /CI_reports/
+/dist/
+/CI_dist/
 /bundles/
 /CI_bundles/
 

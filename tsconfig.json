@@ -46,11 +46,16 @@
     "skipLibCheck": false,
 
     /* yarn foo */
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+
+    /* output */
+    "outDir": "./dist/"
   },
+
   "files": [
     "src/plugin.ts"
   ],
+
   "exclude": [
     ".yarn", ".pnp.*",
     "**/*.spec.ts", "**/*.test.ts"
