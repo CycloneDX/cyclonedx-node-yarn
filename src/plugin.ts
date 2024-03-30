@@ -17,13 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { BaseCommand } from '@yarnpkg/cli'
 import type { Plugin } from '@yarnpkg/core'
-import { Command } from 'clipanion'
 
-import { CycloneCommand } from './commands'
+import { CyclonedxCommand } from './commands'
 
-class CycloneVersionCommand extends Command<any> {
-  static override readonly paths = CycloneCommand.paths.map(p => [...p, '--version'])
+class CyclonedxVersionCommand extends BaseCommand {
+  static override readonly paths = CyclonedxCommand.paths.map(p => [...p, '--version'])
 
   async execute (): Promise<void> {
     const { self } = await import('./buildtimeInfo.json')
@@ -32,5 +32,5 @@ class CycloneVersionCommand extends Command<any> {
 }
 
 export default {
-  commands: [CycloneCommand, CycloneVersionCommand]
+  commands: [CyclonedxCommand, CyclonedxVersionCommand]
 } satisfies Plugin

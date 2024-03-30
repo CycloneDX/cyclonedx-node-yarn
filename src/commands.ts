@@ -41,7 +41,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-export class CycloneCommand extends BaseCommand {
+export class CyclonedxCommand extends BaseCommand {
   static override readonly paths = [
     ['cyclonedx'], // <-- this is the preferred entry point
     ['CycloneDX', 'make-sbom'],
