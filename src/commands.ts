@@ -41,6 +41,8 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
+function ChoiceOption () {}
+
 export class CyclonedxCommand extends BaseCommand {
   static override readonly paths = [
     ['cyclonedx'], // <-- this is the preferred entry point
@@ -55,12 +57,12 @@ export class CyclonedxCommand extends BaseCommand {
 
   // @TODO limit to all supported versions - not hardcoded
   // @TODO input validator with typanion
-  specVersion = Option.String('--spec-version', Spec.Version.v1dot5, {
+  specVersion = Option.String<Spec.Version>('--spec-version', Spec.Version.v1dot5, {
     description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")'
   })
 
   // @TODO input validator with typanion
-  outputFormat = Option.String('--output-format', OutputFormat.JSON, {
+  outputFormat = Option.String<OutputFormat>('--output-format', OutputFormat.JSON, {
     description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")'
   })
 
@@ -78,7 +80,7 @@ export class CyclonedxCommand extends BaseCommand {
 
   // @TODO limit to hardcoded: "application", "firmware", "library"
   // @TODO input validator with typanion
-  mcType = Option.String('--mc-type', {
+  mcType = Option.String<Enums.ComponentType>('--mc-type', {
     description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")'
   })
 
@@ -123,20 +125,20 @@ export class CyclonedxCommand extends BaseCommand {
       new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
       {
         omitDevDependencies: this.production,
-        metaComponentType: this.mcType as Enums.ComponentType,
+        metaComponentType: this.mcType,
         reproducible: this.outputReproducible
         // @TODO shortPURLs: this.shortPURLs
       },
       myConsole
     ).buildFromWorkspace(workspace)
 
-    const spec = Spec.SpecVersionDict[this.specVersion as Spec.Version]
+    const spec = Spec.SpecVersionDict[this.specVersion]
     if (undefined === spec) {
       throw new Error('unsupported spec-version')
     }
 
     let serializer: Serialize.Types.Serializer
-    switch (this.outputFormat as OutputFormat) {
+    switch (this.outputFormat) {
       case OutputFormat.XML:
         serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
         break
