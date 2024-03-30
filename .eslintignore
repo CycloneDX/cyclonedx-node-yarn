@@ -5,6 +5,7 @@
 # generated files: dist and docs
 /reports/**
 /bundles/**
+/dist/**
 /docs/**
 
 
