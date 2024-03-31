@@ -17,12 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, type Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
 import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
 import { Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
+import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
@@ -41,7 +42,19 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-function ChoiceOption () {}
+function ChoiceSwitch <T = string> (
+  descriptor: string,
+  choices: readonly string[],
+  initialValue: string,
+  description: string
+): T {
+  return Option.String<T>(descriptor, initialValue, {
+    description: `${description}\n(choices: ${choices.join(', ')}, default: ${initialValue})`,
+    /* @ts-expect-error TS2322: just don't want to spend energy annotating the type properly */
+    validator: isEnum(choices),
+    tolerateBoolean: false
+  })
+}
 
 export class CyclonedxCommand extends BaseCommand {
   static override readonly paths = [
@@ -60,6 +73,10 @@ export class CyclonedxCommand extends BaseCommand {
   specVersion = Option.String<Spec.Version>('--spec-version', Spec.Version.v1dot5, {
     description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")'
   })
+
+  foo = ChoiceSwitch<Spec.Version>('--foo', Object.keys(Spec.SpecVersionDict), Spec.Version.v1dot5, 'fooo fooo')
+  bar = ChoiceSwitch<OutputFormat>('--bar', [OutputFormat.JSON, OutputFormat.XML], OutputFormat.JSON, 'bar  bar')
+  baz = ChoiceSwitch<Enums.ComponentType>('--baz', [Enums.ComponentType.Application, Enums.ComponentType.Library, Enums.ComponentType.Firmware], Enums.ComponentType.Application, 'baz  baz')
 
   // @TODO input validator with typanion
   outputFormat = Option.String<OutputFormat>('--output-format', OutputFormat.JSON, {
