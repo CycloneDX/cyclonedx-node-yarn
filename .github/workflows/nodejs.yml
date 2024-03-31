@@ -47,7 +47,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: build
@@ -80,7 +80,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -123,7 +123,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -162,7 +162,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: setup-tests
         run: yarn run setup-tests
       - name: fetch build artifact
@@ -217,7 +217,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
