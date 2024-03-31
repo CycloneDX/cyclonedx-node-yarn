@@ -45,7 +45,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install --immutable
+        run: yarn install
       - name: build
         run: yarn run build:gbti
       - name: build
