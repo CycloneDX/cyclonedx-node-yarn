@@ -23,7 +23,7 @@ import { Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
-import { isEnum } from 'typanion'
+import typanion from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
@@ -42,7 +42,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-function ChoiceSwitch <T = string> (
+function makeChoiceSwitch <T = string> (
   descriptor: string,
   choices: readonly string[],
   initialValue: string,
@@ -51,8 +51,7 @@ function ChoiceSwitch <T = string> (
   return Option.String<T>(descriptor, initialValue, {
     description: `${description}\n(choices: ${choices.join(', ')}, default: ${initialValue})`,
     /* @ts-expect-error TS2322: just don't want to spend energy annotating the type properly */
-    validator: isEnum(choices),
-    tolerateBoolean: false
+    validator: typanion.isEnum(choices)
   })
 }
 
@@ -68,20 +67,19 @@ export class CyclonedxCommand extends BaseCommand {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
-  // @TODO limit to all supported versions - not hardcoded
-  // @TODO input validator with typanion
-  specVersion = Option.String<Spec.Version>('--spec-version', Spec.Version.v1dot5, {
-    description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")'
-  })
+  specVersion = makeChoiceSwitch<Spec.Version>(
+    '--spec-version',
+    Object.keys(Spec.SpecVersionDict),
+    Spec.Version.v1dot5,
+    'Which version of CycloneDX to use.'
+  )
 
-  foo = ChoiceSwitch<Spec.Version>('--foo', Object.keys(Spec.SpecVersionDict), Spec.Version.v1dot5, 'fooo fooo')
-  bar = ChoiceSwitch<OutputFormat>('--bar', [OutputFormat.JSON, OutputFormat.XML], OutputFormat.JSON, 'bar  bar')
-  baz = ChoiceSwitch<Enums.ComponentType>('--baz', [Enums.ComponentType.Application, Enums.ComponentType.Library, Enums.ComponentType.Firmware], Enums.ComponentType.Application, 'baz  baz')
-
-  // @TODO input validator with typanion
-  outputFormat = Option.String<OutputFormat>('--output-format', OutputFormat.JSON, {
-    description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")'
-  })
+  outputFormat = makeChoiceSwitch<OutputFormat>(
+    '--output-format',
+    [OutputFormat.JSON, OutputFormat.XML],
+    OutputFormat.JSON,
+    'Which output format to use.'
+  )
 
   outputFile = Option.String('--output-file', OutputStdOut, {
     description: `Path to the output file.\nSet to "${OutputStdOut}" to write to STDOUT.\n(default: write to STDOUT)`
@@ -95,11 +93,12 @@ export class CyclonedxCommand extends BaseCommand {
     description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
-  // @TODO limit to hardcoded: "application", "firmware", "library"
-  // @TODO input validator with typanion
-  mcType = Option.String<Enums.ComponentType>('--mc-type', {
-    description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")'
-  })
+  mcType = makeChoiceSwitch<Enums.ComponentType>(
+    '--mc-type',
+    [Enums.ComponentType.Application, Enums.ComponentType.Library, Enums.ComponentType.Firmware],
+    Enums.ComponentType.Application,
+    'Type of the main component.'
+  )
 
   outputReproducible = Option.Boolean('--output-reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
