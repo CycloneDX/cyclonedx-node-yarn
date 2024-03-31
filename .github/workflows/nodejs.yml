@@ -24,6 +24,7 @@ env:
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
+  # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
   YARN_ENABLE_HARDENED_MODE: 0  # https://yarnpkg.com/features/security
 
 jobs:
