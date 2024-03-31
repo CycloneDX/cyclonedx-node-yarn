@@ -23,7 +23,7 @@ import { Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
-import typanion from 'typanion'
+import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
@@ -51,7 +51,7 @@ function makeChoiceSwitch <T = string> (
   return Option.String<T>(descriptor, initialValue, {
     description: `${description}\n(choices: ${choices.join(', ')}, default: ${initialValue})`,
     /* @ts-expect-error TS2322: just don't want to spend energy annotating the type properly */
-    validator: typanion.isEnum(choices)
+    validator: isEnum(choices)
   })
 }
 
