@@ -17,12 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, type Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
 import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
 import { Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
+import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
@@ -41,6 +42,19 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
+function makeChoiceSwitch <T = string> (
+  descriptor: string,
+  choices: readonly string[],
+  initialValue: string,
+  description: string
+): T {
+  return Option.String<T>(descriptor, initialValue, {
+    description: `${description}\n(choices: ${choices.join(', ')}, default: ${initialValue})`,
+    /* @ts-expect-error TS2322: just don't want to spend energy annotating the type properly */
+    validator: isEnum(choices)
+  })
+}
+
 export class CyclonedxCommand extends BaseCommand {
   static override readonly paths = [
     ['cyclonedx'], // <-- this is the preferred entry point
@@ -53,16 +67,19 @@ export class CyclonedxCommand extends BaseCommand {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
-  // @TODO limit to all supported versions - not hardcoded
-  // @TODO input validator with typanion
-  specVersion = Option.String('--spec-version', Spec.Version.v1dot5, {
-    description: 'Which version of CycloneDX to use.\n(choices: "1.2", "1.3", "1.4", "1.5", default: "1.5")'
-  })
+  specVersion = makeChoiceSwitch<Spec.Version>(
+    '--spec-version',
+    Object.keys(Spec.SpecVersionDict),
+    Spec.Version.v1dot5,
+    'Which version of CycloneDX to use.'
+  )
 
-  // @TODO input validator with typanion
-  outputFormat = Option.String('--output-format', OutputFormat.JSON, {
-    description: 'Which output format to use.\n(choices: "JSON", "XML", default: "JSON")'
-  })
+  outputFormat = makeChoiceSwitch<OutputFormat>(
+    '--output-format',
+    [OutputFormat.JSON, OutputFormat.XML],
+    OutputFormat.JSON,
+    'Which output format to use.'
+  )
 
   outputFile = Option.String('--output-file', OutputStdOut, {
     description: `Path to the output file.\nSet to "${OutputStdOut}" to write to STDOUT.\n(default: write to STDOUT)`
@@ -76,11 +93,12 @@ export class CyclonedxCommand extends BaseCommand {
     description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
-  // @TODO limit to hardcoded: "application", "firmware", "library"
-  // @TODO input validator with typanion
-  mcType = Option.String('--mc-type', {
-    description: 'Type of the main component.\n(choices: "application", "framework", "library", "container", "platform", "device-driver", default: "application")'
-  })
+  mcType = makeChoiceSwitch<Enums.ComponentType>(
+    '--mc-type',
+    [Enums.ComponentType.Application, Enums.ComponentType.Library, Enums.ComponentType.Firmware],
+    Enums.ComponentType.Application,
+    'Type of the main component.'
+  )
 
   outputReproducible = Option.Boolean('--output-reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
@@ -123,20 +141,20 @@ export class CyclonedxCommand extends BaseCommand {
       new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
       {
         omitDevDependencies: this.production,
-        metaComponentType: this.mcType as Enums.ComponentType,
+        metaComponentType: this.mcType,
         reproducible: this.outputReproducible
         // @TODO shortPURLs: this.shortPURLs
       },
       myConsole
     ).buildFromWorkspace(workspace)
 
-    const spec = Spec.SpecVersionDict[this.specVersion as Spec.Version]
+    const spec = Spec.SpecVersionDict[this.specVersion]
     if (undefined === spec) {
       throw new Error('unsupported spec-version')
     }
 
     let serializer: Serialize.Types.Serializer
-    switch (this.outputFormat as OutputFormat) {
+    switch (this.outputFormat) {
       case OutputFormat.XML:
         serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
         break
