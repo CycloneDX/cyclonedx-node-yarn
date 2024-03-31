@@ -24,6 +24,7 @@ env:
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
+  # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
   YARN_ENABLE_HARDENED_MODE: 0  # https://yarnpkg.com/features/security
 
 jobs:
@@ -46,7 +47,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: build
@@ -79,7 +80,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -122,7 +123,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -161,7 +162,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: setup-tests
         run: yarn run setup-tests
       - name: fetch build artifact
@@ -216,7 +217,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install
+        run: yarn install --no-immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
