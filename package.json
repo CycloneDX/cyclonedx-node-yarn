@@ -100,7 +100,18 @@
     "cyclonedx-yarn": "./bin/cyclonedx-yarn-cli.js"
   },
   "main": "./src/plugin.ts",
+  "files": [
+    "/README.md",
+    "/LICENSE", "/NOTICE",
+    "/bundles/**",
+    "/dist/**",
+    "/bin/**",
+    "!**.map"
+  ],
   "exports": "./dist/index.js",
+  "publishConfig": {
+    "main": "./bundles/@yarnpkg/plugin-cyclonedx.js"
+  },
   "scripts": {
     "build": "run-s -n build:gbti build:cli build:plugin",
     "build:gbti": "node tools/gather-buildtime-info.cjs",
