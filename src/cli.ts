@@ -19,28 +19,33 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { getPluginConfiguration } from '@yarnpkg/cli'
 import type { CommandContext } from '@yarnpkg/core'
-import { ppath } from '@yarnpkg/fslib'
-import { Builtins, Cli } from 'clipanion'
+import { npath, ppath } from '@yarnpkg/fslib'
+import { Builtins, Cli, Option } from 'clipanion'
 
-import { MakeSbomCommand } from './commands'
+import { MakeSbomCommand as _MakeSbomCommand } from './commands'
 
 class VersionCommand extends Builtins.VersionCommand {
   static override readonly paths = [['--version']]
 }
 
 export async function run (process: NodeJS.Process): Promise<number> {
-  const { self: { version } } = await import('./buildtimeInfo.json')
+  class MakeSbomCommand extends _MakeSbomCommand {
+    projectDir = Option.String({
+      required: false,
+      name: 'project dir'
+    })
+  }
 
   const cli = new Cli<CommandContext>({
     binaryLabel: 'CycloneDX for yarn',
     binaryName: 'cyclonedx-yarn',
-    binaryVersion: version
+    binaryVersion: (await import('./buildtimeInfo.json')).self.version
   })
 
   cli.register(MakeSbomCommand)
   cli.register(VersionCommand)
 
-  return await cli.run(process.argv.slice(2), {
+  const context = {
     ...Cli.defaultContext,
     cwd: ppath.cwd(),
     env: process.env,
@@ -49,5 +54,13 @@ export async function run (process: NodeJS.Process): Promise<number> {
     stdin: process.stdin,
     stdout: process.stdout,
     stderr: process.stderr
-  })
+  }
+
+  const command = cli.process(process.argv.slice(2), context)
+  /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
+  if (command instanceof MakeSbomCommand && command.projectDir) {
+    context.cwd = npath.toPortablePath(npath.resolve(process.cwd(), command.projectDir))
+  }
+
+  return await cli.run(command, context)
 }

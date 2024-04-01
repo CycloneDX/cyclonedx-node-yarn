@@ -115,6 +115,7 @@ export class MakeSbomCommand extends BaseCommand {
     })
 
     myConsole.info('INFO  | gathering project & workspace ...')
+    myConsole.debug('DEBUG | context:', this.context)
     const { project, workspace } = await Project.find(
       await Configuration.find(this.context.cwd, this.context.plugins),
       this.context.cwd)

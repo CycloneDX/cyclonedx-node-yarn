@@ -65,31 +65,31 @@ suite('integration', () => {
 
   /** @type {Object.<string,CallThisTool>} */
   const callThisToolByMethod = {
-    cli: function (cwd, args, additionalEnv) {
+    cli: function (ydir, args, env) {
       return spawnSync(
-        'yarn', ['node', pathToCli, ...args], {
-          cwd,
+        'yarn', ['node', pathToCli, ...args, ydir], {
+          cwd: path.dirname(pathToCli),
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',
           maxBuffer: BUFFER_MAX_LENGTH,
           shell: true,
           env: {
-            ...additionalEnv,
+            ...env,
             PATH: process.env.PATH,
             CI: '1'
           }
         })
     },
-    plugin: function (cwd, args, additionalEnv) {
+    plugin: function (ydir, args, env) {
       return spawnSync(
         'yarn', ['cyclonedx', ...args], {
-          cwd,
+          cwd: ydir,
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',
           maxBuffer: BUFFER_MAX_LENGTH,
           shell: true,
           env: {
-            ...additionalEnv,
+            ...env,
             PATH: process.env.PATH,
             CI: '1',
             YARN_PLUGINS: thisYarnPlugin
