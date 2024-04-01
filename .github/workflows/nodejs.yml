@@ -20,7 +20,9 @@ concurrency:
 env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
   YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
-  DIST_DIR: bundles
+  DIST_DIR: dist
+  BUNDLES_DIR: bundles
+  BUILD_ARTIFACT: build-artifact
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
@@ -50,14 +52,18 @@ jobs:
         run: yarn install --no-immutable
       - name: build
         run: yarn run build:gbti
-      - name: build
+      - name: build dist
+        run: yarn run build:cli-dev
+      - name: build plugin
         run: yarn run build:plugin-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: |
+            ${{ env.DIST_DIR }}/
+            ${{ env.PLUGIN_DIR }}/
           if-no-files-found: error
 
   test-standard:
@@ -96,7 +102,7 @@ jobs:
           reports: ${{ env.REPORTS_DIR }}/eslint.xml
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -169,8 +175,7 @@ jobs:
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
+          name: ${{ env.BUILD_ARTIFACT }}
       - name: run tests
         run: yarn run test:node
       - name: collect coverage
@@ -189,7 +194,7 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding (node${{ matrix.node-version }})
+    name: dogfooding (${{ matrix.method }} node${{ matrix.node-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -200,6 +205,9 @@ jobs:
           - '21'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
+        method:
+          - cli
+          - plugin
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -217,24 +225,23 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install --no-immutable
+        run: yarn install --no-immutable --production
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
+          name: ${{ env.BUILD_ARTIFACT }}
       - name: dogfooding
         run: >
-          yarn run dogfooding
+          yarn run dogfooding:${{ matrix.method }}
           --production
-          --output-file=${{ env.REPORTS_DIR }}/bom.json
+          --output-file=${{ env.REPORTS_DIR }}/bom.cdx.json
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dogfooding-direct_npm${{ matrix.npm-version }}
+          name: dogfooding-${{ matrix.method }}_npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 

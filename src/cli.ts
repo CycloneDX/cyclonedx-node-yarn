@@ -40,12 +40,14 @@ export async function run (process: NodeJS.Process): Promise<number> {
   cli.register(MakeSbomCommand)
   cli.register(VersionCommand)
 
-  const context: CommandContext = {
+  return await cli.run(process.argv.slice(2), {
     ...Cli.defaultContext,
     cwd: ppath.cwd(),
+    env: process.env,
     plugins: getPluginConfiguration(),
-    quiet: false
-  }
-
-  return await cli.run(process.argv.slice(2), context)
+    quiet: false,
+    stdin: process.stdin,
+    stdout: process.stdout,
+    stderr: process.stderr
+  })
 }
