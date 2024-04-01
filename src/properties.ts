@@ -20,8 +20,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 /**
  * CDX properties' names - specific to this very tool.
  *
- * Yes, this is a yarn-plugin...
- *  But still, we go with npm-taxonomy, since yarn utilizes the package-definitions from `npm`/npmjs.org
+ * Yes, this is a yarn-centric tool...
+ * But still, we go with npm-taxonomy, since yarn utilizes the package-definitions from `npm`/npmjs.org
  *
  * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
  */

@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type BaseContext } from 'clipanion'
+import type { BaseContext } from 'clipanion'
 
 function noop (): void {
   // do nothing
