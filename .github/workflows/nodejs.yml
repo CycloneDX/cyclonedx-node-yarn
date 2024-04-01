@@ -173,7 +173,7 @@ jobs:
         run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.BUILD_ARTIFACT }}
       - name: run tests
@@ -225,7 +225,7 @@ jobs:
           corepack enable yarn
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
-        run: yarn install --no-immutable --production
+        run: yarn workspaces focus --production
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
