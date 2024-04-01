@@ -21,7 +21,7 @@ env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
   YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
   DIST_DIR: dist
-  BUNDLES_DIR: bundles
+  PLUGIN_DIR: bundles
   BUILD_ARTIFACT: build-artifact
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
