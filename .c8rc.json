@@ -2,6 +2,7 @@
   "all": true,
   "src": ["src"],
   "exclude": [
+    "src/index.ts",
     "**/*.{spec,test}.{js,cjs,mjs}",
     "**/*.cache/**",
     "{,CI_}reports/**",
