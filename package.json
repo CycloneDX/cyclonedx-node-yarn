@@ -127,7 +127,7 @@
     "test:lint": "tsc --noEmit",
     "test:node": "c8 mocha -p",
     "cs-fix": "eslint --fix .",
-    "dogfooding:cli": "yarn node $PROJECT_CWD/bin/cyclonedx-yarn-cli",
+    "dogfooding:cli": "yarn node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js",
     "dogfooding:plugin": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "packageManager": "yarn@4.1.1"

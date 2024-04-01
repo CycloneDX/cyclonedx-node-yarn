@@ -46,6 +46,13 @@ or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/adv
 YARN_PLUGINS=.../bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
 ```
 
+or, alternatively, call the CLI - like so:
+
+```shell
+cd .../path/to/this/package
+yarn node bin/cyclonedx-yarn-cli.js --help
+```
+
 ## Usage
 
 The help page:
