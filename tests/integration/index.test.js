@@ -67,7 +67,7 @@ suite('integration', () => {
   const callThisToolByMethod = {
     cli: function (ydir, args, env) {
       return spawnSync(
-        'yarn', ['node', pathToCli, ...args, ydir], {
+        'yarn', ['node', pathToCli, ...args], {
           cwd: path.dirname(pathToCli),
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',
@@ -112,6 +112,7 @@ suite('integration', () => {
   ) {
     // callMethod MUST NOT influence the output ...
     const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
+    const testbedPath = path.join(testbedsPath, testSetup)
 
     const args = [
       '-vvv',
@@ -121,9 +122,11 @@ suite('integration', () => {
       '--output-format', 'JSON',
       ...additionalArgs
     ]
-    const res = callThisTool(
-      path.join(testbedsPath, testSetup),
-      args, additionalEnv)
+    if (callThisTool === callThisToolByMethod.cli) {
+      args.push(testbedPath)
+    }
+
+    const res = callThisTool(testbedPath, args, additionalEnv)
     assert.strictEqual(res.error, undefined)
     assert.strictEqual(res.status, 0, res.output)
 
