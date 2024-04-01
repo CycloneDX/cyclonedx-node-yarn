@@ -26,7 +26,7 @@ const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 
 const { Validation, Spec } = require('@cyclonedx/cyclonedx-library')
 
-const { name: thisName, version: thisVersion } = require('../../package.json')
+const { version: thisVersion } = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -59,43 +59,75 @@ suite('integration', () => {
 
   const longTestTimeout = 30000
 
+  const pathToCli = path.join(projectRootPath, 'bin', 'cyclonedx-yarn-cli.js')
+
+  /** @typedef {function (string, string[], Object.<string, string>): SpawnSyncReturns<string>} CallThisTool */
+
+  /** @type {Object.<string,CallThisTool>} */
+  const callThisToolByMethod = {
+    cli: function (cwd, args, additionalEnv) {
+      return spawnSync(
+        'yarn', ['node', pathToCli, ...args], {
+          cwd,
+          stdio: ['ignore', 'pipe', 'pipe'],
+          encoding: 'utf8',
+          maxBuffer: BUFFER_MAX_LENGTH,
+          shell: true,
+          env: {
+            ...additionalEnv,
+            PATH: process.env.PATH,
+            CI: '1'
+          }
+        })
+    },
+    plugin: function (cwd, args, additionalEnv) {
+      return spawnSync(
+        'yarn', ['cyclonedx', ...args], {
+          cwd,
+          stdio: ['ignore', 'pipe', 'pipe'],
+          encoding: 'utf8',
+          maxBuffer: BUFFER_MAX_LENGTH,
+          shell: true,
+          env: {
+            ...additionalEnv,
+            PATH: process.env.PATH,
+            CI: '1',
+            YARN_PLUGINS: thisYarnPlugin
+          }
+        })
+    }
+  }
+
   /**
+   * @param {CallThisTool} callThisTool
    * @param {string} purpose
    * @param {string} testSetup
    * @param {string[]} [additionalArgs]
-   * @param {Object<string, string>} [additionalEnv]
+   * @param {Object.<string, string>} [additionalEnv]
    */
   async function runTest (
+    callThisTool,
     purpose, testSetup,
     additionalArgs = [], additionalEnv = {}
   ) {
+    // callMethod MUST NOT influence the output ...
     const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
 
-    const makeSBOM = spawnSync(
-      'yarn', ['cyclonedx',
-        '-vvv',
-        '--output-reproducible',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', latestCdxSpecVersion,
-        '--output-format', 'JSON',
-        ...additionalArgs
-      ], {
-        cwd: path.join(testbedsPath, testSetup),
-        stdio: ['ignore', 'pipe', 'pipe'],
-        encoding: 'utf8',
-        maxBuffer: BUFFER_MAX_LENGTH,
-        shell: true,
-        env: {
-          ...additionalEnv,
-          PATH: process.env.PATH,
-          CI: '1',
-          YARN_PLUGINS: thisYarnPlugin
-        }
-      })
-    assert.strictEqual(makeSBOM.error, undefined)
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
+    const args = [
+      '-vvv',
+      '--output-reproducible',
+      // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+      '--spec-version', latestCdxSpecVersion,
+      '--output-format', 'JSON',
+      ...additionalArgs
+    ]
+    const res = callThisTool(
+      path.join(testbedsPath, testSetup),
+      args, additionalEnv)
+    assert.strictEqual(res.error, undefined)
+    assert.strictEqual(res.status, 0, res.output)
 
-    let actualOutput = makeSBOM.stdout.toString()
+    let actualOutput = res.stdout.toString()
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
@@ -112,44 +144,37 @@ suite('integration', () => {
       `output should equal ${expectedOutSnap}`)
   }
 
-  suite('make SBOM', () => {
-    suite('plain', () => {
-      testSetups.forEach((testSetup) => {
-        test(`${testSetup}`,
-          () => runTest('plain', testSetup)
-        ).timeout(longTestTimeout)
-      })
-    })
-
-    suite('prod', () => {
-      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`arg: ${testSetup}`,
-          () => runTest('prod-arg', testSetup, ['--prod'])
-        )
-        test(`env: ${testSetup}`,
-          () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-        )
-      })
-    })
-
-    test('version', () => {
-      const res = spawnSync(
-        'yarn', ['cyclonedx', '--version'], {
-          cwd: projectRootPath,
-          stdio: ['ignore', 'pipe', 'pipe'],
-          encoding: 'utf8',
-          shell: true,
-          env: {
-            PATH: process.env.PATH,
-            CI: '1',
-            YARN_PLUGINS: thisYarnPlugin
-          }
+  for (const [method, callThisTool] of Object.entries(callThisToolByMethod)) {
+    suite(`method: ${method}`, () => {
+      suite('make SBOM', () => {
+        suite('plain', () => {
+          testSetups.forEach((testSetup) => {
+            test(`${testSetup}`,
+              () => runTest(callThisTool, 'plain', testSetup)
+            ).timeout(longTestTimeout)
+          })
         })
-      assert.strictEqual(res.error, undefined)
-      assert.strictEqual(res.status, 0, res.output)
-      assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
+
+        suite('prod', () => {
+          testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
+            test(`arg: ${testSetup}`,
+              () => runTest(callThisTool, 'prod-arg', testSetup, ['--prod'])
+            )
+            test(`env: ${testSetup}`,
+              () => runTest(callThisTool, 'prod-env', testSetup, [], { NODE_ENV: 'production' })
+            )
+          })
+        })
+      })
+
+      test('version', () => {
+        const res = callThisTool(projectRootPath, ['--version'], {})
+        assert.strictEqual(res.error, undefined)
+        assert.strictEqual(res.status, 0, res.output)
+        assert.ok(res.stdout.includes(`${thisVersion}`), res.stdout)
+      })
     })
-  })
+  }
 })
 
 /**
