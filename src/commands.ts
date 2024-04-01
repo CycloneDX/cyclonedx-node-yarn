@@ -55,13 +55,7 @@ function makeChoiceSwitch <T = string> (
   })
 }
 
-export class CyclonedxCommand extends BaseCommand {
-  static override readonly paths = [
-    ['cyclonedx'], // <-- this is the preferred entry point
-    ['CycloneDX', 'make-sbom'],
-    ['sbom']
-  ]
-
+export class MakeSbomCommand extends BaseCommand {
   static override readonly usage = Command.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'

@@ -17,8 +17,6 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/* eslint-disable jsdoc/valid-types */
-
 /**
  * @type {import('eslint').Linter.Config}
  * @see https://eslint.org/
@@ -78,44 +76,16 @@ module.exports = {
       files: ['*.js', '*.mjs', '*.cjs'],
       extends: [
         /* see https://www.npmjs.com/package/eslint-config-standard */
-        'standard',
-        /* see https://github.com/gajus/eslint-plugin-jsdoc */
-        'plugin:jsdoc/recommended'
-      ],
-      plugins: [
-        /* see https://github.com/gajus/eslint-plugin-jsdoc/ */
-        'jsdoc'
-      ],
+        'standard'
+      ]
+    },
+    {
+      files: ['bin/*.js'],
       rules: {
-        /* see https://github.com/gajus/eslint-plugin-jsdoc */
-        'jsdoc/no-undefined-types': 'error',
-        'jsdoc/check-tag-names': 0,
-        'jsdoc/check-types': 'error',
-        'jsdoc/require-hyphen-before-param-description': ['error', 'always'],
-        'jsdoc/require-jsdoc': 0,
-        'jsdoc/require-param': 0,
-        'jsdoc/require-param-description': 0,
-        'jsdoc/require-param-name': 'error',
-        'jsdoc/require-param-type': 'error',
-        'jsdoc/require-property': 0,
-        'jsdoc/require-property-description': 0,
-        'jsdoc/require-property-name': 'error',
-        'jsdoc/require-property-type': 'error',
-        'jsdoc/require-returns': 0,
-        'jsdoc/require-returns-check': 'error',
-        'jsdoc/require-returns-description': 0,
-        'jsdoc/require-returns-type': 'error',
-        'jsdoc/require-throws': 'error',
-        'jsdoc/require-yields': 0,
-        'jsdoc/require-yields-check': 'error',
-        'jsdoc/sort-tags': 'warn'
-        // region docs
-      },
-      settings: {
-        jsdoc: {
-          /* see https://github.com/gajus/eslint-plugin-jsdoc */
-          mode: 'jsdoc'
-        }
+        // region license-header
+        /* see https://github.com/Stuk/eslint-plugin-header#readme */
+        'header/header': 'off'
+        // endregion license-header
       }
     }
   ]

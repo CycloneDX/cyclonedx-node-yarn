@@ -20,9 +20,17 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { BaseCommand } from '@yarnpkg/cli'
 import type { Plugin } from '@yarnpkg/core'
 
-import { CyclonedxCommand } from './commands'
+import { MakeSbomCommand } from './commands'
 
-class CyclonedxVersionCommand extends BaseCommand {
+class CyclonedxCommand extends MakeSbomCommand {
+  static override readonly paths = [
+    ['cyclonedx'], // <-- this is the preferred entry point
+    ['CycloneDX', 'make-sbom'],
+    ['sbom']
+  ]
+}
+
+class VersionCommand extends BaseCommand {
   static override readonly paths = CyclonedxCommand.paths.map(p => [...p, '--version'])
 
   async execute (): Promise<void> {
@@ -32,5 +40,5 @@ class CyclonedxVersionCommand extends BaseCommand {
 }
 
 export default {
-  commands: [CyclonedxCommand, CyclonedxVersionCommand]
+  commands: [CyclonedxCommand, VersionCommand]
 } satisfies Plugin

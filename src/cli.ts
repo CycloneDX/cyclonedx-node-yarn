@@ -17,23 +17,27 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-console.warn(`
-There is no public API. Instead, there is a well-thought, stable CLI.
-Call it programmatically like so:
-    const { execFileSync } = require('child_process')
-    const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
-    const sbom = JSON.parse(execFileSync('yarn', [
-      'cyclonedx',
-      '--output-format', 'JSON',
-      '--output-file', '-'
-      // additional CLI args
-    ], {
-      env: { 'YARN_PLUGINS': '../path/to/this/package/bundles/@yarnpkg/plugin-cyclonedx.js' },
-      stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH
-    }))
-`)
+import { Builtins, Cli } from 'clipanion'
 
-/*
-Intentionally, here are no exports.
-See above!
-*/
+import { MakeSbomCommand } from './commands'
+
+class VersionCommand extends Builtins.VersionCommand {
+  static override readonly paths = [['--version']]
+}
+
+export async function run (process: NodeJS.Process): Promise<number> {
+  const { self: { version } } = await import('./buildtimeInfo.json')
+
+  const [node, app, ...args] = process.argv
+
+  const cli = new Cli({
+    binaryLabel: 'CycloneDX for yarn',
+    binaryName: `${node} ${app}`,
+    binaryVersion: version
+  })
+
+  cli.register(MakeSbomCommand)
+  cli.register(VersionCommand)
+
+  return await cli.run(args)
+}
