@@ -119,7 +119,7 @@
     "build:cli-dev": "yarn run build:cli --sourceMap",
     "build:plugin": "builder build plugin",
     "build:plugin-dev": "yarn run build:plugin --source-map",
-    "clean": "rimraf bundles",
+    "clean": "rimraf dist bundles",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",
     "test:standard": "eslint .",
