@@ -194,7 +194,7 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding (${{ matrix.method }} node${{ matrix.node-version }})
+    name: dogfooding (node${{ matrix.node-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -205,9 +205,6 @@ jobs:
           - '21'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
-        method:
-          - cli
-          - plugin
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -233,7 +230,7 @@ jobs:
           name: ${{ env.BUILD_ARTIFACT }}
       - name: dogfooding
         run: >
-          yarn run dogfooding:${{ matrix.method }}
+          yarn run dogfooding
           --production
           --output-file=${{ env.REPORTS_DIR }}/bom.cdx.json
       - name: artifact test reports
@@ -241,7 +238,7 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: dogfooding-${{ matrix.method }}_npm${{ matrix.npm-version }}
+          name: dogfooding-npm${{ matrix.npm-version }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 

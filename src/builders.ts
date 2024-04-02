@@ -24,7 +24,6 @@ import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
 import { isString } from './_helpers'
-import buildtimeInfo from './buildtimeInfo.json'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -82,7 +81,7 @@ export class BomBuilder {
 
     bom.metadata.component = rootComponent
 
-    for (const tool of this.makeTools()) {
+    for await (const tool of this.makeTools()) {
       bom.metadata.tools.add(tool)
     }
 
@@ -192,13 +191,21 @@ export class BomBuilder {
     return purl
   }
 
-  private * makeTools (): Generator<Models.Tool> {
+  private async * makeTools (): AsyncGenerator<Models.Tool> {
+    const tool = this.toolBuilder.makeTool(await import('../package.json'))
+    if (tool !== undefined) {
+      yield tool
+    }
+
+    // TODO
+    /*
     for (const nfo of Object.values(buildtimeInfo)) {
       const tool = this.toolBuilder.makeTool(nfo)
       if (tool !== undefined) {
         yield tool
       }
     }
+    */
   }
 
   private * getDeps (pkg: Package, project: Project): Generator<Package> {
