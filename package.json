@@ -51,6 +51,7 @@
   ],
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.4.0",
+    "@yarnpkg/cli": "^4.1.1",
     "@yarnpkg/core": "^4.0.3",
     "@yarnpkg/fslib": "^3.0.2",
     "clipanion": "^4.0.0-rc.3",
@@ -108,7 +109,7 @@
   ],
   "exports": "./dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.cli.json",
+    "build": "tsc -p tsconfig.json",
     "clean": "rimraf dist bundles",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",

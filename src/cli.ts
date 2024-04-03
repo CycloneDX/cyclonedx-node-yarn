@@ -17,6 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { type CommandContext, getPluginConfiguration } from '@yarnpkg/cli'
+import { ppath } from '@yarnpkg/fslib'
 import { Builtins, Cli } from 'clipanion'
 
 import { MakeSbomCommand } from './commands'
@@ -26,7 +28,7 @@ class VersionCommand extends Builtins.VersionCommand {
 }
 
 export async function run (process: NodeJS.Process): Promise<number> {
-  const cli = new Cli({
+  const cli = new Cli<CommandContext>({
     binaryLabel: 'CycloneDX for yarn',
     binaryName: 'cyclonedx-yarn',
     binaryVersion: (await import('../package.json')).version
@@ -35,5 +37,11 @@ export async function run (process: NodeJS.Process): Promise<number> {
   cli.register(MakeSbomCommand)
   cli.register(VersionCommand)
 
-  return await cli.run(process.argv.slice(2))
+  return await cli.run(process.argv.slice(2),
+    {
+      ...Cli.defaultContext,
+      cwd: ppath.cwd(),
+      plugins: getPluginConfiguration(),
+      quiet: false
+    })
 }

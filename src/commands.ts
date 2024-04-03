@@ -18,9 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
 import { Configuration, Project } from '@yarnpkg/core'
-import { npath, ppath } from '@yarnpkg/fslib'
-import { Command, Option } from 'clipanion'
+import { Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
 import { isEnum } from 'typanion'
@@ -55,8 +55,8 @@ function makeChoiceSwitch <T = string> (
   })
 }
 
-export class MakeSbomCommand extends Command {
-  static override readonly usage = Command.Usage({
+export class MakeSbomCommand extends BaseCommand {
+  static override readonly usage = BaseCommand.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
@@ -102,13 +102,9 @@ export class MakeSbomCommand extends Command {
     description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
   })
 
-  projectDir = Option.String({
-    required: false,
-    name: 'project dir'
-  })
-
   async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
+    myConsole.debug('DEBUG | context:', this.context)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,
@@ -116,26 +112,18 @@ export class MakeSbomCommand extends Command {
       production: this.production,
       mcType: this.mcType,
       outputReproducible: this.outputReproducible,
-      verbosity: this.verbosity,
-      projectDir: this.projectDir
+      verbosity: this.verbosity
     })
 
     myConsole.info('INFO  | gathering project & workspace ...')
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
-    const projectPath = this.projectDir
-      ? npath.toPortablePath(npath.resolve(npath.cwd(), this.projectDir))
-      : ppath.cwd()
     const { project, workspace } = await Project.find(
       await Configuration.find(
-        projectPath,
-        null
-        // FIXME here we end, because we cannot fetch the remote workspaces plugins and run them in our own context ...
-        // except this tools was part of the same workspace, then this should be possible ...
-        // but since we want to be ran via `yarn dlx ...` ... this is just not gonna happen ... for now
+        this.context.cwd,
+        this.context.plugins
       ),
-      projectPath)
+      this.context.cwd)
     if (workspace === null) {
-      throw new Error(`Found no yarn workspace in: ${project.cwd}`)
+      throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
     }
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
