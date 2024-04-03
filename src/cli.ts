@@ -17,7 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type CommandContext, getPluginConfiguration } from '@yarnpkg/cli'
+import type { CommandContext } from '@yarnpkg/cli'
+import type { PluginConfiguration } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import { Builtins, Cli } from 'clipanion'
 
@@ -25,6 +26,52 @@ import { MakeSbomCommand } from './commands'
 
 class VersionCommand extends Builtins.VersionCommand {
   static override readonly paths = [['--version']]
+}
+
+async function getPluginConfiguration (): Promise<PluginConfiguration> {
+  // mimic https://github.com/yarnpkg/berry/blob/%40yarnpkg/cli/4.1.1/packages/yarnpkg-cli/sources/tools/getPluginConfiguration.ts
+  const plugins = new Set<string>([
+    /*   '@yarnpkg/plugin-essentials',
+    '@yarnpkg/plugin-compat',
+    '@yarnpkg/plugin-constraints',
+    '@yarnpkg/plugin-dlx',
+    '@yarnpkg/plugin-exec',
+    '@yarnpkg/plugin-file',
+    '@yarnpkg/plugin-git',
+    '@yarnpkg/plugin-github',
+    '@yarnpkg/plugin-http',
+    '@yarnpkg/plugin-init',
+    '@yarnpkg/plugin-interactive-tools',
+    '@yarnpkg/plugin-link',
+    '@yarnpkg/plugin-nm',
+    '@yarnpkg/plugin-npm',
+    '@yarnpkg/plugin-npm-cli',
+    '@yarnpkg/plugin-pack',
+    '@yarnpkg/plugin-patch',
+    '@yarnpkg/plugin-pnp',
+    '@yarnpkg/plugin-pnpm',
+    '@yarnpkg/plugin-stage',
+    '@yarnpkg/plugin-typescript',
+    '@yarnpkg/plugin-version',
+    '@yarnpkg/plugin-workspace-tools' */
+  ])
+
+  const modules = new Map<string, any>(
+    /* @ts-expect-error TS2769 */
+    await Promise.all(
+      [
+      //  ...plugins,
+        '@yarnpkg/core',
+        '@yarnpkg/fslib'
+      //  '@yarnpkg/libzip'
+      ].map(
+        /* eslint-disable-next-line @typescript-eslint/return-await */
+        async n => import(n).then(m => [n, m.default])
+      )
+    )
+  )
+
+  return { plugins, modules }
 }
 
 export async function run (process: NodeJS.Process): Promise<number> {
@@ -41,7 +88,7 @@ export async function run (process: NodeJS.Process): Promise<number> {
     {
       ...Cli.defaultContext,
       cwd: ppath.cwd(),
-      plugins: getPluginConfiguration(),
+      plugins: await getPluginConfiguration(),
       quiet: false
     })
 }

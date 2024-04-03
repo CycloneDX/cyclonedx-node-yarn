@@ -18,9 +18,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
-import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
-import { Configuration, Project } from '@yarnpkg/core'
-import { Option } from 'clipanion'
+import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
+import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
 import { isEnum } from 'typanion'
@@ -55,8 +54,8 @@ function makeChoiceSwitch <T = string> (
   })
 }
 
-export class MakeSbomCommand extends BaseCommand {
-  static override readonly usage = BaseCommand.Usage({
+export class MakeSbomCommand extends Command<CommandContext> {
+  static override readonly usage = Command.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
@@ -123,7 +122,7 @@ export class MakeSbomCommand extends BaseCommand {
       ),
       this.context.cwd)
     if (workspace === null) {
-      throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
+      throw new Error(`missing workspace for project ${project.cwd} in ${this.context.cwd}`)
     }
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
