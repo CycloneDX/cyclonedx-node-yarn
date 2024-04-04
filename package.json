@@ -51,6 +51,7 @@
   ],
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.4.0",
+    "@yarnpkg/cli": "^4.1.1",
     "@yarnpkg/core": "^4.0.3",
     "@yarnpkg/fslib": "^3.0.2",
     "clipanion": "^4.0.0-rc.3",
@@ -94,8 +95,10 @@
     "lib": "dist",
     "test": "tests"
   },
-  "bin": "./bin/cyclonedx-yarn-cli.js",
-  "main": "./dist/cli.js",
+  "bin": {
+    "cyclonedx-yarn": "./bin/cyclonedx-yarn-cli.js"
+  },
+  "main": "./src/cli.ts",
   "files": [
     "/README.md",
     "/LICENSE",
@@ -106,6 +109,9 @@
     "!**.map"
   ],
   "exports": "./dist/index.js",
+  "publishConfig": {
+    "main": "./dist/cli.js"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rimraf dist bundles",

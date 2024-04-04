@@ -19,6 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
+import { npath } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
@@ -101,9 +102,16 @@ export class MakeSbomCommand extends Command<CommandContext> {
     description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
   })
 
+  projectDir = Option.String({
+    name: 'project-dir',
+    required: false
+  })
+
   async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
-    myConsole.debug('DEBUG | context:', this.context)
+    const projectDir = this.projectDir
+      ? npath.toPortablePath(npath.resolve(npath.cwd(), this.projectDir))
+      : this.context.cwd
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,
@@ -111,18 +119,19 @@ export class MakeSbomCommand extends Command<CommandContext> {
       production: this.production,
       mcType: this.mcType,
       outputReproducible: this.outputReproducible,
-      verbosity: this.verbosity
+      verbosity: this.verbosity,
+      projectDir: projectDir
     })
 
     myConsole.info('INFO  | gathering project & workspace ...')
     const { project, workspace } = await Project.find(
       await Configuration.find(
-        this.context.cwd,
+        projectDir,
         this.context.plugins
       ),
-      this.context.cwd)
+      projectDir)
     if (workspace === null) {
-      throw new Error(`missing workspace for project ${project.cwd} in ${this.context.cwd}`)
+      throw new Error(`missing workspace for project ${project.cwd} in ${projectDir}`)
     }
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)

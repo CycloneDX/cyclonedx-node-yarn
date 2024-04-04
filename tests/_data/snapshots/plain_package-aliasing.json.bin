@@ -7,20 +7,8 @@
     "tools": [
       {
         "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing",
+        "name": "cyclonedx-yarn",
+        "version": "1.0.0-alpha",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
