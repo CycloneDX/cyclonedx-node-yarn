@@ -19,11 +19,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
-import { ppath } from '@yarnpkg/fslib'
+import { npath, ppath } from '@yarnpkg/fslib'
+import { existsSync } from 'fs'
 import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
-import { isString } from './_helpers'
+import { isString, loadJsonFile } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -192,20 +193,34 @@ export class BomBuilder {
   }
 
   private async * makeTools (): AsyncGenerator<Models.Tool> {
-    const tool = this.toolBuilder.makeTool(await import('../package.json'))
-    if (tool !== undefined) {
-      yield tool
-    }
+    const packageJsonPaths = [npath.resolve(module.path, '..', 'package.json')]
 
-    // TODO
-    /*
-    for (const nfo of Object.values(buildtimeInfo)) {
-      const tool = this.toolBuilder.makeTool(nfo)
+    const libs = [
+      '@cyclonedx/cyclonedx-library'
+    ]
+    /* eslint-disable no-labels */
+    libsLoop:
+    for (const lib of libs) {
+      let nodeModulePath = require.resolve(lib)
+      do {
+        const packageJsonPath = npath.resolve(nodeModulePath, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          packageJsonPaths.push(packageJsonPath)
+          continue libsLoop
+        }
+        nodeModulePath = npath.dirname(nodeModulePath)
+      } while (nodeModulePath !== npath.dirname(nodeModulePath))
+    }
+    /* eslint-enable no-labels */
+
+    for (const packageJsonPath of packageJsonPaths) {
+      const packageData: object = loadJsonFile(packageJsonPath) ?? {}
+      normalizePackageData(packageData /* add debug for warnings? */)
+      const tool = this.toolBuilder.makeTool(packageData)
       if (tool !== undefined) {
         yield tool
       }
     }
-    */
   }
 
   private * getDeps (pkg: Package, project: Project): Generator<Package> {
