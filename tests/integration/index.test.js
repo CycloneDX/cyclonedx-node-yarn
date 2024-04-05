@@ -34,6 +34,7 @@ const testSetups = [
   'concurrent-versions',
   'dev-dependencies',
   'git-protocol-dependency',
+  'github-protocol-dependency',
   'juice-shop',
   'local-dependencies',
   'local-workspaces',

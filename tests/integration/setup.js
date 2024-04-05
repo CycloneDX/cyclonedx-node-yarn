@@ -30,6 +30,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'concurrent-versions',
     'dev-dependencies',
     'git-protocol-dependency',
+    'github-protocol-dependency',
     'juice-shop',
     'local-dependencies',
     'local-workspaces',
