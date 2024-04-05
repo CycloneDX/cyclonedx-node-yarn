@@ -5,6 +5,7 @@
   "version": 1,
   "metadata": {
     "tools": [
+      {},
       {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",

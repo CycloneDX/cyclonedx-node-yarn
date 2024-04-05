@@ -49,13 +49,6 @@
       "url": "https://github.com/jkowalleck"
     }
   ],
-  "main": "./src/plugin.ts",
-  "exports": "./index.cjs",
-  "type": "commonjs",
-  "engines": {
-    "yarn": ">=4",
-    "node": ">=18"
-  },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.4.0",
     "@yarnpkg/cli": "^4.1.0",
@@ -83,7 +76,6 @@
     "eslint-config-standard-with-typescript": "43.0.1",
     "eslint-plugin-header": "3.1.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jsdoc": "48.2.1",
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-simple-import-sort": "12.0.0",
@@ -92,6 +84,29 @@
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
     "typescript": "5.4.3"
+  },
+  "type": "commonjs",
+  "engines": {
+    "yarn": ">=4",
+    "node": ">=18"
+  },
+  "directories": {
+    "doc": "docs",
+    "src": "src",
+    "test": "tests"
+  },
+  "main": "./src/plugin.ts",
+  "files": [
+    "/README.md",
+    "/LICENSE",
+    "/NOTICE",
+    "/index.cjs",
+    "/bundles/**",
+    "!**.map"
+  ],
+  "exports": "./index.cjs",
+  "publishConfig": {
+    "main": "./bundles/@yarnpkg/plugin-cyclonedx.js"
   },
   "scripts": {
     "build": "run-s -n build:gbti build:bundle",

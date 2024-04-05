@@ -43,10 +43,10 @@
     ],
     "component": {
       "type": "application",
-      "name": "git-protocol-dependency",
+      "name": "github-protocol-dependency",
       "version": "0.0.0",
-      "bom-ref": "git-protocol-dependency@workspace:.",
-      "description": "demo: git-protocol-dependency -- showcase how install via git protocol looks like",
+      "bom-ref": "github-protocol-dependency@workspace:.",
+      "description": "demo: github-protocol-dependency -- showcase how install via github protocol looks like",
       "licenses": [
         {
           "license": {
@@ -54,7 +54,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/git-protocol-dependency@0.0.0"
+      "purl": "pkg:npm/github-protocol-dependency@0.0.0"
     },
     "properties": [
       {
@@ -5849,7 +5849,7 @@
       ]
     },
     {
-      "ref": "git-protocol-dependency@workspace:.",
+      "ref": "github-protocol-dependency@workspace:.",
       "dependsOn": [
         "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7"
       ]

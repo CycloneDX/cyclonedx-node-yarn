@@ -20,7 +20,15 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { BaseCommand } from '@yarnpkg/cli'
 import type { Plugin } from '@yarnpkg/core'
 
-import { CyclonedxCommand } from './commands'
+import { MakeSbomCommand } from './commands'
+
+class CyclonedxCommand extends MakeSbomCommand {
+  static override readonly paths = [
+    ['cyclonedx'], // <-- this is the preferred entry point
+    ['CycloneDX', 'make-sbom'],
+    ['sbom']
+  ]
+}
 
 class CyclonedxVersionCommand extends BaseCommand {
   static override readonly paths = CyclonedxCommand.paths.map(p => [...p, '--version'])
@@ -31,6 +39,7 @@ class CyclonedxVersionCommand extends BaseCommand {
   }
 }
 
+// noinspection JSUnusedGlobalSymbols
 export default {
   commands: [CyclonedxCommand, CyclonedxVersionCommand]
 } satisfies Plugin
