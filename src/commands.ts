@@ -18,8 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
-import { BaseCommand, WorkspaceRequiredError } from '@yarnpkg/cli'
-import { Configuration, Project } from '@yarnpkg/core'
+import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
@@ -55,13 +54,7 @@ function makeChoiceSwitch <T = string> (
   })
 }
 
-export class CyclonedxCommand extends BaseCommand {
-  static override readonly paths = [
-    ['cyclonedx'], // <-- this is the preferred entry point
-    ['CycloneDX', 'make-sbom'],
-    ['sbom']
-  ]
-
+export class MakeSbomCommand extends Command<CommandContext> {
   static override readonly usage = Command.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
@@ -108,7 +101,16 @@ export class CyclonedxCommand extends BaseCommand {
     description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
   })
 
+  /*
+  projectDir = Option.String({
+    name: 'project-dir',
+    required: false
+  })
+  */
+
   async execute (): Promise<number> {
+    const projectDir = this.context.cwd
+
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
@@ -117,16 +119,19 @@ export class CyclonedxCommand extends BaseCommand {
       production: this.production,
       mcType: this.mcType,
       outputReproducible: this.outputReproducible,
-      verbosity: this.verbosity
+      verbosity: this.verbosity,
+      projectDir
     })
 
     myConsole.info('INFO  | gathering project & workspace ...')
     const { project, workspace } = await Project.find(
-      await Configuration.find(this.context.cwd, this.context.plugins),
-      this.context.cwd)
-    if (workspace == null) {
-      throw new WorkspaceRequiredError(project.cwd, this.context.cwd)
+      await Configuration.find(projectDir, this.context.plugins),
+      projectDir)
+    if (workspace === null) {
+      throw new Error(`missing workspace for project ${project.cwd} in ${projectDir}`)
     }
+    myConsole.debug('DEBUG | project:', project.cwd)
+    myConsole.debug('DEBUG | workspace:', workspace.cwd)
     await workspace.project.restoreInstallState()
 
     const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
