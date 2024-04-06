@@ -83,7 +83,7 @@
     "mocha": "10.4.0",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "type": "commonjs",
   "engines": {
