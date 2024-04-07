@@ -34,8 +34,8 @@ class CyclonedxVersionCommand extends BaseCommand {
   static override readonly paths = CyclonedxCommand.paths.map(p => [...p, '--version'])
 
   async execute (): Promise<void> {
-    const { self } = await import('./buildtimeInfo.json')
-    this.context.stdout.write(`${self.name} v${self.version}\n`)
+    const { self: { name, version } } = await import('./buildtimeInfo.json')
+    this.context.stdout.write(`${name} v${version}\n`)
   }
 }
 
