@@ -104,7 +104,7 @@ jobs:
           if-no-files-found: error
 
   test-lint:
-    name: test standard
+    name: test lint
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
