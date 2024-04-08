@@ -108,6 +108,7 @@ export class BomBuilder {
       rootComponent, rootPackage,
       workspace.project, fetchManifest
     )) {
+      this.console.info('INFO  | add component for %s/%s@%s', component.group ?? '-', component.name, component.version ?? '-')
       bom.components.add(component)
     }
 
@@ -229,10 +230,21 @@ export class BomBuilder {
       for (const depPkg of this.getDeps(pendingPkg, project)) {
         let depComponent = knownComponents.get(depPkg.locatorHash)
         if (depComponent === undefined) {
-          /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
-           * as we need to enforce a proper component to enable all features of SBOM */
-          yield depComponent = await this.makeComponentFromPackage(depPkg, fetchManifest) ||
-            new DummyComponent(Enums.ComponentType.Library, structUtils.prettyLocatorNoColors(depPkg))
+          const _depIDN = structUtils.prettyLocatorNoColors(depPkg)
+          const _depC = await this.makeComponentFromPackage(depPkg, fetchManifest)
+          if (_depC === false) {
+            // shall be skipped
+            this.console.debug('DEBUG | skip impossible component %j', _depIDN)
+            continue // for-loop
+          }
+          if (_depC === undefined) {
+            depComponent = new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${_depIDN}`)
+            this.console.warn('WARN  | InterferedDependency %j', _depIDN)
+          } else {
+            depComponent = _depC
+            this.console.debug('DEBUG | built component %j: %j', _depIDN, depComponent)
+          }
+          yield depComponent
           knownComponents.set(depPkg.locatorHash, depComponent)
           pending.push([depPkg, depComponent])
         }
