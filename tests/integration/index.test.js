@@ -123,14 +123,20 @@ suite('integration', () => {
     })
 
     suite('prod', () => {
-      testSetups.filter(c => c.startsWith('dev-')).forEach((testSetup) => {
-        test(`arg: ${testSetup}`,
-          () => runTest('prod-arg', testSetup, ['--prod'])
-        )
-        test(`env: ${testSetup}`,
-          () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-        )
-      })
+      const testSetup = 'dev-dependencies'
+      test(`arg: ${testSetup}`,
+        () => runTest('prod-arg', testSetup, ['--prod'])
+      )
+      test(`env: ${testSetup}`,
+        () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
+      )
+    })
+
+    suite('short PURLs', () => {
+      const testSetup = 'juice-shop'
+      test(`${testSetup}`,
+        () => runTest('short-PURLs', testSetup, ['--short-PURLs'])
+      ).timeout(longTestTimeout)
     })
 
     test('version', () => {

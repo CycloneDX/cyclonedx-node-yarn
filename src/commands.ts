@@ -75,7 +75,9 @@ export class MakeSbomCommand extends Command<CommandContext> {
   )
 
   outputFile = Option.String('--output-file', OutputStdOut, {
-    description: `Path to the output file.\nSet to "${OutputStdOut}" to write to STDOUT.\n(default: write to STDOUT)`
+    description: `Path to the output file.\n
+    Set to "${OutputStdOut}" to write to STDOUT.\n
+    (default: write to STDOUT)`
   })
 
   /* mimic option from yarn.
@@ -83,7 +85,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
     - see https://yarnpkg.com/cli/workspaces/focus
    */
   production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
-    description: 'Exclude development dependencies.\n(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
+    description: 'Exclude development dependencies.\n' +
+      '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
   mcType = makeChoiceSwitch<Enums.ComponentType>(
@@ -93,12 +96,19 @@ export class MakeSbomCommand extends Command<CommandContext> {
     'Type of the main component.'
   )
 
+  shortPURLs = Option.Boolean('--short-PURLs', false, {
+    description: 'Omit all qualifiers from PackageURLs.\n' +
+      'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
+  })
+
   outputReproducible = Option.Boolean('--output-reproducible', false, {
-    description: 'Whether to go the extra mile and make the output reproducible.\nThis might result in loss of time- and random-based values.'
+    description: 'Whether to go the extra mile and make the output reproducible.\n' +
+      'This might result in loss of time- and random-based values.'
   })
 
   verbosity = Option.Counter('--verbose,-v', 1, {
-    description: 'Increase the verbosity of messages.\nUse multiple times to increase the verbosity even more.'
+    description: 'Increase the verbosity of messages.\n' +
+      'Use multiple times to increase the verbosity even more.'
   })
 
   /*
@@ -118,6 +128,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       outputFile: this.outputFile,
       production: this.production,
       mcType: this.mcType,
+      shortPURLs: this.shortPURLs,
       outputReproducible: this.outputReproducible,
       verbosity: this.verbosity,
       projectDir
@@ -147,8 +158,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
       {
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
-        reproducible: this.outputReproducible
-        // @TODO shortPURLs: this.shortPURLs
+        reproducible: this.outputReproducible,
+        shortPURLs: this.shortPURLs
       },
       myConsole
     ).buildFromWorkspace(workspace)
