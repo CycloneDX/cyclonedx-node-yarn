@@ -185,7 +185,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       space: 2
     })
 
-    // @TODO validate BOM
+    // @TODO validate BOM - see https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23
 
     myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(
