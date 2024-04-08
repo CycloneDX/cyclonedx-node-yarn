@@ -193,7 +193,7 @@ export class BomBuilder {
   }
 
   private async * makeTools (): AsyncGenerator<Models.Tool> {
-    const buildtimeInfo: Record<string, Record<string, any>> = await import('./buildtimeInfo.json')
+    const { default: buildtimeInfo } = await import('./buildtimeInfo.json')
     for (const nfo of Object.values(buildtimeInfo)) {
       const tool = this.toolBuilder.makeTool(nfo)
       if (tool !== undefined) {
