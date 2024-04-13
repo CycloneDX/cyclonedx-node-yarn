@@ -68,7 +68,7 @@
     "@typescript-eslint/parser": "6.21.0",
     "@yarnpkg/builder": "4.0.0",
     "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
+    "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
     "c8": "^9.1.0",
     "eslint": "8.57.0",
