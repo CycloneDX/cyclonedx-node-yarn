@@ -41,7 +41,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
-function makeChoiceSwitch <T = string> (
+function makeChoiceSwitch<T = string> (
   descriptor: string,
   choices: readonly string[],
   initialValue: string,
@@ -75,18 +75,19 @@ export class MakeSbomCommand extends Command<CommandContext> {
   )
 
   outputFile = Option.String('--output-file', OutputStdOut, {
-    description: `Path to the output file.\n
-    Set to "${OutputStdOut}" to write to STDOUT.\n
-    (default: write to STDOUT)`
+    description: 'Path to the output file.\n' +
+        `Set to "${OutputStdOut}" to write to STDOUT.\n` +
+        '(default: write to STDOUT)'
   })
 
-  /* mimic option from yarn.
+  /*
+    mimic option from yarn.
     - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
     - see https://yarnpkg.com/cli/workspaces/focus
-   */
+  */
   production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
     description: 'Exclude development dependencies.\n' +
-      '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
+        '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
   mcType = makeChoiceSwitch<Enums.ComponentType>(
@@ -98,25 +99,25 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
   shortPURLs = Option.Boolean('--short-PURLs', false, {
     description: 'Omit all qualifiers from PackageURLs.\n' +
-      'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
+        'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
   })
 
   outputReproducible = Option.Boolean('--output-reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\n' +
-      'This might result in loss of time- and random-based values.'
+        'This might result in loss of time- and random-based values.'
   })
 
   verbosity = Option.Counter('--verbose,-v', 1, {
     description: 'Increase the verbosity of messages.\n' +
-      'Use multiple times to increase the verbosity even more.'
+        'Use multiple times to increase the verbosity even more.'
   })
 
-  /*
-  projectDir = Option.String({
-    name: 'project-dir',
-    required: false
-  })
-  */
+  /* possible option:
+    projectDir = Option.String({
+      name: 'project-dir',
+      required: false
+    })
+   */
 
   async execute (): Promise<number> {
     const projectDir = this.context.cwd
