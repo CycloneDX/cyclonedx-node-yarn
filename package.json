@@ -50,7 +50,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^6.4.0",
+    "@cyclonedx/cyclonedx-library": "^6.5.0",
     "@yarnpkg/cli": "^4.1.0",
     "@yarnpkg/core": "^4.0.3",
     "@yarnpkg/fslib": "^3.0.2",

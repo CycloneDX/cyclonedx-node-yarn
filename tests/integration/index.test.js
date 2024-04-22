@@ -46,7 +46,8 @@ const testSetups = [
   /* endregion regression tests */
 ]
 
-const latestCdxSpecVersion = '1.5'
+// latest spec version has all the features ...
+const latestCdxSpecVersion = Spec.Version.v1dot6
 
 const testRootPath = path.resolve(__dirname, '..')
 const projectRootPath = path.resolve(testRootPath, '..')
@@ -77,7 +78,7 @@ suite('integration', () => {
         '-vvv',
         '--output-reproducible',
         // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', latestCdxSpecVersion,
+        '--spec-version', `${latestCdxSpecVersion}`,
         '--output-format', 'JSON',
         ...additionalArgs
       ], {
@@ -100,7 +101,7 @@ suite('integration', () => {
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
-    const validationErrors = await validate('json', actualOutput)
+    const validationErrors = await validate('json', actualOutput, latestCdxSpecVersion)
     assert.strictEqual(validationErrors, null)
 
     actualOutput = makeReproducible('json', actualOutput)
@@ -162,10 +163,10 @@ suite('integration', () => {
 /**
  * @param {string} format
  * @param {string} value
+ * @param {Spec.Version} [specVersion]
  * @return {Promise<any>}
  */
-async function validate (format, value) {
-  const specVersion = Spec.Version.v1dot5
+async function validate (format, value, specVersion) {
   switch (format.toLowerCase()) {
     case 'xml':
       return await new Validation.XmlValidator(specVersion).validate(value)
