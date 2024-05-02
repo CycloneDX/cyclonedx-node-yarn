@@ -62,7 +62,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
   specVersion = makeChoiceSwitch<Spec.Version>(
     '--spec-version',
-    Object.keys(Spec.SpecVersionDict),
+    Object.keys(Spec.SpecVersionDict).sort(),
     Spec.Version.v1dot5,
     'Which version of CycloneDX to use.'
   )
