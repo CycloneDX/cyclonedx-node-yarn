@@ -14,7 +14,7 @@ on:
     - cron: '42 23 * * 5'
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
 env:
@@ -54,7 +54,7 @@ jobs:
         run: yarn run build:bundle-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -96,7 +96,7 @@ jobs:
           reports: ${{ env.REPORTS_DIR }}/eslint.xml
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -167,7 +167,7 @@ jobs:
         run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -182,9 +182,9 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
 
   dogfooding:
@@ -220,7 +220,7 @@ jobs:
         run: yarn install --no-immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -232,9 +232,9 @@ jobs:
       - name: artifact test reports
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: dogfooding-direct_npm${{ matrix.npm-version }}
+          name: dogfooding-direct_npm${{ matrix.node-version }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 
@@ -246,14 +246,16 @@ jobs:
     steps:
       - name: fetch test artifacts
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
+          pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
+          merge-multiple: true
           path: ${{ env.REPORTS_DIR }}
       - name: Run codacy-coverage-reporter
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        if: ${{ env.CODACY_PROJECT_TOKEN != '' }} ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
         # see https://github.com/codacy/codacy-coverage-reporter-action
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
