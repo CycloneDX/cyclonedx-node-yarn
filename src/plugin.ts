@@ -41,5 +41,8 @@ class CyclonedxVersionCommand extends BaseCommand {
 
 // noinspection JSUnusedGlobalSymbols
 export default {
-  commands: [CyclonedxCommand, CyclonedxVersionCommand]
+  commands: [
+    CyclonedxCommand,
+    CyclonedxVersionCommand
+  ]
 } satisfies Plugin
