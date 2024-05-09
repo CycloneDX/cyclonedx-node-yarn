@@ -70,10 +70,15 @@ export class BomBuilder {
     // @TODO make switch to disable load from fs
     const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(workspace.project)
 
+    const setLicensesDeclared = function (license: Models.License): void {
+      license.acknowledgement = Enums.LicenseAcknowledgement.Declared
+    }
+
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
      * as we need to enforce a proper root component to enable all features of SBOM */
     const rootComponent: Models.Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
       new DummyComponent(this.metaComponentType, 'RootComponent')
+    rootComponent.licenses.forEach(setLicensesDeclared)
 
     const bom = new Models.Bom()
 
@@ -108,7 +113,13 @@ export class BomBuilder {
       rootComponent, rootPackage,
       workspace.project, fetchManifest
     )) {
-      this.console.info('INFO  | add component for %s/%s@%s', component.group ?? '-', component.name, component.version ?? '-')
+      component.licenses.forEach(setLicensesDeclared)
+
+      this.console.info('INFO  | add component for %s/%s@%s',
+        component.group ?? '-',
+        component.name,
+        component.version ?? '-'
+      )
       bom.components.add(component)
     }
 
