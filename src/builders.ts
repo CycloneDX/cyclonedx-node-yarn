@@ -19,9 +19,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import type { Builders, Factories } from '@cyclonedx/cyclonedx-library'
 // import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import * as Enums from '@cyclonedx/cyclonedx-library/enums'
-import * as Models from '@cyclonedx/cyclonedx-library/models'
-import * as Utils from '@cyclonedx/cyclonedx-library/utils'
+import { ComponentType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import * as Models from '@cyclonedx/cyclonedx-library/Models'
+import { Component, Property } from '@cyclonedx/cyclonedx-library/Models'
+import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import normalizePackageData from 'normalize-package-data'
@@ -45,7 +46,7 @@ export class BomBuilder {
   purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
 
   omitDevDependencies: boolean
-  metaComponentType: Enums.ComponentType
+  metaComponentType: ComponentType
   reproducible: boolean
   shortPURLs: boolean
 
@@ -63,7 +64,7 @@ export class BomBuilder {
     this.purlFactory = purlFactory
 
     this.omitDevDependencies = options.omitDevDependencies ?? false
-    this.metaComponentType = options.metaComponentType ?? Enums.ComponentType.Application
+    this.metaComponentType = options.metaComponentType ?? ComponentType.Application
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
 
@@ -75,7 +76,7 @@ export class BomBuilder {
     const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(workspace.project)
 
     const setLicensesDeclared = function (license: Models.License): void {
-      license.acknowledgement = Enums.LicenseAcknowledgement.Declared
+      license.acknowledgement = LicenseAcknowledgement.Declared
     }
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
@@ -96,10 +97,10 @@ export class BomBuilder {
 
     if (this.reproducible) {
       bom.metadata.properties.add(
-        new Models.Property(PropertyNames.Reproducible, PropertyValueBool.True)
+        new Property(PropertyNames.Reproducible, PropertyValueBool.True)
       )
     } else {
-      bom.serialNumber = Utils.BomUtility.randomSerialNumber()
+      bom.serialNumber = BomUtility.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
 
@@ -132,7 +133,7 @@ export class BomBuilder {
     return bom
   }
 
-  private makeComponentFromWorkspace (workspace: Workspace, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
+  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Models.Component | false | undefined {
     return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
@@ -156,7 +157,7 @@ export class BomBuilder {
   private async makeComponentFromPackage (
     pkg: Package,
     fetchManifest: ManifestFetcher,
-    type?: Enums.ComponentType | undefined
+    type?: ComponentType | undefined
   ): Promise<Models.Component | false | undefined> {
     const data = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
@@ -166,7 +167,7 @@ export class BomBuilder {
     return this.makeComponent(pkg, data, type)
   }
 
-  private makeComponent (locator: Locator, data: any, type?: Enums.ComponentType | undefined): Models.Component | false | undefined {
+  private makeComponent (locator: Locator, data: any, type?: ComponentType | undefined): Models.Component | false | undefined {
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const dataC = structuredClonePolyfill(data)
     normalizePackageData(dataC as normalizePackageData.Input)
@@ -253,7 +254,7 @@ export class BomBuilder {
             continue // for-loop
           }
           if (_depC === undefined) {
-            depComponent = new DummyComponent(Enums.ComponentType.Library, `InterferedDependency.${_depIDN}`)
+            depComponent = new DummyComponent(ComponentType.Library, `InterferedDependency.${_depIDN}`)
             this.console.warn('WARN  | InterferedDependency %j', _depIDN)
           } else {
             depComponent = _depC
@@ -269,7 +270,7 @@ export class BomBuilder {
   }
 }
 
-class DummyComponent extends Models.Component {
+class DummyComponent extends Component {
   constructor (type: Models.Component['type'], name: Models.Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
