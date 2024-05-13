@@ -17,7 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import * as Builders  from '@cyclonedx/cyclonedx-library/builders'
+// import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
+import * as Builders from '@cyclonedx/cyclonedx-library/builders'
 import * as Enums from '@cyclonedx/cyclonedx-library/enums'
 import * as Factories from '@cyclonedx/cyclonedx-library/factories'
 import * as Serialize from '@cyclonedx/cyclonedx-library/serialize'

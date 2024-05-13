@@ -17,7 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import type { Builders, Factories} from '@cyclonedx/cyclonedx-library'
+import type { Builders, Factories } from '@cyclonedx/cyclonedx-library'
+// import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import * as Enums from '@cyclonedx/cyclonedx-library/enums'
 import * as Models from '@cyclonedx/cyclonedx-library/models'
 import * as Utils from '@cyclonedx/cyclonedx-library/utils'
