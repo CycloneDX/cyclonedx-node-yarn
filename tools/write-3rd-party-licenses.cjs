@@ -17,6 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/*! this tool is not for public use. */
+
 const { spawnSync } = require('child_process')
 const { basename } = require('path')
 const { readFileSync, existsSync, mkdtempSync } = require('fs')
@@ -31,11 +33,11 @@ const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
-const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.LICENSE.txt')
+const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.NOTICE.txt')
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
-// ---
+// -----
 
 const unzipped = {}
 
@@ -58,7 +60,7 @@ const getPackageMP = function (filePath) {
     filePath = join(searchRoot, zipMatch[2])
   }
   let cPath = dirname(filePath)
-  while (cPath !== searchRoot) {
+  while (cPath.startsWith(searchRoot)) {
     const pmPC = join(cPath, 'package.json')
     if (existsSync(pmPC)) {
       const pmD = JSON.parse(readFileSync(pmPC))
@@ -72,7 +74,7 @@ const getPackageMP = function (filePath) {
   return [undefined, undefined]
 }
 
-// --
+// ----
 
 const packageMPs = new Map()
 
@@ -85,6 +87,8 @@ for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[meta
 
 console.debug(packageMPs.keys())
 
+const licenses = new Set()
+
 for (const [packageMP, packageMD] of packageMPs.entries()) {
   console.debug(packageMP)
   console.log('name:', packageMD.name)
@@ -96,10 +100,15 @@ for (const [packageMP, packageMD] of packageMPs.entries()) {
     console.log('license file:', basename(lf), '\n', readFileSync(lf, 'utf8'))
   }
   try {
-    console.log('notice file:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
+    console.log('NOTICE file:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
   } catch {
     /* pass */
   }
-
   console.log('----------')
+
+  licenses.add(packageMD.license)
 }
+
+console.info(licenses)
+
+// @TODO write to outFile
