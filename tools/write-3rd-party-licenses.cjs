@@ -17,10 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { readFileSync, existsSync } = require('fs')
-const { sep: dirSep, join, resolve, dirname } = require('path')
+const { spawnSync } = require('child_process')
+const { readFileSync, existsSync, mkdtempSync } = require('fs')
+const { join, resolve, dirname } = require('path')
 
 const projectRoot = join(__dirname, '..')
+const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
@@ -29,35 +31,61 @@ const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.LI
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
-const packageMPs = new Set()
+// ---
 
-for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
-  if (bytesInOutput <= 0) {continue}
-  const packageMP = findPackageMP(resolve(projectRoot, filePath))
-  if (!packageMP || packageMPs.has(packageMP)) {continue}
-  packageMPs.add(packageMP)
-  console.log(packageMP)
-}
+const unzipped = {}
 
 /**
  * @param {string} filePath
- * @return {string|undefined|false}
+ * @return {[undefined, undefined]|[string,*]}
  */
-function findPackageMP (filePath) {
-  let searchRoot = dirSep
-  if (filePath.includes('.zip')) {
-    // unpack
-    // searchRoot = unpack-path
-    // filePath = file in unpacked
-    return false // TODO
+const getPackageMP = function (filePath) {
+  let searchRoot = projectRoot
+  const zipMatch = /^(.+\.zip)[\\/](.+)$/.exec(filePath)
+  if (zipMatch) {
+    searchRoot = unzipped[zipMatch[1]]
+    if (!searchRoot) {
+      searchRoot = unzipped[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
+      const unz = spawnSync('unzip', [zipMatch[1], '-d', searchRoot])
+      if (unz.status !== 0) {
+        throw new Error(`something off with ${filePath}`)
+      }
+    }
+    filePath = join(searchRoot, zipMatch[2])
   }
   let cPath = dirname(filePath)
   while (cPath !== searchRoot) {
     const pmPC = join(cPath, 'package.json')
     if (existsSync(pmPC)) {
-      return pmPC
+      const pmD = JSON.parse(readFileSync(pmPC))
+      if (pmD.name) {
+        return [cPath, pmD]
+      }
     }
     cPath = dirname(cPath)
   }
-  return undefined
+  return [undefined, undefined]
+}
+
+// --
+
+const packageMPs = new Map()
+
+for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
+  if (bytesInOutput <= 0) { continue }
+  const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath))
+  if (!packageMP || packageMPs.has(packageMP)) { continue }
+  packageMPs.set(packageMP, PackageMD)
+}
+
+for (const [packageMP, packageMD] of packageMPs.entries()) {
+  console.debug(packageMP)
+  console.log('name:', packageMD.name)
+  console.log('declared license:', packageMD.license)
+  try {
+    console.log('license text:', readFileSync(join(packageMP, 'LICENSE'), 'utf8'))
+  } catch {
+    /* pass */
+  }
+  console.log('----------')
 }
