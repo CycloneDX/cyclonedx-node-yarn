@@ -17,7 +17,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/*! this tool is not for public use. */
+/*!
+this tool is not for public use.
+It's sole existence is tailored to the needs of this project... not general purpose, yet...
+*/
 
 const { spawnSync } = require('child_process')
 const { basename } = require('path')
@@ -85,7 +88,7 @@ for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[meta
     console.warn('ERROR: missing MP for:', filePath)
     continue
   }
-  if (packageMPs.has(packageMP)) { continue}
+  if (packageMPs.has(packageMP)) { continue }
   packageMPs.set(packageMP, PackageMD)
 }
 
