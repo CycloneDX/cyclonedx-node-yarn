@@ -17,7 +17,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Builders, Enums, type Factories, Models, Utils } from '@cyclonedx/cyclonedx-library'
+import type { Builders, Factories} from '@cyclonedx/cyclonedx-library'
+import * as Enums from '@cyclonedx/cyclonedx-library/enums'
+import * as Models from '@cyclonedx/cyclonedx-library/models'
+import * as Utils from '@cyclonedx/cyclonedx-library/utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import normalizePackageData from 'normalize-package-data'

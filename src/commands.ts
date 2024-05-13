@@ -17,7 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+import * as Builders  from '@cyclonedx/cyclonedx-library/builders'
+import * as Enums from '@cyclonedx/cyclonedx-library/enums'
+import * as Factories from '@cyclonedx/cyclonedx-library/factories'
+import * as Serialize from '@cyclonedx/cyclonedx-library/serialize'
+import * as Spec from '@cyclonedx/cyclonedx-library/spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'

@@ -8,9 +8,9 @@
 
     /* Modules */
     "rootDir": "src",
-    "module": "commonjs", // in sync with `@yarnpkg/builder`'s esbuild config
-    "moduleResolution": "node", // in sync with `@yarnpkg/builder`'s esbuild config
-    "resolveJsonModule": true, // in sync with `@yarnpkg/builder`'s esbuild config
+    "module": "CommonJS",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
 
     /* JavaScript Support */
     "allowJs": false,
