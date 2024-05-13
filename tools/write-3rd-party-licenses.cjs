@@ -81,7 +81,11 @@ const packageMPs = new Map()
 for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
   if (bytesInOutput <= 0) { continue }
   const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath))
-  if (!packageMP || packageMPs.has(packageMP)) { continue }
+  if (!packageMP) {
+    console.warn('ERROR: missing MP for:', filePath)
+    continue
+  }
+  if (packageMPs.has(packageMP)) { continue}
   packageMPs.set(packageMP, PackageMD)
 }
 
