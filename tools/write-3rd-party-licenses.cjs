@@ -92,11 +92,11 @@ for (const [packageMP, packageMD] of packageMPs.entries()) {
   console.log('homepage:', packageMD.homepage)
   console.log('declared license:', packageMD.license)
 
-  for (const lf of globSync(join(packageMP, 'LICENSE*'))) {
-    console.log('license text:', basename(lf), '\n', readFileSync(lf, 'utf8'))
+  for (const lf of globSync(join(packageMP, 'LICEN{S,C}E*'), { onlyFiles: true, caseSensitiveMatch: false })) {
+    console.log('license file:', basename(lf), '\n', readFileSync(lf, 'utf8'))
   }
   try {
-    console.log('notice text:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
+    console.log('notice file:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
   } catch {
     /* pass */
   }
