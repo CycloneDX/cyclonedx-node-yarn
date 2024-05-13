@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { join } = require('path')
-const { readFileSync } = require('fs')
+const { readFileSync, existsSync } = require('fs')
+const { sep: dirSep, join, resolve, dirname } = require('path')
 
 const projectRoot = join(__dirname, '..')
 
@@ -29,9 +29,35 @@ const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.LI
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
-for (const [file, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
-  if (bytesInOutput <= 0) {
-    continue
+const packageMPs = new Set()
+
+for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
+  if (bytesInOutput <= 0) {continue}
+  const packageMP = findPackageMP(resolve(projectRoot, filePath))
+  if (!packageMP || packageMPs.has(packageMP)) {continue}
+  packageMPs.add(packageMP)
+  console.log(packageMP)
+}
+
+/**
+ * @param {string} filePath
+ * @return {string|undefined|false}
+ */
+function findPackageMP (filePath) {
+  let searchRoot = dirSep
+  if (filePath.includes('.zip')) {
+    // unpack
+    // searchRoot = unpack-path
+    // filePath = file in unpacked
+    return false // TODO
   }
-  console.log(file)
+  let cPath = dirname(filePath)
+  while (cPath !== searchRoot) {
+    const pmPC = join(cPath, 'package.json')
+    if (existsSync(pmPC)) {
+      return pmPC
+    }
+    cPath = dirname(cPath)
+  }
+  return undefined
 }
