@@ -18,7 +18,11 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
+const { basename } = require('path')
 const { readFileSync, existsSync, mkdtempSync } = require('fs')
+const normalizePackageData = require('normalize-package-data')
+const { globSync } = require('fast-glob')
+
 const { join, resolve, dirname } = require('path')
 
 const projectRoot = join(__dirname, '..')
@@ -59,6 +63,7 @@ const getPackageMP = function (filePath) {
     if (existsSync(pmPC)) {
       const pmD = JSON.parse(readFileSync(pmPC))
       if (pmD.name) {
+        normalizePackageData(pmD)
         return [cPath, pmD]
       }
     }
@@ -78,14 +83,23 @@ for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[meta
   packageMPs.set(packageMP, PackageMD)
 }
 
+console.debug(packageMPs.keys())
+
 for (const [packageMP, packageMD] of packageMPs.entries()) {
   console.debug(packageMP)
   console.log('name:', packageMD.name)
+  console.log('version:', packageMD.version)
+  console.log('homepage:', packageMD.homepage)
   console.log('declared license:', packageMD.license)
+
+  for (const lf of globSync(join(packageMP, 'LICENSE*'))) {
+    console.log('license text:', basename(lf), '\n', readFileSync(lf, 'utf8'))
+  }
   try {
-    console.log('license text:', readFileSync(join(packageMP, 'LICENSE'), 'utf8'))
+    console.log('notice text:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
   } catch {
     /* pass */
   }
+
   console.log('----------')
 }
