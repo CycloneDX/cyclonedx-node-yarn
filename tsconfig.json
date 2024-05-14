@@ -5,20 +5,21 @@
 
     /* Modules */
     "rootDir": "src",
-    "module": "Node16",
-    "moduleResolution": "node16",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
 
     /* JavaScript Support */
     "allowJs": false,
 
     /* Emit */
+    "noEmit": true,
     "declaration": false,
     "sourceMap": false,
     "removeComments": true,
 
     /* Interop Constraints */
-    "esModuleInterop": true, // in sync with `@yarnpkg/builder`'s esbuild config
+    "esModuleInterop": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
 
@@ -43,10 +44,7 @@
     "skipLibCheck": false,
 
     /* yarn foo */
-    "experimentalDecorators": true,
-
-    /* output */
-    "outDir": "./dist/"
+    "experimentalDecorators": true
   },
 
   "exclude": [
