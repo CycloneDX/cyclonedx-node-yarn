@@ -46,7 +46,7 @@
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@workspace:.",
       "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456"
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?"
     },
     "properties": [
       {

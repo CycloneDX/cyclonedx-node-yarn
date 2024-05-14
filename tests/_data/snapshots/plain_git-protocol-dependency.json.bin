@@ -54,7 +54,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/git-protocol-dependency@0.0.0"
+      "purl": "pkg:npm/git-protocol-dependency@0.0.0?"
     },
     "properties": [
       {
@@ -3178,7 +3178,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-pipeline@1.2.4"
+      "purl": "pkg:npm/minipass-pipeline@1.2.4?"
     },
     {
       "type": "library",
