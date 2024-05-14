@@ -22,6 +22,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
+    "resolvePackageJsonExports": true,
 
     /* Type Checking */
     "strict": true,
