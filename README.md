@@ -35,15 +35,18 @@ Please read the [CONTRIBUTING][contributing_file] file first.
 ## Installation
 
 Currently, there are no releases nor pre-builds. This means, the only way to test this tool is by building it from source:
-1. clone this repository
-1. install the project dependencies: run `yarn install --immutable`
-1. create the bundle: run  `yarn build`
+1. Clone this repository and change dir into the clone
+1. Install the project dependencies - run: `yarn install`
+1. Create the bundle - run: `yarn build`
 
-Then, import the bundle into your project using `yarn import ...`,
-or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
-
+Then, 
+import the plugin bundle into your project — like so:
 ```shell
-YARN_PLUGINS=.../bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
+yarn plugin import {pathToYourClone}/bundles/@yarnpkg/plugin-cyclonedx.js`,
+```
+or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
+```shell
+YARN_PLUGINS={pathToYourClone}/bundles/@yarnpkg/plugin-cyclonedx.js yarn sbom --help
 ```
 
 ## Usage

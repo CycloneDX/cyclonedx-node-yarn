@@ -149,7 +149,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
     const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
 
     myConsole.log('LOG   | gathering BOM data ...')
-    const bom = await new BomBuilder(
+    const bom = await (new BomBuilder(
       new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
       new Builders.FromNodePackageJson.ComponentBuilder(
         extRefFactory,
@@ -163,7 +163,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
         shortPURLs: this.shortPURLs
       },
       myConsole
-    ).buildFromWorkspace(workspace)
+    )).buildFromWorkspace(workspace)
 
     const spec = Spec.SpecVersionDict[this.specVersion]
     if (undefined === spec) {

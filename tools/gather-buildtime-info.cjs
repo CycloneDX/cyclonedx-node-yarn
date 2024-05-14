@@ -17,10 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const path = require('path')
-const { execFileSync } = require('child_process')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+const { execFileSync } = require('child_process')
 const fs = require('fs')
+const path = require('path')
+const { platform } = require('process')
 
 const projectRootPath = path.resolve(__dirname, '..')
 const targetFile = path.join(projectRootPath, 'src', 'buildtimeInfo.json')
@@ -34,7 +35,9 @@ function fromYarnInfo (pkgName) {
     cwd: projectRootPath,
     stdio: ['ignore', 'pipe', 'ignore'],
     encoding: 'buffer',
-    maxBuffer: BUFFER_MAX_LENGTH
+    maxBuffer: BUFFER_MAX_LENGTH,
+    // windows requires a shell ...
+    shell: platform === 'win32'
   }))
 
   return {
