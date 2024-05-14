@@ -43,7 +43,7 @@ interface BomBuilderOptions {
 export class BomBuilder {
   toolBuilder: Builders.FromNodePackageJson.ToolBuilder
   componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
-  purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  purlFactory: Factories.PackageUrlFactory
 
   omitDevDependencies: boolean
   metaComponentType: ComponentType

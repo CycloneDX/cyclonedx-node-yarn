@@ -3,13 +3,10 @@
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.resolveJsonModule to read more about this file */
 
-    /* Language and Environment */
-    "target": "es2019", // in sync with `@yarnpkg/builder`'s esbuild config
-
     /* Modules */
     "rootDir": "src",
-    "module": "CommonJS",
-    "moduleResolution": "bundler",
+    "module": "Node16",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
 
     /* JavaScript Support */
