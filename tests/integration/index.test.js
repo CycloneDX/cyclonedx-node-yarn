@@ -59,6 +59,7 @@ suite('integration', () => {
 
   const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
 
+  // testing complex setups - this may take some time
   const longTestTimeout = 120000
 
   /**
@@ -137,7 +138,7 @@ suite('integration', () => {
       testSetups.forEach((testSetup) => {
         test(`${testSetup}`,
           () => runTest('plain', testSetup)
-        ).timeout(longTestTimeout)
+        )
       })
     })
 
@@ -155,7 +156,7 @@ suite('integration', () => {
       const testSetup = 'juice-shop'
       test(`${testSetup}`,
         () => runTest('short-PURLs', testSetup, ['--short-PURLs'])
-      ).timeout(longTestTimeout)
+      )
     })
 
     test('version', () => {
@@ -181,8 +182,8 @@ suite('integration', () => {
 
       const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
       assert.strictEqual(validationErrors, null)
-    }).timeout(longTestTimeout)
-  })
+    })
+  }).timeout(longTestTimeout)
 })
 
 /**
