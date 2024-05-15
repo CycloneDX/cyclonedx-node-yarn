@@ -23,7 +23,6 @@ It's sole existence is tailored to the needs of this project... not general purp
 */
 
 const { spawnSync } = require('child_process')
-const { basename } = require('path')
 const {
   readFileSync,
   existsSync,
@@ -127,8 +126,11 @@ const tpLicenses = Array.from(
 )
 
 const outputFH = openSync(outputFile, 'w')
-writeSync(outputFH, '<our own LICENSE file>\n')
-writeSync(outputFH, '<our own NOTICE file>\n')
+
+writeSync(outputFH, readFileSync(join(projectRoot, 'LICENSE')))
+writeSync(outputFH, '\n')
+writeSync(outputFH, readFileSync(join(projectRoot, 'NOTICE')))
+writeSync(outputFH, '\n')
 writeSync(outputFH, '\n\n----\n\n' +
   'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries that are compatibly licensed.\n' +
   'We list these here.\n')
@@ -141,6 +143,6 @@ for (const tpLicense of tpLicenses) {
   writeSync(outputFH, `License: ${tpLicense.licenseDeclared}\n`)
   writeSync(outputFH, `  For details see: https://www.npmjs.com/package/${tpLicense.name}/v/${tpLicense.version}?activeTab=code\n`)
   for (const licenseFile of tpLicense.licenseFiles) {
-    writeSync(outputFH, `    - ${licenseFile}\n`)
+    writeSync(outputFH, `  - File: ${licenseFile}\n`)
   }
 }
