@@ -24,11 +24,20 @@ It's sole existence is tailored to the needs of this project... not general purp
 
 const { spawnSync } = require('child_process')
 const { basename } = require('path')
-const { readFileSync, existsSync, mkdtempSync } = require('fs')
-const normalizePackageData = require('normalize-package-data')
+const {
+  readFileSync,
+  existsSync,
+  mkdtempSync,
+  openSync,
+  writeSync
+} = require('fs')
 const { globSync } = require('fast-glob')
 
-const { join, resolve, dirname } = require('path')
+const {
+  join,
+  resolve,
+  dirname
+} = require('path')
 
 const projectRoot = join(__dirname, '..')
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
@@ -36,7 +45,7 @@ const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
-const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.NOTICE.txt')
+const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.LICENSE.txt')
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
@@ -68,7 +77,6 @@ const getPackageMP = function (filePath) {
     if (existsSync(pmPC)) {
       const pmD = JSON.parse(readFileSync(pmPC))
       if (pmD.name) {
-        normalizePackageData(pmD)
         return [cPath, pmD]
       }
     }
@@ -82,40 +90,57 @@ const getPackageMP = function (filePath) {
 const packageMPs = new Map()
 
 for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
-  if (bytesInOutput <= 0) { continue }
+  if (bytesInOutput <= 0) {
+    continue
+  }
   const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath))
   if (!packageMP) {
     console.warn('ERROR: missing MP for:', filePath)
     continue
   }
-  if (packageMPs.has(packageMP)) { continue }
+  if (packageMPs.has(packageMP)) {
+    continue
+  }
   packageMPs.set(packageMP, PackageMD)
 }
 
-console.debug(packageMPs.keys())
-
-const licenses = new Set()
-
-for (const [packageMP, packageMD] of packageMPs.entries()) {
-  console.debug(packageMP)
-  console.log('name:', packageMD.name)
-  console.log('version:', packageMD.version)
-  console.log('homepage:', packageMD.homepage)
-  console.log('declared license:', packageMD.license)
-
-  for (const lf of globSync(join(packageMP, 'LICEN{S,C}E*'), { onlyFiles: true, caseSensitiveMatch: false })) {
-    console.log('license file:', basename(lf), '\n', readFileSync(lf, 'utf8'))
+const tpLicenses = Array.from(
+  packageMPs.entries(),
+  function ([packageMP, packageMD]) {
+    return packageMP === projectRoot
+      ? undefined
+      : {
+          name: packageMD.name,
+          version: packageMD.version,
+          homepage: packageMD.homepage || undefined,
+          licenseDeclared: packageMD.license,
+          licenseFiles: [
+            ...globSync('LICEN{S,C}E*', { onlyFiles: true, caseSensitiveMatch: false, cwd: packageMP }).sort((a, b) => a.localeCompare(b)),
+            ...globSync('NOTICE', { onlyFiles: true, caseSensitiveMatch: true, cwd: packageMP })
+          ]
+        }
   }
-  try {
-    console.log('NOTICE file:\n', readFileSync(join(packageMP, 'NOTICE'), 'utf8'))
-  } catch {
-    /* pass */
-  }
-  console.log('----------')
+).filter(
+  i => i !== undefined
+).sort(
+  (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
+)
 
-  licenses.add(packageMD.license)
+const outputFH = openSync(outputFile, 'w')
+writeSync(outputFH, '<our own LICENSE file>\n')
+writeSync(outputFH, '<our own NOTICE file>\n')
+writeSync(outputFH, '\n\n----\n\n' +
+  'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries that are compatibly licensed.\n' +
+  'We list these here.\n')
+for (const tpLicense of tpLicenses) {
+  writeSync(outputFH, '\n')
+  writeSync(outputFH, `Name: ${tpLicense.name} (${tpLicense.version})\n`)
+  if (tpLicense.homepage) {
+    writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
+  }
+  writeSync(outputFH, `License: ${tpLicense.licenseDeclared}\n`)
+  writeSync(outputFH, `  For details see: https://www.npmjs.com/package/${tpLicense.name}/v/${tpLicense.version}?activeTab=code\n`)
+  for (const licenseFile of tpLicense.licenseFiles) {
+    writeSync(outputFH, `    - ${licenseFile}\n`)
+  }
 }
-
-console.info(licenses)
-
-// @TODO write to outFile
