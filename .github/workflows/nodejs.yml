@@ -20,7 +20,8 @@ concurrency:
 env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
   YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
-  DIST_DIR: bundles
+  BUNDLES_DIR: bundles
+  DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
@@ -48,16 +49,27 @@ jobs:
           yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: yarn install --no-immutable
-      - name: build
+      - name: build:gbti
         run: yarn run build:gbti
-      - name: build
+      - name: build:bundle-dev
         run: yarn run build:bundle-dev
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+          retention-days: 5
+          if-no-files-found: error
+      - name: build:dist
+        run: yarn run build:dist
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
+          retention-days: 5
           if-no-files-found: error
 
   test-standard:
@@ -169,8 +181,8 @@ jobs:
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
       - name: run tests
         run: yarn run test:node
       - name: collect coverage

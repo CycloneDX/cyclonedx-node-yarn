@@ -28,7 +28,7 @@ Call it programmatically like so:
       '--output-file', '-'
       // additional CLI args
     ], {
-      env: { 'YARN_PLUGINS': '../path/to/this/package/bundles/@yarnpkg/plugin-cyclonedx.js' },
+      env: { 'YARN_PLUGINS': '{.../path/to/this/package}/dist/yarn-plugin-cyclonedx.js' },
       stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH
     }))
 `)

@@ -23,14 +23,9 @@ It's sole existence is tailored to the needs of this project... not general purp
 */
 
 const { spawnSync } = require('child_process')
-const {
-  readFileSync,
-  existsSync,
-  mkdtempSync,
-  openSync,
-  writeSync
-} = require('fs')
+const { readFileSync, existsSync, mkdtempSync, openSync, writeSync } = require('fs')
 const { globSync } = require('fast-glob')
+const { mkdirpSync } = require('mkdirp')
 
 const {
   join,
@@ -44,7 +39,7 @@ const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
-const outputFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.LICENSE.txt')
+const outputFile = join(projectRoot, 'dist', 'yarn-plugin-cyclonedx.LICENSE')
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
@@ -125,6 +120,7 @@ const tpLicenses = Array.from(
   (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
 )
 
+mkdirpSync(dirname(outputFile))
 const outputFH = openSync(outputFile, 'w')
 
 writeSync(outputFH, readFileSync(join(projectRoot, 'LICENSE')))
