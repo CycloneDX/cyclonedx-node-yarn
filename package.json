@@ -103,9 +103,11 @@
   ],
   "exports": "./index.cjs",
   "publishConfig": {
-    "main": "./bundles/@yarnpkg/plugin-cyclonedx.js"
+    "main": "./dist/yarn-plugin-cyclonedx.js"
   },
   "scripts": {
+    "xprepack": "run-s clean build",
+    "xpostpack": "run-s test:node",
     "build": "run-s -n build:gbti build:bundle build:dist",
     "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
@@ -123,5 +125,6 @@
     "cs-fix": "eslint --fix .",
     "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/dist/yarn-plugin-cyclonedx.js yarn cyclonedx"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "preferUnplugged": true
 }

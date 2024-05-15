@@ -39,7 +39,7 @@ const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
-const outputFile = join(projectRoot, 'dist', 'LICENSE')
+const outputFile = join(projectRoot, 'dist', 'yarn-plugin-cyclonedx.LICENSE')
 
 const metaData = JSON.parse(readFileSync(metaFile))
 
