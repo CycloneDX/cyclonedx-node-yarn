@@ -26,7 +26,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
 (function () {
   const REQUIRES_INSTALL = [
     /* region functional tests */
-    // !! none of the following ACTUALLY REQUIRES n install
+    // !! none of the following ACTUALLY REQUIRES an install - lock files are enough
     // 'bundled-dependencies',
     // 'concurrent-versions',
     // 'dev-dependencies',
