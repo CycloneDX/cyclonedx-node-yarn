@@ -17,8 +17,6 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/*! this tool is not for public use. */
-
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 const { execFileSync } = require('child_process')
 const fs = require('fs')
