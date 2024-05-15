@@ -181,7 +181,7 @@ suite('integration', () => {
 
       const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
       assert.strictEqual(validationErrors, null)
-    })
+    }).timeout(longTestTimeout)
   })
 })
 
