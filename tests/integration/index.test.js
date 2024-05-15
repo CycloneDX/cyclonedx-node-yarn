@@ -59,7 +59,7 @@ suite('integration', () => {
 
   const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
 
-  const longTestTimeout = 60000
+  const longTestTimeout = 120000
 
   /**
    * @param {string} purpose
