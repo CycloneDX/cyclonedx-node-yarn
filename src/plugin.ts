@@ -20,6 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { BaseCommand } from '@yarnpkg/cli'
 import type { Plugin } from '@yarnpkg/core'
 
+import { getBuildtimeInfo } from './_buildtimeInfo'
 import { MakeSbomCommand } from './commands'
 
 class CyclonedxCommand extends MakeSbomCommand {
@@ -34,7 +35,7 @@ class CyclonedxVersionCommand extends BaseCommand {
   static override readonly paths = CyclonedxCommand.paths.map(p => [...p, '--version'])
 
   async execute (): Promise<void> {
-    const { self: { name, version } } = await import('./buildtimeInfo.json')
+    const { self: { name, version } } = await getBuildtimeInfo()
     this.context.stdout.write(`${name} v${version}\n`)
   }
 }

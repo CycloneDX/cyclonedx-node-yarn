@@ -54,7 +54,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-workspaces@0.0.0"
+      "purl": "pkg:npm/demo-workspaces@0.0.0?"
     },
     "properties": [
       {
@@ -111,7 +111,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0-use.local"
+      "purl": "pkg:npm/my-local-b-off@0.0.0-use.local?"
     }
   ],
   "dependencies": [

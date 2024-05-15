@@ -24,7 +24,7 @@ const path = require('path')
 const { platform } = require('process')
 
 const projectRootPath = path.resolve(__dirname, '..')
-const targetFile = path.join(projectRootPath, 'src', 'buildtimeInfo.json')
+const targetFile = path.join(projectRootPath, 'src', '__buildtimeInfo.json')
 
 function fromYarnInfo (pkgName) {
   const pkgInfo = JSON.parse(execFileSync('yarn', [

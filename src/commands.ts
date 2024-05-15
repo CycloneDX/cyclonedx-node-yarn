@@ -17,7 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { Builders, Enums, Factories, Serialize, Spec } from '@cyclonedx/cyclonedx-library'
+// import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
+import { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
+import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
+import { FromNodePackageJson as PJF, LicenseFactory, PackageUrlFactory } from '@cyclonedx/cyclonedx-library/Factories'
+import * as Serialize from '@cyclonedx/cyclonedx-library/Serialize'
+import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
@@ -60,10 +65,10 @@ export class MakeSbomCommand extends Command<CommandContext> {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
-  specVersion = makeChoiceSwitch<Spec.Version>(
+  specVersion = makeChoiceSwitch<SpecVersion>(
     '--spec-version',
-    Object.keys(Spec.SpecVersionDict).sort(),
-    Spec.Version.v1dot5,
+    Object.keys(SpecVersionDict).sort(),
+    SpecVersion.v1dot5,
     'Which version of CycloneDX to use.'
   )
 
@@ -90,10 +95,10 @@ export class MakeSbomCommand extends Command<CommandContext> {
         '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
-  mcType = makeChoiceSwitch<Enums.ComponentType>(
+  mcType = makeChoiceSwitch<ComponentType>(
     '--mc-type',
-    [Enums.ComponentType.Application, Enums.ComponentType.Library, Enums.ComponentType.Firmware],
-    Enums.ComponentType.Application,
+    [ComponentType.Application, ComponentType.Library, ComponentType.Firmware],
+    ComponentType.Application,
     'Type of the main component.'
   )
 
@@ -146,16 +151,16 @@ export class MakeSbomCommand extends Command<CommandContext> {
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
     await workspace.project.restoreInstallState()
 
-    const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
+    const extRefFactory = new PJF.ExternalReferenceFactory()
 
     myConsole.log('LOG   | gathering BOM data ...')
     const bom = await (new BomBuilder(
-      new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
-      new Builders.FromNodePackageJson.ComponentBuilder(
+      new PJB.ToolBuilder(extRefFactory),
+      new PJB.ComponentBuilder(
         extRefFactory,
-        new Factories.LicenseFactory()
+        new LicenseFactory()
       ),
-      new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
+      new PackageUrlFactory('npm'),
       {
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
@@ -165,7 +170,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       myConsole
     )).buildFromWorkspace(workspace)
 
-    const spec = Spec.SpecVersionDict[this.specVersion]
+    const spec = SpecVersionDict[this.specVersion]
     if (undefined === spec) {
       throw new Error('unsupported spec-version')
     }

@@ -46,7 +46,7 @@
       "version": "0.0.1",
       "bom-ref": "concurrent-versions@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of `chalk`",
-      "purl": "pkg:npm/concurrent-versions@0.0.1"
+      "purl": "pkg:npm/concurrent-versions@0.0.1?"
     },
     "properties": [
       {

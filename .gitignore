@@ -18,7 +18,7 @@
 
 
 # Only used during production build.
-/src/buildtime*
+/src/__buildtime*
 
 
 # Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore

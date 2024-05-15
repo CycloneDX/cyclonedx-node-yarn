@@ -3,25 +3,23 @@
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.resolveJsonModule to read more about this file */
 
-    /* Language and Environment */
-    "target": "es2019", // in sync with `@yarnpkg/builder`'s esbuild config
-
     /* Modules */
     "rootDir": "src",
-    "module": "commonjs", // in sync with `@yarnpkg/builder`'s esbuild config
-    "moduleResolution": "node", // in sync with `@yarnpkg/builder`'s esbuild config
-    "resolveJsonModule": true, // in sync with `@yarnpkg/builder`'s esbuild config
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
 
     /* JavaScript Support */
     "allowJs": false,
 
     /* Emit */
+    "noEmit": true,
     "declaration": false,
     "sourceMap": false,
     "removeComments": true,
 
     /* Interop Constraints */
-    "esModuleInterop": true, // in sync with `@yarnpkg/builder`'s esbuild config
+    "esModuleInterop": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
 
@@ -46,10 +44,7 @@
     "skipLibCheck": false,
 
     /* yarn foo */
-    "experimentalDecorators": true,
-
-    /* output */
-    "outDir": "./dist/"
+    "experimentalDecorators": true
   },
 
   "exclude": [
