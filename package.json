@@ -77,6 +77,7 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-simple-import-sort": "12.0.0",
     "fast-glob": "^3.3.2",
+    "mkdirp": "^3.0.1",
     "mocha": "10.4.0",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
@@ -98,27 +99,29 @@
     "/LICENSE",
     "/NOTICE",
     "/index.cjs",
-    "/bundles/**",
-    "!/bundles/**/*.meta.json",
-    "!**.map"
+    "/dist/**"
   ],
   "exports": "./index.cjs",
   "publishConfig": {
     "main": "./bundles/@yarnpkg/plugin-cyclonedx.js"
   },
   "scripts": {
-    "build": "run-s -n build:gbti build:bundle",
-    "build:gbti": "node tools/gather-buildtime-info.cjs",
+    "build": "run-s -n build:gbti build:bundle build:dist",
+    "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
     "build:bundle-dev": "yarn build:bundle --source-map",
-    "clean": "rimraf bundles",
+    "build:dist": "run-s -n build:dist:mkdir build:dist:license build:dist:cp",
+    "build:dist:mkdir": "mkdirp $PROJECT_CWD/dist",
+    "build:dist:cp": "cp $PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js $PROJECT_CWD/dist/yarn-plugin-cyclonedx.js",
+    "build:dist:license": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs",
+    "clean": "rimraf bundles dist",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",
     "test:standard": "eslint .",
     "test:lint": "tsc --noEmit",
     "test:node": "c8 mocha -p",
     "cs-fix": "eslint --fix .",
-    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/dist/yarn-plugin-cyclonedx.js yarn cyclonedx"
   },
   "packageManager": "yarn@4.1.1"
 }
