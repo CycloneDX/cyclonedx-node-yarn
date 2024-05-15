@@ -59,7 +59,39 @@ suite('integration', () => {
 
   const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
 
+  // testing complex setups - this may take some time
   const longTestTimeout = 120000
+
+  /**
+   * @param {string} cwd
+   * @param {string[]} [additionalArgs]
+   * @param {Object<string, string>} [additionalEnv]
+   * @return {string} the SBOM
+   */
+  function makeSBOM (
+    cwd,
+    additionalArgs = [], additionalEnv = {}
+  ) {
+    const res = spawnSync(
+      'yarn', ['cyclonedx',
+        ...additionalArgs
+      ], {
+        cwd,
+        stdio: ['ignore', 'pipe', 'pipe'],
+        encoding: 'utf8',
+        maxBuffer: BUFFER_MAX_LENGTH,
+        shell: true,
+        env: {
+          ...additionalEnv,
+          PATH: process.env.PATH,
+          CI: '1',
+          YARN_PLUGINS: thisYarnPlugin
+        }
+      })
+    assert.strictEqual(res.error, undefined)
+    assert.strictEqual(res.status, 0, makeSBOM.output)
+    return res.stdout.toString()
+  }
 
   /**
    * @param {string} purpose
@@ -73,43 +105,30 @@ suite('integration', () => {
   ) {
     const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
 
-    const makeSBOM = spawnSync(
-      'yarn', ['cyclonedx',
+    let sbom = makeSBOM(
+      path.join(testbedsPath, testSetup),
+      [
         '-vvv',
         '--output-reproducible',
         // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
         '--spec-version', `${latestCdxSpecVersion}`,
         '--output-format', 'JSON',
         ...additionalArgs
-      ], {
-        cwd: path.join(testbedsPath, testSetup),
-        stdio: ['ignore', 'pipe', 'pipe'],
-        encoding: 'utf8',
-        maxBuffer: BUFFER_MAX_LENGTH,
-        shell: true,
-        env: {
-          ...additionalEnv,
-          PATH: process.env.PATH,
-          CI: '1',
-          YARN_PLUGINS: thisYarnPlugin
-        }
-      })
-    assert.strictEqual(makeSBOM.error, undefined)
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
-
-    let actualOutput = makeSBOM.stdout.toString()
+      ],
+      additionalEnv
+    )
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
-    const validationErrors = await validate('json', actualOutput, latestCdxSpecVersion)
+    const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
     assert.strictEqual(validationErrors, null)
 
-    actualOutput = makeReproducible('json', actualOutput)
+    sbom = makeReproducible('json', sbom)
 
     if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+      writeFileSync(expectedOutSnap, sbom, 'utf8')
     }
-    assert.strictEqual(actualOutput,
+    assert.strictEqual(sbom,
       readFileSync(expectedOutSnap, 'utf8'),
       `output should equal ${expectedOutSnap}`)
   }
@@ -127,10 +146,10 @@ suite('integration', () => {
       const testSetup = 'dev-dependencies'
       test(`arg: ${testSetup}`,
         () => runTest('prod-arg', testSetup, ['--prod'])
-      )
+      ).timeout(longTestTimeout)
       test(`env: ${testSetup}`,
         () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-      )
+      ).timeout(longTestTimeout)
     })
 
     suite('short PURLs', () => {
@@ -157,6 +176,13 @@ suite('integration', () => {
       assert.strictEqual(res.status, 0, res.output)
       assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
     })
+
+    test('dogfooding', async () => {
+      const sbom = makeSBOM(projectRootPath)
+
+      const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
+      assert.strictEqual(validationErrors, null)
+    }).timeout(longTestTimeout)
   })
 })
 
