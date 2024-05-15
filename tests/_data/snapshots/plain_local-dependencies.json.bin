@@ -67,7 +67,7 @@
     {
       "type": "library",
       "name": "my-local-a",
-      "version": "0.0.0",
+      "version": "0.0.0-use.local",
       "bom-ref": "my-local-a@portal:packages/my-local-a::locator=demo-local-deps%40workspace%3A.",
       "description": "demo: my-local-a",
       "licenses": [
@@ -78,7 +78,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
+      "purl": "pkg:npm/my-local-a@0.0.0-use.local?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-deps/project/packages/my-local-a",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -100,7 +100,7 @@
     {
       "type": "library",
       "name": "my-local-b-off",
-      "version": "0.0.0",
+      "version": "0.0.0-use.local",
       "bom-ref": "my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A.",
       "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
@@ -111,12 +111,12 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0?"
+      "purl": "pkg:npm/my-local-b-off@0.0.0-use.local?"
     },
     {
       "type": "library",
       "name": "my-noname",
-      "version": "0.0.0",
+      "version": "0.0.0-use.local",
       "bom-ref": "my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.",
       "description": "demo: with no/empty name",
       "licenses": [
@@ -127,7 +127,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-noname@0.0.0?"
+      "purl": "pkg:npm/my-noname@0.0.0-use.local?"
     }
   ],
   "dependencies": [
