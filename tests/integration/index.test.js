@@ -138,7 +138,7 @@ suite('integration', () => {
       testSetups.forEach((testSetup) => {
         test(`${testSetup}`,
           () => runTest('plain', testSetup)
-        )
+        ).timeout(longTestTimeout)
       })
     })
 
@@ -146,10 +146,10 @@ suite('integration', () => {
       const testSetup = 'dev-dependencies'
       test(`arg: ${testSetup}`,
         () => runTest('prod-arg', testSetup, ['--prod'])
-      )
+      ).timeout(longTestTimeout)
       test(`env: ${testSetup}`,
         () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-      )
+      ).timeout(longTestTimeout)
     })
 
     suite('short PURLs', () => {
@@ -157,7 +157,7 @@ suite('integration', () => {
       test(`${testSetup}`,
         () => runTest('short-PURLs', testSetup, ['--short-PURLs'])
       )
-    })
+    }).timeout(longTestTimeout)
 
     test('version', () => {
       const res = spawnSync(
@@ -182,8 +182,8 @@ suite('integration', () => {
 
       const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
       assert.strictEqual(validationErrors, null)
-    })
-  }).timeout(longTestTimeout)
+    }).timeout(longTestTimeout)
+  })
 })
 
 /**
