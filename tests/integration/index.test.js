@@ -62,27 +62,20 @@ suite('integration', () => {
   const longTestTimeout = 120000
 
   /**
-   * @param {string} purpose
-   * @param {string} testSetup
+   * @param {string} cwd
    * @param {string[]} [additionalArgs]
    * @param {Object<string, string>} [additionalEnv]
+   * @return {string} the SBOM
    */
-  async function runTest (
-    purpose, testSetup,
+  function makeSBOM (
+    cwd,
     additionalArgs = [], additionalEnv = {}
   ) {
-    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
-
-    const makeSBOM = spawnSync(
+    const res = spawnSync(
       'yarn', ['cyclonedx',
-        '-vvv',
-        '--output-reproducible',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
-        '--spec-version', `${latestCdxSpecVersion}`,
-        '--output-format', 'JSON',
         ...additionalArgs
       ], {
-        cwd: path.join(testbedsPath, testSetup),
+        cwd,
         stdio: ['ignore', 'pipe', 'pipe'],
         encoding: 'utf8',
         maxBuffer: BUFFER_MAX_LENGTH,
@@ -94,22 +87,47 @@ suite('integration', () => {
           YARN_PLUGINS: thisYarnPlugin
         }
       })
-    assert.strictEqual(makeSBOM.error, undefined)
-    assert.strictEqual(makeSBOM.status, 0, makeSBOM.output)
+    assert.strictEqual(res.error, undefined)
+    assert.strictEqual(res.status, 0, makeSBOM.output)
+    return res.stdout.toString()
+  }
 
-    let actualOutput = makeSBOM.stdout.toString()
+  /**
+   * @param {string} purpose
+   * @param {string} testSetup
+   * @param {string[]} [additionalArgs]
+   * @param {Object<string, string>} [additionalEnv]
+   */
+  async function runTest (
+    purpose, testSetup,
+    additionalArgs = [], additionalEnv = {}
+  ) {
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
+
+    let sbom = makeSBOM(
+      path.join(testbedsPath, testSetup),
+      [
+        '-vvv',
+        '--output-reproducible',
+        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+        '--spec-version', `${latestCdxSpecVersion}`,
+        '--output-format', 'JSON',
+        ...additionalArgs
+      ],
+      additionalEnv
+    )
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
-    const validationErrors = await validate('json', actualOutput, latestCdxSpecVersion)
+    const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
     assert.strictEqual(validationErrors, null)
 
-    actualOutput = makeReproducible('json', actualOutput)
+    sbom = makeReproducible('json', sbom)
 
     if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-      writeFileSync(expectedOutSnap, actualOutput, 'utf8')
+      writeFileSync(expectedOutSnap, sbom, 'utf8')
     }
-    assert.strictEqual(actualOutput,
+    assert.strictEqual(sbom,
       readFileSync(expectedOutSnap, 'utf8'),
       `output should equal ${expectedOutSnap}`)
   }
@@ -156,6 +174,13 @@ suite('integration', () => {
       assert.strictEqual(res.error, undefined)
       assert.strictEqual(res.status, 0, res.output)
       assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
+    })
+
+    test('dogfooding', async () => {
+      const sbom = makeSBOM(projectRootPath)
+
+      const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
+      assert.strictEqual(validationErrors, null)
     })
   })
 })
