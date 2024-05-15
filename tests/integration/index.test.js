@@ -156,8 +156,8 @@ suite('integration', () => {
       const testSetup = 'juice-shop'
       test(`${testSetup}`,
         () => runTest('short-PURLs', testSetup, ['--short-PURLs'])
-      )
-    }).timeout(longTestTimeout)
+      ).timeout(longTestTimeout)
+    })
 
     test('version', () => {
       const res = spawnSync(
