@@ -158,8 +158,7 @@ async function main (outputFile, includeLicense) {
 }
 
 if (require.main === module) {
-  const outputFile = process.argv[2] ||
-    join(dirname(metaFile), `${metaFile}.NOTICE`)
+  const outputFile = process.argv[2] || `${metaFile}.NOTICE`
   const includeLicense = false
   main(outputFile, includeLicense)
 } else {
