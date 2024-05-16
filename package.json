@@ -106,6 +106,7 @@
       "/NOTICE",
       "/index.cjs"
     ],
+    "directories": {},
     "scripts": {}
   },
   "scripts": {

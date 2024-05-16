@@ -58,7 +58,7 @@ function main (outputFile) {
     }
   }
 
-  writeFileSync(outputFile, JSON.stringify(manifest))
+  writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
 }
 
 if (require.main === module) {
