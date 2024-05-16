@@ -12,13 +12,14 @@ for (const p of [
   try { pp = realpathSync(join(__dirname, '..', ...p)); break } catch {}
 }
 if (!pp) { throw Error('missing plugin') }
-console.log('pp', pp)
-console.log('env', process.env)
+// console.log('pp', pp)
+// console.log('env', process.env)
+// process.exit(1)
 spawn(
   'yarn',
   ['cyclonedx', ...process.argv.splice(2)],
   {
-    env: { ...process.env, YARN_PLUGINS: `${pp};${process.env.YARN_PLUGINS ?? ''}` },
+    env: { ...process.env, YARN_PLUGINS: `${pp}${process.env.YARN_PLUGINS ? ';' + process.env.YARN_PLUGINS : ''}` },
     stdio: 'inherit',
     shell: process.platform === 'win32'
   }
