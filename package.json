@@ -117,7 +117,7 @@
     "build:bundle-dev": "yarn build:bundle --source-map",
     "make-dist": "run-s -n make-dist:mkdir make-dist:cp-\\* make-dist:make-\\*",
     "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
-    "make-dist:cp-distributable": "cp -t $PROJECT_CWD/dist $PROJECT_CWD/README.md $PROJECT_CWD/LICENSE $PROJECT_CWD/index.cjs $PROJECT_CWD/bin",
+    "make-dist:cp-distributable": "cp -t $PROJECT_CWD/dist -r $PROJECT_CWD/README.md $PROJECT_CWD/LICENSE $PROJECT_CWD/index.cjs $PROJECT_CWD/bin",
     "make-dist:cp-plugin": "cp $PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js $PROJECT_CWD/dist/yarn-plugin-cyclonedx.js",
     "make-dist:make-notice": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs $PROJECT_CWD/dist/NOTICE",
     "make-dist:make-manifest": "node $PROJECT_CWD/tools/write-dist-manifest.cjs $PROJECT_CWD/dist/package.json",
