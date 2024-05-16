@@ -148,7 +148,7 @@ async function main (outputFile, includeLicense) {
       const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
       const licenseLRS = rlCreateInterface(licenseRS)
       for await (const licenseLine of licenseLRS) {
-        writeSync(outputFH, `  ${licenseLine}`)
+        writeSync(outputFH, `  ${licenseLine}\n`)
       }
       licenseLRS.close()
       licenseRS.close()
