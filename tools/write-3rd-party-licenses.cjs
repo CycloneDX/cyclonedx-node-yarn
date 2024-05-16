@@ -142,6 +142,7 @@ async function main (outputFile, includeLicense) {
     if (tpLicense.homepage) {
       writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
     }
+    writeSync(outputFH, `Package: https://www.npmjs.com/package/${tpLicense.name}\n`)
     writeSync(outputFH, `Declared license: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
       writeSync(outputFH, `License File: ${licenseFile}\n`)
