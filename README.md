@@ -42,11 +42,11 @@ Currently, there are no releases nor pre-builds. This means, the only way to tes
 Then, 
 import the plugin bundle into your project — like so:
 ```shell
-yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.js`,
+yarn plugin import {pathToYourClone}/build/yarn-plugin-cyclonedx.js`,
 ```
 or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
 ```shell
-YARN_PLUGINS={pathToYourClone}/dist/yarn-plugin-cyclonedx.js yarn sbom --help
+YARN_PLUGINS={pathToYourClone}/build/yarn-plugin-cyclonedx.js yarn sbom --help
 ```
 
 ## Usage
