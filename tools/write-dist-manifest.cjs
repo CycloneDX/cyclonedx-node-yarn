@@ -22,7 +22,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
 const { readFileSync, writeFileSync } = require('fs')
-const { join } = require('path')
+const { join, dirname } = require('path')
 
 const projectRoot = join(__dirname, '..')
 
@@ -59,6 +59,9 @@ function main (outputFile) {
   }
 
   writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
+
+  // also write a yarn.lock
+  writeFileSync(join(dirname(outputFile), 'yarn.lock'), '')
 }
 
 if (require.main === module) {
