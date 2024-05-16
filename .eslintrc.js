@@ -78,6 +78,15 @@ module.exports = {
         /* see https://www.npmjs.com/package/eslint-config-standard */
         'standard'
       ]
+    },
+    {
+      files: ['bin/*.js'],
+      rules: {
+        // region license-header
+        /* see https://github.com/Stuk/eslint-plugin-header#readme */
+        'header/header': 'off'
+        // endregion license-header
+      }
     }
   ]
 }

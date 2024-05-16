@@ -25,7 +25,6 @@ const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 const { execFileSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-const { platform } = require('process')
 
 const projectRootPath = path.resolve(__dirname, '..')
 
@@ -40,7 +39,7 @@ function fromYarnInfo (pkgName) {
     encoding: 'buffer',
     maxBuffer: BUFFER_MAX_LENGTH,
     // windows requires a shell ...
-    shell: platform === 'win32'
+    shell: process.platform === 'win32'
   }))
 
   return {

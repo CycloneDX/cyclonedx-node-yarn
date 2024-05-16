@@ -22,15 +22,12 @@ There is no public API. Instead, there is a well-thought, stable CLI.
 Call it programmatically like so:
     const { execFileSync } = require('child_process')
     const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
-    const sbom = JSON.parse(execFileSync('yarn', [
-      'cyclonedx',
+    const sbom = JSON.parse(execFileSync(process.execPath, [
+      '.../path/to/this/package/bin/cyclonedx-yarn-cli.js',
       '--output-format', 'JSON',
       '--output-file', '-'
       // additional CLI args
-    ], {
-      env: { 'YARN_PLUGINS': '{.../path/to/this/package}/dist/yarn-plugin-cyclonedx.js' },
-      stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH
-    }))
+    ], { stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH }))
 `)
 
 /*
