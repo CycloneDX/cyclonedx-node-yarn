@@ -133,6 +133,5 @@
     "cs-fix": "eslint --fix .",
     "dogfooding": "$PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
-  "packageManager": "yarn@4.1.1",
-  "preferUnplugged": true
+  "packageManager": "yarn@4.1.1"
 }
