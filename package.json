@@ -94,28 +94,31 @@
     "test": "tests"
   },
   "main": "./src/plugin.ts",
-  "files": [
-    "/README.md",
-    "/LICENSE",
-    "/NOTICE",
-    "/index.cjs",
-    "/dist/**"
-  ],
   "exports": "./index.cjs",
+  "files": ["!/**"],
   "publishConfig": {
-    "main": "./dist/yarn-plugin-cyclonedx.js"
+    "$comment": "this section defines how `tools/make-dist-package.cjs` works",
+    "main": "./yarn-plugin-cyclonedx.js",
+    "files": [
+      "/yarn-plugin-cyclonedx.js",
+      "/README.md",
+      "/LICENSE",
+      "/NOTICE",
+      "/index.cjs"
+    ],
+    "scripts": {}
   },
   "scripts": {
-    "xprepack": "run-s clean build",
-    "xpostpack": "run-s test:node",
-    "build": "run-s -n build:gbti build:bundle build:dist",
+    "build": "run-s -n build:gbti build:bundle",
     "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
     "build:bundle-dev": "yarn build:bundle --source-map",
-    "build:dist": "run-s -n build:dist:mkdir build:dist:license build:dist:cp",
-    "build:dist:mkdir": "mkdirp $PROJECT_CWD/dist",
-    "build:dist:cp": "cp $PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js $PROJECT_CWD/dist/yarn-plugin-cyclonedx.js",
-    "build:dist:license": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs",
+    "make-dist": "run-s -n make-dist:mkdir make-dist:cp-\\* make-dist:make-\\*",
+    "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
+    "make-dist:cp-plugin": "cp $PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js $PROJECT_CWD/dist/yarn-plugin-cyclonedx.js",
+    "make-dist:cp-meta": "cp -t $PROJECT_CWD/dist $PROJECT_CWD/README.md $PROJECT_CWD/LICENSE $PROJECT_CWD/index.cjs",
+    "make-dist:make-notice": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs $PROJECT_CWD/dist/NOTICE",
+    "make-dist:make-manifest": "node $PROJECT_CWD/tools/write-dist-manifest.cjs $PROJECT_CWD/dist/package.json",
     "clean": "rimraf bundles dist",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",
@@ -123,7 +126,7 @@
     "test:lint": "tsc --noEmit",
     "test:node": "c8 mocha -p",
     "cs-fix": "eslint --fix .",
-    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/dist/yarn-plugin-cyclonedx.js yarn cyclonedx"
+    "dogfooding": "YARN_PLUGINS=$PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "packageManager": "yarn@4.1.1",
   "preferUnplugged": true
