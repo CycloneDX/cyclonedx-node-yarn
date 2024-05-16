@@ -143,9 +143,9 @@ async function main (outputFile, includeLicense) {
       writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
     }
     writeSync(outputFH, `Package: https://www.npmjs.com/package/${tpLicense.name.replace('@', '%40')}\n`)
-    writeSync(outputFH, `Declared license: ${tpLicense.licenseDeclared}\n`)
+    writeSync(outputFH, `license declared: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
-      writeSync(outputFH, `License File: ${licenseFile}\n`)
+      writeSync(outputFH, `License file: ${licenseFile}\n`)
       const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
       const licenseLRS = rlCreateInterface(licenseRS)
       for await (const licenseLine of licenseLRS) {
