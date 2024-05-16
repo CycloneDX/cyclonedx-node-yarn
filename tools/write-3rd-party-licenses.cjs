@@ -22,8 +22,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  * It's sole existence is tailored to the needs of this project... not general purpose, yet...
  */
 
+const { createInterface: rlCreateInterface } = require('readline')
 const { spawnSync } = require('child_process')
-const { readFileSync, existsSync, mkdtempSync, openSync, writeSync } = require('fs')
+const { readFileSync, existsSync, mkdtempSync, openSync, writeSync, createReadStream } = require('fs')
 const { join, resolve, dirname } = require('path')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
@@ -73,7 +74,7 @@ function getPackageMP (filePath, cache) {
  * @param {string} outputFile
  * @param {boolean} includeLicense
  */
-function main (outputFile, includeLicense) {
+async function main (outputFile, includeLicense) {
   const metaData = JSON.parse(readFileSync(metaFile))
 
   const packageMPcache = {}
@@ -99,6 +100,7 @@ function main (outputFile, includeLicense) {
       return packageMP === projectRoot
         ? undefined
         : {
+            _packageDir: packageMP,
             name: packageMD.name,
             version: packageMD.version,
             homepage: packageMD.homepage || undefined,
@@ -140,10 +142,16 @@ function main (outputFile, includeLicense) {
     if (tpLicense.homepage) {
       writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
     }
-    writeSync(outputFH, `License: ${tpLicense.licenseDeclared}\n`)
-    writeSync(outputFH, `  For details see: https://www.npmjs.com/package/${tpLicense.name}/v/${tpLicense.version}?activeTab=code\n`)
+    writeSync(outputFH, `Declared license: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
-      writeSync(outputFH, `  - File: ${licenseFile}\n`)
+      writeSync(outputFH, `License File: ${licenseFile}\n`)
+      const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
+      const licenseLRS = rlCreateInterface(licenseRS)
+      for await (const licenseLine of licenseLRS) {
+        writeSync(outputFH, `  ${licenseLine}`)
+      }
+      licenseLRS.close()
+      licenseRS.close()
     }
   }
 }
