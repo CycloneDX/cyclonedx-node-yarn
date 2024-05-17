@@ -177,19 +177,12 @@ jobs:
         run: yarn install --no-immutable
       - name: setup-tests
         run: yarn run setup-tests
-    #  - name: fetch build artifact
-    #    # see https://github.com/actions/download-artifact
-    #    uses: actions/download-artifact@v4
-    #    with:
-    #      name: ${{ env.BUNDLES_DIR }}
-    #      path: ${{ env.BUNDLES_DIR }}
-
-    # for debug: build your own
-      - name: build:gbti
-        run: yarn run build:gbti
-      - name: build:bundle-dev
-        run: yarn run build:bundle-dev --no-minify
-
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
       - name: run tests
         run: yarn run test:node
       - name: collect coverage
