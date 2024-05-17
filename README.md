@@ -48,7 +48,7 @@ yarn cyclonedx --help
 ```
 or reference it in environment variable [`YARN_PLUGINS`](https://yarnpkg.com/advanced/plugin-tutorial#dynamically-loading-plugins-using-the-yarn_plugins-environment-variable) — like so:
 ```shell
-YARN_PLUGINS={pathToYourClone}/dist/yarn-plugin-cyclonedx.js yarn cyclonedx --help
+YARN_PLUGINS='{pathToYourClone}/dist/yarn-plugin-cyclonedx.js' yarn cyclonedx --help
 ```
 or use the wrapper — like so:
 ```shell
