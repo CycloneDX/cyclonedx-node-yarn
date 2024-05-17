@@ -66,7 +66,7 @@ suite('integration', () => {
    * @param {string} cwd
    * @param {string[]} [args]
    * @param {Object.<string, string>} [env]
-   * @return {string} the SBOM
+   * @returns {string} the SBOM
    */
   function runClI (cwd, args = [], env = {}) {
     const res = spawnSync(
