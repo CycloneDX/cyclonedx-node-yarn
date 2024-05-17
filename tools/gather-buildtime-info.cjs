@@ -17,14 +17,16 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/** @internal
+ * this tool is not for public use.
+ */
+
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 const { execFileSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-const { platform } = require('process')
 
 const projectRootPath = path.resolve(__dirname, '..')
-const targetFile = path.join(projectRootPath, 'src', '__buildtimeInfo.json')
 
 function fromYarnInfo (pkgName) {
   const pkgInfo = JSON.parse(execFileSync('yarn', [
@@ -37,7 +39,7 @@ function fromYarnInfo (pkgName) {
     encoding: 'buffer',
     maxBuffer: BUFFER_MAX_LENGTH,
     // windows requires a shell ...
-    shell: platform === 'win32'
+    shell: process.platform === 'win32'
   }))
 
   return {
@@ -47,33 +49,46 @@ function fromYarnInfo (pkgName) {
   }
 }
 
-const selfNfo = JSON.parse(fs.readFileSync(
-  path.join(projectRootPath, 'package.json'),
-  'utf8'))
+/**
+ * @param {string} targetFile
+ */
+function main (targetFile) {
+  const selfNfo = JSON.parse(fs.readFileSync(
+    path.join(projectRootPath, 'package.json'),
+    'utf8'))
 
-let buildMeta = ''
-try {
-  buildMeta = '+git.' + execFileSync('git', ['rev-parse', 'HEAD'], {
-    cwd: projectRootPath,
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'ignore']
-  }).trim().substring(0, 7)
-} catch (err) {
-  console.debug('failed fetching guild meta ...', err)
+  let buildMeta = ''
+  try {
+    buildMeta = '+git.' + execFileSync('git', ['rev-parse', 'HEAD'], {
+      cwd: projectRootPath,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).trim().substring(0, 7)
+  } catch (err) {
+    console.debug('failed fetching guild meta ...', err)
+  }
+
+  const data = {
+    self: {
+      name: selfNfo.name,
+      version: selfNfo.version + buildMeta,
+      homepage: selfNfo.homepage,
+      repository: selfNfo.repository,
+      bugs: selfNfo.bugs
+    },
+    cdxLib: fromYarnInfo('@cyclonedx/cyclonedx-library')
+  }
+
+  fs.writeSync(
+    fs.openSync(targetFile, 'w'),
+    JSON.stringify(data)
+  )
 }
 
-const data = {
-  self: {
-    name: selfNfo.name,
-    version: selfNfo.version + buildMeta,
-    homepage: selfNfo.homepage,
-    repository: selfNfo.repository,
-    bugs: selfNfo.bugs
-  },
-  cdxLib: fromYarnInfo('@cyclonedx/cyclonedx-library')
+if (require.main === module) {
+  const targetFile = process.argv[2] ||
+    path.join(projectRootPath, 'src', '__buildtimeInfo.json')
+  main(targetFile)
+} else {
+  module.exports = main
 }
-
-fs.writeSync(
-  fs.openSync(targetFile, 'w'),
-  JSON.stringify(data)
-)

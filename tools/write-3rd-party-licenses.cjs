@@ -17,21 +17,17 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/*!
-this tool is not for public use.
-It's sole existence is tailored to the needs of this project... not general purpose, yet...
-*/
+/** @internal
+ * this tool is not for public use.
+ * It's sole existence is tailored to the needs of this project... not general purpose, yet...
+ */
 
+const { createInterface: rlCreateInterface } = require('readline')
 const { spawnSync } = require('child_process')
-const { readFileSync, existsSync, mkdtempSync, openSync, writeSync } = require('fs')
+const { closeSync, existsSync, mkdtempSync, openSync, readFileSync, writeSync, createReadStream } = require('fs')
+const { join, resolve, dirname } = require('path')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
-
-const {
-  join,
-  resolve,
-  dirname
-} = require('path')
 
 const projectRoot = join(__dirname, '..')
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
@@ -39,25 +35,20 @@ const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
-const outputFile = join(projectRoot, 'dist', 'yarn-plugin-cyclonedx.LICENSE')
-
-const metaData = JSON.parse(readFileSync(metaFile))
-
-// -----
-
-const unzipped = {}
+const filePathInZipRE = /^(.+\.zip)[/\\](.+)$/
 
 /**
  * @param {string} filePath
- * @return {[undefined, undefined]|[string,*]}
+ * @param {Object.<string, string>} cache
+ * @return {[undefined, undefined] | [string, *]}
  */
-const getPackageMP = function (filePath) {
+function getPackageMP (filePath, cache) {
   let searchRoot = projectRoot
-  const zipMatch = /^(.+\.zip)[\\/](.+)$/.exec(filePath)
+  const zipMatch = filePathInZipRE.exec(filePath)
   if (zipMatch) {
-    searchRoot = unzipped[zipMatch[1]]
+    searchRoot = cache[zipMatch[1]]
     if (!searchRoot) {
-      searchRoot = unzipped[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
+      searchRoot = cache[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
       const unz = spawnSync('unzip', [zipMatch[1], '-d', searchRoot])
       if (unz.status !== 0) {
         throw new Error(`something off with ${filePath}`)
@@ -79,66 +70,96 @@ const getPackageMP = function (filePath) {
   return [undefined, undefined]
 }
 
-// ----
+/**
+ * @param {string} outputFile
+ * @param {boolean} includeLicense
+ */
+async function main (outputFile, includeLicense) {
+  const metaData = JSON.parse(readFileSync(metaFile))
 
-const packageMPs = new Map()
+  const packageMPcache = {}
+  const packageMPs = new Map()
+  for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
+    if (bytesInOutput <= 0) {
+      continue
+    }
+    const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath), packageMPcache)
+    if (!packageMP) {
+      console.warn('ERROR: missing MP for:', filePath)
+      continue
+    }
+    if (packageMPs.has(packageMP)) {
+      continue
+    }
+    packageMPs.set(packageMP, PackageMD)
+  }
 
-for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
-  if (bytesInOutput <= 0) {
-    continue
+  const tpLicenses = Array.from(
+    packageMPs.entries(),
+    function ([packageMP, packageMD]) {
+      return packageMP === projectRoot
+        ? undefined
+        : {
+            _packageDir: packageMP,
+            name: packageMD.name,
+            version: packageMD.version,
+            homepage: packageMD.homepage || undefined,
+            licenseDeclared: packageMD.license,
+            licenseFiles: [
+              ...globSync('LICEN{S,C}E*', {
+                onlyFiles: true,
+                caseSensitiveMatch: false,
+                cwd: packageMP
+              }).sort((a, b) => a.localeCompare(b)),
+              ...globSync('NOTICE', {
+                onlyFiles: true,
+                caseSensitiveMatch: true,
+                cwd: packageMP
+              })
+            ]
+          }
+    }
+  ).filter(
+    i => i !== undefined
+  ).sort(
+    (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
+  )
+
+  mkdirpSync(dirname(outputFile))
+  const outputFH = openSync(outputFile, 'w')
+
+  if (includeLicense) {
+    writeSync(outputFH, readFileSync(join(projectRoot, 'LICENSE')))
+    writeSync(outputFH, '\n\n')
   }
-  const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath))
-  if (!packageMP) {
-    console.warn('ERROR: missing MP for:', filePath)
-    continue
+  writeSync(outputFH, readFileSync(join(projectRoot, 'NOTICE')))
+  writeSync(outputFH, `\n\n${'='.repeat(80)}\n\n` +
+    'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries\n' +
+    'that are compatibly licensed. We list these here.\n')
+  for (const tpLicense of tpLicenses) {
+    writeSync(outputFH, `\n${'-'.repeat(80)}\n`)
+    writeSync(outputFH, `Library Name: ${tpLicense.name} (${tpLicense.version})\n`)
+    writeSync(outputFH, `Distribution: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}/v/${tpLicense.version}\n`)
+    writeSync(outputFH, `License declared: ${tpLicense.licenseDeclared}\n`)
+    for (const licenseFile of tpLicense.licenseFiles) {
+      writeSync(outputFH, `License file: ${licenseFile}\n`)
+      const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
+      const licenseLRS = rlCreateInterface(licenseRS)
+      for await (const licenseLine of licenseLRS) {
+        writeSync(outputFH, `  ${licenseLine}\n`)
+      }
+      licenseLRS.close()
+      licenseRS.close()
+    }
   }
-  if (packageMPs.has(packageMP)) {
-    continue
-  }
-  packageMPs.set(packageMP, PackageMD)
+
+  closeSync(outputFH)
 }
 
-const tpLicenses = Array.from(
-  packageMPs.entries(),
-  function ([packageMP, packageMD]) {
-    return packageMP === projectRoot
-      ? undefined
-      : {
-          name: packageMD.name,
-          version: packageMD.version,
-          homepage: packageMD.homepage || undefined,
-          licenseDeclared: packageMD.license,
-          licenseFiles: [
-            ...globSync('LICEN{S,C}E*', { onlyFiles: true, caseSensitiveMatch: false, cwd: packageMP }).sort((a, b) => a.localeCompare(b)),
-            ...globSync('NOTICE', { onlyFiles: true, caseSensitiveMatch: true, cwd: packageMP })
-          ]
-        }
-  }
-).filter(
-  i => i !== undefined
-).sort(
-  (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
-)
-
-mkdirpSync(dirname(outputFile))
-const outputFH = openSync(outputFile, 'w')
-
-writeSync(outputFH, readFileSync(join(projectRoot, 'LICENSE')))
-writeSync(outputFH, '\n')
-writeSync(outputFH, readFileSync(join(projectRoot, 'NOTICE')))
-writeSync(outputFH, '\n')
-writeSync(outputFH, '\n\n----\n\n' +
-  'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries that are compatibly licensed.\n' +
-  'We list these here.\n')
-for (const tpLicense of tpLicenses) {
-  writeSync(outputFH, '\n')
-  writeSync(outputFH, `Name: ${tpLicense.name} (${tpLicense.version})\n`)
-  if (tpLicense.homepage) {
-    writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
-  }
-  writeSync(outputFH, `License: ${tpLicense.licenseDeclared}\n`)
-  writeSync(outputFH, `  For details see: https://www.npmjs.com/package/${tpLicense.name}/v/${tpLicense.version}?activeTab=code\n`)
-  for (const licenseFile of tpLicense.licenseFiles) {
-    writeSync(outputFH, `  - File: ${licenseFile}\n`)
-  }
+if (require.main === module) {
+  const outputFile = process.argv[2] || `${metaFile}.NOTICE`
+  const includeLicense = false
+  main(outputFile, includeLicense)
+} else {
+  module.exports = main
 }

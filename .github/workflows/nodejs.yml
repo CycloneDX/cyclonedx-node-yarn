@@ -61,8 +61,8 @@ jobs:
           path: ${{ env.BUNDLES_DIR }}
           retention-days: 5
           if-no-files-found: error
-      - name: build:dist
-        run: yarn run build:dist
+      - name: make-dist
+        run: yarn run make-dist
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
@@ -234,8 +234,8 @@ jobs:
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
+          name: ${{ env.BUILD_DIR }}
+          path: ${{ env.BUILD_DIR }}
       - name: dogfooding
         run: >
           yarn run dogfooding
