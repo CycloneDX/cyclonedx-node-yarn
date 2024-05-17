@@ -36,8 +36,7 @@ class CyclonedxVersionCommand extends BaseCommand {
 
   async execute (): Promise<void> {
     const { self: { name, version } } = await getBuildtimeInfo()
-    this.context.stdout.write(`debug testing foo\n`)
-    //this.context.stdout.write(`${name} v${version}\n`)
+    this.context.stdout.write(`${name} v${version}\n`)
   }
 }
 
