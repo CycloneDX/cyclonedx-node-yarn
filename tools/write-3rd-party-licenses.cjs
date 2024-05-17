@@ -24,7 +24,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 const { createInterface: rlCreateInterface } = require('readline')
 const { spawnSync } = require('child_process')
-const { readFileSync, existsSync, mkdtempSync, openSync, writeSync, createReadStream } = require('fs')
+const { closeSync, existsSync, mkdtempSync, openSync, readFileSync, writeSync, createReadStream } = require('fs')
 const { join, resolve, dirname } = require('path')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
@@ -143,7 +143,7 @@ async function main (outputFile, includeLicense) {
       writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
     }
     writeSync(outputFH, `Package: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}\n`)
-    writeSync(outputFH, `license declared: ${tpLicense.licenseDeclared}\n`)
+    writeSync(outputFH, `License declared: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
       writeSync(outputFH, `License file: ${licenseFile}\n`)
       const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
@@ -155,6 +155,8 @@ async function main (outputFile, includeLicense) {
       licenseRS.close()
     }
   }
+
+  closeSync(outputFH)
 }
 
 if (require.main === module) {
