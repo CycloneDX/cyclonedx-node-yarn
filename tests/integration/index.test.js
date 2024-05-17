@@ -57,39 +57,35 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds')
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
-  const thisYarnPlugin = path.join(projectRootPath, 'bundles', '@yarnpkg', 'plugin-cyclonedx.js')
+  const thisCLI = path.join(projectRootPath, 'bin', 'cyclonedx-yarn-cli.js')
 
   // testing complex setups - this may take some time
   const longTestTimeout = 120000
 
   /**
    * @param {string} cwd
-   * @param {string[]} [additionalArgs]
-   * @param {Object<string, string>} [additionalEnv]
+   * @param {string[]} [args]
+   * @param {Object.<string, string>} [additionalEnv]
    * @return {string} the SBOM
    */
-  function makeSBOM (
+  function runClI (
     cwd,
-    additionalArgs = [], additionalEnv = {}
+    args = [], additionalEnv = {}
   ) {
     const res = spawnSync(
-      'yarn', ['cyclonedx',
-        ...additionalArgs
-      ], {
+      thisCLI, args, {
         cwd,
         stdio: ['ignore', 'pipe', 'pipe'],
         encoding: 'utf8',
         maxBuffer: BUFFER_MAX_LENGTH,
-        shell: true,
         env: {
+          ...process.env,
           ...additionalEnv,
-          PATH: process.env.PATH,
-          CI: '1',
-          YARN_PLUGINS: thisYarnPlugin
+          CI: '1'
         }
       })
-    assert.strictEqual(res.error, undefined)
-    assert.strictEqual(res.status, 0, makeSBOM.output)
+    assert.strictEqual(res.error, undefined, res.output)
+    assert.strictEqual(res.status, 0, res.output)
     return res.stdout.toString()
   }
 
@@ -97,7 +93,7 @@ suite('integration', () => {
    * @param {string} purpose
    * @param {string} testSetup
    * @param {string[]} [additionalArgs]
-   * @param {Object<string, string>} [additionalEnv]
+   * @param {Object.<string, string>} [additionalEnv]
    */
   async function runTest (
     purpose, testSetup,
@@ -105,7 +101,7 @@ suite('integration', () => {
   ) {
     const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
 
-    let sbom = makeSBOM(
+    let sbom = runClI(
       path.join(testbedsPath, testSetup),
       [
         '-vvv',
@@ -160,26 +156,12 @@ suite('integration', () => {
     })
 
     test('version', () => {
-      const res = spawnSync(
-        'yarn', ['cyclonedx', '--version'], {
-          cwd: projectRootPath,
-          stdio: ['ignore', 'pipe', 'pipe'],
-          encoding: 'utf8',
-          shell: true,
-          env: {
-            PATH: process.env.PATH,
-            CI: '1',
-            YARN_PLUGINS: thisYarnPlugin
-          }
-        })
-      assert.strictEqual(res.error, undefined)
-      assert.strictEqual(res.status, 0, res.output)
+      const res = runClI(projectRootPath, ['--version'])
       assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
     })
 
     test('dogfooding', async () => {
-      const sbom = makeSBOM(projectRootPath)
-
+      const sbom = runClI(projectRootPath)
       const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
       assert.strictEqual(validationErrors, null)
     }).timeout(longTestTimeout)
