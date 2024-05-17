@@ -42,7 +42,7 @@ Currently, there are no releases nor pre-builds. This means, the only way to tes
 
 Then, you could import the plugin into your project — like so:
 ```shell
-yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.js
+yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.cjs
 ```
 
 ## Usage
