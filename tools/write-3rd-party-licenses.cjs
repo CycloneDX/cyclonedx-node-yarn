@@ -134,8 +134,8 @@ async function main (outputFile, includeLicense) {
   }
   writeSync(outputFH, readFileSync(join(projectRoot, 'NOTICE')))
   writeSync(outputFH, `\n\n${'='.repeat(80)}\n\n` +
-    'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries that are compatibly licensed.\n' +
-    'We list these here.\n')
+    'The @cyclonedx/yarn-plugin-cyclonedx distributions bundle several libraries\n' +
+    'that are compatibly licensed. We list these here.\n')
   for (const tpLicense of tpLicenses) {
     writeSync(outputFH, `\n${'-'.repeat(80)}\n`)
     writeSync(outputFH, `Library Name: ${tpLicense.name} (${tpLicense.version})\n`)
