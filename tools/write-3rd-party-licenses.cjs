@@ -138,11 +138,8 @@ async function main (outputFile, includeLicense) {
     'We list these here.\n')
   for (const tpLicense of tpLicenses) {
     writeSync(outputFH, `\n${'-'.repeat(80)}\n`)
-    writeSync(outputFH, `Name: ${tpLicense.name} (${tpLicense.version})\n`)
-    if (tpLicense.homepage) {
-      writeSync(outputFH, `Homepage: ${tpLicense.homepage}\n`)
-    }
-    writeSync(outputFH, `Package: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}\n`)
+    writeSync(outputFH, `Library Name: ${tpLicense.name} (${tpLicense.version})\n`)
+    writeSync(outputFH, `Distribution: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}/v/${tpLicense.version}\n`)
     writeSync(outputFH, `License declared: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
       writeSync(outputFH, `License file: ${licenseFile}\n`)
