@@ -124,7 +124,7 @@
     "make-dist:cp-plugin": "cp $PROJECT_CWD/bundles/@yarnpkg/plugin-cyclonedx.js $PROJECT_CWD/dist/yarn-plugin-cyclonedx.cjs",
     "make-dist:make-notice": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs $PROJECT_CWD/dist/NOTICE",
     "make-dist:make-manifest": "node $PROJECT_CWD/tools/write-dist-manifest.cjs $PROJECT_CWD/dist/package.json",
-    "clean": "rimraf bundles dist",
+    "clean": "rimraf bundles dist packed",
     "setup-tests": "node tests/integration/setup.js",
     "test": "run-p --aggregate-output -lc test:\\*",
     "test:standard": "eslint .",
