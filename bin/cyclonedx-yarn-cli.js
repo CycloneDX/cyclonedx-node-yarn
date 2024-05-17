@@ -22,7 +22,9 @@ if (!pp) {
   throw Error('missing plugin')
 }
 
-const YARN_PLUGINS = `${pp}${process.env.YARN_PLUGINS ? ';' + process.env.YARN_PLUGINS : ''}`
+const YARN_PLUGINS = process.env.YARN_PLUGINS
+  ? `${pp};${process.env.YARN_PLUGINS}`
+  : pp
 const args = ['cyclonedx', ...process.argv.splice(2)]
 
 process.stderr.write(`\n> YARN_PLUGINS='${YARN_PLUGINS}' yarn ${args.join(' ')}\n\n`)
