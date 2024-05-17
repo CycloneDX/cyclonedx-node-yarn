@@ -52,7 +52,7 @@ jobs:
       - name: build:gbti
         run: yarn run build:gbti
       - name: build:bundle-dev
-        run: yarn run build:bundle-dev
+        run: yarn run build:bundle-dev --no-minify
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
