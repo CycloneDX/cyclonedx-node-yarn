@@ -98,7 +98,9 @@
   },
   "main": "./src/plugin.ts",
   "exports": "./index.js",
-  "files": ["!/**"],
+  "files": [
+    "!/**"
+  ],
   "publishConfig": {
     "$comment": "this section defines how `tools/make-dist-package.cjs` works",
     "main": "./yarn-plugin-cyclonedx.cjs",

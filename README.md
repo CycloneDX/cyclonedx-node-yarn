@@ -47,7 +47,7 @@ yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.cjs
 
 ## Usage
 
-* After plugin installation 
+* After plugin installation
   ```shell 
   yarn cyclonedx --help
   ```
