@@ -12,7 +12,7 @@
     "**/.{eslint,mocha}rc.{js,cjs}",
     ".yarn/**", ".pnp.*"
   ],
-  "exclude-after-remap": true,
+  "exclude-after-remap": false,
   "reporter": ["text", "clover", "html"],
   "reporterOptions": {
     "clover": {"file": "coverage.clover.xml"},
