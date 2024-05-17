@@ -3,10 +3,10 @@
 const { spawn } = require('child_process')
 const { realpathSync } = require('fs')
 const { join } = require('path')
-let pp = null
+let pp
 for (const p of [
-  ['yarn-plugin-cyclonedx.js'], // packed
-  ['dist', 'yarn-plugin-cyclonedx.js'], // dist
+  ['yarn-plugin-cyclonedx.cjs'], // pack
+  ['dist', 'yarn-plugin-cyclonedx.cjs'], // dist
   ['bundles', '@yarnpkg', 'plugin-cyclonedx.js'] // build
 ]) {
   try { pp = realpathSync(join(__dirname, '..', ...p)); break } catch {}
