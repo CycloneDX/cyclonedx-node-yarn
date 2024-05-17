@@ -2,10 +2,13 @@
 
 /reports/
 /CI_reports/
-/dist/
-/CI_dist/
+/packed/
+/CI_packed/
+
 /bundles/
-/CI_bundles/
+/build/
+/dist/
+/release_assets/
 
 
 
