@@ -65,7 +65,7 @@ suite('integration', () => {
   /**
    * @param {string} cwd
    * @param {string[]} [args]
-   * @param {Object.<string, string>} [additionalEnv]
+   * @param {Object.<string, string>} [env]
    * @return {string} the SBOM
    */
   function runClI (cwd, args = [], env = {}) {
