@@ -105,7 +105,8 @@
     "files": [
       "/README.md",
       "/LICENSE",
-      "/NOTICE"
+      "/NOTICE",
+      "/index.js"
     ],
     "directories": {},
     "scripts": {}
