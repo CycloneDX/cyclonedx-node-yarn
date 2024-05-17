@@ -16,7 +16,7 @@ const YARN_PLUGINS = `${pp}${process.env.YARN_PLUGINS ? ';' + process.env.YARN_P
 const args = ['cyclonedx', ...process.argv.splice(2)]
 process.stderr.write(`> YARN_PLUGINS='${YARN_PLUGINS}' yarn ${args.join(' ')}\n\n`)
 spawn('yarn', args, {
-  env: { ...process.env, YARN_PLUGINS },
   stdio: 'inherit',
+  env: { ...process.env, YARN_PLUGINS },
   shell: process.platform === 'win32'
 }).once('exit', code => { process.exitCode = code })
