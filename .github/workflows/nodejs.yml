@@ -198,6 +198,13 @@ jobs:
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
+      - name: artifact test reports - debug
+        if: ${{ ! cancelled() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'debug-${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
+          path: reports
 
   dogfooding:
     needs: [ 'build' ]
