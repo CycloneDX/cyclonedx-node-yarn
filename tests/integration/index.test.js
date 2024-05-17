@@ -68,10 +68,7 @@ suite('integration', () => {
    * @param {Object.<string, string>} [additionalEnv]
    * @return {string} the SBOM
    */
-  function runClI (
-    cwd,
-    args = [], additionalEnv = {}
-  ) {
+  function runClI (cwd, args = [], env = {}) {
     const res = spawnSync(
       thisCLI, args, {
         cwd,
@@ -80,7 +77,7 @@ suite('integration', () => {
         maxBuffer: BUFFER_MAX_LENGTH,
         env: {
           ...process.env,
-          ...additionalEnv,
+          ...env,
           CI: '1'
         }
       })
@@ -157,7 +154,7 @@ suite('integration', () => {
 
     test('version', () => {
       const res = runClI(projectRootPath, ['--version'])
-      assert.ok(res.stdout.startsWith(`${thisName} v${thisVersion}`), res.stdout)
+      assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
     })
 
     test('dogfooding', async () => {
