@@ -50,7 +50,7 @@ jobs:
       - name: Setup subject
         run: |
           yarn install --no-immutable
-          yarn info --name-only
+          yarn info --name-only --recursive
       - name: build:gbti
         run: yarn run build:gbti
       - name: build:bundle-dev
@@ -96,7 +96,7 @@ jobs:
       - name: Setup subject
         run: |
           yarn install --no-immutable
-          yarn info --name-only
+          yarn info --name-only --recursive
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -141,7 +141,7 @@ jobs:
       - name: Setup subject
         run: |
           yarn install --no-immutable
-          yarn info --name-only
+          yarn info --name-only --recursive
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -182,7 +182,7 @@ jobs:
       - name: Setup subject
         run: |
           yarn install --no-immutable
-          yarn info --name-only
+          yarn info --name-only --recursive
       - name: setup-tests
         run: yarn run setup-tests
       - name: fetch build artifact
@@ -239,7 +239,7 @@ jobs:
       - name: Setup subject
         run: |
           yarn install --no-immutable
-          yarn info --name-only
+          yarn info --name-only --recursive
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
