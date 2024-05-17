@@ -70,7 +70,7 @@ suite('integration', () => {
    */
   function runClI (cwd, args = [], env = {}) {
     const res = spawnSync(
-      thisCLI, args, {
+      process.execPath, [thisCLI, ...args], {
         cwd,
         stdio: ['ignore', 'pipe', 'pipe'],
         encoding: 'utf8',
