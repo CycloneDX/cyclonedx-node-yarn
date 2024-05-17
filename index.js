@@ -30,8 +30,7 @@ Call it programmatically like so:
       ], {
         stdio: ['ignore', 'pipe', 'ignore'],
         encoding: 'buffer',
-        maxBuffer: BUFFER_MAX_LENGTH,
-        shell: process.platform === 'win32'
+        maxBuffer: BUFFER_MAX_LENGTH
       }))
 `)
 
