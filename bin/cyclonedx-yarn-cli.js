@@ -6,10 +6,10 @@ const { join } = require('path')
 let pp = null
 for (const p of [
   ['yarn-plugin-cyclonedx.js'], // packed
-  ['..', 'dist', 'yarn-plugin-cyclonedx.js'], // dist
-  ['..', 'bundles', '@yarnpkg', 'plugin-cyclonedx.js'] // build
+  ['dist', 'yarn-plugin-cyclonedx.js'], // dist
+  ['bundles', '@yarnpkg', 'plugin-cyclonedx.js'] // build
 ]) {
-  try { pp = realpathSync(join(__dirname, ...p)); break } catch {}
+  try { pp = realpathSync(join(__dirname, '..', ...p)); break } catch {}
 }
 if (!pp) { throw Error('missing plugin') }
 const YARN_PLUGINS = `${pp}${process.env.YARN_PLUGINS ? ';' + process.env.YARN_PLUGINS : ''}`
