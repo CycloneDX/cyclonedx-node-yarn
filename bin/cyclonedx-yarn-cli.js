@@ -19,4 +19,4 @@ spawn('yarn', args, {
   env: { ...process.env, YARN_PLUGINS },
   stdio: 'inherit',
   shell: process.platform === 'win32'
-})
+}).once('exit', code => { process.exitCode = code })
