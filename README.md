@@ -41,7 +41,7 @@ Currently, there are no releases nor pre-builds. This means, the only way to tes
 1. Create the dist   - run: `yarn run make-dist`
 
 Then, 
-import the plugin bundle into your project and use ot — like so:
+import the plugin bundle into your project and use it — like so:
 ```shell
 yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.js
 yarn cyclonedx --help
