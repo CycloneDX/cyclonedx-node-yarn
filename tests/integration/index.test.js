@@ -18,15 +18,28 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('assert')
-const { suite, test } = require('mocha')
+const {
+  suite,
+  test
+} = require('mocha')
 const { spawnSync } = require('child_process')
 const path = require('path')
-const { existsSync, writeFileSync, readFileSync } = require('fs')
+const {
+  existsSync,
+  writeFileSync,
+  readFileSync
+} = require('fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
 
-const { Validation, Spec } = require('@cyclonedx/cyclonedx-library')
+const {
+  Validation,
+  Spec
+} = require('@cyclonedx/cyclonedx-library')
 
-const { name: thisName, version: thisVersion } = require('../../package.json')
+const {
+  name: thisName,
+  version: thisVersion
+} = require('../../package.json')
 
 const testSetups = [
   /* region functional tests */
@@ -89,23 +102,24 @@ suite('integration', () => {
   /**
    * @param {string} purpose
    * @param {string} testSetup
+   * @param {'xml'|'json'} format
    * @param {string[]} [additionalArgs]
    * @param {Object.<string, string>} [additionalEnv]
    */
   async function runTest (
-    purpose, testSetup,
+    purpose, testSetup, format,
     additionalArgs = [], additionalEnv = {}
   ) {
-    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.json.bin`)
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.${format}.bin`)
 
     let sbom = runClI(
       path.join(testbedsPath, testSetup),
       [
         '-vvv',
         '--output-reproducible',
-        // no intention to test all the spec-versions nor all the output-formats - this would be not our scope.
+        // no intention to test all the spec-versions - this would be not our scope.
         '--spec-version', `${latestCdxSpecVersion}`,
-        '--output-format', 'JSON',
+        '--output-format', format.toUpperCase(),
         ...additionalArgs
       ],
       additionalEnv
@@ -113,10 +127,10 @@ suite('integration', () => {
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
-    const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
+    const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
     assert.strictEqual(validationErrors, null)
 
-    sbom = makeReproducible('json', sbom)
+    sbom = makeReproducible(format, sbom)
 
     if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
       writeFileSync(expectedOutSnap, sbom, 'utf8')
@@ -127,46 +141,53 @@ suite('integration', () => {
   }
 
   suite('make SBOM', () => {
-    suite('plain', () => {
-      testSetups.forEach((testSetup) => {
-        test(`${testSetup}`,
-          () => runTest('plain', testSetup)
-        ).timeout(longTestTimeout)
-      })
-    })
-
-    suite('prod', () => {
-      const testSetup = 'dev-dependencies'
-      test(`arg: ${testSetup}`,
-        () => runTest('prod-arg', testSetup, ['--prod'])
-      ).timeout(longTestTimeout)
-      test(`env: ${testSetup}`,
-        () => runTest('prod-env', testSetup, [], { NODE_ENV: 'production' })
-      ).timeout(longTestTimeout)
-    })
-
-    suite('short PURLs', () => {
-      const testSetup = 'juice-shop'
-      test(`${testSetup}`,
-        () => runTest('short-PURLs', testSetup, ['--short-PURLs'])
-      ).timeout(longTestTimeout)
-    })
 
     test('version', () => {
       const res = runClI(projectRootPath, ['--version'])
       assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
-    })
+    });
 
-    test('dogfooding', async () => {
-      const sbom = runClI(projectRootPath)
-      const validationErrors = await validate('json', sbom, latestCdxSpecVersion)
-      assert.strictEqual(validationErrors, null)
-    }).timeout(longTestTimeout)
+    ['json', 'xml'].forEach(format => {
+      suite(`format: ${format}`, () => {
+
+        suite('plain', () => {
+          testSetups.forEach(testSetup => {
+            test(`${testSetup}`,
+              () => runTest('plain', testSetup, format)
+            ).timeout(longTestTimeout)
+          })
+        })
+
+        suite('prod', () => {
+          const testSetup = 'dev-dependencies'
+          test(`arg: ${testSetup}`,
+            () => runTest('prod-arg', testSetup, format, ['--prod'])
+          ).timeout(longTestTimeout)
+          test(`env: ${testSetup}`,
+            () => runTest('prod-env', testSetup, format, [], { NODE_ENV: 'production' })
+          ).timeout(longTestTimeout)
+        })
+
+        suite('short PURLs', () => {
+          const testSetup = 'juice-shop'
+          test(`${testSetup}`,
+            () => runTest('short-PURLs', testSetup, format,  ['--short-PURLs'])
+          ).timeout(longTestTimeout)
+        })
+
+        test('dogfooding', async () => {
+          const sbom = runClI(projectRootPath, ['--output-format', format.toUpperCase()])
+          const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
+          assert.strictEqual(validationErrors, null)
+        }).timeout(longTestTimeout)
+
+      })
+    })
   })
 })
 
 /**
- * @param {string} format
+ * @param {'json'|'xml'} format
  * @param {string} value
  * @param {Spec.Version} [specVersion]
  * @return {Promise<any>}
@@ -183,7 +204,7 @@ async function validate (format, value, specVersion) {
 }
 
 /**
- * @param {string} format
+ * @param {'json'|'xml'} format
  * @param {*} data
  * @returns {string}
  * @throws {RangeError} when format unexpected
@@ -209,8 +230,8 @@ function makeJsonReproducible (json) {
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
-      '        "name": "yarn-plugin-cyclonedx",\n' +
-      `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+.+)?",\n`
+        '        "name": "yarn-plugin-cyclonedx",\n' +
+        `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+.+)?",\n`
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
@@ -240,8 +261,8 @@ function makeXmlReproducible (xml) {
       // replace metadata.tools.version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
-      '        <name>yarn-plugin-cyclonedx</name>\n' +
-      `        <version>${thisVersion}(?:\\+.+)?</version>`
+        '        <name>yarn-plugin-cyclonedx</name>\n' +
+        `        <version>${thisVersion}(?:\\+.+)?</version>`
       ),
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
