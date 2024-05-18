@@ -10,7 +10,7 @@ first.
 To start developing simply run to install dev-dependencies and tools:
 
 ```shell
-yarn install --immutable
+yarn install
 ```
 
 Then add SDKs for you preferred editor as described on https://yarnpkg.com/getting-started/editor-sdks if you want IDE support.
