@@ -102,7 +102,7 @@ suite('integration', () => {
   /**
    * @param {string} purpose
    * @param {string} testSetup
-   * @param {'xml'|'json'} format
+   * @param {'JSON'|'XML'} format
    * @param {string[]} [additionalArgs]
    * @param {Object.<string, string>} [additionalEnv]
    */
@@ -110,7 +110,7 @@ suite('integration', () => {
     purpose, testSetup, format,
     additionalArgs = [], additionalEnv = {}
   ) {
-    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.${format}.bin`)
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.${format.toLowerCase()}.bin`)
 
     let sbom = runClI(
       path.join(testbedsPath, testSetup),
@@ -119,7 +119,7 @@ suite('integration', () => {
         '--output-reproducible',
         // no intention to test all the spec-versions - this would be not our scope.
         '--spec-version', `${latestCdxSpecVersion}`,
-        '--output-format', format.toUpperCase(),
+        '--output-format', format,
         ...additionalArgs
       ],
       additionalEnv
@@ -146,7 +146,7 @@ suite('integration', () => {
       assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
     });
 
-    ['json', 'xml'].forEach(format => {
+    ['JSON', 'XML'].forEach(format => {
       suite(`format: ${format}`, () => {
         suite('plain', () => {
           testSetups.forEach(testSetup => {
@@ -174,8 +174,8 @@ suite('integration', () => {
         })
 
         test('dogfooding', async () => {
-          const sbom = runClI(projectRootPath, ['--output-format', format.toUpperCase()])
-          const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
+          const sbom = runClI(projectRootPath, ['--output-format', format])
+          const validationErrors = await validate(format, sbom, '1.5')
           assert.strictEqual(validationErrors, null)
         }).timeout(longTestTimeout)
       })
@@ -184,35 +184,35 @@ suite('integration', () => {
 })
 
 /**
- * @param {'json'|'xml'} format
+ * @param {'JSON'|'XML'} format
  * @param {string} value
  * @param {Spec.Version} [specVersion]
  * @return {Promise<any>}
  */
 async function validate (format, value, specVersion) {
-  switch (format.toLowerCase()) {
-    case 'xml':
+  switch (format) {
+    case 'XML':
       return await new Validation.XmlValidator(specVersion).validate(value)
-    case 'json':
+    case 'JSON':
       return await new Validation.JsonStrictValidator(specVersion).validate(value)
-    default:
+    default: // just in case
       throw new RangeError(`unexpected format: ${format}`)
   }
 }
 
 /**
- * @param {'json'|'xml'} format
+ * @param {'JSON'|'XML'} format
  * @param {*} data
  * @returns {string}
  * @throws {RangeError} when format unexpected
  */
 function makeReproducible (format, data) {
-  switch (format.toLowerCase()) {
-    case 'xml':
+  switch (format) {
+    case 'XML':
       return makeXmlReproducible(data)
-    case 'json':
+    case 'JSON':
       return makeJsonReproducible(data)
-    default:
+    default: // just in case
       throw new RangeError(`unexpected format: ${format}`)
   }
 }
