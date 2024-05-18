@@ -128,7 +128,7 @@ suite('integration', () => {
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
     // At least we do validate here
     const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
-    assert.strictEqual(validationErrors, null)
+    assert.equal(validationErrors, null)
 
     sbom = makeReproducible(format, sbom)
 
@@ -176,7 +176,7 @@ suite('integration', () => {
         test('dogfooding', async () => {
           const sbom = runClI(projectRootPath, ['--output-format', format])
           const validationErrors = await validate(format, sbom, '1.5')
-          assert.strictEqual(validationErrors, null)
+          assert.equal(validationErrors, null)
         }).timeout(longTestTimeout)
       })
     })
@@ -192,7 +192,16 @@ suite('integration', () => {
 async function validate (format, value, specVersion) {
   switch (format) {
     case 'XML':
-      return await new Validation.XmlValidator(specVersion).validate(value)
+      try {
+        return await new Validation.XmlValidator(specVersion).validate(value)
+      } catch (err) {
+        if (err.constructor === Validation.MissingOptionalDependencyError) {
+          // might not be compiled for some Node-versions
+          // see https://github.com/marudor/libxmljs2/issues/209
+          return undefined
+        }
+        throw err
+      }
     case 'JSON':
       return await new Validation.JsonStrictValidator(specVersion).validate(value)
     default: // just in case
