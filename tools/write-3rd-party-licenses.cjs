@@ -23,14 +23,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
 const { createInterface: rlCreateInterface } = require('readline')
-const { spawnSync } = require('child_process')
-const { closeSync, existsSync, mkdtempSync, openSync, readFileSync, writeSync, createReadStream } = require('fs')
+const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('fs')
 const { join, resolve, dirname } = require('path')
+const unzip = require('extract-zip')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
 
 const projectRoot = join(__dirname, '..')
+
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
+process.once('exit', () => {
+  rmSync(tempDir, { recursive: true, force: true })
+})
 
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
@@ -42,17 +46,14 @@ const filePathInZipRE = /^(.+\.zip)[/\\](.+)$/
  * @param {Object.<string, string>} cache
  * @return {[undefined, undefined] | [string, *]}
  */
-function getPackageMP (filePath, cache) {
+async function getPackageMP (filePath, cache) {
   let searchRoot = projectRoot
   const zipMatch = filePathInZipRE.exec(filePath)
   if (zipMatch) {
     searchRoot = cache[zipMatch[1]]
     if (!searchRoot) {
       searchRoot = cache[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
-      const unz = spawnSync('unzip', [zipMatch[1], '-d', searchRoot])
-      if (unz.status !== 0) {
-        throw new Error(`something off with ${filePath}`)
-      }
+      await unzip(zipMatch[1], { dir: searchRoot })
     }
     filePath = join(searchRoot, zipMatch[2])
   }
@@ -83,7 +84,7 @@ async function main (outputFile, includeLicense) {
     if (bytesInOutput <= 0) {
       continue
     }
-    const [packageMP, PackageMD] = getPackageMP(resolve(projectRoot, filePath), packageMPcache)
+    const [packageMP, packageMD] = await getPackageMP(resolve(projectRoot, filePath), packageMPcache)
     if (!packageMP) {
       console.warn('ERROR: missing MP for:', filePath)
       continue
@@ -91,7 +92,7 @@ async function main (outputFile, includeLicense) {
     if (packageMPs.has(packageMP)) {
       continue
     }
-    packageMPs.set(packageMP, PackageMD)
+    packageMPs.set(packageMP, packageMD)
   }
 
   const tpLicenses = Array.from(
