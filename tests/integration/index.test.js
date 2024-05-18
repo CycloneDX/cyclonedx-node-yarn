@@ -195,7 +195,7 @@ async function validate (format, value, specVersion) {
       try {
         return await new Validation.XmlValidator(specVersion).validate(value)
       } catch (err) {
-        if (err.constructor === Validation.MissingOptionalDependencyError) {
+        if (err instanceof Validation.MissingOptionalDependencyError) {
           // might not be compiled for some Node-versions
           // see https://github.com/marudor/libxmljs2/issues/209
           return undefined
