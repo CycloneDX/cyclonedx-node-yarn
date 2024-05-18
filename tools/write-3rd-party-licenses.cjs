@@ -33,7 +33,7 @@ const projectRoot = join(__dirname, '..')
 
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 process.once('exit', () => {
-  rmSync(tempDir, {recursive:true,force:true})
+  rmSync(tempDir, { recursive: true, force: true })
 })
 
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
