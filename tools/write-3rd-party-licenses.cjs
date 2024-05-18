@@ -23,17 +23,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
 const { createInterface: rlCreateInterface } = require('readline')
-const { closeSync, existsSync, mkdtempSync, openSync, readFileSync, writeSync, createReadStream } = require('fs')
+const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('fs')
 const { join, resolve, dirname } = require('path')
 const unzip = require('extract-zip')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
-const { rimraf } = require('rimraf')
 
 const projectRoot = join(__dirname, '..')
 
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
-process.once('exit', () => { rimraf(tempDir) })
+process.once('exit', () => {
+  rmSync(tempDir, {recursive:true,force:true})
+})
 
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
@@ -83,7 +84,7 @@ async function main (outputFile, includeLicense) {
     if (bytesInOutput <= 0) {
       continue
     }
-    const [packageMP, PackageMD] = await getPackageMP(resolve(projectRoot, filePath), packageMPcache)
+    const [packageMP, packageMD] = await getPackageMP(resolve(projectRoot, filePath), packageMPcache)
     if (!packageMP) {
       console.warn('ERROR: missing MP for:', filePath)
       continue
@@ -91,7 +92,7 @@ async function main (outputFile, includeLicense) {
     if (packageMPs.has(packageMP)) {
       continue
     }
-    packageMPs.set(packageMP, PackageMD)
+    packageMPs.set(packageMP, packageMD)
   }
 
   const tpLicenses = Array.from(
