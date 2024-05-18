@@ -121,7 +121,7 @@
     "build:bundle-dev": "yarn build:bundle --source-map",
     "make-dist": "run-s -n make-dist:mkdir make-dist:cp make-dist:make-\\*",
     "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
-    "make-dist:cp": "node -r fs -r path -e 'process.chdir(process.env.PROJECT_CWD);j=path.join;c=fs.cpSync;d=`dist`;o={force:true,recursive:true};c(j(`bundles`,`@yarnpkg`,`plugin-cyclonedx.js`),j(d,`yarn-plugin-cyclonedx.cjs`));[`README.md`,`LICENSE`,`index.js`,`bin`].forEach(s=>c(s,j(d,s),o))'",
+    "make-dist:cp": "node -r fs -r path -e 'process.chdir(process.env.PROJECT_CWD);j=path.join;c=fs.cpSync;d=`dist`;c(j(`bundles`,`@yarnpkg`,`plugin-cyclonedx.js`),j(d,`yarn-plugin-cyclonedx.cjs`));[`README.md`,`LICENSE`,`index.js`,`bin`].forEach(s=>c(s,j(d,s),{recursive:true}))'",
     "make-dist:make-notice": "node $PROJECT_CWD/tools/write-3rd-party-licenses.cjs $PROJECT_CWD/dist/NOTICE",
     "make-dist:make-manifest": "node $PROJECT_CWD/tools/write-dist-manifest.cjs $PROJECT_CWD/dist/package.json",
     "clean": "rimraf bundles dist packed",
