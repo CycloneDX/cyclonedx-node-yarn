@@ -23,7 +23,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
 const { createInterface: rlCreateInterface } = require('readline')
-const { spawnSync } = require('child_process')
 const { closeSync, existsSync, mkdtempSync, openSync, readFileSync, writeSync, createReadStream } = require('fs')
 const { join, resolve, dirname } = require('path')
 const unzip = require('extract-zip')
@@ -34,7 +33,7 @@ const { rimraf } = require('rimraf')
 const projectRoot = join(__dirname, '..')
 
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
-process.once('exit', () => { rimraf(tempDir) });
+process.once('exit', () => { rimraf(tempDir) })
 
 const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
 const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
@@ -53,7 +52,7 @@ async function getPackageMP (filePath, cache) {
     searchRoot = cache[zipMatch[1]]
     if (!searchRoot) {
       searchRoot = cache[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
-      await unzip(zipMatch[1], {dir:searchRoot})
+      await unzip(zipMatch[1], { dir: searchRoot })
     }
     filePath = join(searchRoot, zipMatch[2])
   }
