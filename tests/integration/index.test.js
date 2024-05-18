@@ -141,7 +141,6 @@ suite('integration', () => {
   }
 
   suite('make SBOM', () => {
-
     test('version', () => {
       const res = runClI(projectRootPath, ['--version'])
       assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
@@ -149,7 +148,6 @@ suite('integration', () => {
 
     ['json', 'xml'].forEach(format => {
       suite(`format: ${format}`, () => {
-
         suite('plain', () => {
           testSetups.forEach(testSetup => {
             test(`${testSetup}`,
@@ -171,7 +169,7 @@ suite('integration', () => {
         suite('short PURLs', () => {
           const testSetup = 'juice-shop'
           test(`${testSetup}`,
-            () => runTest('short-PURLs', testSetup, format,  ['--short-PURLs'])
+            () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
           ).timeout(longTestTimeout)
         })
 
@@ -180,7 +178,6 @@ suite('integration', () => {
           const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
           assert.strictEqual(validationErrors, null)
         }).timeout(longTestTimeout)
-
       })
     })
   })
