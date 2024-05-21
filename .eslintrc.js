@@ -59,8 +59,8 @@ module.exports = {
     {
       files: ['*.ts'],
       extends: [
-        /** @see https://github.com/standard/ts-standard */
-        'standard-with-typescript'
+        /** @see https://www.npmjs.com/package/eslint-config-love */
+        'love'
       ],
       parserOptions: {
         project: './tsconfig.json'
