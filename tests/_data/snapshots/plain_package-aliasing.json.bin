@@ -46,7 +46,7 @@
       "version": "0.0.1",
       "bom-ref": "package-aliasing@workspace:.",
       "description": "demo: a package is aliased with a different name",
-      "purl": "pkg:npm/package-aliasing@0.0.1?"
+      "purl": "pkg:npm/package-aliasing@0.0.1"
     },
     "properties": [
       {
@@ -3170,7 +3170,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-pipeline@1.2.4?"
+      "purl": "pkg:npm/minipass-pipeline@1.2.4"
     },
     {
       "type": "library",

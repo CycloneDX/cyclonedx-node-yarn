@@ -37,7 +37,7 @@
       <name>demo-package-with-build-id</name>
       <version>1.0.0-123+456</version>
       <description>demo: package-with-build-id -- show how buildID in the version looks like</description>
-      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456?</purl>
+      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
