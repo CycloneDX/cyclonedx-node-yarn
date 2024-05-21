@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 // import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
-import { FromNodePackageJson as PJF, LicenseFactory, PackageUrlFactory } from '@cyclonedx/cyclonedx-library/Factories'
+import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
 import * as Serialize from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
@@ -160,7 +160,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
         extRefFactory,
         new LicenseFactory()
       ),
-      new PackageUrlFactory('npm'),
+      new PJF.PackageUrlFactory('npm'),
       {
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
