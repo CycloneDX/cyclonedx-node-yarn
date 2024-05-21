@@ -276,11 +276,11 @@ function makeXmlReproducible (xml) {
     ).replace(
       // replace metadata.tools.version
       new RegExp(
-        '        <vendor>cyclonedx</vendor>\n' +
+        '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
         '        <version>.+?</version>'
       ),
-      '        <vendor>cyclonedx</vendor>\n' +
+      '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     )
