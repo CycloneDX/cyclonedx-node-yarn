@@ -42,7 +42,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-local-deps@0.0.0?</purl>
+      <purl>pkg:npm/demo-local-deps@0.0.0</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
@@ -83,7 +83,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-local-b-off@0.0.0?</purl>
+      <purl>pkg:npm/my-local-b-off@0.0.0</purl>
     </component>
     <component type="library" bom-ref="my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.">
       <name>my-noname</name>
@@ -94,7 +94,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/my-noname@0.0.0?</purl>
+      <purl>pkg:npm/my-noname@0.0.0</purl>
     </component>
   </components>
   <dependencies>

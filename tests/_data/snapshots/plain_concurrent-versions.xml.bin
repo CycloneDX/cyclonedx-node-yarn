@@ -37,7 +37,7 @@
       <name>concurrent-versions</name>
       <version>0.0.1</version>
       <description>demo: multiple dependencies requiring concurrent versions of `chalk`</description>
-      <purl>pkg:npm/concurrent-versions@0.0.1?</purl>
+      <purl>pkg:npm/concurrent-versions@0.0.1</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>

@@ -1253,7 +1253,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@1.1.1?"
+      "purl": "pkg:npm/%40npmcli/fs@1.1.1"
     },
     {
       "type": "library",
@@ -20847,7 +20847,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-collect@1.0.2?"
+      "purl": "pkg:npm/minipass-collect@1.0.2"
     },
     {
       "type": "library",
@@ -20999,7 +20999,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-pipeline@1.2.4?"
+      "purl": "pkg:npm/minipass-pipeline@1.2.4"
     },
     {
       "type": "library",
@@ -28779,7 +28779,7 @@
       "bom-ref": "spawn-command@npm:0.0.2",
       "author": "Maciej Małecki",
       "description": "Spawn commands like `child_process.exec` does but return a `ChildProcess`",
-      "purl": "pkg:npm/spawn-command@0.0.2?"
+      "purl": "pkg:npm/spawn-command@0.0.2"
     },
     {
       "type": "library",

@@ -966,7 +966,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/fs@1.1.1?</purl>
+      <purl>pkg:npm/%40npmcli/fs@1.1.1</purl>
     </component>
     <component type="library" bom-ref="@npmcli/fs@npm:3.1.0">
       <author>GitHub Inc.</author>
@@ -15938,7 +15938,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-collect@1.0.2?</purl>
+      <purl>pkg:npm/minipass-collect@1.0.2</purl>
     </component>
     <component type="library" bom-ref="minipass-collect@npm:2.0.1">
       <author>Isaac Z. Schlueter</author>
@@ -16053,7 +16053,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-pipeline@1.2.4?</purl>
+      <purl>pkg:npm/minipass-pipeline@1.2.4</purl>
     </component>
     <component type="library" bom-ref="minipass-sized@npm:1.0.3">
       <author>Isaac Z. Schlueter</author>
@@ -21997,7 +21997,7 @@
       <name>spawn-command</name>
       <version>0.0.2</version>
       <description>Spawn commands like `child_process.exec` does but return a `ChildProcess`</description>
-      <purl>pkg:npm/spawn-command@0.0.2?</purl>
+      <purl>pkg:npm/spawn-command@0.0.2</purl>
     </component>
     <component type="library" bom-ref="spdx-correct@npm:3.2.0">
       <name>spdx-correct</name>

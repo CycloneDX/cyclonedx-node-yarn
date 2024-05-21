@@ -42,7 +42,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/demo-dev-dependencies@0.0.0?</purl>
+      <purl>pkg:npm/demo-dev-dependencies@0.0.0</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
