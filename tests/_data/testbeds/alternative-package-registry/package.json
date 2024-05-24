@@ -1,0 +1,12 @@
+{
+  "name": "demo-alternative-package-registry",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: alternative-package-registry -- showcase how lternative package registrier affect the result",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+  }
+}
