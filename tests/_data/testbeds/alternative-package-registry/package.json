@@ -8,7 +8,7 @@
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^6.9.5"
+    "@cyclonedx/cyclonedx-library": "6.9.5"
   },
   "resolutions": {
     "$comment": "some optional dependencies are overridden",
