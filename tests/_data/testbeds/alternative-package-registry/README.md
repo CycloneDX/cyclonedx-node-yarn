@@ -8,4 +8,4 @@ See
 - yarn rfc: <https://github.com/yarnpkg/rfcs/blob/master/accepted/0000-switching-registries.md>  
 - yarn docs: <https://yarnpkg.com/configuration/yarnrc#npmScopes>
 
-This setup has `@std/semver` installed from alternative package registry <https:/jsr.io>.
+This setup has `@act/act` installed from alternative package registry <https:/jsr.io>.

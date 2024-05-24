@@ -8,6 +8,6 @@
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "dependencies": {
-    "@std/semver": "npm:@jsr/std__semver@^0.224.0"
+    "@act/act": "npm:@jsr/act__act@^0.1.3"
   }
 }

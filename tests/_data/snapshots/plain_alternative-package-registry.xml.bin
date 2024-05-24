@@ -49,23 +49,23 @@
     </properties>
   </metadata>
   <components>
-    <component type="library" bom-ref="@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz">
+    <component type="library" bom-ref="@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz">
       <group>@jsr</group>
-      <name>std__semver</name>
-      <version>0.224.0</version>
-      <purl>pkg:npm/%40jsr/std__semver@0.224.0</purl>
+      <name>act__act</name>
+      <version>0.1.3</version>
+      <purl>pkg:npm/%40jsr/act__act@0.1.3</purl>
       <externalReferences>
         <reference type="website">
-          <url>https://jsr.io/@std/semver</url>
+          <url>https://jsr.io/@act/act</url>
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
     </component>
   </components>
   <dependencies>
-    <dependency ref="@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz"/>
+    <dependency ref="@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz"/>
     <dependency ref="demo-alternative-package-registry@workspace:.">
-      <dependency ref="@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz"/>
+      <dependency ref="@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz"/>
     </dependency>
   </dependencies>
 </bom>
