@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import type { Builders, Factories } from '@cyclonedx/cyclonedx-library'
-// import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
+// import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
+import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
-import * as Models from '@cyclonedx/cyclonedx-library/Models'
-import { Component, Property } from '@cyclonedx/cyclonedx-library/Models'
+import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
+import { Bom, Component, type License, Property, type Tool } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -42,9 +42,9 @@ interface BomBuilderOptions {
 }
 
 export class BomBuilder {
-  toolBuilder: Builders.FromNodePackageJson.ToolBuilder
-  componentBuilder: Builders.FromNodePackageJson.ComponentBuilder
-  purlFactory: Factories.FromNodePackageJson.PackageUrlFactory
+  toolBuilder: PJB.ToolBuilder
+  componentBuilder: PJB.ComponentBuilder
+  purlFactory: PJF.PackageUrlFactory
 
   omitDevDependencies: boolean
   metaComponentType: ComponentType
@@ -72,21 +72,21 @@ export class BomBuilder {
     this.console = console_
   }
 
-  async buildFromWorkspace (workspace: Workspace): Promise<Models.Bom> {
+  async buildFromWorkspace (workspace: Workspace): Promise<Bom> {
     // @TODO make switch to disable load from fs
     const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(workspace.project)
 
-    const setLicensesDeclared = function (license: Models.License): void {
+    const setLicensesDeclared = function (license: License): void {
       license.acknowledgement = LicenseAcknowledgement.Declared
     }
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
      * as we need to enforce a proper root component to enable all features of SBOM */
-    const rootComponent: Models.Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
+    const rootComponent: Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
       new DummyComponent(this.metaComponentType, 'RootComponent')
     rootComponent.licenses.forEach(setLicensesDeclared)
 
-    const bom = new Models.Bom()
+    const bom = new Bom()
 
     // region metadata
 
@@ -134,7 +134,7 @@ export class BomBuilder {
     return bom
   }
 
-  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Models.Component | false | undefined {
+  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Component | false | undefined {
     return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
@@ -159,7 +159,7 @@ export class BomBuilder {
     pkg: Package,
     fetchManifest: ManifestFetcher,
     type?: ComponentType | undefined
-  ): Promise<Models.Component | false | undefined> {
+  ): Promise<Component | false | undefined> {
     const data = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
@@ -168,7 +168,7 @@ export class BomBuilder {
     return this.makeComponent(pkg, data, type)
   }
 
-  private makeComponent (locator: Locator, data: any, type?: ComponentType | undefined): Models.Component | false | undefined {
+  private makeComponent (locator: Locator, data: any, type?: ComponentType | undefined): Component | false | undefined {
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const dataC = structuredClonePolyfill(data)
     normalizePackageData(dataC as normalizePackageData.Input)
@@ -195,7 +195,7 @@ export class BomBuilder {
     return component
   }
 
-  private makePurl (component: Models.Component): PackageURL | undefined {
+  private makePurl (component: Component): PackageURL | undefined {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined
@@ -209,7 +209,7 @@ export class BomBuilder {
     return purl
   }
 
-  private async * makeTools (): AsyncGenerator<Models.Tool> {
+  private async * makeTools (): AsyncGenerator<Tool> {
     for (const nfo of Object.values(await getBuildtimeInfo())) {
       const tool = this.toolBuilder.makeTool(nfo)
       if (tool !== undefined) {
@@ -233,13 +233,13 @@ export class BomBuilder {
   }
 
   async * gatherDependencies (
-    component: Models.Component, pkg: Package,
+    component: Component, pkg: Package,
     project: Project,
     fetchManifest: ManifestFetcher
-  ): AsyncGenerator<Models.Component> {
+  ): AsyncGenerator<Component> {
     // ATTENTION: multiple packages may have the same `identHash`, but the `locatorHash` is unique.
-    const knownComponents = new Map<LocatorHash, Models.Component>([[pkg.locatorHash, component]])
-    const pending: [[Package, Models.Component]] = [[pkg, component]]
+    const knownComponents = new Map<LocatorHash, Component>([[pkg.locatorHash, component]])
+    const pending: [[Package, Component]] = [[pkg, component]]
     let pendingEntry
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
@@ -271,7 +271,7 @@ export class BomBuilder {
 }
 
 class DummyComponent extends Component {
-  constructor (type: Models.Component['type'], name: Models.Component['name']) {
+  constructor (type: Component['type'], name: Component['name']) {
     super(type, `DummyComponent.${name}`, {
       bomRef: `DummyComponent.${name}`,
       description: `This is a dummy component "${name}" that fills the gap where the actual built failed.`

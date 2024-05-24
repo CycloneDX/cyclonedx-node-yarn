@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-// import sub-modules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
+// import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
 import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
-import * as Serialize from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
@@ -175,13 +175,13 @@ export class MakeSbomCommand extends Command<CommandContext> {
       throw new Error('unsupported spec-version')
     }
 
-    let serializer: Serialize.Types.Serializer
+    let serializer: SerializeTypes.Serializer
     switch (this.outputFormat) {
       case OutputFormat.XML:
-        serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+        serializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
         break
       case OutputFormat.JSON:
-        serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+        serializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
         break
     }
 
