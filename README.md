@@ -17,7 +17,8 @@ Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.
 
 See the projects issues, discussions, pull requests and milestone for the progress.
 
-- planning/vision: https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8
+- planning/vision: <https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8>
+- progress v1.0: <https://github.com/CycloneDX/cyclonedx-node-yarn/milestone/1>
 
 Development will happen in branch `1.0-dev`.
 
