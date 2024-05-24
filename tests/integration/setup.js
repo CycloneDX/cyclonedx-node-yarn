@@ -27,13 +27,13 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   const REQUIRES_INSTALL = [
     /* region functional tests */
     // !! none of the following ACTUALLY REQUIRES an installation - lock files are enough
-    // 'alternative-package-registry', << requires private auth -- see https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package
+    'alternative-package-registry',
     'bundled-dependencies',
     'concurrent-versions',
     'dev-dependencies',
     'git-protocol-dependency',
     'github-protocol-dependency',
-    // 'juice-shop',
+    // 'juice-shop', << may have problems to install on certain systems ...
     'local-dependencies',
     'local-workspaces',
     'package-aliasing',

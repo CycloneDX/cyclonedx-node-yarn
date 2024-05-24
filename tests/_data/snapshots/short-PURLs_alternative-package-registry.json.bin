@@ -66,265 +66,29 @@
   "components": [
     {
       "type": "library",
-      "name": "cyclonedx-library",
-      "group": "@cyclonedx",
-      "version": "6.9.5",
-      "bom-ref": "@cyclonedx/cyclonedx-library@npm:6.9.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40cyclonedx%2Fcyclonedx-library%2F6.9.5%2F3d829e61072f54e9ea240b8671826b76236d19e2",
-      "author": "Jan Kowalleck",
-      "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.9.5",
+      "name": "std__semver",
+      "group": "@jsr",
+      "version": "0.224.0",
+      "bom-ref": "@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz",
+      "purl": "pkg:npm/%40jsr/std__semver@0.224.0",
       "externalReferences": [
         {
-          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+          "url": "https://jsr.io/@std/semver",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
       ]
-    },
-    {
-      "type": "library",
-      "name": "ajv-formats-draft2019",
-      "version": "0.0.0",
-      "bom-ref": "ajv-formats-draft2019@file:./_dep_override#./_dep_override::hash=f1b674&locator=demo-alternative-package-registry%40workspace%3A.",
-      "description": "this package was overridden",
-      "purl": "pkg:npm/ajv-formats-draft2019@0.0.0"
-    },
-    {
-      "type": "library",
-      "name": "ajv-formats",
-      "version": "0.0.0",
-      "bom-ref": "ajv-formats@file:./_dep_override#./_dep_override::hash=2b0e79&locator=demo-alternative-package-registry%40workspace%3A.",
-      "description": "this package was overridden",
-      "purl": "pkg:npm/ajv-formats@0.0.0"
-    },
-    {
-      "type": "library",
-      "name": "ajv",
-      "version": "0.0.0",
-      "bom-ref": "ajv@file:./_dep_override#./_dep_override::hash=56db7f&locator=demo-alternative-package-registry%40workspace%3A.",
-      "description": "this package was overridden",
-      "purl": "pkg:npm/ajv@0.0.0"
-    },
-    {
-      "type": "library",
-      "name": "libxmljs2",
-      "version": "0.0.0",
-      "bom-ref": "libxmljs2@file:./_dep_override#./_dep_override::hash=4dbea7&locator=demo-alternative-package-registry%40workspace%3A.",
-      "description": "this package was overridden",
-      "purl": "pkg:npm/libxmljs2@0.0.0"
-    },
-    {
-      "type": "library",
-      "name": "packageurl-js",
-      "version": "1.2.1",
-      "bom-ref": "packageurl-js@npm:1.2.1",
-      "author": "the purl authors",
-      "description": "JavaScript library to parse and build \"purl\" aka. package URLs. This is a microlibrary implementing the purl spec at https://github.com/package-url",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/packageurl-js@1.2.1",
-      "externalReferences": [
-        {
-          "url": "https://github.com/package-url/packageurl-js/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/package-url/packageurl-js.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/package-url/packageurl-js#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-exceptions",
-      "version": "2.5.0",
-      "bom-ref": "spdx-exceptions@npm:2.5.0",
-      "author": "The Linux Foundation",
-      "description": "list of SPDX standard license exceptions",
-      "licenses": [
-        {
-          "license": {
-            "id": "CC-BY-3.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-exceptions@2.5.0",
-      "externalReferences": [
-        {
-          "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/kemitchell/spdx-exceptions.json.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/kemitchell/spdx-exceptions.json#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-expression-parse",
-      "version": "4.0.0",
-      "bom-ref": "spdx-expression-parse@npm:4.0.0",
-      "author": "Kyle E. Mitchell",
-      "description": "parse SPDX license expressions",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-expression-parse@4.0.0",
-      "externalReferences": [
-        {
-          "url": "https://github.com/jslicense/spdx-expression-parse.js/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/jslicense/spdx-expression-parse.js.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/jslicense/spdx-expression-parse.js#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "spdx-license-ids",
-      "version": "3.0.18",
-      "bom-ref": "spdx-license-ids@npm:3.0.18",
-      "author": "Shinnosuke Watanabe",
-      "description": "A list of SPDX license identifiers",
-      "licenses": [
-        {
-          "license": {
-            "id": "CC0-1.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/spdx-license-ids@3.0.18",
-      "externalReferences": [
-        {
-          "url": "https://github.com/jslicense/spdx-license-ids/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/jslicense/spdx-license-ids.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/jslicense/spdx-license-ids#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "xmlbuilder2",
-      "version": "0.0.0",
-      "bom-ref": "xmlbuilder2@file:./_dep_override#./_dep_override::hash=c8b3c0&locator=demo-alternative-package-registry%40workspace%3A.",
-      "description": "this package was overridden",
-      "purl": "pkg:npm/xmlbuilder2@0.0.0"
     }
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/cyclonedx-library@npm:6.9.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40cyclonedx%2Fcyclonedx-library%2F6.9.5%2F3d829e61072f54e9ea240b8671826b76236d19e2",
-      "dependsOn": [
-        "ajv-formats-draft2019@file:./_dep_override#./_dep_override::hash=f1b674&locator=demo-alternative-package-registry%40workspace%3A.",
-        "ajv-formats@file:./_dep_override#./_dep_override::hash=2b0e79&locator=demo-alternative-package-registry%40workspace%3A.",
-        "ajv@file:./_dep_override#./_dep_override::hash=56db7f&locator=demo-alternative-package-registry%40workspace%3A.",
-        "libxmljs2@file:./_dep_override#./_dep_override::hash=4dbea7&locator=demo-alternative-package-registry%40workspace%3A.",
-        "packageurl-js@npm:1.2.1",
-        "spdx-expression-parse@npm:4.0.0",
-        "xmlbuilder2@file:./_dep_override#./_dep_override::hash=c8b3c0&locator=demo-alternative-package-registry%40workspace%3A."
-      ]
-    },
-    {
-      "ref": "ajv-formats-draft2019@file:./_dep_override#./_dep_override::hash=f1b674&locator=demo-alternative-package-registry%40workspace%3A."
-    },
-    {
-      "ref": "ajv-formats@file:./_dep_override#./_dep_override::hash=2b0e79&locator=demo-alternative-package-registry%40workspace%3A."
-    },
-    {
-      "ref": "ajv@file:./_dep_override#./_dep_override::hash=56db7f&locator=demo-alternative-package-registry%40workspace%3A."
+      "ref": "@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz"
     },
     {
       "ref": "demo-alternative-package-registry@workspace:.",
       "dependsOn": [
-        "@cyclonedx/cyclonedx-library@npm:6.9.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40cyclonedx%2Fcyclonedx-library%2F6.9.5%2F3d829e61072f54e9ea240b8671826b76236d19e2"
+        "@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz"
       ]
-    },
-    {
-      "ref": "libxmljs2@file:./_dep_override#./_dep_override::hash=4dbea7&locator=demo-alternative-package-registry%40workspace%3A."
-    },
-    {
-      "ref": "packageurl-js@npm:1.2.1"
-    },
-    {
-      "ref": "spdx-exceptions@npm:2.5.0"
-    },
-    {
-      "ref": "spdx-expression-parse@npm:4.0.0",
-      "dependsOn": [
-        "spdx-exceptions@npm:2.5.0",
-        "spdx-license-ids@npm:3.0.18"
-      ]
-    },
-    {
-      "ref": "spdx-license-ids@npm:3.0.18"
-    },
-    {
-      "ref": "xmlbuilder2@file:./_dep_override#./_dep_override::hash=c8b3c0&locator=demo-alternative-package-registry%40workspace%3A."
     }
   ]
 }

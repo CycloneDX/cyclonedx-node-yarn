@@ -5,50 +5,10 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@cyclonedx/cyclonedx-library@npm:^6.9.5":
-  version: 6.9.5
-  resolution: "@cyclonedx/cyclonedx-library@npm:6.9.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40cyclonedx%2Fcyclonedx-library%2F6.9.5%2F3d829e61072f54e9ea240b8671826b76236d19e2"
-  dependencies:
-    ajv: "npm:^8.12.0"
-    ajv-formats: "npm:^3.0.1"
-    ajv-formats-draft2019: "npm:^1.6.1"
-    libxmljs2: "npm:^0.31 || ^0.32 || ^0.33"
-    packageurl-js: "npm:>=0.0.6 <0.0.8 || ^1"
-    spdx-expression-parse: "npm:^3.0.1 || ^4"
-    xmlbuilder2: "npm:^3.0.2"
-  dependenciesMeta:
-    ajv:
-      optional: true
-    ajv-formats:
-      optional: true
-    ajv-formats-draft2019:
-      optional: true
-    libxmljs2:
-      optional: true
-    xmlbuilder2:
-      optional: true
-  checksum: 10c0/a244c9e04b700bad9d1af3ebfb8f9fec9dbe300d65231f0e8629dc55c6d355e77011f586809ff7876a98dac4e817bec5a9a1b0c523b2d8e4b7155117cf0cf5ca
-  languageName: node
-  linkType: hard
-
-"ajv-formats-draft2019@file:./_dep_override::locator=demo-alternative-package-registry%40workspace%3A.":
-  version: 0.0.0
-  resolution: "ajv-formats-draft2019@file:./_dep_override#./_dep_override::hash=f1b674&locator=demo-alternative-package-registry%40workspace%3A."
-  checksum: 10c0/09293751473ded18ede58365325f0c11a5997ea54ea06975f7b214c412a31d675fc3b579cc7171c6c7dbc55fc70489048f3d643e768a8e7281e5d56b194c6cc0
-  languageName: node
-  linkType: hard
-
-"ajv-formats@file:./_dep_override::locator=demo-alternative-package-registry%40workspace%3A.":
-  version: 0.0.0
-  resolution: "ajv-formats@file:./_dep_override#./_dep_override::hash=2b0e79&locator=demo-alternative-package-registry%40workspace%3A."
-  checksum: 10c0/cae4a2933c3889e2de61b0ebc9bf430cb8c942711ce672324d534b30448892202bfaa543c323e90e99aa348fea6a638cb0344aa3241e5ca60412d55fd713a78e
-  languageName: node
-  linkType: hard
-
-"ajv@file:./_dep_override::locator=demo-alternative-package-registry%40workspace%3A.":
-  version: 0.0.0
-  resolution: "ajv@file:./_dep_override#./_dep_override::hash=56db7f&locator=demo-alternative-package-registry%40workspace%3A."
-  checksum: 10c0/ddd89d406026cfa818b8a9fbe781a658f98d1986f884645d816dca5a56c7da89cb24fc15ea664b989dc37308b6e3d931a0fd65e272289c74b997078ac4ae2203
+"@std/semver@npm:@jsr/std__semver@^0.224.0":
+  version: 0.224.0
+  resolution: "@jsr/std__semver@npm:0.224.0::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__semver%2F0.224.0.tgz"
+  checksum: 10c0/0d0c246bf84d646e4fe0a8bede557aa2fbb9caf31aabdb8659800f96730e5e2435855d086051c76a237185a0f9899739ef1bd8675ab5a9eec3315a2280ada769
   languageName: node
   linkType: hard
 
@@ -56,51 +16,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "demo-alternative-package-registry@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^6.9.5"
+    "@std/semver": "npm:@jsr/std__semver@^0.224.0"
   languageName: unknown
   linkType: soft
-
-"libxmljs2@file:./_dep_override::locator=demo-alternative-package-registry%40workspace%3A.":
-  version: 0.0.0
-  resolution: "libxmljs2@file:./_dep_override#./_dep_override::hash=4dbea7&locator=demo-alternative-package-registry%40workspace%3A."
-  checksum: 10c0/531ecc4787159a0f2c66120c103f7979ec3f42539d26562590ddc330e466b56214d6e4a892abd49a4f63a0464800d6c00b8bf0b6dcf405c78794d5846af8e96b
-  languageName: node
-  linkType: hard
-
-"packageurl-js@npm:>=0.0.6 <0.0.8 || ^1":
-  version: 1.2.1
-  resolution: "packageurl-js@npm:1.2.1"
-  checksum: 10c0/52e45da7704a2bc70baa3f2643dc48bbf60787379318781d84336954dc6b14c34ad9697f11a47798410d7cafaec3f4b8b878707cccf5edb62a6a5fa4fdb50491
-  languageName: node
-  linkType: hard
-
-"spdx-exceptions@npm:^2.1.0":
-  version: 2.5.0
-  resolution: "spdx-exceptions@npm:2.5.0"
-  checksum: 10c0/37217b7762ee0ea0d8b7d0c29fd48b7e4dfb94096b109d6255b589c561f57da93bf4e328c0290046115961b9209a8051ad9f525e48d433082fc79f496a4ea940
-  languageName: node
-  linkType: hard
-
-"spdx-expression-parse@npm:^3.0.1 || ^4":
-  version: 4.0.0
-  resolution: "spdx-expression-parse@npm:4.0.0"
-  dependencies:
-    spdx-exceptions: "npm:^2.1.0"
-    spdx-license-ids: "npm:^3.0.0"
-  checksum: 10c0/965c487e77f4fb173f1c471f3eef4eb44b9f0321adc7f93d95e7620da31faa67d29356eb02523cd7df8a7fc1ec8238773cdbf9e45bd050329d2b26492771b736
-  languageName: node
-  linkType: hard
-
-"spdx-license-ids@npm:^3.0.0":
-  version: 3.0.18
-  resolution: "spdx-license-ids@npm:3.0.18"
-  checksum: 10c0/c64ba03d4727191c8fdbd001f137d6ab51386c350d5516be8a4576c2e74044cb27bc8a758f6a04809da986cc0b14213f069b04de72caccecbc9f733753ccde32
-  languageName: node
-  linkType: hard
-
-"xmlbuilder2@file:./_dep_override::locator=demo-alternative-package-registry%40workspace%3A.":
-  version: 0.0.0
-  resolution: "xmlbuilder2@file:./_dep_override#./_dep_override::hash=c8b3c0&locator=demo-alternative-package-registry%40workspace%3A."
-  checksum: 10c0/75eb5e3f1835f6276d7acc71c8e01da65cdd7c7997cd4164e8942cc24c505d7015dd21236a40a8730e478e8dd9c3cf6454c3419d5c6e9bf4406e29f4b5e76110
-  languageName: node
-  linkType: hard

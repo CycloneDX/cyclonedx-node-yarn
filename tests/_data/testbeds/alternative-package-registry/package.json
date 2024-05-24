@@ -8,14 +8,6 @@
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "6.9.5"
-  },
-  "resolutions": {
-    "$comment": "some optional dependencies are overridden",
-    "ajv": "file:./_dep_override",
-    "ajv-formats": "file:./_dep_override",
-    "ajv-formats-draft2019": "file:./_dep_override",
-    "libxmljs2": "file:./_dep_override",
-    "xmlbuilder2": "file:./_dep_override"
+    "@std/semver": "npm:@jsr/std__semver@^0.224.0"
   }
 }
