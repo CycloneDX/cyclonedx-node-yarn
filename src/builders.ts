@@ -149,9 +149,13 @@ export class BomBuilder {
       cacheOptions: { skipIntegrityCheck: true }
     }
     return async function (pkg: Package): Promise<any> {
-      const { packageFs, prefixPath } = await fetcher.fetch(pkg, fetcherOptions)
-      const manifestPath = ppath.join(prefixPath, 'package.json')
-      return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+      const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
+      try {
+        const manifestPath = ppath.join(prefixPath, 'package.json')
+        return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+      } finally {
+        releaseFs && releaseFs()
+      }
     }
   }
 
