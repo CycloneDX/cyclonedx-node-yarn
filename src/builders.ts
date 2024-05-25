@@ -154,7 +154,9 @@ export class BomBuilder {
         const manifestPath = ppath.join(prefixPath, 'package.json')
         return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
       } finally {
-        releaseFs && releaseFs()
+        if (releaseFs !== undefined) {
+          releaseFs()
+        }
       }
     }
   }
