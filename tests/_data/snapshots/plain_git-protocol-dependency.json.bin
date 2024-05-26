@@ -66,6 +66,46 @@
   "components": [
     {
       "type": "library",
+      "name": "cyclonedx-library_clone",
+      "group": "@cyclonedx",
+      "version": "6.6.0",
+      "bom-ref": "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+      "author": "Jan Kowalleck",
+      "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library_clone@6.6.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23commit%3D94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+          "type": "distribution",
+          "comment": "as detected from YarnLocator property \"reference\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.4.2",
@@ -638,6 +678,40 @@
         }
       ],
       "purl": "pkg:npm/ajv-formats@2.1.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ajv-validator/ajv-formats/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/ajv-validator/ajv-formats.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ajv-validator/ajv-formats#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ajv-formats",
+      "version": "3.0.1",
+      "bom-ref": "ajv-formats@npm:3.0.1 [10c71]",
+      "author": "Evgeny Poberezkin",
+      "description": "Format validation for Ajv v7+",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ajv-formats@3.0.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git",
       "externalReferences": [
         {
           "url": "https://github.com/ajv-validator/ajv-formats/issues",
@@ -5698,6 +5772,18 @@
   ],
   "dependencies": [
     {
+      "ref": "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+      "dependsOn": [
+        "ajv-formats-draft2019@npm:1.6.1 [f1690]",
+        "ajv-formats@npm:3.0.1 [10c71]",
+        "ajv@npm:8.12.0",
+        "libxmljs2@npm:0.33.0",
+        "packageurl-js@npm:1.2.1",
+        "spdx-expression-parse@npm:4.0.0",
+        "xmlbuilder2@npm:3.1.1"
+      ]
+    },
+    {
       "ref": "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "dependsOn": [
         "ajv-formats-draft2019@npm:1.6.1 [f1690]",
@@ -5814,6 +5900,12 @@
     },
     {
       "ref": "ajv-formats@npm:2.1.1 [f1690]",
+      "dependsOn": [
+        "ajv@npm:8.12.0"
+      ]
+    },
+    {
+      "ref": "ajv-formats@npm:3.0.1 [10c71]",
       "dependsOn": [
         "ajv@npm:8.12.0"
       ]
@@ -6022,6 +6114,7 @@
     {
       "ref": "git-protocol-dependency@workspace:.",
       "dependsOn": [
+        "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
         "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7"
       ]
     },

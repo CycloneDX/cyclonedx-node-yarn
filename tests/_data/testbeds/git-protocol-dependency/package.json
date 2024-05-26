@@ -6,7 +6,8 @@
   "license": "Apache-2.0",
   "packageManager": "yarn@4.1.0",
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2"
+    "@cyclonedx/cyclonedx-library": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2",
+    "@cyclonedx/cyclonedx-library_clone": "git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.6.0"
   },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"

@@ -21,6 +21,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { type Locator, structUtils } from '@yarnpkg/core'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import { githubUtils as YarnPluginGithubUtils } from '@yarnpkg/plugin-github'
+import GitHost from 'hosted-git-info'
 
 import { isString } from './_helpers'
 
@@ -44,6 +45,9 @@ export function getPackageSource (locator: Locator): PackageSourceResult {
 
 type PackageSourceCandidate = (locator: Locator) => PackageSourceResult | false | undefined
 
+/**
+ * implementations for yarn's built-in/shipped protocols and resolvers
+ */
 const packageSourceCandidates: PackageSourceCandidate[] = [
   function /* workspace */ (locator: Locator): PackageSourceResult | false | undefined {
     if (!locator.reference.startsWith('workspace:')) {
@@ -79,8 +83,12 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     if (!YarnPluginGitUtils.isGitUrl(locator.reference)) {
       return false
     }
+    const gitInfo = GitHost.fromUrl(locator.reference)
     // TODO sanitize & remove secrets
-    return [locator.reference, 'as detected from YarnLocator property "reference"']
+    return [
+      gitInfo?.toString() ?? locator.reference,
+      'as detected from YarnLocator property "reference"'
+    ]
   },
   function /* https */ (locator: Locator): PackageSourceResult | false | undefined {
     // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-http/sources/urlUtils.ts#L9

@@ -31,6 +31,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.6.0":
+  version: 6.6.0
+  resolution: "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec"
+  dependencies:
+    ajv: "npm:^8.12.0"
+    ajv-formats: "npm:^3.0.1"
+    ajv-formats-draft2019: "npm:^1.6.1"
+    libxmljs2: "npm:^0.31 || ^0.32 || ^0.33"
+    packageurl-js: "npm:>=0.0.6 <0.0.8 || ^1"
+    spdx-expression-parse: "npm:^3.0.1 || ^4"
+    xmlbuilder2: "npm:^3.0.2"
+  dependenciesMeta:
+    ajv:
+      optional: true
+    ajv-formats:
+      optional: true
+    ajv-formats-draft2019:
+      optional: true
+    libxmljs2:
+      optional: true
+    xmlbuilder2:
+      optional: true
+  checksum: 10c0/d75eb95dabb6f249f74ec8c39407928000184a836dfd9ed5db98840f9bda12913eca81b2459e8c2c37970cc28d347341d85dc1cdc92cde2fa1a7416a3090ab6d
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -197,6 +223,20 @@ __metadata:
     ajv:
       optional: true
   checksum: 10c0/e43ba22e91b6a48d96224b83d260d3a3a561b42d391f8d3c6d2c1559f9aa5b253bfb306bc94bbeca1d967c014e15a6efe9a207309e95b3eaae07fcbcdc2af662
+  languageName: node
+  linkType: hard
+
+"ajv-formats@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "ajv-formats@npm:3.0.1"
+  dependencies:
+    ajv: "npm:^8.0.0"
+  peerDependencies:
+    ajv: ^8.0.0
+  peerDependenciesMeta:
+    ajv:
+      optional: true
+  checksum: 10c0/168d6bca1ea9f163b41c8147bae537e67bd963357a5488a1eaf3abe8baa8eec806d4e45f15b10767e6020679315c7e1e5e6803088dfb84efa2b4e9353b83dd0a
   languageName: node
   linkType: hard
 
@@ -566,6 +606,7 @@ __metadata:
   resolution: "git-protocol-dependency@workspace:."
   dependencies:
     "@cyclonedx/cyclonedx-library": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#v6.4.2"
+    "@cyclonedx/cyclonedx-library_clone": "git@github.com:CycloneDX/cyclonedx-javascript-library.git#v6.6.0"
   languageName: unknown
   linkType: soft
 
