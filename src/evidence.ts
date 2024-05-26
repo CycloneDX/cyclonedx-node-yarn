@@ -25,7 +25,7 @@ import GitHost from 'hosted-git-info'
 
 import { isString } from './_helpers'
 
-type PackageSourceUrl = URL | string
+type PackageSourceUrl = string
 type PackageSourceComment = string | undefined
 type PackageSourceResult = [PackageSourceUrl, PackageSourceComment] | undefined
 
@@ -95,12 +95,16 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     if (!locator.reference.startsWith('http:') && !locator.reference.startsWith('https:')) {
       return false
     }
+    let url: URL
     try {
-      // TODO sanitize & remove secrets
-      return [new URL(locator.reference), 'as detected from YarnLocator property "reference"']
+      url = new URL(locator.reference)
     } catch {
       return undefined // invalid URL
     }
+    // sanitize & remove secrets
+    url.username = ''
+    url.password = ''
+    return [url.toString(), 'as detected from YarnLocator property "reference"']
   },
   function /* link | portal */ (locator: Locator): false | undefined {
     if (!locator.reference.startsWith('link:') && !locator.reference.startsWith('portal:')) {
