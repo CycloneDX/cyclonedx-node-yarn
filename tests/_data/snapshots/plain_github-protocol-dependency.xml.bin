@@ -64,6 +64,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7</url>
+          <comment>as declared in `reference`</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>

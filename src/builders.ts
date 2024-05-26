@@ -194,11 +194,12 @@ export class BomBuilder {
       return undefined
     }
 
-    const packageSource = getPackageSource(locator)
-    if (packageSource !== undefined) {
-      if (packageSource instanceof URL || packageSource.length > 0) {
+    const packageSourceRes = getPackageSource(locator)
+    if (packageSourceRes !== undefined) {
+      const [packageSourceUrl, packageSourceComment] = packageSourceRes
+      if (packageSourceUrl instanceof URL || packageSourceUrl.length > 0) {
         component.externalReferences.add(
-          new ExternalReference(packageSource, ExternalReferenceType.Distribution)
+          new ExternalReference(packageSourceUrl, ExternalReferenceType.Distribution, { comment: packageSourceComment })
         )
       }
     }

@@ -64,6 +64,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz</url>
+          <comment>as declared in `reference`</comment>
         </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>

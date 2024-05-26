@@ -24,24 +24,28 @@ import { githubUtils as YarnPluginGithubUtils } from '@yarnpkg/plugin-github'
 
 import { isString } from './_helpers'
 
+type PackageSourceUrl = URL | string
+type PackageSourceComment = string | undefined
+type PackageSourceResult = [PackageSourceUrl, PackageSourceComment] | undefined
+
 /**
  * Scope is to detect package sources.
  * But unlike the actual YarnResolvers, not resolve them, but find evidence for the actually used ones.
  */
-export function getPackageSource (locator: Locator): URL | string | undefined {
+export function getPackageSource (locator: Locator): PackageSourceResult {
   for (const candidate of packageSourceCandidates) {
-    const source = candidate(locator)
-    if (source !== false && source !== undefined) {
-      return source
+    const res = candidate(locator)
+    if (res !== false && res !== undefined) {
+      return res
     }
   }
   return undefined
 }
 
-type PackageSourceCandidate = (locator: Locator) => URL | string | false | undefined
+type PackageSourceCandidate = (locator: Locator) => PackageSourceResult | false | undefined
 
 const packageSourceCandidates: PackageSourceCandidate[] = [
-  function /* workspace */ (locator: Locator): string | false | undefined {
+  function /* workspace */ (locator: Locator): PackageSourceResult | false | undefined {
     if (!locator.reference.startsWith('workspace:')) {
       return false
     }
@@ -49,41 +53,41 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-file
     return undefined
   },
-  function /* npm: */ (locator: Locator): string | false | undefined {
+  function /* npm: */ (locator: Locator): PackageSourceResult | false | undefined {
     if (!locator.reference.startsWith('npm:')) {
       return false
     }
     // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-npm/sources/NpmHttpFetcher.ts#L51
     const { params } = structUtils.parseRange(locator.reference)
     if (params !== null && isString(params.__archiveUrl)) {
-      return params.__archiveUrl
+      return [params.__archiveUrl, 'as declared in `reference.__archiveUrl`']
     }
     // for range and remap there are no concrete evidence how the resolution was done on install-time.
     // therefore, return undefined, for now ...
     return undefined
   },
-  function /* github */ (locator: Locator): string | false {
+  function /* github */ (locator: Locator): PackageSourceResult | false {
     if (!YarnPluginGithubUtils.isGithubUrl(locator.reference)) {
       return false
     }
     // TODO sanitize & remove secrets
-    return locator.reference
+    return [locator.reference, 'as declared in `reference`']
   },
-  function /* git */ (locator: Locator): string | false {
+  function /* git */ (locator: Locator): PackageSourceResult | false {
     if (!YarnPluginGitUtils.isGitUrl(locator.reference)) {
       return false
     }
     // TODO sanitize & remove secrets
-    return locator.reference
+    return [locator.reference, 'as declared in `reference`']
   },
-  function /* https */ (locator: Locator): URL | false | undefined {
+  function /* https */ (locator: Locator): PackageSourceResult | false | undefined {
     // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-http/sources/urlUtils.ts#L9
     if (!locator.reference.startsWith('http:') && !locator.reference.startsWith('https:')) {
       return false
     }
     try {
       // TODO sanitize & remove secrets
-      return new URL(locator.reference)
+      return [new URL(locator.reference), 'as declared in `reference`']
     } catch {
       return undefined // invalid URL
     }
