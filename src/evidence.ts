@@ -49,9 +49,11 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     if (!locator.reference.startsWith('workspace:')) {
       return false
     }
-    // TODO implement
-    // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-file
-    return undefined
+    if (locator.reference === 'workspace:.') {
+      // workspace = project root
+      return undefined
+    }
+    return [`yarn+${locator.reference}`, 'as detected from YarnLocator property "reference"']
   },
   function /* npm: */ (locator: Locator): PackageSourceResult | false | undefined {
     if (!locator.reference.startsWith('npm:')) {

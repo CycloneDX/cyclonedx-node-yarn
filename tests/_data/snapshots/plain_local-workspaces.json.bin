@@ -78,8 +78,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a",
+      "purl": "pkg:npm/my-local-a@0.1.0?download_url=yarn%2Bworkspace%3Aworkspaces/my-local-a#demo/local-workspaces/project/workspaces/my-local-a",
       "externalReferences": [
+        {
+          "url": "yarn+workspace:workspaces/my-local-a",
+          "type": "distribution",
+          "comment": "as detected from YarnLocator property \"reference\""
+        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
           "type": "issue-tracker",
@@ -111,7 +116,14 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0"
+      "purl": "pkg:npm/my-local-b-off@0.0.0?download_url=yarn%2Bworkspace%3Aworkspaces/my-local-b",
+      "externalReferences": [
+        {
+          "url": "yarn+workspace:workspaces/my-local-b",
+          "type": "distribution",
+          "comment": "as detected from YarnLocator property \"reference\""
+        }
+      ]
     }
   ],
   "dependencies": [
