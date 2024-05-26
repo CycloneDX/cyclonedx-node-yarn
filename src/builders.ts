@@ -19,9 +19,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
-import { ComponentType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Bom, Component, type License, Property, type Tool } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ExternalReference, type License, Property, type Tool } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -30,6 +30,7 @@ import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { isString } from './_helpers'
+import { getPackageSource } from './evidence'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -191,6 +192,15 @@ export class BomBuilder {
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j', locator)
       return undefined
+    }
+
+    const packageSource = getPackageSource(locator)
+    if (packageSource !== undefined) {
+      if (packageSource instanceof URL || packageSource.length > 0) {
+        component.externalReferences.add(
+          new ExternalReference(packageSource, ExternalReferenceType.Distribution)
+        )
+      }
     }
 
     // even private packages may have a PURL for identification
