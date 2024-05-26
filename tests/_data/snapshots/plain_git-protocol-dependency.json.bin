@@ -80,8 +80,12 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?download_url=https%3A//github.com/CycloneDX/cyclonedx-javascript-library.git%23commit%3Da4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
+          "type": "distribution"
+        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
           "type": "issue-tracker",

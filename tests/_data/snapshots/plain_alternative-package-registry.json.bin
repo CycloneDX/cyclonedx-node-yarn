@@ -45,7 +45,7 @@
       "name": "demo-alternative-package-registry",
       "version": "0.0.0",
       "bom-ref": "demo-alternative-package-registry@workspace:.",
-      "description": "demo: alternative-package-registry -- showcase how lternative package registrier affect the result",
+      "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
       "licenses": [
         {
           "license": {
@@ -70,8 +70,12 @@
       "group": "@jsr",
       "version": "0.1.3",
       "bom-ref": "@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz",
-      "purl": "pkg:npm/%40jsr/act__act@0.1.3",
+      "purl": "pkg:npm/%40jsr/act__act@0.1.3?download_url=https%3A//npm.jsr.io/~/11/%40jsr/act__act/0.1.3.tgz",
       "externalReferences": [
+        {
+          "url": "https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz",
+          "type": "distribution"
+        },
         {
           "url": "https://jsr.io/@act/act",
           "type": "website",

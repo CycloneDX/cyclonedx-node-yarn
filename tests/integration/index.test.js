@@ -43,8 +43,8 @@ const {
 
 const testSetups = [
   /* region functional tests */
-  'alternative-package-registry'
-/*  'bundled-dependencies',
+  'alternative-package-registry',
+  'bundled-dependencies',
   'concurrent-versions',
   'dev-dependencies',
   'git-protocol-dependency',
