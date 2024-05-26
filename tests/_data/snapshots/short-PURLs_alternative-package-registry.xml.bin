@@ -57,7 +57,7 @@
       <externalReferences>
         <reference type="distribution">
           <url>https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz</url>
-          <comment>as declared in `reference.__archiveUrl`</comment>
+          <comment>as detected from YarnLocator property "reference.__archiveUrl"</comment>
         </reference>
         <reference type="website">
           <url>https://jsr.io/@act/act</url>

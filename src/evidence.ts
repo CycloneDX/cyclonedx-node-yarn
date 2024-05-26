@@ -60,7 +60,7 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-npm/sources/NpmHttpFetcher.ts#L51
     const { params } = structUtils.parseRange(locator.reference)
     if (params !== null && isString(params.__archiveUrl)) {
-      return [params.__archiveUrl, 'as declared in `reference.__archiveUrl`']
+      return [params.__archiveUrl, 'as detected from YarnLocator property "reference.__archiveUrl"']
     }
     // for range and remap there are no concrete evidence how the resolution was done on install-time.
     // therefore, return undefined, for now ...
@@ -71,14 +71,14 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
       return false
     }
     // TODO sanitize & remove secrets
-    return [locator.reference, 'as declared in `reference`']
+    return [locator.reference, 'as detected from YarnLocator property "reference"']
   },
   function /* git */ (locator: Locator): PackageSourceResult | false {
     if (!YarnPluginGitUtils.isGitUrl(locator.reference)) {
       return false
     }
     // TODO sanitize & remove secrets
-    return [locator.reference, 'as declared in `reference`']
+    return [locator.reference, 'as detected from YarnLocator property "reference"']
   },
   function /* https */ (locator: Locator): PackageSourceResult | false | undefined {
     // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-http/sources/urlUtils.ts#L9
@@ -87,7 +87,7 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
     }
     try {
       // TODO sanitize & remove secrets
-      return [new URL(locator.reference), 'as declared in `reference`']
+      return [new URL(locator.reference), 'as detected from YarnLocator property "reference"']
     } catch {
       return undefined // invalid URL
     }

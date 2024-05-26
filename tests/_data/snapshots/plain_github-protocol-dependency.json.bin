@@ -85,7 +85,7 @@
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
           "type": "distribution",
-          "comment": "as declared in `reference`"
+          "comment": "as detected from YarnLocator property \"reference\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
