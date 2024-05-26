@@ -84,7 +84,10 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
       return false
     }
     const gitInfo = GitHost.fromUrl(locator.reference)
-    // TODO sanitize & remove secrets
+    if (gitInfo !== undefined) {
+      // sanitize & remove secrets
+      gitInfo.auth = undefined
+    }
     return [
       gitInfo?.toString() ?? locator.reference,
       'as detected from YarnLocator property "reference"'
@@ -102,7 +105,6 @@ const packageSourceCandidates: PackageSourceCandidate[] = [
       return undefined // invalid URL
     }
     // sanitize & remove secrets
-    url.username = ''
     url.password = ''
     return [url.toString(), 'as detected from YarnLocator property "reference"']
   },
