@@ -31,7 +31,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'bundled-dependencies',
     'concurrent-versions',
     'dev-dependencies',
-    // 'git-protocol-dependency', << might require interactions to accept ssh fingerprints
+    'git-protocol-dependency',
     'github-protocol-dependency',
     'http-protocol-dependency',
     // 'juice-shop', << may have problems to install on certain systems ...
