@@ -27,12 +27,14 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   const REQUIRES_INSTALL = [
     /* region functional tests */
     // !! none of the following ACTUALLY REQUIRES an installation - lock files are enough
+    'alternative-package-registry',
     'bundled-dependencies',
     'concurrent-versions',
     'dev-dependencies',
     'git-protocol-dependency',
     'github-protocol-dependency',
-    // 'juice-shop',
+    'http-protocol-dependency',
+    // 'juice-shop', << may have problems to install on certain systems ...
     'local-dependencies',
     'local-workspaces',
     'package-aliasing',

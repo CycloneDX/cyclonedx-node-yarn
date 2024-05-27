@@ -33,35 +33,39 @@
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="git-protocol-dependency@workspace:.">
-      <name>git-protocol-dependency</name>
+    <component type="application" bom-ref="github-protocol-dependency@workspace:.">
+      <name>github-protocol-dependency</name>
       <version>0.0.0</version>
-      <description>demo: git-protocol-dependency -- showcase how install via git protocol looks like</description>
+      <description>demo: github-protocol-dependency -- showcase how install via github protocol looks like</description>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/git-protocol-dependency@0.0.0</purl>
+      <purl>pkg:npm/github-protocol-dependency@0.0.0</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
     </properties>
   </metadata>
   <components>
-    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7">
+    <component type="library" bom-ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx</group>
       <name>cyclonedx-library</name>
-      <version>6.4.2</version>
+      <version>6.9.5</version>
       <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git#commit%3Da4a74012c163b44ffd25bc6146fc7f59aa7e33e7</purl>
+      <purl>pkg:npm/%40cyclonedx/cyclonedx-library@6.9.5?download_url=https%3A//github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz</url>
+          <comment>as detected from YarnLocator property "reference"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
@@ -69,10 +73,6 @@
         <reference type="vcs">
           <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7</url>
-          <comment>as detected from YarnLocator property "reference"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
@@ -134,18 +134,18 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="@npmcli/agent@npm:2.2.1">
+    <component type="library" bom-ref="@npmcli/agent@npm:2.2.2">
       <author>GitHub Inc.</author>
       <group>@npmcli</group>
       <name>agent</name>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
       <description>the http/https agent used by the npm cli</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/agent@2.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git</purl>
+      <purl>pkg:npm/%40npmcli/agent@2.2.2?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/agent/issues</url>
@@ -161,18 +161,18 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="@npmcli/fs@npm:3.1.0">
+    <component type="library" bom-ref="@npmcli/fs@npm:3.1.1">
       <author>GitHub Inc.</author>
       <group>@npmcli</group>
       <name>fs</name>
-      <version>3.1.0</version>
+      <version>3.1.1</version>
       <description>filesystem utilities for the npm cli</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/fs@3.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git</purl>
+      <purl>pkg:npm/%40npmcli/fs@3.1.1?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs/issues</url>
@@ -400,17 +400,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="agent-base@npm:7.1.0">
+    <component type="library" bom-ref="agent-base@npm:7.1.1">
       <author>Nathan Rajlich</author>
       <name>agent-base</name>
-      <version>7.1.0</version>
+      <version>7.1.1</version>
       <description>Turn a function into an `http.Agent` instance</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/agent-base@7.1.0?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base</purl>
+      <purl>pkg:npm/agent-base@7.1.1?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -452,7 +452,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ajv-formats-draft2019@npm:1.6.1 [f1690]">
+    <component type="library" bom-ref="ajv-formats-draft2019@npm:1.6.1 [265c4]">
       <author>Carlo Quinonez</author>
       <name>ajv-formats-draft2019</name>
       <version>1.6.1</version>
@@ -478,17 +478,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ajv-formats@npm:2.1.1 [f1690]">
+    <component type="library" bom-ref="ajv-formats@npm:3.0.1 [265c4]">
       <author>Evgeny Poberezkin</author>
       <name>ajv-formats</name>
-      <version>2.1.1</version>
+      <version>3.0.1</version>
       <description>Format validation for Ajv v7+</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv-formats@2.1.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git</purl>
+      <purl>pkg:npm/ajv-formats@3.0.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv-formats/issues</url>
@@ -504,17 +504,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ajv@npm:8.12.0">
+    <component type="library" bom-ref="ajv@npm:8.14.0">
       <author>Evgeny Poberezkin</author>
       <name>ajv</name>
-      <version>8.12.0</version>
+      <version>8.14.0</version>
       <description>Another JSON Schema Validator</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv@8.12.0?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv.git</purl>
+      <purl>pkg:npm/ajv@8.14.0?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv/issues</url>
@@ -815,17 +815,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="cacache@npm:18.0.2">
+    <component type="library" bom-ref="cacache@npm:18.0.3">
       <author>GitHub Inc.</author>
       <name>cacache</name>
-      <version>18.0.2</version>
+      <version>18.0.3</version>
       <description>Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cacache@18.0.2?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git</purl>
+      <purl>pkg:npm/cacache@18.0.3?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/cacache/issues</url>
@@ -1594,17 +1594,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="glob@npm:10.3.10">
+    <component type="library" bom-ref="glob@npm:10.4.1">
       <author>Isaac Z. Schlueter</author>
       <name>glob</name>
-      <version>10.3.10</version>
+      <version>10.4.1</version>
       <description>the most correct and second fastest glob implementation in JavaScript</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/glob@10.3.10?vcs_url=git%3A//github.com/isaacs/node-glob.git</purl>
+      <purl>pkg:npm/glob@10.4.1?vcs_url=git%3A//github.com/isaacs/node-glob.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-glob/issues</url>
@@ -2060,17 +2060,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="jackspeak@npm:2.3.6">
+    <component type="library" bom-ref="jackspeak@npm:3.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>jackspeak</name>
-      <version>2.3.6</version>
+      <version>3.1.2</version>
       <description>A very strict and proper argument parser.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git</purl>
+      <purl>pkg:npm/jackspeak@3.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/jackspeak/issues</url>
@@ -2190,43 +2190,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="lru-cache@npm:10.2.0">
+    <component type="library" bom-ref="lru-cache@npm:10.2.2">
       <author>Isaac Z. Schlueter</author>
       <name>lru-cache</name>
-      <version>10.2.0</version>
+      <version>10.2.2</version>
       <description>A cache object that deletes the least-recently-used items.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lru-cache@10.2.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git</purl>
-      <externalReferences>
-        <reference type="issue-tracker">
-          <url>https://github.com/isaacs/node-lru-cache/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git://github.com/isaacs/node-lru-cache.git</url>
-          <comment>as detected from PackageJson property "repository.url"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/isaacs/node-lru-cache#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="lru-cache@npm:6.0.0">
-      <author>Isaac Z. Schlueter</author>
-      <name>lru-cache</name>
-      <version>6.0.0</version>
-      <description>A cache object that deletes the least-recently-used items.</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>ISC</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/lru-cache@6.0.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git</purl>
+      <purl>pkg:npm/lru-cache@10.2.2?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-lru-cache/issues</url>
@@ -2268,17 +2242,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="make-fetch-happen@npm:13.0.0">
+    <component type="library" bom-ref="make-fetch-happen@npm:13.0.1">
       <author>GitHub Inc.</author>
       <name>make-fetch-happen</name>
-      <version>13.0.0</version>
+      <version>13.0.1</version>
       <description>Opinionated, caching, retrying fetch client</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/make-fetch-happen@13.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git</purl>
+      <purl>pkg:npm/make-fetch-happen@13.0.1?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/make-fetch-happen/issues</url>
@@ -2320,17 +2294,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="minimatch@npm:9.0.3">
+    <component type="library" bom-ref="minimatch@npm:9.0.4">
       <author>Isaac Z. Schlueter</author>
       <name>minimatch</name>
-      <version>9.0.3</version>
+      <version>9.0.4</version>
       <description>a glob matcher in javascript</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minimatch@9.0.3?vcs_url=git%3A//github.com/isaacs/minimatch.git</purl>
+      <purl>pkg:npm/minimatch@9.0.4?vcs_url=git%3A//github.com/isaacs/minimatch.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minimatch/issues</url>
@@ -2372,17 +2346,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="minipass-fetch@npm:3.0.4">
+    <component type="library" bom-ref="minipass-fetch@npm:3.0.5">
       <author>GitHub Inc.</author>
       <name>minipass-fetch</name>
-      <version>3.0.4</version>
+      <version>3.0.5</version>
       <description>An implementation of window.fetch in Node.js using Minipass streams</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-fetch@3.0.4?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git</purl>
+      <purl>pkg:npm/minipass-fetch@3.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/minipass-fetch/issues</url>
@@ -2514,17 +2488,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="minipass@npm:7.0.4">
+    <component type="library" bom-ref="minipass@npm:7.1.2">
       <author>Isaac Z. Schlueter</author>
       <name>minipass</name>
-      <version>7.0.4</version>
+      <version>7.1.2</version>
       <description>minimal implementation of a PassThrough stream</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass@7.0.4?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
+      <purl>pkg:npm/minipass@7.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
@@ -2796,17 +2770,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="nopt@npm:7.2.0">
+    <component type="library" bom-ref="nopt@npm:7.2.1">
       <author>GitHub Inc.</author>
       <name>nopt</name>
-      <version>7.2.0</version>
+      <version>7.2.1</version>
       <description>Option parsing for Node, supporting types, shorthands, etc. Used by npm.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@7.2.0?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git</purl>
+      <purl>pkg:npm/nopt@7.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -3004,17 +2978,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="path-scurry@npm:1.10.1">
+    <component type="library" bom-ref="path-scurry@npm:1.11.1">
       <author>Isaac Z. Schlueter</author>
       <name>path-scurry</name>
-      <version>1.10.1</version>
+      <version>1.11.1</version>
       <description>walk paths fast and efficiently</description>
       <licenses>
         <license acknowledgement="declared">
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git</purl>
+      <purl>pkg:npm/path-scurry@1.11.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/path-scurry/issues</url>
@@ -3041,6 +3015,32 @@
         </license>
       </licenses>
       <purl>pkg:npm/proc-log@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/proc-log.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/proc-log/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/proc-log.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/proc-log#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="proc-log@npm:4.2.0">
+      <author>GitHub Inc.</author>
+      <name>proc-log</name>
+      <version>4.2.0</version>
+      <description>just emit 'log' events on the process object</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/proc-log@4.2.0?vcs_url=git%2Bhttps%3A//github.com/npm/proc-log.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
@@ -3393,17 +3393,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="semver@npm:7.6.0">
+    <component type="library" bom-ref="semver@npm:7.6.2">
       <author>GitHub Inc.</author>
       <name>semver</name>
-      <version>7.6.0</version>
+      <version>7.6.2</version>
       <description>The semantic version parser used by npm.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@7.6.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git</purl>
+      <purl>pkg:npm/semver@7.6.2?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -3601,17 +3601,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="socks-proxy-agent@npm:8.0.2">
+    <component type="library" bom-ref="socks-proxy-agent@npm:8.0.3">
       <author>Nathan Rajlich</author>
       <name>socks-proxy-agent</name>
-      <version>8.0.2</version>
+      <version>8.0.3</version>
       <description>A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks-proxy-agent@8.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent</purl>
+      <purl>pkg:npm/socks-proxy-agent@8.0.3?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -3627,17 +3627,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="socks@npm:2.8.1">
+    <component type="library" bom-ref="socks@npm:2.8.3">
       <author>Josh Glazebrook</author>
       <name>socks</name>
-      <version>2.8.1</version>
+      <version>2.8.3</version>
       <description>Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks@2.8.1?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git</purl>
+      <purl>pkg:npm/socks@2.8.3?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/socks/issues</url>
@@ -3705,17 +3705,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="spdx-license-ids@npm:3.0.17">
+    <component type="library" bom-ref="spdx-license-ids@npm:3.0.18">
       <author>Shinnosuke Watanabe</author>
       <name>spdx-license-ids</name>
-      <version>3.0.17</version>
+      <version>3.0.18</version>
       <description>A list of SPDX license identifiers</description>
       <licenses>
         <license acknowledgement="declared">
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git</purl>
+      <purl>pkg:npm/spdx-license-ids@3.0.18?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-license-ids/issues</url>
@@ -3783,17 +3783,17 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ssri@npm:10.0.5">
+    <component type="library" bom-ref="ssri@npm:10.0.6">
       <author>GitHub Inc.</author>
       <name>ssri</name>
-      <version>10.0.5</version>
+      <version>10.0.6</version>
       <description>Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.</description>
       <licenses>
         <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ssri@10.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/ssri.git</purl>
+      <purl>pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A//github.com/npm/ssri.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/ssri/issues</url>
@@ -4356,10 +4356,10 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7">
-      <dependency ref="ajv-formats-draft2019@npm:1.6.1 [f1690]"/>
-      <dependency ref="ajv-formats@npm:2.1.1 [f1690]"/>
-      <dependency ref="ajv@npm:8.12.0"/>
+    <dependency ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz">
+      <dependency ref="ajv-formats-draft2019@npm:1.6.1 [265c4]"/>
+      <dependency ref="ajv-formats@npm:3.0.1 [265c4]"/>
+      <dependency ref="ajv@npm:8.14.0"/>
       <dependency ref="libxmljs2@npm:0.33.0"/>
       <dependency ref="packageurl-js@npm:1.2.1"/>
       <dependency ref="spdx-expression-parse@npm:4.0.0"/>
@@ -4381,18 +4381,18 @@
       <dependency ref="nopt@npm:5.0.0"/>
       <dependency ref="npmlog@npm:5.0.1"/>
       <dependency ref="rimraf@npm:3.0.2"/>
-      <dependency ref="semver@npm:7.6.0"/>
+      <dependency ref="semver@npm:7.6.2"/>
       <dependency ref="tar@npm:6.2.1"/>
     </dependency>
-    <dependency ref="@npmcli/agent@npm:2.2.1">
-      <dependency ref="agent-base@npm:7.1.0"/>
+    <dependency ref="@npmcli/agent@npm:2.2.2">
+      <dependency ref="agent-base@npm:7.1.1"/>
       <dependency ref="http-proxy-agent@npm:7.0.2"/>
       <dependency ref="https-proxy-agent@npm:7.0.4"/>
-      <dependency ref="lru-cache@npm:10.2.0"/>
-      <dependency ref="socks-proxy-agent@npm:8.0.2"/>
+      <dependency ref="lru-cache@npm:10.2.2"/>
+      <dependency ref="socks-proxy-agent@npm:8.0.3"/>
     </dependency>
-    <dependency ref="@npmcli/fs@npm:3.1.0">
-      <dependency ref="semver@npm:7.6.0"/>
+    <dependency ref="@npmcli/fs@npm:3.1.1">
+      <dependency ref="semver@npm:7.6.2"/>
     </dependency>
     <dependency ref="@oozcitak/dom@npm:1.15.10">
       <dependency ref="@oozcitak/infra@npm:1.0.8"/>
@@ -4413,24 +4413,24 @@
     <dependency ref="agent-base@npm:6.0.2">
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
     </dependency>
-    <dependency ref="agent-base@npm:7.1.0">
+    <dependency ref="agent-base@npm:7.1.1">
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
     </dependency>
     <dependency ref="aggregate-error@npm:3.1.0">
       <dependency ref="clean-stack@npm:2.2.0"/>
       <dependency ref="indent-string@npm:4.0.0"/>
     </dependency>
-    <dependency ref="ajv-formats-draft2019@npm:1.6.1 [f1690]">
-      <dependency ref="ajv@npm:8.12.0"/>
+    <dependency ref="ajv-formats-draft2019@npm:1.6.1 [265c4]">
+      <dependency ref="ajv@npm:8.14.0"/>
       <dependency ref="punycode@npm:2.3.1"/>
       <dependency ref="schemes@npm:1.4.0"/>
       <dependency ref="smtp-address-parser@npm:1.0.10"/>
       <dependency ref="uri-js@npm:4.4.1"/>
     </dependency>
-    <dependency ref="ajv-formats@npm:2.1.1 [f1690]">
-      <dependency ref="ajv@npm:8.12.0"/>
+    <dependency ref="ajv-formats@npm:3.0.1 [265c4]">
+      <dependency ref="ajv@npm:8.14.0"/>
     </dependency>
-    <dependency ref="ajv@npm:8.12.0">
+    <dependency ref="ajv@npm:8.14.0">
       <dependency ref="fast-deep-equal@npm:3.1.3"/>
       <dependency ref="json-schema-traverse@npm:1.0.0"/>
       <dependency ref="require-from-string@npm:2.0.2"/>
@@ -4461,17 +4461,17 @@
     <dependency ref="brace-expansion@npm:2.0.1">
       <dependency ref="balanced-match@npm:1.0.2"/>
     </dependency>
-    <dependency ref="cacache@npm:18.0.2">
-      <dependency ref="@npmcli/fs@npm:3.1.0"/>
+    <dependency ref="cacache@npm:18.0.3">
+      <dependency ref="@npmcli/fs@npm:3.1.1"/>
       <dependency ref="fs-minipass@npm:3.0.3"/>
-      <dependency ref="glob@npm:10.3.10"/>
-      <dependency ref="lru-cache@npm:10.2.0"/>
+      <dependency ref="glob@npm:10.4.1"/>
+      <dependency ref="lru-cache@npm:10.2.2"/>
       <dependency ref="minipass-collect@npm:2.0.1"/>
       <dependency ref="minipass-flush@npm:1.0.5"/>
       <dependency ref="minipass-pipeline@npm:1.2.4"/>
-      <dependency ref="minipass@npm:7.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
       <dependency ref="p-map@npm:4.0.0"/>
-      <dependency ref="ssri@npm:10.0.5"/>
+      <dependency ref="ssri@npm:10.0.6"/>
       <dependency ref="tar@npm:6.2.1"/>
       <dependency ref="unique-filename@npm:3.0.0"/>
     </dependency>
@@ -4517,7 +4517,7 @@
       <dependency ref="minipass@npm:3.3.6"/>
     </dependency>
     <dependency ref="fs-minipass@npm:3.0.3">
-      <dependency ref="minipass@npm:7.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
     </dependency>
     <dependency ref="fs.realpath@npm:1.0.0"/>
     <dependency ref="gauge@npm:3.0.2">
@@ -4531,15 +4531,15 @@
       <dependency ref="strip-ansi@npm:6.0.1"/>
       <dependency ref="wide-align@npm:1.1.5"/>
     </dependency>
-    <dependency ref="git-protocol-dependency@workspace:.">
-      <dependency ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7"/>
+    <dependency ref="github-protocol-dependency@workspace:.">
+      <dependency ref="@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz"/>
     </dependency>
-    <dependency ref="glob@npm:10.3.10">
+    <dependency ref="glob@npm:10.4.1">
       <dependency ref="foreground-child@npm:3.1.1"/>
-      <dependency ref="jackspeak@npm:2.3.6"/>
-      <dependency ref="minimatch@npm:9.0.3"/>
-      <dependency ref="minipass@npm:7.0.4"/>
-      <dependency ref="path-scurry@npm:1.10.1"/>
+      <dependency ref="jackspeak@npm:3.1.2"/>
+      <dependency ref="minimatch@npm:9.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
+      <dependency ref="path-scurry@npm:1.11.1"/>
     </dependency>
     <dependency ref="glob@npm:7.2.3">
       <dependency ref="fs.realpath@npm:1.0.0"/>
@@ -4553,7 +4553,7 @@
     <dependency ref="has-unicode@npm:2.0.1"/>
     <dependency ref="http-cache-semantics@npm:4.1.1"/>
     <dependency ref="http-proxy-agent@npm:7.0.2">
-      <dependency ref="agent-base@npm:7.1.0"/>
+      <dependency ref="agent-base@npm:7.1.1"/>
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
     </dependency>
     <dependency ref="https-proxy-agent@npm:5.0.1">
@@ -4561,7 +4561,7 @@
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
     </dependency>
     <dependency ref="https-proxy-agent@npm:7.0.4">
-      <dependency ref="agent-base@npm:7.1.0"/>
+      <dependency ref="agent-base@npm:7.1.1"/>
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
     </dependency>
     <dependency ref="iconv-lite@npm:0.6.3">
@@ -4582,7 +4582,7 @@
     <dependency ref="is-lambda@npm:1.0.1"/>
     <dependency ref="isexe@npm:2.0.0"/>
     <dependency ref="isexe@npm:3.1.1"/>
-    <dependency ref="jackspeak@npm:2.3.6">
+    <dependency ref="jackspeak@npm:3.1.2">
       <dependency ref="@isaacs/cliui@npm:8.0.2"/>
       <dependency ref="@pkgjs/parseargs@npm:0.11.0"/>
     </dependency>
@@ -4597,39 +4597,37 @@
       <dependency ref="bindings@npm:1.5.0"/>
       <dependency ref="nan@npm:2.18.0"/>
     </dependency>
-    <dependency ref="lru-cache@npm:10.2.0"/>
-    <dependency ref="lru-cache@npm:6.0.0">
-      <dependency ref="yallist@npm:4.0.0"/>
-    </dependency>
+    <dependency ref="lru-cache@npm:10.2.2"/>
     <dependency ref="make-dir@npm:3.1.0">
       <dependency ref="semver@npm:6.3.1"/>
     </dependency>
-    <dependency ref="make-fetch-happen@npm:13.0.0">
-      <dependency ref="@npmcli/agent@npm:2.2.1"/>
-      <dependency ref="cacache@npm:18.0.2"/>
+    <dependency ref="make-fetch-happen@npm:13.0.1">
+      <dependency ref="@npmcli/agent@npm:2.2.2"/>
+      <dependency ref="cacache@npm:18.0.3"/>
       <dependency ref="http-cache-semantics@npm:4.1.1"/>
       <dependency ref="is-lambda@npm:1.0.1"/>
-      <dependency ref="minipass-fetch@npm:3.0.4"/>
+      <dependency ref="minipass-fetch@npm:3.0.5"/>
       <dependency ref="minipass-flush@npm:1.0.5"/>
       <dependency ref="minipass-pipeline@npm:1.2.4"/>
-      <dependency ref="minipass@npm:7.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
       <dependency ref="negotiator@npm:0.6.3"/>
+      <dependency ref="proc-log@npm:4.2.0"/>
       <dependency ref="promise-retry@npm:2.0.1"/>
-      <dependency ref="ssri@npm:10.0.5"/>
+      <dependency ref="ssri@npm:10.0.6"/>
     </dependency>
     <dependency ref="minimatch@npm:3.1.2">
       <dependency ref="brace-expansion@npm:1.1.11"/>
     </dependency>
-    <dependency ref="minimatch@npm:9.0.3">
+    <dependency ref="minimatch@npm:9.0.4">
       <dependency ref="brace-expansion@npm:2.0.1"/>
     </dependency>
     <dependency ref="minipass-collect@npm:2.0.1">
-      <dependency ref="minipass@npm:7.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
     </dependency>
-    <dependency ref="minipass-fetch@npm:3.0.4">
+    <dependency ref="minipass-fetch@npm:3.0.5">
       <dependency ref="encoding@npm:0.1.13"/>
       <dependency ref="minipass-sized@npm:1.0.3"/>
-      <dependency ref="minipass@npm:7.0.4"/>
+      <dependency ref="minipass@npm:7.1.2"/>
       <dependency ref="minizlib@npm:2.1.2"/>
     </dependency>
     <dependency ref="minipass-flush@npm:1.0.5">
@@ -4645,7 +4643,7 @@
       <dependency ref="yallist@npm:4.0.0"/>
     </dependency>
     <dependency ref="minipass@npm:5.0.0"/>
-    <dependency ref="minipass@npm:7.0.4"/>
+    <dependency ref="minipass@npm:7.1.2"/>
     <dependency ref="minizlib@npm:2.1.2">
       <dependency ref="minipass@npm:3.3.6"/>
       <dependency ref="yallist@npm:4.0.0"/>
@@ -4669,19 +4667,19 @@
     <dependency ref="node-gyp@npm:10.1.0">
       <dependency ref="env-paths@npm:2.2.1"/>
       <dependency ref="exponential-backoff@npm:3.1.1"/>
-      <dependency ref="glob@npm:10.3.10"/>
+      <dependency ref="glob@npm:10.4.1"/>
       <dependency ref="graceful-fs@npm:4.2.11"/>
-      <dependency ref="make-fetch-happen@npm:13.0.0"/>
-      <dependency ref="nopt@npm:7.2.0"/>
+      <dependency ref="make-fetch-happen@npm:13.0.1"/>
+      <dependency ref="nopt@npm:7.2.1"/>
       <dependency ref="proc-log@npm:3.0.0"/>
-      <dependency ref="semver@npm:7.6.0"/>
+      <dependency ref="semver@npm:7.6.2"/>
       <dependency ref="tar@npm:6.2.1"/>
       <dependency ref="which@npm:4.0.0"/>
     </dependency>
     <dependency ref="nopt@npm:5.0.0">
       <dependency ref="abbrev@npm:1.1.1"/>
     </dependency>
-    <dependency ref="nopt@npm:7.2.0">
+    <dependency ref="nopt@npm:7.2.1">
       <dependency ref="abbrev@npm:2.0.0"/>
     </dependency>
     <dependency ref="npmlog@npm:5.0.1">
@@ -4700,11 +4698,12 @@
     <dependency ref="packageurl-js@npm:1.2.1"/>
     <dependency ref="path-is-absolute@npm:1.0.1"/>
     <dependency ref="path-key@npm:3.1.1"/>
-    <dependency ref="path-scurry@npm:1.10.1">
-      <dependency ref="lru-cache@npm:10.2.0"/>
-      <dependency ref="minipass@npm:7.0.4"/>
+    <dependency ref="path-scurry@npm:1.11.1">
+      <dependency ref="lru-cache@npm:10.2.2"/>
+      <dependency ref="minipass@npm:7.1.2"/>
     </dependency>
     <dependency ref="proc-log@npm:3.0.0"/>
+    <dependency ref="proc-log@npm:4.2.0"/>
     <dependency ref="promise-retry@npm:2.0.1">
       <dependency ref="err-code@npm:2.0.3"/>
       <dependency ref="retry@npm:0.12.0"/>
@@ -4732,9 +4731,7 @@
       <dependency ref="extend@npm:3.0.2"/>
     </dependency>
     <dependency ref="semver@npm:6.3.1"/>
-    <dependency ref="semver@npm:7.6.0">
-      <dependency ref="lru-cache@npm:6.0.0"/>
-    </dependency>
+    <dependency ref="semver@npm:7.6.2"/>
     <dependency ref="set-blocking@npm:2.0.0"/>
     <dependency ref="shebang-command@npm:2.0.0">
       <dependency ref="shebang-regex@npm:3.0.0"/>
@@ -4746,25 +4743,25 @@
     <dependency ref="smtp-address-parser@npm:1.0.10">
       <dependency ref="nearley@npm:2.20.1"/>
     </dependency>
-    <dependency ref="socks-proxy-agent@npm:8.0.2">
-      <dependency ref="agent-base@npm:7.1.0"/>
+    <dependency ref="socks-proxy-agent@npm:8.0.3">
+      <dependency ref="agent-base@npm:7.1.1"/>
       <dependency ref="debug@npm:4.3.4 [428f3]"/>
-      <dependency ref="socks@npm:2.8.1"/>
+      <dependency ref="socks@npm:2.8.3"/>
     </dependency>
-    <dependency ref="socks@npm:2.8.1">
+    <dependency ref="socks@npm:2.8.3">
       <dependency ref="ip-address@npm:9.0.5"/>
       <dependency ref="smart-buffer@npm:4.2.0"/>
     </dependency>
     <dependency ref="spdx-exceptions@npm:2.5.0"/>
     <dependency ref="spdx-expression-parse@npm:4.0.0">
       <dependency ref="spdx-exceptions@npm:2.5.0"/>
-      <dependency ref="spdx-license-ids@npm:3.0.17"/>
+      <dependency ref="spdx-license-ids@npm:3.0.18"/>
     </dependency>
-    <dependency ref="spdx-license-ids@npm:3.0.17"/>
+    <dependency ref="spdx-license-ids@npm:3.0.18"/>
     <dependency ref="sprintf-js@npm:1.0.3"/>
     <dependency ref="sprintf-js@npm:1.1.3"/>
-    <dependency ref="ssri@npm:10.0.5">
-      <dependency ref="minipass@npm:7.0.4"/>
+    <dependency ref="ssri@npm:10.0.6">
+      <dependency ref="minipass@npm:7.1.2"/>
     </dependency>
     <dependency ref="string_decoder@npm:1.3.0">
       <dependency ref="safe-buffer@npm:5.2.1"/>

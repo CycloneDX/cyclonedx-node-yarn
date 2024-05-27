@@ -43,11 +43,13 @@ const {
 
 const testSetups = [
   /* region functional tests */
+  'alternative-package-registry',
   'bundled-dependencies',
   'concurrent-versions',
   'dev-dependencies',
   'git-protocol-dependency',
   'github-protocol-dependency',
+  'http-protocol-dependency',
   'juice-shop',
   'local-dependencies',
   'local-workspaces',
@@ -167,10 +169,11 @@ suite('integration', () => {
         })
 
         suite('short PURLs', () => {
-          const testSetup = 'juice-shop'
-          test(`${testSetup}`,
-            () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
-          ).timeout(longTestTimeout)
+          ['alternative-package-registry', 'juice-shop'].forEach(testSetup => {
+            test(`${testSetup}`,
+              () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
+            ).timeout(longTestTimeout)
+          })
         })
 
         test('dogfooding', async () => {

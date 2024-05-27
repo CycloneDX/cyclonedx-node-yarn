@@ -1,0 +1,99 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "demo-alternative-package-registry",
+      "version": "0.0.0",
+      "bom-ref": "demo-alternative-package-registry@workspace:.",
+      "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-alternative-package-registry@0.0.0"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "act__act",
+      "group": "@jsr",
+      "version": "0.1.3",
+      "bom-ref": "@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz",
+      "purl": "pkg:npm/%40jsr/act__act@0.1.3",
+      "externalReferences": [
+        {
+          "url": "https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz",
+          "type": "distribution",
+          "comment": "as detected from YarnLocator property \"reference::__archiveUrl\""
+        },
+        {
+          "url": "https://jsr.io/@act/act",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz"
+    },
+    {
+      "ref": "demo-alternative-package-registry@workspace:.",
+      "dependsOn": [
+        "@jsr/act__act@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fact__act%2F0.1.3.tgz"
+      ]
+    }
+  ]
+}

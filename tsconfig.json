@@ -41,11 +41,13 @@
 
     /* Completeness */
     "skipDefaultLibCheck": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
 
     /* yarn foo */
     "experimentalDecorators": true
   },
+
+  "include": ["src"],
 
   "exclude": [
     ".yarn", ".pnp.*",
