@@ -51,11 +51,6 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   FOR SHOWCASING AND TESTING PURPOSES ONLY.
   `)
 
-  console.info(`
-  info: some setups require to accepted ssh host.
-        run: ssh-keygen -R github.com
-  `)
-
   process.exitCode = 0
 
   for (const DIR of REQUIRES_INSTALL) {
