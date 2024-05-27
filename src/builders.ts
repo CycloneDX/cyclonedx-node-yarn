@@ -197,6 +197,7 @@ export class BomBuilder {
     switch (true) {
       case locator.reference.startsWith('workspace:'): {
         // @TODO: add CDX-Property for it - cdx:yarn:reference:workspace = $workspaceName
+        // -- reminder: skip `workspace:.`
         break
       }
       case locator.reference.startsWith('npm:'): {

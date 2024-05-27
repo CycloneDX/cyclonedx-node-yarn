@@ -75,7 +75,7 @@
         {
           "url": "https://npm.jsr.io/~/11/@jsr/act__act/0.1.3.tgz",
           "type": "distribution",
-          "comment": "as detected from YarnLocator property \"reference.__archiveUrl\""
+          "comment": "as detected from YarnLocator property \"reference::__archiveUrl\""
         },
         {
           "url": "https://jsr.io/@act/act",

@@ -80,13 +80,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library_clone@6.6.0?download_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git%23commit%3D94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library_clone@6.6.0?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git#commit%3D94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
       "externalReferences": [
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
-          "type": "distribution",
-          "comment": "as detected from YarnLocator property \"reference\""
-        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
           "type": "issue-tracker",
@@ -96,6 +91,11 @@
           "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
+          "type": "vcs",
+          "comment": "as detected from YarnLocator property \"reference\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
@@ -120,13 +120,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?download_url=https%3A//github.com/CycloneDX/cyclonedx-javascript-library.git%23commit%3Da4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@6.4.2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-javascript-library.git#commit%3Da4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
-          "type": "distribution",
-          "comment": "as detected from YarnLocator property \"reference\""
-        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
           "type": "issue-tracker",
@@ -136,6 +131,11 @@
           "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
+          "type": "vcs",
+          "comment": "as detected from YarnLocator property \"reference\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
