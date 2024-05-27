@@ -66,46 +66,6 @@
   "components": [
     {
       "type": "library",
-      "name": "cyclonedx-library_clone",
-      "group": "@cyclonedx",
-      "version": "6.6.0",
-      "bom-ref": "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
-      "author": "Jan Kowalleck",
-      "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library_clone@6.6.0?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-javascript-library.git#commit%3D94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
-          "type": "vcs",
-          "comment": "as detected from YarnLocator property \"reference\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "cyclonedx-library",
       "group": "@cyclonedx",
       "version": "6.4.2",
@@ -218,8 +178,8 @@
       "type": "library",
       "name": "agent",
       "group": "@npmcli",
-      "version": "2.2.1",
-      "bom-ref": "@npmcli/agent@npm:2.2.1",
+      "version": "2.2.2",
+      "bom-ref": "@npmcli/agent@npm:2.2.2",
       "author": "GitHub Inc.",
       "description": "the http/https agent used by the npm cli",
       "licenses": [
@@ -230,7 +190,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git",
+      "purl": "pkg:npm/%40npmcli/agent@2.2.2?vcs_url=git%2Bhttps%3A//github.com/npm/agent.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/agent/issues",
@@ -253,8 +213,8 @@
       "type": "library",
       "name": "fs",
       "group": "@npmcli",
-      "version": "3.1.0",
-      "bom-ref": "@npmcli/fs@npm:3.1.0",
+      "version": "3.1.1",
+      "bom-ref": "@npmcli/fs@npm:3.1.1",
       "author": "GitHub Inc.",
       "description": "filesystem utilities for the npm cli",
       "licenses": [
@@ -265,7 +225,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git",
+      "purl": "pkg:npm/%40npmcli/fs@3.1.1?vcs_url=git%2Bhttps%3A//github.com/npm/fs.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs/issues",
@@ -563,8 +523,8 @@
     {
       "type": "library",
       "name": "agent-base",
-      "version": "7.1.0",
-      "bom-ref": "agent-base@npm:7.1.0",
+      "version": "7.1.1",
+      "bom-ref": "agent-base@npm:7.1.1",
       "author": "Nathan Rajlich",
       "description": "Turn a function into an `http.Agent` instance",
       "licenses": [
@@ -575,7 +535,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
+      "purl": "pkg:npm/agent-base@7.1.1?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/agent-base",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -698,43 +658,9 @@
     },
     {
       "type": "library",
-      "name": "ajv-formats",
-      "version": "3.0.1",
-      "bom-ref": "ajv-formats@npm:3.0.1 [10c71]",
-      "author": "Evgeny Poberezkin",
-      "description": "Format validation for Ajv v7+",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/ajv-formats@3.0.1?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv-formats.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/ajv-validator/ajv-formats/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/ajv-validator/ajv-formats.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/ajv-validator/ajv-formats#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "ajv",
-      "version": "8.12.0",
-      "bom-ref": "ajv@npm:8.12.0",
+      "version": "8.14.0",
+      "bom-ref": "ajv@npm:8.14.0",
       "author": "Evgeny Poberezkin",
       "description": "Another JSON Schema Validator",
       "licenses": [
@@ -745,7 +671,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv@8.12.0?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv.git",
+      "purl": "pkg:npm/ajv@8.14.0?vcs_url=git%2Bhttps%3A//github.com/ajv-validator/ajv.git",
       "externalReferences": [
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
@@ -1140,8 +1066,8 @@
     {
       "type": "library",
       "name": "cacache",
-      "version": "18.0.2",
-      "bom-ref": "cacache@npm:18.0.2",
+      "version": "18.0.3",
+      "bom-ref": "cacache@npm:18.0.3",
       "author": "GitHub Inc.",
       "description": "Fast, fault-tolerant, cross-platform, disk-based, data-agnostic, content-addressable cache.",
       "licenses": [
@@ -1152,7 +1078,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacache@18.0.2?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git",
+      "purl": "pkg:npm/cacache@18.0.3?vcs_url=git%2Bhttps%3A//github.com/npm/cacache.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/cacache/issues",
@@ -2159,8 +2085,8 @@
     {
       "type": "library",
       "name": "glob",
-      "version": "10.3.10",
-      "bom-ref": "glob@npm:10.3.10",
+      "version": "10.4.1",
+      "bom-ref": "glob@npm:10.4.1",
       "author": "Isaac Z. Schlueter",
       "description": "the most correct and second fastest glob implementation in JavaScript",
       "licenses": [
@@ -2171,7 +2097,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@10.3.10?vcs_url=git%3A//github.com/isaacs/node-glob.git",
+      "purl": "pkg:npm/glob@10.4.1?vcs_url=git%3A//github.com/isaacs/node-glob.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-glob/issues",
@@ -2769,8 +2695,8 @@
     {
       "type": "library",
       "name": "jackspeak",
-      "version": "2.3.6",
-      "bom-ref": "jackspeak@npm:2.3.6",
+      "version": "3.1.2",
+      "bom-ref": "jackspeak@npm:3.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "A very strict and proper argument parser.",
       "licenses": [
@@ -2781,7 +2707,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
+      "purl": "pkg:npm/jackspeak@3.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/jackspeak.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/jackspeak/issues",
@@ -2939,8 +2865,8 @@
     {
       "type": "library",
       "name": "lru-cache",
-      "version": "10.2.0",
-      "bom-ref": "lru-cache@npm:10.2.0",
+      "version": "10.2.2",
+      "bom-ref": "lru-cache@npm:10.2.2",
       "author": "Isaac Z. Schlueter",
       "description": "A cache object that deletes the least-recently-used items.",
       "licenses": [
@@ -2951,41 +2877,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lru-cache@10.2.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/isaacs/node-lru-cache/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git://github.com/isaacs/node-lru-cache.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/isaacs/node-lru-cache#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "lru-cache",
-      "version": "6.0.0",
-      "bom-ref": "lru-cache@npm:6.0.0",
-      "author": "Isaac Z. Schlueter",
-      "description": "A cache object that deletes the least-recently-used items.",
-      "licenses": [
-        {
-          "license": {
-            "id": "ISC",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/lru-cache@6.0.0?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
+      "purl": "pkg:npm/lru-cache@10.2.2?vcs_url=git%3A//github.com/isaacs/node-lru-cache.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-lru-cache/issues",
@@ -3041,8 +2933,8 @@
     {
       "type": "library",
       "name": "make-fetch-happen",
-      "version": "13.0.0",
-      "bom-ref": "make-fetch-happen@npm:13.0.0",
+      "version": "13.0.1",
+      "bom-ref": "make-fetch-happen@npm:13.0.1",
       "author": "GitHub Inc.",
       "description": "Opinionated, caching, retrying fetch client",
       "licenses": [
@@ -3053,7 +2945,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git",
+      "purl": "pkg:npm/make-fetch-happen@13.0.1?vcs_url=git%2Bhttps%3A//github.com/npm/make-fetch-happen.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/make-fetch-happen/issues",
@@ -3109,8 +3001,8 @@
     {
       "type": "library",
       "name": "minimatch",
-      "version": "9.0.3",
-      "bom-ref": "minimatch@npm:9.0.3",
+      "version": "9.0.4",
+      "bom-ref": "minimatch@npm:9.0.4",
       "author": "Isaac Z. Schlueter",
       "description": "a glob matcher in javascript",
       "licenses": [
@@ -3121,7 +3013,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@9.0.3?vcs_url=git%3A//github.com/isaacs/minimatch.git",
+      "purl": "pkg:npm/minimatch@9.0.4?vcs_url=git%3A//github.com/isaacs/minimatch.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -3177,8 +3069,8 @@
     {
       "type": "library",
       "name": "minipass-fetch",
-      "version": "3.0.4",
-      "bom-ref": "minipass-fetch@npm:3.0.4",
+      "version": "3.0.5",
+      "bom-ref": "minipass-fetch@npm:3.0.5",
       "author": "GitHub Inc.",
       "description": "An implementation of window.fetch in Node.js using Minipass streams",
       "licenses": [
@@ -3189,7 +3081,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@3.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/minipass-fetch.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/minipass-fetch/issues",
@@ -3364,8 +3256,8 @@
     {
       "type": "library",
       "name": "minipass",
-      "version": "7.0.4",
-      "bom-ref": "minipass@npm:7.0.4",
+      "version": "7.1.2",
+      "bom-ref": "minipass@npm:7.1.2",
       "author": "Isaac Z. Schlueter",
       "description": "minimal implementation of a PassThrough stream",
       "licenses": [
@@ -3376,7 +3268,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@7.0.4?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
+      "purl": "pkg:npm/minipass@7.1.2?vcs_url=git%2Bhttps%3A//github.com/isaacs/minipass.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass/issues",
@@ -3734,8 +3626,8 @@
     {
       "type": "library",
       "name": "nopt",
-      "version": "7.2.0",
-      "bom-ref": "nopt@npm:7.2.0",
+      "version": "7.2.1",
+      "bom-ref": "nopt@npm:7.2.1",
       "author": "GitHub Inc.",
       "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
       "licenses": [
@@ -3746,7 +3638,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@7.2.0?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git",
+      "purl": "pkg:npm/nopt@7.2.1?vcs_url=git%2Bhttps%3A//github.com/npm/nopt.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -4006,8 +3898,8 @@
     {
       "type": "library",
       "name": "path-scurry",
-      "version": "1.10.1",
-      "bom-ref": "path-scurry@npm:1.10.1",
+      "version": "1.11.1",
+      "bom-ref": "path-scurry@npm:1.11.1",
       "author": "Isaac Z. Schlueter",
       "description": "walk paths fast and efficiently",
       "licenses": [
@@ -4018,7 +3910,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git",
+      "purl": "pkg:npm/path-scurry@1.11.1?vcs_url=git%2Bhttps%3A//github.com/isaacs/path-scurry.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/path-scurry/issues",
@@ -4053,6 +3945,40 @@
         }
       ],
       "purl": "pkg:npm/proc-log@3.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/proc-log.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/npm/proc-log/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/npm/proc-log.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/proc-log#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "proc-log",
+      "version": "4.2.0",
+      "bom-ref": "proc-log@npm:4.2.0",
+      "author": "GitHub Inc.",
+      "description": "just emit 'log' events on the process object",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/proc-log@4.2.0?vcs_url=git%2Bhttps%3A//github.com/npm/proc-log.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/proc-log/issues",
@@ -4515,8 +4441,8 @@
     {
       "type": "library",
       "name": "semver",
-      "version": "7.6.0",
-      "bom-ref": "semver@npm:7.6.0",
+      "version": "7.6.2",
+      "bom-ref": "semver@npm:7.6.2",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "licenses": [
@@ -4527,7 +4453,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.6.0?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git",
+      "purl": "pkg:npm/semver@7.6.2?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -4787,8 +4713,8 @@
     {
       "type": "library",
       "name": "socks-proxy-agent",
-      "version": "8.0.2",
-      "bom-ref": "socks-proxy-agent@npm:8.0.2",
+      "version": "8.0.3",
+      "bom-ref": "socks-proxy-agent@npm:8.0.3",
       "author": "Nathan Rajlich",
       "description": "A SOCKS proxy `http.Agent` implementation for HTTP and HTTPS",
       "licenses": [
@@ -4799,7 +4725,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.3?vcs_url=git%2Bhttps%3A//github.com/TooTallNate/proxy-agents.git#packages/socks-proxy-agent",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -4821,8 +4747,8 @@
     {
       "type": "library",
       "name": "socks",
-      "version": "2.8.1",
-      "bom-ref": "socks@npm:2.8.1",
+      "version": "2.8.3",
+      "bom-ref": "socks@npm:2.8.3",
       "author": "Josh Glazebrook",
       "description": "Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.",
       "licenses": [
@@ -4833,7 +4759,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks@2.8.1?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git",
+      "purl": "pkg:npm/socks@2.8.3?vcs_url=git%2Bhttps%3A//github.com/JoshGlazebrook/socks.git",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/socks/issues",
@@ -4923,8 +4849,8 @@
     {
       "type": "library",
       "name": "spdx-license-ids",
-      "version": "3.0.17",
-      "bom-ref": "spdx-license-ids@npm:3.0.17",
+      "version": "3.0.18",
+      "bom-ref": "spdx-license-ids@npm:3.0.18",
       "author": "Shinnosuke Watanabe",
       "description": "A list of SPDX license identifiers",
       "licenses": [
@@ -4935,7 +4861,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git",
+      "purl": "pkg:npm/spdx-license-ids@3.0.18?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git",
       "externalReferences": [
         {
           "url": "https://github.com/jslicense/spdx-license-ids/issues",
@@ -5025,8 +4951,8 @@
     {
       "type": "library",
       "name": "ssri",
-      "version": "10.0.5",
-      "bom-ref": "ssri@npm:10.0.5",
+      "version": "10.0.6",
+      "bom-ref": "ssri@npm:10.0.6",
       "author": "GitHub Inc.",
       "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
       "licenses": [
@@ -5037,7 +4963,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ssri@10.0.5?vcs_url=git%2Bhttps%3A//github.com/npm/ssri.git",
+      "purl": "pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A//github.com/npm/ssri.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/ssri/issues",
@@ -5772,23 +5698,11 @@
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
-      "dependsOn": [
-        "ajv-formats-draft2019@npm:1.6.1 [f1690]",
-        "ajv-formats@npm:3.0.1 [10c71]",
-        "ajv@npm:8.12.0",
-        "libxmljs2@npm:0.33.0",
-        "packageurl-js@npm:1.2.1",
-        "spdx-expression-parse@npm:4.0.0",
-        "xmlbuilder2@npm:3.1.1"
-      ]
-    },
-    {
       "ref": "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7",
       "dependsOn": [
         "ajv-formats-draft2019@npm:1.6.1 [f1690]",
         "ajv-formats@npm:2.1.1 [f1690]",
-        "ajv@npm:8.12.0",
+        "ajv@npm:8.14.0",
         "libxmljs2@npm:0.33.0",
         "packageurl-js@npm:1.2.1",
         "spdx-expression-parse@npm:4.0.0",
@@ -5816,24 +5730,24 @@
         "nopt@npm:5.0.0",
         "npmlog@npm:5.0.1",
         "rimraf@npm:3.0.2",
-        "semver@npm:7.6.0",
+        "semver@npm:7.6.2",
         "tar@npm:6.2.1"
       ]
     },
     {
-      "ref": "@npmcli/agent@npm:2.2.1",
+      "ref": "@npmcli/agent@npm:2.2.2",
       "dependsOn": [
-        "agent-base@npm:7.1.0",
+        "agent-base@npm:7.1.1",
         "http-proxy-agent@npm:7.0.2",
         "https-proxy-agent@npm:7.0.4",
-        "lru-cache@npm:10.2.0",
-        "socks-proxy-agent@npm:8.0.2"
+        "lru-cache@npm:10.2.2",
+        "socks-proxy-agent@npm:8.0.3"
       ]
     },
     {
-      "ref": "@npmcli/fs@npm:3.1.0",
+      "ref": "@npmcli/fs@npm:3.1.1",
       "dependsOn": [
-        "semver@npm:7.6.0"
+        "semver@npm:7.6.2"
       ]
     },
     {
@@ -5876,7 +5790,7 @@
       ]
     },
     {
-      "ref": "agent-base@npm:7.1.0",
+      "ref": "agent-base@npm:7.1.1",
       "dependsOn": [
         "debug@npm:4.3.4 [428f3]"
       ]
@@ -5891,7 +5805,7 @@
     {
       "ref": "ajv-formats-draft2019@npm:1.6.1 [f1690]",
       "dependsOn": [
-        "ajv@npm:8.12.0",
+        "ajv@npm:8.14.0",
         "punycode@npm:2.3.1",
         "schemes@npm:1.4.0",
         "smtp-address-parser@npm:1.0.10",
@@ -5901,17 +5815,11 @@
     {
       "ref": "ajv-formats@npm:2.1.1 [f1690]",
       "dependsOn": [
-        "ajv@npm:8.12.0"
+        "ajv@npm:8.14.0"
       ]
     },
     {
-      "ref": "ajv-formats@npm:3.0.1 [10c71]",
-      "dependsOn": [
-        "ajv@npm:8.12.0"
-      ]
-    },
-    {
-      "ref": "ajv@npm:8.12.0",
+      "ref": "ajv@npm:8.14.0",
       "dependsOn": [
         "fast-deep-equal@npm:3.1.3",
         "json-schema-traverse@npm:1.0.0",
@@ -5973,18 +5881,18 @@
       ]
     },
     {
-      "ref": "cacache@npm:18.0.2",
+      "ref": "cacache@npm:18.0.3",
       "dependsOn": [
-        "@npmcli/fs@npm:3.1.0",
+        "@npmcli/fs@npm:3.1.1",
         "fs-minipass@npm:3.0.3",
-        "glob@npm:10.3.10",
-        "lru-cache@npm:10.2.0",
+        "glob@npm:10.4.1",
+        "lru-cache@npm:10.2.2",
         "minipass-collect@npm:2.0.1",
         "minipass-flush@npm:1.0.5",
         "minipass-pipeline@npm:1.2.4",
-        "minipass@npm:7.0.4",
+        "minipass@npm:7.1.2",
         "p-map@npm:4.0.0",
-        "ssri@npm:10.0.5",
+        "ssri@npm:10.0.6",
         "tar@npm:6.2.1",
         "unique-filename@npm:3.0.0"
       ]
@@ -6091,7 +5999,7 @@
     {
       "ref": "fs-minipass@npm:3.0.3",
       "dependsOn": [
-        "minipass@npm:7.0.4"
+        "minipass@npm:7.1.2"
       ]
     },
     {
@@ -6114,18 +6022,17 @@
     {
       "ref": "git-protocol-dependency@workspace:.",
       "dependsOn": [
-        "@cyclonedx/cyclonedx-library_clone@git@github.com:CycloneDX/cyclonedx-javascript-library.git#commit=94cc1ec5f3773b843c62295e9aef7f6aeab57aec",
         "@cyclonedx/cyclonedx-library@https://github.com/CycloneDX/cyclonedx-javascript-library.git#commit=a4a74012c163b44ffd25bc6146fc7f59aa7e33e7"
       ]
     },
     {
-      "ref": "glob@npm:10.3.10",
+      "ref": "glob@npm:10.4.1",
       "dependsOn": [
         "foreground-child@npm:3.1.1",
-        "jackspeak@npm:2.3.6",
-        "minimatch@npm:9.0.3",
-        "minipass@npm:7.0.4",
-        "path-scurry@npm:1.10.1"
+        "jackspeak@npm:3.1.2",
+        "minimatch@npm:9.0.4",
+        "minipass@npm:7.1.2",
+        "path-scurry@npm:1.11.1"
       ]
     },
     {
@@ -6151,7 +6058,7 @@
     {
       "ref": "http-proxy-agent@npm:7.0.2",
       "dependsOn": [
-        "agent-base@npm:7.1.0",
+        "agent-base@npm:7.1.1",
         "debug@npm:4.3.4 [428f3]"
       ]
     },
@@ -6165,7 +6072,7 @@
     {
       "ref": "https-proxy-agent@npm:7.0.4",
       "dependsOn": [
-        "agent-base@npm:7.1.0",
+        "agent-base@npm:7.1.1",
         "debug@npm:4.3.4 [428f3]"
       ]
     },
@@ -6211,7 +6118,7 @@
       "ref": "isexe@npm:3.1.1"
     },
     {
-      "ref": "jackspeak@npm:2.3.6",
+      "ref": "jackspeak@npm:3.1.2",
       "dependsOn": [
         "@isaacs/cliui@npm:8.0.2",
         "@pkgjs/parseargs@npm:0.11.0"
@@ -6239,13 +6146,7 @@
       ]
     },
     {
-      "ref": "lru-cache@npm:10.2.0"
-    },
-    {
-      "ref": "lru-cache@npm:6.0.0",
-      "dependsOn": [
-        "yallist@npm:4.0.0"
-      ]
+      "ref": "lru-cache@npm:10.2.2"
     },
     {
       "ref": "make-dir@npm:3.1.0",
@@ -6254,19 +6155,20 @@
       ]
     },
     {
-      "ref": "make-fetch-happen@npm:13.0.0",
+      "ref": "make-fetch-happen@npm:13.0.1",
       "dependsOn": [
-        "@npmcli/agent@npm:2.2.1",
-        "cacache@npm:18.0.2",
+        "@npmcli/agent@npm:2.2.2",
+        "cacache@npm:18.0.3",
         "http-cache-semantics@npm:4.1.1",
         "is-lambda@npm:1.0.1",
-        "minipass-fetch@npm:3.0.4",
+        "minipass-fetch@npm:3.0.5",
         "minipass-flush@npm:1.0.5",
         "minipass-pipeline@npm:1.2.4",
-        "minipass@npm:7.0.4",
+        "minipass@npm:7.1.2",
         "negotiator@npm:0.6.3",
+        "proc-log@npm:4.2.0",
         "promise-retry@npm:2.0.1",
-        "ssri@npm:10.0.5"
+        "ssri@npm:10.0.6"
       ]
     },
     {
@@ -6276,7 +6178,7 @@
       ]
     },
     {
-      "ref": "minimatch@npm:9.0.3",
+      "ref": "minimatch@npm:9.0.4",
       "dependsOn": [
         "brace-expansion@npm:2.0.1"
       ]
@@ -6284,15 +6186,15 @@
     {
       "ref": "minipass-collect@npm:2.0.1",
       "dependsOn": [
-        "minipass@npm:7.0.4"
+        "minipass@npm:7.1.2"
       ]
     },
     {
-      "ref": "minipass-fetch@npm:3.0.4",
+      "ref": "minipass-fetch@npm:3.0.5",
       "dependsOn": [
         "encoding@npm:0.1.13",
         "minipass-sized@npm:1.0.3",
-        "minipass@npm:7.0.4",
+        "minipass@npm:7.1.2",
         "minizlib@npm:2.1.2"
       ]
     },
@@ -6324,7 +6226,7 @@
       "ref": "minipass@npm:5.0.0"
     },
     {
-      "ref": "minipass@npm:7.0.4"
+      "ref": "minipass@npm:7.1.2"
     },
     {
       "ref": "minizlib@npm:2.1.2",
@@ -6371,12 +6273,12 @@
       "dependsOn": [
         "env-paths@npm:2.2.1",
         "exponential-backoff@npm:3.1.1",
-        "glob@npm:10.3.10",
+        "glob@npm:10.4.1",
         "graceful-fs@npm:4.2.11",
-        "make-fetch-happen@npm:13.0.0",
-        "nopt@npm:7.2.0",
+        "make-fetch-happen@npm:13.0.1",
+        "nopt@npm:7.2.1",
         "proc-log@npm:3.0.0",
-        "semver@npm:7.6.0",
+        "semver@npm:7.6.2",
         "tar@npm:6.2.1",
         "which@npm:4.0.0"
       ]
@@ -6388,7 +6290,7 @@
       ]
     },
     {
-      "ref": "nopt@npm:7.2.0",
+      "ref": "nopt@npm:7.2.1",
       "dependsOn": [
         "abbrev@npm:2.0.0"
       ]
@@ -6427,14 +6329,17 @@
       "ref": "path-key@npm:3.1.1"
     },
     {
-      "ref": "path-scurry@npm:1.10.1",
+      "ref": "path-scurry@npm:1.11.1",
       "dependsOn": [
-        "lru-cache@npm:10.2.0",
-        "minipass@npm:7.0.4"
+        "lru-cache@npm:10.2.2",
+        "minipass@npm:7.1.2"
       ]
     },
     {
       "ref": "proc-log@npm:3.0.0"
+    },
+    {
+      "ref": "proc-log@npm:4.2.0"
     },
     {
       "ref": "promise-retry@npm:2.0.1",
@@ -6495,10 +6400,7 @@
       "ref": "semver@npm:6.3.1"
     },
     {
-      "ref": "semver@npm:7.6.0",
-      "dependsOn": [
-        "lru-cache@npm:6.0.0"
-      ]
+      "ref": "semver@npm:7.6.2"
     },
     {
       "ref": "set-blocking@npm:2.0.0"
@@ -6528,15 +6430,15 @@
       ]
     },
     {
-      "ref": "socks-proxy-agent@npm:8.0.2",
+      "ref": "socks-proxy-agent@npm:8.0.3",
       "dependsOn": [
-        "agent-base@npm:7.1.0",
+        "agent-base@npm:7.1.1",
         "debug@npm:4.3.4 [428f3]",
-        "socks@npm:2.8.1"
+        "socks@npm:2.8.3"
       ]
     },
     {
-      "ref": "socks@npm:2.8.1",
+      "ref": "socks@npm:2.8.3",
       "dependsOn": [
         "ip-address@npm:9.0.5",
         "smart-buffer@npm:4.2.0"
@@ -6549,11 +6451,11 @@
       "ref": "spdx-expression-parse@npm:4.0.0",
       "dependsOn": [
         "spdx-exceptions@npm:2.5.0",
-        "spdx-license-ids@npm:3.0.17"
+        "spdx-license-ids@npm:3.0.18"
       ]
     },
     {
-      "ref": "spdx-license-ids@npm:3.0.17"
+      "ref": "spdx-license-ids@npm:3.0.18"
     },
     {
       "ref": "sprintf-js@npm:1.0.3"
@@ -6562,9 +6464,9 @@
       "ref": "sprintf-js@npm:1.1.3"
     },
     {
-      "ref": "ssri@npm:10.0.5",
+      "ref": "ssri@npm:10.0.6",
       "dependsOn": [
-        "minipass@npm:7.0.4"
+        "minipass@npm:7.1.2"
       ]
     },
     {
