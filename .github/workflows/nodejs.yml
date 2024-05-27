@@ -183,9 +183,6 @@ jobs:
         run: |
           yarn install --no-immutable
           yarn info --name-only --recursive
-      - name: allow SSH to github
-        # this is required for some testbeds and setups
-        run: ssh-keygen -R github.com
       - name: setup-tests
         run: yarn run setup-tests
       - name: fetch build artifact
