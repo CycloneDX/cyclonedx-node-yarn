@@ -55,7 +55,6 @@
     "@yarnpkg/core": "^4",
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
-    "@yarnpkg/plugin-github": "^3",
     "clipanion": "^4.0.0-rc.3",
     "hosted-git-info": "^7",
     "normalize-package-data": "^3||^4||^5||^6",

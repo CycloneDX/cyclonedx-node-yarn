@@ -25,12 +25,12 @@ import { Bom, Component, ExternalReference, type License, Property, type Tool } 
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
+import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
-import { isString } from './_helpers'
-import { getPackageSource } from './evidence'
+import { isString, tryRemoveSecretsFromGitUrl, tryRemoveSecretsFromUrl } from './_helpers'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -194,13 +194,55 @@ export class BomBuilder {
       return undefined
     }
 
-    const packageSourceRes = getPackageSource(locator)
-    if (packageSourceRes !== undefined) {
-      const [packageSourceUrl, packageSourceComment] = packageSourceRes
-      if (packageSourceUrl?.length > 0) {
-        component.externalReferences.add(
-          new ExternalReference(packageSourceUrl, ExternalReferenceType.Distribution, { comment: packageSourceComment })
-        )
+    switch (true) {
+      case locator.reference.startsWith('workspace:'): {
+        // @TODO: add CDX-Property for it - cdx:yarn:reference:workspace = $workspaceName
+        break
+      }
+      case locator.reference.startsWith('npm:'): {
+        // see https://github.com/yarnpkg/berry/blob/bfa6489467e0e11ee87268e01e38e4f7e8d4d4b0/packages/plugin-npm/sources/NpmHttpFetcher.ts#L51
+        const { params } = structUtils.parseRange(locator.reference)
+        if (params !== null && isString(params.__archiveUrl)) {
+          component.externalReferences.add(new ExternalReference(
+            tryRemoveSecretsFromUrl(params.__archiveUrl),
+            ExternalReferenceType.Distribution,
+            { comment: 'as detected from YarnLocator property "reference::__archiveUrl"' }
+          ))
+        }
+        // For range and remap there are no concrete evidence how the resolution was done on install-time.
+        // Therefore, do not do anything speculative.
+        break
+      }
+      case YarnPluginGitUtils.isGitUrl(locator.reference): {
+        component.externalReferences.add(new ExternalReference(
+          tryRemoveSecretsFromGitUrl(locator.reference),
+          ExternalReferenceType.VCS,
+          { comment: 'as detected from YarnLocator property "reference"' }
+        ))
+        break
+      }
+      case locator.reference.startsWith('http:') || locator.reference.startsWith('https:'): {
+        component.externalReferences.add(new ExternalReference(
+          tryRemoveSecretsFromUrl(locator.reference),
+          ExternalReferenceType.Distribution,
+          { comment: 'as detected from YarnLocator property "reference"' }
+        ))
+        break
+      }
+      case locator.reference.startsWith('link:'): {
+        // TODO: add CDX-Property for it - cdx:yarn:reference:link = relative path from workspace
+        // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-link
+        break
+      }
+      case locator.reference.startsWith('portal:'): {
+        // TODO: add CDX-Property for it - cdx:yarn:reference:portal = relative path from workspace
+        // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-link
+        break
+      }
+      case locator.reference.startsWith('file:'): {
+        // TODO: add CDX-Property for it  - cdx:yarn:reference:portal = relative path from workspace
+        // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-file
+        break
       }
     }
 

@@ -18,6 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { writeSync } from 'fs'
+import GitHost from 'hosted-git-info'
 
 export async function writeAllSync (fd: number, data: string): Promise<number> {
   const b = Buffer.from(data)
@@ -38,4 +39,23 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
 
 export function isString (v: any): v is string {
   return typeof v === 'string'
+}
+
+export function tryRemoveSecretsFromUrl (url: string): string {
+  try {
+    const u = new URL(url)
+    u.password = ''
+    return u.toString()
+  } catch {
+    return url
+  }
+}
+
+export function tryRemoveSecretsFromGitUrl (gitUrl: string): string {
+  const gitInfo = GitHost.fromUrl(gitUrl)
+  if (gitInfo === undefined) {
+    return gitUrl
+  }
+  gitInfo.auth = undefined
+  return gitInfo.toString()
 }
