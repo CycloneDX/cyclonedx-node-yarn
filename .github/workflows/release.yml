@@ -1,0 +1,268 @@
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      newversion:
+        # is param from `npm version`. therefore the description should reference all the options from there
+        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
+        required: true
+      commitMessage:
+        description: 'Release/commit message (%s will be replaced with the resulting version number)'
+        default: '%s'
+        required: true
+      preid:
+        description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver. Like the rc in `1.2.0-rc.8`.'
+        type: choice
+        options:
+          - rc
+          - beta
+          - alpha
+        default: rc
+        required: false
+      prerelease:
+        description: "This is a pre-release"
+        type: boolean
+        default: false
+        required: false
+
+permissions: write-all
+
+env:
+  REPORTS_DIR: CI_reports
+  BUNDLES_DIR: bundles
+  DIST_DIR: dist
+  PACKED_DIR: CI_packed
+  NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
+  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
+
+jobs:
+  bump:
+    name: bump and tag release
+    concurrency: release-bump
+    outputs:
+      version: ${{ steps.bump.outputs.version }}
+      version_plain: ${{ steps.bump.outputs.version_plain }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Configure Git
+        # needed for push back of changes
+        run: |
+          set -eux
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --local user.name "${GITHUB_ACTOR}"
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      ## ! no npm build at the moment
+      - name: bump VERSION
+        id: bump
+        run: |
+          set -eux
+          COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
+          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
+          echo "::debug::new version = $VERSION"
+          VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
+          echo "::debug::plain version = $VERSION_PLAIN"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "version_plain=$VERSION_PLAIN" >> $GITHUB_OUTPUT
+        env:
+          NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
+          NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          NPMV_PREID: ${{ github.event.inputs.preid }}
+      - name: git push back
+        run: git push --follow-tags
+
+  build:
+    needs: [ "bump" ]
+    name: build
+    runs-on: 'ubuntu-latest'
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
+      - name: Setup subject
+        run: |
+          yarn install --no-immutable
+          yarn info --name-only --recursive
+      - name: build:gbti
+        run: yarn run build
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+          retention-days: 5
+          if-no-files-found: error
+      - name: make dist
+        run: yarn run make-dist
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+          retention-days: 5
+          if-no-files-found: error
+
+  test-licenses:
+    needs: [ 'build' ]
+    name: test licenses
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: install flict
+        run: pip install flict
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: test license compatibility
+        run: flict display-compatibility $(cat "$DIST_DIR"/*.lsummary)
+
+  test-node:
+    needs: [ 'build' ]
+    name: test node
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version ${{ env.YARN_VERSION }}
+      - name: Setup subject
+        run: |
+          yarn install --no-immutable
+          yarn info --name-only --recursive
+      - name: setup-tests
+        run: yarn run setup-tests
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+      - name: run tests
+        run: yarn run test:node
+
+  publish-NPMJS:
+    needs:
+      - "build"
+      - "test-licenses"
+      - "test-node"
+    name: publish NPMJS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
+    steps:
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: .
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: login to NPMJS
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+        env:
+          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+        run: >
+          npm publish
+          --provenance
+          --access public
+          --tag "$NPMJS_RELEASE_TAG"
+      - name: pack release result
+        run: |
+          mkdir -p "$PACKED_DIR"
+          npm pack --pack-destination "$PACKED_DIR"
+      - name: artifact release result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKED_DIR }}
+          path: ${{ env.PACKED_DIR }}/
+          if-no-files-found: error
+
+
+  release-GH:
+    needs:
+      - "bump"
+      - "publish-NPMJS"
+    name: publish GitHub
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ASSETS_DIR: release_assets
+    steps:
+      - name: fetch packages
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.PACKED_DIR }}
+          path: ${{ env.PACKED_DIR }}
+      - name: fetch dist
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: prepare assets
+        run: |
+          set -exu
+          mkdir -p "$ASSETS_DIR"
+          cp -t "$ASSETS_DIR" \
+          "$PACKED_DIR"/*.tgz \
+          "$DIST_DIR/yarn-plugin-cyclonedx.cjs" \
+          "$DIST_DIR/LICENSE" \
+          "$DIST_DIR/NOTICE"
+      - name: Create Release
+        id: release
+        # see https://github.com/softprops/action-gh-release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name:   ${{ needs.bump.outputs.version }}
+          name:       ${{ needs.bump.outputs.version_plain }}
+          prerelease: ${{ github.event.inputs.prerelease }}
+          files:      '${{ env.ASSETS_DIR }}/*'
