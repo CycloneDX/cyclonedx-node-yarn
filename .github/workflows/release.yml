@@ -226,7 +226,7 @@ jobs:
 
   release-GH:
     needs:
-      - "bump"
+      - "build"
       - "publish-NPMJS"
     name: publish GitHub
     runs-on: ubuntu-latest
