@@ -36,30 +36,30 @@ Please read the [CONTRIBUTING][contributing_file] file first.
 
 ## Installation
 
-Import the plugin into your yarn project:
+Install the plugin into your yarn project via one of the following options:
 
-* This will install the latest version from GitHub release assets as plugin into your project:
+* **cli-wrapper**: This will install the latest version frm package repository as cli-wrapper into your project:
+  ```shell
+  yarn add @cyclonedx/yarn-plugin-cyclonedx
+  ```
+* **plugin**: This will install the latest version from GitHub release assets as plugin into your project:
   ```shell
   yarn plugin import https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest/download/yarn-plugin-cyclonedx.cjs
   ```
   For details and license posture, see <https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest>
-* This will install the latest version frm package repository as cli-wrapper into your project:
-  ```shell
-  yarn add @cyclonedx/yarn-plugin-cyclonedx
-  ```
-* Or just use the zero-install method via dlx-wrapper as described below.
+* Or just use the **zero-install** method via dlx-wrapper as described below.
 
 ## Usage
 
-* After plugin installation:
+* After **cli-wrapper** installation:
+  ```shell
+  yarn exec cyclonedx-yarn --help
+  ```
+* After **plugin** installation:
   ```shell 
   yarn cyclonedx --help
   ```
-* after cli-wrapper installation:
-  ```shell
-  yarn dlx -p @cyclonedx/yarn-plugin-cyclonedx cyclonedx-yarn
-  ```
-* Zero-install via dlx-wrapper using the latest version:
+* With **zero-install** via dlx-wrapper:
   ```shell
   yarn dlx -p @cyclonedx/yarn-plugin-cyclonedx cyclonedx-yarn --help
   ```
