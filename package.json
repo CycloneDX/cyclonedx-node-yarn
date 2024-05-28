@@ -112,7 +112,9 @@
       "/README.md",
       "/LICENSE",
       "/NOTICE",
-      "/index.js"
+      "/index.js",
+      "/yarn-plugin-cyclonedx.cjs",
+      "/bin/cyclonedx-yarn-cli.js"
     ],
     "directories": {},
     "scripts": {}
