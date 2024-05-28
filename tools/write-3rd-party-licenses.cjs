@@ -74,6 +74,7 @@ async function getPackageMP (filePath, cache) {
 /**
  * @param {string} outputFile
  * @param {boolean} includeLicense
+ * @return {Promise.<Set.<string>>} used licenses
  */
 async function main (outputFile, includeLicense) {
   const metaData = JSON.parse(readFileSync(metaFile))
@@ -139,7 +140,8 @@ async function main (outputFile, includeLicense) {
     'that are compatibly licensed. We list these here.\n')
   for (const tpLicense of tpLicenses) {
     writeSync(outputFH, `\n${'-'.repeat(80)}\n`)
-    writeSync(outputFH, `Library Name: ${tpLicense.name} (${tpLicense.version})\n`)
+    writeSync(outputFH, `Name: ${tpLicense.name}\n`)
+    writeSync(outputFH, `Version: ${tpLicense.version}\n`)
     writeSync(outputFH, `Distribution: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}/v/${tpLicense.version}\n`)
     writeSync(outputFH, `License declared: ${tpLicense.licenseDeclared}\n`)
     for (const licenseFile of tpLicense.licenseFiles) {
@@ -155,12 +157,20 @@ async function main (outputFile, includeLicense) {
   }
 
   closeSync(outputFH)
+
+  return new Set(tpLicenses.map(l => l.licenseDeclared))
 }
 
 if (require.main === module) {
   const outputFile = process.argv[2] || `${metaFile}.NOTICE`
+  const lsummaryFile = process.argv[3] || `${outputFile}.lsummary`
   const includeLicense = false
-  main(outputFile, includeLicense)
+  main(outputFile, includeLicense).then(licenses => {
+    const lsummaryFH = openSync(lsummaryFile, 'w')
+    writeSync(lsummaryFH, JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license + '\n')
+    writeSync(lsummaryFH, Array.from(licenses).sort().join('\n'))
+    closeSync(lsummaryFH)
+  })
 } else {
   module.exports = main
 }
