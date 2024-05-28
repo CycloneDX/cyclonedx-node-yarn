@@ -36,26 +36,32 @@ Please read the [CONTRIBUTING][contributing_file] file first.
 
 ## Installation
 
-Currently, there are no releases nor pre-builds. This means, the only way to test this tool is by building it from source:
-1. Clone this repository and change dir into the clone
-1. Install the project dependencies - run: `yarn install`
-1. Create the bundle - run: `yarn run build`
-1. Create the dist   - run: `yarn run make-dist`
+Import the plugin into your yarn project:
 
-Then, you could import the plugin into your project — like so:
-```shell
-yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.cjs
-```
+* This will install the latest version from GitHub release assets as plugin into your project:
+  ```shell
+  yarn plugin import https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest/download/yarn-plugin-cyclonedx.cjs
+  ```
+  For details and license posture, see <https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest>
+* This will install the latest version frm package repository as cli-wrapper into your project:
+  ```shell
+  yarn add @cyclonedx/yarn-plugin-cyclonedx
+  ```
+* Or just use the zero-install method via dlx-wrapper as described below.
 
 ## Usage
 
-* After plugin installation
+* After plugin installation:
   ```shell 
   yarn cyclonedx --help
   ```
-* Zero-install via dlx-wrapper
+* after cli-wrapper installation:
   ```shell
-  yarn dlx -p {pathToYourClone}/dist cyclonedx-yarn --help
+  yarn dlx -p @cyclonedx/yarn-plugin-cyclonedx cyclonedx-yarn
+  ```
+* Zero-install via dlx-wrapper using the latest version:
+  ```shell
+  yarn dlx -p @cyclonedx/yarn-plugin-cyclonedx cyclonedx-yarn --help
   ```
 
 The help page:
