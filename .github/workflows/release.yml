@@ -7,12 +7,21 @@ on:
     inputs:
       newversion:
         # is param from `npm version`. therefore the description should reference all the options from there
-        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease]'
+        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
         required: true
       commitMessage:
         description: 'Release/commit message (%s will be replaced with the resulting version number)'
         default: '%s'
         required: true
+      preid:
+        description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver. Like the rc in `1.2.0-rc.8`.'
+        type: choice
+        options:
+          - rc
+          - beta
+          - alpha
+        default: rc
+        required: false
       prerelease:
         description: "This is a pre-release"
         type: boolean
@@ -34,7 +43,7 @@ jobs:
     name: bump and tag release
     concurrency: release-bump
     outputs:
-      version:       ${{ steps.bump.outputs.version }}
+      version: ${{ steps.bump.outputs.version }}
       version_plain: ${{ steps.bump.outputs.version_plain }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -53,26 +62,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
         run: |
           set -eux
-          yarn version -i "$YARNV_NEWVERSION"
-          VERSION_PLAIN="$(node -p 'require(`./package.json`).version')"
-          echo "::debug::plain version = $VERSION_PLAIN"
-          VERSION="v${VERSION_PLAIN}"
+          COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
+          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
+          VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
+          echo "::debug::plain version = $VERSION_PLAIN"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "version_plain=$VERSION_PLAIN" >> $GITHUB_OUTPUT
-          git commit -sm "$VERSION"$'\n\n'"${GITC_MESSAGE//%s/"$VERSION_PLAIN"}" package.json
         env:
-          YARNV_NEWVERSION: ${{ github.event.inputs.newversion }}
-          GITC_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
+          NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          NPMV_PREID: ${{ github.event.inputs.preid }}
       - name: git push back
         run: git push --follow-tags
 
