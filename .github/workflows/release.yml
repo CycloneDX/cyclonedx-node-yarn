@@ -34,7 +34,7 @@ env:
   REPORTS_DIR: CI_reports
   BUNDLES_DIR: bundles
   DIST_DIR: dist
-  PACKED_DIR: packed
+  PACKED_DIR: CI_packed
   NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
   YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
 
@@ -82,8 +82,7 @@ jobs:
         run: git push --follow-tags
 
   build:
-    needs:
-      - "bump"
+    needs: [ "bump" ]
     name: build
     runs-on: 'ubuntu-latest'
     timeout-minutes: 10
