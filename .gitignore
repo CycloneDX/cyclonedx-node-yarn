@@ -10,7 +10,7 @@
 /dist/
 /release_assets/
 
-
+_tmp/
 
 # yarn stuff - for now, until setup is hardened
 # see also: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
