@@ -1,5 +1,6 @@
 # CycloneDX SBOM plugin for yarn
 
+[![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_coverage]][link_codacy]
 [![shield_ossf-best-practices]][link_ossf-best-practices]
@@ -15,47 +16,47 @@ Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.
 
 ## 🚧 🏗️ this project is in beta stage
 
+All features are done, MVP is reached. Now its time for public testing. 🚀
+
 See the projects issues, discussions, pull requests, and milestones.
 
 - progress: [milestone v1.0](https://github.com/CycloneDX/cyclonedx-node-yarn/milestone/1)
 - planning: [discussion "vision"](https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8)
 
-Development will happen in branch `1.0-dev`.
-
-Feel free to contribute, write issues, create pull requests, or start discussions.  
-Please read the [CONTRIBUTING][contributing_file] file first.
-
 ----
 
 ## Requirements
-
-!! to be clarified ...
 
 * `node` >= `18`
 * `yarn` >= `4`
 
 ## Installation
 
-Currently, there are no releases nor pre-builds. This means, the only way to test this tool is by building it from source:
-1. Clone this repository and change dir into the clone
-1. Install the project dependencies - run: `yarn install`
-1. Create the bundle - run: `yarn run build`
-1. Create the dist   - run: `yarn run make-dist`
+Install the plugin into your yarn project via one of the following methods:
 
-Then, you could import the plugin into your project — like so:
-```shell
-yarn plugin import {pathToYourClone}/dist/yarn-plugin-cyclonedx.cjs
-```
+* **zero-install**: no install needed, just call on demand via dlx-wrapper as described in section "usage".
+* **cli-wrapper**: install the latest version from package repository as cli-wrapper into your project:
+  ```shell
+  yarn add @cyclonedx/yarn-plugin-cyclonedx
+  ```
+* **plugin**: install the [latest version from GitHub release](https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest) assets as a plugin into your project:
+  ```shell
+  yarn plugin import https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest/download/yarn-plugin-cyclonedx.cjs
+  ```
 
 ## Usage
 
-* After plugin installation
+* With **zero-install** via dlx-wrapper:
+  ```shell
+  yarn dlx -p @cyclonedx/yarn-plugin-cyclonedx cyclonedx-yarn --help
+  ```
+* After **cli-wrapper** installation:
+  ```shell
+  yarn exec cyclonedx-yarn --help
+  ```
+* After **plugin** installation:
   ```shell 
   yarn cyclonedx --help
-  ```
-* Zero-install via dlx-wrapper
-  ```shell
-  yarn dlx -p {pathToYourClone}/dist cyclonedx-yarn --help
   ```
 
 The help page:
@@ -110,6 +111,9 @@ See the [CONTRIBUTING][contributing_file] file for details.
 Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.  
 See the [LICENSE][license_file] file for the full license.
 
+For details and license posture of the assembly,
+see: <https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest>
+
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/1.0-dev/LICENSE
 [contributing_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/1.0-dev/CONTRIBUTING.md
@@ -121,6 +125,7 @@ See the [LICENSE][license_file] file for the full license.
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-yarn/nodejs.yml?branch=1.0-dev&logo=GitHub&logoColor=white "tests"
 [shield_coverage]: https://img.shields.io/codacy/coverage/b0af77db5c7b4ab7a36eab255c7f9ede?logo=Codacy&logoColor=white "test coverage"
 [shield_ossf-best-practices]: https://img.shields.io/cii/percentage/8960?label=OpenSSF%20best%20practices "OpenSSF best practices"
+[shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/yarn-plugin-cyclonedx?logo=npm&logoColor=white "npm"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-node-yarn?logo=open%20source%20initiative&logoColor=white "license"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
@@ -129,6 +134,7 @@ See the [LICENSE][license_file] file for the full license.
 
 [link_website]: https://cyclonedx.org/
 [link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-yarn/actions/workflows/nodejs.yml?query=branch%3A1.0-dev
+[link_npm]: https://www.npmjs.com/package/@cyclonedx/yarn-plugin-cyclonedx
 [link_codacy]: https://app.codacy.com/gh/CycloneDX/cyclonedx-node-yarn/dashboard
 [link_ossf-best-practices]: https://www.bestpractices.dev/projects/8960
 [link_slack]: https://cyclonedx.org/slack/invite
