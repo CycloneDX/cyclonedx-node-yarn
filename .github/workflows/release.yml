@@ -122,16 +122,6 @@ jobs:
           path: ${{ env.DIST_DIR }}
           retention-days: 5
           if-no-files-found: error
-      - name: pack dist
-        run: yarn "./$DIST_DIR" pack --out "../$PACK_DIR/%s-%v.tgz"
-      - name: artifact pack result
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.PACK_DIR }}
-          path: ${{ env.PACK_DIR }}
-          retention-days: 5
-          if-no-files-found: error
 
   test-licenses:
     needs: [ 'build' ]
@@ -217,6 +207,18 @@ jobs:
           --provenance
           --access public
           --tag "$NPMJS_RELEASE_TAG"
+      - name: pack release result
+        run: |
+          mkdir -p "$PACKED_DIR"
+          npm pack --pack-destination "$PACKED_DIR"
+      - name: artifact release result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKED_DIR }}
+          path: ${{ env.PACKED_DIR }}/
+          if-no-files-found: error
+
 
   release-GH:
     needs:
