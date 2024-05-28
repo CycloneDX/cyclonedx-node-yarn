@@ -98,7 +98,7 @@
     "test": "tests"
   },
   "bin": {
-    "cyclonedx-yarn": "./bin/cyclonedx-yarn-cli.js"
+    "cyclonedx-yarn": "bin/cyclonedx-yarn-cli.js"
   },
   "main": "./src/plugin.ts",
   "exports": "./index.js",
