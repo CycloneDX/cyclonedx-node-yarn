@@ -35,11 +35,11 @@ See the projects issues, discussions, pull requests, and milestones.
 Install the plugin into your yarn project via one of the following methods:
 
 * **zero-install**: no install needed, just call on demand via dlx-wrapper as described in section "usage".
-* **cli-wrapper**: This will install the latest version from package repository as cli-wrapper into your project:
+* **cli-wrapper**: install the latest version from package repository as cli-wrapper into your project:
   ```shell
   yarn add @cyclonedx/yarn-plugin-cyclonedx
   ```
-* **plugin**: This will install the latest version from GitHub release assets as plugin into your project:
+* **plugin**: install the latest version from GitHub release assets as plugin into your project:
   ```shell
   yarn plugin import https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest/download/yarn-plugin-cyclonedx.cjs
   ```
