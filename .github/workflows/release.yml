@@ -207,17 +207,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
       - name: login to NPMJS
-        run: yarn config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
-          yarn npm publish
+          npm publish
           --provenance
           --access public
           --tag "$NPMJS_RELEASE_TAG"
