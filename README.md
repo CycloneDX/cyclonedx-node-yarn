@@ -39,7 +39,7 @@ Install the plugin into your yarn project via one of the following methods:
   ```shell
   yarn add @cyclonedx/yarn-plugin-cyclonedx
   ```
-* **plugin**: install the latest version from GitHub release assets as plugin into your project:
+* **plugin**: install the [latest version from GitHub release](https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest) assets as a plugin into your project:
   ```shell
   yarn plugin import https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest/download/yarn-plugin-cyclonedx.cjs
   ```
