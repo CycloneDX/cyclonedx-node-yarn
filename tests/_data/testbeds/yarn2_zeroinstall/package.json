@@ -1,13 +1,13 @@
 {
+  "packageManager": "yarn@2.4.3",
+  "private": true,
   "name": "@cyclonedx/testing-yarn2-zeroinstall",
   "version": "0.0.0",
-  "private": true,
   "description": "A yarn2 zero-install setup.",
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },
-  "packageManager": "yarn@2.4.3",
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^6.9.5"
+    "is-sorted": "^1"
   }
 }
