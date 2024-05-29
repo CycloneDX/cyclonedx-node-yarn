@@ -221,10 +221,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ matrix.yarn-version }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ matrix.yarn-version }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -283,10 +283,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ matrix.yarn-version }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ matrix.yarn-version }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
