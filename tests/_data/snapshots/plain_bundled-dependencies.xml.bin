@@ -960,7 +960,7 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
+    <component type="library" bom-ref="resolve@patch:resolve@npm%3A1.22.8#~builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
       <author>James Halliday</author>
       <name>resolve</name>
       <version>1.22.8</version>
@@ -1479,7 +1479,7 @@
     <dependency ref="lodash.assign@npm:4.2.0"/>
     <dependency ref="normalize-package-data@npm:2.5.0">
       <dependency ref="hosted-git-info@npm:2.8.9"/>
-      <dependency ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d"/>
+      <dependency ref="resolve@patch:resolve@npm%3A1.22.8#~builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d"/>
       <dependency ref="semver@npm:5.7.2"/>
       <dependency ref="validate-npm-package-license@npm:3.0.4"/>
     </dependency>
@@ -1515,7 +1515,7 @@
     </dependency>
     <dependency ref="require-directory@npm:2.1.1"/>
     <dependency ref="require-main-filename@npm:1.0.1"/>
-    <dependency ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
+    <dependency ref="resolve@patch:resolve@npm%3A1.22.8#~builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
       <dependency ref="is-core-module@npm:2.13.1"/>
       <dependency ref="path-parse@npm:1.0.7"/>
       <dependency ref="supports-preserve-symlinks-flag@npm:1.0.0"/>

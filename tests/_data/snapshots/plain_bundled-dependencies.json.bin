@@ -1259,7 +1259,7 @@
       "type": "library",
       "name": "resolve",
       "version": "1.22.8",
-      "bom-ref": "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
+      "bom-ref": "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
       "author": "James Halliday",
       "description": "resolve like require.resolve() on behalf of files asynchronously and synchronously",
       "licenses": [
@@ -1974,7 +1974,7 @@
       "ref": "normalize-package-data@npm:2.5.0",
       "dependsOn": [
         "hosted-git-info@npm:2.8.9",
-        "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
+        "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
         "semver@npm:5.7.2",
         "validate-npm-package-license@npm:3.0.4"
       ]
@@ -2045,7 +2045,7 @@
       "ref": "require-main-filename@npm:1.0.1"
     },
     {
-      "ref": "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
+      "ref": "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d",
       "dependsOn": [
         "is-core-module@npm:2.13.1",
         "path-parse@npm:1.0.7",
