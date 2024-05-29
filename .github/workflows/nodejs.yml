@@ -200,10 +200,10 @@ jobs:
           - '20'      # LTS
           - '18'      # lowest supported
         yarn-version:
-          - '4.x'
-          - '4.0'
+          - '4.x'     # Current
+          - '4.0.0'
           - '3.x'
-          - '3.0'
+          - '3.0.0'   # lowest supported
         os:
           - ubuntu-latest
           - windows-latest
@@ -267,8 +267,8 @@ jobs:
           - '20'      # LTS
           - '18'      # lowest supported
         yarn-version:
-          - '4.x' # Current
-          - '3.0' # lowest supported
+          - '4.x'     # Current
+          - '3.0.0'   # lowest supported
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 10

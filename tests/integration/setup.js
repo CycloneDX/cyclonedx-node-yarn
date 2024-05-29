@@ -56,7 +56,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   for (const DIR of REQUIRES_INSTALL) {
     console.log('>>> setup with yarn:', DIR)
     const done = spawnSync(
-      'yarn', ['install', '--immutable'], {
+      'yarn', ['install'], {
         cwd: path.join(testbedsPath, DIR),
         stdio: 'inherit',
         shell: true
