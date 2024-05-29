@@ -58,7 +58,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     const done = spawnSync(
       // allow mutations - we care for the SBOM, not the lock ...
       // testing with different yarn versions might require lock file transformation
-      'yarn', ['install', '--no-immutable'], {
+      'yarn', ['install', '--immutable'], {
         cwd: path.join(testbedsPath, DIR),
         stdio: 'inherit',
         shell: true
