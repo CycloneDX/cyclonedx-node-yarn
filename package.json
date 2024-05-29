@@ -89,7 +89,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "yarn": ">=4",
+    "yarn": ">=3",
     "node": ">=18"
   },
   "directories": {

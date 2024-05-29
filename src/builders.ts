@@ -31,6 +31,7 @@ import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { isString, tryRemoveSecretsFromGitUrl, tryRemoveSecretsFromUrl } from './_helpers'
+import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -110,7 +111,7 @@ export class BomBuilder {
 
     // region components
 
-    const rootPackage = workspace.anchoredPackage
+    const rootPackage = wsAnchoredPackage(workspace)
     if (this.omitDevDependencies) {
       for (const dep of workspace.manifest.devDependencies.keys()) {
         rootPackage.dependencies.delete(dep)

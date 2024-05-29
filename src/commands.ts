@@ -23,13 +23,14 @@ import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
 import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
-import { type CommandContext, Configuration, Project, YarnVersion } from '@yarnpkg/core'
+import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { Command, Option } from 'clipanion'
 import { openSync } from 'fs'
 import { resolve } from 'path'
 import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
+import { YarnVersionTuple } from './_yarnCompat'
 import { BomBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 
@@ -125,15 +126,15 @@ export class MakeSbomCommand extends Command<CommandContext> {
    */
 
   async execute (): Promise<number> {
-    if (YarnVersion !== null && !YarnVersion.startsWith('4.')) {
-      console.error('Error: expected yarn version 4.X - got', YarnVersion)
+    if (YarnVersionTuple !== null && YarnVersionTuple[0] < 3) {
+      console.error('Error: expected yarn version >= 3 - got', YarnVersionTuple)
       return ExitCode.INVALID
     }
 
     const projectDir = this.context.cwd
 
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
-    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersion)
+    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersionTuple)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,
