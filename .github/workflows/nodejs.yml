@@ -208,6 +208,9 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        exclude:
+          - yarn-version: '3.0.0'
+            node-version: '22'
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 15
