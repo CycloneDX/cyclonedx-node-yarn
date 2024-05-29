@@ -46,8 +46,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -eux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -92,8 +93,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -eux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -137,8 +139,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -eux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -167,8 +170,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -eux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -223,8 +227,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -eux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -285,8 +290,9 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          set -sux
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
