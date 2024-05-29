@@ -55,7 +55,8 @@ const testSetups = [
   'local-workspaces',
   'package-aliasing',
   'package-with-build-id',
-  'yarn3_zeroinstall'
+  'yarn3_zeroinstall',
+  'yarn4_zeroinstall'
   /* endregion functional tests */
   /* region regression tests */
   // ... none so far

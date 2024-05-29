@@ -1,3 +1,5 @@
 # Integration test: yarn2 zero-install
 
-all is installed and ready to go.
+*ATTENTION*: this demo might use known vulnerable dependencies for showcasing purposes.
+
+All is installed and ready to go.
