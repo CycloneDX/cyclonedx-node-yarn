@@ -237,11 +237,11 @@ function makeJsonReproducible (json) {
   return json
     .replace(
       new RegExp(
-      '        "name": "yarn",\n' +
-        '        "version": ".+?"\n',
+        '        "name": "yarn",\n' +
+        '        "version": ".+?"\n'
       ),
       '        "name": "yarn",\n' +
-      '        "version": "yarnVersion-testing",\n',
+      '        "version": "yarnVersion-testing"\n'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
