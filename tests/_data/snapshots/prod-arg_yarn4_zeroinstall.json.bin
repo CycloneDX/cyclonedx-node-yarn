@@ -63,40 +63,6 @@
   "components": [
     {
       "type": "library",
-      "name": "in-array",
-      "version": "0.1.2",
-      "bom-ref": "in-array@npm:0.1.2",
-      "author": "Jon Schlinkert",
-      "description": "Return true if a value exists in an array. Faster than using indexOf and won't blow up on null values.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/in-array@0.1.2?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/in-array.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/jonschlinkert/in-array/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/jonschlinkert/in-array.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/jonschlinkert/in-array",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "is-sorted",
       "version": "1.0.5",
       "bom-ref": "is-sorted@npm:1.0.5",
@@ -134,12 +100,8 @@
     {
       "ref": "@cyclonedx/testing-yarn3-zeroinstall@workspace:.",
       "dependsOn": [
-        "in-array@npm:0.1.2",
         "is-sorted@npm:1.0.5"
       ]
-    },
-    {
-      "ref": "in-array@npm:0.1.2"
     },
     {
       "ref": "is-sorted@npm:1.0.5"

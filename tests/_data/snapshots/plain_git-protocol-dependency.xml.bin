@@ -20,7 +20,7 @@
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>yarn-plugin-cyclonedx</name>
-        <version>thisVersion-testing</version>
+        <version>1.0.0-rc.0+git.8d9f6a6</version>
         <externalReferences>
           <reference type="issue-tracker">
             <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>

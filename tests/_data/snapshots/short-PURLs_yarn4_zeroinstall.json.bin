@@ -76,7 +76,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/in-array@0.1.2?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/in-array.git",
+      "purl": "pkg:npm/in-array@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/jonschlinkert/in-array/issues",
@@ -110,7 +110,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-sorted@1.0.5?vcs_url=git%2Bhttps%3A//github.com/dcousens/is-sorted.git",
+      "purl": "pkg:npm/is-sorted@1.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/dcousens/is-sorted/issues",
