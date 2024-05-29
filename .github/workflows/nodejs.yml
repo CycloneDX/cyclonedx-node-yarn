@@ -259,6 +259,11 @@ jobs:
           - '22'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
+        yarn-version:
+          - '4.x'
+          - '3.0.0'
+          - '3.x'
+          - '3.0.0'
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -274,7 +279,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ matrix.yarn-version }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
