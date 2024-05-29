@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 * Style
   * Some refactoring here and there
 * Docs
-  * Some typo fixes and modernisations here and there
+  * Some typo fixes and modernization here and there
 
 [#121]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/121
 [#122]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/122
