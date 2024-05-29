@@ -20,7 +20,7 @@ concurrency:
 
 env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
-  YARN_VERSION_CURRENT: '4.x'  # https://yarnpkg.com/blog/
+  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
@@ -44,10 +44,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION_CURRENT }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -90,10 +90,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION_CURRENT }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -135,10 +135,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION_CURRENT }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -165,10 +165,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION_CURRENT }}
+          yarn set version ${{ env.YARN_VERSION }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -208,6 +208,8 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+    env:
+      YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -267,6 +269,8 @@ jobs:
         yarn-version:
           - '4.x'
           - '3.x'
+    env:
+      YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 10
     steps:
       - name: Checkout
