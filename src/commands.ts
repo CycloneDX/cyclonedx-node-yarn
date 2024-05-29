@@ -30,6 +30,7 @@ import { resolve } from 'path'
 import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
+import { YarnVersionTuple } from './_yarnCompat'
 import { BomBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 
@@ -125,9 +126,15 @@ export class MakeSbomCommand extends Command<CommandContext> {
    */
 
   async execute (): Promise<number> {
+    if (YarnVersionTuple !== null && YarnVersionTuple[0] < 3) {
+      console.error('Error: expected yarn version >= 3 - got', YarnVersionTuple)
+      return ExitCode.INVALID
+    }
+
     const projectDir = this.context.cwd
 
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
+    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersionTuple)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,

@@ -28,7 +28,7 @@ See the projects issues, discussions, pull requests, and milestones.
 ## Requirements
 
 * `node` >= `18`
-* `yarn` >= `4`
+* `yarn` >= `3`
 
 ## Installation
 

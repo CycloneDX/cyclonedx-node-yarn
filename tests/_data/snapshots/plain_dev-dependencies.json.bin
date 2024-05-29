@@ -6,6 +6,10 @@
   "metadata": {
     "tools": [
       {
+        "name": "yarn",
+        "version": "yarnVersion-testing"
+      },
+      {
         "vendor": "@cyclonedx",
         "name": "cyclonedx-library",
         "version": "libVersion-testing",

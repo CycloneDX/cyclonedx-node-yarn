@@ -27,7 +27,7 @@ env:
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
   # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
-  YARN_ENABLE_HARDENED_MODE: 0  # https://yarnpkg.com/features/security
+  # YARN_ENABLE_HARDENED_MODE: '0'  # https://yarnpkg.com/features/security
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -93,7 +93,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -138,7 +138,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -168,7 +168,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -217,7 +217,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -248,7 +248,7 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding (node${{ matrix.node-version }})
+    name: dogfooding (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -259,6 +259,11 @@ jobs:
           - '22'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
+        yarn-version:
+          - '4.x'
+          - '3.x'
+    env:
+      YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -274,11 +279,9 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --no-immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>yarn</name>
+        <version>yarnVersion-testing</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>yarn-plugin-cyclonedx</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="@cyclonedx/testing-yarn3-zeroinstall@workspace:.">
+      <group>@cyclonedx</group>
+      <name>testing-yarn3-zeroinstall</name>
+      <version>0.0.0</version>
+      <description>A yarn3 zero-install setup.</description>
+      <purl>pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="is-sorted@npm:1.0.5">
+      <author>Daniel Cousens</author>
+      <name>is-sorted</name>
+      <version>1.0.5</version>
+      <description>A small module to check if an Array is sorted</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-sorted@1.0.5</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/dcousens/is-sorted/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/dcousens/is-sorted.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/dcousens/is-sorted</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@cyclonedx/testing-yarn3-zeroinstall@workspace:.">
+      <dependency ref="is-sorted@npm:1.0.5"/>
+    </dependency>
+    <dependency ref="is-sorted@npm:1.0.5"/>
+  </dependencies>
+</bom>

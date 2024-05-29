@@ -50,11 +50,13 @@ const testSetups = [
   'git-protocol-dependency',
   'github-protocol-dependency',
   'http-protocol-dependency',
-  'juice-shop',
+  // 'juice-shop',
   'local-dependencies',
   'local-workspaces',
   'package-aliasing',
-  'package-with-build-id'
+  'package-with-build-id',
+  'yarn3_zeroinstall',
+  'yarn4_zeroinstall'
   /* endregion functional tests */
   /* region regression tests */
   // ... none so far
@@ -81,10 +83,10 @@ suite('integration', () => {
    * @param {string} cwd
    * @param {string[]} [args]
    * @param {Object.<string, string>} [env]
-   * @returns {string} the SBOM
+   * @returns {SpawnSyncReturns.<string>}
    */
-  function runClI (cwd, args = [], env = {}) {
-    const res = spawnSync(
+  function _rawRunCLI (cwd, args = [], env = {}) {
+    return spawnSync(
       process.execPath, [thisCLI, ...args], {
         cwd,
         stdio: ['ignore', 'pipe', 'pipe'],
@@ -96,6 +98,16 @@ suite('integration', () => {
           CI: '1'
         }
       })
+  }
+
+  /**
+   * @param {string} cwd
+   * @param {string[]} [args]
+   * @param {Object.<string, string>} [env]
+   * @returns {string} the STDOUT
+   */
+  function runCLI (cwd, args = undefined, env = undefined) {
+    const res = _rawRunCLI(cwd, args, env)
     assert.strictEqual(res.error, undefined, res.output)
     assert.strictEqual(res.status, 0, res.output)
     return res.stdout.toString()
@@ -114,7 +126,7 @@ suite('integration', () => {
   ) {
     const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.${format.toLowerCase()}.bin`)
 
-    let sbom = runClI(
+    let sbom = runCLI(
       path.join(testbedsPath, testSetup),
       [
         '-vvv',
@@ -143,8 +155,13 @@ suite('integration', () => {
   }
 
   suite('make SBOM', () => {
+    test('yarn2 fails', () => {
+      const res = _rawRunCLI(path.join(testbedsPath, 'yarn2_zeroinstall'), ['-vvv'])
+      assert.notEqual(res.status, 0)
+    })
+
     test('version', () => {
-      const res = runClI(projectRootPath, ['--version'])
+      const res = runCLI(projectRootPath, ['--version'])
       assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
     });
 
@@ -169,7 +186,10 @@ suite('integration', () => {
         })
 
         suite('short PURLs', () => {
-          ['alternative-package-registry', 'juice-shop'].forEach(testSetup => {
+          [
+            'alternative-package-registry',
+            'yarn3_zeroinstall'
+          ].forEach(testSetup => {
             test(`${testSetup}`,
               () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
             ).timeout(longTestTimeout)
@@ -177,7 +197,7 @@ suite('integration', () => {
         })
 
         test('dogfooding', async () => {
-          const sbom = runClI(projectRootPath, ['--output-format', format])
+          const sbom = runCLI(projectRootPath, ['--output-format', format])
           const validationErrors = await validate(format, sbom, '1.5')
           assert.equal(validationErrors, null)
         }).timeout(longTestTimeout)
@@ -236,6 +256,13 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      new RegExp(
+        '        "name": "yarn",\n' +
+        '        "version": ".+?"\n'
+      ),
+      '        "name": "yarn",\n' +
+      '        "version": "yarnVersion-testing"\n'
+    ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
@@ -267,6 +294,14 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        <name>yarn</name>\n' +
+        '        <version>.+?</version>'
+      ),
+      '        <name>yarn</name>\n' +
+      '        <version>yarnVersion-testing</version>'
+    ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +

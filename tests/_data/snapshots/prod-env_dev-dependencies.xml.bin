@@ -3,6 +3,10 @@
   <metadata>
     <tools>
       <tool>
+        <name>yarn</name>
+        <version>yarnVersion-testing</version>
+      </tool>
+      <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
         <version>libVersion-testing</version>
