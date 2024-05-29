@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
-## 1.0.0-rc.1 -- 2024-05-28
+## 1.0.0-rc.2 -- 2024-05-28
 
 * Added
   * Support for _yarn3_ (via [#122 via #121])

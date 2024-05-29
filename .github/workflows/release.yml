@@ -167,7 +167,7 @@ jobs:
         run: |
           set -eux
           corepack enable yarn
-          yarn set version "$YARN_VERSION:
+          yarn set version "$YARN_VERSION"
       - name: Setup subject
         run: |
           yarn install --no-immutable
