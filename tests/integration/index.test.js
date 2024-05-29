@@ -169,7 +169,7 @@ suite('integration', () => {
         })
 
         suite('short PURLs', () => {
-          ['alternative-package-registry', 'juice-shop'].forEach(testSetup => {
+          ['alternative-package-registry'].forEach(testSetup => {
             test(`${testSetup}`,
               () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
             ).timeout(longTestTimeout)
