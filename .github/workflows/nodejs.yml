@@ -210,7 +210,7 @@ jobs:
           - macos-latest
         exclude:
           - yarn-version: '3.x'
-            node-version: '20'
+            node-version: '22'
           - yarn-version: '3.0.0'
             node-version: '22'
     env:
