@@ -125,15 +125,15 @@ export class MakeSbomCommand extends Command<CommandContext> {
    */
 
   async execute (): Promise<number> {
-    if (!YarnVersion?.startsWith('4.')) {
-      console.error(`Error: expected yarn version 4.X - got YarnVersion`)
+    if (YarnVersion !== null && !YarnVersion.startsWith('4.')) {
+      console.error('Error: expected yarn version 4.X - got', YarnVersion)
       return ExitCode.INVALID
     }
 
     const projectDir = this.context.cwd
 
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
-    myConsole.debug('DEBUG | YarnVersion:', YarnVersion)
+    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersion)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,

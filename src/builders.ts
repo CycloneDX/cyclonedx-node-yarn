@@ -21,9 +21,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Bom, Component, ExternalReference, type License, Property, type Tool } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ExternalReference, type License, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
-import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace } from '@yarnpkg/core'
+import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageData from 'normalize-package-data'
@@ -270,6 +270,7 @@ export class BomBuilder {
   }
 
   private async * makeTools (): AsyncGenerator<Tool> {
+    yield new Tool({ name: 'yarn', version: YarnVersion ?? undefined })
     for (const nfo of Object.values(await getBuildtimeInfo())) {
       const tool = this.toolBuilder.makeTool(nfo)
       if (tool !== undefined) {
