@@ -188,7 +188,7 @@ jobs:
 
   test-node:
     needs: [ 'build' ]
-    name: test (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }} ${{ matrix.os }})
+    name: test (node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -199,15 +199,10 @@ jobs:
           - '22'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
-        yarn-version:
-          - '4.x'
-          - '3.x'
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-    env:
-      YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -242,13 +237,13 @@ jobs:
         run: >
           yarn exec c8 report
           --reporter clover
-          --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}_yarn${{ matrix.yarn-version }}'
+          --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}'
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}_yarn${{ matrix.yarn-version }}'
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
 
   dogfooding:
