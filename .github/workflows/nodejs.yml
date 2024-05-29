@@ -20,14 +20,14 @@ concurrency:
 
 env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
-  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
+  YARN_VERSION_CURRENT: '4.x'  # https://yarnpkg.com/blog/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
   # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
-  YARN_ENABLE_HARDENED_MODE: 0  # https://yarnpkg.com/features/security
+  YARN_ENABLE_HARDENED_MODE: ''  # https://yarnpkg.com/features/security
 
 jobs:
   build:
@@ -44,10 +44,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ env.YARN_VERSION_CURRENT }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -90,10 +90,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ env.YARN_VERSION_CURRENT }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -135,10 +135,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ env.YARN_VERSION_CURRENT }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -165,10 +165,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ env.YARN_VERSION_CURRENT }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ env.YARN_VERSION_CURRENT }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -188,7 +188,7 @@ jobs:
 
   test-node:
     needs: [ 'build' ]
-    name: test (node${{ matrix.node-version }} ${{ matrix.os }})
+    name: test (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }} ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -199,6 +199,11 @@ jobs:
           - '22'      # Current
           - '20'      # LTS
           - '18'      # lowest supported
+        yarn-version:
+          - '4.x'
+          - '4.0'
+          - '3.x'
+          - '3.0'
         os:
           - ubuntu-latest
           - windows-latest
@@ -214,10 +219,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ matrix.yarn-version }}
         run: |
           corepack enable yarn
-          yarn set version ${{ env.YARN_VERSION }}
+          yarn set version ${{ matrix.yarn-version }}
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -237,18 +242,18 @@ jobs:
         run: >
           yarn exec c8 report
           --reporter clover
-          --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}'
+          --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}_yarn${{ matrix.yarn-version }}'
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}_yarn${{ matrix.yarn-version }}'
           path: ${{ env.REPORTS_DIR }}
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding (node${{ matrix.node-version }})
+    name: dogfooding (node${{ matrix.node-version }} yarn${{ matrix.yarn-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -261,9 +266,7 @@ jobs:
           - '18'      # lowest supported
         yarn-version:
           - '4.x'
-          - '3.0.0'
           - '3.x'
-          - '3.0.0'
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -276,7 +279,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
+      - name: Setup yarn ${{ matrix.yarn-version }}
         run: |
           corepack enable yarn
           yarn set version ${{ matrix.yarn-version }}
