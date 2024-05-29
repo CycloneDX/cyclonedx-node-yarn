@@ -236,6 +236,13 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      new RegExp(
+      '        "name": "yarn",\n' +
+        '        "version": ".+?"\n',
+      ),
+      '        "name": "yarn",\n' +
+      '        "version": "yarnVersion-testing",\n',
+    ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
@@ -267,6 +274,14 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        <name>yarn</name>\n' +
+        '        <version>.+?</version>'
+      ),
+      '        <name>yarn</name>\n' +
+      '        <version>yarnVersion-testing</version>'
+    ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +

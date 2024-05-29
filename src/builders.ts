@@ -270,7 +270,7 @@ export class BomBuilder {
   }
 
   private async * makeTools (): AsyncGenerator<Tool> {
-    yield new Tool({ name: 'yarn', version: YarnVersion ?? undefined })
+    yield new Tool({ name: 'yarn', version: YarnVersion ?? 'UNKNOWN' })
     for (const nfo of Object.values(await getBuildtimeInfo())) {
       const tool = this.toolBuilder.makeTool(nfo)
       if (tool !== undefined) {
