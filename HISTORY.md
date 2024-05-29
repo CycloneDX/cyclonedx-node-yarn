@@ -9,11 +9,11 @@ All notable changes to this project will be documented in this file.
 ## 1.0.0-rc.2 -- 2024-05-28
 
 * Added
-  * Support for _yarn3_ (via [#122 via #121])
+  * Support for _yarn3_ ([#122] via [#121])
 * Style
-  * Some refactoring here and there 
+  * Some refactoring here and there
 * Docs
-  * Some typo fixes and modernisations here and there 
+  * Some typo fixes and modernisations here and there
 
 [#121]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/121
 [#122]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/122
