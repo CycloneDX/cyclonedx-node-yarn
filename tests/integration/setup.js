@@ -56,7 +56,8 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
   for (const DIR of REQUIRES_INSTALL) {
     console.log('>>> setup with yarn:', DIR)
     const done = spawnSync(
-      'yarn', ['install'], {
+      // allow mutations - we cate for the SBOM, not the lock ...
+      'yarn', ['install', '--no-immutable'], {
         cwd: path.join(testbedsPath, DIR),
         stdio: 'inherit',
         shell: true
