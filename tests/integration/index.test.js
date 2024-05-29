@@ -176,19 +176,25 @@ suite('integration', () => {
         })
 
         suite('prod', () => {
-          const testSetup = 'dev-dependencies'
-          test(`arg: ${testSetup}`,
-            () => runTest('prod-arg', testSetup, format, ['--prod'])
-          ).timeout(longTestTimeout)
-          test(`env: ${testSetup}`,
-            () => runTest('prod-env', testSetup, format, [], { NODE_ENV: 'production' })
-          ).timeout(longTestTimeout)
+          [
+            'dev-dependencies',
+            'yarn3_zeroinstall',
+            'yarn4_zeroinstall'
+          ].forEach(testSetup => {
+            test(`arg: ${testSetup}`,
+              () => runTest('prod-arg', testSetup, format, ['--prod'])
+            ).timeout(longTestTimeout)
+            test(`env: ${testSetup}`,
+              () => runTest('prod-env', testSetup, format, [], { NODE_ENV: 'production' })
+            ).timeout(longTestTimeout)
+          })
         })
 
         suite('short PURLs', () => {
           [
             'alternative-package-registry',
-            'yarn3_zeroinstall'
+            'yarn3_zeroinstall',
+            'yarn4_zeroinstall'
           ].forEach(testSetup => {
             test(`${testSetup}`,
               () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])

@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "is-sorted": "^1"
+  },
+  "devDependencies": {
+    "in-array": "^0.1.2"
   }
 }

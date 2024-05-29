@@ -50,7 +50,7 @@
       "group": "@cyclonedx",
       "version": "0.0.0",
       "bom-ref": "@cyclonedx/testing-yarn3-zeroinstall@workspace:.",
-      "description": "A yarn3 zero-install setup.",
+      "description": "A yarn4 zero-install setup.",
       "purl": "pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0"
     },
     "properties": [

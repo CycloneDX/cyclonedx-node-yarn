@@ -9,9 +9,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/testing-yarn2-zeroinstall@workspace:."
   dependencies:
+    in-array: ^0.1.2
     is-sorted: ^1
   languageName: unknown
   linkType: soft
+
+"in-array@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "in-array@npm:0.1.2"
+  checksum: 6b7efbd819092fe5698671577b5111c6cbe5dd9b7a7720080845c98e71e346d1f52fa28fc3668cca69150a08e1ccd32a6704d310e4f849478af2fe2850cf1cbc
+  languageName: node
+  linkType: hard
 
 "is-sorted@npm:^1":
   version: 1.0.5

@@ -3,19 +3,27 @@
 
 __metadata:
   version: 8
-  cacheKey: 10
+  cacheKey: 10c0
 
 "@cyclonedx/testing-yarn3-zeroinstall@workspace:.":
   version: 0.0.0-use.local
   resolution: "@cyclonedx/testing-yarn3-zeroinstall@workspace:."
   dependencies:
+    in-array: "npm:^0.1.2"
     is-sorted: "npm:^1"
   languageName: unknown
   linkType: soft
 
+"in-array@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "in-array@npm:0.1.2"
+  checksum: 10c0/eaf53bd66e7fb113d6fa25aa2a43f04596f804b8ddaf347a2a38c4c33fade32ed2262b412bc31a15fd1c689379ca9e4685507303d40ca6dc296ef01d2183e621
+  languageName: node
+  linkType: hard
+
 "is-sorted@npm:^1":
   version: 1.0.5
   resolution: "is-sorted@npm:1.0.5"
-  checksum: 10/a08c607348ba851a8c99c234c2589adac4efcf7ff89b597128fb9fde972aa2dc74e16f3dfab0d22ca179f024c95caf1c2068701fb2c73206744cae61415b0ea2
+  checksum: 10c0/e154c71cc4f1ef880fe4c918bd56a75511b6a8c160108b0d88d039c2ef3d01406c519bde86325288e7db38e4cd4ec1076685ca9dafa5fe04150d4b59755ee0f4
   languageName: node
   linkType: hard

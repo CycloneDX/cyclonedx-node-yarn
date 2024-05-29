@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["in-array", "npm:0.1.2"],\
           ["is-sorted", "npm:1.0.5"]\
         ],\
         "linkType": "SOFT"\
@@ -37,14 +38,24 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@cyclonedx/testing-yarn3-zeroinstall", "workspace:."],\
+          ["in-array", "npm:0.1.2"],\
           ["is-sorted", "npm:1.0.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["in-array", [\
+      ["npm:0.1.2", {\
+        "packageLocation": "../../../../../../../../.yarn/berry/cache/in-array-npm-0.1.2-5f1464072c-10c0.zip/node_modules/in-array/",\
+        "packageDependencies": [\
+          ["in-array", "npm:0.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["is-sorted", [\
       ["npm:1.0.5", {\
-        "packageLocation": "./.yarn/cache/is-sorted-npm-1.0.5-3e7c5ee48a-a08c607348.zip/node_modules/is-sorted/",\
+        "packageLocation": "../../../../../../../../.yarn/berry/cache/is-sorted-npm-1.0.5-3e7c5ee48a-10c0.zip/node_modules/is-sorted/",\
         "packageDependencies": [\
           ["is-sorted", "npm:1.0.5"]\
         ],\

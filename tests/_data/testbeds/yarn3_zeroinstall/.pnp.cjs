@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["in-array", "npm:0.1.2"],\
             ["is-sorted", "npm:1.0.5"]\
           ],\
           "linkType": "SOFT"\
@@ -38,9 +39,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@cyclonedx/testing-yarn3-zeroinstall", "workspace:."],\
+            ["in-array", "npm:0.1.2"],\
             ["is-sorted", "npm:1.0.5"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["in-array", [\
+        ["npm:0.1.2", {\
+          "packageLocation": "./.yarn/cache/in-array-npm-0.1.2-5f1464072c-c0ccefb5f4.zip/node_modules/in-array/",\
+          "packageDependencies": [\
+            ["in-array", "npm:0.1.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["is-sorted", [\
