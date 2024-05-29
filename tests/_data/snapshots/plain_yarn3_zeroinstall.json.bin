@@ -24,7 +24,7 @@
       {
         "vendor": "@cyclonedx",
         "name": "yarn-plugin-cyclonedx",
-        "version": "1.0.0-rc.0+git.8d9f6a6",
+        "version": "thisVersion-testing",
         "externalReferences": [
           {
             "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
