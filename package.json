@@ -33,6 +33,10 @@
       "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX"
     }
   ],
+  "author": {
+    "name": "Jan Kowalleck",
+    "url": "https://github.com/jkowalleck"
+  },
   "contributors": [
     {
       "name": "Jan Kowalleck",
