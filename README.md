@@ -26,8 +26,8 @@ See the project's issues, discussions, pull requests, and milestones.
 
 ## Requirements
 
-* `node` >= `18`
-* `yarn` >= `3`
+* `node >= 18`
+* `yarn >= 3` (berry)
 
 ## Installation
 
