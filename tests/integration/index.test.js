@@ -162,11 +162,10 @@ suite('integration', () => {
   }
 
   suite('make SBOM', () => {
-
     test('version', () => {
       const res = runCLI(projectRootPath, ['--version'])
       assert.ok(res.startsWith(`${thisName} v${thisVersion}`), res)
-    });
+    })
 
     test('yarn2 fails', () => {
       const res = _rawRunCLI(path.join(testbedsPath, 'yarn2_zeroinstall'), ['-vvv'])
@@ -183,13 +182,12 @@ suite('integration', () => {
       } catch (err) {
         if (outLines.length === 1) {
           // only allowed optional output is the wrapper info...
-          assert.match(outLines[0], /YARN_PLUGINS=.+ yarn cyclonedx \-\-no\-verbose/)
+          assert.match(outLines[0], /YARN_PLUGINS=.+ yarn cyclonedx --no-verbose/)
         } else {
           throw err
         }
       }
     }).timeout(longTestTimeout);
-
 
     ['JSON', 'XML'].forEach(format => {
       suite(`format: ${format}`, () => {
