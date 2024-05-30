@@ -46,12 +46,36 @@
     ],
     "component": {
       "type": "application",
-      "name": "testing-yarn3-zeroinstall",
-      "group": "@cyclonedx",
-      "version": "0.0.0",
-      "bom-ref": "@cyclonedx/testing-yarn3-zeroinstall@workspace:.",
-      "description": "A yarn3 zero-install setup.",
-      "purl": "pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0"
+      "name": "my-local-a",
+      "version": "0.1.0",
+      "bom-ref": "my-local-a@workspace:workspaces/my-local-a",
+      "description": "demo: my-local-a",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/my-local-a@0.1.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git#demo/local-workspaces/project/workspaces/my-local-a",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
     },
     "properties": [
       {
@@ -63,48 +87,30 @@
   "components": [
     {
       "type": "library",
-      "name": "is-sorted",
-      "version": "1.0.5",
-      "bom-ref": "is-sorted@npm:1.0.5",
-      "author": "Daniel Cousens",
-      "description": "A small module to check if an Array is sorted",
+      "name": "my-local-b-off",
+      "version": "0.0.0",
+      "bom-ref": "my-local-b-off@workspace:workspaces/my-local-b",
+      "description": "demo: my-local-b-off - a package with a different name than its dir",
       "licenses": [
         {
           "license": {
-            "id": "MIT",
+            "id": "Apache-2.0",
             "acknowledgement": "declared"
           }
         }
       ],
-      "purl": "pkg:npm/is-sorted@1.0.5?vcs_url=git%2Bhttps%3A//github.com/dcousens/is-sorted.git",
-      "externalReferences": [
-        {
-          "url": "https://github.com/dcousens/is-sorted/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/dcousens/is-sorted.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/dcousens/is-sorted",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
     }
   ],
   "dependencies": [
     {
-      "ref": "@cyclonedx/testing-yarn3-zeroinstall@workspace:.",
+      "ref": "my-local-a@workspace:workspaces/my-local-a",
       "dependsOn": [
-        "is-sorted@npm:1.0.5"
+        "my-local-b-off@workspace:workspaces/my-local-b"
       ]
     },
     {
-      "ref": "is-sorted@npm:1.0.5"
+      "ref": "my-local-b-off@workspace:workspaces/my-local-b"
     }
   ]
 }

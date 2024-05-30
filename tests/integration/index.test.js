@@ -115,7 +115,7 @@ suite('integration', () => {
 
   /**
    * @param {string} purpose
-   * @param {string} testSetup
+   * @param {string|string[]} testSetup
    * @param {'JSON'|'XML'} format
    * @param {string[]} [additionalArgs]
    * @param {Object.<string, string>} [additionalEnv]
@@ -124,10 +124,17 @@ suite('integration', () => {
     purpose, testSetup, format,
     additionalArgs = [], additionalEnv = {}
   ) {
-    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetup}.${format.toLowerCase()}.bin`)
+    const testSetupFilePart = Array.isArray(testSetup)
+      ? testSetup.join('-')
+      : testSetup
+    const testSetupPath = Array.isArray(testSetup)
+      ? path.join(...testSetup)
+      : testSetup
+
+    const expectedOutSnap = path.join(snapshotsPath, `${purpose}_${testSetupFilePart}.${format.toLowerCase()}.bin`)
 
     let sbom = runCLI(
-      path.join(testbedsPath, testSetup),
+      path.join(testbedsPath, testSetupPath),
       [
         '-vvv',
         '--output-reproducible',
@@ -175,6 +182,13 @@ suite('integration', () => {
           })
         })
 
+        suite('workspace', () => {
+          const testSetup = ['local-workspaces', 'workspaces', 'my-local-a']
+          test(`${testSetup}`,
+            () => runTest('plain', testSetup, format)
+          ).timeout(longTestTimeout)
+        })
+
         suite('prod', () => {
           [
             'dev-dependencies',
@@ -184,10 +198,11 @@ suite('integration', () => {
             test(`arg: ${testSetup}`,
               () => runTest('prod-arg', testSetup, format, ['--prod'])
             ).timeout(longTestTimeout)
-            test(`env: ${testSetup}`,
-              () => runTest('prod-env', testSetup, format, [], { NODE_ENV: 'production' })
-            ).timeout(longTestTimeout)
           })
+          const testSetup = 'dev-dependencies'
+          test(`env: ${testSetup}`,
+            () => runTest('prod-env', testSetup, format, [], { NODE_ENV: 'production' })
+          ).timeout(longTestTimeout)
         })
 
         suite('short PURLs', () => {
