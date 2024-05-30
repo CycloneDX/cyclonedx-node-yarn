@@ -98,20 +98,19 @@ Software-Bill-of-Materials(SBOM) in CycloneDX format.
 
 This _yarn_ plugin utilizes the [CycloneDX library][CycloneDX-library] to generate the actual data structures.
 
-This _yarn_ plugin does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
+This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
 
 ## Development & Contributing
 
 Feel free to open issues, bugreports or pull requests.  
-See the [CONTRIBUTING][contributing_file] file for details.
+See the [`CONTRIBUTING`][contributing_file] file for details.
 
 ## License
 
 Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.  
-See the [LICENSE][license_file] file for the full license.
+See the [`LICENSE`][license_file] file for the full license.
 
-For details and license posture of the assembly,
-see: <https://github.com/CycloneDX/cyclonedx-node-yarn/releases/latest>
+For details and license posture of the assembly, see the `LICENSE` file in the respective release assets.
 
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/1.0-dev/LICENSE
