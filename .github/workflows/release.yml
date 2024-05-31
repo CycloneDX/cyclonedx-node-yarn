@@ -211,6 +211,11 @@ jobs:
           set -eux
           corepack enable yarn
           yarn set version "$YARN_VERSION"
+      - name: make lock
+        # for stupid reasons `yarn publish` requires a lockfile
+        run: |
+          yarn workspaces focus --production
+          yarn install --mode update-lockfile
       - name: login to YARNPKG
         run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
         env:
