@@ -205,11 +205,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: login to NPMJS
-        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+      - name: login to YARNPKG
+        # yarn is a transparent proxy -- use npm token
+        run: npm config set "//registry.yarnpkg.com/:_authToken=$YARNPKG_AUTH_TOKEN"
         env:
-          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+          YARNPKG_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           npm publish
           --provenance
