@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.0.0 -- planned
+
+First release ([#8] via [#6])
+
+* Responsibilities
+  - Provide a yarn plugin that generates CycloneDX SBOM for current workspace
+  - Provide a CLI wrapper got said plugin
+* Capabilities
+  - Supports yarn3 and yarn4
+  - Can output in XML and JSON format, CycloneDX v1.2 - v1.6 spec
+  - Can omit dev dependencies
+
 <!-- add unreleased items here -->
+
+[#6]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/6
+[#8]: https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8
 
 ## 1.0.0-rc.2 -- 2024-05-28
 
@@ -25,3 +40,13 @@ Minimum Viable Product - RC-0
 ## 1.0.0-beta.1 -- 2024-05-27
 
 Minimum Viable Product - Beta-1
+
+First release.
+
+* Responsibilities
+  - Provide a yarn plugin that generates CycloneDX SBOM for current workspace
+  - Provide a CLI wrapper got said plugin
+* Capabilities
+  - Supports yarn4
+  - Can output in XML and JSON format, CycloneDX v1.2 - v1.6 spec
+  - Can omit dev dependencies
