@@ -65,6 +65,7 @@ jobs:
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
+        # `npm version` seams superior to `yarn version` ...
         run: |
           set -eux
           COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
@@ -183,7 +184,7 @@ jobs:
       - name: run tests
         run: yarn run test:node
 
-  publish-NPMJS:
+  publish-registry:
     needs:
       - "build"
       - "test-licenses"
@@ -205,20 +206,31 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: login to NPMJS
-        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          set -eux
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: make lock
+        # for stupid reasons `yarn publish` requires a lockfile
+        run: |
+          yarn workspaces focus --production
+          yarn install --mode update-lockfile
+      - name: login to YARNPKG
+        run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
         env:
-          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
-          npm publish
-          --provenance
+          yarn npm publish
           --access public
           --tag "$NPMJS_RELEASE_TAG"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
-          npm pack --pack-destination "$PACKED_DIR"
+          yarn pack --out "$PACKED_DIR"/%s-%v.tgz
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
@@ -227,12 +239,11 @@ jobs:
           path: ${{ env.PACKED_DIR }}/
           if-no-files-found: error
 
-
   release-GH:
     needs:
       - "bump"
       - "build"
-      - "publish-NPMJS"
+      - "publish-registry"
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30

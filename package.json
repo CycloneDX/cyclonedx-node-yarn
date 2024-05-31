@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@cyclonedx/yarn-plugin-cyclonedx",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.5",
   "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
   "license": "Apache-2.0",
   "keywords": [
@@ -111,6 +111,7 @@
   ],
   "publishConfig": {
     "$comment": "this section defines how `tools/make-dist-package.cjs` works",
+    "private": false,
     "main": "./yarn-plugin-cyclonedx.cjs",
     "files": [
       "/README.md",
