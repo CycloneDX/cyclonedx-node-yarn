@@ -123,7 +123,7 @@ For details and license posture of the assembly, see the `LICENSE` file in the r
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-yarn/nodejs.yml?branch=1.0-dev&logo=GitHub&logoColor=white "tests"
 [shield_coverage]: https://img.shields.io/codacy/coverage/b0af77db5c7b4ab7a36eab255c7f9ede?logo=Codacy&logoColor=white "test coverage"
 [shield_ossf-best-practices]: https://img.shields.io/cii/percentage/8960?label=OpenSSF%20best%20practices "OpenSSF best practices"
-[shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/yarn-plugin-cyclonedx?logo=npm&logoColor=white "npm"
+[shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/yarn-plugin-cyclonedx/latest?label=npm&ogo=npm&logoColor=white "npm"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-node-yarn?logo=open%20source%20initiative&logoColor=white "license"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
