@@ -1,6 +1,6 @@
 # CycloneDX SBOM for yarn
 
-[![shield_npm-version]][link_npm]
+[![shield_yarnpkg-version]][link_yarnpkg]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_coverage]][link_codacy]
 [![shield_ossf-best-practices]][link_ossf-best-practices]
@@ -34,7 +34,7 @@ See the project's issues, discussions, pull requests, and milestones.
 Install the plugin into your yarn project via one of the following methods:
 
 * **zero-install**: no install needed, just call on demand via dlx-wrapper as described in section "usage".
-* **cli-wrapper**: install the latest version from package repository as cli-wrapper into your project:
+* **cli-wrapper**: install the latest version from [yarn package repository][link_yarnpkg] as cli-wrapper into your project:
   ```shell
   yarn add @cyclonedx/yarn-plugin-cyclonedx
   ```
@@ -123,7 +123,8 @@ For details and license posture of the assembly, see the `LICENSE` file in the r
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-yarn/nodejs.yml?branch=1.0-dev&logo=GitHub&logoColor=white "tests"
 [shield_coverage]: https://img.shields.io/codacy/coverage/b0af77db5c7b4ab7a36eab255c7f9ede?logo=Codacy&logoColor=white "test coverage"
 [shield_ossf-best-practices]: https://img.shields.io/cii/percentage/8960?label=OpenSSF%20best%20practices "OpenSSF best practices"
-[shield_npm-version]: https://img.shields.io/npm/v/%40cyclonedx%2fyarn-plugin-cyclonedx/latest?label=npm&logo=npm&logoColor=white "npm"
+[shield_yarnpkg-version]: https://img.shields.io/npm/v/%40cyclonedx%2Fyarn-plugin-cyclonedx/latest?registry_uri=https%3A%2F%2Fregistry.yarnpkg.com&logo=yarn&logoColor=white&label=yarnpkg
+ "yarnpkg"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-node-yarn?logo=open%20source%20initiative&logoColor=white "license"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
@@ -132,7 +133,7 @@ For details and license posture of the assembly, see the `LICENSE` file in the r
 
 [link_website]: https://cyclonedx.org/
 [link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-yarn/actions/workflows/nodejs.yml?query=branch%3A1.0-dev
-[link_npm]: https://www.npmjs.com/package/@cyclonedx/yarn-plugin-cyclonedx
+[link_yarnpkg]: https://yarnpkg.com/package?name=%40cyclonedx%2Fyarn-plugin-cyclonedx
 [link_codacy]: https://app.codacy.com/gh/CycloneDX/cyclonedx-node-yarn/dashboard
 [link_ossf-best-practices]: https://www.bestpractices.dev/projects/8960
 [link_slack]: https://cyclonedx.org/slack/invite
