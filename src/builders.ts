@@ -30,7 +30,7 @@ import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
-import { isString, tryRemoveSecretsFromGitUrl, tryRemoveSecretsFromUrl } from './_helpers'
+import { isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
@@ -217,7 +217,7 @@ export class BomBuilder {
       }
       case YarnPluginGitUtils.isGitUrl(locator.reference): {
         component.externalReferences.add(new ExternalReference(
-          tryRemoveSecretsFromGitUrl(locator.reference),
+          trySanitizeGitUrl(locator.reference),
           ExternalReferenceType.VCS,
           { comment: 'as detected from YarnLocator property "reference"' }
         ))

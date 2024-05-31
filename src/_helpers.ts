@@ -51,7 +51,7 @@ export function tryRemoveSecretsFromUrl (url: string): string {
   }
 }
 
-export function tryRemoveSecretsFromGitUrl (gitUrl: string): string {
+export function trySanitizeGitUrl (gitUrl: string): string {
   const gitInfo = GitHost.fromUrl(gitUrl)
   if (gitInfo === undefined) {
     return gitUrl
