@@ -205,21 +205,31 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          set -eux
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
       - name: login to YARNPKG
-        # yarn is a transparent proxy -- use npm token
-        run: npm config set "//registry.yarnpkg.com/:_authToken=$YARNPKG_AUTH_TOKEN"
+        run: |
+          npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+          npm config set "//registry.yarnpkg.com/:_authToken=$YARNPKG_AUTH_TOKEN"
         env:
-          YARNPKG_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # yarn is a transparent proxy -- use npm token
+          YARNPKG_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
-          npm publish
-          --provenance
+          yarn npm publish
           --access public
           --tag "$NPMJS_RELEASE_TAG"
+        env:
+          NPM_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
+          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
-          npm pack --pack-destination "$PACKED_DIR"
+          yarn pack --out "$PACKED_DIR"/%s-%v.tgz
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4

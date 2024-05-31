@@ -40,6 +40,12 @@ function main (outputFile) {
   const manifestSource = JSON.parse(readFileSync(manifestSourceFile))
   const manifest = structuredClonePolyfill(manifestSource)
   for (const [k, v] of Object.entries(manifestSource.publishConfig ?? {})) {
+    if (k[0] === '$') {
+      continue
+    }
+    if (k === 'registry') {
+      continue
+    }
     manifest[k] = v
   }
   // dist is expected to be a bundle - no deps need install
@@ -48,12 +54,6 @@ function main (outputFile) {
   manifest.devDependencies = {
     ...manifestSource.dependencies,
     ...manifestSource.devDependencies
-  }
-
-  for (const k of Object.keys(manifest)) {
-    if (k.startsWith('$')) {
-      delete manifest[k]
-    }
   }
 
   writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
