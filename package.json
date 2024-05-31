@@ -111,7 +111,6 @@
   ],
   "publishConfig": {
     "$comment": "this section defines how `tools/make-dist-package.cjs` works",
-    "registry": "https://registry.yarnpkg.com",
     "private": false,
     "main": "./yarn-plugin-cyclonedx.cjs",
     "files": [
