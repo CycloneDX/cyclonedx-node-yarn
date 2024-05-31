@@ -184,7 +184,7 @@ jobs:
       - name: run tests
         run: yarn run test:node
 
-  publish-NPMJS:
+  publish-registry:
     needs:
       - "build"
       - "test-licenses"
@@ -234,12 +234,11 @@ jobs:
           path: ${{ env.PACKED_DIR }}/
           if-no-files-found: error
 
-
   release-GH:
     needs:
       - "bump"
       - "build"
-      - "publish-NPMJS"
+      - "publish-registry"
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
