@@ -50,8 +50,6 @@ function main (outputFile) {
     ...manifestSource.devDependencies
   }
 
-  delete manifest.publishConfig
-  delete manifest.private
   for (const k of Object.keys(manifest)) {
     if (k.startsWith('$')) {
       delete manifest[k]
