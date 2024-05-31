@@ -65,6 +65,7 @@ jobs:
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
+        # `npm version` seams superior to `yarn version` ...
         run: |
           set -eux
           COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
