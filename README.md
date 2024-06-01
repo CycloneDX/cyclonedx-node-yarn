@@ -102,6 +102,17 @@ Software-Bill-of-Materials(SBOM) in CycloneDX format.
 This _yarn_ plugin utilizes the [CycloneDX library][CycloneDX-library] to generate the actual data structures.
 
 This tool does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
+However, the CLI is stable - you may call it programmatically like:
+```javascript
+const { execFileSync } = require('node:child_process')
+const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('node:buffer')
+const sbom = JSON.parse(execFileSync(process.execPath, [
+    '.../path/to/this/package/bin/cyclonedx-yarn-cli.js',
+    '--output-format', 'JSON',
+    '--output-file', '-'
+    // additional CLI args
+  ], {stdio: ['ignore', 'pipe', 'ignore'], encoding: 'buffer', maxBuffer: BUFFER_MAX_LENGTH }))
+```
 
 ## Development & Contributing
 

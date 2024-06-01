@@ -20,8 +20,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 console.warn(`
 There is no public API. Instead, there is a well-thought, stable CLI.
 Call it programmatically like so:
-    const { execFileSync } = require('child_process')
-    const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+    const { execFileSync } = require('node:child_process')
+    const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('node:buffer')
     const sbom = JSON.parse(execFileSync(process.execPath, [
         '.../path/to/this/package/bin/cyclonedx-yarn-cli.js',
         '--output-format', 'JSON',
