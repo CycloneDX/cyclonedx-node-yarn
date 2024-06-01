@@ -9,11 +9,11 @@ All notable changes to this project will be documented in this file.
 First release ([#8] via [#6])
 
 * Responsibilities
-  - Provide a yarn plugin that generates CycloneDX SBOM for current workspace
+  - Provide a _yarn_ plugin that generates _CycloneDX_ SBOM for current workspace
   - Provide a CLI wrapper got said plugin
 * Capabilities
-  - Supports yarn3 and yarn4
-  - Can output in XML and JSON format according to CycloneDX v1.2 - v1.6 spec
+  - Supports _yarn_ berry v3 and v4
+  - Can output in XML and JSON format according to _CycloneDX_ v1.2 - v1.6 spec
   - Can omit dev-dependencies
 
 <!-- add unreleased items here -->
