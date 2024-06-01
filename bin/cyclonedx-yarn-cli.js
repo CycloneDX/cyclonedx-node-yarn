@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /* !!! do not remove/rename this file, it is public CLI in replacement for an API !!! */
 
-const { spawn } = require('child_process')
-const { realpathSync } = require('fs')
-const { join } = require('path')
+const { spawn } = require('node:child_process')
+const { realpathSync } = require('node:fs')
+const { join } = require('node:path')
 
 let pp
 for (const p of [

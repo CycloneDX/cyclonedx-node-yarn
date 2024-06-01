@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { writeSync } from 'fs'
+import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
 
 export async function writeAllSync (fd: number, data: string): Promise<number> {
@@ -26,7 +26,7 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
   let w = 0
   while (w < l) {
     try {
-      w += writeSync(fd, b, w)
+      w += xfs.writeSync(fd, b, w)
     } catch (error: any) {
       if (error.code !== 'EAGAIN') {
         throw error
