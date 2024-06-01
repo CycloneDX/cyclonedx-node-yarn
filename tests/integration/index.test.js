@@ -17,24 +17,15 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const assert = require('assert')
-const {
-  suite,
-  test
-} = require('mocha')
-const { spawnSync } = require('child_process')
-const path = require('path')
-const {
-  existsSync,
-  writeFileSync,
-  readFileSync
-} = require('fs')
-const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('buffer')
+const assert = require('node:assert')
+const { spawnSync } = require('node:child_process')
+const path = require('node:path')
+const { existsSync, writeFileSync, readFileSync } = require('node:fs')
+const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('node:buffer')
 
-const {
-  Validation,
-  Spec
-} = require('@cyclonedx/cyclonedx-library')
+const { suite, test } = require('mocha')
+
+const { Validation, Spec } = require('@cyclonedx/cyclonedx-library')
 
 const {
   name: thisName,
