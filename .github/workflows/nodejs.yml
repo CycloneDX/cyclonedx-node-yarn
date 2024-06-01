@@ -207,11 +207,9 @@ jobs:
         include:
           - node-version: '18.0.0'  # lowest supported
             yarn-version: '3.x'
-            yarn-ignore-node: '1'
             os: ubuntu-latest
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
-      YARN_IGNORE_NODE: ${{ matrix.yarn-ignore-node || '0' }}
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -224,9 +222,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
+        run: | 
+          corepack prepare --activate "yarn@$YARN_VERSION"
           corepack enable yarn
-          yarn set version "$YARN_VERSION"
+          yarn --version
       - name: Setup subject
         run: |
           yarn install --no-immutable
