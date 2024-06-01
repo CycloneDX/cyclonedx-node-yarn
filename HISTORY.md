@@ -13,7 +13,7 @@ First release ([#8] via [#6])
   - Provide a CLI wrapper got said plugin
 * Capabilities
   - Supports yarn3 and yarn4
-  - Can output in XML and JSON format, CycloneDX v1.2 - v1.6 spec
+  - Can output in XML and JSON format according to CycloneDX v1.2 - v1.6 spec
   - Can omit dev-dependencies
 
 <!-- add unreleased items here -->
