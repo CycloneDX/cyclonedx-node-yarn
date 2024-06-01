@@ -223,8 +223,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: | 
+        run: |
+          yarn --version
           corepack prepare --activate "yarn@$YARN_VERSION"
+          yarn --version
           corepack enable yarn
           yarn --version
       - name: Setup subject
