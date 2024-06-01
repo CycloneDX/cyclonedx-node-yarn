@@ -225,7 +225,7 @@ jobs:
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
           yarn --version
-          corepack prepare --activate "yarn@$YARN_VERSION"
+          corepack prepare --activate yarn@"$YARN_VERSION"
           yarn --version
           corepack enable yarn
           yarn --version
