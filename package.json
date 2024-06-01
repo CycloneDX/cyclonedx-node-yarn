@@ -57,7 +57,7 @@
     "@cyclonedx/cyclonedx-library": "^6.8.0",
     "@yarnpkg/cli": "^4",
     "@yarnpkg/core": "^4",
-    "@yarnpkg/fslib": "^3.1.0",
+    "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.3",
     "hosted-git-info": "^7",
