@@ -14,8 +14,6 @@ First release ([#8] via [#6])
 * Capabilities
   - Supports _yarn_ (berry) v3 - v4
   - Can output in XML and JSON format according to _CycloneDX_ v1.2 - v1.6 spec
-    - Can detect licenses
-    - Reports dependency graph
   - Can omit dev-dependencies
   - Can generate reproducible results
 
