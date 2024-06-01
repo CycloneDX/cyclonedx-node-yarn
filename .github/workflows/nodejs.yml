@@ -205,8 +205,9 @@ jobs:
           - macos-latest
         yarn-version: [ '4.x' ]
         include:
-          - node-version: '18.0.0'  # lowest supported
-            yarn-version: '3.x'
+          - # lowest supported
+            node-version: '18.0.0'
+            yarn-version: '3.0.0'
             os: ubuntu-latest
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
