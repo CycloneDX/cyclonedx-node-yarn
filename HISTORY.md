@@ -25,6 +25,7 @@ First release ([#8] via [#6])
 
 * Misc
   * Refactored node imports (via [#127])
+  * Revisited release pipeline
 
 [#127]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/127
 
@@ -32,7 +33,6 @@ First release ([#8] via [#6])
 
 * Misc
   * Added more tests (via [#123], [#124], [#125])
-  * Revisited release pipeline
 
 [#123]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/123
 [#124]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/124
