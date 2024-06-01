@@ -19,12 +19,12 @@ Steps to reproduce the behavior:
    <!-- upload the complete output to this issue, or a pastebin of you choice and put the link here. -->
 4. Expected result:
    <!-- run the original call again
-   with parameters `-vvv --no-validate --output-reproducible --output-file=-`, 
+   with parameters `-vvv --output-reproducible --output-file=-`, 
    then upload all output to this issue, or to a pastebin of you choice and put the link here. -->
 
 ## Environment
 
-- _@cyclonedx/yarn-plugin-cyclonedx_ version: <!-- e.g. `v1.0.0-alpha+4c1de92`, get via `yarn cyclonedx --version` -->
+- _@cyclonedx/yarn-plugin-cyclonedx_ version: <!-- e.g. `v1.0.0+git.1337f00`, get via `[tool call method] --version` -->
 - yarn version: <!-- get via `yarn --version` -->
 - Node version: <!-- get via `node --version` -->
 - OS: <!-- e.g. windows 11, ubuntu linux, ... -->
