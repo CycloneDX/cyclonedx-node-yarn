@@ -169,7 +169,7 @@ suite('integration', () => {
       assert.strictEqual(res.status, 0, res.output)
       const outLines = res.stderr.split(/\r?\n/g).filter(l => l.length)
       try {
-        assert.strictEqual(outLines.length, 0)
+        assert.strictEqual(outLines.length, 0, res.stderr)
       } catch (err) {
         if (outLines.length === 1) {
           // only allowed optional output is the wrapper info...
