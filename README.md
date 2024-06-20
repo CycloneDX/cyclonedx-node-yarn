@@ -50,7 +50,7 @@ Usage depends on the installation method:
 
 * With **zero-install** via dlx-wrapper:
   ```shell
-  yarn dlx @cyclonedx/yarn-plugin-cyclonedx --help
+  yarn dlx --quiet @cyclonedx/yarn-plugin-cyclonedx --help
   ```
 * After **cli-wrapper** installation:
   ```shell
