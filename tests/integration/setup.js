@@ -29,6 +29,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     // !! none of the following ACTUALLY REQUIRES an installation - lock files are enough
     'alternative-package-registry',
     'bundled-dependencies',
+    'concurrent-peer-deps',
     'concurrent-versions',
     'dev-dependencies',
     'git-protocol-dependency',

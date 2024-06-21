@@ -1,0 +1,14 @@
+{
+  "name": "concurrent-peer-deps",
+  "version": "0.0.1",
+  "description": "demo: multiple dependencies requiring concurrent versions of a transitive peer dep",
+  "private": true,
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "provides-peer-100": "portal:packages/provides-peer-100",
+    "provides-peer-107": "portal:packages/provides-peer-107"
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+  }
+}
