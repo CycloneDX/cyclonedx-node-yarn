@@ -69,7 +69,7 @@
   "devDependencies": {
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
-    "@types/node": "ts5.4",
+    "@types/node": "ts5.5",
     "@types/normalize-package-data": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
