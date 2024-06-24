@@ -200,9 +200,9 @@ jobs:
           - '20'      # LTS
           - '18'      # lowest supported
         os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-latest
+          - 'ubuntu-latest'
+          - 'windows-latest'
+          - 'macos-latest'
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -248,8 +248,8 @@ jobs:
 
   dogfooding:
     needs: [ 'build' ]
-    name: dogfooding (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }})
-    runs-on: ubuntu-latest
+    name: dogfooding (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -262,6 +262,14 @@ jobs:
         yarn-version:
           - '4.x'
           - '3.x'
+        os: [ 'ubuntu-latest' ]
+        include:
+          - node-version: '20'   # LTS
+            yarn-version: '4.x'  # latest
+            os: 'windows-latest'
+          - node-version: '20'   # LTS
+            yarn-version: '4.x'  # latest
+            os: 'macos-latest'
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
     timeout-minutes: 10
@@ -298,7 +306,7 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dogfooding-direct_npm${{ matrix.node-version }}
+          name: dogfooding-direct_npm${{ matrix.node-version }}_${{ matrix.os }}
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
 
