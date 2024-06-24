@@ -299,6 +299,7 @@ jobs:
       - name: dogfooding
         run: >
           yarn run dogfooding
+          -vvv
           --production
           --output-file=${{ env.REPORTS_DIR }}/bom.json
       - name: artifact test reports
