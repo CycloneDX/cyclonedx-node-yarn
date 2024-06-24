@@ -277,7 +277,6 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - run: mkdir -p ${{ env.REPORTS_DIR }}
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -301,15 +300,6 @@ jobs:
           yarn run dogfooding
           -vvv
           --production
-          --output-file=${{ env.REPORTS_DIR }}/bom.json
-      - name: artifact test reports
-        if: ${{ failure() }}
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dogfooding-direct_npm${{ matrix.node-version }}_${{ matrix.os }}
-          path: ${{ env.REPORTS_DIR }}
-          if-no-files-found: error
 
   report-coverage:
     name: Publish test coverage
