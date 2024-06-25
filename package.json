@@ -54,16 +54,16 @@
     }
   ],
   "dependencies": {
+    "@cyclonedx/cyclonedx-library": "6.10.0",
     "@yarnpkg/cli": "^4",
     "@yarnpkg/core": "^4",
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.3",
-    "typanion": "^3.14.0",
-    "@cyclonedx/cyclonedx-library": "6.10.0",
     "hosted-git-info": "7.0.2",
     "normalize-package-data": "6.0.1",
     "packageurl-js": "1.2.1",
+    "typanion": "^3.14.0",
     "xmlbuilder2": "3.1.1"
   },
   "devDependencies": {
