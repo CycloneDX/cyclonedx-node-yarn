@@ -167,7 +167,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: fetch dist
+      - name: fetch yarn.lock
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:
@@ -220,7 +220,7 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: fetch dist
+      - name: fetch yarn.lock
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:

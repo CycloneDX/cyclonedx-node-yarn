@@ -270,12 +270,12 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
-      - name: fetch dist
+      - name: fetch yarn.lock
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:
           name: "build-yarn.lock"
-          path: "."
+          path: "build-yarn.lock"
       - name: prepare assets
         run: |
           set -exu
@@ -285,7 +285,7 @@ jobs:
           "$DIST_DIR/yarn-plugin-cyclonedx.cjs" \
           "$DIST_DIR/LICENSE" \
           "$DIST_DIR/NOTICE" \
-          "yarn.lock"
+          "build-yarn.lock/yarn.lock"
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
