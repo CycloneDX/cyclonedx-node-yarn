@@ -22,6 +22,12 @@ First release ([#8] via [#6])
 [#6]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/6
 [#8]: https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8
 
+## 1.0.0-rc.8 -- 2024-06-25
+
+* Docs
+  * Enhanced the installation docs
+  * Fixed some typos here and there
+
 ## 1.0.0-rc.7 -- 2024-06-01
 
 * Misc
