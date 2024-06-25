@@ -128,6 +128,14 @@ jobs:
           path: ${{ env.DIST_DIR }}
           retention-days: 5
           if-no-files-found: error
+      - name: artifact build lock
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "yarn.lock"
+          retention-days: 5
+          if-no-files-found: error
 
   test-licenses:
     needs: [ 'build' ]
@@ -262,6 +270,12 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
+      - name: fetch dist
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "."
       - name: prepare assets
         run: |
           set -exu
@@ -270,7 +284,8 @@ jobs:
           "$PACKED_DIR"/*.tgz \
           "$DIST_DIR/yarn-plugin-cyclonedx.cjs" \
           "$DIST_DIR/LICENSE" \
-          "$DIST_DIR/NOTICE"
+          "$DIST_DIR/NOTICE" \
+          "yarn.lock"
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
