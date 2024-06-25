@@ -167,6 +167,12 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
+      - name: fetch dist
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "."
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -178,9 +184,7 @@ jobs:
           corepack enable yarn
           yarn set version "$YARN_VERSION"
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
