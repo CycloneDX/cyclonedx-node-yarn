@@ -1,0 +1,10 @@
+{
+  "name": "has-peer",
+  "description": "demo: has a peer dependency in a certain range: >=1, <2",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "is-string": "^1"
+  }
+}

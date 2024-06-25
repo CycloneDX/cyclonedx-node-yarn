@@ -1,0 +1,317 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "name": "yarn",
+        "version": "yarnVersion-testing"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "yarn-plugin-cyclonedx",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "concurrent-peer-deps",
+      "version": "0.0.1",
+      "bom-ref": "concurrent-peer-deps@workspace:.",
+      "description": "demo: multiple dependencies requiring concurrent versions of a transitive peer dep",
+      "purl": "pkg:npm/concurrent-peer-deps@0.0.1"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "has-peer",
+      "version": "0.0.0",
+      "bom-ref": "has-peer@portal:../has-peer/::locator=provides-peer-100%40portal%3Apackages%2Fprovides-peer-100%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [1bd79]",
+      "description": "demo: has a peer dependency in a certain range: >=1, <2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-peer@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "has-peer",
+      "version": "0.0.0",
+      "bom-ref": "has-peer@portal:../has-peer/::locator=provides-peer-107%40portal%3Apackages%2Fprovides-peer-107%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [9635e]",
+      "description": "demo: has a peer dependency in a certain range: >=1, <2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-peer@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "has-symbols",
+      "version": "1.0.3",
+      "bom-ref": "has-symbols@npm:1.0.3",
+      "author": "Jordan Harband",
+      "description": "Determine if the JS environment has Symbol support. Supports spec, or shams.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/has-symbols/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/inspect-js/has-symbols.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/has-symbols#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "bom-ref": "has-tostringtag@npm:1.0.2",
+      "author": "Jordan Harband",
+      "description": "Determine if the JS environment has `Symbol.toStringTag` support. Supports spec, or shams.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-tostringtag.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/inspect-js/has-tostringtag/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/inspect-js/has-tostringtag.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/inspect-js/has-tostringtag#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-string",
+      "version": "1.0.0",
+      "bom-ref": "is-string@npm:1.0.0",
+      "author": "Jordan Harband",
+      "description": "Is this value a JS String object or primitive? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-string@1.0.0?vcs_url=git%3A//github.com/ljharb/is-string.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/is-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/ljharb/is-string.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/is-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-string",
+      "version": "1.0.7",
+      "bom-ref": "is-string@npm:1.0.7",
+      "author": "Jordan Harband",
+      "description": "Is this value a JS String object or primitive? This module works cross-realm/iframe, and despite ES6 @@toStringTag.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A//github.com/ljharb/is-string.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/ljharb/is-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git://github.com/ljharb/is-string.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ljharb/is-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "provides-peer-100",
+      "version": "0.0.0",
+      "bom-ref": "provides-peer-100@portal:packages/provides-peer-100::locator=concurrent-peer-deps%40workspace%3A.",
+      "description": "demo: provides a peer dependency in a certain version: 1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/provides-peer-100@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "provides-peer-107",
+      "version": "0.0.0",
+      "bom-ref": "provides-peer-107@portal:packages/provides-peer-107::locator=concurrent-peer-deps%40workspace%3A.",
+      "description": "demo: provides a peer dependency in a certain version: 1.0.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/provides-peer-107@0.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "concurrent-peer-deps@workspace:.",
+      "dependsOn": [
+        "provides-peer-100@portal:packages/provides-peer-100::locator=concurrent-peer-deps%40workspace%3A.",
+        "provides-peer-107@portal:packages/provides-peer-107::locator=concurrent-peer-deps%40workspace%3A."
+      ]
+    },
+    {
+      "ref": "has-peer@portal:../has-peer/::locator=provides-peer-100%40portal%3Apackages%2Fprovides-peer-100%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [1bd79]",
+      "dependsOn": [
+        "is-string@npm:1.0.0"
+      ]
+    },
+    {
+      "ref": "has-peer@portal:../has-peer/::locator=provides-peer-107%40portal%3Apackages%2Fprovides-peer-107%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [9635e]",
+      "dependsOn": [
+        "is-string@npm:1.0.7"
+      ]
+    },
+    {
+      "ref": "has-symbols@npm:1.0.3"
+    },
+    {
+      "ref": "has-tostringtag@npm:1.0.2",
+      "dependsOn": [
+        "has-symbols@npm:1.0.3"
+      ]
+    },
+    {
+      "ref": "is-string@npm:1.0.0"
+    },
+    {
+      "ref": "is-string@npm:1.0.7",
+      "dependsOn": [
+        "has-tostringtag@npm:1.0.2"
+      ]
+    },
+    {
+      "ref": "provides-peer-100@portal:packages/provides-peer-100::locator=concurrent-peer-deps%40workspace%3A.",
+      "dependsOn": [
+        "has-peer@portal:../has-peer/::locator=provides-peer-100%40portal%3Apackages%2Fprovides-peer-100%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [1bd79]",
+        "is-string@npm:1.0.0"
+      ]
+    },
+    {
+      "ref": "provides-peer-107@portal:packages/provides-peer-107::locator=concurrent-peer-deps%40workspace%3A.",
+      "dependsOn": [
+        "has-peer@portal:../has-peer/::locator=provides-peer-107%40portal%3Apackages%2Fprovides-peer-107%3A%3Alocator%3Dconcurrent-peer-deps%2540workspace%253A. [9635e]",
+        "is-string@npm:1.0.7"
+      ]
+    }
+  ]
+}
