@@ -12,7 +12,7 @@ First release ([#8] via [#6])
   - Provide a _yarn_ (berry) plugin that generates _CycloneDX_ SBOM for current workspace
   - Provide a CLI wrapper got said plugin
 * Capabilities
-  - Supports _yarn_ (berry) v3 - v4
+  - Support _yarn_ (berry) v3 - v4
   - Can output in XML and JSON format according to _CycloneDX_ v1.2 - v1.6 spec
   - Can omit dev-dependencies
   - Can generate reproducible results
