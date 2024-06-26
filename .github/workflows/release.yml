@@ -198,6 +198,8 @@ jobs:
       - "test-licenses"
       - "test-node"
     name: publish NPMJS
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
