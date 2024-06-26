@@ -117,14 +117,14 @@ See the [`LICENSE`][license_file] file for the full license.
 For details and license posture of the assembly, see the `LICENSE` file in the respective release assets.
 
 
-[license_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/1.0-dev/LICENSE
-[contributing_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/1.0-dev/CONTRIBUTING.md
+[license_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/main/LICENSE
+[contributing_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/main/CONTRIBUTING.md
 
 [CycloneDX]: https://cyclonedx.org/
 [yarn]: https://yarnpkg.com/
 [cyclonedx-library]: https://www.npmjs.com/package/@cyclonedx/cyclonedx-library
 
-[shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-yarn/nodejs.yml?branch=1.0-dev&logo=GitHub&logoColor=white "tests"
+[shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-yarn/nodejs.yml?branch=main&logo=GitHub&logoColor=white "tests"
 [shield_coverage]: https://img.shields.io/codacy/coverage/b0af77db5c7b4ab7a36eab255c7f9ede?logo=Codacy&logoColor=white "test coverage"
 [shield_ossf-best-practices]: https://img.shields.io/cii/percentage/8960?label=OpenSSF%20best%20practices "OpenSSF best practices"
 [shield_yarnpkg-version]: https://img.shields.io/npm/v/%40cyclonedx%2Fyarn-plugin-cyclonedx/latest?registry_uri=https%3A%2F%2Fregistry.yarnpkg.com&logo=yarn&logoColor=white&label=yarnpkg "yarnpkg"
@@ -136,7 +136,7 @@ For details and license posture of the assembly, see the `LICENSE` file in the r
 [shield_twitter-follow]: https://img.shields.io/badge/Twitter-follow-blue?logo=Twitter&logoColor=white "twitter follow"
 
 [link_website]: https://cyclonedx.org/
-[link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-yarn/actions/workflows/nodejs.yml?query=branch%3A1.0-dev
+[link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-yarn/actions/workflows/nodejs.yml?query=branch%3Amain
 [link_yarnpkg]: https://yarnpkg.com/package?name=%40cyclonedx%2Fyarn-plugin-cyclonedx
 [link_npm]: https://www.npmjs.com/package/@cyclonedx/yarn-plugin-cyclonedx
 [link_codacy]: https://app.codacy.com/gh/CycloneDX/cyclonedx-node-yarn/dashboard
