@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-## 1.0.0 -- planned
+<!-- add unreleased items here -->
+
+## 1.0.0 -- 2024-06-26
 
 First release ([#8] via [#6])
 
@@ -12,12 +14,10 @@ First release ([#8] via [#6])
   - Provide a _yarn_ (berry) plugin that generates _CycloneDX_ SBOM for current workspace
   - Provide a CLI wrapper got said plugin
 * Capabilities
-  - Support _yarn_ (berry) v3 - v4
+  - Support _yarn_ (berry) v3 and v4
   - Can output in XML and JSON format according to _CycloneDX_ v1.2 - v1.6 spec
   - Can omit dev-dependencies
   - Can generate reproducible results
-
-<!-- add unreleased items here -->
 
 [#6]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/6
 [#8]: https://github.com/CycloneDX/cyclonedx-node-yarn/discussions/8
