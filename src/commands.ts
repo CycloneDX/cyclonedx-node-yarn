@@ -24,7 +24,7 @@ import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
-import { ppath, xfs } from '@yarnpkg/fslib'
+import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import { isEnum } from 'typanion'
 
@@ -203,7 +203,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
     const written = await writeAllSync(
       this.outputFile === OutputStdOut
         ? process.stdout.fd
-        : xfs.openSync(ppath.resolve(process.cwd(), this.outputFile), 'w'),
+        : xfs.openSync(npath.toPortablePath(npath.resolve(process.cwd(), this.outputFile)), 'w'),
       serialized
     )
     myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
