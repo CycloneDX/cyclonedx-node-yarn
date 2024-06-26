@@ -39,7 +39,7 @@ const structuredClonePolyfill =
 function main (outputFile) {
   const manifestSource = JSON.parse(readFileSync(manifestSourceFile))
   const manifest = structuredClonePolyfill(manifestSource)
-  for (const [k, v] of Object.entries(manifestSource.publishConfig ?? {})) {
+  for (const [k, v] of Object.entries(manifestSource.publishReplace ?? {})) {
     if (k[0] === '$') {
       continue
     }
@@ -48,6 +48,7 @@ function main (outputFile) {
     }
     manifest[k] = v
   }
+  manifest.publishReplace = undefined
   // dist is expected to be a bundle - no deps need install
   manifest.dependencies = {}
   // move deps to devDeps - for documentation purposes
