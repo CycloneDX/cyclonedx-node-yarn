@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>yarn</name>
+        <version>yarnVersion-testing</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>yarn-plugin-cyclonedx</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="concurrent-versions@workspace:.">
+      <name>concurrent-versions</name>
+      <version>0.0.1</version>
+      <description>demo: multiple dependencies requiring concurrent versions of `chalk`</description>
+      <purl>pkg:npm/concurrent-versions@0.0.1</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="@ljharb/through@npm:2.3.12">
+      <author>Dominic Tarr</author>
+      <group>@ljharb</group>
+      <name>through</name>
+      <version>2.3.12</version>
+      <description>simplified stream construction</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40ljharb/through@2.3.12?vcs_url=git%2Bhttps%3A//github.com/ljharb/through.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/through/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/through.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/through</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ansi-escapes@npm:4.3.2">
+      <author>Sindre Sorhus</author>
+      <name>ansi-escapes</name>
+      <version>4.3.2</version>
+      <description>ANSI escape codes for manipulating the terminal</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-escapes@4.3.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ansi-escapes.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/ansi-escapes/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/ansi-escapes.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/ansi-escapes#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ansi-regex@npm:5.0.1">
+      <author>Sindre Sorhus</author>
+      <name>ansi-regex</name>
+      <version>5.0.1</version>
+      <description>Regular expression for matching ANSI escape codes</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/ansi-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-regex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ansi-styles@npm:4.3.0">
+      <author>Sindre Sorhus</author>
+      <name>ansi-styles</name>
+      <version>4.3.0</version>
+      <description>ANSI escape codes for styling strings in the terminal</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-styles.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-styles/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/ansi-styles.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-styles#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="base64-js@npm:1.5.1">
+      <author>T. Jameson Little</author>
+      <name>base64-js</name>
+      <version>1.5.1</version>
+      <description>Base64 encoding/decoding in pure JS</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/beatgammit/base64-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/beatgammit/base64-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/beatgammit/base64-js</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="bl@npm:4.1.0">
+      <name>bl</name>
+      <version>4.1.0</version>
+      <description>Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/bl@4.1.0?vcs_url=git%2Bhttps%3A//github.com/rvagg/bl.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/rvagg/bl/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/rvagg/bl.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/rvagg/bl</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="buffer@npm:5.7.1">
+      <author>Feross Aboukhadijeh</author>
+      <name>buffer</name>
+      <version>5.7.1</version>
+      <description>Node.js Buffer API, for the browser</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/buffer@5.7.1?vcs_url=git%3A//github.com/feross/buffer.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="call-bind@npm:1.0.7">
+      <author>Jordan Harband</author>
+      <name>call-bind</name>
+      <version>1.0.7</version>
+      <description>Robustly `.call.bind()` a function</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A//github.com/ljharb/call-bind.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/call-bind/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/call-bind.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/call-bind#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="chalk@npm:4.1.2">
+      <name>chalk</name>
+      <version>4.1.2</version>
+      <description>Terminal string styling done right</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/chalk@4.1.2?vcs_url=git%2Bhttps%3A//github.com/chalk/chalk.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/chalk/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/chalk.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/chalk#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="chalk@npm:5.3.0">
+      <name>chalk</name>
+      <version>5.3.0</version>
+      <description>Terminal string styling done right</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/chalk@5.3.0?vcs_url=git%2Bhttps%3A//github.com/chalk/chalk.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/chalk/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/chalk.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/chalk#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="chardet@npm:0.7.0">
+      <author>Dmitry Shirokov</author>
+      <name>chardet</name>
+      <version>0.7.0</version>
+      <description>Character detector</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/chardet@0.7.0?vcs_url=git%2Bssh%3A//git%40github.com/runk/node-chardet.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/runk/node-chardet/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/runk/node-chardet.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/runk/node-chardet</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="cli-cursor@npm:3.1.0">
+      <author>Sindre Sorhus</author>
+      <name>cli-cursor</name>
+      <version>3.1.0</version>
+      <description>Toggle the CLI cursor</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/cli-cursor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/cli-cursor.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/cli-cursor/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/cli-cursor.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/cli-cursor#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="cli-spinners@npm:2.9.2">
+      <author>Sindre Sorhus</author>
+      <name>cli-spinners</name>
+      <version>2.9.2</version>
+      <description>Spinners for use in the terminal</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/cli-spinners@2.9.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/cli-spinners.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/cli-spinners/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/cli-spinners.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/cli-spinners#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="cli-width@npm:4.1.0">
+      <author>Ilya Radchenko</author>
+      <name>cli-width</name>
+      <version>4.1.0</version>
+      <description>Get stdout window width, with two fallbacks, tty and then a default.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/cli-width@4.1.0?vcs_url=git%2Bssh%3A//git%40github.com/knownasilya/cli-width.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/knownasilya/cli-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/knownasilya/cli-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/knownasilya/cli-width</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="clone@npm:1.0.4">
+      <author>Paul Vorbach</author>
+      <name>clone</name>
+      <version>1.0.4</version>
+      <description>deep cloning of objects and arrays</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/clone@1.0.4?vcs_url=git%3A//github.com/pvorb/node-clone.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/pvorb/node-clone/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/pvorb/node-clone.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/pvorb/node-clone#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="color-convert@npm:2.0.1">
+      <author>Heather Arthur</author>
+      <name>color-convert</name>
+      <version>2.0.1</version>
+      <description>Plain color conversion functions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A//github.com/Qix-/color-convert.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Qix-/color-convert/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Qix-/color-convert.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Qix-/color-convert#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="color-name@npm:1.1.4">
+      <author>DY</author>
+      <name>color-name</name>
+      <version>1.1.4</version>
+      <description>A list of color names and its values</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A//git%40github.com/colorjs/color-name.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/colorjs/color-name/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/colorjs/color-name.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/colorjs/color-name</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="defaults@npm:1.0.4">
+      <author>Elijah Insua</author>
+      <name>defaults</name>
+      <version>1.0.4</version>
+      <description>merge single level defaults over a config object</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/defaults@1.0.4?vcs_url=git%3A//github.com/sindresorhus/node-defaults.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/node-defaults/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/sindresorhus/node-defaults.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/node-defaults#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="define-data-property@npm:1.1.4">
+      <author>Jordan Harband</author>
+      <name>define-data-property</name>
+      <version>1.1.4</version>
+      <description>Define a data property on an object. Will fall back to assignment in an engine without descriptors.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/define-data-property.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/define-data-property/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/define-data-property.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/define-data-property#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="emoji-regex@npm:8.0.0">
+      <author>Mathias Bynens</author>
+      <name>emoji-regex</name>
+      <version>8.0.0</version>
+      <description>A regular expression to match all Emoji-only symbols as per the Unicode Standard.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A//github.com/mathiasbynens/emoji-regex.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/mathiasbynens/emoji-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://mths.be/emoji-regex</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="es-define-property@npm:1.0.0">
+      <author>Jordan Harband</author>
+      <name>es-define-property</name>
+      <version>1.0.0</version>
+      <description>`Object.defineProperty`, but not IE 8's broken one.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-define-property.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/es-define-property/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/es-define-property.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/es-define-property#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="es-errors@npm:1.3.0">
+      <author>Jordan Harband</author>
+      <name>es-errors</name>
+      <version>1.3.0</version>
+      <description>A simple cache for a few of the JS Error constructors.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A//github.com/ljharb/es-errors.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/es-errors/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/es-errors.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/es-errors#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="escape-string-regexp@npm:1.0.5">
+      <author>Sindre Sorhus</author>
+      <name>escape-string-regexp</name>
+      <version>1.0.5</version>
+      <description>Escape RegExp special characters</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/escape-string-regexp.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/escape-string-regexp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/escape-string-regexp.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/escape-string-regexp#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="external-editor@npm:3.1.0">
+      <author>Kevin Gravier</author>
+      <name>external-editor</name>
+      <version>3.1.0</version>
+      <description>Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/external-editor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/mrkmg/node-external-editor.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/mrkmg/node-external-editor/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/mrkmg/node-external-editor.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/mrkmg/node-external-editor#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="figures@npm:3.2.0">
+      <author>Sindre Sorhus</author>
+      <name>figures</name>
+      <version>3.2.0</version>
+      <description>Unicode symbols with Windows CMD fallbacks</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/figures@3.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/figures.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/figures/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/figures.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/figures#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="function-bind@npm:1.1.2">
+      <author>Raynos</author>
+      <name>function-bind</name>
+      <version>1.1.2</version>
+      <description>Implementation of Function.prototype.bind</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/function-bind@1.1.2?vcs_url=git%2Bhttps%3A//github.com/Raynos/function-bind.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Raynos/function-bind/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Raynos/function-bind.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Raynos/function-bind</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="get-intrinsic@npm:1.2.4">
+      <author>Jordan Harband</author>
+      <name>get-intrinsic</name>
+      <version>1.2.4</version>
+      <description>Get and robustly cache all JS language-level intrinsics at first require time</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A//github.com/ljharb/get-intrinsic.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/get-intrinsic/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/get-intrinsic.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/get-intrinsic#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="gopd@npm:1.0.1">
+      <author>Jordan Harband</author>
+      <name>gopd</name>
+      <version>1.0.1</version>
+      <description>`Object.getOwnPropertyDescriptor`, but accounts for IE's broken implementation.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/gopd.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/gopd/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/gopd.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/gopd#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-flag@npm:4.0.0">
+      <author>Sindre Sorhus</author>
+      <name>has-flag</name>
+      <version>4.0.0</version>
+      <description>Check if argv has a specific flag</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-flag@4.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/has-flag.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/has-flag/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/has-flag.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/has-flag#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-property-descriptors@npm:1.0.2">
+      <author>Jordan Harband</author>
+      <name>has-property-descriptors</name>
+      <version>1.0.2</version>
+      <description>Does the environment have full property descriptor support? Handles IE 8's broken defineProperty/gOPD.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-property-descriptors.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/has-property-descriptors/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/has-property-descriptors.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/has-property-descriptors#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-proto@npm:1.0.3">
+      <author>Jordan Harband</author>
+      <name>has-proto</name>
+      <version>1.0.3</version>
+      <description>Does this environment have the ability to get the [[Prototype]] of an object on creation with `__proto__`?</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-proto.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/has-proto/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/has-proto.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/has-proto#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-symbols@npm:1.0.3">
+      <author>Jordan Harband</author>
+      <name>has-symbols</name>
+      <version>1.0.3</version>
+      <description>Determine if the JS environment has Symbol support. Supports spec, or shams.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/has-symbols/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/inspect-js/has-symbols.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/has-symbols#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="hasown@npm:2.0.1">
+      <author>Jordan Harband</author>
+      <name>hasown</name>
+      <version>2.0.1</version>
+      <description>A robust, ES3 compatible, "has own property" predicate.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/hasown@2.0.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/hasOwn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/hasOwn.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/hasOwn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="iconv-lite@npm:0.4.24">
+      <author>Alexander Shtuchkin</author>
+      <name>iconv-lite</name>
+      <version>0.4.24</version>
+      <description>Convert character encodings in pure javascript.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A//github.com/ashtuchkin/iconv-lite.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/ashtuchkin/iconv-lite.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ashtuchkin/iconv-lite</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ieee754@npm:1.2.1">
+      <author>Feross Aboukhadijeh</author>
+      <name>ieee754</name>
+      <version>1.2.1</version>
+      <description>Read/write IEEE754 floating point numbers from/to a Buffer or array-like object</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/ieee754/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/ieee754.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/ieee754#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="inherits@npm:2.0.4">
+      <name>inherits</name>
+      <version>2.0.4</version>
+      <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/inherits/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/inherits.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/inherits#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="inquirer@npm:9.2.15">
+      <author>Simon Boudrias</author>
+      <name>inquirer</name>
+      <version>9.2.15</version>
+      <description>A collection of common interactive command line user interfaces.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/inquirer@9.2.15?vcs_url=git%2Bhttps%3A//github.com/SBoudrias/Inquirer.js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/SBoudrias/Inquirer.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/SBoudrias/Inquirer.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-fullwidth-code-point@npm:3.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-fullwidth-code-point</name>
+      <version>3.0.0</version>
+      <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-fullwidth-code-point.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-interactive@npm:1.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-interactive</name>
+      <version>1.0.0</version>
+      <description>Check if stdout or stderr is interactive</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-interactive@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-interactive.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-interactive/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-interactive.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-interactive#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-unicode-supported@npm:0.1.0">
+      <author>Sindre Sorhus</author>
+      <name>is-unicode-supported</name>
+      <version>0.1.0</version>
+      <description>Detect whether the terminal supports Unicode</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-unicode-supported@0.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-unicode-supported.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-unicode-supported/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-unicode-supported.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-unicode-supported#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="lodash@npm:4.17.21">
+      <author>John-David Dalton</author>
+      <name>lodash</name>
+      <version>4.17.21</version>
+      <description>Lodash modular utilities.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/lodash@4.17.21?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/lodash/lodash/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/lodash/lodash.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://lodash.com/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="log-symbols@npm:4.1.0">
+      <author>Sindre Sorhus</author>
+      <name>log-symbols</name>
+      <version>4.1.0</version>
+      <description>Colored symbols for various log levels. Example: `✔︎ Success`</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/log-symbols@4.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/log-symbols.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/log-symbols/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/log-symbols.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/log-symbols#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="mimic-fn@npm:2.1.0">
+      <author>Sindre Sorhus</author>
+      <name>mimic-fn</name>
+      <version>2.1.0</version>
+      <description>Make a function mimic another one</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/mimic-fn@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/mimic-fn.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/mimic-fn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/mimic-fn.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/mimic-fn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="mute-stream@npm:1.0.0">
+      <author>GitHub Inc.</author>
+      <name>mute-stream</name>
+      <version>1.0.0</version>
+      <description>Bytes go in, but they don't come out (when muted).</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/mute-stream@1.0.0?vcs_url=git%2Bhttps%3A//github.com/npm/mute-stream.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/mute-stream/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/mute-stream.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/mute-stream#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="onetime@npm:5.1.2">
+      <author>Sindre Sorhus</author>
+      <name>onetime</name>
+      <version>5.1.2</version>
+      <description>Ensure a function is only called once</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/onetime@5.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/onetime.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/onetime/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/onetime.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/onetime#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="ora@npm:5.4.1">
+      <author>Sindre Sorhus</author>
+      <name>ora</name>
+      <version>5.4.1</version>
+      <description>Elegant terminal spinner</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ora@5.4.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/ora.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/ora/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/ora.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/ora#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="os-tmpdir@npm:1.0.2">
+      <author>Sindre Sorhus</author>
+      <name>os-tmpdir</name>
+      <version>1.0.2</version>
+      <description>Node.js os.tmpdir() ponyfill</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/os-tmpdir@1.0.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-tmpdir.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/os-tmpdir/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/os-tmpdir.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/os-tmpdir#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="readable-stream@npm:3.6.2">
+      <name>readable-stream</name>
+      <version>3.6.2</version>
+      <description>Streams3, a user-land copy of the stream library from Node.js</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/readable-stream/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/readable-stream.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/readable-stream#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="restore-cursor@npm:3.1.0">
+      <author>Sindre Sorhus</author>
+      <name>restore-cursor</name>
+      <version>3.1.0</version>
+      <description>Gracefully restore the CLI cursor on exit</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/restore-cursor@3.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/restore-cursor.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/restore-cursor/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/restore-cursor.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/restore-cursor#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="run-async@npm:3.0.0">
+      <author>Simon Boudrias</author>
+      <name>run-async</name>
+      <version>3.0.0</version>
+      <description>Utility method to run function either synchronously or asynchronously using the common `this.async()` style.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/run-async@3.0.0?vcs_url=git%2Bhttps%3A//github.com/SBoudrias/run-async.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/SBoudrias/run-async/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/SBoudrias/run-async.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/SBoudrias/run-async#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="rxjs@npm:7.8.1">
+      <author>Ben Lesh</author>
+      <name>rxjs</name>
+      <version>7.8.1</version>
+      <description>Reactive Extensions for modern JavaScript</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ReactiveX/RxJS/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/reactivex/rxjs.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://rxjs.dev</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="safe-buffer@npm:5.2.1">
+      <author>Feross Aboukhadijeh</author>
+      <name>safe-buffer</name>
+      <version>5.2.1</version>
+      <description>Safer Node.js Buffer API</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/safe-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/safe-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/safe-buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="safer-buffer@npm:2.1.2">
+      <author>Nikita Skovoroda</author>
+      <name>safer-buffer</name>
+      <version>2.1.2</version>
+      <description>Modern Buffer API polyfill without footguns</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A//github.com/ChALkeR/safer-buffer.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ChALkeR/safer-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ChALkeR/safer-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ChALkeR/safer-buffer#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="set-function-length@npm:1.2.1">
+      <author>Jordan Harband</author>
+      <name>set-function-length</name>
+      <version>1.2.1</version>
+      <description>Set a function's length property</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/set-function-length@1.2.1?vcs_url=git%2Bhttps%3A//github.com/ljharb/set-function-length.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/ljharb/set-function-length/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/ljharb/set-function-length.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/ljharb/set-function-length#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="signal-exit@npm:3.0.7">
+      <author>Ben Coe</author>
+      <name>signal-exit</name>
+      <version>3.0.7</version>
+      <description>when you want to fire an event no matter how a process exits.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/signal-exit@3.0.7?vcs_url=git%2Bhttps%3A//github.com/tapjs/signal-exit.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/tapjs/signal-exit/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/tapjs/signal-exit.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/tapjs/signal-exit</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="string_decoder@npm:1.3.0">
+      <name>string_decoder</name>
+      <version>1.3.0</version>
+      <description>The string_decoder module from Node core</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/string_decoder/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/string_decoder.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/string_decoder</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="string-width@npm:4.2.3">
+      <author>Sindre Sorhus</author>
+      <name>string-width</name>
+      <version>4.2.3</version>
+      <description>Get the visual width of a string - the number of columns required to display it</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/string-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/string-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/string-width#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="strip-ansi@npm:6.0.1">
+      <author>Sindre Sorhus</author>
+      <name>strip-ansi</name>
+      <version>6.0.1</version>
+      <description>Strip ANSI escape codes from a string</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/strip-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/strip-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/strip-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="supports-color@npm:7.2.0">
+      <author>Sindre Sorhus</author>
+      <name>supports-color</name>
+      <version>7.2.0</version>
+      <description>Detect whether a terminal supports color</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/supports-color@7.2.0?vcs_url=git%2Bhttps%3A//github.com/chalk/supports-color.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/supports-color/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/supports-color.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/supports-color#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="tmp@npm:0.0.33">
+      <author>KARASZI István</author>
+      <name>tmp</name>
+      <version>0.0.33</version>
+      <description>Temporary file and directory creator</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/tmp@0.0.33?vcs_url=git%2Bhttps%3A//github.com/raszi/node-tmp.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/raszi/node-tmp/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/raszi/node-tmp.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://github.com/raszi/node-tmp</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="tslib@npm:2.6.2">
+      <author>Microsoft Corp.</author>
+      <name>tslib</name>
+      <version>2.6.2</version>
+      <description>Runtime library for TypeScript helper functions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>0BSD</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/tslib@2.6.2?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Microsoft/TypeScript/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Microsoft/tslib.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://www.typescriptlang.org/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="type-fest@npm:0.21.3">
+      <author>Sindre Sorhus</author>
+      <name>type-fest</name>
+      <version>0.21.3</version>
+      <description>A collection of essential TypeScript types</description>
+      <licenses>
+        <expression acknowledgement="declared">(MIT OR CC0-1.0)</expression>
+      </licenses>
+      <purl>pkg:npm/type-fest@0.21.3?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/type-fest.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/type-fest/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/type-fest.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/type-fest#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="util-deprecate@npm:1.0.2">
+      <author>Nathan Rajlich</author>
+      <name>util-deprecate</name>
+      <version>1.0.2</version>
+      <description>The Node.js `util.deprecate()` function with browser support</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/util-deprecate/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/util-deprecate.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/util-deprecate</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="wcwidth@npm:1.0.1">
+      <author>Tim Oxley</author>
+      <name>wcwidth</name>
+      <version>1.0.1</version>
+      <description>Port of C's wcwidth() and wcswidth()</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/wcwidth@1.0.1?vcs_url=git%2Bhttps%3A//github.com/timoxley/wcwidth.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/timoxley/wcwidth/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/timoxley/wcwidth.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/timoxley/wcwidth#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="wrap-ansi@npm:6.2.0">
+      <author>Sindre Sorhus</author>
+      <name>wrap-ansi</name>
+      <version>6.2.0</version>
+      <description>Wordwrap a string with ANSI escape codes</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/wrap-ansi@6.2.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/wrap-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/wrap-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/wrap-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@ljharb/through@npm:2.3.12">
+      <dependency ref="call-bind@npm:1.0.7"/>
+    </dependency>
+    <dependency ref="ansi-escapes@npm:4.3.2">
+      <dependency ref="type-fest@npm:0.21.3"/>
+    </dependency>
+    <dependency ref="ansi-regex@npm:5.0.1"/>
+    <dependency ref="ansi-styles@npm:4.3.0">
+      <dependency ref="color-convert@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="base64-js@npm:1.5.1"/>
+    <dependency ref="bl@npm:4.1.0">
+      <dependency ref="buffer@npm:5.7.1"/>
+      <dependency ref="inherits@npm:2.0.4"/>
+      <dependency ref="readable-stream@npm:3.6.2"/>
+    </dependency>
+    <dependency ref="buffer@npm:5.7.1">
+      <dependency ref="base64-js@npm:1.5.1"/>
+      <dependency ref="ieee754@npm:1.2.1"/>
+    </dependency>
+    <dependency ref="call-bind@npm:1.0.7">
+      <dependency ref="es-define-property@npm:1.0.0"/>
+      <dependency ref="es-errors@npm:1.3.0"/>
+      <dependency ref="function-bind@npm:1.1.2"/>
+      <dependency ref="get-intrinsic@npm:1.2.4"/>
+      <dependency ref="set-function-length@npm:1.2.1"/>
+    </dependency>
+    <dependency ref="chalk@npm:4.1.2">
+      <dependency ref="ansi-styles@npm:4.3.0"/>
+      <dependency ref="supports-color@npm:7.2.0"/>
+    </dependency>
+    <dependency ref="chalk@npm:5.3.0"/>
+    <dependency ref="chardet@npm:0.7.0"/>
+    <dependency ref="cli-cursor@npm:3.1.0">
+      <dependency ref="restore-cursor@npm:3.1.0"/>
+    </dependency>
+    <dependency ref="cli-spinners@npm:2.9.2"/>
+    <dependency ref="cli-width@npm:4.1.0"/>
+    <dependency ref="clone@npm:1.0.4"/>
+    <dependency ref="color-convert@npm:2.0.1">
+      <dependency ref="color-name@npm:1.1.4"/>
+    </dependency>
+    <dependency ref="color-name@npm:1.1.4"/>
+    <dependency ref="concurrent-versions@workspace:.">
+      <dependency ref="inquirer@npm:9.2.15"/>
+      <dependency ref="ora@npm:5.4.1"/>
+    </dependency>
+    <dependency ref="defaults@npm:1.0.4">
+      <dependency ref="clone@npm:1.0.4"/>
+    </dependency>
+    <dependency ref="define-data-property@npm:1.1.4">
+      <dependency ref="es-define-property@npm:1.0.0"/>
+      <dependency ref="es-errors@npm:1.3.0"/>
+      <dependency ref="gopd@npm:1.0.1"/>
+    </dependency>
+    <dependency ref="emoji-regex@npm:8.0.0"/>
+    <dependency ref="es-define-property@npm:1.0.0">
+      <dependency ref="get-intrinsic@npm:1.2.4"/>
+    </dependency>
+    <dependency ref="es-errors@npm:1.3.0"/>
+    <dependency ref="escape-string-regexp@npm:1.0.5"/>
+    <dependency ref="external-editor@npm:3.1.0">
+      <dependency ref="chardet@npm:0.7.0"/>
+      <dependency ref="iconv-lite@npm:0.4.24"/>
+      <dependency ref="tmp@npm:0.0.33"/>
+    </dependency>
+    <dependency ref="figures@npm:3.2.0">
+      <dependency ref="escape-string-regexp@npm:1.0.5"/>
+    </dependency>
+    <dependency ref="function-bind@npm:1.1.2"/>
+    <dependency ref="get-intrinsic@npm:1.2.4">
+      <dependency ref="es-errors@npm:1.3.0"/>
+      <dependency ref="function-bind@npm:1.1.2"/>
+      <dependency ref="has-proto@npm:1.0.3"/>
+      <dependency ref="has-symbols@npm:1.0.3"/>
+      <dependency ref="hasown@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="gopd@npm:1.0.1">
+      <dependency ref="get-intrinsic@npm:1.2.4"/>
+    </dependency>
+    <dependency ref="has-flag@npm:4.0.0"/>
+    <dependency ref="has-property-descriptors@npm:1.0.2">
+      <dependency ref="es-define-property@npm:1.0.0"/>
+    </dependency>
+    <dependency ref="has-proto@npm:1.0.3"/>
+    <dependency ref="has-symbols@npm:1.0.3"/>
+    <dependency ref="hasown@npm:2.0.1">
+      <dependency ref="function-bind@npm:1.1.2"/>
+    </dependency>
+    <dependency ref="iconv-lite@npm:0.4.24">
+      <dependency ref="safer-buffer@npm:2.1.2"/>
+    </dependency>
+    <dependency ref="ieee754@npm:1.2.1"/>
+    <dependency ref="inherits@npm:2.0.4"/>
+    <dependency ref="inquirer@npm:9.2.15">
+      <dependency ref="@ljharb/through@npm:2.3.12"/>
+      <dependency ref="ansi-escapes@npm:4.3.2"/>
+      <dependency ref="chalk@npm:5.3.0"/>
+      <dependency ref="cli-cursor@npm:3.1.0"/>
+      <dependency ref="cli-width@npm:4.1.0"/>
+      <dependency ref="external-editor@npm:3.1.0"/>
+      <dependency ref="figures@npm:3.2.0"/>
+      <dependency ref="lodash@npm:4.17.21"/>
+      <dependency ref="mute-stream@npm:1.0.0"/>
+      <dependency ref="ora@npm:5.4.1"/>
+      <dependency ref="run-async@npm:3.0.0"/>
+      <dependency ref="rxjs@npm:7.8.1"/>
+      <dependency ref="string-width@npm:4.2.3"/>
+      <dependency ref="strip-ansi@npm:6.0.1"/>
+      <dependency ref="wrap-ansi@npm:6.2.0"/>
+    </dependency>
+    <dependency ref="is-fullwidth-code-point@npm:3.0.0"/>
+    <dependency ref="is-interactive@npm:1.0.0"/>
+    <dependency ref="is-unicode-supported@npm:0.1.0"/>
+    <dependency ref="lodash@npm:4.17.21"/>
+    <dependency ref="log-symbols@npm:4.1.0">
+      <dependency ref="chalk@npm:4.1.2"/>
+      <dependency ref="is-unicode-supported@npm:0.1.0"/>
+    </dependency>
+    <dependency ref="mimic-fn@npm:2.1.0"/>
+    <dependency ref="mute-stream@npm:1.0.0"/>
+    <dependency ref="onetime@npm:5.1.2">
+      <dependency ref="mimic-fn@npm:2.1.0"/>
+    </dependency>
+    <dependency ref="ora@npm:5.4.1">
+      <dependency ref="bl@npm:4.1.0"/>
+      <dependency ref="chalk@npm:4.1.2"/>
+      <dependency ref="cli-cursor@npm:3.1.0"/>
+      <dependency ref="cli-spinners@npm:2.9.2"/>
+      <dependency ref="is-interactive@npm:1.0.0"/>
+      <dependency ref="is-unicode-supported@npm:0.1.0"/>
+      <dependency ref="log-symbols@npm:4.1.0"/>
+      <dependency ref="strip-ansi@npm:6.0.1"/>
+      <dependency ref="wcwidth@npm:1.0.1"/>
+    </dependency>
+    <dependency ref="os-tmpdir@npm:1.0.2"/>
+    <dependency ref="readable-stream@npm:3.6.2">
+      <dependency ref="inherits@npm:2.0.4"/>
+      <dependency ref="string_decoder@npm:1.3.0"/>
+      <dependency ref="util-deprecate@npm:1.0.2"/>
+    </dependency>
+    <dependency ref="restore-cursor@npm:3.1.0">
+      <dependency ref="onetime@npm:5.1.2"/>
+      <dependency ref="signal-exit@npm:3.0.7"/>
+    </dependency>
+    <dependency ref="run-async@npm:3.0.0"/>
+    <dependency ref="rxjs@npm:7.8.1">
+      <dependency ref="tslib@npm:2.6.2"/>
+    </dependency>
+    <dependency ref="safe-buffer@npm:5.2.1"/>
+    <dependency ref="safer-buffer@npm:2.1.2"/>
+    <dependency ref="set-function-length@npm:1.2.1">
+      <dependency ref="define-data-property@npm:1.1.4"/>
+      <dependency ref="es-errors@npm:1.3.0"/>
+      <dependency ref="function-bind@npm:1.1.2"/>
+      <dependency ref="get-intrinsic@npm:1.2.4"/>
+      <dependency ref="gopd@npm:1.0.1"/>
+      <dependency ref="has-property-descriptors@npm:1.0.2"/>
+    </dependency>
+    <dependency ref="signal-exit@npm:3.0.7"/>
+    <dependency ref="string_decoder@npm:1.3.0">
+      <dependency ref="safe-buffer@npm:5.2.1"/>
+    </dependency>
+    <dependency ref="string-width@npm:4.2.3">
+      <dependency ref="emoji-regex@npm:8.0.0"/>
+      <dependency ref="is-fullwidth-code-point@npm:3.0.0"/>
+      <dependency ref="strip-ansi@npm:6.0.1"/>
+    </dependency>
+    <dependency ref="strip-ansi@npm:6.0.1">
+      <dependency ref="ansi-regex@npm:5.0.1"/>
+    </dependency>
+    <dependency ref="supports-color@npm:7.2.0">
+      <dependency ref="has-flag@npm:4.0.0"/>
+    </dependency>
+    <dependency ref="tmp@npm:0.0.33">
+      <dependency ref="os-tmpdir@npm:1.0.2"/>
+    </dependency>
+    <dependency ref="tslib@npm:2.6.2"/>
+    <dependency ref="type-fest@npm:0.21.3"/>
+    <dependency ref="util-deprecate@npm:1.0.2"/>
+    <dependency ref="wcwidth@npm:1.0.1">
+      <dependency ref="defaults@npm:1.0.4"/>
+    </dependency>
+    <dependency ref="wrap-ansi@npm:6.2.0">
+      <dependency ref="ansi-styles@npm:4.3.0"/>
+      <dependency ref="string-width@npm:4.2.3"/>
+      <dependency ref="strip-ansi@npm:6.0.1"/>
+    </dependency>
+  </dependencies>
+</bom>

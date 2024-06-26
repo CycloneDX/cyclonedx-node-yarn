@@ -1,0 +1,10 @@
+
+tsconfig.json       linguist-language=JSON-with-Comments
+tsconfig.*.json     linguist-language=JSON-with-Comments
+
+.yarn/**            linguist-vendored
+.yarn/releases/*    binary
+.yarn/plugins/**/*  binary
+.pnp.*              binary linguist-generated
+
+yarn.lock           linguist-generated linguist-language=YAML

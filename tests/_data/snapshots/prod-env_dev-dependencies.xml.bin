@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>yarn</name>
+        <version>yarnVersion-testing</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>yarn-plugin-cyclonedx</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-dev-dependencies@workspace:.">
+      <name>demo-dev-dependencies</name>
+      <version>0.0.0</version>
+      <description>demo: demo-dev-dependencies -- showcase how devDependencies look like</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-dev-dependencies@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="@types/uuid@npm:8.3.4">
+      <group>@types</group>
+      <name>uuid</name>
+      <version>8.3.4</version>
+      <description>TypeScript definitions for uuid</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/uuid</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="uuid@npm:8.3.2">
+      <name>uuid</name>
+      <version>8.3.2</version>
+      <description>RFC4122 (v1, v4, and v5) UUIDs</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/uuidjs/uuid/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/uuidjs/uuid.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/uuidjs/uuid#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="uuidv4@npm:6.2.13">
+      <name>uuidv4</name>
+      <version>6.2.13</version>
+      <description>uuidv4 creates v4 UUIDs.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/thenativeweb/uuidv4/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/thenativeweb/uuidv4.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/thenativeweb/uuidv4#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@types/uuid@npm:8.3.4"/>
+    <dependency ref="demo-dev-dependencies@workspace:.">
+      <dependency ref="uuidv4@npm:6.2.13"/>
+    </dependency>
+    <dependency ref="uuid@npm:8.3.2"/>
+    <dependency ref="uuidv4@npm:6.2.13">
+      <dependency ref="@types/uuid@npm:8.3.4"/>
+      <dependency ref="uuid@npm:8.3.2"/>
+    </dependency>
+  </dependencies>
+</bom>

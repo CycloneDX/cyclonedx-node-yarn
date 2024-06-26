@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <name>yarn</name>
+        <version>yarnVersion-testing</version>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>yarn-plugin-cyclonedx</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="demo-bundled-deps@workspace:.">
+      <name>demo-bundled-deps</name>
+      <version>0.0.0</version>
+      <description>demo: demo-bundled-deps -- showcase how bundled deps look like</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-bundled-deps@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="ansi-regex@npm:2.1.1">
+      <author>Sindre Sorhus</author>
+      <name>ansi-regex</name>
+      <version>2.1.1</version>
+      <description>Regular expression for matching ANSI escape codes</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-regex@2.1.1?vcs_url=git%2Bhttps%3A//github.com/chalk/ansi-regex.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-regex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/ansi-regex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-regex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="bundle-dependencies@npm:1.0.2">
+      <author>Gajus Kuizinas</author>
+      <name>bundle-dependencies</name>
+      <version>1.0.2</version>
+      <description>Generates bundledDependencies package.json value using values of the dependencies property.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/bundle-dependencies@1.0.2?vcs_url=git%2Bhttps%3A//github.com/gajus/bundle-dependencies.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/gajus/bundle-dependencies/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/gajus/bundle-dependencies.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/gajus/bundle-dependencies#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="camelcase@npm:3.0.0">
+      <author>Sindre Sorhus</author>
+      <name>camelcase</name>
+      <version>3.0.0</version>
+      <description>Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/camelcase@3.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/camelcase.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/camelcase/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/camelcase.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/camelcase#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="cliui@npm:3.2.0">
+      <author>Ben Coe</author>
+      <name>cliui</name>
+      <version>3.2.0</version>
+      <description>easily create complex multi-column command-line-interfaces</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/cliui@3.2.0?vcs_url=git%2Bssh%3A//git%40github.com/yargs/cliui.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/cliui/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/yargs/cliui.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/cliui#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="code-point-at@npm:1.1.0">
+      <author>Sindre Sorhus</author>
+      <name>code-point-at</name>
+      <version>1.1.0</version>
+      <description>ES2015 `String#codePointAt()` ponyfill</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/code-point-at@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/code-point-at.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/code-point-at/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/code-point-at.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/code-point-at#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="decamelize@npm:1.2.0">
+      <author>Sindre Sorhus</author>
+      <name>decamelize</name>
+      <version>1.2.0</version>
+      <description>Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/decamelize@1.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/decamelize.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/decamelize/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/decamelize.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/decamelize#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="error-ex@npm:1.3.2">
+      <name>error-ex</name>
+      <version>1.3.2</version>
+      <description>Easy error subclassing and stack customization</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/error-ex@1.3.2?vcs_url=git%2Bhttps%3A//github.com/qix-/node-error-ex.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/qix-/node-error-ex/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/qix-/node-error-ex.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/qix-/node-error-ex#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="find-up@npm:1.1.2">
+      <author>Sindre Sorhus</author>
+      <name>find-up</name>
+      <version>1.1.2</version>
+      <description>Find a file by walking up parent directories</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/find-up@1.1.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/find-up.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/find-up/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/find-up.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/find-up#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="function-bind@npm:1.1.2">
+      <author>Raynos</author>
+      <name>function-bind</name>
+      <version>1.1.2</version>
+      <description>Implementation of Function.prototype.bind</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/function-bind@1.1.2?vcs_url=git%2Bhttps%3A//github.com/Raynos/function-bind.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Raynos/function-bind/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Raynos/function-bind.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Raynos/function-bind</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="get-caller-file@npm:1.0.3">
+      <author>Stefan Penner</author>
+      <name>get-caller-file</name>
+      <version>1.0.3</version>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/get-caller-file@1.0.3?vcs_url=git%2Bhttps%3A//github.com/stefanpenner/get-caller-file.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/stefanpenner/get-caller-file/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/stefanpenner/get-caller-file.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/stefanpenner/get-caller-file#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="graceful-fs@npm:4.2.11">
+      <name>graceful-fs</name>
+      <version>4.2.11</version>
+      <description>A drop-in replacement for fs, making various improvements.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A//github.com/isaacs/node-graceful-fs.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/node-graceful-fs/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/isaacs/node-graceful-fs.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/node-graceful-fs#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="hasown@npm:2.0.2">
+      <author>Jordan Harband</author>
+      <name>hasown</name>
+      <version>2.0.2</version>
+      <description>A robust, ES3 compatible, "has own property" predicate.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/hasown@2.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/hasOwn.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/hasOwn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/hasOwn.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/hasOwn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="hosted-git-info@npm:2.8.9">
+      <author>Rebecca Turner</author>
+      <name>hosted-git-info</name>
+      <version>2.8.9</version>
+      <description>Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/hosted-git-info@2.8.9?vcs_url=git%2Bhttps%3A//github.com/npm/hosted-git-info.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/hosted-git-info/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/hosted-git-info.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/hosted-git-info</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="invert-kv@npm:1.0.0">
+      <author>Sindre Sorhus</author>
+      <name>invert-kv</name>
+      <version>1.0.0</version>
+      <description>Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/invert-kv@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/invert-kv.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/invert-kv/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/invert-kv.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/invert-kv#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-arrayish@npm:0.2.1">
+      <author>Qix</author>
+      <name>is-arrayish</name>
+      <version>0.2.1</version>
+      <description>Determines if an object can be used as an array</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=git%2Bhttps%3A//github.com/qix-/node-is-arrayish.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/qix-/node-is-arrayish/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/qix-/node-is-arrayish.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/qix-/node-is-arrayish#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-core-module@npm:2.13.1">
+      <author>Jordan Harband</author>
+      <name>is-core-module</name>
+      <version>2.13.1</version>
+      <description>Is this specifier a node.js core module?</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-core-module@2.13.1?vcs_url=git%2Bhttps%3A//github.com/inspect-js/is-core-module.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/is-core-module/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/is-core-module.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/is-core-module</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-fullwidth-code-point@npm:1.0.0">
+      <author>Sindre Sorhus</author>
+      <name>is-fullwidth-code-point</name>
+      <version>1.0.0</version>
+      <description>Check if the character represented by a given Unicode code point is fullwidth</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-fullwidth-code-point@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/is-fullwidth-code-point.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/is-fullwidth-code-point.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/is-fullwidth-code-point#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="is-utf8@npm:0.2.1">
+      <author>wayfind</author>
+      <name>is-utf8</name>
+      <version>0.2.1</version>
+      <description>Detect if a buffer is utf8 encoded.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/is-utf8@0.2.1?vcs_url=git%2Bhttps%3A//github.com/wayfind/is-utf8.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/wayfind/is-utf8/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/wayfind/is-utf8.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/wayfind/is-utf8#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="lcid@npm:1.0.0">
+      <author>Sindre Sorhus</author>
+      <name>lcid</name>
+      <version>1.0.0</version>
+      <description>Mapping between standard locale identifiers and Windows locale identifiers (LCID)</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/lcid@1.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/lcid.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/lcid/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/lcid.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/lcid#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="load-json-file@npm:1.1.0">
+      <author>Sindre Sorhus</author>
+      <name>load-json-file</name>
+      <version>1.1.0</version>
+      <description>Read and parse a JSON file</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/load-json-file@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/load-json-file.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/load-json-file/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/load-json-file.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/load-json-file#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="lodash.assign@npm:4.2.0">
+      <author>John-David Dalton</author>
+      <name>lodash.assign</name>
+      <version>4.2.0</version>
+      <description>The lodash method `_.assign` exported as a module.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/lodash.assign@4.2.0?vcs_url=git%2Bhttps%3A//github.com/lodash/lodash.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/lodash/lodash/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/lodash/lodash.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://lodash.com/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="normalize-package-data@npm:2.5.0">
+      <author>Meryn Stol</author>
+      <name>normalize-package-data</name>
+      <version>2.5.0</version>
+      <description>Normalizes data that can be found in package.json files.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>BSD-2-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/normalize-package-data@2.5.0?vcs_url=git%3A//github.com/npm/normalize-package-data.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/normalize-package-data/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/npm/normalize-package-data.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/normalize-package-data#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="number-is-nan@npm:1.0.1">
+      <author>Sindre Sorhus</author>
+      <name>number-is-nan</name>
+      <version>1.0.1</version>
+      <description>ES2015 Number.isNaN() ponyfill</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/number-is-nan@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/number-is-nan.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/number-is-nan/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/number-is-nan.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/number-is-nan#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="os-locale@npm:1.4.0">
+      <author>Sindre Sorhus</author>
+      <name>os-locale</name>
+      <version>1.4.0</version>
+      <description>Get the system locale</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/os-locale@1.4.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/os-locale.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/os-locale/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/os-locale.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/os-locale#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="parse-json@npm:2.2.0">
+      <author>Sindre Sorhus</author>
+      <name>parse-json</name>
+      <version>2.2.0</version>
+      <description>Parse JSON with more helpful errors</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/parse-json@2.2.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/parse-json.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/parse-json/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/parse-json.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/parse-json#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="path-exists@npm:2.1.0">
+      <author>Sindre Sorhus</author>
+      <name>path-exists</name>
+      <version>2.1.0</version>
+      <description>Check if a path exists</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/path-exists@2.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-exists.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/path-exists/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/path-exists.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/path-exists#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="path-parse@npm:1.0.7">
+      <author>Javier Blanco</author>
+      <name>path-parse</name>
+      <version>1.0.7</version>
+      <description>Node.js path.parse() ponyfill</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/path-parse@1.0.7?vcs_url=git%2Bhttps%3A//github.com/jbgutierrez/path-parse.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jbgutierrez/path-parse/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jbgutierrez/path-parse.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jbgutierrez/path-parse#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="path-type@npm:1.1.0">
+      <author>Sindre Sorhus</author>
+      <name>path-type</name>
+      <version>1.1.0</version>
+      <description>Check if a path is a file, directory, or symlink</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/path-type@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/path-type.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/path-type/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/path-type.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/path-type#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pify@npm:2.3.0">
+      <author>Sindre Sorhus</author>
+      <name>pify</name>
+      <version>2.3.0</version>
+      <description>Promisify a callback-style function</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/pify@2.3.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/pify.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/pify/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/pify.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/pify#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pinkie-promise@npm:2.0.1">
+      <author>Vsevolod Strukchinsky</author>
+      <name>pinkie-promise</name>
+      <version>2.0.1</version>
+      <description>ES2015 Promise ponyfill</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/pinkie-promise@2.0.1?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie-promise.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/floatdrop/pinkie-promise/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/floatdrop/pinkie-promise.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/floatdrop/pinkie-promise#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pinkie@npm:2.0.4">
+      <author>Vsevolod Strukchinsky</author>
+      <name>pinkie</name>
+      <version>2.0.4</version>
+      <description>Itty bitty little widdle twinkie pinkie ES2015 Promise implementation</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/pinkie@2.0.4?vcs_url=git%2Bhttps%3A//github.com/floatdrop/pinkie.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/floatdrop/pinkie/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/floatdrop/pinkie.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/floatdrop/pinkie#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="read-pkg-up@npm:1.0.1">
+      <author>Sindre Sorhus</author>
+      <name>read-pkg-up</name>
+      <version>1.0.1</version>
+      <description>Read the closest package.json file</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/read-pkg-up@1.0.1?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg-up.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/read-pkg-up/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/read-pkg-up.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/read-pkg-up#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="read-pkg@npm:1.1.0">
+      <author>Sindre Sorhus</author>
+      <name>read-pkg</name>
+      <version>1.1.0</version>
+      <description>Read a package.json file</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/read-pkg@1.1.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/read-pkg.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/read-pkg/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/read-pkg.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/read-pkg#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="require-directory@npm:2.1.1">
+      <author>Troy Goode</author>
+      <name>require-directory</name>
+      <version>2.1.1</version>
+      <description>Recursively iterates over specified directory, require()'ing each file, and returning a nested hash structure containing those modules.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/require-directory@2.1.1?vcs_url=git%3A//github.com/troygoode/node-require-directory.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/troygoode/node-require-directory/issues/</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/troygoode/node-require-directory.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/troygoode/node-require-directory/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="require-main-filename@npm:1.0.1">
+      <author>Ben Coe</author>
+      <name>require-main-filename</name>
+      <version>1.0.1</version>
+      <description>shim for require.main.filename() that works in as many environments as possible</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/require-main-filename.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/require-main-filename/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/yargs/require-main-filename.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/require-main-filename#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
+      <author>James Halliday</author>
+      <name>resolve</name>
+      <version>1.22.8</version>
+      <description>resolve like require.resolve() on behalf of files asynchronously and synchronously</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/resolve@1.22.8?vcs_url=git%3A//github.com/browserify/resolve.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/browserify/resolve/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/browserify/resolve.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/browserify/resolve#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="semver@npm:5.7.2">
+      <author>GitHub Inc.</author>
+      <name>semver</name>
+      <version>5.7.2</version>
+      <description>The semantic version parser used by npm.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/semver@5.7.2?vcs_url=git%2Bhttps%3A//github.com/npm/node-semver.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/npm/node-semver/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/npm/node-semver.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/npm/node-semver#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="set-blocking@npm:2.0.0">
+      <author>Ben Coe</author>
+      <name>set-blocking</name>
+      <version>2.0.0</version>
+      <description>set blocking stdio and stderr ensuring that terminal output does not truncate</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A//github.com/yargs/set-blocking.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/set-blocking/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/yargs/set-blocking.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/set-blocking#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-correct@npm:3.2.0">
+      <name>spdx-correct</name>
+      <version>3.2.0</version>
+      <description>correct invalid SPDX expressions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-correct@3.2.0?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-correct.js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-correct.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jslicense/spdx-correct.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-correct.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-exceptions@npm:2.5.0">
+      <author>The Linux Foundation</author>
+      <name>spdx-exceptions</name>
+      <version>2.5.0</version>
+      <description>list of SPDX standard license exceptions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>CC-BY-3.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A//github.com/kemitchell/spdx-exceptions.json.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/kemitchell/spdx-exceptions.json.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kemitchell/spdx-exceptions.json#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-expression-parse@npm:3.0.1">
+      <author>Kyle E. Mitchell</author>
+      <name>spdx-expression-parse</name>
+      <version>3.0.1</version>
+      <description>parse SPDX license expressions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-expression-parse@3.0.1?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-expression-parse.js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jslicense/spdx-expression-parse.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-expression-parse.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="spdx-license-ids@npm:3.0.17">
+      <author>Shinnosuke Watanabe</author>
+      <name>spdx-license-ids</name>
+      <version>3.0.17</version>
+      <description>A list of SPDX license identifiers</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>CC0-1.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A//github.com/jslicense/spdx-license-ids.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jslicense/spdx-license-ids/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jslicense/spdx-license-ids.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jslicense/spdx-license-ids#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="string-width@npm:1.0.2">
+      <author>Sindre Sorhus</author>
+      <name>string-width</name>
+      <version>1.0.2</version>
+      <description>Get the visual width of a string - the number of columns required to display it</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string-width@1.0.2?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/string-width.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/string-width/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/string-width.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/string-width#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="strip-ansi@npm:3.0.1">
+      <author>Sindre Sorhus</author>
+      <name>strip-ansi</name>
+      <version>3.0.1</version>
+      <description>Strip ANSI escape codes</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/strip-ansi@3.0.1?vcs_url=git%2Bhttps%3A//github.com/chalk/strip-ansi.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/strip-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/strip-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/strip-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="strip-bom@npm:2.0.0">
+      <author>Sindre Sorhus</author>
+      <name>strip-bom</name>
+      <version>2.0.0</version>
+      <description>Strip UTF-8 byte order mark (BOM) from a string/buffer</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/strip-bom@2.0.0?vcs_url=git%2Bhttps%3A//github.com/sindresorhus/strip-bom.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/strip-bom/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/strip-bom.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/strip-bom#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="supports-preserve-symlinks-flag@npm:1.0.0">
+      <author>Jordan Harband</author>
+      <name>supports-preserve-symlinks-flag</name>
+      <version>1.0.0</version>
+      <description>Determine if the current node version supports the `--preserve-symlinks` flag.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/supports-preserve-symlinks-flag@1.0.0?vcs_url=git%2Bhttps%3A//github.com/inspect-js/node-supports-preserve-symlinks-flag.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/inspect-js/node-supports-preserve-symlinks-flag/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/inspect-js/node-supports-preserve-symlinks-flag.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/inspect-js/node-supports-preserve-symlinks-flag#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="validate-npm-package-license@npm:3.0.4">
+      <author>Kyle E. Mitchell</author>
+      <name>validate-npm-package-license</name>
+      <version>3.0.4</version>
+      <description>Give me a string and I'll tell you if it's a valid npm package license string</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/validate-npm-package-license@3.0.4?vcs_url=git%2Bhttps%3A//github.com/kemitchell/validate-npm-package-license.js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/kemitchell/validate-npm-package-license.js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/kemitchell/validate-npm-package-license.js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/kemitchell/validate-npm-package-license.js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="which-module@npm:1.0.0">
+      <author>nexdrew</author>
+      <name>which-module</name>
+      <version>1.0.0</version>
+      <description>Find the module object for something that was require()d</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/which-module@1.0.0?vcs_url=git%2Bhttps%3A//github.com/nexdrew/which-module.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/nexdrew/which-module/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/nexdrew/which-module.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nexdrew/which-module#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="window-size@npm:0.2.0">
+      <author>Jon Schlinkert</author>
+      <name>window-size</name>
+      <version>0.2.0</version>
+      <description>Reliable way to to get the height and width of the terminal/console in a node.js environment.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/window-size@0.2.0?vcs_url=git%2Bhttps%3A//github.com/jonschlinkert/window-size.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jonschlinkert/window-size/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jonschlinkert/window-size.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/jonschlinkert/window-size</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="wrap-ansi@npm:2.1.0">
+      <author>Sindre Sorhus</author>
+      <name>wrap-ansi</name>
+      <version>2.1.0</version>
+      <description>Wordwrap a string with ANSI escape codes</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/wrap-ansi@2.1.0?vcs_url=git%2Bhttps%3A//github.com/chalk/wrap-ansi.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/wrap-ansi/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/wrap-ansi.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/wrap-ansi#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="y18n@npm:3.2.2">
+      <author>Ben Coe</author>
+      <name>y18n</name>
+      <version>3.2.2</version>
+      <description>the bare-bones internationalization library used by yargs</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/y18n@3.2.2?vcs_url=git%2Bssh%3A//git%40github.com/yargs/y18n.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/y18n/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/yargs/y18n.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/y18n</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="yargs-parser@npm:2.4.1">
+      <author>Ben Coe</author>
+      <name>yargs-parser</name>
+      <version>2.4.1</version>
+      <description>the mighty option parser used by yargs</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/yargs-parser@2.4.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/yargs-parser.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/yargs-parser/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/yargs/yargs-parser.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/yargs/yargs-parser#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="yargs@npm:4.8.1">
+      <name>yargs</name>
+      <version>4.8.1</version>
+      <description>yargs the modern, pirate-themed, successor to optimist.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/yargs@4.8.1?vcs_url=git%2Bssh%3A//git%40github.com/yargs/yargs.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/yargs/yargs/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/yargs/yargs.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://yargs.js.org/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="ansi-regex@npm:2.1.1"/>
+    <dependency ref="bundle-dependencies@npm:1.0.2">
+      <dependency ref="yargs@npm:4.8.1"/>
+    </dependency>
+    <dependency ref="camelcase@npm:3.0.0"/>
+    <dependency ref="cliui@npm:3.2.0">
+      <dependency ref="string-width@npm:1.0.2"/>
+      <dependency ref="strip-ansi@npm:3.0.1"/>
+      <dependency ref="wrap-ansi@npm:2.1.0"/>
+    </dependency>
+    <dependency ref="code-point-at@npm:1.1.0"/>
+    <dependency ref="decamelize@npm:1.2.0"/>
+    <dependency ref="demo-bundled-deps@workspace:.">
+      <dependency ref="bundle-dependencies@npm:1.0.2"/>
+    </dependency>
+    <dependency ref="error-ex@npm:1.3.2">
+      <dependency ref="is-arrayish@npm:0.2.1"/>
+    </dependency>
+    <dependency ref="find-up@npm:1.1.2">
+      <dependency ref="path-exists@npm:2.1.0"/>
+      <dependency ref="pinkie-promise@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="function-bind@npm:1.1.2"/>
+    <dependency ref="get-caller-file@npm:1.0.3"/>
+    <dependency ref="graceful-fs@npm:4.2.11"/>
+    <dependency ref="hasown@npm:2.0.2">
+      <dependency ref="function-bind@npm:1.1.2"/>
+    </dependency>
+    <dependency ref="hosted-git-info@npm:2.8.9"/>
+    <dependency ref="invert-kv@npm:1.0.0"/>
+    <dependency ref="is-arrayish@npm:0.2.1"/>
+    <dependency ref="is-core-module@npm:2.13.1">
+      <dependency ref="hasown@npm:2.0.2"/>
+    </dependency>
+    <dependency ref="is-fullwidth-code-point@npm:1.0.0">
+      <dependency ref="number-is-nan@npm:1.0.1"/>
+    </dependency>
+    <dependency ref="is-utf8@npm:0.2.1"/>
+    <dependency ref="lcid@npm:1.0.0">
+      <dependency ref="invert-kv@npm:1.0.0"/>
+    </dependency>
+    <dependency ref="load-json-file@npm:1.1.0">
+      <dependency ref="graceful-fs@npm:4.2.11"/>
+      <dependency ref="parse-json@npm:2.2.0"/>
+      <dependency ref="pify@npm:2.3.0"/>
+      <dependency ref="pinkie-promise@npm:2.0.1"/>
+      <dependency ref="strip-bom@npm:2.0.0"/>
+    </dependency>
+    <dependency ref="lodash.assign@npm:4.2.0"/>
+    <dependency ref="normalize-package-data@npm:2.5.0">
+      <dependency ref="hosted-git-info@npm:2.8.9"/>
+      <dependency ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d"/>
+      <dependency ref="semver@npm:5.7.2"/>
+      <dependency ref="validate-npm-package-license@npm:3.0.4"/>
+    </dependency>
+    <dependency ref="number-is-nan@npm:1.0.1"/>
+    <dependency ref="os-locale@npm:1.4.0">
+      <dependency ref="lcid@npm:1.0.0"/>
+    </dependency>
+    <dependency ref="parse-json@npm:2.2.0">
+      <dependency ref="error-ex@npm:1.3.2"/>
+    </dependency>
+    <dependency ref="path-exists@npm:2.1.0">
+      <dependency ref="pinkie-promise@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="path-parse@npm:1.0.7"/>
+    <dependency ref="path-type@npm:1.1.0">
+      <dependency ref="graceful-fs@npm:4.2.11"/>
+      <dependency ref="pify@npm:2.3.0"/>
+      <dependency ref="pinkie-promise@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="pify@npm:2.3.0"/>
+    <dependency ref="pinkie-promise@npm:2.0.1">
+      <dependency ref="pinkie@npm:2.0.4"/>
+    </dependency>
+    <dependency ref="pinkie@npm:2.0.4"/>
+    <dependency ref="read-pkg-up@npm:1.0.1">
+      <dependency ref="find-up@npm:1.1.2"/>
+      <dependency ref="read-pkg@npm:1.1.0"/>
+    </dependency>
+    <dependency ref="read-pkg@npm:1.1.0">
+      <dependency ref="load-json-file@npm:1.1.0"/>
+      <dependency ref="normalize-package-data@npm:2.5.0"/>
+      <dependency ref="path-type@npm:1.1.0"/>
+    </dependency>
+    <dependency ref="require-directory@npm:2.1.1"/>
+    <dependency ref="require-main-filename@npm:1.0.1"/>
+    <dependency ref="resolve@patch:resolve@npm%3A1.22.8#optional!builtin&lt;compat/resolve&gt;::version=1.22.8&amp;hash=c3c19d">
+      <dependency ref="is-core-module@npm:2.13.1"/>
+      <dependency ref="path-parse@npm:1.0.7"/>
+      <dependency ref="supports-preserve-symlinks-flag@npm:1.0.0"/>
+    </dependency>
+    <dependency ref="semver@npm:5.7.2"/>
+    <dependency ref="set-blocking@npm:2.0.0"/>
+    <dependency ref="spdx-correct@npm:3.2.0">
+      <dependency ref="spdx-expression-parse@npm:3.0.1"/>
+      <dependency ref="spdx-license-ids@npm:3.0.17"/>
+    </dependency>
+    <dependency ref="spdx-exceptions@npm:2.5.0"/>
+    <dependency ref="spdx-expression-parse@npm:3.0.1">
+      <dependency ref="spdx-exceptions@npm:2.5.0"/>
+      <dependency ref="spdx-license-ids@npm:3.0.17"/>
+    </dependency>
+    <dependency ref="spdx-license-ids@npm:3.0.17"/>
+    <dependency ref="string-width@npm:1.0.2">
+      <dependency ref="code-point-at@npm:1.1.0"/>
+      <dependency ref="is-fullwidth-code-point@npm:1.0.0"/>
+      <dependency ref="strip-ansi@npm:3.0.1"/>
+    </dependency>
+    <dependency ref="strip-ansi@npm:3.0.1">
+      <dependency ref="ansi-regex@npm:2.1.1"/>
+    </dependency>
+    <dependency ref="strip-bom@npm:2.0.0">
+      <dependency ref="is-utf8@npm:0.2.1"/>
+    </dependency>
+    <dependency ref="supports-preserve-symlinks-flag@npm:1.0.0"/>
+    <dependency ref="validate-npm-package-license@npm:3.0.4">
+      <dependency ref="spdx-correct@npm:3.2.0"/>
+      <dependency ref="spdx-expression-parse@npm:3.0.1"/>
+    </dependency>
+    <dependency ref="which-module@npm:1.0.0"/>
+    <dependency ref="window-size@npm:0.2.0"/>
+    <dependency ref="wrap-ansi@npm:2.1.0">
+      <dependency ref="string-width@npm:1.0.2"/>
+      <dependency ref="strip-ansi@npm:3.0.1"/>
+    </dependency>
+    <dependency ref="y18n@npm:3.2.2"/>
+    <dependency ref="yargs-parser@npm:2.4.1">
+      <dependency ref="camelcase@npm:3.0.0"/>
+      <dependency ref="lodash.assign@npm:4.2.0"/>
+    </dependency>
+    <dependency ref="yargs@npm:4.8.1">
+      <dependency ref="cliui@npm:3.2.0"/>
+      <dependency ref="decamelize@npm:1.2.0"/>
+      <dependency ref="get-caller-file@npm:1.0.3"/>
+      <dependency ref="lodash.assign@npm:4.2.0"/>
+      <dependency ref="os-locale@npm:1.4.0"/>
+      <dependency ref="read-pkg-up@npm:1.0.1"/>
+      <dependency ref="require-directory@npm:2.1.1"/>
+      <dependency ref="require-main-filename@npm:1.0.1"/>
+      <dependency ref="set-blocking@npm:2.0.0"/>
+      <dependency ref="string-width@npm:1.0.2"/>
+      <dependency ref="which-module@npm:1.0.0"/>
+      <dependency ref="window-size@npm:0.2.0"/>
+      <dependency ref="y18n@npm:3.2.2"/>
+      <dependency ref="yargs-parser@npm:2.4.1"/>
+    </dependency>
+  </dependencies>
+</bom>

@@ -1,0 +1,343 @@
+# For details of what checks are run for PRs please refer below
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Node CI
+
+on:
+  push:
+    branches: [ 'main', 'master', '1.0-dev' ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # schedule weekly tests, since dependencies might not be intended to be locked
+    # this means: at 23:42 on Fridays
+    - cron: '42 23 * * 5'
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: true
+
+env:
+  NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
+  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
+  BUNDLES_DIR: bundles
+  DIST_DIR: dist
+  REPORTS_DIR: "CI_reports"
+  TESTS_REPORTS_ARTIFACT: tests-reports
+  STANDARD_REPORTS_ARTIFACT: cs-reports
+  # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
+  # YARN_ENABLE_HARDENED_MODE: '0'  # https://yarnpkg.com/features/security
+
+jobs:
+  build:
+    name: build
+    runs-on: 'ubuntu-latest'
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: |
+          yarn install --no-immutable
+          yarn info --name-only --recursive
+      - name: build:gbti
+        run: yarn run build:gbti
+      - name: build:bundle-dev
+        run: yarn run build:bundle-dev
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+          retention-days: 5
+          if-no-files-found: error
+      - name: make-dist
+        run: yarn run make-dist
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+          retention-days: 5
+          if-no-files-found: error
+      - name: artifact build lock
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "yarn.lock"
+          retention-days: 5
+          if-no-files-found: error
+
+  test-standard:
+    name: test standard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: |
+          yarn install --no-immutable
+          yarn info --name-only --recursive
+      - name: build
+        run: yarn run build:gbti
+      - name: test
+        run: >
+          yarn run test:standard
+          --format checkstyle
+          --output-file "$REPORTS_DIR/eslint.xml"
+      - name: Publish Checkstyle report
+        # see https://github.com/Juuxel/publish-checkstyle-report
+        uses: Juuxel/publish-checkstyle-report@v1
+        if: ${{ failure() || success() }}
+        with:
+          reports: ${{ env.REPORTS_DIR }}/eslint.xml
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ failure() }}
+        with:
+          name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+
+  test-lint:
+    name: test lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: |
+          yarn install --no-immutable
+          yarn info --name-only --recursive
+      - name: build
+        run: yarn run build:gbti
+      - name: test
+        run: yarn run test:lint
+
+  test-licenses:
+    needs: [ 'build' ]
+    name: test licenses
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: install flict
+        run: pip install flict
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: fetch yarn.lock
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "."
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: yarn install --immutable
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+      - name: make NOTICE and summary
+        run: |
+          mkdir -p _tmp
+          yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary
+      - name: test license compatibility
+        run: flict display-compatibility $(cat _tmp/lsummary)
+
+  test-node:
+    needs: [ 'build' ]
+    name: test (node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
+          - '22'      # Current
+          - '20'      # LTS
+          - '18'      # lowest supported
+        os:
+          - 'ubuntu-latest'
+          - 'windows-latest'
+          - 'macos-latest'
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: fetch yarn.lock
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: "build-yarn.lock"
+          path: "."
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: yarn install --immutable
+      - name: setup-tests
+        run: yarn run setup-tests
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
+      - name: run tests
+        run: yarn run test:node
+      - name: collect coverage
+        if: ${{ failure() || success() }}
+        run: >
+          yarn exec c8 report
+          --reporter clover
+          --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}'
+      - name: artifact test reports
+        if: ${{ ! cancelled() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
+          path: ${{ env.REPORTS_DIR }}
+
+  dogfooding:
+    needs: [ 'build' ]
+    name: dogfooding (yarn${{ matrix.yarn-version }} node${{ matrix.node-version }} ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          ## action based on https://github.com/actions/node-versions/releases
+          ## see also: https://nodejs.org/en/about/releases/
+          - '22'      # Current
+          - '20'      # LTS
+          - '18'      # lowest supported
+        yarn-version:
+          - '4.x'
+          - '3.x'
+        os: [ 'ubuntu-latest' ]
+        include:
+          - node-version: '20'   # LTS
+            yarn-version: '4.x'  # latest
+            os: 'windows-latest'
+          - node-version: '20'   # LTS
+            yarn-version: '4.x'  # latest
+            os: 'macos-latest'
+    env:
+      YARN_VERSION: ${{ matrix.yarn-version }}
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          # cache: 'yarn'
+      - name: Setup yarn ${{ env.YARN_VERSION }}
+        run: |
+          corepack enable yarn
+          yarn set version "$YARN_VERSION"
+      - name: Setup subject
+        run: yarn install --no-immutable
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUILD_DIR }}
+          path: ${{ env.BUILD_DIR }}
+      - name: dogfooding
+        run: >
+          yarn run dogfooding
+          -vvv
+          --production
+
+  report-coverage:
+    name: Publish test coverage
+    needs: [ "test-node" ]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: fetch test artifacts
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
+          merge-multiple: true
+          path: ${{ env.REPORTS_DIR }}
+      - name: Run codacy-coverage-reporter
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
+        # see https://github.com/codacy/codacy-coverage-reporter-action
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ env.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${{ env.REPORTS_DIR }}/coverage/*/*
+
