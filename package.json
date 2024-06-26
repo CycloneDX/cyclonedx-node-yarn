@@ -110,6 +110,9 @@
     "!/**"
   ],
   "publishConfig": {
+    "provenance": true
+  },
+  "publishReplace": {
     "$comment": "this section defines how `tools/make-dist-package.cjs` works",
     "private": false,
     "main": "./yarn-plugin-cyclonedx.cjs",
