@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 1.0.1 -- 2024-06-27
+
 * Fixed
   * Writing output-files on windows systems ([#145] via [#146])
 
