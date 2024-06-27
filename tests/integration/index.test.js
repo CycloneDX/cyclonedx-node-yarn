@@ -18,10 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('node:assert')
-const { spawnSync } = require('node:child_process')
-const path = require('node:path')
-const { existsSync, writeFileSync, readFileSync,mkdirSync,  mkdtempSync } = require('node:fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('node:buffer')
+const { spawnSync } = require('node:child_process')
+const fs = require('node:fs')
+const path = require('node:path')
 
 const { suite, test } = require('mocha')
 
@@ -70,9 +70,8 @@ suite('integration', () => {
 
   const thisCLI = path.join(projectRootPath, 'bin', 'cyclonedx-yarn-cli.js')
 
-
-  mkdirSync(tmpRootPath, { recursive: true });
-  const tmpPath = mkdtempSync(path.join(tmpRootPath, 'run'))
+  fs.mkdirSync(tmpRootPath, { recursive: true })
+  const tmpPath = fs.mkdtempSync(path.join(tmpRootPath, 'run'))
 
   // testing complex setups - this may take some time
   const longTestTimeout = 120000
@@ -151,11 +150,11 @@ suite('integration', () => {
 
     sbom = makeReproducible(format, sbom)
 
-    if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-      writeFileSync(expectedOutSnap, sbom, 'utf8')
+    if (UPDATE_SNAPSHOTS || !fs.existsSync(expectedOutSnap)) {
+      fs.writeFileSync(expectedOutSnap, sbom, 'utf8')
     }
     assert.strictEqual(sbom,
-      readFileSync(expectedOutSnap, 'utf8'),
+      fs.readFileSync(expectedOutSnap, 'utf8'),
       `output should equal ${expectedOutSnap}`)
   }
 
@@ -193,9 +192,9 @@ suite('integration', () => {
           throw err
         }
       }
-    }).timeout(longTestTimeout);
+    }).timeout(longTestTimeout)
 
-    test('silent to file',async () => {
+    test('silent to file', async () => {
       const tmpFile = path.join(tmpPath, 'stf.cdx.json')
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
@@ -204,7 +203,7 @@ suite('integration', () => {
       assert.strictEqual(res.error, undefined, res.output)
       assert.strictEqual(res.status, 0, res.output)
 
-      const sbom = readFileSync(tmpFile)
+      const sbom = fs.readFileSync(tmpFile)
       const validationErrors = await validate('JSON', sbom, defaultCdxSpecVersion)
       assert.equal(validationErrors, null)
 
