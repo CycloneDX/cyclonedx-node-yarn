@@ -86,7 +86,7 @@
     "extract-zip": "^2.0.1",
     "fast-glob": "^3.3.2",
     "mkdirp": "^3.0.1",
-    "mocha": "10.5.1",
+    "mocha": "10.5.2",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
     "typescript": "5.5.2"
