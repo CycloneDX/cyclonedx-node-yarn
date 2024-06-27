@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 ## 1.0.1 -- 2024-06-27
 
 * Fixed
-  * Writing output-files on windows systems ([#145] via [#146])
+  * Writing output-files on Windows systems ([#145] via [#146])
 
 [#145]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/145
 [#146]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/146
