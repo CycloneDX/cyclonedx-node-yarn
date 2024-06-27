@@ -18,10 +18,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const assert = require('node:assert')
-const { spawnSync } = require('node:child_process')
-const path = require('node:path')
-const { existsSync, writeFileSync, readFileSync } = require('node:fs')
 const { constants: { MAX_LENGTH: BUFFER_MAX_LENGTH } } = require('node:buffer')
+const { spawnSync } = require('node:child_process')
+const fs = require('node:fs')
+const path = require('node:path')
 
 const { suite, test } = require('mocha')
 
@@ -57,16 +57,21 @@ const testSetups = [
 
 // latest spec version has all the features ...
 const latestCdxSpecVersion = Spec.Version.v1dot6
+const defaultCdxSpecVersion = Spec.Version.v1dot5
 
 const testRootPath = path.resolve(__dirname, '..')
 const projectRootPath = path.resolve(testRootPath, '..')
 const snapshotsPath = path.join(testRootPath, '_data', 'snapshots')
 const testbedsPath = path.join(testRootPath, '_data', 'testbeds')
+const tmpRootPath = path.join(testRootPath, '_tmp')
 
 suite('integration', () => {
   const UPDATE_SNAPSHOTS = !!process.env.CYARN_TEST_UPDATE_SNAPSHOTS
 
   const thisCLI = path.join(projectRootPath, 'bin', 'cyclonedx-yarn-cli.js')
+
+  fs.mkdirSync(tmpRootPath, { recursive: true })
+  const tmpPath = fs.mkdtempSync(path.join(tmpRootPath, 'run'))
 
   // testing complex setups - this may take some time
   const longTestTimeout = 120000
@@ -145,11 +150,11 @@ suite('integration', () => {
 
     sbom = makeReproducible(format, sbom)
 
-    if (UPDATE_SNAPSHOTS || !existsSync(expectedOutSnap)) {
-      writeFileSync(expectedOutSnap, sbom, 'utf8')
+    if (UPDATE_SNAPSHOTS || !fs.existsSync(expectedOutSnap)) {
+      fs.writeFileSync(expectedOutSnap, sbom, 'utf8')
     }
     assert.strictEqual(sbom,
-      readFileSync(expectedOutSnap, 'utf8'),
+      fs.readFileSync(expectedOutSnap, 'utf8'),
       `output should equal ${expectedOutSnap}`)
   }
 
@@ -164,10 +169,46 @@ suite('integration', () => {
       assert.notEqual(res.status, 0)
     })
 
-    test('silent', () => {
-      const res = _rawRunCLI(path.join(testbedsPath, 'dev-dependencies'), ['--no-verbose'])
+    test('silent', async () => {
+      const res = _rawRunCLI(
+        path.join(testbedsPath, 'dev-dependencies'),
+        ['--no-verbose']
+      )
       assert.strictEqual(res.error, undefined, res.output)
       assert.strictEqual(res.status, 0, res.output)
+
+      const sbom = res.stdout
+      const validationErrors = await validate('JSON', sbom, defaultCdxSpecVersion)
+      assert.equal(validationErrors, null)
+
+      const outLines = res.stderr.split(/\r?\n/g).filter(l => l.length)
+      try {
+        assert.strictEqual(outLines.length, 0, res.stderr)
+      } catch (err) {
+        if (outLines.length === 1) {
+          // only allowed optional output is the wrapper info...
+          assert.match(outLines[0], /YARN_PLUGINS=.+ yarn cyclonedx --no-verbose/)
+        } else {
+          throw err
+        }
+      }
+    }).timeout(longTestTimeout)
+
+    test('silent to file', async () => {
+      const tmpFile = path.join(tmpPath, 'stf.cdx.json')
+      const res = _rawRunCLI(
+        path.join(testbedsPath, 'dev-dependencies'),
+        ['--no-verbose', '--output-file', tmpFile]
+      )
+      assert.strictEqual(res.error, undefined, res.output)
+      assert.strictEqual(res.status, 0, res.output)
+
+      const sbom = fs.readFileSync(tmpFile)
+      const validationErrors = await validate('JSON', sbom, defaultCdxSpecVersion)
+      assert.equal(validationErrors, null)
+
+      assert.strictEqual(res.stdout.length, 0, res.stdout)
+
       const outLines = res.stderr.split(/\r?\n/g).filter(l => l.length)
       try {
         assert.strictEqual(outLines.length, 0, res.stderr)
