@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Misc
+  * Upgraded dependency to `@cyclonedx/cyclonedx-library@6.10.1`, was `@6.10.0` (via [#151])
+
+[#151]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/151
+
 ## 1.0.1 -- 2024-06-27
 
 * Fixed
