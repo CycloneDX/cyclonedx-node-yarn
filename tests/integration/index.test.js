@@ -329,30 +329,30 @@ function makeJsonReproducible (json) {
     .replace(
       new RegExp(
         '        "name": "yarn",\n' +
-        '        "version": ".+?"\n'
+        '        "version": ".+?"'
       ),
       '        "name": "yarn",\n' +
-      '        "version": "yarnVersion-testing"\n'
+      '        "version": "yarnVersion-testing"'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "yarn-plugin-cyclonedx",\n' +
-        `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+.+)?",\n`
+        `        "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+[^"]+)?"`
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
-      '        "version": "thisVersion-testing",\n'
+      '        "version": "thisVersion-testing"'
     ).replace(
       // replace metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?",\n'
+        '        "version": ".+?"'
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing",\n'
+      '        "version": "libVersion-testing"'
     )
 }
 
