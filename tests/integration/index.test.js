@@ -167,7 +167,7 @@ suite('integration', () => {
     test('yarn2 fails', () => {
       const res = _rawRunCLI(path.join(testbedsPath, 'yarn2_zeroinstall'), ['-vvv'])
       assert.notEqual(res.status, 0)
-    })
+    }).timeout(longTestTimeout)
 
     test('silent', async () => {
       const res = _rawRunCLI(
