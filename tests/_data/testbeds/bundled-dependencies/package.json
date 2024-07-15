@@ -1,9 +1,10 @@
 {
-  "name": "demo-bundled-deps",
   "private": true,
+  "name": "demo-bundled-deps",
   "version": "0.0.0",
   "description": "demo: demo-bundled-deps -- showcase how bundled deps look like",
   "license": "Apache-2.0",
+  "repository": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
   "dependencies": {
     "bundle-dependencies": "1.0.2"
   },

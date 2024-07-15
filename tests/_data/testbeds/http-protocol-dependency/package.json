@@ -1,14 +1,19 @@
 {
+  "private": true,
   "name": "github-protocol-dependency",
   "description": "demo: github-protocol-dependency -- showcase how install via github protocol looks like",
-  "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
-  "packageManager": "yarn@4.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+    "directory": "tests/_data/testbeds/http-protocol-dependency"
+  },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "https://github.com/CycloneDX/cyclonedx-javascript-library/releases/download/v6.9.5/cyclonedx-cyclonedx-library-6.9.5.tgz"
   },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }

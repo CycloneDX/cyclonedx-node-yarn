@@ -1,9 +1,13 @@
 {
+  "private": true,
   "name": "demo-dev-dependencies",
   "description": "demo: demo-dev-dependencies -- showcase how devDependencies look like",
-  "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.example.com:demos/dev-dependencies"
+  },
   "optionalDependencies": {
     "uuidv4": "^6.2.13"
   },
