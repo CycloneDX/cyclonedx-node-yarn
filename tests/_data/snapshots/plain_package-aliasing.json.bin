@@ -50,7 +50,24 @@
       "version": "0.0.1",
       "bom-ref": "package-aliasing@workspace:.",
       "description": "demo: a package is aliased with a different name",
-      "purl": "pkg:npm/package-aliasing@0.0.1"
+      "purl": "pkg:npm/package-aliasing@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-node-yarn.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
     },
     "properties": [
       {

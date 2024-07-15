@@ -41,7 +41,21 @@
       <name>concurrent-versions</name>
       <version>0.0.1</version>
       <description>demo: multiple dependencies requiring concurrent versions of `chalk`</description>
-      <purl>pkg:npm/concurrent-versions@0.0.1</purl>
+      <purl>pkg:npm/concurrent-versions@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/concurrent-versions</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/concurrent-versions</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>

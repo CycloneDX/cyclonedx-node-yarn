@@ -1,9 +1,13 @@
 {
-  "name": "demo-alternative-package-registry",
   "private": true,
+  "name": "demo-alternative-package-registry",
   "version": "0.0.0",
   "description": "demo: alternative-package-registry -- showcase how alternative package registries affect the result",
   "license": "Apache-2.0",
+  "repository": {
+    "url": "github:CycloneDX/cyclonedx-node-yarn",
+    "directory": "tests/_data/testbeds/alternative-package-registry"
+  },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   },

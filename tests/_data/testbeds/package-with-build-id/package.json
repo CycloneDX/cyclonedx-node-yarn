@@ -1,8 +1,13 @@
 {
+  "private": true,
   "name": "demo-package-with-build-id",
   "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-  "private": true,
   "version": "1.0.0-123+456",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/CycloneDX/cyclonedx-node-yarn.git",
+    "directory": "tests/_data/testbeds/package-with-build-id"
+  },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
   }
