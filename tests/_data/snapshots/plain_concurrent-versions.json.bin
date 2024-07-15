@@ -50,7 +50,24 @@
       "version": "0.0.1",
       "bom-ref": "concurrent-versions@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of `chalk`",
-      "purl": "pkg:npm/concurrent-versions@0.0.1"
+      "purl": "pkg:npm/concurrent-versions@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/concurrent-versions",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/concurrent-versions",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
     },
     "properties": [
       {

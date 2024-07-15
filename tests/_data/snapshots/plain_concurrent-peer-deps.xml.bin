@@ -41,7 +41,21 @@
       <name>concurrent-peer-deps</name>
       <version>0.0.1</version>
       <description>demo: multiple dependencies requiring concurrent versions of a transitive peer dep</description>
-      <purl>pkg:npm/concurrent-peer-deps@0.0.1</purl>
+      <purl>pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
