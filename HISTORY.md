@@ -8,8 +8,8 @@ All notable changes to this project will be documented in this file.
 
 ## 1.0.2 -- 2024-07-15
 
-* Misc
-  * Upgraded dependency to `@cyclonedx/cyclonedx-library@6.11.0`, was `@6.10.0` (via [#157])  
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@6.11.0`, was `@6.10.0` (via [#157])  
     This was done to incorporate non-breaking upstream changes and fixes.
 * Build
   * Use _TypeScript_ `v5.5.3` now, was `v5.5.2` (via [#149]) 
