@@ -58,10 +58,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/dev-dependencies",
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/demos/dev-dependencies",
       "externalReferences": [
         {
-          "url": "git@gitlab.example.com:demos/dev-dependencies",
+          "url": "git+ssh://git@gitlab.example.com/demos/dev-dependencies",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         }
