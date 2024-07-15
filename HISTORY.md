@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * Misc
-  * Upgraded dependency to `@cyclonedx/cyclonedx-library@6.11.0`, was `@6.10.0` (via [#157])
+  * Upgraded dependency to `@cyclonedx/cyclonedx-library@6.11.0`, was `@6.10.0` (via [#157])  
+    This was done to incorporate non-breaking upstream changes and fixes.
 * Build
   * Use _TypeScript_ `v5.5.3` now, was `v5.5.2` (via [#149]) 
 
