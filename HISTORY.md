@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Build
+  * Use _TypeScript_ `v5.5.4` now, was `v5.5.3` (via [#160])
+ 
+[#160]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/160
+
 ## 1.0.2 -- 2024-07-15
 
 * Dependencies
