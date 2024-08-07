@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 * Build
   * Use _TypeScript_ `v5.5.4` now, was `v5.5.3` (via [#160])
-  * Use _@yarnpkg/builder_ `v4.1.2` now, was `v4.1.2` (via [#164])
+  * Use _@yarnpkg/builder_ `v4.1.2` now, was `v4.1.1` (via [#164])
  
 [#160]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/160
 [#164]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/164
