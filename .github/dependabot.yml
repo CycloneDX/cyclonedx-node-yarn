@@ -19,6 +19,9 @@ updates:
       - dependency-name: "@types/node"
         # version is like `ts.X.Y` -- need to maintain manually
     groups:
+      yarn:
+        patterns:
+          - '@yarnpkg/*'
       eslint:
         patterns:
           - 'eslint'
