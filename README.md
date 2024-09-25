@@ -1,5 +1,7 @@
 # CycloneDX SBOM for yarn
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7cf47f90f1ed4e57bb55384f0ea5d6c2)](https://app.codacy.com/gh/CycloneDX/cyclonedx-node-yarn?utm_source=github.com&utm_medium=referral&utm_content=CycloneDX/cyclonedx-node-yarn&utm_campaign=Badge_Grade)
+
 [![shield_yarnpkg-version]][link_yarnpkg]
 [![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
