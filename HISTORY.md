@@ -10,13 +10,14 @@ All notable changes to this project will be documented in this file.
   * Upgraded runtime-dependency `normalize-package-data@6.0.2`, was `@6.0.1` (via [#141])  
     This was done to incorporate non-breaking upstream changes and fixes.
 * Build
-  * Use _TypeScript_ `v5.5.4` now, was `v5.5.3` (via [#160])
+  * Use _TypeScript_ `v5.6.2` now, was `v5.5.3` (via [#160], [#178])
   * Use _@yarnpkg/builder_ `v4.2.0` now, was `v4.1.1` (via [#164], [#172])
 
 [#141]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/141
 [#160]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/160
 [#164]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/164
 [#172]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/172
+[#178]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/178
 
 ## 1.0.2 -- 2024-07-15
 
