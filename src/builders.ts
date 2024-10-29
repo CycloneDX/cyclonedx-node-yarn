@@ -21,7 +21,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Bom, Component, ExternalReference, type License, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ComponentEvidence, ExternalReference, type License, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -32,15 +32,23 @@ import type { PackageURL } from 'packageurl-js'
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
+import { makeLicenseEvidence } from './evidence'
 import { PropertyNames, PropertyValueBool } from './properties'
 
-type ManifestFetcher = (pkg: Package) => Promise<any>
+interface PackageInfo {
+  /** Content of package.json, as is. */
+  manifest: any
+  licenseEvidence?: ComponentEvidence
+}
+
+type ManifestFetcher = (pkg: Package) => Promise<PackageInfo>
 
 interface BomBuilderOptions {
   omitDevDependencies?: BomBuilder['omitDevDependencies']
   metaComponentType?: BomBuilder['metaComponentType']
   reproducible?: BomBuilder['reproducible']
   shortPURLs?: BomBuilder['shortPURLs']
+  gatherLicenseTexts: BomBuilder['gatherLicenseTexts']
 }
 
 export class BomBuilder {
@@ -52,6 +60,7 @@ export class BomBuilder {
   metaComponentType: ComponentType
   reproducible: boolean
   shortPURLs: boolean
+  gatherLicenseTexts: boolean
 
   console: Console
 
@@ -70,6 +79,7 @@ export class BomBuilder {
     this.metaComponentType = options.metaComponentType ?? ComponentType.Application
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.gatherLicenseTexts = options.gatherLicenseTexts
 
     this.console = console_
   }
@@ -137,7 +147,7 @@ export class BomBuilder {
   }
 
   private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Component | false | undefined {
-    return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
+    return this.makeComponent(workspace.anchoredLocator, { manifest: workspace.manifest.raw }, type)
   }
 
   private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
@@ -150,11 +160,18 @@ export class BomBuilder {
       report: new ThrowReport(),
       cacheOptions: { skipIntegrityCheck: true }
     }
-    return async function (pkg: Package): Promise<any> {
+    const gatherLicenseTexts = this.gatherLicenseTexts
+    return async function (pkg: Package): Promise<PackageInfo> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
       try {
         const manifestPath = ppath.join(prefixPath, 'package.json')
-        return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+        const packageInfo: PackageInfo = {
+          manifest: JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+        }
+        if (gatherLicenseTexts) {
+          packageInfo.licenseEvidence = makeLicenseEvidence(prefixPath, packageFs)
+        }
+        return packageInfo
       } finally {
         if (releaseFs !== undefined) {
           releaseFs()
@@ -171,28 +188,33 @@ export class BomBuilder {
     const data = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
-    data.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
-    data.version = pkg.version
+    data.manifest.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
+    data.manifest.version = pkg.version
     return this.makeComponent(pkg, data, type)
   }
 
-  private makeComponent (locator: Locator, data: any, type?: ComponentType | undefined): Component | false | undefined {
+  private makeComponent (locator: Locator, data: PackageInfo, type?: ComponentType | undefined): Component | false | undefined {
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const dataC = structuredClonePolyfill(data)
     normalizePackageData(dataC as normalizePackageData.Input)
     // region fix normalizations
-    if (isString(data.version)) {
+    if (isString(data.manifest.version)) {
       // allow non-SemVer strings
-      dataC.version = data.version.trim()
+      dataC.manifest.version = data.manifest.version.trim()
     }
     // endregion fix normalizations
 
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const component = this.componentBuilder.makeComponent(
-      dataC as normalizePackageData.Package, type)
+      dataC.manifest as normalizePackageData.Package, type)
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j', locator)
       return undefined
+    }
+
+    if (data.licenseEvidence instanceof ComponentEvidence) {
+      this.console.debug('DEBUG | Adding license evidence for: %j', locator)
+      component.evidence = data.licenseEvidence
     }
 
     switch (true) {

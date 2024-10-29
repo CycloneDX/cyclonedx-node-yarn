@@ -112,6 +112,10 @@ export class MakeSbomCommand extends Command<CommandContext> {
         'This might result in loss of time- and random-based values.'
   })
 
+  gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
+    description: 'Search for license files in components and include them as license evidence.'
+  })
+
   verbosity = Option.Counter('--verbose,-v', 1, {
     description: 'Increase the verbosity of messages.\n' +
         'Use multiple times to increase the verbosity even more.'
@@ -142,6 +146,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       mcType: this.mcType,
       shortPURLs: this.shortPURLs,
       outputReproducible: this.outputReproducible,
+      gatherLicenseTexts: this.gatherLicenseTexts,
       verbosity: this.verbosity,
       projectDir
     })
@@ -171,7 +176,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
         reproducible: this.outputReproducible,
-        shortPURLs: this.shortPURLs
+        shortPURLs: this.shortPURLs,
+        gatherLicenseTexts: this.gatherLicenseTexts
       },
       myConsole
     )).buildFromWorkspace(workspace)
