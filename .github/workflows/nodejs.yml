@@ -163,7 +163,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: install flict
-        run: pip install flict
+        run: pip install flict==1.2.14
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
