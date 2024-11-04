@@ -9,10 +9,6 @@ on:
     tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
-  schedule:
-    # schedule daily tests, since dependencies might not be intended to be locked
-    # this means: at 23:42 every days
-    - cron: '42 23 * * *'
 
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
