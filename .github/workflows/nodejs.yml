@@ -21,8 +21,7 @@ env:
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
-  # we do not ship a lockfile, but yarn tries to protect our non-existing lockfile ... wtf ... disable this fuckup
-  # YARN_ENABLE_HARDENED_MODE: '0'  # https://yarnpkg.com/features/security
+  YARN_ENABLE_HARDENED_MODE: '1'  # https://yarnpkg.com/features/security
 
 jobs:
   build:
@@ -42,9 +41,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: build:gbti
         run: yarn run build:gbti
       - name: build:bundle-dev
@@ -67,14 +64,6 @@ jobs:
           path: ${{ env.DIST_DIR }}
           retention-days: 5
           if-no-files-found: error
-      - name: artifact build lock
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: "build-yarn.lock"
-          path: "yarn.lock"
-          retention-days: 5
-          if-no-files-found: error
 
   test-standard:
     name: test standard
@@ -94,9 +83,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -137,9 +124,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: build
         run: yarn run build:gbti
       - name: test
@@ -156,12 +141,6 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: fetch yarn.lock
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: "build-yarn.lock"
-          path: "."
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -217,12 +196,6 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: fetch yarn.lock
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: "build-yarn.lock"
-          path: "."
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -299,7 +272,7 @@ jobs:
           corepack enable yarn
           yarn set version "$YARN_VERSION"
       - name: Setup subject
-        run: yarn install --no-immutable
+        run: yarn install --immutable
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4

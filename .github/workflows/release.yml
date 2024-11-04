@@ -36,6 +36,7 @@ env:
   DIST_DIR: dist
   PACKED_DIR: CI_packed
   NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
+  YARN_ENABLE_HARDENED_MODE: '1'  # https://yarnpkg.com/features/security
 
 jobs:
   bump:
@@ -101,9 +102,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: build
         run: yarn run build
       - name: artifact build result
@@ -122,14 +121,6 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
-          retention-days: 5
-          if-no-files-found: error
-      - name: artifact build lock
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: "build-yarn.lock"
-          path: "yarn.lock"
           retention-days: 5
           if-no-files-found: error
 
@@ -171,9 +162,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
-        run: |
-          yarn install --no-immutable
-          yarn info --name-only --recursive
+        run: yarn install --immutable
       - name: setup-tests
         run: yarn run setup-tests
       - name: fetch build artifact
@@ -209,13 +198,8 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: Setup yarn
         run: corepack enable yarn
-      - name: make lock
-        # for stupid reasons `yarn publish` requires a lockfile
-        run: |
-          yarn workspaces focus --production
-          yarn install --mode update-lockfile
       - name: Set NPM authentication
-        run: yarn config set --home npmAuthToken "$NPM_AUTH_TOKEN"
+        run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
@@ -260,12 +244,6 @@ jobs:
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
-      - name: fetch yarn.lock
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: "build-yarn.lock"
-          path: "build-yarn.lock"
       - name: prepare assets
         run: |
           set -exu
@@ -274,8 +252,7 @@ jobs:
           "$PACKED_DIR"/*.tgz \
           "$DIST_DIR/yarn-plugin-cyclonedx.cjs" \
           "$DIST_DIR/LICENSE" \
-          "$DIST_DIR/NOTICE" \
-          "build-yarn.lock/yarn.lock"
+          "$DIST_DIR/NOTICE"
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
