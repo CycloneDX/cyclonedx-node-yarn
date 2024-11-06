@@ -267,6 +267,16 @@ suite('integration', () => {
           })
         })
 
+        suite('license evidence', () => {
+          [
+            'dev-dependencies',
+            'juice-shop'
+          ].forEach(testSetup => {
+            test(testSetup, () => runTest('license-evidence-dev', testSetup, format, ['--gather-license-texts']))
+            test(testSetup, () => runTest('license-evidence-prod', testSetup, format, ['--gather-license-texts', '--prod']))
+          })
+        })
+
         test('dogfooding', async () => {
           const sbom = runCLI(projectRootPath, ['--output-format', format])
           const validationErrors = await validate(format, sbom, '1.5')
