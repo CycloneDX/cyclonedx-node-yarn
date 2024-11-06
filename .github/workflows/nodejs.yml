@@ -163,7 +163,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: install flict
-        run: pip install flict
+        run: pip install flict==1.2.14
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
@@ -195,6 +195,16 @@ jobs:
         run: |
           mkdir -p _tmp
           yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: licenses-files
+          path: |
+            _tmp/NOTICE
+            _tmp/lsummary
+          retention-days: 5
+          if-no-files-found: error
       - name: test license compatibility
         run: flict display-compatibility $(cat _tmp/lsummary)
 
