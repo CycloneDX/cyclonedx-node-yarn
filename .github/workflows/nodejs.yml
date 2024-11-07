@@ -256,6 +256,7 @@ jobs:
             os: 'macos-latest'
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
+      YARN_ENABLE_HARDENED_MODE:
     timeout-minutes: 10
     steps:
       - name: Checkout
