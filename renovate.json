@@ -1,6 +1,71 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":configMigration",
+    ":gitSignOff"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "ignorePaths": [
+    "tests/_data/testbeds/**"
+  ],
+  "schedule": [
+    "every weekend"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "^@yarnpkg/**"
+      ],
+      "groupName": "yarn",
+      "groupSlug": "yarn"
+    },
+    {
+      "matchPackageNames": [
+        "typescript",
+        "@types/**",
+        "typedoc",
+        "typedoc-*",
+        "@microsoft/tsdoc",
+        "@microsoft/tsdoc-*",
+        "ts-loader",
+        "tslib"
+      ],
+      "groupName": "typescript",
+      "groupSlug": "typescript"
+    },
+    {
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/*",
+        "@types/eslint",
+        "eslint-*",
+        "@types/eslint-*",
+        "@eslint-community/*",
+        "@typescript-eslint/*"
+      ],
+      "groupName": "eslint",
+      "groupSlug": "eslint"
+    },
+    {
+      "matchPackageNames": [
+        "^mocha",
+        "^@types/mocha"
+      ],
+      "groupName": "mocha",
+      "groupSlug": "mocha"
+    },
+    {
+      "matchDatasources": [
+        "npm"
+      ],
+      "$comment": "version is like `tsX.Y` -- need to maintain manually",
+      "matchPackageNames": [
+        "@types/node"
+      ],
+      "enabled": false
+    }
   ]
 }
