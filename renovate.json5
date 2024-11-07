@@ -64,7 +64,7 @@
       ],
       // version is like `tsX.Y` -- need to maintain manually
       "matchPackageNames": [
-        "@types/node"
+        "xxx-@types/node"
       ],
       "enabled": false
     }
