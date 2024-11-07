@@ -3,7 +3,8 @@
   "extends": [
     "config:recommended",
     ":configMigration",
-    ":gitSignOff"
+    ":gitSignOff",
+    ":prHourlyLimitNone"
   ],
   "labels": [
     "dependencies"
