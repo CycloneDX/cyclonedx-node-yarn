@@ -1,0 +1,61 @@
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'saturday'
+    allow:
+      - dependency-type: 'all'
+    versioning-strategy: 'auto'
+    labels: [ 'dependencies' ]
+    commit-message:
+      prefix: 'chore'  ## prefix maximum string length of 15
+      include: 'scope'
+    open-pull-requests-limit: 999
+    ignore:
+      - dependency-name: "@types/node"
+        # version is like `ts.X.Y` -- need to maintain manually
+    groups:
+      yarn:
+        patterns:
+          - '@yarnpkg/*'
+      eslint:
+        patterns:
+          - 'eslint'
+          - '@eslint/*'
+          - '@types/eslint'
+          - 'eslint-*'
+          - '@types/eslint-*'
+          - '@eslint-community/*'
+          - '@typescript-eslint/*'
+      ajv:
+        patterns:
+          - 'ajv'
+          - 'ajv-*'
+      typescript:
+        patterns:
+          - 'typescript'
+          - '@types/*'
+          - 'typedoc'
+          - 'typedoc-*'
+          - '@microsoft/tsdoc'
+          - '@microsoft/tsdoc-*'
+          - 'ts-loader'
+          - 'tslib'
+      mocha:
+        patterns:
+          - 'mocha'
+          - '@types/mocha'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'saturday'
+    labels: [ 'dependencies' ]
+    commit-message:
+      prefix: 'chore'   ## prefix maximum string length of 15
+      include: 'scope'
+    open-pull-requests-limit: 999
