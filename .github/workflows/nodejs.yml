@@ -9,6 +9,8 @@ on:
     tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '42 23 * * 5'
 
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
