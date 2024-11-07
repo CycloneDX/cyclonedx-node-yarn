@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
@@ -209,8 +209,8 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '22'      # Current
-          - '20'      # LTS
+          - '22'      # Current LTS
+          - '20'      # last LTS
           - '18'      # lowest supported
         os:
           - 'ubuntu-latest'
