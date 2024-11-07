@@ -271,7 +271,7 @@ jobs:
           corepack enable yarn
           yarn set version "$YARN_VERSION"
       - name: Setup subject
-        run: yarn install --immutable
+        run: yarn install --no-immutable  # we might be changing yarn version for tests -- require to ignore lock
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
