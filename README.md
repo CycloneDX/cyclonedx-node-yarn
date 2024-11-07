@@ -77,6 +77,7 @@ $ yarn cyclonedx
                            This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
   --output-reproducible    Whether to go the extra mile and make the output reproducible.
                            This might result in loss of time- and random-based values.
+  --gather-license-texts   Search for license files in components and include them as license evidence.
   --verbose,-v             Increase the verbosity of messages.
                            Use multiple times to increase the verbosity even more.
 
