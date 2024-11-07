@@ -69,10 +69,14 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40types/node@20.11.30?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</purl>
+      <purl>pkg:npm/%40types/node@20.11.30?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -99,10 +103,14 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</purl>
+      <purl>pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -154,11 +162,19 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uuid@8.3.2?vcs_url=https%3A//github.com/uuidjs/uuid.git</purl>
+      <purl>pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/uuidjs/uuid/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
-          <url>https://github.com/uuidjs/uuid.git</url>
+          <url>git+https://github.com/uuidjs/uuid.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/uuidjs/uuid#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <evidence>
@@ -181,9 +197,17 @@
       </licenses>
       <purl>pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/thenativeweb/uuidv4/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
         <reference type="vcs">
           <url>git://github.com/thenativeweb/uuidv4.git</url>
           <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/thenativeweb/uuidv4#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
       <evidence>

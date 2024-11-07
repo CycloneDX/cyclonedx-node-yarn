@@ -196,7 +196,7 @@ export class BomBuilder {
   private makeComponent (locator: Locator, data: PackageInfo, type?: ComponentType | undefined): Component | false | undefined {
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const dataC = structuredClonePolyfill(data)
-    normalizePackageData(dataC as normalizePackageData.Input)
+    normalizePackageData(dataC.manifest as normalizePackageData.Input)
     // region fix normalizations
     if (isString(data.manifest.version)) {
       // allow non-SemVer strings

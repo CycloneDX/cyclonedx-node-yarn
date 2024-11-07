@@ -90,10 +90,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
       "externalReferences": [
         {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },
@@ -133,10 +138,15 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
       "externalReferences": [
         {
-          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
         },
@@ -209,12 +219,22 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@8.3.2?vcs_url=https%3A//github.com/uuidjs/uuid.git",
+      "purl": "pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git",
       "externalReferences": [
         {
-          "url": "https://github.com/uuidjs/uuid.git",
+          "url": "https://github.com/uuidjs/uuid/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/uuidjs/uuid.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/uuidjs/uuid#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "evidence": {
@@ -249,9 +269,19 @@
       "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git",
       "externalReferences": [
         {
+          "url": "https://github.com/thenativeweb/uuidv4/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
           "url": "git://github.com/thenativeweb/uuidv4.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/thenativeweb/uuidv4#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
         }
       ],
       "evidence": {
