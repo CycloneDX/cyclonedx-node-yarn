@@ -5,13 +5,13 @@
     ":configMigration",
     ":gitSignOff",
     ":prHourlyLimitNone",
-    "schedule:weekends¶"
+    "schedule:weekends",
   ],
   "labels": [
     "dependencies"
   ],
   "ignorePaths": [
-    "tests/_data/testbeds/**"
+    "tests/_data/testbeds/**",
   ],
   "packageRules": [
     {
@@ -19,7 +19,6 @@
         "@yarnpkg/**"
       ],
       "groupName": "yarn",
-      "groupSlug": "yarn"
     },
     {
       "matchPackageNames": [
@@ -33,10 +32,9 @@
         "@microsoft/tsdoc",
         "@microsoft/tsdoc-*",
         "ts-loader",
-        "tslib"
+        "tslib",
       ],
       "groupName": "typescript",
-      "groupSlug": "typescript"
     },
     {
       "matchPackageNames": [
@@ -46,10 +44,9 @@
         "eslint-*",
         "@types/eslint-*",
         "@eslint-community/*",
-        "@typescript-eslint/*"
+        "@typescript-eslint/*",
       ],
       "groupName": "eslint",
-      "groupSlug": "eslint"
     },
     {
       "matchPackageNames": [
@@ -57,7 +54,6 @@
         "@types/mocha"
       ],
       "groupName": "mocha",
-      "groupSlug": "mocha"
-    }
+    },
   ]
 }
