@@ -21,7 +21,6 @@ env:
   REPORTS_DIR: "CI_reports"
   TESTS_REPORTS_ARTIFACT: tests-reports
   STANDARD_REPORTS_ARTIFACT: cs-reports
-  YARN_ENABLE_HARDENED_MODE: '1'  # https://yarnpkg.com/features/security
 
 jobs:
   build:
@@ -256,7 +255,6 @@ jobs:
             os: 'macos-latest'
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
-      YARN_ENABLE_HARDENED_MODE: 0  # we are using a version of yarn that might not be compatible with the lock
     timeout-minutes: 10
     steps:
       - name: Checkout
