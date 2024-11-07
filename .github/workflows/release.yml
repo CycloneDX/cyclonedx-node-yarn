@@ -36,7 +36,6 @@ env:
   DIST_DIR: dist
   PACKED_DIR: CI_packed
   NODE_ACTIVE_LTS: "20"  # https://nodejs.org/en/about/releases/
-  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
 
 jobs:
   bump:
@@ -99,11 +98,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          set -eux
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -172,11 +168,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          set -eux
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -214,11 +207,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          set -eux
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: make lock
         # for stupid reasons `yarn publish` requires a lockfile
         run: |

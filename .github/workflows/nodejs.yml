@@ -20,7 +20,6 @@ concurrency:
 
 env:
   NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
-  YARN_VERSION: '4.x'  # https://yarnpkg.com/blog/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
@@ -44,10 +43,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -98,10 +95,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -143,10 +138,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: |
           yarn install --no-immutable
@@ -179,10 +172,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
       - name: fetch build artifact
@@ -242,10 +233,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           # cache: 'yarn'
-      - name: Setup yarn ${{ env.YARN_VERSION }}
-        run: |
-          corepack enable yarn
-          yarn set version "$YARN_VERSION"
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
