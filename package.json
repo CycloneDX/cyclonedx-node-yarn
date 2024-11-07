@@ -69,7 +69,7 @@
   "devDependencies": {
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
-    "@types/node": "ts5.6",
+    "@types/node": "ts5.3",
     "@types/normalize-package-data": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -86,10 +86,10 @@
     "extract-zip": "^2.0.1",
     "fast-glob": "^3.3.2",
     "mkdirp": "^3.0.1",
-    "mocha": "10.7.3",
+    "mocha": "10.8.2",
     "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
-    "typescript": "5.6.2"
+    "typescript": "5.3.3"
   },
   "type": "commonjs",
   "engines": {
@@ -147,5 +147,5 @@
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
   "preferUnplugged": true,
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.5.1"
 }
