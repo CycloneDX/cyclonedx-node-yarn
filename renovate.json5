@@ -18,7 +18,7 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "^@yarnpkg/**"
+        "@yarnpkg/**"
       ],
       "groupName": "yarn",
       "groupSlug": "yarn"
@@ -52,8 +52,8 @@
     },
     {
       "matchPackageNames": [
-        "^mocha",
-        "^@types/mocha"
+        "mocha",
+        "@types/mocha"
       ],
       "groupName": "mocha",
       "groupSlug": "mocha"
