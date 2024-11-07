@@ -256,7 +256,7 @@ jobs:
             os: 'macos-latest'
     env:
       YARN_VERSION: ${{ matrix.yarn-version }}
-      YARN_ENABLE_HARDENED_MODE:
+      YARN_ENABLE_HARDENED_MODE: 0  # we are using a version of yarn that might not be compatible with the lock
     timeout-minutes: 10
     steps:
       - name: Checkout
