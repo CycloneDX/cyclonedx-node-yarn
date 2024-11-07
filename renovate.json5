@@ -61,7 +61,7 @@
       "matchDatasources": [
         "npm"
       ],
-      "$comment": "version is like `tsX.Y` -- need to maintain manually",
+      // version is like `tsX.Y` -- need to maintain manually
       "matchPackageNames": [
         "@types/node"
       ],
