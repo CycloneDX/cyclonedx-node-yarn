@@ -27,6 +27,9 @@
       "matchPackageNames": [
         "typescript",
         "@types/**",
+        "!@types/mocha",
+        "!@types/eslint",
+        "!@types/eslint-*",
         "typedoc",
         "typedoc-*",
         "@microsoft/tsdoc",
@@ -57,16 +60,6 @@
       ],
       "groupName": "mocha",
       "groupSlug": "mocha"
-    },
-    {
-      "matchDatasources": [
-        "npm"
-      ],
-      // version is like `tsX.Y` -- need to maintain manually
-      "matchPackageNames": [
-        "xxx-@types/node"
-      ],
-      "enabled": false
     }
   ]
 }
