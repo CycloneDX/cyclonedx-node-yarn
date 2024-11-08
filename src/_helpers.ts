@@ -19,6 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
+import { extname } from 'path'
 
 export async function writeAllSync (fd: number, data: string): Promise<number> {
   const b = Buffer.from(data)
@@ -59,3 +60,23 @@ export function trySanitizeGitUrl (gitUrl: string): string {
   gitInfo.auth = undefined
   return gitInfo.toString()
 }
+
+// region MIME
+
+export type MimeType = string
+
+const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
+  '': 'text/plain',
+  '.license': 'text/plain',
+  '.licence': 'text/plain',
+  '.md': 'text/markdown',
+  '.rst': 'text/prs.fallenstein.rst',
+  '.txt': 'text/plain',
+  '.xml': 'text/xml' // not `application/xml` -- our scope is text!
+} as const
+
+export function getMimeForTextFile (filename: string): MimeType | undefined {
+  return MAP_TEXT_EXTENSION_MIME[extname(filename).toLowerCase()]
+}
+
+// endregion MIME
