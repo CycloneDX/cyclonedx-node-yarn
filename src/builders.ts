@@ -143,7 +143,7 @@ export class BomBuilder {
   }
 
   private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Component | false | undefined {
-    return this.makeComponent(workspace.anchoredLocator, workspace.manifest, type)
+    return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
   private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
@@ -185,31 +185,29 @@ export class BomBuilder {
     const logger = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
-      let pcis
       try {
-        pcis = packageFs.readdirSync(prefixPath, { withFileTypes: true })
-      } catch (e) {
-        logger?.warn('collecting license evidence in', prefixPath, 'failed:', e)
-        return
-      }
-      try {
-        for (const pci of pcis) {
-          if (
-            !pci.isFile() ||
-            !LICENSE_FILENAME_PATTERN.test(pci.name.toLowerCase())
-          ) {
+        let files
+        try {
+          // option `withFileTypes:true` is not supported and casues crashes
+          files = packageFs.readdirSync(prefixPath)
+        } catch (e) {
+          logger?.warn('collecting license evidence in', prefixPath, 'failed:', e)
+          return
+        }
+        for (const file of files) {
+          if (!LICENSE_FILENAME_PATTERN.test(file)) {
             continue
           }
 
-          const contentType = getMimeForTextFile(pci.name)
+          const contentType = getMimeForTextFile(file)
           if (contentType === undefined) {
             continue
           }
 
-          const fp = ppath.join(prefixPath, pci.name)
+          const fp = ppath.join(prefixPath, file)
           try {
             yield new NamedLicense(
-            `file: ${pci.name}`,
+            `file: ${file}`,
             {
               text: new Attachment(
                 packageFs.readFileSync(fp).toString('base64'),

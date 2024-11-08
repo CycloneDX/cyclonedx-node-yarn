@@ -99,7 +99,8 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
-      ]
+      ],
+      "evidence": {}
     },
     {
       "type": "library",
@@ -115,7 +116,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0"
+      "purl": "pkg:npm/my-local-b-off@0.0.0",
+      "evidence": {}
     },
     {
       "type": "library",
@@ -131,7 +133,8 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-noname@0.0.0"
+      "purl": "pkg:npm/my-noname@0.0.0",
+      "evidence": {}
     }
   ],
   "dependencies": [

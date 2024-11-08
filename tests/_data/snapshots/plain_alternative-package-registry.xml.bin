@@ -82,6 +82,7 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <evidence/>
     </component>
   </components>
   <dependencies>

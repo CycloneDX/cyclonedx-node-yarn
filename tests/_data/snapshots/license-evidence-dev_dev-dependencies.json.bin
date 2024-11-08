@@ -295,15 +295,6 @@
                 "encoding": "base64"
               }
             }
-          },
-          {
-            "license": {
-              "name": "file: licenseCheck.json",
-              "text": {
-                "content": "ewogICJjb21wYXRpYmxlTGljZW5zZXMiOiBbCiAgICAiMEJTRCIsCiAgICAiQXBhY2hlLTIuMCIsCiAgICAiQXJ0aXN0aWMtMi4wIiwKICAgICJCU0QtMi1DbGF1c2UiLAogICAgIkJTRC0zLUNsYXVzZSIsCiAgICAiQ0MwLTEuMCIsCiAgICAiQ0MtQlktMy4wIiwKICAgICJDQy1CWS00LjAiLAogICAgIklTQyIsCiAgICAiTUlUIiwKICAgICJQeXRob24tMi4wIiwKICAgICJVbmxpY2Vuc2UiCiAgXQp9",
-                "encoding": "base64"
-              }
-            }
           }
         ]
       }
