@@ -182,18 +182,11 @@ export class BomBuilder {
       cacheOptions: { skipIntegrityCheck: true }
     }
     const LICENSE_FILENAME_PATTERN = this.#LICENSE_FILENAME_PATTERN
-    const logger = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
       try {
-        let files
-        try {
-          // option `withFileTypes:true` is not supported and casues crashes
-          files = packageFs.readdirSync(prefixPath)
-        } catch (e) {
-          logger.warn('WARN  | collecting license evidence in', prefixPath, 'failed:', e)
-          return
-        }
+        // option `withFileTypes:true` is not supported and causes crashes
+        const files = packageFs.readdirSync(prefixPath)
         for (const file of files) {
           if (!LICENSE_FILENAME_PATTERN.test(file)) {
             continue
@@ -205,21 +198,17 @@ export class BomBuilder {
           }
 
           const fp = ppath.join(prefixPath, file)
-          try {
-            yield new NamedLicense(
-            `file: ${file}`,
-            {
-              text: new Attachment(
-                packageFs.readFileSync(fp).toString('base64'),
-                {
-                  contentType,
-                  encoding: AttachmentEncoding.Base64
-                }
-              )
-            })
-          } catch (e) { // may throw if `readFileSync()` fails
-            logger.warn('WARN  | collecting license evidence from', fp, 'failed:', e)
-          }
+          yield new NamedLicense(
+          `file: ${file}`,
+          {
+            text: new Attachment(
+              packageFs.readFileSync(fp).toString('base64'),
+              {
+                contentType,
+                encoding: AttachmentEncoding.Base64
+              }
+            )
+          })
         }
       } finally {
         if (releaseFs !== undefined) {
