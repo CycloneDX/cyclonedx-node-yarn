@@ -191,7 +191,7 @@ export class BomBuilder {
           // option `withFileTypes:true` is not supported and casues crashes
           files = packageFs.readdirSync(prefixPath)
         } catch (e) {
-          logger?.warn('collecting license evidence in', prefixPath, 'failed:', e)
+          logger.warn('WARN  | collecting license evidence in', prefixPath, 'failed:', e)
           return
         }
         for (const file of files) {
@@ -218,7 +218,7 @@ export class BomBuilder {
               )
             })
           } catch (e) { // may throw if `readFileSync()` fails
-            logger?.warn('collecting license evidence from', fp, 'failed:', e)
+            logger.warn('WARN  | collecting license evidence from', fp, 'failed:', e)
           }
         }
       } finally {
