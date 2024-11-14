@@ -77,7 +77,6 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
-      <evidence/>
     </component>
     <component type="library" bom-ref="my-local-b-off@portal:../my-local-b::locator=my-local-a%40portal%3Apackages%2Fmy-local-a%3A%3Alocator%3Ddemo-local-deps%2540workspace%253A.">
       <name>my-local-b-off</name>
@@ -89,7 +88,6 @@
         </license>
       </licenses>
       <purl>pkg:npm/my-local-b-off@0.0.0</purl>
-      <evidence/>
     </component>
     <component type="library" bom-ref="my-noname@portal:packages/my-noname::locator=demo-local-deps%40workspace%3A.">
       <name>my-noname</name>
@@ -101,7 +99,6 @@
         </license>
       </licenses>
       <purl>pkg:npm/my-noname@0.0.0</purl>
-      <evidence/>
     </component>
   </components>
   <dependencies>

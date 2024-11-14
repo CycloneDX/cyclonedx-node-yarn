@@ -77,7 +77,6 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
-      <evidence/>
     </component>
     <component type="library" bom-ref="my-local-b-off@workspace:workspaces/my-local-b">
       <name>my-local-b-off</name>
@@ -89,7 +88,6 @@
         </license>
       </licenses>
       <purl>pkg:npm/my-local-b-off@0.0.0</purl>
-      <evidence/>
     </component>
   </components>
   <dependencies>

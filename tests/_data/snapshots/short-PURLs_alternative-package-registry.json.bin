@@ -103,8 +103,7 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
-      ],
-      "evidence": {}
+      ]
     }
   ],
   "dependencies": [

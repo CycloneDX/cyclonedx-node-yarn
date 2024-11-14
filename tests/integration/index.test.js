@@ -272,10 +272,10 @@ suite('integration', () => {
             'dev-dependencies',
             'juice-shop'
           ].forEach(testSetup => {
-            test(`${testSetup}`,
+            test(`${testSetup} dev`,
               () => runTest('license-evidence-dev', testSetup, format, ['--gather-license-texts'])
             ).timeout(longTestTimeout)
-            test(`${testSetup}`,
+            test(`${testSetup} prod`,
               () => runTest('license-evidence-prod', testSetup, format, ['--gather-license-texts', '--prod'])
             ).timeout(longTestTimeout)
           })

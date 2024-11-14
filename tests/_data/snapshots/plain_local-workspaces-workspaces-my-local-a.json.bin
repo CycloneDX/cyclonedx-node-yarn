@@ -99,8 +99,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/my-local-b-off@0.0.0",
-      "evidence": {}
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
     }
   ],
   "dependencies": [
