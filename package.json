@@ -53,6 +53,12 @@
       "url": "https://github.com/jkowalleck"
     }
   ],
+  "resolutions": {
+    "libxmljs2": "portal:packages/unloadable",
+    "ajv": "portal:packages/unloadable",
+    "ajv-formats": "portal:packages/unloadable",
+    "ajv-formats-draft2019": "portal:packages/unloadable"
+  },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "6.11.0",
     "@yarnpkg/cli": "^4",
@@ -125,7 +131,8 @@
       "/bin/cyclonedx-yarn-cli.js"
     ],
     "directories": {},
-    "scripts": {}
+    "scripts": {},
+    "resolutions": {}
   },
   "scripts": {
     "build": "run-s -n build:gbti build:bundle",
