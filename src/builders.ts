@@ -230,7 +230,7 @@ export class BomBuilder {
     manifest.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
     manifest.version = pkg.version
     const component = this.makeComponent(pkg, manifest, type)
-    if (component instanceof Component) {
+    if (this.gatherLicenseTexts && component instanceof Component) {
       component.evidence = new ComponentEvidence()
       for await (const le of fetchLicenseEvidence(pkg)) {
         component.evidence.licenses.add(le)
