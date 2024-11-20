@@ -10,6 +10,9 @@
   "labels": [
     "dependencies"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+  },
   "ignorePaths": [
     "tests/_data/testbeds/**",
   ],

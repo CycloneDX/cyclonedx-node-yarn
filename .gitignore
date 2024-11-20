@@ -17,7 +17,6 @@ _tmp/
 /.pnp.*
 /.yarn/
 /.yarnrc.yml
-/yarn.lock
 
 
 # Only used during production build.
