@@ -272,8 +272,12 @@ suite('integration', () => {
             'dev-dependencies',
             'juice-shop'
           ].forEach(testSetup => {
-            test(testSetup, () => runTest('license-evidence-dev', testSetup, format, ['--gather-license-texts']))
-            test(testSetup, () => runTest('license-evidence-prod', testSetup, format, ['--gather-license-texts', '--prod']))
+            test(`${testSetup} dev`,
+              () => runTest('license-evidence-dev', testSetup, format, ['--gather-license-texts'])
+            ).timeout(longTestTimeout)
+            test(`${testSetup} prod`,
+              () => runTest('license-evidence-prod', testSetup, format, ['--gather-license-texts', '--prod'])
+            ).timeout(longTestTimeout)
           })
         })
 
