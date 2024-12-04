@@ -30,7 +30,7 @@ import normalizePackageData from 'normalize-package-data'
 import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
-import { getMimeForTextFile, isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
+import { getMimeForLicenseFile, isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
@@ -192,7 +192,7 @@ export class BomBuilder {
             continue
           }
 
-          const contentType = getMimeForTextFile(file)
+          const contentType = getMimeForLicenseFile(file)
           if (contentType === undefined) {
             continue
           }
