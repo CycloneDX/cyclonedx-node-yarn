@@ -27,7 +27,6 @@ import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package,
 import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageData from 'normalize-package-data'
-import type { PackageURL } from 'packageurl-js'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { getMimeForLicenseFile, isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
@@ -319,7 +318,7 @@ export class BomBuilder {
     return component
   }
 
-  private makePurl (component: Component): PackageURL | undefined {
+  private makePurl (component: Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
     const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
     if (purl === undefined) {
       return undefined

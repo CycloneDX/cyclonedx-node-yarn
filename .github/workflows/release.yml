@@ -214,8 +214,8 @@ jobs:
         run: |
           yarn workspaces focus --production
           yarn install --mode update-lockfile
-      - name: login to YARNPKG
-        run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
+      - name: Set NPM authentication
+        run: yarn config set --home npmAuthToken "$NPM_AUTH_TOKEN"
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
