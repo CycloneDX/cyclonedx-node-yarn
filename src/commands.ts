@@ -113,7 +113,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
   })
 
   gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
-    description: 'Search for license files in components and include them as license evidence.'
+    description: 'Search for license files in components and include them as license evidence.\n' +
+        'This feature is experimental.'
   })
 
   verbosity = Option.Counter('--verbose,-v', 1, {
