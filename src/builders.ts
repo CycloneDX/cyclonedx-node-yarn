@@ -19,9 +19,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
-import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import { AttachmentEncoding, ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Bom, Component, ExternalReference, type License, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
+import { Attachment, Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -29,17 +29,19 @@ import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageData from 'normalize-package-data'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
-import { isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
+import { getMimeForLicenseFile, isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
+type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
 
 interface BomBuilderOptions {
   omitDevDependencies?: BomBuilder['omitDevDependencies']
   metaComponentType?: BomBuilder['metaComponentType']
   reproducible?: BomBuilder['reproducible']
   shortPURLs?: BomBuilder['shortPURLs']
+  gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
 }
 
 export class BomBuilder {
@@ -51,6 +53,7 @@ export class BomBuilder {
   metaComponentType: ComponentType
   reproducible: boolean
   shortPURLs: boolean
+  gatherLicenseTexts: boolean
 
   console: Console
 
@@ -69,6 +72,7 @@ export class BomBuilder {
     this.metaComponentType = options.metaComponentType ?? ComponentType.Application
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
+    this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
 
     this.console = console_
   }
@@ -76,6 +80,7 @@ export class BomBuilder {
   async buildFromWorkspace (workspace: Workspace): Promise<Bom> {
     // @TODO make switch to disable load from fs
     const fetchManifest: ManifestFetcher = await this.makeManifestFetcher(workspace.project)
+    const fetchLicenseEvidences: LicenseEvidenceFetcher = await this.makeLicenseEvidenceFetcher(workspace.project)
 
     const setLicensesDeclared = function (license: License): void {
       license.acknowledgement = LicenseAcknowledgement.Declared
@@ -118,7 +123,8 @@ export class BomBuilder {
     }
     for await (const component of this.gatherDependencies(
       rootComponent, rootPackage,
-      workspace.project, fetchManifest
+      workspace.project,
+      fetchManifest, fetchLicenseEvidences
     )) {
       component.licenses.forEach(setLicensesDeclared)
 
@@ -162,33 +168,90 @@ export class BomBuilder {
     }
   }
 
+  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
+
+  private async makeLicenseEvidenceFetcher (project: Project): Promise<LicenseEvidenceFetcher> {
+    const fetcher = project.configuration.makeFetcher()
+    const fetcherOptions: FetchOptions = {
+      project,
+      fetcher,
+      cache: await Cache.find(project.configuration),
+      checksums: project.storedChecksums,
+      report: new ThrowReport(),
+      cacheOptions: { skipIntegrityCheck: true }
+    }
+    const LICENSE_FILENAME_PATTERN = this.#LICENSE_FILENAME_PATTERN
+    return async function * (pkg: Package): AsyncGenerator<License> {
+      const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
+      try {
+        // option `withFileTypes:true` is not supported and causes crashes
+        const files = packageFs.readdirSync(prefixPath)
+        for (const file of files) {
+          if (!LICENSE_FILENAME_PATTERN.test(file)) {
+            continue
+          }
+
+          const contentType = getMimeForLicenseFile(file)
+          if (contentType === undefined) {
+            continue
+          }
+
+          const fp = ppath.join(prefixPath, file)
+          yield new NamedLicense(
+          `file: ${file}`,
+          {
+            text: new Attachment(
+              packageFs.readFileSync(fp).toString('base64'),
+              {
+                contentType,
+                encoding: AttachmentEncoding.Base64
+              }
+            )
+          })
+        }
+      } finally {
+        if (releaseFs !== undefined) {
+          releaseFs()
+        }
+      }
+    }
+  }
+
   private async makeComponentFromPackage (
     pkg: Package,
     fetchManifest: ManifestFetcher,
+    fetchLicenseEvidence: LicenseEvidenceFetcher,
     type?: ComponentType | undefined
   ): Promise<Component | false | undefined> {
-    const data = await fetchManifest(pkg)
+    const manifest = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
-    data.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
-    data.version = pkg.version
-    return this.makeComponent(pkg, data, type)
+    manifest.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
+    manifest.version = pkg.version
+    const component = this.makeComponent(pkg, manifest, type)
+    if (this.gatherLicenseTexts && component instanceof Component) {
+      component.evidence = new ComponentEvidence()
+      for await (const le of fetchLicenseEvidence(pkg)) {
+        component.evidence.licenses.add(le)
+      }
+    }
+    return component
   }
 
-  private makeComponent (locator: Locator, data: any, type?: ComponentType | undefined): Component | false | undefined {
+  private makeComponent (locator: Locator, manifest: any, type?: ComponentType | undefined): Component | false | undefined {
     // work with a deep copy, because `normalizePackageData()` might modify the data
-    const dataC = structuredClonePolyfill(data)
-    normalizePackageData(dataC as normalizePackageData.Input)
+    const manifestC = structuredClonePolyfill(manifest)
+    normalizePackageData(manifestC as normalizePackageData.Input)
     // region fix normalizations
-    if (isString(data.version)) {
+    if (isString(manifest.version)) {
       // allow non-SemVer strings
-      dataC.version = data.version.trim()
+      manifestC.version = manifest.version.trim()
     }
     // endregion fix normalizations
 
     // work with a deep copy, because `normalizePackageData()` might modify the data
     const component = this.componentBuilder.makeComponent(
-      dataC as normalizePackageData.Package, type)
+      manifestC as normalizePackageData.Package, type)
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j', locator)
       return undefined
@@ -296,7 +359,8 @@ export class BomBuilder {
   async * gatherDependencies (
     component: Component, pkg: Package,
     project: Project,
-    fetchManifest: ManifestFetcher
+    fetchManifest: ManifestFetcher,
+    fetchLicenseEvidences: LicenseEvidenceFetcher
   ): AsyncGenerator<Component> {
     // ATTENTION: multiple packages may have the same `identHash`, but the `locatorHash` is unique.
     const knownComponents = new Map<LocatorHash, Component>([[pkg.locatorHash, component]])
@@ -308,7 +372,8 @@ export class BomBuilder {
         let depComponent = knownComponents.get(depPkg.locatorHash)
         if (depComponent === undefined) {
           const _depIDN = structUtils.prettyLocatorNoColors(depPkg)
-          const _depC = await this.makeComponentFromPackage(depPkg, fetchManifest)
+          const _depC = await this.makeComponentFromPackage(depPkg,
+            fetchManifest, fetchLicenseEvidences)
           if (_depC === false) {
             // shall be skipped
             this.console.debug('DEBUG | skip impossible component %j', _depIDN)

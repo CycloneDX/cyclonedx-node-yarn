@@ -15,8 +15,14 @@ Test files must follow the pattern `**.{spec,test}.[cm]?js`, to be picked up.
 Test runner is `mocha`, configured in [mocharc file](../.mocharc.js).
 
 ```shell
-npm test
+yarn run test
 ```
+
+To run specific tests only
+```shell
+yarn run test:node --grep "testname"
+```
+
 ### Snapshots
 
 Some tests check against snapshots.  
@@ -24,5 +30,5 @@ To update these, set the env var `CYARN_TEST_UPDATE_SNAPSHOTS` to a non-falsy va
 
 like so:
 ```shell
-CYARN_TEST_UPDATE_SNAPSHOTS=1 npm test
+CYARN_TEST_UPDATE_SNAPSHOTS=1 yarn run test
 ```
