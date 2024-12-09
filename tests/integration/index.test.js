@@ -267,6 +267,20 @@ suite('integration', () => {
           })
         })
 
+        suite('license evidence', () => {
+          [
+            'dev-dependencies',
+            'juice-shop'
+          ].forEach(testSetup => {
+            test(`${testSetup} dev`,
+              () => runTest('license-evidence-dev', testSetup, format, ['--gather-license-texts'])
+            ).timeout(longTestTimeout)
+            test(`${testSetup} prod`,
+              () => runTest('license-evidence-prod', testSetup, format, ['--gather-license-texts', '--prod'])
+            ).timeout(longTestTimeout)
+          })
+        })
+
         test('dogfooding', async () => {
           const sbom = runCLI(projectRootPath, ['--output-format', format])
           const validationErrors = await validate(format, sbom, '1.5')
