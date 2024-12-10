@@ -229,7 +229,7 @@ __metadata:
     hosted-git-info: "npm:7.0.2"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:10.8.2"
-    normalize-package-data: "npm:6.0.2"
+    normalize-package-data: "npm:7.0.0"
     npm-run-all2: "npm:^6.1.2"
     rimraf: "npm:^5.0.5"
     typanion: "npm:^3.14.0"
@@ -3311,12 +3311,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:7.0.2, hosted-git-info@npm:^7.0.0":
+"hosted-git-info@npm:7.0.2":
   version: 7.0.2
   resolution: "hosted-git-info@npm:7.0.2"
   dependencies:
     lru-cache: "npm:^10.0.1"
   checksum: 10c0/b19dbd92d3c0b4b0f1513cf79b0fc189f54d6af2129eeb201de2e9baaa711f1936929c848b866d9c8667a0f956f34bf4f07418c12be1ee9ca74fd9246335ca1f
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^8.0.0":
+  version: 8.0.2
+  resolution: "hosted-git-info@npm:8.0.2"
+  dependencies:
+    lru-cache: "npm:^10.0.1"
+  checksum: 10c0/e64f6c1b6db625869934b35c4959aacc365799d9cb1856e0224b5557ee5ecfe224bb8aa850479179a8f3968063ea0f92b8fbb67fe009d46859431dcde7fdc36d
   languageName: node
   linkType: hard
 
@@ -4355,14 +4364,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize-package-data@npm:6.0.2":
-  version: 6.0.2
-  resolution: "normalize-package-data@npm:6.0.2"
+"normalize-package-data@npm:7.0.0":
+  version: 7.0.0
+  resolution: "normalize-package-data@npm:7.0.0"
   dependencies:
-    hosted-git-info: "npm:^7.0.0"
+    hosted-git-info: "npm:^8.0.0"
     semver: "npm:^7.3.5"
     validate-npm-package-license: "npm:^3.0.4"
-  checksum: 10c0/7e32174e7f5575ede6d3d449593247183880122b4967d4ae6edb28cea5769ca025defda54fc91ec0e3c972fdb5ab11f9284606ba278826171b264cb16a9311ef
+  checksum: 10c0/d492cbc4cdd92e99cba517b08cec6adf40ff37f2e97ecf4484ccb2da1ef5bd81c6dfbd8b434d3bdc749df639492ecdc71f4a61de1a8b99fe97fdf4faac13e7f1
   languageName: node
   linkType: hard
 
