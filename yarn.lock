@@ -172,9 +172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:6.11.0":
-  version: 6.11.0
-  resolution: "@cyclonedx/cyclonedx-library@npm:6.11.0"
+"@cyclonedx/cyclonedx-library@npm:6.13.0":
+  version: 6.13.0
+  resolution: "@cyclonedx/cyclonedx-library@npm:6.13.0"
   dependencies:
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^3.0.1"
@@ -194,7 +194,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/a04426eb965c3e640cf5a1b9286fd0bf4d267ae9f396b1e7e6efda07d04ec976a1adb669086191f9b8d44d3957f900ff17cea21e3301fc1c591bebce545b6768
+  checksum: 10c0/5ce4d168936198db2512f3e53f910b71154e05bb6ad5621a7f1fd72cd35020d57565a335ecf2ea1777156fd8b14049515826603a0aaf29bae1cdb775acbbae99
   languageName: node
   linkType: hard
 
@@ -202,7 +202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:6.11.0"
+    "@cyclonedx/cyclonedx-library": "npm:6.13.0"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:ts5.3"
