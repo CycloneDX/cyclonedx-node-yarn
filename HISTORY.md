@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
     This was done to incorporate non-breaking upstream changes and fixes.
   * Removed unused runtime dependency `packageurl-js` (via [#220])
 * Build
-  * Use _TypeScript_ `v5.6.2` now, was `v5.5.3` (via [#160], [#178], [#233])
+  * Use _TypeScript_ `v5.7.2` now, was `v5.5.3` (via [#160], [#178], [#233], [#212])
   * Use _@yarnpkg/builder_ `v4.2.0` now, was `v4.1.1` (via [#164], [#172])
 
 [#33]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/33
@@ -29,6 +29,7 @@ All notable changes to this project will be documented in this file.
 [#178]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/178
 [#193]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/193
 [#206]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/206
+[#212]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/212
 [#220]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/220
 [#233]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/233
 
