@@ -87,7 +87,7 @@
     "mkdirp": "^3.0.1",
     "mocha": "10.8.2",
     "npm-run-all2": "^6.1.2",
-    "rimraf": "^5.0.5",
+    "rimraf": "^6.0.0",
     "typescript": "5.6.2"
   },
   "type": "commonjs",
