@@ -226,7 +226,7 @@ __metadata:
     eslint-plugin-simple-import-sort: "npm:12.1.1"
     extract-zip: "npm:^2.0.1"
     fast-glob: "npm:^3.3.2"
-    hosted-git-info: "npm:7.0.2"
+    hosted-git-info: "npm:8.0.2"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:10.8.2"
     normalize-package-data: "npm:6.0.2"
@@ -3311,7 +3311,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:7.0.2, hosted-git-info@npm:^7.0.0":
+"hosted-git-info@npm:8.0.2":
+  version: 8.0.2
+  resolution: "hosted-git-info@npm:8.0.2"
+  dependencies:
+    lru-cache: "npm:^10.0.1"
+  checksum: 10c0/e64f6c1b6db625869934b35c4959aacc365799d9cb1856e0224b5557ee5ecfe224bb8aa850479179a8f3968063ea0f92b8fbb67fe009d46859431dcde7fdc36d
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^7.0.0":
   version: 7.0.2
   resolution: "hosted-git-info@npm:7.0.2"
   dependencies:
