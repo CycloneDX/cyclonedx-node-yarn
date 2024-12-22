@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
     This feature is experimental.
     This feature is disabled per default.
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@6.13.0`, was `@6.11.0` (via [#206])  
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@6.13.1`, was `@6.11.0` (via [#206], [#237])  
     This was done to incorporate non-breaking upstream changes and fixes.
   * Upgraded runtime-dependency `normalize-package-data@6.0.2`, was `@6.0.1` (via [#141])  
     This was done to incorporate non-breaking upstream changes and fixes.
@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file.
 [#212]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/212
 [#220]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/220
 [#233]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/233
+[#237]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/237
 
 ## 1.0.2 -- 2024-07-15
 
