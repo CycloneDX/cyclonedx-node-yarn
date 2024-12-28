@@ -29,7 +29,13 @@ import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageData from 'normalize-package-data'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
-import { getMimeForLicenseFile, isString, tryRemoveSecretsFromUrl, trySanitizeGitUrl } from './_helpers'
+import {
+  getMimeForLicenseFile,
+  isString,
+  structuredClonePolyfill,
+  tryRemoveSecretsFromUrl,
+  trySanitizeGitUrl
+} from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
@@ -404,9 +410,3 @@ class DummyComponent extends Component {
     })
   }
 }
-
-const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function (value) {
-    return JSON.parse(JSON.stringify(value))
-  }

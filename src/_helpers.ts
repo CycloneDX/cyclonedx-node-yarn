@@ -21,6 +21,12 @@ import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
 import { extname, parse } from 'path'
 
+export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
+  ? structuredClone
+  : function (value) {
+    return JSON.parse(JSON.stringify(value))
+  }
+
 export async function writeAllSync (fd: number, data: string): Promise<number> {
   const b = Buffer.from(data)
   const l = b.byteLength
