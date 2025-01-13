@@ -6,8 +6,6 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
-## 1.1.0 -- 2025-01-13
-
 * Added
   * Capability to gather license text evidences ([#33] via [#193])  
     This feature can be controlled via CLI switch `--gather-license-texts`.  
