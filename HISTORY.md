@@ -9,8 +9,7 @@ All notable changes to this project will be documented in this file.
 * Added
   * Capability to gather license text evidences ([#33] via [#193])  
     This feature can be controlled via CLI switch `--gather-license-texts`.  
-    This feature is experimental.
-    This feature is disabled per default.
+    This feature is experimental. This feature is disabled per default.
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@6.13.1`, was `@6.11.0` (via [#206], [#237])  
     This was done to incorporate non-breaking upstream changes and fixes.
