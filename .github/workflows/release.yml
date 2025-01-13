@@ -130,7 +130,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: install flict
-        run: pip install flict
+        run: pip install flict==1.2.14
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
