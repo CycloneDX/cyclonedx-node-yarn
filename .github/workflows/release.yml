@@ -165,7 +165,7 @@ jobs:
           retention-days: 5
           if-no-files-found: error
       - name: test license compatibility
-        run: tools/test-licenses.sh _tmp/lsummary.json
+        run: tools/test-3rd-party-licenses.sh _tmp/lsummary.json
 
   test-node:
     needs:
