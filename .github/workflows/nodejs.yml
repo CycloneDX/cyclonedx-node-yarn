@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_ACTIVE_LTS: '20'  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
@@ -185,6 +185,7 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
+          - '23'      # Current
           - '22'      # LTS
           - '20'
           - '18'      # lowest supported
@@ -241,18 +242,19 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '22'      # Current
-          - '20'      # LTS
+          - '23'      # Current
+          - '22'      # LTS
+          - '20'
           - '18'      # lowest supported
         yarn-version:
           - '4.x'
           - '3.x'
         os: [ 'ubuntu-latest' ]
         include:
-          - node-version: '20'   # LTS
+          - node-version: '22'   # LTS
             yarn-version: '4.x'  # latest
             os: 'windows-latest'
-          - node-version: '20'   # LTS
+          - node-version: '22'   # LTS
             yarn-version: '4.x'  # latest
             os: 'macos-latest'
     env:
