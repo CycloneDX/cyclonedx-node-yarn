@@ -225,7 +225,7 @@ jobs:
       - name: Setup yarn
         run: corepack enable yarn
       - name: yarn install
-        run: yarn install
+        run: yarn install --no-immutable
       - name: Set NPM authentication
         run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
         env:
