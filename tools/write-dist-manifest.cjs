@@ -59,7 +59,7 @@ function main (outputFile) {
 
   writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
 
-  // also write a yarn.lock
+  // also write an empty yarn.lock
   writeFileSync(join(dirname(outputFile), 'yarn.lock'), '')
 }
 

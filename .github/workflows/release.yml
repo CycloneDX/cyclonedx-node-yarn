@@ -224,6 +224,8 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: Setup yarn
         run: corepack enable yarn
+      - name: yarn install
+        run: yarn install
       - name: Set NPM authentication
         run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
         env:
