@@ -124,6 +124,7 @@ jobs:
           if-no-files-found: error
 
   test-licenses:
+    needs: [ 'build' ]
     name: test licenses
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -132,6 +132,7 @@ jobs:
         run: yarn run test:lint
 
   test-licenses:
+    needs: [ 'build' ]
     name: test licenses
     runs-on: ubuntu-latest
     timeout-minutes: 10
