@@ -163,12 +163,18 @@ async function main (outputFile, includeLicense) {
 
 if (require.main === module) {
   const outputFile = process.argv[2] || `${metaFile}.NOTICE`
-  const lsummaryFile = process.argv[3] || `${outputFile}.lsummary`
+  const lsummaryFile = process.argv[3] || `${outputFile}.lsummary.json`
   const includeLicense = false
-  main(outputFile, includeLicense).then(licenses => {
+  const assert = require('assert')
+  main(outputFile, includeLicense).then(ils => {
+    const ol = JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license;
+    assert(typeof ol === 'string' && ol.length > 0);
+    assert(ils.size > 0);
     const lsummaryFH = openSync(lsummaryFile, 'w')
-    writeSync(lsummaryFH, JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license + '\n')
-    writeSync(lsummaryFH, Array.from(licenses).sort().join('\n'))
+    writeSync(lsummaryFH, JSON.stringify({
+      ol,
+      ils: Array.from(ils).sort()
+    }))
     closeSync(lsummaryFH)
   })
 } else {

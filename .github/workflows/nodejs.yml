@@ -132,7 +132,6 @@ jobs:
         run: yarn run test:lint
 
   test-licenses:
-    needs: [ 'build' ]
     name: test licenses
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -152,16 +151,10 @@ jobs:
         run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
-      - name: fetch build artifact
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ env.BUNDLES_DIR }}
-          path: ${{ env.BUNDLES_DIR }}
       - name: make NOTICE and summary
         run: |
           mkdir -p _tmp
-          yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary
+          yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary.json
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
@@ -169,11 +162,11 @@ jobs:
           name: licenses-files
           path: |
             _tmp/NOTICE
-            _tmp/lsummary
+            _tmp/lsummary.json
           retention-days: 5
           if-no-files-found: error
       - name: test license compatibility
-        run: flict display-compatibility $(cat _tmp/lsummary)
+        run: tools/test-licenses.sh
 
   test-node:
     needs: [ 'build' ]
