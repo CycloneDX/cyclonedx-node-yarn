@@ -150,6 +150,12 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn
         run: corepack enable yarn
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.BUNDLES_DIR }}
+          path: ${{ env.BUNDLES_DIR }}
       - name: Setup subject
         run: yarn install --immutable
       - name: make NOTICE and summary
