@@ -137,8 +137,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: install flict
-        run: pip install -r tools/test-licenses.requirements.txt
+      - name: install tools
+        run: pip install -r tools/test-3rd-party-licenses.requirements.txt
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
