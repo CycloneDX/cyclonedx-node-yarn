@@ -167,9 +167,9 @@ if (require.main === module) {
   const includeLicense = false
   const assert = require('assert')
   main(outputFile, includeLicense).then(ils => {
-    const ol = JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license;
-    assert(typeof ol === 'string' && ol.length > 0);
-    assert(ils.size > 0);
+    const ol = JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license
+    assert(typeof ol === 'string' && ol.length > 0)
+    assert(ils.size > 0)
     const lsummaryFH = openSync(lsummaryFile, 'w')
     writeSync(lsummaryFH, JSON.stringify({
       ol,
