@@ -1,3 +1,1 @@
-flict==1.2.14 \
-    --hash=sha256:3140319bfa0179b1ece2f5c2ed18346bb37d81b8a0b31641dc31c6a915945bb4 \
-    --hash=sha256:e876577a778ddce0d9e8eb2470f7c63b5274ab371465ee7ccb5b709ddbdbc5ae
+flict==1.2.14
