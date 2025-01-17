@@ -37,6 +37,7 @@ import {
   trySanitizeGitUrl
 } from './_helpers'
 import { wsAnchoredPackage } from './_yarnCompat'
+import { type Logger as ConsoleLoggger } from './logger'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<any>
@@ -61,7 +62,7 @@ export class BomBuilder {
   shortPURLs: boolean
   gatherLicenseTexts: boolean
 
-  console: Console
+  console: ConsoleLoggger
 
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
@@ -134,7 +135,7 @@ export class BomBuilder {
     )) {
       component.licenses.forEach(setLicensesDeclared)
 
-      this.console.info('INFO  | add component for %s/%s@%s',
+      this.console.info('add component for %s/%s@%s',
         component.group ?? '-',
         component.name,
         component.version ?? '-'
@@ -259,7 +260,7 @@ export class BomBuilder {
     const component = this.componentBuilder.makeComponent(
       manifestC as normalizePackageData.Package, type)
     if (component === undefined) {
-      this.console.debug('DEBUG | skip broken component: %j', locator)
+      this.console.debug('skip broken component: %j', locator)
       return undefined
     }
 
@@ -382,15 +383,15 @@ export class BomBuilder {
             fetchManifest, fetchLicenseEvidences)
           if (_depC === false) {
             // shall be skipped
-            this.console.debug('DEBUG | skip impossible component %j', _depIDN)
+            this.console.debug('skip impossible component %j', _depIDN)
             continue // for-loop
           }
           if (_depC === undefined) {
             depComponent = new DummyComponent(ComponentType.Library, `InterferedDependency.${_depIDN}`)
-            this.console.warn('WARN  | InterferedDependency %j', _depIDN)
+            this.console.warn('InterferedDependency %j', _depIDN)
           } else {
             depComponent = _depC
-            this.console.debug('DEBUG | built component %j: %j', _depIDN, depComponent)
+            this.console.debug('built component %j: %j', _depIDN, depComponent)
           }
           yield depComponent
           knownComponents.set(depPkg.locatorHash, depComponent)

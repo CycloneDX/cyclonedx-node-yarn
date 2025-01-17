@@ -19,23 +19,46 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import type { BaseContext } from 'clipanion'
 
-function noop (): void {
-  // do nothing
-}
+export class Logger {
+  /** `true` if this logger instance was used to log any error message. */
+  public didLogError = false
 
-export function makeConsoleLogger (level: number, context: BaseContext): Console {
-  // all output shall be bound to stdError - stdOut is for result output only
-  const myConsole = new console.Console(context.stderr, context.stderr)
+  /**
+   * @param console Native console
+   * @param logLevel Minimum log level for which outputting messages is desired.
+   */
+  constructor (private readonly console: Console, private readonly logLevel: number) {}
 
-  if (level < 3) {
-    myConsole.debug = noop
-    if (level < 2) {
-      myConsole.info = noop
-      if (level < 1) {
-        myConsole.log = noop
-      }
+  private logWithPrefix (prefix: string, messageLogLevel: number, message: string, ...args: unknown[]): void {
+    if (this.logLevel >= messageLogLevel) {
+      this.console.log(`${prefix} | ${message}`, ...args)
     }
   }
 
-  return myConsole
+  public info (message: string, ...args: unknown[]): void {
+    this.logWithPrefix('INFO ', 2, message, ...args)
+  }
+
+  public debug (message: string, ...args: unknown[]): void {
+    this.logWithPrefix('DEBUG', 3, message, ...args)
+  }
+
+  public warn (message: string, ...args: unknown[]): void {
+    this.logWithPrefix('WARN ', 0, message, ...args)
+  }
+
+  public log (message: string, ...args: unknown[]): void {
+    this.logWithPrefix('LOG  ', 1, message, ...args)
+  }
+
+  public error (message: string, ...args: unknown[]): void {
+    this.didLogError = true
+    this.logWithPrefix('ERROR', 0, message, ...args)
+  }
+}
+
+export function makeConsoleLogger (level: number, context: BaseContext): Logger {
+  // all output shall be bound to stdError - stdOut is for result output only
+  const myConsole = new console.Console(context.stderr, context.stderr)
+  return new Logger(myConsole, level)
 }

@@ -138,8 +138,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
     const projectDir = this.context.cwd
 
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
-    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersionTuple)
-    myConsole.debug('DEBUG | options: %j', {
+    myConsole.debug('YARN_VERSION:', YarnVersionTuple)
+    myConsole.debug('options: %j', {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,
       outputFile: this.outputFile,
@@ -152,20 +152,20 @@ export class MakeSbomCommand extends Command<CommandContext> {
       projectDir
     })
 
-    myConsole.info('INFO  | gathering project & workspace ...')
+    myConsole.info('gathering project & workspace ...')
     const { project, workspace } = await Project.find(
       await Configuration.find(projectDir, this.context.plugins),
       projectDir)
     if (workspace === null) {
       throw new Error(`missing workspace for project ${project.cwd} in ${projectDir}`)
     }
-    myConsole.debug('DEBUG | project:', project.cwd)
-    myConsole.debug('DEBUG | workspace:', workspace.cwd)
+    myConsole.debug('project:', project.cwd)
+    myConsole.debug('workspace:', workspace.cwd)
     await workspace.project.restoreInstallState()
 
     const extRefFactory = new PJF.ExternalReferenceFactory()
 
-    myConsole.log('LOG   | gathering BOM data ...')
+    myConsole.log('gathering BOM data ...')
     const bom = await (new BomBuilder(
       new PJB.ToolBuilder(extRefFactory),
       new PJB.ComponentBuilder(
@@ -198,7 +198,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
         break
     }
 
-    myConsole.log('LOG   | serializing BOM ...')
+    myConsole.log('serializing BOM ...')
     const serialized = serializer.serialize(bom, {
       sortLists: this.outputReproducible,
       space: 2
@@ -206,16 +206,16 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
     // @TODO validate BOM - see https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23
 
-    myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
+    myConsole.log('writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(
       this.outputFile === OutputStdOut
         ? process.stdout.fd
         : xfs.openSync(npath.toPortablePath(npath.resolve(process.cwd(), this.outputFile)), 'w'),
       serialized
     )
-    myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
+    myConsole.info('wrote %d bytes to: %s', written, this.outputFile)
 
-    return written > 0
+    return !myConsole.didLogError && written > 0
       ? ExitCode.SUCCESS
       : ExitCode.FAILURE
   }
