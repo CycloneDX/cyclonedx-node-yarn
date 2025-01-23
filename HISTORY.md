@@ -17,10 +17,10 @@ All notable changes to this project will be documented in this file.
 [#254]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/254
 
 * BREAKING Changes
-  * CLI option `--spec-version` defaults to `1.6`, was `1.4` ([#222] via [#])
+  * CLI option `--spec-version` defaults to `1.6`, was `1.5` ([#222] via [#251])
 
 [#222]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/222
-[#]:
+[#251]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/251
 
 ## 1.1.0 -- 2025-01-14
 
