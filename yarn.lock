@@ -166,9 +166,9 @@ __metadata:
   linkType: hard
 
 "@bcoe/v8-coverage@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@bcoe/v8-coverage@npm:1.0.1"
-  checksum: 10c0/8a5df36b79715f54f419052966dfd7900eef13dadc31cc9214bd69b8b3eabdc5a3013612453edf547fa35cbeb5fd57a12e7910a75a845aac410d81d08511944a
+  version: 1.0.2
+  resolution: "@bcoe/v8-coverage@npm:1.0.2"
+  checksum: 10c0/1eb1dc93cc17fb7abdcef21a6e7b867d6aa99a7ec88ec8207402b23d9083ab22a8011213f04b2cf26d535f1d22dc26139b7929e6c2134c254bd1e14ba5e678c3
   languageName: node
   linkType: hard
 
@@ -570,20 +570,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:ts5.7":
-  version: 22.10.5
-  resolution: "@types/node@npm:22.10.5"
+  version: 22.10.7
+  resolution: "@types/node@npm:22.10.7"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/6a0e7d1fe6a86ef6ee19c3c6af4c15542e61aea2f4cee655b6252efb356795f1f228bc8299921e82924e80ff8eca29b74d9dd0dd5cc1a90983f892f740b480df
+  checksum: 10c0/c941b4689dfc4044b64a5f601306cbcb0c7210be853ba378a5dd44137898c45accedd796ee002ad9407024cac7ecaf5049304951cb1d80ce3d7cebbbae56f20e
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.17.15":
-  version: 18.19.70
-  resolution: "@types/node@npm:18.19.70"
+  version: 18.19.71
+  resolution: "@types/node@npm:18.19.71"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/68866e53b92be60d8840f5c93232d3ae39c71663101decc1d4f1870d9236c3c89e74177b616c2a2cabce116b1356f3e89c57df3e969c9f9b0e0b5c59b5f790f7
+  checksum: 10c0/9f9b4a1c4e2db2994ef36f165322b3bb807466e3f92751ed52a40af0212917bc6ecd12dc6775eb829176b71b26570bea9c6a0a2d9e3ae6b496721c71934244db
   languageName: node
   linkType: hard
 
@@ -2419,11 +2419,11 @@ __metadata:
   linkType: hard
 
 "es-object-atoms@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "es-object-atoms@npm:1.0.0"
+  version: 1.1.1
+  resolution: "es-object-atoms@npm:1.1.1"
   dependencies:
     es-errors: "npm:^1.3.0"
-  checksum: 10c0/1fed3d102eb27ab8d983337bb7c8b159dd2a1e63ff833ec54eea1311c96d5b08223b433060ba240541ca8adba9eee6b0a60cdbf2f80634b784febc9cc8b687b4
+  checksum: 10c0/65364812ca4daf48eb76e2a3b7a89b3f6a2e62a1c420766ce9f692665a29d94fe41fe88b65f24106f449859549711e4b40d9fb8002d862dfd7eb1c512d10be0c
   languageName: node
   linkType: hard
 
@@ -4445,11 +4445,11 @@ __metadata:
   linkType: hard
 
 "node-abi@npm:^3.3.0":
-  version: 3.71.0
-  resolution: "node-abi@npm:3.71.0"
+  version: 3.73.0
+  resolution: "node-abi@npm:3.73.0"
   dependencies:
     semver: "npm:^7.3.5"
-  checksum: 10c0/dbd0792ea729329cd9d099f28a5681ff9e8a6db48cf64e1437bf6a7fd669009d1e758a784619a1c4cc8bfd1ed17162f042c787654edf19a1f64b5018457c9c1f
+  checksum: 10c0/4cd237f2507f80048310f381198a07387b11cbaab7dfac61ccc40cdc83f2296c647df02b5ddfead9f40b845c696f0ce75fdaa01973d3f3f0686151e4f96d2c8c
   languageName: node
   linkType: hard
 
@@ -5571,9 +5571,9 @@ __metadata:
   linkType: hard
 
 "spdx-license-ids@npm:^3.0.0":
-  version: 3.0.20
-  resolution: "spdx-license-ids@npm:3.0.20"
-  checksum: 10c0/bdff7534fad6ef59be49becda1edc3fb7f5b3d6f296a715516ab9d972b8ad59af2c34b2003e01db8970d4c673d185ff696ba74c6b61d3bf327e2b3eac22c297c
+  version: 3.0.21
+  resolution: "spdx-license-ids@npm:3.0.21"
+  checksum: 10c0/ecb24c698d8496aa9efe23e0b1f751f8a7a89faedcdfcbfabae772b546c2db46ccde8f3bc447a238eb86bbcd4f73fea88720ef3b8394f7896381bec3d7736411
   languageName: node
   linkType: hard
 
