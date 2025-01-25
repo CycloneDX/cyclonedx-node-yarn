@@ -24,7 +24,7 @@ import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
-import { npath, ppath, xfs } from '@yarnpkg/fslib'
+import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import { isEnum } from 'typanion'
 
@@ -208,8 +208,9 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
     let outputFD: number = process.stdout.fd
     if (this.outputFile !== OutputStdOut) {
-      const outputFP = npath.toPortablePath(npath.resolve(process.cwd(), this.outputFile))
-      const outputFDir = ppath.dirname(outputFP)
+      const _outputFPn = npath.resolve(process.cwd(), this.outputFile)
+      const outputFP = npath.toPortablePath(_outputFPn)
+      const outputFDir = npath.toPortablePath(npath.dirname(_outputFPn))
       if (!xfs.existsSync(outputFDir)) {
         myConsole.info('INFO  | creating directory', outputFDir)
         xfs.mkdirSync(outputFDir, { recursive: true })
