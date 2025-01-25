@@ -365,11 +365,11 @@ function makeJsonReproducible (json) {
     .replace(
       new RegExp(
         // replace self metadata.tools.components.version
-        '          "          "name": "yarn-plugin-cyclonedx",\n' +
+        '          "name": "yarn-plugin-cyclonedx",\n' +
         '          "group": "@cyclonedx",\n' +
         `          "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+[^"]+)?"`
       ),
-      '          "         "name": "yarn-plugin-cyclonedx",\n' +
+      '          "name": "yarn-plugin-cyclonedx",\n' +
       '          "group": "@cyclonedx",\n' +
       '          "version": "thisVersion-testing"'
     )
