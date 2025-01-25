@@ -26,6 +26,8 @@ const { execFileSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
+const normalizePackageData = require('normalize-package-data')
+
 const projectRootPath = path.resolve(__dirname, '..')
 
 function fromYarnInfo (pkgName) {
@@ -71,12 +73,21 @@ function main (targetFile) {
   const data = {
     self: {
       name: selfNfo.name,
+      author: selfNfo.author,
+      description: selfNfo.description,
       version: selfNfo.version + buildMeta,
       homepage: selfNfo.homepage,
       repository: selfNfo.repository,
-      bugs: selfNfo.bugs
+      bugs: selfNfo.bugs,
+      license: selfNfo.license
     },
     cdxLib: fromYarnInfo('@cyclonedx/cyclonedx-library')
+  }
+
+  for (const pd of Object.values(data)) {
+    normalizePackageData(pd, true)
+    pd.readme = undefined
+    pd._id = undefined
   }
 
   fs.writeSync(

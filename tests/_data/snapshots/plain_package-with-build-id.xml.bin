@@ -2,46 +2,55 @@
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
     <tools>
-      <tool>
-        <name>yarn</name>
-        <version>yarnVersion-testing</version>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>yarn-plugin-cyclonedx</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="application">
+          <name>yarn</name>
+          <version>4.6.0</version>
+        </component>
+        <component type="library">
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>yarn-plugin-cyclonedx</name>
+          <version>1.1.0</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="demo-package-with-build-id@workspace:.">
       <name>demo-package-with-build-id</name>
       <version>1.0.0-123+456</version>
       <description>demo: package-with-build-id -- show how buildID in the version looks like</description>
-      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/package-with-build-id</purl>
+      <purl>pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git#tests/_data/testbeds/package-with-build-id</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>

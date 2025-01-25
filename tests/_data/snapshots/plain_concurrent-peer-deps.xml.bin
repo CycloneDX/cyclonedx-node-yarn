@@ -2,46 +2,55 @@
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
     <tools>
-      <tool>
-        <name>yarn</name>
-        <version>yarnVersion-testing</version>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>yarn-plugin-cyclonedx</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="application">
+          <name>yarn</name>
+          <version>4.1.0</version>
+        </component>
+        <component type="library">
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>yarn-plugin-cyclonedx</name>
+          <version>1.1.0</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="concurrent-peer-deps@workspace:.">
       <name>concurrent-peer-deps</name>
       <version>0.0.1</version>
       <description>demo: multiple dependencies requiring concurrent versions of a transitive peer dep</description>
-      <purl>pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git</purl>
+      <purl>pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
@@ -94,7 +103,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git</purl>
+      <purl>pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ljharb/has-symbols/issues</url>
@@ -120,7 +129,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-tostringtag.git</purl>
+      <purl>pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-tostringtag.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/inspect-js/has-tostringtag/issues</url>
@@ -146,7 +155,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-string@1.0.0?vcs_url=git%3A//github.com/ljharb/is-string.git</purl>
+      <purl>pkg:npm/is-string@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ljharb/is-string/issues</url>
@@ -172,7 +181,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-string@1.0.7?vcs_url=git%3A//github.com/ljharb/is-string.git</purl>
+      <purl>pkg:npm/is-string@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ljharb/is-string/issues</url>

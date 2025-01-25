@@ -172,15 +172,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:6.13.1":
-  version: 6.13.1
-  resolution: "@cyclonedx/cyclonedx-library@npm:6.13.1"
+"@cyclonedx/cyclonedx-library@npm:7.1.0":
+  version: 7.1.0
+  resolution: "@cyclonedx/cyclonedx-library@npm:7.1.0"
   dependencies:
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^3.0.1"
     ajv-formats-draft2019: "npm:^1.6.1"
     libxmljs2: "npm:^0.31 || ^0.32 || ^0.33 || ^0.35"
-    packageurl-js: "npm:>=0.0.6 <0.0.8 || ^1"
+    packageurl-js: "npm:^2.0.1"
     spdx-expression-parse: "npm:^3.0.1 || ^4"
     xmlbuilder2: "npm:^3.0.2"
   dependenciesMeta:
@@ -194,7 +194,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/1a4dc963c6011bd16285b1b8354897116d8b764effad17299c6a35e8022982dc25815091fcddeb3054fe9205c30c86fc4456eb1b811a63c924e0bc3a96366c3e
+  checksum: 10c0/49e33ba838c571373d45a5e3f2cb9974b3fc43219965e21d841cd19f4db53754be58b8d7bd8e9ffb83b93a754db83fb54e5193a529d8c11659658885e3af5377
   languageName: node
   linkType: hard
 
@@ -202,7 +202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:6.13.1"
+    "@cyclonedx/cyclonedx-library": "npm:7.1.0"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:ts5.7"
@@ -4752,10 +4752,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"packageurl-js@npm:>=0.0.6 <0.0.8 || ^1":
-  version: 1.2.1
-  resolution: "packageurl-js@npm:1.2.1"
-  checksum: 10c0/52e45da7704a2bc70baa3f2643dc48bbf60787379318781d84336954dc6b14c34ad9697f11a47798410d7cafaec3f4b8b878707cccf5edb62a6a5fa4fdb50491
+"packageurl-js@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "packageurl-js@npm:2.0.1"
+  checksum: 10c0/8a45bc925243bea0fd7f027b54bf7c363ab70dae2b01676d67856eb788352d7344f38b86c8cfa510410220c6848dc57bc152146bf6518fb06c272d3dbe003b55
   languageName: node
   linkType: hard
 

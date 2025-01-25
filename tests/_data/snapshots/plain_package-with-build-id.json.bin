@@ -4,53 +4,67 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "tools": [
-      {
-        "name": "yarn",
-        "version": "yarnVersion-testing"
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \"bugs.url\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \"repository.url\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "4.6.0"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "7.1.0",
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "1.1.0",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "demo-package-with-build-id",
       "version": "1.0.0-123+456",
       "bom-ref": "demo-package-with-build-id@workspace:.",
       "description": "demo: package-with-build-id -- show how buildID in the version looks like",
-      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git#tests/_data/testbeds/package-with-build-id",
+      "purl": "pkg:npm/demo-package-with-build-id@1.0.0-123+456?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git#tests/_data/testbeds/package-with-build-id",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",

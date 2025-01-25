@@ -4,53 +4,67 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "tools": [
-      {
-        "name": "yarn",
-        "version": "yarnVersion-testing"
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \"bugs.url\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \"repository.url\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "4.1.0"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "7.1.0",
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "1.1.0",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "concurrent-peer-deps",
       "version": "0.0.1",
       "bom-ref": "concurrent-peer-deps@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of a transitive peer dep",
-      "purl": "pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-node-yarn.git",
+      "purl": "pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
@@ -124,7 +138,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A//github.com/inspect-js/has-symbols.git",
+      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-symbols/issues",
@@ -158,7 +172,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A//github.com/inspect-js/has-tostringtag.git",
+      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-tostringtag.git",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-tostringtag/issues",
@@ -192,7 +206,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.0?vcs_url=git%3A//github.com/ljharb/is-string.git",
+      "purl": "pkg:npm/is-string@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",
@@ -226,7 +240,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A//github.com/ljharb/is-string.git",
+      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",
