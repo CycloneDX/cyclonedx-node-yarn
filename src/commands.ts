@@ -208,13 +208,13 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
     let outputFD: number = process.stdout.fd
     if (this.outputFile !== OutputStdOut) {
-      const _outputFPn = npath.resolve(process.cwd(), this.outputFile)
-      const outputFDir = npath.toPortablePath(npath.dirname(_outputFPn))
+      const outputFPn = npath.resolve(process.cwd(), this.outputFile)
+      const outputFDir = npath.toPortablePath(npath.dirname(outputFPn))
       if (!xfs.existsSync(outputFDir)) {
         myConsole.info('INFO  | creating directory', outputFDir)
         xfs.mkdirSync(outputFDir, { recursive: true })
       }
-      outputFD = xfs.openSync(npath.toPortablePath(_outputFPn), 'w')
+      outputFD = xfs.openSync(npath.toPortablePath(outputFPn), 'w')
     }
     myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
     const written = await writeAllSync(outputFD, serialized)
