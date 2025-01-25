@@ -9,7 +9,7 @@
         {
           "type": "application",
           "name": "yarn",
-          "version": "4.2.2"
+          "version": "yarnVersion-testing"
         },
         {
           "type": "library",
@@ -28,7 +28,7 @@
           "type": "library",
           "name": "yarn-plugin-cyclonedx",
           "group": "@cyclonedx",
-          "version": "1.1.0",
+          "version": "libVersion-testing",
           "author": "Jan Kowalleck",
           "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
           "licenses": [

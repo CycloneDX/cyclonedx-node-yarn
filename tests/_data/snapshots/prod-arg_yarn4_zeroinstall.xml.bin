@@ -5,7 +5,7 @@
       <components>
         <component type="application">
           <name>yarn</name>
-          <version>4.2.2</version>
+          <version>yarnVersion-testing</version>
         </component>
         <component type="library">
           <group>@cyclonedx</group>
@@ -22,7 +22,7 @@
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>yarn-plugin-cyclonedx</name>
-          <version>1.1.0</version>
+          <version>libVersion-testing</version>
           <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
           <licenses>
             <license>
