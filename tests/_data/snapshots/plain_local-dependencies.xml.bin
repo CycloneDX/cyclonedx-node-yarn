@@ -10,7 +10,7 @@
         <component type="library">
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <externalReferences>
             <reference type="website">
               <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
@@ -22,7 +22,7 @@
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>yarn-plugin-cyclonedx</name>
-          <version>libVersion-testing</version>
+          <version>thisVersion-testing</version>
           <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
           <licenses>
             <license>

@@ -365,12 +365,12 @@ function makeJsonReproducible (json) {
     .replace(
       new RegExp(
         // replace self metadata.tools.components.version
-        '          "name": "cyclonedx-library",\n' +
-        '          "group": "@cyclonedx",\n' +
+        '          "         "name": "yarn-plugin-cyclonedx",\n' +
+        '          "group": "@cyclonedx",",\n' +
         `          "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+[^"]+)?"`
       ),
-      '          "name": "cyclonedx-library",\n' +
-      '          "group": "@cyclonedx",\n' +
+      '          "         "name": "yarn-plugin-cyclonedx",\n' +
+      '          "group": "@cyclonedx",",\n' +
       '          "version": "thisVersion-testing"'
     )
     .replace(
@@ -387,11 +387,11 @@ function makeJsonReproducible (json) {
     .replace(
       // replace CDX-lib metadata.tools.components.version
       new RegExp(
-        '          "name": "yarn-plugin-cyclonedx",\n' +
+        '          "name": "cyclonedx-library",\n' +
         '          "group": "@cyclonedx",\n' +
         '          "version": ".+?"'
       ),
-      '          "name": "yarn-plugin-cyclonedx",\n' +
+      '          "name": "cyclonedx-library",\n' +
       '          "group": "@cyclonedx",\n' +
       '          "version": "libVersion-testing"'
     )
@@ -442,11 +442,11 @@ function makeXmlReproducible (xml) {
       // replace self metadata.tools.components.version
       new RegExp(
         '          <group>@cyclonedx</group>\n' +
-        '          <name>cyclonedx-library</name>\n' +
+        '          <name>yarn-plugin-cyclonedx</name>\n' +
         `          <version>${thisVersion}(?:\\+.+)?</version>`
       ),
       '          <group>@cyclonedx</group>\n' +
-      '          <name>cyclonedx-library</name>\n' +
+      '          <name>yarn-plugin-cyclonedx</name>\n' +
       '          <version>thisVersion-testing</version>'
     )
     .replace(
@@ -464,11 +464,11 @@ function makeXmlReproducible (xml) {
       // replace CDX-lib metadata.tools.components.version
       new RegExp(
         '          <group>@cyclonedx</group>\n' +
-        '          <name>yarn-plugin-cyclonedx</name>\n' +
+        '          <name>cyclonedx-library</name>\n' +
         '          <version>.+?</version>'
       ),
       '          <group>@cyclonedx</group>\n' +
-      '          <name>yarn-plugin-cyclonedx</name>\n' +
+      '          <name>cyclonedx-library</name>\n' +
       '          <version>libVersion-testing</version>'
     )
     .replace(
