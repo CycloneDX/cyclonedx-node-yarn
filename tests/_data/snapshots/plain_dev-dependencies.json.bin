@@ -4,46 +4,67 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "tools": [
-      {
-        "name": "yarn",
-        "version": "yarnVersion-testing"
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "yarn-plugin-cyclonedx",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \"bugs.url\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \"repository.url\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \"homepage\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "yarnVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "demo-dev-dependencies",
@@ -58,7 +79,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bssh%3A//git%40gitlab.example.com/demos/dev-dependencies",
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40gitlab.example.com%2Fdemos%2Fdev-dependencies",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/dev-dependencies",
@@ -90,7 +111,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/node",
+      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git#types/node",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -124,7 +145,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A//github.com/DefinitelyTyped/DefinitelyTyped.git#types/uuid",
+      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git#types/uuid",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -157,7 +178,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A//github.com/nodejs/undici.git",
+      "purl": "pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodejs%2Fundici.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/undici/issues",
@@ -190,7 +211,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A//github.com/uuidjs/uuid.git",
+      "purl": "pkg:npm/uuid@8.3.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fuuidjs%2Fuuid.git",
       "externalReferences": [
         {
           "url": "https://github.com/uuidjs/uuid/issues",
@@ -223,7 +244,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A//github.com/thenativeweb/uuidv4.git",
+      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A%2F%2Fgithub.com%2Fthenativeweb%2Fuuidv4.git",
       "externalReferences": [
         {
           "url": "https://github.com/thenativeweb/uuidv4/issues",

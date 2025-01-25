@@ -341,14 +341,40 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      // replace yarn metadata.tools.components.version
+      new RegExp('        {\n' +
+        '          "type": "application",\n' +
+        '          "name": "yarn",\n' +
+        '          "version": ".+?"\n' +
+        '        }'),
+      '        {\n' +
+      '          "type": "application",\n' +
+      '          "name": "yarn",\n' +
+      '          "version": "yarnVersion-testing"\n' +
+      '        }'
+    )
+    .replace(
       new RegExp(
+        // replace yarn metadata.tools.version
         '        "name": "yarn",\n' +
         '        "version": ".+?"'
       ),
       '        "name": "yarn",\n' +
       '        "version": "yarnVersion-testing"'
-    ).replace(
-      // replace metadata.tools.version
+    )
+    .replace(
+      new RegExp(
+        // replace self metadata.tools.components.version
+        '          "name": "yarn-plugin-cyclonedx",\n' +
+        '          "group": "@cyclonedx",\n' +
+        `          "version": "${JSON.stringify(thisVersion).slice(1, -1)}(?:\\+[^"]+)?"`
+      ),
+      '          "name": "yarn-plugin-cyclonedx",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "thisVersion-testing"'
+    )
+    .replace(
+      // replace self metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "yarn-plugin-cyclonedx",\n' +
@@ -357,8 +383,20 @@ function makeJsonReproducible (json) {
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "yarn-plugin-cyclonedx",\n' +
       '        "version": "thisVersion-testing"'
-    ).replace(
-      // replace metadata.tools.version
+    )
+    .replace(
+      // replace CDX-lib metadata.tools.components.version
+      new RegExp(
+        '          "name": "cyclonedx-library",\n' +
+        '          "group": "@cyclonedx",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "name": "cyclonedx-library",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "libVersion-testing"'
+    )
+    .replace(
+      // replace CDX-lib metadata.tools.version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
@@ -379,15 +417,40 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
-      // replace metadata.tools.version
+      // replace yarn metadata.tools.version
+      new RegExp(
+        '        <component type="application">\n' +
+        '          <name>yarn</name>\n' +
+        '          <version>.+?</version>\n' +
+        '        </component>'
+      ),
+      '        <component type="application">\n' +
+      '          <name>yarn</name>\n' +
+      '          <version>yarnVersion-testing</version>\n' +
+      '        </component>'
+    )
+    .replace(
+      // replace yarn metadata.tools.version
       new RegExp(
         '        <name>yarn</name>\n' +
         '        <version>.+?</version>'
       ),
       '        <name>yarn</name>\n' +
       '        <version>yarnVersion-testing</version>'
-    ).replace(
-      // replace metadata.tools.version
+    )
+    .replace(
+      // replace self metadata.tools.components.version
+      new RegExp(
+        '          <group>@cyclonedx</group>\n' +
+        '          <name>yarn-plugin-cyclonedx</name>\n' +
+        `          <version>${thisVersion}(?:\\+.+)?</version>`
+      ),
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>yarn-plugin-cyclonedx</name>\n' +
+      '          <version>thisVersion-testing</version>'
+    )
+    .replace(
+      // replace self metadata.tools.version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>yarn-plugin-cyclonedx</name>\n' +
@@ -396,8 +459,20 @@ function makeXmlReproducible (xml) {
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>yarn-plugin-cyclonedx</name>\n' +
       '        <version>thisVersion-testing</version>'
-    ).replace(
-      // replace metadata.tools.version
+    )
+    .replace(
+      // replace CDX-lib metadata.tools.components.version
+      new RegExp(
+        '          <group>@cyclonedx</group>\n' +
+        '          <name>cyclonedx-library</name>\n' +
+        '          <version>.+?</version>'
+      ),
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-library</name>\n' +
+      '          <version>libVersion-testing</version>'
+    )
+    .replace(
+      // replace CDX-lib metadata.tools.version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- add unreleased items here -->
+* BREAKING Changes
+  * Emit `.metadata.tools` as components ([#221] via [#254])  
+    This affects only CycloneDX spec-version 1.5 and later.
+  * Emitted `.purl` values might be partially url-encoded (via [#254])  
+    This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@7.1.0`, was `@6.13.1` (via [#254])
+
+[#221]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/221
+[#254]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/254
 
 ## 1.1.0 -- 2025-01-14
 
@@ -35,6 +45,7 @@ All notable changes to this project will be documented in this file.
 [#233]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/233
 [#237]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/237
 [#244]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/244
+[#]:
 
 ## 1.0.2 -- 2024-07-15
 

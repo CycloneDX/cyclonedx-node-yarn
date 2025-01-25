@@ -21,7 +21,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { AttachmentEncoding, ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Attachment, Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property, Tool } from '@cyclonedx/cyclonedx-library/Models'
+import { Attachment, Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -104,8 +104,8 @@ export class BomBuilder {
 
     bom.metadata.component = rootComponent
 
-    for await (const tool of this.makeTools()) {
-      bom.metadata.tools.add(tool)
+    for await (const toolC of this.makeToolCs()) {
+      bom.metadata.tools.components.add(toolC)
     }
 
     if (this.reproducible) {
@@ -338,12 +338,12 @@ export class BomBuilder {
     return purl
   }
 
-  private async * makeTools (): AsyncGenerator<Tool> {
-    yield new Tool({ name: 'yarn', version: YarnVersion ?? 'UNKNOWN' })
-    for (const nfo of Object.values(await getBuildtimeInfo())) {
-      const tool = this.toolBuilder.makeTool(nfo)
-      if (tool !== undefined) {
-        yield tool
+  private async * makeToolCs (): AsyncGenerator<Component> {
+    yield new Component(ComponentType.Application, 'yarn', { version: YarnVersion ?? undefined })
+    for (const pd of Object.values(await getBuildtimeInfo())) {
+      const toolC = this.componentBuilder.makeComponent(pd, ComponentType.Library)
+      if (toolC !== undefined) {
+        yield toolC
       }
     }
   }
