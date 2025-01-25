@@ -195,7 +195,8 @@ suite('integration', () => {
     }).timeout(longTestTimeout)
 
     test('silent to file', async () => {
-      const tmpFile = path.join(tmpPath, 'stf.cdx.json')
+      // the dir `stf...` is expected to be created automatically
+      const tmpFile = path.join(tmpPath, `stf${Math.random()}`, 'bom.cdx.json')
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
         ['--no-verbose', '--output-file', tmpFile]
