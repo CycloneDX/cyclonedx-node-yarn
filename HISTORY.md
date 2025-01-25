@@ -5,26 +5,24 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- add unreleased items here -->
+
 * BREAKING Changes
   * CLI option `--spec-version` defaults to `1.6`, was `1.5` ([#222] via [#251])
   * Emit `.metadata.tools` as components ([#221] via [#254])  
     This affects only CycloneDX spec-version 1.5 and later.
   * Emitted `.purl` values might be partially url-encoded (via [#254])  
     This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
+  * Create dir for output file if not exists ([#253] via [#255])  
+    This is only a breaking change if you relied on non-existent result paths to cause errors.
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@7.1.0`, was `@6.13.1` (via [#254])
 
 [#221]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/221
 [#222]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/222
 [#251]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/251
+[#253]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/253
 [#254]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/254
-
-
-* BREAKING Changes
-  * CLI option `--spec-version` defaults to `1.6`, was `1.5` ([#222] via [#251])
-
-[#222]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/222
-[#251]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/251
+[#255]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/255
 
 ## 1.1.0 -- 2025-01-14
 
