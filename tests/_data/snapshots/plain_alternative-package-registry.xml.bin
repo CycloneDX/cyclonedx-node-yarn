@@ -11,6 +11,11 @@
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
           <version>libVersion-testing</version>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
           <externalReferences>
             <reference type="website">
               <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>

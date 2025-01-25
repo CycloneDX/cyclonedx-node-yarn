@@ -47,7 +47,8 @@ function fromYarnInfo (pkgName) {
   return {
     name: /^(.+)@.+:.+$/.exec(pkgInfo.value)[1],
     version: pkgInfo.children.Version,
-    homepage: pkgInfo.children.Manifest.Homepage
+    homepage: pkgInfo.children.Manifest.Homepage,
+    license: pkgInfo.children.Manifest.License
   }
 }
 

@@ -16,6 +16,13 @@
           "name": "cyclonedx-library",
           "group": "@cyclonedx",
           "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
           "externalReferences": [
             {
               "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
