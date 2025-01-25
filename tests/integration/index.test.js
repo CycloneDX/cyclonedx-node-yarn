@@ -283,7 +283,7 @@ suite('integration', () => {
 
         test('dogfooding', async () => {
           const sbom = runCLI(projectRootPath, ['--output-format', format])
-          const validationErrors = await validate(format, sbom, '1.5')
+          const validationErrors = await validate(format, sbom, defaultCdxSpecVersion)
           assert.equal(validationErrors, null)
         }).timeout(longTestTimeout)
       })
