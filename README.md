@@ -63,7 +63,7 @@ $ yarn cyclonedx
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   --spec-version #0        Which version of CycloneDX to use.
-                           (choices: 1.6, 1.5, 1.4, 1.3, 1.2, default: 1.5)
+                           (choices: 1.6, 1.5, 1.4, 1.3, 1.2, default: 1.6)
   --output-format #0       Which output format to use.
                            (choices: JSON, XML, default: JSON)
   --output-file #0         Path to the output file.

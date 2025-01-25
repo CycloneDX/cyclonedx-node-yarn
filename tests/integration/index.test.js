@@ -57,7 +57,7 @@ const testSetups = [
 
 // latest spec version has all the features ...
 const latestCdxSpecVersion = Spec.Version.v1dot6
-const defaultCdxSpecVersion = Spec.Version.v1dot5
+const defaultCdxSpecVersion = Spec.Version.v1dot6
 
 const testRootPath = path.resolve(__dirname, '..')
 const projectRootPath = path.resolve(testRootPath, '..')
@@ -283,7 +283,7 @@ suite('integration', () => {
 
         test('dogfooding', async () => {
           const sbom = runCLI(projectRootPath, ['--output-format', format])
-          const validationErrors = await validate(format, sbom, '1.5')
+          const validationErrors = await validate(format, sbom, defaultCdxSpecVersion)
           assert.equal(validationErrors, null)
         }).timeout(longTestTimeout)
       })
