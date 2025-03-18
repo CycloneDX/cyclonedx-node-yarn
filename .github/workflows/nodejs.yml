@@ -43,6 +43,8 @@ jobs:
         run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
+      - name: Setup subject
+        run: yarn run dev-setup:gbti --immutable
       - name: build:gbti
         run: yarn run build:gbti
       - name: build:bundle-dev
@@ -141,7 +143,7 @@ jobs:
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
       - name: install tools
-        run: pip install -r tools/test-3rd-party-licenses.requirements.txt
+        run: pip install -r tools/test-3rd-party-licenses/requirements.txt
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -161,7 +163,7 @@ jobs:
       - name: make NOTICE and summary
         run: |
           mkdir -p _tmp
-          yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary.json
+          yarn --cwd tools/write-3rd-party-licenses run main _tmp/NOTICE _tmp/lsummary.json
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4

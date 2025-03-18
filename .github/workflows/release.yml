@@ -102,6 +102,12 @@ jobs:
         run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
+      - name: Setup gbti
+        run: yarn run dev-setup:gbti --immutable
+      - name: Setup wdm
+        run: yarn run dev-setup:wdm --immutable
+      - name: Setup w3pl
+        run: yarn run dev-setup:w3pl --immutable
       - name: build
         run: yarn run build
       - name: artifact build result
@@ -133,7 +139,7 @@ jobs:
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
       - name: install tools
-        run: pip install -r tools/test-3rd-party-licenses.requirements.txt
+        run: pip install -r tools/test-3rd-party-licenses/requirements.txt
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4

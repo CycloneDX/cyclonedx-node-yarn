@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "main.js",
+  "dependencies": {
+    "normalize-package-data": "6.0.2"
+  },
+  "devDependencies": {
+    "@types/normalize-package-data": "^2.4.4"
+  },
+  "scripts": {
+    "main": "node main.js"
+  }
+}

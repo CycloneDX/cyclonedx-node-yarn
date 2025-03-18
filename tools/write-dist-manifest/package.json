@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "main": "node main.js"
+  }
+}

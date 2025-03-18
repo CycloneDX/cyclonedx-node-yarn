@@ -29,7 +29,7 @@ const unzip = require('extract-zip')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
 
-const projectRoot = join(__dirname, '..')
+const projectRoot = join(__dirname, '..', '..')
 
 const tempDir = mkdtempSync(join(__dirname, '_tmp', 'w3pl'))
 process.once('exit', () => {

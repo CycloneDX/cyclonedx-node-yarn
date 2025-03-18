@@ -24,7 +24,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const { readFileSync, writeFileSync } = require('fs')
 const { join, dirname } = require('path')
 
-const projectRoot = join(__dirname, '..')
+const projectRoot = join(__dirname, '..', '..')
 
 const manifestSourceFile = join(projectRoot, 'package.json')
 

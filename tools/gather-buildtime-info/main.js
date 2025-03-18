@@ -28,7 +28,7 @@ const path = require('path')
 
 const normalizePackageData = require('normalize-package-data')
 
-const projectRootPath = path.resolve(__dirname, '..')
+const projectRootPath = path.resolve(__dirname, '..', '..')
 
 function fromYarnInfo (pkgName) {
   const pkgInfo = JSON.parse(execFileSync('yarn', [
