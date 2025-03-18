@@ -13,7 +13,8 @@
 
 ----
 
-Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.
+Create [CycloneDX] Software Bill of Materials (SBOM) from _[yarn]_ projects.  
+This is probably the most accurate, complete SBOM generator for yarn-based projects.
 
 ## Requirements
 
