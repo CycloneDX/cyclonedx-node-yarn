@@ -193,6 +193,18 @@ export default [
     }
   },
   {
+    files: ['src/*.ts'],
+    languageOptions: {
+      globals: globals.node
+    }
+  },
+  {
+    files: ['tools/*.{js,cjs,mjs}'],
+    languageOptions: {
+      globals: globals.node
+    }
+  },
+  {
     name: 'project-specific',
     files: ['src/*.ts'],
     rules: {
