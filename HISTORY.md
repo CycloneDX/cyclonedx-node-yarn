@@ -7,16 +7,17 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * BREAKING Changes
-  * Dropped support for `node<20.18.0`
+  * Dropped support for `node<20.18.0` ([#260] via [#265])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@7.1.0` (via [#267])
 * Build
-  * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` ([#260] via [#261])
+  * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#261])
   * Use _@yarnpkg/builder_ `v4.2.1` now, was `v4.2.0` (via [#262])
 
 [#260]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/260
 [#261]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/261
 [#262]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/262
+[#265]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/265
 [#267]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/267
 
 
