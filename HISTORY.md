@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING Changes
   * Dropped support for `node<20.18.0`
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@7.1.0` (via [#])
 * Build
   * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` ([#260] via [#261])
 
