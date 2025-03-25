@@ -66,6 +66,7 @@
     "xmlbuilder2": "3.1.1"
   },
   "devDependencies": {
+    "@eslint/js": "9.23.0",
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "ts5.8",
@@ -74,21 +75,25 @@
     "@typescript-eslint/parser": "6.21.0",
     "@yarnpkg/builder": "4.2.1",
     "c8": "^10.1.2",
-    "eslint": "8.57.1",
-    "eslint-config-love": "43.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-header": "3.1.1",
+    "eslint": "9.23.0",
+    "eslint-config-love": "119.0.0",
+    "eslint-plugin-editorconfig": "4.0.3",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-n": "16.6.2",
-    "eslint-plugin-promise": "6.6.0",
+    "eslint-plugin-jsdoc": "50.6.8",
+    "eslint-plugin-license-header": "0.8.0",
+    "eslint-plugin-n": "17.16.2",
+    "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
+    "eslint-plugin-tsdoc": "0.4.0",
     "extract-zip": "^2.0.1",
     "fast-glob": "^3.3.2",
+    "globals": "^16.0.0",
     "mkdirp": "^3.0.1",
     "mocha": "11.1.0",
     "npm-run-all2": "^7.0.2",
     "rimraf": "^6.0.1",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.27.0"
   },
   "type": "commonjs",
   "engines": {
@@ -124,7 +129,8 @@
       "/bin/cyclonedx-yarn-cli.js"
     ],
     "directories": {},
-    "scripts": {}
+    "scripts": {},
+    "workspaces": []
   },
   "scripts": {
     "build": "run-s -n build:gbti build:bundle",
