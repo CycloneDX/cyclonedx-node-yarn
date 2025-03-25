@@ -184,6 +184,49 @@ export default [
       '**/.idea/',
       '**/.vscode/',
       licenseHeaderFile,
+    ],
+  },
+  // project specifics
+  {
+    name: 'project-specific',
+    rules: {
+      "complexity": ["error", { "max": 15 }]
+    }
+  },
+  {
+    name: 'project-specific',
+    files: ['src/*.ts'],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'warn',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+    }
+  },
+  {
+    files: ['**/*.js'],
+    languageOptions: { sourceType: 'commonjs' }
+  },
+  {
+    files: [
+      '**/*.{test,spec}.{js,mjs,cjs,ts}',
+      'tests/**.{js,mjs,cjs,ts}'
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.mocha,
+      }
+    }
+  },
+  {
+    files: ['src/**/*.ts'],
+    languageOptions: {
+      parserOptions: {
+        project: path.join(__dirname, 'tsconfig.json'),
+      },
+    },
+  },
+  {
+    ignores: [
       '/.yarn/**',
       '/.pnp.*',
       '/reports/',
@@ -191,6 +234,6 @@ export default [
       '/dist/',
       '/docs/',
       '/src/__buildtimeInfo.json'
-    ],
+    ]
   }
 ]
