@@ -239,11 +239,13 @@ export default [
   {
     ignores: [
       '/.yarn/**',
+      '/yarn.*',
       '/.pnp.*',
       '/reports/',
       '/bundles/',
       '/dist/',
       '/docs/',
+      'tests/_data/',
       '/src/__buildtimeInfo.json'
     ]
   }
