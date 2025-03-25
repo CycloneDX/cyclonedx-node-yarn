@@ -72,7 +72,7 @@
     "@types/normalize-package-data": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
-    "@yarnpkg/builder": "4.2.0",
+    "@yarnpkg/builder": "4.2.1",
     "c8": "^10.1.2",
     "eslint": "8.57.1",
     "eslint-config-love": "43.1.0",
@@ -146,5 +146,5 @@
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
   "preferUnplugged": true,
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.7.0"
 }
