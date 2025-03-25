@@ -25,12 +25,12 @@ const path = require('node:path')
 
 const { suite, test } = require('mocha')
 
-const { Validation, Spec } = require('@cyclonedx/cyclonedx-library')
-
 const {
   name: thisName,
   version: thisVersion
 } = require('../../package.json')
+const { Spec, Validation } = require('@cyclonedx/cyclonedx-library')
+
 
 const testSetups = [
   /* region functional tests */
@@ -79,8 +79,8 @@ suite('integration', () => {
   /**
    * @param {string} cwd
    * @param {string[]} [args]
-   * @param {Object.<string, string>} [env]
-   * @returns {SpawnSyncReturns.<string>}
+   * @param {Object<string, string>} [env]
+   * @returns {import('node:child_process').SpawnSyncReturns<string>}
    */
   function _rawRunCLI (cwd, args = [], env = {}) {
     return spawnSync(
@@ -100,7 +100,7 @@ suite('integration', () => {
   /**
    * @param {string} cwd
    * @param {string[]} [args]
-   * @param {Object.<string, string>} [env]
+   * @param {Object<string, string>} [env]
    * @returns {string} the STDOUT
    */
   function runCLI (cwd, args = undefined, env = undefined) {
@@ -115,7 +115,7 @@ suite('integration', () => {
    * @param {string|string[]} testSetup
    * @param {'JSON'|'XML'} format
    * @param {string[]} [additionalArgs]
-   * @param {Object.<string, string>} [additionalEnv]
+   * @param {Object<string, string>} [additionalEnv]
    */
   async function runTest (
     purpose, testSetup, format,

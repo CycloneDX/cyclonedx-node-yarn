@@ -46,6 +46,7 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   INVALID: 2
 })
 
+/* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters -- needed for override downstream */
 function makeChoiceSwitch<T = string> (
   descriptor: string,
   choices: readonly string[],
@@ -130,14 +131,14 @@ export class MakeSbomCommand extends Command<CommandContext> {
    */
 
   async execute (): Promise<number> {
+    const myConsole = makeConsoleLogger(this.verbosity, this.context)
+    const projectDir = this.context.cwd
+
     if (YarnVersionTuple !== null && YarnVersionTuple[0] < 3) {
-      console.error('Error: expected yarn version >= 3 - got', YarnVersionTuple)
+      myConsole.error('Error: expected yarn version >= 3 - got', YarnVersionTuple)
       return ExitCode.INVALID
     }
 
-    const projectDir = this.context.cwd
-
-    const myConsole = makeConsoleLogger(this.verbosity, this.context)
     myConsole.debug('DEBUG | YARN_VERSION:', YarnVersionTuple)
     myConsole.debug('DEBUG | options: %j', {
       specVersion: this.specVersion,
@@ -188,6 +189,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       throw new Error('unsupported spec-version')
     }
 
+    /* eslint-disable-next-line @typescript-eslint/init-declarations -- acknowledged */
     let serializer: SerializeTypes.Serializer
     switch (this.outputFormat) {
       case OutputFormat.XML:

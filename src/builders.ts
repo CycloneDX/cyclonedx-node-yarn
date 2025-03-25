@@ -26,7 +26,7 @@ import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
-import normalizePackageData from 'normalize-package-data'
+import normalizePackageJson from 'normalize-package-data'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
@@ -39,7 +39,7 @@ import {
 import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
-type ManifestFetcher = (pkg: Package) => Promise<any>
+type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
 type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
 
 interface BomBuilderOptions {
@@ -147,7 +147,7 @@ export class BomBuilder {
     return bom
   }
 
-  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType | undefined): Component | false | undefined {
+  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType  ): Component | false | undefined {
     return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
@@ -161,11 +161,11 @@ export class BomBuilder {
       report: new ThrowReport(),
       cacheOptions: { skipIntegrityCheck: true }
     }
-    return async function (pkg: Package): Promise<any> {
+    return async function (pkg: Package): Promise<NonNullable<any>> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
       try {
         const manifestPath = ppath.join(prefixPath, 'package.json')
-        return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8'))
+        return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8')) ?? {}
       } finally {
         if (releaseFs !== undefined) {
           releaseFs()
@@ -227,11 +227,11 @@ export class BomBuilder {
     pkg: Package,
     fetchManifest: ManifestFetcher,
     fetchLicenseEvidence: LicenseEvidenceFetcher,
-    type?: ComponentType | undefined
+    type?: ComponentType
   ): Promise<Component | false | undefined> {
     const manifest = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */
+    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- needed */
     manifest.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
     manifest.version = pkg.version
     const component = this.makeComponent(pkg, manifest, type)
@@ -244,20 +244,24 @@ export class BomBuilder {
     return component
   }
 
-  private makeComponent (locator: Locator, manifest: any, type?: ComponentType | undefined): Component | false | undefined {
-    // work with a deep copy, because `normalizePackageData()` might modify the data
+  private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | false | undefined {
+    // work with a deep copy, because `normalizePackageJson()` might modify the data
     const manifestC = structuredClonePolyfill(manifest)
-    normalizePackageData(manifestC as normalizePackageData.Input)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
+    normalizePackageJson(manifestC as normalizePackageJson.Input /* add debug for warnings? */)
     // region fix normalizations
     if (isString(manifest.version)) {
       // allow non-SemVer strings
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- false positive */
       manifestC.version = manifest.version.trim()
     }
     // endregion fix normalizations
 
-    // work with a deep copy, because `normalizePackageData()` might modify the data
+    // work with a deep copy, because `normalizePackageJson()` might modify the data
     const component = this.componentBuilder.makeComponent(
-      manifestC as normalizePackageData.Package, type)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
+      manifestC as normalizePackageJson.Package,
+      type)
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j', locator)
       return undefined
@@ -314,6 +318,8 @@ export class BomBuilder {
         // see https://github.com/yarnpkg/berry/tree/master/packages/plugin-file
         break
       }
+      default:
+        break
     }
 
     // even private packages may have a PURL for identification
@@ -370,8 +376,9 @@ export class BomBuilder {
   ): AsyncGenerator<Component> {
     // ATTENTION: multiple packages may have the same `identHash`, but the `locatorHash` is unique.
     const knownComponents = new Map<LocatorHash, Component>([[pkg.locatorHash, component]])
-    const pending: [[Package, Component]] = [[pkg, component]]
-    let pendingEntry
+    type pendingType = [Package, Component]
+    const pending: pendingType[] = [[pkg, component]]
+    let pendingEntry: pendingType | undefined = undefined
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
       for (const depPkg of this.getDeps(pendingPkg, project)) {

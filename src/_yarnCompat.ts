@@ -24,6 +24,7 @@ export const YarnVersionTuple = YarnVersion === null
   : Object.freeze(YarnVersion.split('.').map(Number))
 
 export function wsAnchoredPackage (ws: Workspace): Package {
+  /* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- needed for yarn3compat */
   return ws.anchoredPackage ?? // since yarn4
     ws.project.storedPackages.get(ws.anchoredLocator.locatorHash)
 }

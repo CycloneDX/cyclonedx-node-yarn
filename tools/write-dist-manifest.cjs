@@ -17,12 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/** @internal
+/**
  * this tool is not for public use.
+ * @internal
  */
 
-const { readFileSync, writeFileSync } = require('fs')
-const { join, dirname } = require('path')
+const { readFileSync, writeFileSync } = require('node:fs')
+const { dirname, join } = require('node:path')
 
 const projectRoot = join(__dirname, '..')
 

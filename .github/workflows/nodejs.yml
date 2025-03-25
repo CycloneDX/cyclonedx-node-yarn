@@ -90,15 +90,15 @@ jobs:
       - name: test
         run: >
           yarn run test:standard
-          --format checkstyle
-          --output-file "$REPORTS_DIR/eslint.xml"
-      - name: Publish Checkstyle report
-        # see https://github.com/Juuxel/publish-checkstyle-report
-        uses: Juuxel/publish-checkstyle-report@v2
+          --format json
+          --output-file "$REPORTS_DIR/eslint.json"
+      - name: Annotate Code
         if: ${{ failure() || success() }}
+        # see https://github.com/DerLev/eslint-annotations
+        uses: DerLev/eslint-annotations@v2
         with:
-          reports: ${{ env.REPORTS_DIR }}/eslint.xml
-      - name: artifact build result
+          eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
+      - name: artifact eslint result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         if: ${{ failure() }}
