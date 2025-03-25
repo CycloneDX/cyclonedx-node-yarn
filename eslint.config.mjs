@@ -199,6 +199,12 @@ export default [
     }
   },
   {
+    files: ['bin/*.{js,cjs,mjs}'],
+    languageOptions: {
+      globals: globals.node
+    }
+  },
+  {
     files: ['tools/*.{js,cjs,mjs}'],
     languageOptions: {
       globals: globals.node
@@ -229,6 +235,14 @@ export default [
     }
   },
   {
+    files: [
+      'tests/integration/setup.{js,cjs,mjs}'
+    ],
+    languageOptions: {
+      globals: globals.node,
+    }
+  },
+  {
     files: ['src/**/*.ts'],
     languageOptions: {
       parserOptions: {
@@ -237,16 +251,18 @@ export default [
     },
   },
   {
+    // global ignores must have nothing but a 'ignores' property!
+    // see https://github.com/eslint/eslint/discussions/17429#discussioncomment-6579229
     ignores: [
-      '/.yarn/**',
-      '/yarn.*',
-      '/.pnp.*',
-      '/reports/',
-      '/bundles/',
-      '/dist/',
-      '/docs/',
-      'tests/_data/',
-      '/src/__buildtimeInfo.json'
+      '.yarn/',
+      'yarn.*',
+      '.pnp.*',
+      'reports/',
+      'bundles/',
+      'dist/',
+      'docs/',
+      'tests/_data/', 'tests/_tmp/',
+      'src/__buildtimeInfo.json'
     ]
   }
 ]

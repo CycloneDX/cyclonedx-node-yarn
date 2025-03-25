@@ -1,3 +1,5 @@
+/* eslint-disable jsdoc/valid-types */
+
 /**
  * mocha config
  * @see {@link https://mochajs.org/#configuring-mocha-nodejs}
