@@ -36,7 +36,6 @@ import {
   tryRemoveSecretsFromUrl,
   trySanitizeGitUrl
 } from './_helpers'
-import { wsAnchoredPackage } from './_yarnCompat'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
@@ -121,7 +120,7 @@ export class BomBuilder {
 
     // region components
 
-    const rootPackage = wsAnchoredPackage(workspace)
+    const rootPackage = workspace.anchoredPackage
     if (this.omitDevDependencies) {
       for (const dep of workspace.manifest.devDependencies.keys()) {
         rootPackage.dependencies.delete(dep)

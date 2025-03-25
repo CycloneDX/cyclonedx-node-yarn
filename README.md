@@ -19,7 +19,7 @@ This is probably the most accurate, complete SBOM generator for yarn-based proje
 ## Requirements
 
 * `node >= 20.18.0`
-* `yarn >= 3` (berry)
+* `yarn >= 4.0.0` (berry)
 
 However, there are older version of this software which support 
 * Node v18 and later

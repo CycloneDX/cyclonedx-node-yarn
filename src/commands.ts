@@ -23,13 +23,12 @@ import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
 import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
-import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
+import { type CommandContext, Configuration, Project, YarnVersion } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
-import { YarnVersionTuple } from './_yarnCompat'
 import { BomBuilder } from './builders'
 import { makeConsoleLogger } from './logger'
 
@@ -45,6 +44,12 @@ const ExitCode: Readonly<Record<string, number>> = Object.freeze({
   FAILURE: 1,
   INVALID: 2
 })
+
+
+export const YarnVersionTuple = YarnVersion === null
+  ? null
+  : Object.freeze(YarnVersion.split('.').map(Number))
+
 
 /* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters -- needed for override downstream */
 function makeChoiceSwitch<T = string> (

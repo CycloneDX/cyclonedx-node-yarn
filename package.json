@@ -94,7 +94,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "yarn": ">=3",
+    "yarn": ">=4",
     "node": ">=20.18.0"
   },
   "directories": {
