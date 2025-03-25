@@ -17,9 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { BaseCommand } from '@yarnpkg/cli'
 import type { Plugin } from '@yarnpkg/core'
 
-import { BaseCommand } from '@yarnpkg/cli'
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { MakeSbomCommand } from './commands'
 

@@ -25,9 +25,9 @@ import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XM
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
+import { Command, Option } from 'clipanion'
 import { isEnum } from 'typanion'
 
-import { Command, Option } from 'clipanion'
 import { writeAllSync } from './_helpers'
 import { YarnVersionTuple } from './_yarnCompat'
 import { BomBuilder } from './builders'

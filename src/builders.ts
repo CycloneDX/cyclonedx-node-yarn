@@ -25,9 +25,9 @@ import { Attachment, Bom, Component, ComponentEvidence, ExternalReference, type 
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
+import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageJson from 'normalize-package-data'
 
-import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
   getMimeForLicenseFile,
