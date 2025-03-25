@@ -152,19 +152,19 @@ export default [
       },
     },
     rules: {
-      //'@typescript-eslint/consistent-type-imports': ['error', {
-      //  fixStyle: 'separate-type-imports',
-      //}],
-      //'@typescript-eslint/unbound-method': ['error', {
-      //  ignoreStatic: true,
-      //}],
-      //'class-methods-use-this': 'off',
-      //'@typescript-eslint/class-methods-use-this': 'off',
-      //'@typescript-eslint/no-redundant-type-constituents': 'off',
-      //'@typescript-eslint/no-magic-numbers': 'off',
-      //'@typescript-eslint/no-explicit-any': 'off',
-      //'@typescript-eslint/prefer-destructuring': 'off',
-      //'tsdoc/syntax': 'error',
+      '@typescript-eslint/consistent-type-imports': ['error', {
+        fixStyle: 'separate-type-imports',
+      }],
+      '@typescript-eslint/unbound-method': ['error', {
+        ignoreStatic: true,
+      }],
+      'class-methods-use-this': 'off',
+      '@typescript-eslint/class-methods-use-this': 'off',
+      '@typescript-eslint/no-redundant-type-constituents': 'off',
+      '@typescript-eslint/no-magic-numbers': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/prefer-destructuring': 'off',
+      'tsdoc/syntax': 'error',
     },
   },
   {
