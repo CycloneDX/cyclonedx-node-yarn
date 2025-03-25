@@ -47,7 +47,6 @@ const testSetups = [
   'local-workspaces',
   'package-aliasing',
   'package-with-build-id',
-  'yarn3_zeroinstall',
   'yarn4_zeroinstall'
   /* endregion functional tests */
   /* region regression tests */
@@ -169,6 +168,13 @@ suite('integration', () => {
       assert.notEqual(res.status, 0)
     }).timeout(longTestTimeout)
 
+    test('yarn3 fails', () => {
+      const res = _rawRunCLI(path.join(testbedsPath, 'yarn3_zeroinstall'), ['-vvv'])
+      assert.notEqual(res.status, 0)
+      assert.match(res.stderr,
+        new RegExp('error: expected yarn version >= 4', 'i'))
+    }).timeout(longTestTimeout)
+
     test('silent', async () => {
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
@@ -243,7 +249,6 @@ suite('integration', () => {
         suite('prod', () => {
           [
             'dev-dependencies',
-            'yarn3_zeroinstall',
             'yarn4_zeroinstall'
           ].forEach(testSetup => {
             test(`arg: ${testSetup}`,
@@ -259,7 +264,6 @@ suite('integration', () => {
         suite('short PURLs', () => {
           [
             'alternative-package-registry',
-            'yarn3_zeroinstall',
             'yarn4_zeroinstall'
           ].forEach(testSetup => {
             test(`${testSetup}`,

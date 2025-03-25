@@ -139,8 +139,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
     const projectDir = this.context.cwd
 
-    if (YarnVersionTuple !== null && YarnVersionTuple[0] < 3) {
-      myConsole.error('Error: expected yarn version >= 3 - got', YarnVersionTuple)
+    if (YarnVersionTuple !== null && YarnVersionTuple[0] < 4) {
+      myConsole.error('Error: expected yarn version >= 4 - got', YarnVersionTuple)
       return ExitCode.INVALID
     }
 
