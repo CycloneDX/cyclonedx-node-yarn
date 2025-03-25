@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* BREAKING Changes
+  * Dropped support for `node<20.18.0`
 * Build
   * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#261])
 
