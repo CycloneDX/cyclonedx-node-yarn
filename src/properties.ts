@@ -23,7 +23,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  * Yes, this is a yarn-centric tool...
  * But still, we go with npm-taxonomy, since yarn utilizes the package-definitions from `npm`/npmjs.org
  *
- * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
  */
 export const enum PropertyNames {
   Reproducible = 'cdx:reproducible',
@@ -33,7 +33,7 @@ export const enum PropertyNames {
 
 /**
  * CDX properties' values' boolean representation - specific to this very tool.
- * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md npm property taxonomy}
+ * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
  */
 export const enum PropertyValueBool {
   True = 'true',

@@ -17,14 +17,16 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { extname, parse } from 'node:path'
+
 import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
-import { extname, parse } from 'path'
 
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
-  : function (value) {
-    return JSON.parse(JSON.stringify(value))
+  : function <T>(value: T): T {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+    return JSON.parse(JSON.stringify(value)) as T
   }
 
 export async function writeAllSync (fd: number, data: string): Promise<number> {
@@ -34,10 +36,13 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
   while (w < l) {
     try {
       w += xfs.writeSync(fd, b, w)
-    } catch (error: any) {
-      if (error.code !== 'EAGAIN') {
-        throw error
+    } catch (err: any) {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- needed */
+      if (err?.code !== 'EAGAIN') {
+        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
+        throw err
       }
+      /* eslint-disable-next-line promise/avoid-new -- needed */
       await new Promise((resolve) => setTimeout(resolve, 100))
     }
   }

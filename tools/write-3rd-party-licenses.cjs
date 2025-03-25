@@ -17,14 +17,16 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/** @internal
+/**
  * this tool is not for public use.
  * It's sole existence is tailored to the needs of this project... not general purpose, yet...
+ * @internal
  */
 
-const { createInterface: rlCreateInterface } = require('readline')
-const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('fs')
-const { join, resolve, dirname } = require('path')
+const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
+const { dirname, join, resolve } = require('node:path')
+const { createInterface: rlCreateInterface } = require('node:readline')
+
 const unzip = require('extract-zip')
 const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
@@ -43,7 +45,7 @@ const filePathInZipRE = /^(.+\.zip)[/\\](.+)$/
 
 /**
  * @param {string} filePath
- * @param {Object.<string, string>} cache
+ * @param {Object<string, string>} cache
  * @return {[undefined, undefined] | [string, *]}
  */
 async function getPackageMP (filePath, cache) {
@@ -165,7 +167,7 @@ if (require.main === module) {
   const outputFile = process.argv[2] || `${metaFile}.NOTICE`
   const lsummaryFile = process.argv[3] || `${outputFile}.lsummary.json`
   const includeLicense = false
-  const assert = require('assert')
+  const assert = require('node:assert')
   main(outputFile, includeLicense).then(ils => {
     const ol = JSON.parse(readFileSync(join(projectRoot, 'package.json'))).license
     assert(typeof ol === 'string' && ol.length > 0)

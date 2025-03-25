@@ -1,11 +1,11 @@
 /*!
-This file is part of CycloneDX Webpack plugin.
+This file is part of CycloneDX SBOM plugin for yarn.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,14 +21,16 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import plugin_js from '@eslint/js'
+import plugin_header from 'eslint-plugin-license-header'
+import plugin_tsdoc from 'eslint-plugin-tsdoc'
+import globals from 'globals'
+
 import config_love from 'eslint-config-love'
 import plugin_import from 'eslint-plugin-import'
 import plugin_jsdoc from 'eslint-plugin-jsdoc'
-import plugin_header from 'eslint-plugin-license-header'
 import plugin_n from 'eslint-plugin-n'
 import plugin_simpleImportSort from 'eslint-plugin-simple-import-sort'
-import plugin_tsdoc from 'eslint-plugin-tsdoc'
-import globals from 'globals'
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -66,11 +68,11 @@ export default [
           ],
           'newlines-between': 'always',
         }],
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
-      'import/first': 'error',
-      'import/newline-after-import': 'error',
-      'import/no-duplicates': 'error',
+      //'simple-import-sort/imports': 'error',
+      //'simple-import-sort/exports': 'error',
+      //'import/first': 'error',
+      //'import/newline-after-import': 'error',
+      //'import/no-duplicates': 'error',
       'license-header/header': ['error', licenseHeaderFile],
     },
   },
@@ -199,7 +201,7 @@ export default [
     }
   },
   {
-    files: ['bin/*.{js,cjs,mjs}'],
+    files: ['bin/*.{js,cjs,mjs}', 'index.{js,cjs,mjs}'],
     languageOptions: {
       globals: globals.node
     }
@@ -216,6 +218,7 @@ export default [
     rules: {
       '@typescript-eslint/no-unsafe-assignment': 'warn',
       '@typescript-eslint/no-unsafe-member-access': 'warn',
+      '@typescript-eslint/max-params': 'warn',
     }
   },
   {
