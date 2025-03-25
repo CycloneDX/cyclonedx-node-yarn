@@ -184,6 +184,13 @@ export default [
       '**/.idea/',
       '**/.vscode/',
       licenseHeaderFile,
+      '/.yarn/**',
+      '/.pnp.*',
+      '/reports/',
+      '/bundles/',
+      '/dist/',
+      '/docs/',
+      '/src/__buildtimeInfo.json'
     ],
   }
 ]
