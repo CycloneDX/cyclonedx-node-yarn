@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#260] via [#265])
+  * Dropped support for `yarn<4.0.0` ([#272] via [#271])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@7.1.0` (via [#267])
 * Build
@@ -19,7 +20,8 @@ All notable changes to this project will be documented in this file.
 [#262]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/262
 [#265]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/265
 [#267]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/267
-
+[#271]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/271
+[#272]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/272
 
 ## 2.0.0 - 2025-01-27
 

@@ -246,8 +246,8 @@ jobs:
           - '22'      # LTS
           - '20'      # lowest supported
         yarn-version:
-          - '4.x'
-          - '3.x'
+          - '4.x'    # Current
+          - '4.0.0'  # lowest supported
         os: [ 'ubuntu-latest' ]
         include:
           - node-version: '22'   # LTS
