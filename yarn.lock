@@ -215,7 +215,7 @@ __metadata:
     "@yarnpkg/fslib": "npm:^3"
     "@yarnpkg/plugin-git": "npm:^3"
     c8: "npm:^10.1.2"
-    clipanion: "npm:^4.0.0-rc.3"
+    clipanion: "npm:^4.0.0-rc.2"
     eslint: "npm:8.57.1"
     eslint-config-love: "npm:43.1.0"
     eslint-config-standard: "npm:^17.1.0"
@@ -1992,7 +1992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clipanion@npm:^4.0.0-rc.2, clipanion@npm:^4.0.0-rc.3":
+"clipanion@npm:^4.0.0-rc.2":
   version: 4.0.0-rc.4
   resolution: "clipanion@npm:4.0.0-rc.4"
   dependencies:
