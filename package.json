@@ -71,8 +71,6 @@
     "@types/mocha": "^10.0.6",
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
     "@yarnpkg/builder": "4.2.1",
     "c8": "^10.1.2",
     "eslint": "9.23.0",
@@ -93,7 +91,7 @@
     "npm-run-all2": "^7.0.2",
     "rimraf": "^6.0.1",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.27.0"
+    "typescript-eslint": "8.28.0"
   },
   "type": "commonjs",
   "engines": {
