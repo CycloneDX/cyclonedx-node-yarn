@@ -94,7 +94,7 @@ jobs:
           --output-file "$REPORTS_DIR/eslint.xml"
       - name: Publish Checkstyle report
         # see https://github.com/Juuxel/publish-checkstyle-report
-        uses: Juuxel/publish-checkstyle-report@v1
+        uses: Juuxel/publish-checkstyle-report@v2
         if: ${{ failure() || success() }}
         with:
           reports: ${{ env.REPORTS_DIR }}/eslint.xml
