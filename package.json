@@ -54,16 +54,16 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^8.0.0",
+    "@cyclonedx/cyclonedx-library": "8.0.0",
     "@yarnpkg/cli": "^4",
     "@yarnpkg/core": "^4",
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.2",
-    "hosted-git-info": "^8.0.2",
-    "normalize-package-data": "^7.0.0",
+    "hosted-git-info": "8.0.2",
+    "normalize-package-data": "7.0.0",
     "typanion": "^3.14.0",
-    "xmlbuilder2": "^3.1.1"
+    "xmlbuilder2": "3.1.1"
   },
   "devDependencies": {
     "@eslint/js": "9.23.0",
