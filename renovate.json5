@@ -12,6 +12,11 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
+    "postUpgradeTasks": {
+      "commands": ["yarn dedupe"],
+      "fileFilters": ["yarn.lock"],
+      "executionMode": "update"
+    }
   },
   "ignorePaths": [
     "tests/_data/testbeds/**",
