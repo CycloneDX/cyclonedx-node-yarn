@@ -17,6 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+/* eslint-disable @typescript-eslint/max-params -- bassdscho */
+
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { AttachmentEncoding, ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
@@ -228,6 +230,8 @@ export class BomBuilder {
     fetchLicenseEvidence: LicenseEvidenceFetcher,
     type?: ComponentType
   ): Promise<Component | false | undefined> {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
+      -- not unsafe! is not null nor undefined */
     const manifest = await fetchManifest(pkg)
     // the data in the manifest might be incomplete, so lets set the properties that yarn discovered and fixed
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions -- needed */
@@ -241,9 +245,12 @@ export class BomBuilder {
       }
     }
     return component
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
   }
 
   private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | false | undefined {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
+      -- not unsafe! is not null nor undefined */
     // work with a deep copy, because `normalizePackageJson()` might modify the data
     const manifestC = structuredClonePolyfill(manifest)
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
@@ -255,10 +262,11 @@ export class BomBuilder {
       manifestC.version = manifest.version.trim()
     }
     // endregion fix normalizations
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
 
     // work with a deep copy, because `normalizePackageJson()` might modify the data
     const component = this.componentBuilder.makeComponent(
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
       manifestC as normalizePackageJson.Package,
       type)
     if (component === undefined) {

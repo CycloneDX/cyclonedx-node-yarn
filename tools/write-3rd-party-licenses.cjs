@@ -43,10 +43,12 @@ const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
 
 const filePathInZipRE = /^(.+\.zip)[/\\](.+)$/
 
+/* eslint-disable jsdoc/valid-types -- jsdoc does not know tuples, yet */
+
 /**
  * @param {string} filePath
  * @param {Object<string, string>} cache
- * @return {[undefined, undefined] | [string, *]}
+ * @returns {Promise<([undefined, undefined] | [string, object])>}
  */
 async function getPackageMP (filePath, cache) {
   let searchRoot = projectRoot
@@ -73,10 +75,12 @@ async function getPackageMP (filePath, cache) {
   return [undefined, undefined]
 }
 
+/* eslint-enable jsdoc/valid-types */
+
 /**
  * @param {string} outputFile
  * @param {boolean} includeLicense
- * @return {Promise.<Set.<string>>} used licenses
+ * @return {Promise<Set<string>>} used licenses
  */
 async function main (outputFile, includeLicense) {
   const metaData = JSON.parse(readFileSync(metaFile))
