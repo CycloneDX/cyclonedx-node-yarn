@@ -11,16 +11,8 @@
     "dependencies"
   ],
   "lockFileMaintenance": {
-    "enabled": true,
-    "postUpgradeTasks": {
-      "commands": ["yarn dedupe --mode=update-lockfile"],
-      "fileFilters": ["yarn.lock"],
-      "executionMode": "update"
-    }
+    "enabled": true
   },
-  "allowedCommands": [
-    "^yarn dedupe"
-  ],
   "ignorePaths": [
     "tests/_data/testbeds/**",
   ],
