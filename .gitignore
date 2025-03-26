@@ -12,18 +12,12 @@
 
 _tmp/
 
-# yarn stuff - for now, until setup is hardened
-# see also: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-/.pnp.*
-/.yarn/
-/.yarnrc.yml
-
 
 # Only used during production build.
 /src/__buildtime*
 
 
-# Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
+### Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 # Logs
 logs
 *.log
@@ -130,6 +124,12 @@ dist
 .temp
 .cache
 
+# vitepress build output
+**/.vitepress/dist
+
+# vitepress cache directory
+**/.vitepress/cache
+
 # Docusaurus cache and generated files
 .docusaurus
 
@@ -148,9 +148,11 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# yarn v2
-/.yarn/cache
-/.yarn/unplugged
-/.yarn/build-state.yml
-/.yarn/install-state.gz
-/.pnp.*
+### Everything below here is from https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
