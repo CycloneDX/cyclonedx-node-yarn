@@ -48,12 +48,9 @@ export default [
       'import': plugin_import,
       'simple-import-sort': plugin_simpleImportSort,
       'license-header': plugin_header,
-      //'editorconfig': plugin_editorconfig,
       'n': plugin_n,
     },
     rules: {
-      // ...plugin_editorconfig.configs.all.rules,
-      // 'editorconfig/indent': 'off',
       'n/prefer-node-protocol': 'error',
       'sort-imports': 'off',
       'simple-import-sort/imports': 'error',
