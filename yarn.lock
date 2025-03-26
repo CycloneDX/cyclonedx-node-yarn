@@ -227,16 +227,16 @@ __metadata:
     extract-zip: "npm:^2.0.1"
     fast-glob: "npm:^3.3.2"
     globals: "npm:^16.0.0"
-    hosted-git-info: "npm:8.0.2"
+    hosted-git-info: "npm:^8.0.2"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.1.0"
-    normalize-package-data: "npm:7.0.0"
+    normalize-package-data: "npm:^7.0.0"
     npm-run-all2: "npm:^7.0.2"
     rimraf: "npm:^6.0.1"
     typanion: "npm:^3.14.0"
     typescript: "npm:5.8.2"
     typescript-eslint: "npm:8.28.0"
-    xmlbuilder2: "npm:3.1.1"
+    xmlbuilder2: "npm:^3.1.1"
   bin:
     cyclonedx-yarn: bin/cyclonedx-yarn-cli.js
   languageName: unknown
@@ -3456,7 +3456,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:8.0.2, hosted-git-info@npm:^8.0.0":
+"hosted-git-info@npm:^8.0.0, hosted-git-info@npm:^8.0.2":
   version: 8.0.2
   resolution: "hosted-git-info@npm:8.0.2"
   dependencies:
@@ -4647,7 +4647,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize-package-data@npm:7.0.0":
+"normalize-package-data@npm:^7.0.0":
   version: 7.0.0
   resolution: "normalize-package-data@npm:7.0.0"
   dependencies:
@@ -6470,7 +6470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmlbuilder2@npm:3.1.1, xmlbuilder2@npm:^3.0.2":
+"xmlbuilder2@npm:^3.0.2, xmlbuilder2@npm:^3.1.1":
   version: 3.1.1
   resolution: "xmlbuilder2@npm:3.1.1"
   dependencies:

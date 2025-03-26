@@ -10,7 +10,9 @@ All notable changes to this project will be documented in this file.
   * Dropped support for `node<20.18.0` ([#260] via [#265])
   * Dropped support for `yarn<4.0.0` ([#272] via [#271])
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@7.1.0` (via [#267])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.0.0`, was `@7.1.0` (via [#267])
+  * Upgraded runtime-dependency `hosted-git-info@8.0.2`, was `@7.0.2` (via [#268])
+  * Upgraded runtime-dependency `normalize-package-data@7.0.0`, was `@6.0.2` (via [#269])
 * Build
   * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#261])
   * Use _@yarnpkg/builder_ `v4.2.1` now, was `v4.2.0` (via [#262])
@@ -20,6 +22,8 @@ All notable changes to this project will be documented in this file.
 [#262]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/262
 [#265]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/265
 [#267]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/267
+[#268]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/268
+[#269]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/269
 [#271]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/271
 [#272]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/272
 
