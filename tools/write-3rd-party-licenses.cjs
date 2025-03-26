@@ -114,6 +114,11 @@ async function main (outputFile, includeLicense) {
             homepage: packageMD.homepage || undefined,
             licenseDeclared: packageMD.license,
             licenseFiles: [
+              ...globSync('*.LICEN{S,C}E', {
+                onlyFiles: true,
+                caseSensitiveMatch: false,
+                cwd: packageMP
+              }).sort((a, b) => a.localeCompare(b)),
               ...globSync('LICEN{S,C}E*', {
                 onlyFiles: true,
                 caseSensitiveMatch: false,
