@@ -31,11 +31,7 @@ for (const p of [
   ['dist', 'yarn-plugin-cyclonedx.cjs'], // running in  dist
   ['bundles', '@yarnpkg', 'plugin-cyclonedx.js'] // running in build
 ]) {
-  try {
-    pp = realpathSync(join(__dirname, '..', ...p))
-  } catch {
-    continue
-  }
+  try { pp = realpathSync(join(__dirname, '..', ...p)) } catch { continue }
   break
 }
 if (!pp) {

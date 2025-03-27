@@ -25,12 +25,8 @@ const path = require('node:path')
 
 const { suite, test } = require('mocha')
 
-const {
-  name: thisName,
-  version: thisVersion
-} = require('../../package.json')
+const { name: thisName, version: thisVersion } = require('../../package.json')
 const { Spec, Validation } = require('@cyclonedx/cyclonedx-library')
-
 
 const testSetups = [
   /* region functional tests */
@@ -176,7 +172,7 @@ suite('integration', () => {
       const res = _rawRunCLI(path.join(testbedsPath, 'yarn3_zeroinstall'), ['-vvv'])
       assert.notEqual(res.status, 0)
       assert.match(res.stderr,
-        new RegExp('error: expected yarn version >= 4', 'i'))
+        /error: expected yarn version >= 4/i)
     }).timeout(longTestTimeout)
 
     test('silent', async () => {
@@ -305,6 +301,7 @@ suite('integration', () => {
  * @param {string} value
  * @param {Spec.Version} [specVersion]
  * @return {Promise<any>}
+ * @throws {RangeError} if format not supported
  */
 async function validate (format, value, specVersion) {
   switch (format) {
