@@ -33,10 +33,10 @@ for (const p of [
 ]) {
   try {
     pp = realpathSync(join(__dirname, '..', ...p))
-    break
   } catch {
-    /* pass */
+    continue
   }
+  break
 }
 if (!pp) {
   throw Error('missing plugin')
