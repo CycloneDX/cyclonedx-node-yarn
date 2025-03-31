@@ -17,10 +17,11 @@
     "declaration": false,
     "sourceMap": false,
     "removeComments": true,
+    "preserveConstEnums": false,
 
     /* Interop Constraints */
     "esModuleInterop": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "forceConsistentCasingInFileNames": true,
 
     /* Type Checking */
