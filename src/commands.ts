@@ -39,11 +39,11 @@ enum OutputFormat {
   XML = 'XML',
 }
 
-const ExitCode: Readonly<Record<string, number>> = Object.freeze({
-  SUCCESS: 0,
-  FAILURE: 1,
-  INVALID: 2
-})
+const enum ExitCode {
+  SUCCESS = 0,
+  FAILURE = 1,
+  INVALID = 2
+}
 
 
 export const YarnVersionTuple = YarnVersion === null
@@ -80,7 +80,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
   outputFormat = makeChoiceSwitch<OutputFormat>(
     '--output-format',
-    [OutputFormat.JSON, OutputFormat.XML],
+    Object.values(OutputFormat).sort(),
     OutputFormat.JSON,
     'Which output format to use.'
   )
