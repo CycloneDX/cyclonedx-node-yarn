@@ -67,11 +67,11 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --sv, --spec-version #0     Which version of CycloneDX to use.
+  --sv,--spec-version #0      Which version of CycloneDX to use.
                               (choices: 1.2, 1.3, 1.4, 1.5, 1.6, default: 1.6)
-  --of, --output-format #0    Which output format to use.
+  --of,--output-format #0     Which output format to use.
                               (choices: JSON, XML, default: JSON)
-  -o, --output-file #0        Path to the output file. Set to "-" to write to STDOUT.
+  -o,--output-file #0         Path to the output file. Set to "-" to write to STDOUT.
                               (default: write to STDOUT)
   --production,--prod         Exclude development dependencies.
                               (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
@@ -83,7 +83,7 @@ $ yarn cyclonedx
                               This might result in loss of time- and random-based values.
   --gather-license-texts      Search for license files in components and include them as license evidence.
                               This feature is experimental.
-  --verbose,-v                Increase the verbosity of messages.
+  -v,--verbose                Increase the verbosity of messages.
                               Use multiple times to increase the verbosity even more.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
