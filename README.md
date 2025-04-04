@@ -71,7 +71,8 @@ $ yarn cyclonedx
                               (choices: 1.2, 1.3, 1.4, 1.5, 1.6, default: 1.6)
   --of,--output-format #0     Which output format to use.
                               (choices: JSON, XML, default: JSON)
-  -o,--output-file #0         Path to the output file. Set to "-" to write to STDOUT.
+  -o,--output-file #0         Path to the output file.
+                              Set to "-" to write to STDOUT.
                               (default: write to STDOUT)
   --production,--prod         Exclude development dependencies.
                               (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
