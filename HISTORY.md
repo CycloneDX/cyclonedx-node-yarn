@@ -7,11 +7,12 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * Added
-  * CLI switch `-o`   as shorthand for `--output-file` ([#280] via [#])
-  * CLI switch `--of` as shorthand for `--outout-format` ([#280] via [#])
-  * CLI switch `--sv` as shorthand for `--spec-version` ([#280] via [#])
+  * CLI switch `-o`   as shorthand for `--output-file` ([#280] via [#281])
+  * CLI switch `--of` as shorthand for `--outout-format` ([#280] via [#281])
+  * CLI switch `--sv` as shorthand for `--spec-version` ([#280] via [#281])
 
 [#280]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/280
+[#281]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/281
 
 ## 3.0.0 - 2025-03-26
 
