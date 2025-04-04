@@ -72,20 +72,20 @@ export class MakeSbomCommand extends Command<CommandContext> {
   })
 
   specVersion = makeChoiceSwitch<SpecVersion>(
-    '--spec-version',
+    '--sv, --spec-version',
     Object.keys(SpecVersionDict).sort(),
     SpecVersion.v1dot6,
     'Which version of CycloneDX to use.'
   )
 
   outputFormat = makeChoiceSwitch<OutputFormat>(
-    '--output-format',
+    '--of, --output-format',
     Object.values(OutputFormat).sort(),
     OutputFormat.JSON,
     'Which output format to use.'
   )
 
-  outputFile = Option.String('--output-file', OutputStdOut, {
+  outputFile = Option.String('-o, --output-file', OutputStdOut, {
     description: 'Path to the output file.\n' +
         `Set to "${OutputStdOut}" to write to STDOUT.\n` +
         '(default: write to STDOUT)'
