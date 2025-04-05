@@ -71,12 +71,36 @@ export class MakeSbomCommand extends Command<CommandContext> {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
+  /* mimic option from yarn.
+    - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
+    - see https://yarnpkg.com/cli/workspaces/focus
+  */
+  production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
+    description: 'Exclude development dependencies.\n' +
+      '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
+  })
+
+  gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
+    description: 'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental.'
+  })
+
+  shortPURLs = Option.Boolean('--short-PURLs', false, {
+    description: 'Omit all qualifiers from PackageURLs.\n' +
+      'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
+  })
+
   specVersion = makeChoiceSwitch<SpecVersion>(
     '--sv,--spec-version',
     Object.keys(SpecVersionDict).sort(),
     SpecVersion.v1dot6,
     'Which version of CycloneDX to use.'
   )
+
+  outputReproducible = Option.Boolean('--output-reproducible', false, {
+    description: 'Whether to go the extra mile and make the output reproducible.\n' +
+      'This might result in loss of time- and random-based values.'
+  })
 
   outputFormat = makeChoiceSwitch<OutputFormat>(
     '--of,--output-format',
@@ -87,18 +111,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
 
   outputFile = Option.String('-o,--output-file', OutputStdOut, {
     description: 'Path to the output file.\n' +
-        `Set to "${OutputStdOut}" to write to STDOUT.\n` +
-        '(default: write to STDOUT)'
-  })
-
-  /*
-    mimic option from yarn.
-    - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
-    - see https://yarnpkg.com/cli/workspaces/focus
-  */
-  production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
-    description: 'Exclude development dependencies.\n' +
-        '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
+      `Set to "${OutputStdOut}" to write to STDOUT.\n` +
+      '(default: write to STDOUT)'
   })
 
   mcType = makeChoiceSwitch<ComponentType>(
@@ -107,21 +121,6 @@ export class MakeSbomCommand extends Command<CommandContext> {
     ComponentType.Application,
     'Type of the main component.'
   )
-
-  shortPURLs = Option.Boolean('--short-PURLs', false, {
-    description: 'Omit all qualifiers from PackageURLs.\n' +
-        'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
-  })
-
-  outputReproducible = Option.Boolean('--output-reproducible', false, {
-    description: 'Whether to go the extra mile and make the output reproducible.\n' +
-        'This might result in loss of time- and random-based values.'
-  })
-
-  gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
-    description: 'Search for license files in components and include them as license evidence.\n' +
-        'This feature is experimental.'
-  })
 
   verbosity = Option.Counter('-v,--verbose', 1, {
     description: 'Increase the verbosity of messages.\n' +
