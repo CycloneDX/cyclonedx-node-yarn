@@ -217,6 +217,7 @@ __metadata:
     clipanion: "npm:^4.0.0-rc.2"
     eslint: "npm:9.24.0"
     eslint-config-love: "npm:119.0.0"
+    eslint-import-resolver-node: "npm:^0.3.9"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-jsdoc: "npm:50.6.9"
     eslint-plugin-license-header: "npm:0.8.0"
