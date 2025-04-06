@@ -67,25 +67,25 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --spec-version #0        Which version of CycloneDX to use.
-                           (choices: 1.6, 1.5, 1.4, 1.3, 1.2, default: 1.6)
-  --output-format #0       Which output format to use.
-                           (choices: JSON, XML, default: JSON)
-  --output-file #0         Path to the output file.
-                           Set to "-" to write to STDOUT.
-                           (default: write to STDOUT)
-  --production,--prod      Exclude development dependencies.
-                           (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
-  --mc-type #0             Type of the main component.
-                           (choices: application, library, firmware, default: application)
-  --short-PURLs            Omit all qualifiers from PackageURLs.
-                           This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
-  --output-reproducible    Whether to go the extra mile and make the output reproducible.
-                           This might result in loss of time- and random-based values.
-  --gather-license-texts   Search for license files in components and include them as license evidence.
-                           This feature is experimental.
-  --verbose,-v             Increase the verbosity of messages.
-                           Use multiple times to increase the verbosity even more.
+  --production,--prod        Exclude development dependencies.
+                             (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
+  --gather-license-texts     Search for license files in components and include them as license evidence.
+                             This feature is experimental.
+  --short-PURLs              Omit all qualifiers from PackageURLs.
+                             This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
+  --sv,--spec-version #0     Which version of CycloneDX to use.
+                             (choices: 1.2, 1.3, 1.4, 1.5, 1.6, default: 1.6)
+  --output-reproducible      Whether to go the extra mile and make the output reproducible.
+                             This might result in loss of time- and random-based values.
+  --of,--output-format #0    Which output format to use.
+                             (choices: JSON, XML, default: JSON)
+  -o,--output-file #0        Path to the output file.
+                             Set to "-" to write to STDOUT.
+                             (default: write to STDOUT)
+  --mc-type #0               Type of the main component.
+                             (choices: application, library, firmware, default: application)
+  -v,--verbose               Increase the verbosity of messages.
+                             Use multiple times to increase the verbosity even more.
 
 ━━━ Details ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
