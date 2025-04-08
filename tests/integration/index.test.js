@@ -43,10 +43,10 @@ const testSetups = [
   'local-workspaces',
   'package-aliasing',
   'package-with-build-id',
-  'yarn4_zeroinstall'
+  'yarn4_zeroinstall',
   /* endregion functional tests */
   /* region regression tests */
-  // ... none so far
+  'gather-licenses', // https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1385
   /* endregion regression tests */
 ]
 
@@ -274,6 +274,7 @@ suite('integration', () => {
 
         suite('license evidence', () => {
           [
+            'gather-licenses', // https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1385
             'dev-dependencies',
             'juice-shop'
           ].forEach(testSetup => {

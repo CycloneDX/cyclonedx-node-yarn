@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <tools>
+      <components>
+        <component type="application">
+          <name>yarn</name>
+          <version>yarnVersion-testing</version>
+        </component>
+        <component type="library">
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>libVersion-testing</version>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>yarn-plugin-cyclonedx</name>
+          <version>thisVersion-testing</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </tools>
+    <component type="application" bom-ref="demo-gather-licenses@workspace:.">
+      <name>demo-gather-licenses</name>
+      <version>0.0.0</version>
+      <description>demo: demo-gather-licenses -- detect licenses files</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-gather-licenses@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="@db-ui/base@npm:0.29.2">
+      <author>Maximilian Franzke</author>
+      <group>@db-ui</group>
+      <name>base</name>
+      <version>0.29.2</version>
+      <description>Provides basic tokens and assets based on the DB Design System.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40db-ui/base@0.29.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdb-ui%2Fbase.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/db-ui/base/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/db-ui/base.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://db-ui.github.io/base/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="@db-ui/base@npm:0.29.2"/>
+    <dependency ref="demo-gather-licenses@workspace:.">
+      <dependency ref="@db-ui/base@npm:0.29.2"/>
+    </dependency>
+  </dependencies>
+</bom>
