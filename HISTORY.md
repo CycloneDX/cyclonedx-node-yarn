@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.0.1 - 2025-04-08
+
 * Added
   * CLI switch `-o`   as shorthand for `--output-file` ([#280] via [#281])
   * CLI switch `--of` as shorthand for `--outout-format` ([#280] via [#281])
