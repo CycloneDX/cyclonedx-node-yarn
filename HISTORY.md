@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
   * CLI switch `--of` as shorthand for `--outout-format` ([#280] via [#281])
   * CLI switch `--sv` as shorthand for `--spec-version` ([#280] via [#281])
 * Fixed
-  * License gathering correctly ignores symlinks and directories ([#287] via [#])
+  * License gathering correctly ignores symlinks and directories ([#287] via [#288])
 * Build
   * Use _TypeScript_ `v5.8.3` now, was `v5.8.2` (via [#282])
 
@@ -19,7 +19,7 @@ All notable changes to this project will be documented in this file.
 [#281]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/281
 [#282]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/282
 [#287]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/287
-[#]:
+[#288]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/288
 
 ## 3.0.0 - 2025-03-26
 
