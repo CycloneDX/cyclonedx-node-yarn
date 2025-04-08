@@ -32,6 +32,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'concurrent-peer-deps',
     'concurrent-versions',
     'dev-dependencies',
+    'gather-licenses',
     'git-protocol-dependency',
     'github-protocol-dependency',
     'http-protocol-dependency',

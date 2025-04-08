@@ -197,13 +197,19 @@ export class BomBuilder {
           if (!LICENSE_FILENAME_PATTERN.test(file)) {
             continue
           }
+          const fp = ppath.join(prefixPath, file)
+
+          // Ignore all directories - they are not files :-)
+          // Don't follow symlinks for security reasons!
+          if (!packageFs.statSync(fp).isFile()) {
+            continue
+          }
 
           const contentType = getMimeForLicenseFile(file)
           if (contentType === undefined) {
             continue
           }
 
-          const fp = ppath.join(prefixPath, file)
           yield new NamedLicense(
           `file: ${file}`,
           {

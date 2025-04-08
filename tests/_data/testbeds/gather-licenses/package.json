@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "demo-gather-licenses",
+  "description": "demo: demo-gather-licenses -- detect licenses files",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+  },
+  "dependencies": {
+    "@db-ui/base": "0.29.2"
+  }
+}
