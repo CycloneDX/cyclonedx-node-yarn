@@ -233,6 +233,7 @@ jobs:
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           yarn npm publish
+          --provenance
           --access public
           --tag "$NPMJS_RELEASE_TAG"
         env:
