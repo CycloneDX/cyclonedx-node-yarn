@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.0.2 - 2025-04-10
+
+Maintenance release with provenance.
+
+* Build
+  * Enable release provenance ([#290] via [#292])
+
+[#290]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/290
+[#292]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/292
+
 ## 3.0.1 - 2025-04-08
 
 * Added
