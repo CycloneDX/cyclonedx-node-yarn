@@ -300,6 +300,10 @@ export class BomBuilder {
         // Therefore, do not do anything speculative.
         break
       }
+      case locator.reference.startsWith('jsr:'): {
+        // TODO - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/289
+        break
+      }
       case YarnPluginGitUtils.isGitUrl(locator.reference): {
         component.externalReferences.add(new ExternalReference(
           trySanitizeGitUrl(locator.reference),

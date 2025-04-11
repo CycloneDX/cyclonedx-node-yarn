@@ -38,6 +38,7 @@ const testSetups = [
   'git-protocol-dependency',
   'github-protocol-dependency',
   'http-protocol-dependency',
+  'jsr-protocol-dependency',
   // 'juice-shop',
   'local-dependencies',
   'local-workspaces',

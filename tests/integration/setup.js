@@ -36,6 +36,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'git-protocol-dependency',
     'github-protocol-dependency',
     'http-protocol-dependency',
+    'jsr-protocol-dependency',
     // 'juice-shop', << may have problems to install on certain systems ...
     'local-dependencies',
     'local-workspaces',
