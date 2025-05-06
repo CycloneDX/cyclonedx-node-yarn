@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Added
+  * Support yarn protocol `jsr` ([#289] via [#])
+
+[#289]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/289
+[#]: 
+
 ## 3.0.2 - 2025-04-10
 
 Maintenance release with provenance.
