@@ -293,3 +293,4 @@ jobs:
           name:       ${{ needs.bump.outputs.version_plain }}
           prerelease: ${{ github.event.inputs.prerelease }}
           files:      '${{ env.ASSETS_DIR }}/*'
+          target_commitish: ${{ github.head_ref || github.ref_name }}
