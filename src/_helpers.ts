@@ -39,7 +39,6 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
     } catch (err: any) {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- needed */
       if (err?.code !== 'EAGAIN') {
-        /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
         throw err
       }
       /* eslint-disable-next-line promise/avoid-new -- needed */
