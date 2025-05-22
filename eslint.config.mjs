@@ -65,10 +65,10 @@ export default [
       import: plugin_import,
       'simple-import-sort': plugin_simpleImportSort,
       'license-header': plugin_header,
-      n: plugin_n,
+      plugin_n,
     },
     rules: {
-      'n/prefer-node-protocol': 'error',
+      'plugin_n/prefer-node-protocol': 'error',
       'sort-imports': 'off',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
