@@ -228,7 +228,7 @@ __metadata:
     extract-zip: "npm:^2.0.1"
     fast-glob: "npm:^3.3.2"
     globals: "npm:^16.0.0"
-    hosted-git-info: "npm:8.0.2"
+    hosted-git-info: "npm:8.1.0"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.5.0"
     neostandard: "npm:0.12.1"
@@ -4155,7 +4155,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:8.0.2, hosted-git-info@npm:^8.0.0":
+"hosted-git-info@npm:8.1.0":
+  version: 8.1.0
+  resolution: "hosted-git-info@npm:8.1.0"
+  dependencies:
+    lru-cache: "npm:^10.0.1"
+  checksum: 10c0/53cc838ecaa7d4aa69a81d9d8edc362c9d415f67b76ad38cdd781d2a2f5b45ad0aa9f9b013fb4ea54a9f64fd2365d0b6386b5a24bdf4cb90c80477cf3175aaa2
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^8.0.0":
   version: 8.0.2
   resolution: "hosted-git-info@npm:8.0.2"
   dependencies:
