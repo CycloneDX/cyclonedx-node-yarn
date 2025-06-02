@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Dependencies
+  * Upgraded runtime-dependency `hosted-git-info@8.1.0`, was `@8.0.2` (via [#298])
+
+[#298]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/298
+
 ## 3.0.2 - 2025-04-10
 
 Maintenance release with provenance.
