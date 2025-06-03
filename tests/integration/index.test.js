@@ -178,7 +178,8 @@ suite('integration', () => {
     test('silent', async () => {
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
-        ['--no-verbose']
+        ['--no-verbose'],
+        { NODE_OPTIONS: `${process.env.NODE_OPTIONS ?? ''} --no-deprecation` }
       )
       assert.strictEqual(res.error, undefined, res.output)
       assert.strictEqual(res.status, 0, res.output)
