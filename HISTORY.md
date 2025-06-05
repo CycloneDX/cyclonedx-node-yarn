@@ -7,11 +7,12 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.2.0`, was `@8.0.0` (via [#320])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.3.0`, was `@8.0.0` (via [#320], [#321])
   * Upgraded runtime-dependency `hosted-git-info@8.1.0`, was `@8.0.2` (via [#298])
 
 [#298]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/298
 [#320]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/320
+[#321]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/321
 
 ## 3.0.2 - 2025-04-10
 
