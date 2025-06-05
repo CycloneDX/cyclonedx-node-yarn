@@ -1344,7 +1344,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:^1.0.0":
+"busboy@npm:^1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -1835,15 +1835,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concat-stream@npm:^1.5.2":
-  version: 1.6.2
-  resolution: "concat-stream@npm:1.6.2"
+"concat-stream@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "concat-stream@npm:2.0.0"
   dependencies:
     buffer-from: "npm:^1.0.0"
     inherits: "npm:^2.0.3"
-    readable-stream: "npm:^2.2.2"
+    readable-stream: "npm:^3.0.2"
     typedarray: "npm:^0.0.6"
-  checksum: 10c0/2e9864e18282946dabbccb212c5c7cec0702745e3671679eb8291812ca7fd12023f7d8cb36493942a62f770ac96a7f90009dc5c82ad69893438371720fa92617
+  checksum: 10c0/29565dd9198fe1d8cf57f6cc71527dbc6ad67e12e4ac9401feb389c53042b2dceedf47034cbe702dfc4fd8df3ae7e6bfeeebe732cc4fa2674e484c13f04c219a
   languageName: node
   linkType: hard
 
@@ -5112,7 +5112,7 @@ __metadata:
     marsdb: "npm:^0.6.11"
     median: "npm:^0.0.2"
     morgan: "npm:^1.10.0"
-    multer: "npm:^1.4.5-lts.1"
+    multer: "npm:^2.0.1"
     node-pre-gyp: "npm:^0.15.0"
     notevil: "npm:^1.3.3"
     on-finished: "npm:^2.3.0"
@@ -5865,7 +5865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:>=0.5 0, mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.4, mkdirp@npm:^0.5.5":
+"mkdirp@npm:>=0.5 0, mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.5, mkdirp@npm:^0.5.6":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -5949,18 +5949,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"multer@npm:^1.4.5-lts.1":
-  version: 1.4.5-lts.1
-  resolution: "multer@npm:1.4.5-lts.1"
+"multer@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "multer@npm:2.0.1"
   dependencies:
     append-field: "npm:^1.0.0"
-    busboy: "npm:^1.0.0"
-    concat-stream: "npm:^1.5.2"
-    mkdirp: "npm:^0.5.4"
+    busboy: "npm:^1.6.0"
+    concat-stream: "npm:^2.0.0"
+    mkdirp: "npm:^0.5.6"
     object-assign: "npm:^4.1.1"
-    type-is: "npm:^1.6.4"
-    xtend: "npm:^4.0.0"
-  checksum: 10c0/4c6c91e93e510c99e791b6520e3e2f4a227a57f4f509427ff7f3a6f4cc0b4b09ad77c475f629c12f7ae01dba11645b2bd6568877cab775de8bf853b0a67259b4
+    type-is: "npm:^1.6.18"
+    xtend: "npm:^4.0.2"
+  checksum: 10c0/2b5ab16a2bc6070690cff1f30589bb0d1218ed62051d65fdb1a8d9c65c63238c07af81ae8921de449f921ff10c849f3f6830fd07ef5640c46aaaca5c94044d25
   languageName: node
   linkType: hard
 
@@ -7196,7 +7196,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.2, readable-stream@npm:^2.0.5, readable-stream@npm:^2.0.6, readable-stream@npm:^2.2.2, readable-stream@npm:^2.3.0, readable-stream@npm:^2.3.5, readable-stream@npm:~2.3.6":
+"readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.2, readable-stream@npm:^2.0.5, readable-stream@npm:^2.0.6, readable-stream@npm:^2.3.0, readable-stream@npm:^2.3.5, readable-stream@npm:~2.3.6":
   version: 2.3.8
   resolution: "readable-stream@npm:2.3.8"
   dependencies:
@@ -7211,7 +7211,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:^3.0.2, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
   version: 3.6.2
   resolution: "readable-stream@npm:3.6.2"
   dependencies:
@@ -8796,7 +8796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-is@npm:^1.6.4, type-is@npm:~1.6.18":
+"type-is@npm:^1.6.18, type-is@npm:~1.6.18":
   version: 1.6.18
   resolution: "type-is@npm:1.6.18"
   dependencies:
@@ -9694,7 +9694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xtend@npm:^4.0.0":
+"xtend@npm:^4.0.0, xtend@npm:^4.0.2":
   version: 4.0.2
   resolution: "xtend@npm:4.0.2"
   checksum: 10c0/366ae4783eec6100f8a02dff02ac907bf29f9a00b82ac0264b4d8b832ead18306797e283cf19de776538babfdcb2101375ec5646b59f08c52128ac4ab812ed0e
