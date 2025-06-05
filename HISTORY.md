@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.0.3 - 2025-06-05
+
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.3.0`, was `@8.0.0` (via [#320], [#321])
   * Upgraded runtime-dependency `hosted-git-info@8.1.0`, was `@8.0.2` (via [#298])
