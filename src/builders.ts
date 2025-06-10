@@ -20,11 +20,11 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 /* eslint-disable @typescript-eslint/max-params -- bassdscho */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import { type FromNodePackageJson as PJB, License as LEB } from '@cyclonedx/cyclonedx-library/Builders'
+import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
 import { Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
-import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
+import { BomUtility, LicenseUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
@@ -187,9 +187,9 @@ export class BomBuilder {
     const console_ = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
-      const leFetcher = new LEB.LicenseEvidenceFetcher({fs: packageFs, path: ppath})
+      const leFetcher = new LicenseUtility.LicenseEvidenceFetcher({fs: packageFs, path: ppath})
       try {
-        const files = leFetcher.fetch(
+        const files = leFetcher.fetchAsAttachment(
           prefixPath,
           (error: Error): void => {
             /* c8 ignore next 2 */
