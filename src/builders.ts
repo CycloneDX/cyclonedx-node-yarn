@@ -20,10 +20,10 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 /* eslint-disable @typescript-eslint/max-params -- bassdscho */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
-import { AttachmentEncoding, ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import { type FromNodePackageJson as PJB, License as LEB } from '@cyclonedx/cyclonedx-library/Builders'
+import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
 import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Attachment, Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { ppath } from '@yarnpkg/fslib'
@@ -32,7 +32,6 @@ import normalizePackageJson from 'normalize-package-data'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
-  getMimeForLicenseFile,
   isString,
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl,
@@ -175,8 +174,6 @@ export class BomBuilder {
     }
   }
 
-  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
-
   private async makeLicenseEvidenceFetcher (project: Project): Promise<LicenseEvidenceFetcher> {
     const fetcher = project.configuration.makeFetcher()
     const fetcherOptions: FetchOptions = {
@@ -187,41 +184,26 @@ export class BomBuilder {
       report: new ThrowReport(),
       cacheOptions: { skipIntegrityCheck: true }
     }
-    const LICENSE_FILENAME_PATTERN = this.#LICENSE_FILENAME_PATTERN
+    const console_ = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
+      const leFetcher = new LEB.LicenseEvidenceFetcher({fs: packageFs, path: ppath})
       try {
-        // option `withFileTypes:true` is not supported and causes crashes
-        const files = packageFs.readdirSync(prefixPath)
-        for (const file of files) {
-          if (!LICENSE_FILENAME_PATTERN.test(file)) {
-            continue
+        const files = leFetcher.fetch(
+          prefixPath,
+          (error: Error): void => {
+            /* c8 ignore next 2 */
+            console_.info(error.message)
+            console_.debug(error.message, error)
           }
-          const fp = ppath.join(prefixPath, file)
-
-          // Ignore all directories - they are not files :-)
-          // Don't follow symlinks for security reasons!
-          if (!packageFs.statSync(fp).isFile()) {
-            continue
-          }
-
-          const contentType = getMimeForLicenseFile(file)
-          if (contentType === undefined) {
-            continue
-          }
-
-          yield new NamedLicense(
-          `file: ${file}`,
-          {
-            text: new Attachment(
-              packageFs.readFileSync(fp).toString('base64'),
-              {
-                contentType,
-                encoding: AttachmentEncoding.Base64
-              }
-            )
-          })
+        )
+        for (const {file, text} of files) {
+          yield new NamedLicense(`file: ${file}`, {text})
         }
+      }
+      /* c8 ignore next 2 */
+      catch (e) {
+        console_.warn('collecting license evidence in', prefixPath, 'failed:', e)
       } finally {
         if (releaseFs !== undefined) {
           releaseFs()
