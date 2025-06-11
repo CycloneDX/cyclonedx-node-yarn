@@ -26,7 +26,7 @@ import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Fa
 import { Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility, LicenseUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
-import { ppath } from '@yarnpkg/fslib'
+import { ppath, type PortablePath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageJson from 'normalize-package-data'
 
@@ -187,7 +187,7 @@ export class BomBuilder {
     const console_ = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
-      const leFetcher = new LicenseUtility.LicenseEvidenceFetcher({fs: packageFs, path: ppath})
+      const leFetcher = new LicenseUtility.LicenseEvidenceFetcher<PortablePath>({fs: packageFs, path: ppath})
       try {
         const files = leFetcher.fetchAsAttachment(
           prefixPath,
