@@ -187,9 +187,9 @@ export class BomBuilder {
     const console_ = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
-      const leFetcher = new LicenseUtility.LicenseEvidenceFetcher<PortablePath>({fs: packageFs, path: ppath})
+      const leGatherer = new LicenseUtility.LicenseEvidenceGatherer<PortablePath>({fs: packageFs, path: ppath})
       try {
-        const files = leFetcher.fetchAsAttachment(
+        const files = leGatherer.getFileAttachments(
           prefixPath,
           (error: Error): void => {
             /* c8 ignore next 2 */
