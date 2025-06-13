@@ -188,21 +188,22 @@ export class BomBuilder {
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
       const leGatherer = new LicenseUtility.LicenseEvidenceGatherer<PortablePath>({fs: packageFs, path: ppath})
+      const files = leGatherer.getFileAttachments(
+        prefixPath,
+        (error: Error): void => {
+          /* c8 ignore next 2 */
+          console_.info(error.message)
+          console_.debug(error.message, error)
+        }
+      )
       try {
-        const files = leGatherer.getFileAttachments(
-          prefixPath,
-          (error: Error): void => {
-            /* c8 ignore next 2 */
-            console_.info(error.message)
-            console_.debug(error.message, error)
-          }
-        )
         for (const {file, text} of files) {
           yield new NamedLicense(`file: ${file}`, {text})
         }
       }
-      /* c8 ignore next 2 */
+      /* c8 ignore next 3 */
       catch (e) {
+        // generator will not throw before first `.nest()` is called ...
         console_.warn('collecting license evidence in', prefixPath, 'failed:', e)
       } finally {
         if (releaseFs !== undefined) {
