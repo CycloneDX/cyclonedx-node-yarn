@@ -26,7 +26,7 @@ import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Fa
 import { Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import { BomUtility, LicenseUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
-import { ppath, type PortablePath } from '@yarnpkg/fslib'
+import { type PortablePath,ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import normalizePackageJson from 'normalize-package-data'
 
