@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Changed
+  * Utilizes license file gatherer of `@cyclonedx/cyclonedx-library`, previously used own implementation (via [#324])
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.4.0`, was `@8.3.0` (via [#324])
+
+[#324]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/324
+
 ## 3.0.3 - 2025-06-05
 
 * Dependencies
