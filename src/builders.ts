@@ -28,11 +28,11 @@ import { BomUtility, LicenseUtility } from '@cyclonedx/cyclonedx-library/Utils'
 import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
 import { type PortablePath,ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
-import normalizePackageJson from 'normalize-package-data'
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
   isString,
+  normalizePackageManifest,
   structuredClonePolyfill,
   tryRemoveSecretsFromUrl,
   trySanitizeGitUrl
@@ -238,26 +238,11 @@ export class BomBuilder {
   }
 
   private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | false | undefined {
-    /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
-      -- not unsafe! is not null nor undefined */
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
+    // work with a deep copy, because `normalizePackageManifest()` might modify the data
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const manifestC = structuredClonePolyfill(manifest)
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
-    normalizePackageJson(manifestC as normalizePackageJson.Input /* add debug for warnings? */)
-    // region fix normalizations
-    if (isString(manifest.version)) {
-      // allow non-SemVer strings
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-call -- false positive */
-      manifestC.version = manifest.version.trim()
-    }
-    // endregion fix normalizations
-    /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
-
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
-    const component = this.componentBuilder.makeComponent(
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      manifestC as normalizePackageJson.Package,
-      type)
+    normalizePackageManifest(manifestC)
+    const component = this.componentBuilder.makeComponent(manifestC, type)
     if (component === undefined) {
       this.console.debug('DEBUG | skip broken component: %j', locator)
       return undefined
