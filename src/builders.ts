@@ -238,10 +238,9 @@ export class BomBuilder {
   }
 
   private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | false | undefined {
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
+    // work with a deep copy, because `normalizePackageManifest()` might modify the data
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const manifestC = structuredClonePolyfill(manifest)
-    // work with a deep copy, because `normalizePackageJson()` might modify the data
     normalizePackageManifest(manifestC)
     const component = this.componentBuilder.makeComponent(manifestC, type)
     if (component === undefined) {
