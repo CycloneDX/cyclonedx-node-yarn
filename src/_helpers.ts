@@ -21,6 +21,7 @@ import { extname, parse } from 'node:path'
 
 import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
+import normalizePackageData from 'normalize-package-data'
 
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
@@ -113,3 +114,18 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 }
 
 // endregion MIME
+
+
+export function normalizePackageManifest (data: any): asserts data is normalizePackageData.Package {
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access -- ack*/
+  const oVersion = data.version
+
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+  normalizePackageData(data as normalizePackageData.Input /* add debug for warnings? */)
+
+  if (isString(oVersion)) {
+    // normalizer might have stripped version or sanitized it to SemVer -- we want the original
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    data.version = oVersion.trim()
+  }
+}
