@@ -144,7 +144,7 @@ export default [
     },
     {
       plugins: {
-        tsdoc: plugin_tsdoc,
+        plugin_tsdoc,
       },
       languageOptions: {
         parserOptions: {
@@ -165,7 +165,7 @@ export default [
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/prefer-destructuring': 'off',
-        'tsdoc/syntax': 'error',
+        'plugin_tsdoc/syntax': 'error',
       },
     },
   ]),

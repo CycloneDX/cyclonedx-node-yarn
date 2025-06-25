@@ -26,7 +26,7 @@ const path = require('node:path')
 const { suite, test } = require('mocha')
 
 const { name: thisName, version: thisVersion } = require('../../package.json')
-const { Spec, Validation } = require('@cyclonedx/cyclonedx-library')
+const { Spec: { Version: SpecVersion }, Validation } = require('@cyclonedx/cyclonedx-library')
 
 const testSetups = [
   /* region functional tests */
@@ -51,8 +51,8 @@ const testSetups = [
 ]
 
 // latest spec version has all the features ...
-const latestCdxSpecVersion = Spec.Version.v1dot6
-const defaultCdxSpecVersion = Spec.Version.v1dot6
+const latestCdxSpecVersion = SpecVersion.v1dot6
+const defaultCdxSpecVersion = SpecVersion.v1dot6
 
 const testRootPath = path.resolve(__dirname, '..')
 const projectRootPath = path.resolve(testRootPath, '..')
@@ -302,7 +302,7 @@ suite('integration', () => {
 /**
  * @param {'JSON'|'XML'} format
  * @param {string} value
- * @param {Spec.Version} [specVersion]
+ * @param {SpecVersion} [specVersion]
  * @return {Promise<any>}
  * @throws {RangeError} if format not supported
  */
