@@ -62,20 +62,20 @@ export default [
   {
     name: 'general',
     plugins: {
-      import: plugin_import,
-      'simple-import-sort': plugin_simpleImportSort,
-      'license-header': plugin_header,
+      plugin_import,
+      plugin_simpleImportSort,
+      plugin_header,
       plugin_n,
     },
     rules: {
       'plugin_n/prefer-node-protocol': 'error',
       'sort-imports': 'off',
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
-      'import/first': 'error',
-      'import/newline-after-import': 'error',
-      'import/no-duplicates': 'error',
-      'license-header/header': ['error', licenseHeaderFile],
+      'plugin_simpleImportSort/imports': 'error',
+      'plugin_simpleImportSort/exports': 'error',
+      'plugin_import/first': 'error',
+      'plugin_import/newline-after-import': 'error',
+      'plugin_import/no-duplicates': 'error',
+      'plugin_header/header': ['error', licenseHeaderFile],
     },
   },
   ...configSetFiles(['**/*.{js,mjs,cjs}'], [
@@ -123,8 +123,8 @@ export default [
     files: ['**/*.{js,cjs}'],
     rules: {
       // rules dont support mjs properly
-      'simple-import-sort/imports': 'off',
-      'import/order': [
+      'plugin_simpleImportSort/imports': 'off',
+      'plugin_import/order': [
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
         'error', {
           groups: [
