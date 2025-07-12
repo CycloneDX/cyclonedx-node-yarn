@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
+  "entry": [
+    "src/plugin.ts!",
+    "bin/**!",
+    "index.js!"
+  ],
+  "project": [
+    "src/**!",
+    "bin/**!",
+    "tests/**",
+    "!tests/_data/testbeds/**"
+  ],
+  "ignore": [
+    "tools/**"
+  ],
+  "ignoreDependencies": [
+    "xmlbuilder2"
+    // << needed to force the installation of an optional dependency ofa 3rd party package
+  ]
+}
