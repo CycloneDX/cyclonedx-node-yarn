@@ -8,12 +8,14 @@
   "project": [
     "src/**!",
     "bin/**!",
-    "tests/**"
+    "tests/**",
+    "!tests/_data/testbeds/**"
   ],
   "ignore": [
-    "tests/_data/testbeds/**"
+    "tools/**"
   ],
   "ignoreDependencies": [
-    "xmlbuilder2" // << needed to force the installation of an optional dependency ofa 3rd party package
+    "xmlbuilder2"
+    // << needed to force the installation of an optional dependency ofa 3rd party package
   ]
 }
