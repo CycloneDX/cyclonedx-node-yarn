@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
+  "entry": [
+    "yarn-plugin-cyclonedx.cjs!",
+    "bin/**!",
+    "index.js!"
+  ],
+  "project": [],
+  "ignore": [],
+  "ignoreUnresolved": [
+    // things that are auto-injected when yarn plugins are run
+    // see
+  ]
+}

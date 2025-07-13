@@ -155,7 +155,7 @@ jobs:
       - name: build
         run: yarn run build:gbti
       - name: test
-        run: yarn run test:dependencies
+        run: yarn run test:dependencies-build -d
 
   test-licenses:
     needs: [ 'build' ]

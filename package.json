@@ -148,7 +148,8 @@
     "test:standard": "eslint .",
     "test:lint": "tsc --noEmit",
     "test:node": "c8 mocha -p",
-    "test:dependencies": "knip --include dependencies,unlisted,unresolved --production",
+    "test:dependencies-build": "knip --include dependencies,unlisted,unresolved --production -c knip.build.jsonc",
+    "test:dependencies-dist": "knip --include dependencies,unlisted,unresolved --production --strict --no-gitignore -c ../knip.dist.jsonc --directory dist -d",
     "cs-fix": "eslint --fix .",
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
