@@ -133,6 +133,30 @@ jobs:
       - name: test
         run: yarn run test:lint
 
+  test-dependencies:
+    name: test lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          # cache: 'yarn'
+      - name: Setup yarn
+        run: corepack enable yarn
+      - name: Setup subject
+        run: yarn install --immutable
+      - name: build
+        run: yarn run build:gbti
+      - name: test
+        run: yarn run test:dependencies
+
   test-licenses:
     needs: [ 'build' ]
     name: test licenses
