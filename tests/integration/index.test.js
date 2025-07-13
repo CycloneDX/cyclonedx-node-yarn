@@ -23,10 +23,10 @@ const { spawnSync } = require('node:child_process')
 const fs = require('node:fs')
 const path = require('node:path')
 
+const { Spec: { Version: SpecVersion }, Validation } = require('@cyclonedx/cyclonedx-library')
 const { suite, test } = require('mocha')
 
 const { name: thisName, version: thisVersion } = require('../../package.json')
-const { Spec: { Version: SpecVersion }, Validation } = require('@cyclonedx/cyclonedx-library')
 
 const testSetups = [
   /* region functional tests */

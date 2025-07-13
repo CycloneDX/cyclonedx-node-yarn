@@ -24,7 +24,6 @@ interface BuildtimeInfo {
   [key: string]: NodePackageJson
 }
 
-/* eslint-disable-next-line @typescript-eslint/explicit-function-return-type -- dynamic import helper */
 export async function getBuildtimeInfo (): Promise<BuildtimeInfo> {
   return (await import('./__buildtimeInfo.json')).default satisfies BuildtimeInfo
 }
