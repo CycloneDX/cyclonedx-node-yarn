@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import type { PackageJson} from "@cyclonedx/cyclonedx-library/Types";
+import type { NodePackageJson } from "@cyclonedx/cyclonedx-library/Types";
 
 interface BuildtimeInfo {
-  self: PackageJson
-  [key: string]: PackageJson
+  self: NodePackageJson
+  [key: string]: NodePackageJson
 }
 
 /* eslint-disable-next-line @typescript-eslint/explicit-function-return-type -- dynamic import helper */
