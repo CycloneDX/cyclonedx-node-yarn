@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 * Refactor
   * Add typing to internal function `getBuildtimeInfo` (via [#345])
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.5.0`, was `@8.4.0` (via [#345])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.5.0`, was `@^8.4.0` (via [#345])
 
 [#345]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/345
 
