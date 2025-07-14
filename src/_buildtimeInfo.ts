@@ -25,5 +25,7 @@ interface BuildtimeInfo {
 }
 
 export async function getBuildtimeInfo (): Promise<BuildtimeInfo> {
+  /* eslint-disable-next-line @typescript-eslint/ban-ts-comment -- requires ignore, not expect */
+  /* @ts-ignore" TS2307 -- if this fails, run `yarn run build:gbti``in your dev-env */
   return (await import('./__buildtimeInfo.json')).default satisfies BuildtimeInfo
 }
