@@ -172,7 +172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:^8.5.0":
+"@cyclonedx/cyclonedx-library@npm:8.5.0":
   version: 8.5.0
   resolution: "@cyclonedx/cyclonedx-library@npm:8.5.0"
   dependencies:
@@ -202,7 +202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^8.5.0"
+    "@cyclonedx/cyclonedx-library": "npm:8.5.0"
     "@eslint/js": "npm:9.34.0"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
