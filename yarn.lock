@@ -233,7 +233,7 @@ __metadata:
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.1"
     neostandard: "npm:0.12.2"
-    normalize-package-data: "npm:7.0.0"
+    normalize-package-data: "npm:7.0.1"
     npm-run-all2: "npm:^8.0.0"
     rimraf: "npm:^6.0.1"
     typanion: "npm:^3.14.0"
@@ -5540,14 +5540,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize-package-data@npm:7.0.0":
-  version: 7.0.0
-  resolution: "normalize-package-data@npm:7.0.0"
+"normalize-package-data@npm:7.0.1":
+  version: 7.0.1
+  resolution: "normalize-package-data@npm:7.0.1"
   dependencies:
     hosted-git-info: "npm:^8.0.0"
     semver: "npm:^7.3.5"
     validate-npm-package-license: "npm:^3.0.4"
-  checksum: 10c0/d492cbc4cdd92e99cba517b08cec6adf40ff37f2e97ecf4484ccb2da1ef5bd81c6dfbd8b434d3bdc749df639492ecdc71f4a61de1a8b99fe97fdf4faac13e7f1
+  checksum: 10c0/1c30f79c74257a1d4a0b0651683682f3dbcfeb1e0303d31448a08d58350197ca0d2c6f8786e3eb863a8463eedeb0a298cde5834ed64337ecb1b5b52b760f458a
   languageName: node
   linkType: hard
 
