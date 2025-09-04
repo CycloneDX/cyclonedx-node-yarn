@@ -60,7 +60,7 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       ## ! no npm build at the moment
@@ -96,7 +96,7 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
@@ -138,7 +138,7 @@ jobs:
         run: pip install -r tools/test-3rd-party-licenses.requirements.txt
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           # cache: 'yarn'
@@ -184,7 +184,7 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: Setup yarn
@@ -223,7 +223,7 @@ jobs:
           path: .
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: Setup yarn
