@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.1.1 - 2025-09-04
+
 * Refactor
   * Add typing to internal function `getBuildtimeInfo` (via [#345])
 * Dependencies
