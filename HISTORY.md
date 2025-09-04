@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 * Refactor
   * Add typing to internal function `getBuildtimeInfo` (via [#345])
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.5.0`, was `@^8.4.0` (via [#345])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.5.1`, was `@^8.4.0` (via [#345], [#368])
   * Upgraded runtime-dependency `normalize-package-data@7.0.1`, was `@7.0.0` (via [#351])
 * Build
   * Use _TypeScript_ `v5.9.2` now, was `v5.8.3` (via [#356])
@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 [#345]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/345
 [#351]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/351
 [#356]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/356
+[#368]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/368
 
 ## 3.1.0 - 2025-06-16
 
