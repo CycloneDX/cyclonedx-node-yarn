@@ -228,7 +228,7 @@ __metadata:
     extract-zip: "npm:^2.0.1"
     fast-glob: "npm:^3.3.2"
     globals: "npm:^16.0.0"
-    hosted-git-info: "npm:8.1.0"
+    hosted-git-info: "npm:9.0.0"
     knip: "npm:5.63.1"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.2"
@@ -3995,7 +3995,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:8.1.0, hosted-git-info@npm:^8.0.0":
+"hosted-git-info@npm:9.0.0":
+  version: 9.0.0
+  resolution: "hosted-git-info@npm:9.0.0"
+  dependencies:
+    lru-cache: "npm:^11.1.0"
+  checksum: 10c0/567d36e26f63f654991eca53ef3787e55c6e48d38ed70107bf4828f5b1c506d590553de605f08bb5ed242e7044976406681070292d7d9ed9d8eb4833a4f3520d
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^8.0.0":
   version: 8.1.0
   resolution: "hosted-git-info@npm:8.1.0"
   dependencies:
@@ -4792,7 +4801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^11.0.0":
+"lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0":
   version: 11.2.1
   resolution: "lru-cache@npm:11.2.1"
   checksum: 10c0/6f0e6b27f368d5e464e7813bd5b0af8f9a81a3a7ce2f40509841fdef07998b2588869f3e70edfbdb3bf705857f7bb21cca58fb01e1a1dc2440a83fcedcb7e8d8
