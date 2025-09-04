@@ -229,7 +229,7 @@ __metadata:
     fast-glob: "npm:^3.3.2"
     globals: "npm:^16.0.0"
     hosted-git-info: "npm:8.1.0"
-    knip: "npm:5.63.0"
+    knip: "npm:5.63.1"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.2"
     neostandard: "npm:0.12.2"
@@ -4685,9 +4685,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:5.63.0":
-  version: 5.63.0
-  resolution: "knip@npm:5.63.0"
+"knip@npm:5.63.1":
+  version: 5.63.1
+  resolution: "knip@npm:5.63.1"
   dependencies:
     "@nodelib/fs.walk": "npm:^1.2.3"
     fast-glob: "npm:^3.3.3"
@@ -4700,7 +4700,7 @@ __metadata:
     picomatch: "npm:^4.0.1"
     smol-toml: "npm:^1.4.1"
     strip-json-comments: "npm:5.0.2"
-    zod: "npm:^3.22.4"
+    zod: "npm:^3.25.0"
     zod-validation-error: "npm:^3.0.3"
   peerDependencies:
     "@types/node": ">=18"
@@ -4708,7 +4708,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10c0/80a17b9e76c508e7e8f1b679753d8c8f3e771c913faf41207fd65f3125cf0b6f35b6f982badca2cae2110205b9c34a1dc49afe01d29d7b595d51763fd31b9bbb
+  checksum: 10c0/33234319ccc07966d61dffbe3e1c8cfc5a5ff124870a4147d86a6c912a5ae83ded04ae08d0b2698945df018d84a9e691ba3f2ef86d98ade87bdc77bcae92c021
   languageName: node
   linkType: hard
 
@@ -7345,7 +7345,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.4":
+"zod@npm:^3.25.0":
   version: 3.25.76
   resolution: "zod@npm:3.25.76"
   checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c

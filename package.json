@@ -86,7 +86,7 @@
     "extract-zip": "^2.0.1",
     "fast-glob": "^3.3.2",
     "globals": "^16.0.0",
-    "knip": "5.63.0",
+    "knip": "5.63.1",
     "mkdirp": "^3.0.1",
     "mocha": "11.7.2",
     "neostandard": "0.12.2",
