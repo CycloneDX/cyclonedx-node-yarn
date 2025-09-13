@@ -172,9 +172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:8.5.1":
-  version: 8.5.1
-  resolution: "@cyclonedx/cyclonedx-library@npm:8.5.1"
+"@cyclonedx/cyclonedx-library@npm:8.6.0":
+  version: 8.6.0
+  resolution: "@cyclonedx/cyclonedx-library@npm:8.6.0"
   dependencies:
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^3.0.1"
@@ -194,7 +194,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/e5e3c8901c631fcffcc2939bddfbc620785c91a1134638727438e5c6bc4d22c2f4f7a97d89a8ec4d3eb02b424e02bc878651485ba3932723c1b89466db725527
+  checksum: 10c0/5c825e241280012fc98882282b3958290f9daeeb4979f06cea38d881388fb323bf8c18703ed055880826862f64f0979ff18246e96e01c51a149d212910471921
   languageName: node
   linkType: hard
 
@@ -202,7 +202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:8.5.1"
+    "@cyclonedx/cyclonedx-library": "npm:8.6.0"
     "@eslint/js": "npm:9.34.0"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
