@@ -172,18 +172,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:8.5.1":
-  version: 8.5.1
-  resolution: "@cyclonedx/cyclonedx-library@npm:8.5.1"
+"@cyclonedx/cyclonedx-library@npm:9.0.0-rc.3":
+  version: 9.0.0-rc.3
+  resolution: "@cyclonedx/cyclonedx-library@npm:9.0.0-rc.3"
   dependencies:
-    ajv: "npm:^8.12.0"
-    ajv-formats: "npm:^3.0.1"
-    ajv-formats-draft2019: "npm:^1.6.1"
-    libxmljs2: "npm:^0.35||^0.37"
     packageurl-js: "npm:^2.0.1"
     spdx-expression-parse: "npm:^3.0.1 || ^4"
-    xmlbuilder2: "npm:^3.0.2"
-  dependenciesMeta:
+  peerDependencies:
+    ajv: ^8.12.0
+    ajv-formats: ^3.0.1
+    ajv-formats-draft2019: ^1.6.1
+    libxmljs2: ^0.35||^0.37
+    xmlbuilder2: ^3.0.2
+  peerDependenciesMeta:
     ajv:
       optional: true
     ajv-formats:
@@ -194,7 +195,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/e5e3c8901c631fcffcc2939bddfbc620785c91a1134638727438e5c6bc4d22c2f4f7a97d89a8ec4d3eb02b424e02bc878651485ba3932723c1b89466db725527
+  checksum: 10c0/bd51118ec7b81cbd2f88cd5277a201ead16f6ac588a592598ed06ff8114bb77d675bab1e2a5f96723de9b8525baea9b744aa604156afe5e0430475958f4a0edd
   languageName: node
   linkType: hard
 
@@ -202,7 +203,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:8.5.1"
+    "@cyclonedx/cyclonedx-library": "npm:9.0.0-rc.3"
     "@eslint/js": "npm:9.34.0"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
@@ -213,6 +214,9 @@ __metadata:
     "@yarnpkg/core": "npm:^4"
     "@yarnpkg/fslib": "npm:^3"
     "@yarnpkg/plugin-git": "npm:^3"
+    ajv: "npm:^8.12.0"
+    ajv-formats: "npm:^3.0.1"
+    ajv-formats-draft2019: "npm:^1.6.1"
     c8: "npm:^10.1.2"
     clipanion: "npm:^4.0.0-rc.2"
     eslint: "npm:9.34.0"
@@ -230,6 +234,7 @@ __metadata:
     globals: "npm:^16.0.0"
     hosted-git-info: "npm:8.1.0"
     knip: "npm:5.63.1"
+    libxmljs2: "npm:^0.35||^0.37"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.2"
     neostandard: "npm:0.12.2"
@@ -2715,9 +2720,9 @@ __metadata:
   linkType: hard
 
 "detect-libc@npm:^2.0.0":
-  version: 2.0.4
-  resolution: "detect-libc@npm:2.0.4"
-  checksum: 10c0/c15541f836eba4b1f521e4eecc28eefefdbc10a94d3b8cb4c507689f332cc111babb95deda66f2de050b22122113189986d5190be97d51b5a2b23b938415e67c
+  version: 2.1.0
+  resolution: "detect-libc@npm:2.1.0"
+  checksum: 10c0/4d0d36c77fdcb1d3221779d8dfc7d5808dd52530d49db67193fb3cd8149e2d499a1eeb87bb830ad7c442294929992c12e971f88ae492965549f8f83e5336eba6
   languageName: node
   linkType: hard
 
@@ -3541,7 +3546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fdir@npm:^6.4.4":
+"fdir@npm:^6.4.4, fdir@npm:^6.5.0":
   version: 6.5.0
   resolution: "fdir@npm:6.5.0"
   peerDependencies:
@@ -5621,7 +5626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^4.0.1, picomatch@npm:^4.0.2":
+"picomatch@npm:^4.0.1, picomatch@npm:^4.0.2, picomatch@npm:^4.0.3":
   version: 4.0.3
   resolution: "picomatch@npm:4.0.3"
   checksum: 10c0/9582c951e95eebee5434f59e426cddd228a7b97a0161a375aed4be244bd3fe8e3a31b846808ea14ef2c8a2527a6eeab7b3946a67d5979e81694654f939473ae2
@@ -6710,7 +6715,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.12, tinyglobby@npm:^0.2.13":
+"tinyglobby@npm:^0.2.12":
+  version: 0.2.15
+  resolution: "tinyglobby@npm:0.2.15"
+  dependencies:
+    fdir: "npm:^6.5.0"
+    picomatch: "npm:^4.0.3"
+  checksum: 10c0/869c31490d0d88eedb8305d178d4c75e7463e820df5a9b9d388291daf93e8b1eb5de1dad1c1e139767e4269fe75f3b10d5009b2cc14db96ff98986920a186844
+  languageName: node
+  linkType: hard
+
+"tinyglobby@npm:^0.2.13":
   version: 0.2.14
   resolution: "tinyglobby@npm:0.2.14"
   dependencies:
@@ -7243,7 +7258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmlbuilder2@npm:3.1.1, xmlbuilder2@npm:^3.0.2":
+"xmlbuilder2@npm:3.1.1":
   version: 3.1.1
   resolution: "xmlbuilder2@npm:3.1.1"
   dependencies:
