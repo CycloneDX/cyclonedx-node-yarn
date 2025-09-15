@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@9.0.0`, was `8.5.1` (via [#377])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@9.0.0`, was `@8.5.1` (via [#377])
 
 [#377]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/377
 
