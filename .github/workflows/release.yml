@@ -63,6 +63,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
