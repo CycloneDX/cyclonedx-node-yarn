@@ -143,7 +143,7 @@ suite('integration', () => {
     )
 
     // No validation implemented for technical reasons - https://github.com/CycloneDX/cyclonedx-node-yarn/issues/23#issuecomment-2027580253
-    // At least we do validate here
+    // At least we do validate here in the tests...
     const validationErrors = await validate(format, sbom, latestCdxSpecVersion)
     assert.equal(validationErrors, null)
 
