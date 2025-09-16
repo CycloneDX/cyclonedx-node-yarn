@@ -99,6 +99,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
         run: corepack enable yarn
@@ -141,6 +142,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
         run: corepack enable yarn
@@ -187,6 +189,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       - name: Setup yarn
         run: corepack enable yarn
       - name: Setup subject
@@ -226,6 +229,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       - name: Setup yarn
         run: corepack enable yarn
       - name: yarn install
