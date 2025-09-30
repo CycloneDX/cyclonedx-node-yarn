@@ -89,7 +89,9 @@ export class BomBuilder {
     const fetchLicenseEvidences: LicenseEvidenceFetcher = await this.makeLicenseEvidenceFetcher(workspace.project)
 
     const setLicensesDeclared = function (license: License): void {
+      /* eslint-disable no-param-reassign -- intended */
       license.acknowledgement = LicenseAcknowledgement.Declared
+      /* eslint-enable no-param-reassign */
     }
 
     /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
