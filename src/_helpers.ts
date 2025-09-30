@@ -125,7 +125,7 @@ export function normalizePackageManifest (data: any): asserts data is normalizeP
 
   if (isString(oVersion)) {
     // normalizer might have stripped version or sanitized it to SemVer -- we want the original
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, no-param-reassign -- ack */
     data.version = oVersion.trim()
   }
 }

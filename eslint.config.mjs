@@ -115,6 +115,7 @@ export default [
         'jsdoc/require-yields': 0,
         'jsdoc/require-yields-check': 'error',
         'jsdoc/sort-tags': 'warn',
+        'jsdoc/reject-any-type': 0
       }
     },
   ]),
