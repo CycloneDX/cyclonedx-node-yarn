@@ -43,7 +43,7 @@ export async function writeAllSync (fd: number, data: string): Promise<number> {
         throw err
       }
       /* eslint-disable-next-line promise/avoid-new -- needed */
-      await new Promise((resolve) => setTimeout(resolve, 100))
+      await new Promise((resolve) => { setTimeout(resolve, 100) })
     }
   }
   return w
