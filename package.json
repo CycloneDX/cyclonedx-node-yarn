@@ -66,7 +66,7 @@
     "xmlbuilder2": "3.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.37.0",
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "ts5.8",
@@ -76,7 +76,7 @@
     "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
     "c8": "^10.1.2",
-    "eslint": "9.36.0",
+    "eslint": "9.37.0",
     "eslint-config-love": "133.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "2.32.0",
