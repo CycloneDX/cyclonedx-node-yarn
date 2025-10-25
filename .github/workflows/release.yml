@@ -110,7 +110,7 @@ jobs:
         run: yarn run build
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -120,7 +120,7 @@ jobs:
         run: yarn run make-dist
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -149,7 +149,7 @@ jobs:
         run: corepack enable yarn
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -161,7 +161,7 @@ jobs:
           yarn node tools/write-3rd-party-licenses.cjs _tmp/NOTICE _tmp/lsummary.json
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: licenses-files
           path: |
@@ -199,7 +199,7 @@ jobs:
         run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -221,7 +221,7 @@ jobs:
     steps:
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ env.DIST_DIR }}
           path: .
@@ -253,7 +253,7 @@ jobs:
           yarn pack --out "$PACKED_DIR"/%s-%v.tgz
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.PACKED_DIR }}
           path: ${{ env.PACKED_DIR }}/
@@ -274,13 +274,13 @@ jobs:
     steps:
       - name: fetch packages
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ env.PACKED_DIR }}
           path: ${{ env.PACKED_DIR }}
       - name: fetch dist
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
