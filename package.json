@@ -80,7 +80,7 @@
     "eslint-config-love": "133.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "61.1.5",
+    "eslint-plugin-jsdoc": "61.1.9",
     "eslint-plugin-license-header": "0.8.0",
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-promise": "7.2.1",
