@@ -104,6 +104,16 @@
     "yarn": ">=4",
     "node": ">=20.18.0"
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "yarn",
+      "onFail": "error"
+    }
+  },
   "directories": {
     "doc": "docs",
     "src": "src",
