@@ -84,13 +84,15 @@ jobs:
       - name: git commit & push back
         run: |
           set -eux
+          GCOMMIT_MESSAGE="${COMMIT_MESSAGE//%s/$VERSION_PLAIN}"
           git add package.json yarn.lock
           git commit -s -m "$GCOMMIT_MESSAGE"
           git tag "$GTAG_NAME"
           git push --follow-tags
         env:
-          GCOMMIT_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          COMMIT_MESSAGE: ${{ github.event.inputs.commitMessage }}
           GTAG_NAME: ${{ steps.bump.outputs.version }}
+          VERSION_PLAIN: ${{ steps.bump.outputs.version_plain }}
 
   build:
     needs: [ "bump" ]
@@ -136,7 +138,7 @@ jobs:
           if-no-files-found: error
 
   test-licenses:
-    needs: [ 'build' ]
+    needs: [ 'bump', 'build' ]
     name: test licenses
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -144,6 +146,8 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.bump.outputs.version }}
       - name: install tools
         run: pip install -r tools/test-3rd-party-licenses.requirements.txt
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
@@ -312,4 +316,4 @@ jobs:
           name:       ${{ needs.bump.outputs.version_plain }}
           prerelease: ${{ github.event.inputs.prerelease }}
           files:      '${{ env.ASSETS_DIR }}/*'
-          target_commitish: ${{ github.head_ref || github.ref_name }}
+          # If a tag already has a GitHub release, the existing release will be updated with the release assets.
