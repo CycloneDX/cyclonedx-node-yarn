@@ -60,13 +60,8 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn
         run: corepack enable yarn
-      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
-        # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.NODE_ACTIVE_LTS }}
-          package-manager-cache: false
-      ## ! no npm build at the moment
+      - name: Setup yarn
+        run: yarn
       - name: bump VERSION
         id: bump
         # `npm version` seams superior to `yarn version` ...
