@@ -72,7 +72,7 @@ jobs:
         # `npm version` seams superior to `yarn version` ...
         run: |
           set -eux
-          yarn version -i "$NPMV_NEWVERSION"
+          yarn version -i "$YARNV_NEWVERSION"
           VERSION_PLAIN="$(jq -r .version package.json)"
           echo "::debug::plain version = $VERSION_PLAIN"
           VERSION="v$VERSION_PLAIN"  # with leading v
