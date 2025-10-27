@@ -51,7 +51,7 @@ const testSetups = [
 ]
 
 // latest spec version has all the features ...
-const latestCdxSpecVersion = SpecVersion.v1dot6
+const latestCdxSpecVersion = SpecVersion.v1dot7
 const defaultCdxSpecVersion = SpecVersion.v1dot6
 
 const testRootPath = path.resolve(__dirname, '..')

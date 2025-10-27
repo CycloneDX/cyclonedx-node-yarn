@@ -74,7 +74,7 @@ $ yarn cyclonedx
   --short-PURLs              Omit all qualifiers from PackageURLs.
                              This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
   --sv,--spec-version #0     Which version of CycloneDX to use.
-                             (choices: 1.2, 1.3, 1.4, 1.5, 1.6, default: 1.6)
+                             (choices: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, default: 1.6)
   --output-reproducible      Whether to go the extra mile and make the output reproducible.
                              This might result in loss of time- and random-based values.
   --of,--output-format #0    Which output format to use.
