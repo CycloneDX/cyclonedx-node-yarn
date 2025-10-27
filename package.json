@@ -63,7 +63,7 @@
     "hosted-git-info": "8.1.0",
     "normalize-package-data": "7.0.1",
     "typanion": "^3.14.0",
-    "xmlbuilder2": "3.1.1"
+    "xmlbuilder2": "4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "9.38.0",
