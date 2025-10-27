@@ -60,7 +60,7 @@
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.2",
-    "hosted-git-info": "8.1.0",
+    "hosted-git-info": "9.0.2",
     "normalize-package-data": "7.0.1",
     "typanion": "^3.14.0",
     "xmlbuilder2": "4.0.0"
