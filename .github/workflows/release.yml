@@ -6,22 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       newversion:
-        # is param from `npm version`. therefore the description should reference all the options from there
-        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]'
+        # is param from `yarn version`. therefore the description should reference all the options from there
+        description: 'one of: [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease ]'
         required: true
       commitMessage:
         description: 'Release/commit message (%s will be replaced with the resulting version number)'
         default: '%s'
         required: true
-      preid:
-        description: 'The "prerelease identifier" to use as a prefix for the "prerelease" part of a semver. Like the rc in `1.2.0-rc.8`.'
-        type: choice
-        options:
-          - rc
-          - beta
-          - alpha
-        default: rc
-        required: false
       prerelease:
         description: "This is a pre-release"
         type: boolean
@@ -49,9 +40,11 @@ jobs:
     permissions:
       contents: write  # needed for git push
     steps:
-      - name: Checkout code
+      - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v5
+        with:
+          ref: ${{ needs.bump.outputs.version }}
       - name: Configure Git
         # needed for push back of changes
         run: |
@@ -64,25 +57,40 @@ jobs:
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
+          # cache: 'yarn'
+      - name: Setup yarn
+        run: corepack enable yarn
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
         # `npm version` seams superior to `yarn version` ...
         run: |
           set -eux
-          COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
-          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
-          echo "::debug::new version = $VERSION"
-          VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
+          yarn version -i "$NPMV_NEWVERSION"
+          VERSION_PLAIN="$(jq -r .version package.json)"
           echo "::debug::plain version = $VERSION_PLAIN"
+          VERSION="v$VERSION_PLAIN"  # with leading v
+          echo "::debug::new version = $VERSION"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "version_plain=$VERSION_PLAIN" >> $GITHUB_OUTPUT
         env:
-          NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
-          NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
-          NPMV_PREID: ${{ github.event.inputs.preid }}
-      - name: git push back
-        run: git push --follow-tags
+          YARNV_NEWVERSION: ${{ github.event.inputs.newversion }}
+      - name: git commit & push back
+        run: |
+          set -eux
+          git add package.json yarn.lock
+          git commit -s -m "$GCOMMIT_MESSAGE"
+          git tag "$GTAG_NAME"
+          git push --follow-tags
+        env:
+          GCOMMIT_MESSAGE: ${{ github.event.inputs.commitMessage }}
+          GTAG_NAME: ${{ steps.bump.outputs.version }}
 
   build:
     needs: [ "bump" ]
