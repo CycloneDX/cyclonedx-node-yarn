@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
   * Upgraded runtime-dependency `@normalize-package-data@8.0.0`, was `@7.0.1` (via [#355])
   * Upgraded runtime-dependency `@xmlbuilder2@4.0.0`, was `@3.1.1` (via [#401])
 * Build
-  * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#393]) 
+  * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#393])
 
 [#354]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/354
 [#355]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/355
