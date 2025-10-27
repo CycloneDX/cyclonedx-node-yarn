@@ -85,7 +85,7 @@ jobs:
           GCOMMIT_MESSAGE="${COMMIT_MESSAGE//%s/$VERSION_PLAIN}"
           git add package.json yarn.lock
           git commit -s -m "$GCOMMIT_MESSAGE"
-          git tag -a "$GTAG_NAME" 
+          git tag -a  -m "$GCOMMIT_MESSAGE" "$GTAG_NAME"
           git push --follow-tags
         env:
           COMMIT_MESSAGE: ${{ github.event.inputs.commitMessage }}
