@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * Added
-  * Basic support for CycloneDX 1.7 (via [#403], [#])
+  * Basic support for CycloneDX 1.7 (via [#403], [#408])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@9.2.0`, was `@9.0.0` (via [#403])
   * Upgraded runtime-dependency `@hosted-git-info@9.0.2`, was `@8.1.0` (via [#354])
@@ -21,7 +21,7 @@ All notable changes to this project will be documented in this file.
 [#393]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/393
 [#401]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/401
 [#403]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/403
-[#]:
+[#408]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/408
 
 ## 3.1.2 - 2025-09-16
 
