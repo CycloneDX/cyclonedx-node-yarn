@@ -6,19 +6,22 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Added
+  * Basic support for CycloneDX 1.7 (via [#403], [#])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@9.2.0`, was `@9.0.0` (via [#403])
   * Upgraded runtime-dependency `@hosted-git-info@9.0.2`, was `@8.1.0` (via [#354])
   * Upgraded runtime-dependency `@normalize-package-data@8.0.0`, was `@7.0.1` (via [#355])
   * Upgraded runtime-dependency `@xmlbuilder2@4.0.0`, was `@3.1.1` (via [#401])
 * Build
-  * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#393])
+  * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#393]) 
 
 [#354]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/354
 [#355]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/355
 [#393]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/393
 [#401]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/401
 [#403]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/403
+[#]:
 
 ## 3.1.2 - 2025-09-16
 
