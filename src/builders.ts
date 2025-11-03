@@ -94,9 +94,8 @@ export class BomBuilder {
       /* eslint-enable no-param-reassign */
     }
 
-    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- as we need to enforce a proper root component to enable all features of SBOM */
     const rootComponent: Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType)
-      || new DummyComponent(this.metaComponentType, 'RootComponent')
+      ?? new DummyComponent(this.metaComponentType, 'RootComponent')
     rootComponent.licenses.forEach(setLicensesDeclared)
 
     const bom = new Bom()
@@ -148,7 +147,7 @@ export class BomBuilder {
     return bom
   }
 
-  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType  ): Component | false | undefined {
+  private makeComponentFromWorkspace (workspace: Workspace, type?: ComponentType  ): Component | undefined {
     return this.makeComponent(workspace.anchoredLocator, workspace.manifest.raw, type)
   }
 
@@ -219,7 +218,7 @@ export class BomBuilder {
     fetchManifest: ManifestFetcher,
     fetchLicenseEvidence: LicenseEvidenceFetcher,
     type?: ComponentType
-  ): Promise<Component | false | undefined> {
+  ): Promise<Component | undefined> {
     /* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
       -- not unsafe! is not null nor undefined */
     const manifest = await fetchManifest(pkg)
@@ -228,17 +227,20 @@ export class BomBuilder {
     manifest.name = pkg.scope ? `@${pkg.scope}/${pkg.name}` : pkg.name
     manifest.version = pkg.version
     const component = this.makeComponent(pkg, manifest, type)
-    if (this.gatherLicenseTexts && component instanceof Component) {
+    if (component === undefined) {
+      return undefined
+    }
+    if (this.gatherLicenseTexts) {
       component.evidence = new ComponentEvidence()
       for await (const le of fetchLicenseEvidence(pkg)) {
         component.evidence.licenses.add(le)
       }
     }
-    return component
     /* eslint-enable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
+    return component
   }
 
-  private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | false | undefined {
+  private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | undefined {
     // work with a deep copy, because `normalizePackageManifest()` might modify the data
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
     const manifestC = structuredClonePolyfill(manifest)
@@ -369,11 +371,6 @@ export class BomBuilder {
           const _depIDN = structUtils.prettyLocatorNoColors(depPkg)
           const _depC = await this.makeComponentFromPackage(depPkg,
             fetchManifest, fetchLicenseEvidences)
-          if (_depC === false) {
-            // shall be skipped
-            this.console.debug('DEBUG | skip impossible component %j', _depIDN)
-            continue // for-loop
-          }
           if (_depC === undefined) {
             depComponent = new DummyComponent(ComponentType.Library, `InterferedDependency.${_depIDN}`)
             this.console.warn('WARN  | InterferedDependency %j', _depIDN)
