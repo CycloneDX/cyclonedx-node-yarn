@@ -94,10 +94,9 @@ export class BomBuilder {
       /* eslint-enable no-param-reassign */
     }
 
-    /* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing --
-     * as we need to enforce a proper root component to enable all features of SBOM */
-    const rootComponent: Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType) ||
-      new DummyComponent(this.metaComponentType, 'RootComponent')
+    /* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing, @typescript-eslint/strict-boolean-expressions -- as we need to enforce a proper root component to enable all features of SBOM */
+    const rootComponent: Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType)
+      || new DummyComponent(this.metaComponentType, 'RootComponent')
     rootComponent.licenses.forEach(setLicensesDeclared)
 
     const bom = new Bom()
