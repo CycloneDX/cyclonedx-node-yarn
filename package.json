@@ -5,6 +5,9 @@
   "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
   "license": "Apache-2.0",
   "keywords": [
+    "yarn",
+    "plugin",
+    "yarn-plugin",
     "CycloneDX",
     "SBOM",
     "BOM",
@@ -15,9 +18,7 @@
     "dependency",
     "package-url",
     "PURL",
-    "spdx",
-    "node",
-    "yarn"
+    "spdx"
   ],
   "homepage": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
   "repository": {
