@@ -215,6 +215,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
     let outputFD: number = process.stdout.fd
     if (this.outputFile !== OutputStdOut) {
       const outputFPn = npath.resolve(process.cwd(), this.outputFile)
+      myConsole.debug('DEBUG | outputFPn:', outputFPn)
       const outputFDir = npath.toPortablePath(npath.dirname(outputFPn))
       if (!xfs.existsSync(outputFDir)) {
         myConsole.info('INFO  | creating directory', outputFDir)
