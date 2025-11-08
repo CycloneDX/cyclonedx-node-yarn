@@ -61,6 +61,7 @@
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.2",
+    "cyclonedx-esbuild": "/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz",
     "hosted-git-info": "9.0.2",
     "normalize-package-data": "8.0.0",
     "typanion": "^3.14.0",
@@ -148,10 +149,11 @@
     "workspaces": []
   },
   "scripts": {
-    "build": "run-s -n build:gbti build:bundle",
+    "build": "run-s -n build:gbti build:bundle build:sbom",
     "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
     "build:bundle-dev": "yarn build:bundle --source-map",
+    "build:sbom": "cyclonedx-esbuild -vvv -o bundles/@yarnpkg/bom.json bundles/@yarnpkg/plugin-cyclonedx.meta.json",
     "make-dist": "run-s -n make-dist:mkdir make-dist:cp make-dist:make-\\*",
     "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
     "make-dist:cp": "node -r fs -r path -e 'process.chdir(process.env.PROJECT_CWD);j=path.join;c=fs.cpSync;d=`dist`;c(j(`bundles`,`@yarnpkg`,`plugin-cyclonedx.js`),j(d,`yarn-plugin-cyclonedx.cjs`));[`README.md`,`LICENSE`,`index.js`,`bin`].forEach(s=>c(s,j(d,s),{recursive:true}))'",
