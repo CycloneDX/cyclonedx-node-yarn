@@ -75,60 +75,59 @@ export class MakeSbomCommand extends Command<CommandContext> {
     - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
     - see https://yarnpkg.com/cli/workspaces/focus
   */
-  production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
+  readonly production = Option.Boolean('--production,--prod', process.env.NODE_ENV === 'production', {
     description: 'Exclude development dependencies.\n' +
       '(default: true if the NODE_ENV environment variable is set to "production", otherwise false)'
   })
 
-  gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
+  readonly gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
     description: 'Search for license files in components and include them as license evidence.\n' +
       'This feature is experimental.'
   })
 
-  shortPURLs = Option.Boolean('--short-PURLs', false, {
+  readonly shortPURLs = Option.Boolean('--short-PURLs', false, {
     description: 'Omit all qualifiers from PackageURLs.\n' +
       'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
   })
 
-  specVersion = makeChoiceSwitch<SpecVersion>(
+  readonly specVersion = makeChoiceSwitch<SpecVersion>(
     '--sv,--spec-version',
     Object.keys(SpecVersionDict).sort(),
     SpecVersion.v1dot6,
     'Which version of CycloneDX to use.'
   )
 
-  outputReproducible = Option.Boolean('--output-reproducible', false, {
+  readonly outputReproducible = Option.Boolean('--output-reproducible', false, {
     description: 'Whether to go the extra mile and make the output reproducible.\n' +
       'This might result in loss of time- and random-based values.'
   })
 
-  outputFormat = makeChoiceSwitch<OutputFormat>(
+  readonly outputFormat = makeChoiceSwitch<OutputFormat>(
     '--of,--output-format',
     Object.values(OutputFormat).sort(),
     OutputFormat.JSON,
     'Which output format to use.'
   )
 
-  outputFile = Option.String('-o,--output-file', OutputStdOut, {
+  readonly outputFile = Option.String('-o,--output-file', OutputStdOut, {
     description: 'Path to the output file.\n' +
       `Set to "${OutputStdOut}" to write to STDOUT.\n` +
       '(default: write to STDOUT)'
   })
 
-  mcType = makeChoiceSwitch<ComponentType>(
+  readonly mcType = makeChoiceSwitch<ComponentType>(
     '--mc-type',
     [ComponentType.Application, ComponentType.Library, ComponentType.Firmware],
     ComponentType.Application,
     'Type of the main component.'
   )
-
-  verbosity = Option.Counter('-v,--verbose', 1, {
+  readonly    verbosity = Option.Counter('-v,--verbose', 1, {
     description: 'Increase the verbosity of messages.\n' +
         'Use multiple times to increase the verbosity even more.'
   })
 
   /* possible option:
-    projectDir = Option.String({
+    readonly projectDir = Option.String({
       name: 'project-dir',
       required: false
     })

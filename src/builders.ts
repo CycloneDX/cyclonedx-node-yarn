@@ -51,17 +51,17 @@ interface BomBuilderOptions {
 }
 
 export class BomBuilder {
-  toolBuilder: PJB.ToolBuilder
-  componentBuilder: PJB.ComponentBuilder
-  purlFactory: PJF.PackageUrlFactory
+  readonly toolBuilder: PJB.ToolBuilder
+  readonly componentBuilder: PJB.ComponentBuilder
+  readonly purlFactory: PJF.PackageUrlFactory
 
-  omitDevDependencies: boolean
-  metaComponentType: ComponentType
-  reproducible: boolean
-  shortPURLs: boolean
-  gatherLicenseTexts: boolean
+  readonly omitDevDependencies: boolean
+  readonly metaComponentType: ComponentType
+  readonly reproducible: boolean
+  readonly shortPURLs: boolean
+  readonly gatherLicenseTexts: boolean
 
-  console: Console
+  readonly console: Console
 
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
