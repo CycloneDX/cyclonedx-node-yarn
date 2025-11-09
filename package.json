@@ -153,7 +153,7 @@
     "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
     "build:bundle-dev": "yarn build:bundle --source-map",
-    "build:sbom": "cyclonedx-esbuild -vvv -o bundles/@yarnpkg/bom.json bundles/@yarnpkg/plugin-cyclonedx.meta.json",
+    "build:sbom": "cyclonedx-esbuild -vvv --gather-license-texts -o bundles/@yarnpkg/bom.json bundles/@yarnpkg/plugin-cyclonedx.meta.json",
     "make-dist": "run-s -n make-dist:mkdir make-dist:cp make-dist:make-\\*",
     "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
     "make-dist:cp": "node -r fs -r path -e 'process.chdir(process.env.PROJECT_CWD);j=path.join;c=fs.cpSync;d=`dist`;c(j(`bundles`,`@yarnpkg`,`plugin-cyclonedx.js`),j(d,`yarn-plugin-cyclonedx.cjs`));[`README.md`,`LICENSE`,`index.js`,`bin`].forEach(s=>c(s,j(d,s),{recursive:true}))'",

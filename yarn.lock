@@ -2654,7 +2654,7 @@ __metadata:
 
 "cyclonedx-esbuild@file:/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz::locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A.":
   version: 0.0.1
-  resolution: "cyclonedx-esbuild@file:/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz#/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz::hash=0c4b3b&locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A."
+  resolution: "cyclonedx-esbuild@file:/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz#/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz::hash=a887cd&locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A."
   dependencies:
     "@cyclonedx/cyclonedx-library": "npm:^9.2.0"
     ajv: "npm:^8.12.0"
@@ -2671,7 +2671,7 @@ __metadata:
       optional: true
   bin:
     cyclonedx-esbuild: bin/cyclonedx-esbuild-cli.js
-  checksum: 10c0/212ea8e49d77588a9ac349428021256223182b3649d32e1cb55d68efba3b11474b1b165e8c3fde32f7c37ca3501f9cd7f5213aad1ce4f23d80502d6641883f8c
+  checksum: 10c0/72cf8eb87f051c61da71ccf401dc138efbea18730a091ca93475d152e64b8bd302e9fd2ae6d74e657e63323f7292737c6494eb4b4c269861aef9228a86138b78
   languageName: node
   linkType: hard
 
