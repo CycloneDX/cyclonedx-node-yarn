@@ -33,7 +33,6 @@ import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
   isString,
   normalizePackageManifest,
-  structuredClonePolyfill,
   tryRemoveSecretsFromUrl,
   trySanitizeGitUrl
 } from './_helpers'
@@ -243,7 +242,7 @@ export class BomBuilder {
   private makeComponent (locator: Locator, manifest: NonNullable<any>, type?: ComponentType  ): Component | undefined {
     // work with a deep copy, because `normalizePackageManifest()` might modify the data
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ack */
-    const manifestC = structuredClonePolyfill(manifest)
+    const manifestC = structuredClone(manifest)
     normalizePackageManifest(manifestC)
     const component = this.componentBuilder.makeComponent(manifestC, type)
     if (component === undefined) {

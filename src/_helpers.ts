@@ -23,13 +23,6 @@ import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
 import normalizePackageData from 'normalize-package-data'
 
-export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function <T>(value: T): T {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    return JSON.parse(JSON.stringify(value)) as T
-  }
-
 export async function writeAllSync (fd: number, data: string): Promise<number> {
   const b = Buffer.from(data)
   const l = b.byteLength
