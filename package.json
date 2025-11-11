@@ -93,7 +93,7 @@
     "knip": "5.68.0",
     "libxmljs2": "^0.35||^0.37",
     "mkdirp": "^3.0.1",
-    "mocha": "11.7.4",
+    "mocha": "11.7.5",
     "neostandard": "0.12.2",
     "npm-run-all2": "^8.0.0",
     "rimraf": "^6.0.1",
