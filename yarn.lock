@@ -233,7 +233,7 @@ __metadata:
     fast-glob: "npm:^3.3.2"
     globals: "npm:^16.0.0"
     hosted-git-info: "npm:9.0.2"
-    knip: "npm:5.68.0"
+    knip: "npm:5.69.0"
     libxmljs2: "npm:^0.35||^0.37"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.5"
@@ -5005,9 +5005,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:5.68.0":
-  version: 5.68.0
-  resolution: "knip@npm:5.68.0"
+"knip@npm:5.69.0":
+  version: 5.69.0
+  resolution: "knip@npm:5.69.0"
   dependencies:
     "@nodelib/fs.walk": "npm:^1.2.3"
     fast-glob: "npm:^3.3.3"
@@ -5027,7 +5027,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10c0/7594930a11abf5c91ffdb200b2d304f2c1daa3927c34469187a6048e7b8454c0608f4755ea614199ed9e3c830fc7e923001586f7074415ccedebf11e8052542a
+  checksum: 10c0/0079baf97f374114037f1a00c597719061c83287cedc371de90c5998e4aaf53d97164cb424fee29ad3080364db8c83b52e5da4941964415420e715f6f69fc87b
   languageName: node
   linkType: hard
 
