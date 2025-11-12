@@ -142,7 +142,8 @@
       "/NOTICE",
       "/index.js",
       "/yarn-plugin-cyclonedx.cjs",
-      "/bin/cyclonedx-yarn-cli.js"
+      "/bin/cyclonedx-yarn-cli.js",
+      "/bom.json"
     ],
     "directories": {},
     "scripts": {},
