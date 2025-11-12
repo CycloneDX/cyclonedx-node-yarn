@@ -172,6 +172,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cyclonedx/cyclonedx-esbuild@npm:^1.0.0-rc.2":
+  version: 1.0.0-rc.2
+  resolution: "@cyclonedx/cyclonedx-esbuild@npm:1.0.0-rc.2"
+  dependencies:
+    "@cyclonedx/cyclonedx-library": "npm:^9.2.0"
+    ajv: "npm:^8.12.0"
+    ajv-formats: "npm:^3.0.1"
+    ajv-formats-draft2019: "npm:^1.6.1"
+    commander: "npm:^14.0.0"
+    normalize-package-data: "npm:^7.0.0 || ^8.0.0"
+  dependenciesMeta:
+    ajv:
+      optional: true
+    ajv-formats:
+      optional: true
+    ajv-formats-draft2019:
+      optional: true
+  bin:
+    cyclonedx-esbuild: bin/cyclonedx-esbuild-cli.js
+  checksum: 10c0/2d19898efc2e6e71c2270ecc46566392aefb295838d300a1802d4b465dd41034364bac3f16396b2745c4d3d988c3f3be7c2e46d820ca846e7c65f9175f1e0171
+  languageName: node
+  linkType: hard
+
 "@cyclonedx/cyclonedx-library@npm:9.2.0, @cyclonedx/cyclonedx-library@npm:^9.2.0":
   version: 9.2.0
   resolution: "@cyclonedx/cyclonedx-library@npm:9.2.0"
@@ -203,6 +226,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
+    "@cyclonedx/cyclonedx-esbuild": "npm:^1.0.0-rc.2"
     "@cyclonedx/cyclonedx-library": "npm:9.2.0"
     "@eslint/js": "npm:9.39.0"
     "@types/hosted-git-info": "npm:^3.0.5"
@@ -219,7 +243,6 @@ __metadata:
     ajv-formats-draft2019: "npm:^1.6.1"
     c8: "npm:^10.1.2"
     clipanion: "npm:^4.0.0-rc.2"
-    cyclonedx-esbuild: /home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz
     eslint: "npm:9.39.0"
     eslint-config-love: "npm:133.0.0"
     eslint-import-resolver-node: "npm:^0.3.9"
@@ -2649,29 +2672,6 @@ __metadata:
     shebang-command: "npm:^2.0.0"
     which: "npm:^2.0.1"
   checksum: 10c0/053ea8b2135caff68a9e81470e845613e374e7309a47731e81639de3eaeb90c3d01af0e0b44d2ab9d50b43467223b88567dfeb3262db942dc063b9976718ffc1
-  languageName: node
-  linkType: hard
-
-"cyclonedx-esbuild@file:/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz::locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A.":
-  version: 0.0.1
-  resolution: "cyclonedx-esbuild@file:/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz#/home/flow/Documents/Coding/node/esbuild-plugin-cyclonedx_try2/cyclonedx-esbuild-0.0.1.tgz::hash=d7c3c0&locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A."
-  dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^9.2.0"
-    ajv: "npm:^8.12.0"
-    ajv-formats: "npm:^3.0.1"
-    ajv-formats-draft2019: "npm:^1.6.1"
-    commander: "npm:^14.0.0"
-    normalize-package-data: "npm:^7.0.0 || ^8.0.0"
-  dependenciesMeta:
-    ajv:
-      optional: true
-    ajv-formats:
-      optional: true
-    ajv-formats-draft2019:
-      optional: true
-  bin:
-    cyclonedx-esbuild: bin/cyclonedx-esbuild-cli.js
-  checksum: 10c0/a8c3b824283de2f9211d04124c30388926fa4138cb12cf63f234924a54f3625cb93ce0612b35e2a41c1973bdb38c23ffb6ba50db12b40825165a2715e4d00414
   languageName: node
   linkType: hard
 
