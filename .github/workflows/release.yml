@@ -301,6 +301,7 @@ jobs:
           cp -t "$ASSETS_DIR" \
           "$PACKED_DIR"/*.tgz \
           "$DIST_DIR/yarn-plugin-cyclonedx.cjs" \
+          "$DIST_DIR/bom.json" \
           "$DIST_DIR/LICENSE" \
           "$DIST_DIR/NOTICE"
       - name: Create Release
