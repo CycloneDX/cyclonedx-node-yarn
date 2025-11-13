@@ -172,9 +172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-esbuild@npm:^1.0.0-rc.2":
-  version: 1.0.0-rc.2
-  resolution: "@cyclonedx/cyclonedx-esbuild@npm:1.0.0-rc.2"
+"@cyclonedx/cyclonedx-esbuild@npm:1.0.0-rc.8":
+  version: 1.0.0-rc.8
+  resolution: "@cyclonedx/cyclonedx-esbuild@npm:1.0.0-rc.8"
   dependencies:
     "@cyclonedx/cyclonedx-library": "npm:^9.2.0"
     ajv: "npm:^8.12.0"
@@ -191,7 +191,7 @@ __metadata:
       optional: true
   bin:
     cyclonedx-esbuild: bin/cyclonedx-esbuild-cli.js
-  checksum: 10c0/2d19898efc2e6e71c2270ecc46566392aefb295838d300a1802d4b465dd41034364bac3f16396b2745c4d3d988c3f3be7c2e46d820ca846e7c65f9175f1e0171
+  checksum: 10c0/7e1e24fbcbd8ffda5c1fee5f92b7bb631592640b412d9b0ddb6a6000242bfc14ef0e83f9a5ff13f7dfa05743c690d8cc29931d212e40eb8e2374455d60ab6c7c
   languageName: node
   linkType: hard
 
@@ -226,7 +226,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-esbuild": "npm:^1.0.0-rc.2"
+    "@cyclonedx/cyclonedx-esbuild": "npm:1.0.0-rc.8"
     "@cyclonedx/cyclonedx-library": "npm:9.2.0"
     "@eslint/js": "npm:9.39.0"
     "@types/hosted-git-info": "npm:^3.0.5"
