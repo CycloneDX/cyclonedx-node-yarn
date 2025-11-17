@@ -23,9 +23,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  * @internal
  */
 
-
-/* eslint-enable jsdoc/valid-types */
-
 const { closeSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
 const { dirname, join } = require('node:path')
 
@@ -51,19 +48,19 @@ async function main (outputFile, includeLicense) {
   const tpLicenses = Array.from(
     sbomData.components,
     (component) => ({
-        name: component.group
-          ? `${component.group}/${component.name}`
-          : component.name,
-        version: component.version,
-        homepage: (component.externalReferences??[]).filter(({type})=>type === 'website')[0]?.url,
-        licenseDeclared: (component.licenses??[]).filter(({license, acknowledgement}) => (license?.acknowledgement?? acknowledgement) === 'declared').map(({license, expression}) => license?.id ?? license?.name ?? expression )[0],
-        licenseTexts: (component.evidence.licenses??[]).map( ({license: {name, text}}) => ({
-          file: name.match(/^file:\s*(.*)$/)[1],
-          text: text.encoding === 'base64'
-            ? atob(text.content)
-            : text.content
-        }))
-      })
+      name: component.group
+        ? `${component.group}/${component.name}`
+        : component.name,
+      version: component.version,
+      homepage: (component.externalReferences ?? []).filter(({ type }) => type === 'website')[0]?.url,
+      licenseDeclared: (component.licenses ?? []).filter(({ license, acknowledgement }) => (license?.acknowledgement ?? acknowledgement) === 'declared').map(({ license, expression }) => license?.id ?? license?.name ?? expression)[0],
+      licenseTexts: (component.evidence.licenses ?? []).map(({ license: { name, text } }) => ({
+        file: name.match(/^file:\s*(.*)$/)[1],
+        text: text.encoding === 'base64'
+          ? atob(text.content)
+          : text.content
+      }))
+    })
   ).sort(
     (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
   )
