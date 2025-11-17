@@ -67,7 +67,7 @@
     "xmlbuilder2": "4.0.0"
   },
   "devDependencies": {
-    "@cyclonedx/cyclonedx-esbuild": "1.0.0-rc.8",
+    "@cyclonedx/cyclonedx-esbuild": "1.0.0-rc.9",
     "@eslint/js": "9.39.0",
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
@@ -88,8 +88,6 @@
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-tsdoc": "0.4.0",
-    "extract-zip": "^2.0.1",
-    "fast-glob": "^3.3.2",
     "globals": "^16.0.0",
     "knip": "5.67.1",
     "libxmljs2": "^0.35||^0.37",
@@ -154,7 +152,7 @@
     "build:gbti": "node $PROJECT_CWD/tools/gather-buildtime-info.cjs",
     "build:bundle": "builder build plugin --metafile",
     "build:bundle-dev": "yarn build:bundle --source-map",
-    "build:sbom": "cyclonedx-esbuild --gather-license-texts --spec-version=1.7 -o bundles/@yarnpkg/bom.json bundles/@yarnpkg/plugin-cyclonedx.meta.json",
+    "build:sbom": "cyclonedx-esbuild --gather-license-texts --spec-version 1.7 -o bundles/@yarnpkg/bom.json bundles/@yarnpkg/plugin-cyclonedx.meta.json",
     "make-dist": "run-s -n make-dist:mkdir make-dist:cp make-dist:make-\\*",
     "make-dist:mkdir": "mkdirp $PROJECT_CWD/dist",
     "make-dist:cp": "node -r fs -r path -e 'process.chdir(process.env.PROJECT_CWD);j=path.join;c=fs.cpSync;d=`dist`;b=j(`bundles`,`@yarnpkg`);c(j(b,`plugin-cyclonedx.js`),j(d,`yarn-plugin-cyclonedx.cjs`));c(j(b,`bom.json`),j(d,`bom.json`));[`README.md`,`LICENSE`,`index.js`,`bin`].forEach(s=>c(s,j(d,s),{recursive:true}))'",

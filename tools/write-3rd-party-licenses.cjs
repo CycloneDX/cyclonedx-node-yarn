@@ -26,12 +26,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 /* eslint-enable jsdoc/valid-types */
 
-const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
-const { dirname, join, resolve } = require('node:path')
-const { createInterface: rlCreateInterface } = require('node:readline')
+const { closeSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
+const { dirname, join } = require('node:path')
 
-const unzip = require('extract-zip')
-const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
 
 const projectRoot = join(__dirname, '..')
