@@ -58,16 +58,6 @@ jobs:
           path: ${{ env.BUNDLES_DIR }}
           retention-days: 5
           if-no-files-found: error
-      - name: make-dist
-        run: yarn run make-dist
-      - name: artifact build result
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
-        with:
-          name: ${{ env.DIST_DIR }}
-          path: ${{ env.DIST_DIR }}
-          retention-days: 5
-          if-no-files-found: error
 
   test-standard:
     name: test standard
