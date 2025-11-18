@@ -43,6 +43,8 @@ const bomFile = join(projectRoot, 'bundles', '@yarnpkg', 'bom.json')
  * @return {Promise<Set<string>>} used licenses
  */
 async function main (outputFile, includeLicense) {
+  'use strict'
+
   const sbomData = JSON.parse(readFileSync(bomFile))
 
   const tpLicenses = Array.from(
@@ -52,8 +54,10 @@ async function main (outputFile, includeLicense) {
         ? `${component.group}/${component.name}`
         : component.name,
       version: component.version,
-      homepage: (component.externalReferences ?? []).filter(({ type }) => type === 'website')[0]?.url,
-      licenseDeclared: (component.licenses ?? []).filter(({ license, acknowledgement }) => (license?.acknowledgement ?? acknowledgement) === 'declared').map(({ license, expression }) => license?.id ?? license?.name ?? expression)[0],
+      homepage: (r => r?.url)(
+        (component.externalReferences ?? []).find(({ type }) => type === 'website')),
+      licenseDeclared: (l => l.license?.id ?? l.license?.name ?? l.expression)(
+        (component.licenses ?? []).find(l => (l.license?.acknowledgement ?? l.acknowledgement) === 'declared')),
       licenseTexts: (component.evidence.licenses ?? []).map(({ license: { name, text } }) => ({
         file: name.match(/^file:\s*(.*)$/)[1],
         text: text.encoding === 'base64'
