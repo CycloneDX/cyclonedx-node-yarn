@@ -135,13 +135,13 @@
     "private": false,
     "main": "./yarn-plugin-cyclonedx.cjs",
     "files": [
+      "/index.js",
+      "/yarn-plugin-cyclonedx.cjs",
+      "/bin/cyclonedx-yarn-cli.js",
       "/README.md",
       "/LICENSE",
       "/NOTICE",
-      "/bom.json",
-      "/index.js",
-      "/yarn-plugin-cyclonedx.cjs",
-      "/bin/cyclonedx-yarn-cli.js"
+      "/bom.json"
     ],
     "directories": {},
     "scripts": {},
