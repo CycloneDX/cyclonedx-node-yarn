@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@cyclonedx/yarn-plugin-cyclonedx",
-  "version": "3.2.0",
+  "version": "3.2.1-0",
   "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
   "license": "Apache-2.0",
   "keywords": [
@@ -169,5 +169,6 @@
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
   "preferUnplugged": true,
-  "packageManager": "yarn@4.11.0"
+  "packageManager": "yarn@4.11.0",
+  "stableVersion": "3.2.0"
 }
