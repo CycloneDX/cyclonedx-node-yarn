@@ -46,8 +46,8 @@ jobs:
         run: corepack enable yarn
       - name: Setup subject
         run: yarn install --immutable
-      - name: build:gbti
-        run: yarn run build:gbti
+      - name: build
+        run: yarn run build
       - name: build:bundle-dev
         run: yarn run build:bundle-dev
       - name: artifact build result
