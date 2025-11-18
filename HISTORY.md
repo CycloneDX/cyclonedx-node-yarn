@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.2.1 - 2025-11-18
+
+* Build
+  * From now on, we will ship our own SBOM with the package and the release assets ([#226] via [#428])
+
+[#226]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/226
+[#428]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/428
+
 ## 3.2.0 - 2025-10-27
 
 * Added
