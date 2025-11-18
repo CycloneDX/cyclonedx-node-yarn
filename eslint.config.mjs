@@ -249,14 +249,6 @@ export default [
     }
   },
   {
-    files: ['src/*.ts'],
-    languageOptions: {
-      parserOptions: {
-        project: path.join(__dirname, 'tsconfig.json'),
-      },
-    },
-  },
-  {
     // global ignores must have nothing but a 'ignores' property!
     // see https://github.com/eslint/eslint/discussions/17429#discussioncomment-6579229
     ignores: [
