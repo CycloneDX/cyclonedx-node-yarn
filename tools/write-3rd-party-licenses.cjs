@@ -23,12 +23,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  * @internal
  */
 
-const { closeSync, createReadStream, existsSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
-const { dirname, join, resolve } = require('node:path')
-const { createInterface: rlCreateInterface } = require('node:readline')
+const { closeSync, mkdtempSync, openSync, readFileSync, rmSync, writeSync } = require('node:fs')
+const { dirname, join } = require('node:path')
 
-const unzip = require('extract-zip')
-const { globSync } = require('fast-glob')
 const { mkdirpSync } = require('mkdirp')
 
 const projectRoot = join(__dirname, '..')
@@ -38,44 +35,7 @@ process.once('exit', () => {
   rmSync(tempDir, { recursive: true, force: true })
 })
 
-const metaFile = join(projectRoot, 'bundles', '@yarnpkg', 'plugin-cyclonedx.meta.json')
-const metaDings = 'bundles/@yarnpkg/plugin-cyclonedx.js'
-
-const filePathInZipRE = /^(.+\.zip)[/\\](.+)$/
-
-/* eslint-disable jsdoc/valid-types -- jsdoc does not know tuples, yet */
-
-/**
- * @param {string} filePath
- * @param {Object<string, string>} cache
- * @returns {Promise<([undefined, undefined] | [string, object])>}
- */
-async function getPackageMP (filePath, cache) {
-  let searchRoot = projectRoot
-  const zipMatch = filePathInZipRE.exec(filePath)
-  if (zipMatch) {
-    searchRoot = cache[zipMatch[1]]
-    if (!searchRoot) {
-      searchRoot = cache[zipMatch[1]] = mkdtempSync(join(tempDir, 'unz'))
-      await unzip(zipMatch[1], { dir: searchRoot })
-    }
-    filePath = join(searchRoot, zipMatch[2])
-  }
-  let cPath = dirname(filePath)
-  while (cPath.startsWith(searchRoot)) {
-    const pmPC = join(cPath, 'package.json')
-    if (existsSync(pmPC)) {
-      const pmD = JSON.parse(readFileSync(pmPC))
-      if (pmD.name) {
-        return [cPath, pmD]
-      }
-    }
-    cPath = dirname(cPath)
-  }
-  return [undefined, undefined]
-}
-
-/* eslint-enable jsdoc/valid-types */
+const bomFile = join(projectRoot, 'bundles', '@yarnpkg', 'bom.json')
 
 /**
  * @param {string} outputFile
@@ -83,57 +43,28 @@ async function getPackageMP (filePath, cache) {
  * @return {Promise<Set<string>>} used licenses
  */
 async function main (outputFile, includeLicense) {
-  const metaData = JSON.parse(readFileSync(metaFile))
+  'use strict'
 
-  const packageMPcache = {}
-  const packageMPs = new Map()
-  for (const [filePath, { bytesInOutput }] of Object.entries(metaData.outputs[metaDings].inputs)) {
-    if (bytesInOutput <= 0) {
-      continue
-    }
-    const [packageMP, packageMD] = await getPackageMP(resolve(projectRoot, filePath), packageMPcache)
-    if (!packageMP) {
-      console.warn('ERROR: missing MP for:', filePath)
-      continue
-    }
-    if (packageMPs.has(packageMP)) {
-      continue
-    }
-    packageMPs.set(packageMP, packageMD)
-  }
+  const sbomData = JSON.parse(readFileSync(bomFile))
 
   const tpLicenses = Array.from(
-    packageMPs.entries(),
-    function ([packageMP, packageMD]) {
-      return packageMP === projectRoot
-        ? undefined
-        : {
-            _packageDir: packageMP,
-            name: packageMD.name,
-            version: packageMD.version,
-            homepage: packageMD.homepage || undefined,
-            licenseDeclared: packageMD.license,
-            licenseFiles: [
-              ...globSync('*.LICEN{S,C}E', {
-                onlyFiles: true,
-                caseSensitiveMatch: false,
-                cwd: packageMP
-              }).sort((a, b) => a.localeCompare(b)),
-              ...globSync('LICEN{S,C}E*', {
-                onlyFiles: true,
-                caseSensitiveMatch: false,
-                cwd: packageMP
-              }).sort((a, b) => a.localeCompare(b)),
-              ...globSync('NOTICE', {
-                onlyFiles: true,
-                caseSensitiveMatch: true,
-                cwd: packageMP
-              })
-            ]
-          }
-    }
-  ).filter(
-    i => i !== undefined
+    sbomData.components,
+    (component) => ({
+      name: component.group
+        ? `${component.group}/${component.name}`
+        : component.name,
+      version: component.version,
+      homepage: (r => r?.url)(
+        (component.externalReferences ?? []).find(({ type }) => type === 'website')),
+      licenseDeclared: (l => l.license?.id ?? l.license?.name ?? l.expression)(
+        (component.licenses ?? []).find(l => (l.license?.acknowledgement ?? l.acknowledgement) === 'declared')),
+      licenseTexts: (component.evidence.licenses ?? []).map(({ license: { name, text } }) => ({
+        file: name.match(/^file:\s*(.*)$/)[1],
+        text: text.encoding === 'base64'
+          ? atob(text.content)
+          : text.content
+      }))
+    })
   ).sort(
     (a, b) => `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
   )
@@ -155,15 +86,11 @@ async function main (outputFile, includeLicense) {
     writeSync(outputFH, `Version: ${tpLicense.version}\n`)
     writeSync(outputFH, `Distribution: https://www.npmjs.com/package/${tpLicense.name.replaceAll('@', '%40')}/v/${tpLicense.version}\n`)
     writeSync(outputFH, `License declared: ${tpLicense.licenseDeclared}\n`)
-    for (const licenseFile of tpLicense.licenseFiles) {
-      writeSync(outputFH, `License file: ${licenseFile}\n`)
-      const licenseRS = createReadStream(join(tpLicense._packageDir, licenseFile))
-      const licenseLRS = rlCreateInterface(licenseRS)
-      for await (const licenseLine of licenseLRS) {
+    for (const licenseText of tpLicense.licenseTexts) {
+      writeSync(outputFH, `License file: ${licenseText.file}\n`)
+      for (const licenseLine of licenseText.text.trimEnd().split('\n')) {
         writeSync(outputFH, `  ${licenseLine}\n`)
       }
-      licenseLRS.close()
-      licenseRS.close()
     }
   }
 
@@ -173,7 +100,7 @@ async function main (outputFile, includeLicense) {
 }
 
 if (require.main === module) {
-  const outputFile = process.argv[2] || `${metaFile}.NOTICE`
+  const outputFile = process.argv[2] || `${bomFile}.NOTICE`
   const lsummaryFile = process.argv[3] || `${outputFile}.lsummary.json`
   const includeLicense = false
   const assert = require('node:assert')

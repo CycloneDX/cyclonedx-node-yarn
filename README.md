@@ -121,7 +121,7 @@ See the [`CONTRIBUTING`][contributing_file] file for details.
 Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.  
 See the [`LICENSE`][license_file] file for the full license.
 
-For details and license posture of the assembly, see the `LICENSE` file in the respective release assets.
+For details and license posture of the assembly, see the files in the respective release assets: `LICENSE`, `NOTICE`, `bom.json`.
 
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-yarn/blob/main/LICENSE

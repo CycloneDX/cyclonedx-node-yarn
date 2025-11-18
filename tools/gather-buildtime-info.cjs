@@ -36,6 +36,8 @@ const projectRootPath = path.resolve(__dirname, '..')
  * @returns {object}
  */
 function fromYarnInfo (pkgName) {
+  'use strict'
+
   const pkgInfo = JSON.parse(execFileSync('yarn', [
     'info', '--json',
     '--manifest',

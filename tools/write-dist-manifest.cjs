@@ -38,6 +38,8 @@ const structuredClonePolyfill =
  * @param {string} outputFile
  */
 function main (outputFile) {
+  'use strict'
+
   const manifestSource = JSON.parse(readFileSync(manifestSourceFile))
   const manifest = structuredClonePolyfill(manifestSource)
   for (const [k, v] of Object.entries(manifestSource.publishReplace ?? {})) {

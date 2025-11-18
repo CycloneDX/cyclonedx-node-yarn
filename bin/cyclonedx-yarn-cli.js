@@ -26,17 +26,15 @@ const { realpathSync } = require('node:fs')
 const { join } = require('node:path')
 
 let pp
-for (const p of [
+for (const p of [ // location relative to project root dir
   ['yarn-plugin-cyclonedx.cjs'], // running in pack
-  ['dist', 'yarn-plugin-cyclonedx.cjs'], // running in  dist
+  ['dist', 'yarn-plugin-cyclonedx.cjs'], // running in dist
   ['bundles', '@yarnpkg', 'plugin-cyclonedx.js'] // running in build
 ]) {
   try { pp = realpathSync(join(__dirname, '..', ...p)) } catch { continue }
   break
 }
-if (!pp) {
-  throw Error('missing plugin')
-}
+if (!pp) { throw Error('missing plugin') }
 
 const YARN_PLUGINS = process.env.YARN_PLUGINS
   ? `${pp};${process.env.YARN_PLUGINS}`
