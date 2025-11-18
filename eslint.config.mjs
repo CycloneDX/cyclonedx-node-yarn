@@ -150,7 +150,8 @@ export default [
       languageOptions: {
         parserOptions: {
           // override
-          project: false,
+          projectService: true,
+          tsconfigRootDir: __dirname
         },
       },
       rules: {
