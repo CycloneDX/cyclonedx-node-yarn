@@ -67,7 +67,7 @@
     "xmlbuilder2": "4.0.0"
   },
   "devDependencies": {
-    "@cyclonedx/cyclonedx-esbuild": "1.0.0-rc.10",
+    "@cyclonedx/cyclonedx-esbuild": "1.0.0-rc.11",
     "@eslint/js": "9.39.1",
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
