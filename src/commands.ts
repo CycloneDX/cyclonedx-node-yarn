@@ -19,8 +19,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
-import { Builders as PJB, Factories as PJF} from '@cyclonedx/cyclonedx-library/Contrib/fromNodePackageJson'
-import { Factories as LicenseFactories } from '@cyclonedx/cyclonedx-library/Contrib/license'
+import { Builders as PJB, Factories as PJF} from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Factories as LicenseFactories } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project, YarnVersion } from '@yarnpkg/core'

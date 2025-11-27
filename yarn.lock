@@ -202,7 +202,7 @@ __metadata:
 
 "@cyclonedx/cyclonedx-library@file:../cyclonedx-javascript-library/cyclonedx-cyclonedx-library-9.2.0.tgz::locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A.":
   version: 9.2.0
-  resolution: "@cyclonedx/cyclonedx-library@file:../cyclonedx-javascript-library/cyclonedx-cyclonedx-library-9.2.0.tgz#../cyclonedx-javascript-library/cyclonedx-cyclonedx-library-9.2.0.tgz::hash=af834e&locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A."
+  resolution: "@cyclonedx/cyclonedx-library@file:../cyclonedx-javascript-library/cyclonedx-cyclonedx-library-9.2.0.tgz#../cyclonedx-javascript-library/cyclonedx-cyclonedx-library-9.2.0.tgz::hash=0a563d&locator=%40cyclonedx%2Fyarn-plugin-cyclonedx%40workspace%3A."
   dependencies:
     packageurl-js: "npm:^2.0.1"
     spdx-expression-parse: "npm:^3.0.1 || ^4"
@@ -223,7 +223,7 @@ __metadata:
       optional: true
     xmlbuilder2:
       optional: true
-  checksum: 10c0/6e6cf3871eb0bd3677ba30bc0e40853eb3ccbd4426c4254a30167c0653b62c62751d87f82ed0b391563b3f88ad69dce98dc454ba236c404be29182f8b1cea86b
+  checksum: 10c0/c4e90d60135347c8f4f599acaa1367f362aa3040e5f22baa70dcaa947cef0ffe034a21325f81a6bb94dd97d5c4708a9f1854c714f47d49b22901eedd54a644a5
   languageName: node
   linkType: hard
 
