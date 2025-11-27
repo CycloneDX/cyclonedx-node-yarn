@@ -18,9 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
 import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
-import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
+import { Builders as PJB, Factories as PJF} from '@cyclonedx/cyclonedx-library/Contrib/fromNodePackageJson'
+import { Factories as LicenseFactories } from '@cyclonedx/cyclonedx-library/Contrib/license'
 import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import { type CommandContext, Configuration, Project, YarnVersion } from '@yarnpkg/core'
@@ -174,7 +174,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       new PJB.ToolBuilder(extRefFactory),
       new PJB.ComponentBuilder(
         extRefFactory,
-        new LicenseFactory()
+        new LicenseFactories.LicenseFactory()
       ),
       new PJF.PackageUrlFactory('npm'),
       {
