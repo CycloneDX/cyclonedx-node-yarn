@@ -89,7 +89,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-tsdoc": "0.5.0",
     "globals": "^16.0.0",
-    "knip": "5.70.0",
+    "knip": "5.70.2",
     "libxmljs2": "^0.35||^0.37",
     "mkdirp": "^3.0.1",
     "mocha": "11.7.5",
