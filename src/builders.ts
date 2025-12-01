@@ -361,13 +361,14 @@ export class BomBuilder {
     const knownComponents = new Map<LocatorHash, Component>([[pkg.locatorHash, component]])
     type pendingType = [Package, Component]
     const pending: pendingType[] = [[pkg, component]]
-    let pendingEntry: pendingType | undefined = undefined
+    let pendingEntry  // eslint-disable-line @typescript-eslint/init-declarations -- ack
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
       for (const depPkg of this.getDeps(pendingPkg, project)) {
         let depComponent = knownComponents.get(depPkg.locatorHash)
         if (depComponent === undefined) {
           const _depIDN = structUtils.prettyLocatorNoColors(depPkg)
+          /* eslint-disable-next-line  no-await-in-loop -- ack */
           const _depC = await this.makeComponentFromPackage(depPkg,
             fetchManifest, fetchLicenseEvidences)
           if (_depC === undefined) {
