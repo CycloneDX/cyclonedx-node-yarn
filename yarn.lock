@@ -249,7 +249,7 @@ __metadata:
     c8: "npm:^10.1.2"
     clipanion: "npm:^4.0.0-rc.2"
     eslint: "npm:9.39.1"
-    eslint-config-love: "npm:133.0.0"
+    eslint-config-love: "npm:134.0.0"
     eslint-import-resolver-node: "npm:^0.3.9"
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-jsdoc: "npm:61.4.1"
@@ -3363,9 +3363,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-love@npm:133.0.0":
-  version: 133.0.0
-  resolution: "eslint-config-love@npm:133.0.0"
+"eslint-config-love@npm:134.0.0":
+  version: 134.0.0
+  resolution: "eslint-config-love@npm:134.0.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.41.0"
     eslint-plugin-eslint-comments: "npm:^3.2.0"
@@ -3376,7 +3376,7 @@ __metadata:
   peerDependencies:
     eslint: ^9.35.0
     typescript: "*"
-  checksum: 10c0/bb28ba837d5efd93d9f3ed2657b219de6a1915c843cf26f4a1fa995c42ec8adafb89df8b85519153e1a9420e090e222cb05661a2b8ce1d62c6812826f0e325f2
+  checksum: 10c0/b5714b7ff5ad197aad4b2445a07be3ac5412066d7550695e6dd108319518d299ded1499846ede31b63ec062a0f0ffc8d067ac0b38b65d884b3e0294baad7d267
   languageName: node
   linkType: hard
 

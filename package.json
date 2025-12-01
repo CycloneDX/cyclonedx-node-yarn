@@ -79,7 +79,7 @@
     "ajv-formats-draft2019": "^1.6.1",
     "c8": "^10.1.2",
     "eslint": "9.39.1",
-    "eslint-config-love": "133.0.0",
+    "eslint-config-love": "134.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "61.4.1",

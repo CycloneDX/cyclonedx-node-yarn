@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Style
+  * Applied latest code style (via [#438])
+
+[#438]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/438
+
 ## 3.2.1 - 2025-11-18
 
 * Build
