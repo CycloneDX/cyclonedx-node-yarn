@@ -64,7 +64,7 @@
     "hosted-git-info": "9.0.2",
     "normalize-package-data": "8.0.0",
     "typanion": "^3.14.0",
-    "xmlbuilder2": "4.0.0"
+    "xmlbuilder2": "4.0.3"
   },
   "devDependencies": {
     "@cyclonedx/cyclonedx-esbuild": "1.0.0",
