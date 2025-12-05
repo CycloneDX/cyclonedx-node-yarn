@@ -13,11 +13,14 @@ All notable changes to this project will be documented in this file.
 
 ## 3.2.1 - 2025-11-18
 
+* Dependencies
+  * Upgraded runtime-dependency `@xmlbuilder2@4.0.3`, was `4.0.0` (via [#441])
 * Build
   * From now on, we will ship our own SBOM with the package and the release assets ([#226] via [#428])
 
 [#226]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/226
 [#428]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/428
+[#441]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/441
 
 ## 3.2.0 - 2025-10-27
 
