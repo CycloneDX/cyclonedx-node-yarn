@@ -118,7 +118,7 @@ jobs:
         run: yarn run build
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -128,7 +128,7 @@ jobs:
         run: yarn run make-dist
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -148,7 +148,7 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -184,7 +184,7 @@ jobs:
         run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -206,7 +206,7 @@ jobs:
     steps:
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.DIST_DIR }}
           path: .
@@ -238,7 +238,7 @@ jobs:
           yarn pack --out "$PACKED_DIR"/%s-%v.tgz
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.PACKED_DIR }}
           path: ${{ env.PACKED_DIR }}/
@@ -259,13 +259,13 @@ jobs:
     steps:
       - name: fetch packages
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.PACKED_DIR }}
           path: ${{ env.PACKED_DIR }}
       - name: fetch dist
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}

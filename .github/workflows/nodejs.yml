@@ -52,7 +52,7 @@ jobs:
         run: yarn run build:bundle-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -62,7 +62,7 @@ jobs:
         run: yarn run make-dist
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -104,7 +104,7 @@ jobs:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -172,7 +172,7 @@ jobs:
         uses: actions/checkout@v6
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
@@ -219,7 +219,7 @@ jobs:
         run: yarn run setup-tests
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
@@ -234,7 +234,7 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
@@ -285,7 +285,7 @@ jobs:
         run: yarn install --no-immutable  # we might be changing yarn version for tests -- require to ignore lock
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: ${{ env.BUILD_DIR }}
           path: ${{ env.BUILD_DIR }}
@@ -303,7 +303,7 @@ jobs:
     steps:
       - name: fetch test artifacts
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
           merge-multiple: true
