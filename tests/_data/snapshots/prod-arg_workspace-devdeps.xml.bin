@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
+  <metadata>
+    <tools>
+      <components>
+        <component type="application">
+          <name>yarn</name>
+          <version>yarnVersion-testing</version>
+        </component>
+        <component type="library">
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>libVersion-testing</version>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>yarn-plugin-cyclonedx</name>
+          <version>thisVersion-testing</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </tools>
+    <component type="application" bom-ref="demo-workspace-devdeps@workspace:.">
+      <name>demo-workspace-devdeps</name>
+      <version>0.0.0</version>
+      <description>demo: workspace-devdeps -- test workspace devDependencies filtering in production mode</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-workspace-devdeps@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="ansi-styles@npm:4.3.0">
+      <author>Sindre Sorhus</author>
+      <name>ansi-styles</name>
+      <version>4.3.0</version>
+      <description>ANSI escape codes for styling strings in the terminal</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/ansi-styles/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/ansi-styles.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/ansi-styles#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="chalk@npm:4.1.2">
+      <name>chalk</name>
+      <version>4.1.2</version>
+      <description>Terminal string styling done right</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/chalk@4.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fchalk.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/chalk/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/chalk.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/chalk#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="color-convert@npm:2.0.1">
+      <author>Heather Arthur</author>
+      <name>color-convert</name>
+      <version>2.0.1</version>
+      <description>Plain color conversion functions</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FQix-%2Fcolor-convert.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/Qix-/color-convert/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/Qix-/color-convert.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Qix-/color-convert#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="color-name@npm:1.1.4">
+      <author>DY</author>
+      <name>color-name</name>
+      <version>1.1.4</version>
+      <description>A list of color names and its values</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fcolorjs%2Fcolor-name.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/colorjs/color-name/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+ssh://git@github.com/colorjs/color-name.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/colorjs/color-name</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="has-flag@npm:4.0.0">
+      <author>Sindre Sorhus</author>
+      <name>has-flag</name>
+      <version>4.0.0</version>
+      <description>Check if argv has a specific flag</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/has-flag@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fhas-flag.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/sindresorhus/has-flag/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/sindresorhus/has-flag.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/sindresorhus/has-flag#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="lodash@npm:4.17.21">
+      <author>John-David Dalton</author>
+      <name>lodash</name>
+      <version>4.17.21</version>
+      <description>Lodash modular utilities.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/lodash@4.17.21?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/lodash/lodash/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/lodash/lodash.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://lodash.com/</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="supports-color@npm:7.2.0">
+      <author>Sindre Sorhus</author>
+      <name>supports-color</name>
+      <version>7.2.0</version>
+      <description>Detect whether a terminal supports color</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/supports-color@7.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fsupports-color.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/chalk/supports-color/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/chalk/supports-color.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/chalk/supports-color#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="test-app@workspace:packages/app">
+      <name>test-app</name>
+      <version>1.0.0</version>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/test-app@1.0.0</purl>
+    </component>
+    <component type="library" bom-ref="test-lib@workspace:packages/lib">
+      <name>test-lib</name>
+      <version>1.0.0</version>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/test-lib@1.0.0</purl>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="ansi-styles@npm:4.3.0">
+      <dependency ref="color-convert@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="chalk@npm:4.1.2">
+      <dependency ref="ansi-styles@npm:4.3.0"/>
+      <dependency ref="supports-color@npm:7.2.0"/>
+    </dependency>
+    <dependency ref="color-convert@npm:2.0.1">
+      <dependency ref="color-name@npm:1.1.4"/>
+    </dependency>
+    <dependency ref="color-name@npm:1.1.4"/>
+    <dependency ref="demo-workspace-devdeps@workspace:.">
+      <dependency ref="test-app@workspace:packages/app"/>
+    </dependency>
+    <dependency ref="has-flag@npm:4.0.0"/>
+    <dependency ref="lodash@npm:4.17.21"/>
+    <dependency ref="supports-color@npm:7.2.0">
+      <dependency ref="has-flag@npm:4.0.0"/>
+    </dependency>
+    <dependency ref="test-app@workspace:packages/app">
+      <dependency ref="lodash@npm:4.17.21"/>
+      <dependency ref="test-lib@workspace:packages/lib"/>
+    </dependency>
+    <dependency ref="test-lib@workspace:packages/lib">
+      <dependency ref="chalk@npm:4.1.2"/>
+    </dependency>
+  </dependencies>
+</bom>
