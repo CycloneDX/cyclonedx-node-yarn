@@ -126,10 +126,17 @@ export class BomBuilder {
         rootPackage.dependencies.delete(dep)
       }
     }
+
+    // Build map of workspace packages' devDependencies for filtering
+    const workspaceDevDeps = this.omitDevDependencies
+      ? this.gatherWorkspaceDevDependencies(workspace.project)
+      : new Map<LocatorHash, Set<string>>()
+
     for await (const component of this.gatherDependencies(
       rootComponent, rootPackage,
       workspace.project,
-      fetchManifest, fetchLicenseEvidences
+      fetchManifest, fetchLicenseEvidences,
+      workspaceDevDeps
     )) {
       component.licenses.forEach(setLicensesDeclared)
 
@@ -337,8 +344,51 @@ export class BomBuilder {
     }
   }
 
-  private * getDeps (pkg: Package, project: Project): Generator<Package> {
+  /**
+   * Gathers devDependencies from all workspace packages in the project.
+   * Returns a map of package locatorHash to Set of devDependency names.
+   */
+  private gatherWorkspaceDevDependencies (project: Project): Map<LocatorHash, Set<string>> {
+    const workspaceDevDeps = new Map<LocatorHash, Set<string>>()
+
+    for (const workspace of project.workspaces) {
+      const pkg = workspace.anchoredPackage
+      // Only process workspace packages (not external dependencies)
+      if (pkg.reference.startsWith('workspace:')) {
+        const devDeps = new Set<string>()
+        for (const depIdent of workspace.manifest.devDependencies.keys()) {
+          devDeps.add(depIdent)
+        }
+        if (devDeps.size > 0) {
+          workspaceDevDeps.set(pkg.locatorHash, devDeps)
+          this.console.debug('DEBUG | workspace %s has %d devDependencies',
+            structUtils.prettyLocatorNoColors(pkg),
+            devDeps.size
+          )
+        }
+      }
+    }
+
+    return workspaceDevDeps
+  }
+
+  private * getDeps (
+    pkg: Package,
+    project: Project,
+    workspaceDevDeps: Map<LocatorHash, Set<string>>
+  ): Generator<Package> {
+    const parentDevDeps = workspaceDevDeps.get(pkg.locatorHash)
+
     for (const depDesc of pkg.dependencies.values()) {
+      // Skip if this is a devDependency of the parent workspace package
+      if (parentDevDeps?.has(depDesc.identHash) === true) {
+        this.console.debug('DEBUG | skipping devDependency %s of workspace package %s',
+          depDesc.identHash,
+          structUtils.prettyLocatorNoColors(pkg)
+        )
+        continue
+      }
+
       const depRes = project.storedResolutions.get(depDesc.descriptorHash)
       if (typeof depRes === 'undefined') {
         throw new Error(`missing depRes for : ${depDesc.descriptorHash}`)
@@ -355,7 +405,8 @@ export class BomBuilder {
     component: Component, pkg: Package,
     project: Project,
     fetchManifest: ManifestFetcher,
-    fetchLicenseEvidences: LicenseEvidenceFetcher
+    fetchLicenseEvidences: LicenseEvidenceFetcher,
+    workspaceDevDeps: Map<LocatorHash, Set<string>>
   ): AsyncGenerator<Component> {
     // ATTENTION: multiple packages may have the same `identHash`, but the `locatorHash` is unique.
     const knownComponents = new Map<LocatorHash, Component>([[pkg.locatorHash, component]])
@@ -364,7 +415,7 @@ export class BomBuilder {
     let pendingEntry  // eslint-disable-line @typescript-eslint/init-declarations -- ack
     while ((pendingEntry = pending.pop()) !== undefined) {
       const [pendingPkg, pendingComponent] = pendingEntry
-      for (const depPkg of this.getDeps(pendingPkg, project)) {
+      for (const depPkg of this.getDeps(pendingPkg, project, workspaceDevDeps)) {
         let depComponent = knownComponents.get(depPkg.locatorHash)
         if (depComponent === undefined) {
           const _depIDN = structUtils.prettyLocatorNoColors(depPkg)
