@@ -1,0 +1,415 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "yarnVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "demo-workspace-devdeps",
+      "version": "0.0.0",
+      "bom-ref": "demo-workspace-devdeps@workspace:.",
+      "description": "demo: workspace-devdeps -- test workspace devDependencies filtering in production mode",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-workspace-devdeps@0.0.0"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "bom-ref": "ansi-styles@npm:4.3.0",
+      "author": "Sindre Sorhus",
+      "description": "ANSI escape codes for styling strings in the terminal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/chalk/ansi-styles/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/ansi-styles.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/ansi-styles#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chalk",
+      "version": "4.1.2",
+      "bom-ref": "chalk@npm:4.1.2",
+      "description": "Terminal string styling done right",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/chalk@4.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fchalk.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/chalk/chalk/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/chalk.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/chalk#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "color-convert",
+      "version": "2.0.1",
+      "bom-ref": "color-convert@npm:2.0.1",
+      "author": "Heather Arthur",
+      "description": "Plain color conversion functions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FQix-%2Fcolor-convert.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Qix-/color-convert/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/Qix-/color-convert.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/Qix-/color-convert#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "color-name",
+      "version": "1.1.4",
+      "bom-ref": "color-name@npm:1.1.4",
+      "author": "DY",
+      "description": "A list of color names and its values",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fcolorjs%2Fcolor-name.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/colorjs/color-name/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+ssh://git@github.com/colorjs/color-name.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/colorjs/color-name",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "has-flag",
+      "version": "4.0.0",
+      "bom-ref": "has-flag@npm:4.0.0",
+      "author": "Sindre Sorhus",
+      "description": "Check if argv has a specific flag",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fhas-flag.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/sindresorhus/has-flag/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/sindresorhus/has-flag.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/sindresorhus/has-flag#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.21",
+      "bom-ref": "lodash@npm:4.17.21",
+      "author": "John-David Dalton",
+      "description": "Lodash modular utilities.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/lodash@4.17.21?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/lodash/lodash/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/lodash/lodash.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://lodash.com/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "supports-color",
+      "version": "7.2.0",
+      "bom-ref": "supports-color@npm:7.2.0",
+      "author": "Sindre Sorhus",
+      "description": "Detect whether a terminal supports color",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fsupports-color.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/chalk/supports-color/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/chalk/supports-color.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/chalk/supports-color#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "test-app",
+      "version": "1.0.0",
+      "bom-ref": "test-app@workspace:packages/app",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/test-app@1.0.0"
+    },
+    {
+      "type": "library",
+      "name": "test-lib",
+      "version": "1.0.0",
+      "bom-ref": "test-lib@workspace:packages/lib",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/test-lib@1.0.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "ansi-styles@npm:4.3.0",
+      "dependsOn": [
+        "color-convert@npm:2.0.1"
+      ]
+    },
+    {
+      "ref": "chalk@npm:4.1.2",
+      "dependsOn": [
+        "ansi-styles@npm:4.3.0",
+        "supports-color@npm:7.2.0"
+      ]
+    },
+    {
+      "ref": "color-convert@npm:2.0.1",
+      "dependsOn": [
+        "color-name@npm:1.1.4"
+      ]
+    },
+    {
+      "ref": "color-name@npm:1.1.4"
+    },
+    {
+      "ref": "demo-workspace-devdeps@workspace:.",
+      "dependsOn": [
+        "test-app@workspace:packages/app"
+      ]
+    },
+    {
+      "ref": "has-flag@npm:4.0.0"
+    },
+    {
+      "ref": "lodash@npm:4.17.21"
+    },
+    {
+      "ref": "supports-color@npm:7.2.0",
+      "dependsOn": [
+        "has-flag@npm:4.0.0"
+      ]
+    },
+    {
+      "ref": "test-app@workspace:packages/app",
+      "dependsOn": [
+        "lodash@npm:4.17.21",
+        "test-lib@workspace:packages/lib"
+      ]
+    },
+    {
+      "ref": "test-lib@workspace:packages/lib",
+      "dependsOn": [
+        "chalk@npm:4.1.2"
+      ]
+    }
+  ]
+}

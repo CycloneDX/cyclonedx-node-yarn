@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "demo-workspace-devdeps",
+  "description": "demo: workspace-devdeps -- test workspace devDependencies filtering in production mode",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "test-app": "workspace:*"
+  },
+  "scripts": {
+    "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
+  },
+  "packageManager": "yarn@4.12.0"
+}

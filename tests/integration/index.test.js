@@ -43,6 +43,7 @@ const testSetups = [
   'local-workspaces',
   'package-aliasing',
   'package-with-build-id',
+  'workspace-devdeps',
   'yarn4_zeroinstall',
   /* endregion functional tests */
   /* region regression tests */
@@ -251,6 +252,7 @@ suite('integration', () => {
         suite('prod', () => {
           [
             'dev-dependencies',
+            'workspace-devdeps',
             'yarn4_zeroinstall'
           ].forEach(testSetup => {
             test(`arg: ${testSetup}`,
