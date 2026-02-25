@@ -17,11 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { Utils as FromNodePackageJsonUtils } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import type { Locator } from '@yarnpkg/core'
-import { PackageURL, PurlQualifierNames } from "packageurl-js"
-import type { PurlQualifiers } from "packageurl-js"
-import type normalizePackageData from 'normalize-package-data'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
+import type normalizePackageData from 'normalize-package-data'
+import type { PurlQualifiers } from "packageurl-js"
+import { PackageURL, PurlQualifierNames } from "packageurl-js"
+
+import {isString} from "./_helpers";
 
 
 
@@ -42,17 +45,30 @@ export class PackageUrlFactory {
     }
 
     const qualifiers: PurlQualifiers = {}
-    switch (true) {
-      case YarnPluginGitUtils.isGitUrl(locator.reference): {
-        qualifiers[PurlQualifierNames.VcsUrl] = locator.reference
-        break
-      }
-      case locator.reference.startsWith('http:') || locator.reference.startsWith('https:'): {
+    if (YarnPluginGitUtils.isGitUrl(locator.reference)) {
+      qualifiers[PurlQualifierNames.VcsUrl] = locator.reference
+    } else if (locator.reference.startsWith('http:')
+      || locator.reference.startsWith('https:')
+    ) {
+      if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(locator.reference)) {
         qualifiers[PurlQualifierNames.DownloadUrl] = locator.reference
-        break
       }
-      default:
-        break
+    } else {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- acknowledged */
+      const {tarball} = manifest.dist ?? {}
+      if (isString(tarball) && tarball.length > 5
+        && !FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball)
+      ) {
+        qualifiers[PurlQualifierNames.DownloadUrl] = tarball
+      } else if (typeof manifest.repository === 'object') {
+        const url = new URL(manifest.repository.url)
+        /* @ts-expect-error -- missing type docs */
+        const subdir = manifest.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
+        if (isString(subdir)) {
+          url.hash = subdir
+        }
+        qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
+      }
     }
 
     try {

@@ -18,23 +18,23 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
-import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
-import { Factories as FromNodePackageJsonFactories, Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Builders as FromNodePackageJsonBuilders,Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import { Factories as LicenseFactories } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
 import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
-import { Configuration, Project, YarnVersion } from '@yarnpkg/core'
 import type { CommandContext } from '@yarnpkg/core'
+import { Configuration, Project, YarnVersion } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
-import { isEnum } from 'typanion'
 import spdxExpressionParse from "spdx-expression-parse"
+import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
-import { makeConsoleLogger } from './logger'
 import { PackageUrlFactory } from './factories'
+import { makeConsoleLogger } from './logger'
 
 
 const OutputStdOut = '-'

@@ -20,19 +20,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 /* eslint-disable @typescript-eslint/max-params -- bassdscho */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
-import { Bom, Component, ComponentEvidence, ExternalReference, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
-import type { License } from '@cyclonedx/cyclonedx-library/Models'
-import { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
-import { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import { Utils as BomUUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
-import { Cache, structUtils, ThrowReport, YarnVersion } from '@yarnpkg/core'
+import type { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import type { License } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ComponentEvidence, ExternalReference, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
 import type { FetchOptions, Locator, LocatorHash, Package, Project, Workspace } from '@yarnpkg/core'
-import { ppath } from '@yarnpkg/fslib'
+import { Cache, structUtils, ThrowReport, YarnVersion } from '@yarnpkg/core'
 import type { PortablePath } from '@yarnpkg/fslib'
+import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import type { PackageURL } from "packageurl-js"
-
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
@@ -41,8 +40,8 @@ import {
   tryRemoveSecretsFromUrl,
   trySanitizeGitUrl
 } from './_helpers'
+import type { PackageUrlFactory } from './factories'
 import { PropertyNames, PropertyValueBool } from './properties'
-import { PackageUrlFactory } from './factories'
 
 
 type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
@@ -312,7 +311,10 @@ export class BomBuilder {
         break
     }
 
-    component.purl = this.finalizePurl(this.purlFactory.makeFromLocatedManifest(locator, manifest))
+    component.purl = this.finalizePurl(this.purlFactory.makeFromLocatedManifest(
+      locator,
+      manifest // eslint-disable-line @typescript-eslint/no-unsafe-argument -- false positive
+    ))
 
     component.bomRef.value = structUtils.prettyLocatorNoColors(locator)
 
