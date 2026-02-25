@@ -71,7 +71,6 @@
       "version": "0.0.1",
       "bom-ref": "concurrent-versions@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of `chalk`",
-      "purl": "pkg:npm/concurrent-versions@0.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-node-yarn.git#tests/_data/testbeds/concurrent-versions",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
@@ -148,7 +147,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-escapes@4.3.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fansi-escapes.git",
+      "purl": "pkg:npm/ansi-escapes@4.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/ansi-escapes/issues",
@@ -182,7 +181,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-regex.git",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-regex/issues",
@@ -216,7 +215,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-styles/issues",
@@ -283,7 +282,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@4.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Frvagg%2Fbl.git",
+      "purl": "pkg:npm/bl@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Frvagg%2Fbl.git",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/bl/issues",
@@ -384,7 +383,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chalk@4.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fchalk.git",
+      "purl": "pkg:npm/chalk@4.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/chalk/issues",
@@ -417,7 +416,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chalk@5.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fchalk.git",
+      "purl": "pkg:npm/chalk@5.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/chalk/issues",
@@ -451,7 +450,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chardet@0.7.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Frunk%2Fnode-chardet.git",
+      "purl": "pkg:npm/chardet@0.7.0",
       "externalReferences": [
         {
           "url": "http://github.com/runk/node-chardet/issues",
@@ -485,7 +484,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-cursor@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcli-cursor.git",
+      "purl": "pkg:npm/cli-cursor@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/cli-cursor/issues",
@@ -519,7 +518,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-spinners@2.9.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcli-spinners.git",
+      "purl": "pkg:npm/cli-spinners@2.9.2",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/cli-spinners/issues",
@@ -553,7 +552,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cli-width@4.1.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fknownasilya%2Fcli-width.git",
+      "purl": "pkg:npm/cli-width@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/knownasilya/cli-width/issues",
@@ -621,7 +620,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FQix-%2Fcolor-convert.git",
+      "purl": "pkg:npm/color-convert@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/Qix-/color-convert/issues",
@@ -655,7 +654,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fcolorjs%2Fcolor-name.git",
+      "purl": "pkg:npm/color-name@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/colorjs/color-name/issues",
@@ -757,7 +756,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -859,7 +858,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/escape-string-regexp@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fescape-string-regexp.git",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/escape-string-regexp/issues",
@@ -927,7 +926,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/figures@3.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Ffigures.git",
+      "purl": "pkg:npm/figures@3.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/figures/issues",
@@ -961,7 +960,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git",
+      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git",
       "externalReferences": [
         {
           "url": "https://github.com/Raynos/function-bind/issues",
@@ -1063,7 +1062,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-flag@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fhas-flag.git",
+      "purl": "pkg:npm/has-flag@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/has-flag/issues",
@@ -1300,7 +1299,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+      "purl": "pkg:npm/inherits@2.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inherits/issues",
@@ -1334,7 +1333,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FSBoudrias%2FInquirer.js.git",
+      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=https%3A%2F%2Fgithub.com%2FSBoudrias%2FInquirer.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/SBoudrias/Inquirer.js/issues",
@@ -1368,7 +1367,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
@@ -1402,7 +1401,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-interactive@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-interactive.git",
+      "purl": "pkg:npm/is-interactive@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/is-interactive/issues",
@@ -1436,7 +1435,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-unicode-supported@0.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-unicode-supported.git",
+      "purl": "pkg:npm/is-unicode-supported@0.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/is-unicode-supported/issues",
@@ -1470,7 +1469,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash@4.17.21?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+      "purl": "pkg:npm/lodash@4.17.21",
       "externalReferences": [
         {
           "url": "https://github.com/lodash/lodash/issues",
@@ -1504,7 +1503,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/log-symbols@4.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Flog-symbols.git",
+      "purl": "pkg:npm/log-symbols@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/log-symbols/issues",
@@ -1538,7 +1537,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mimic-fn@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fmimic-fn.git",
+      "purl": "pkg:npm/mimic-fn@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/mimic-fn/issues",
@@ -1572,7 +1571,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fmute-stream.git",
+      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmute-stream.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/mute-stream/issues",
@@ -1606,7 +1605,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/onetime@5.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fonetime.git",
+      "purl": "pkg:npm/onetime@5.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/onetime/issues",
@@ -1640,7 +1639,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ora@5.4.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fora.git",
+      "purl": "pkg:npm/ora@5.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/ora/issues",
@@ -1674,7 +1673,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/os-tmpdir@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fos-tmpdir.git",
+      "purl": "pkg:npm/os-tmpdir@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/os-tmpdir/issues",
@@ -1707,7 +1706,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -1741,7 +1740,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/restore-cursor@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Frestore-cursor.git",
+      "purl": "pkg:npm/restore-cursor@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/restore-cursor/issues",
@@ -1775,7 +1774,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/run-async@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FSBoudrias%2Frun-async.git",
+      "purl": "pkg:npm/run-async@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/SBoudrias/run-async/issues",
@@ -1809,7 +1808,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Freactivex%2Frxjs.git",
+      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=https%3A%2F%2Fgithub.com%2Freactivex%2Frxjs.git",
       "externalReferences": [
         {
           "url": "https://github.com/ReactiveX/RxJS/issues",
@@ -1945,7 +1944,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -2012,7 +2011,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git",
+      "purl": "pkg:npm/string-width@4.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
@@ -2046,7 +2045,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
@@ -2080,7 +2079,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/supports-color@7.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fsupports-color.git",
+      "purl": "pkg:npm/supports-color@7.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/supports-color/issues",
@@ -2114,7 +2113,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tmp@0.0.33?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fraszi%2Fnode-tmp.git",
+      "purl": "pkg:npm/tmp@0.0.33",
       "externalReferences": [
         {
           "url": "http://github.com/raszi/node-tmp/issues",
@@ -2148,7 +2147,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@2.6.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
+      "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -2180,7 +2179,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/type-fest@0.21.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Ftype-fest.git",
+      "purl": "pkg:npm/type-fest@0.21.3",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/type-fest/issues",
@@ -2282,7 +2281,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@6.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git",
+      "purl": "pkg:npm/wrap-ansi@6.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",

@@ -71,7 +71,6 @@
       "version": "0.0.1",
       "bom-ref": "package-aliasing@workspace:.",
       "description": "demo: a package is aliased with a different name",
-      "purl": "pkg:npm/package-aliasing@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
@@ -149,7 +148,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git",
+      "purl": "pkg:npm/%40isaacs/cliui@8.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/cliui/issues",
@@ -219,7 +218,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git",
+      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/agent/issues",
@@ -254,7 +253,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git",
+      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs/issues",
@@ -428,7 +427,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fpkgjs%2Fparseargs.git",
+      "purl": "pkg:npm/%40pkgjs/parseargs@0.11.0",
       "externalReferences": [
         {
           "url": "https://github.com/pkgjs/parseargs/issues",
@@ -462,7 +461,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/abbrev@1.1.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fisaacs%2Fabbrev-js.git",
+      "purl": "pkg:npm/abbrev@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/abbrev-js/issues",
@@ -496,7 +495,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git",
+      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/abbrev-js/issues",
@@ -564,7 +563,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/agent-base",
+      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fagent-base",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -598,7 +597,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aggregate-error@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Faggregate-error.git",
+      "purl": "pkg:npm/aggregate-error@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/aggregate-error/issues",
@@ -632,7 +631,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fluzlab%2Fajv-formats-draft2019.git",
+      "purl": "pkg:npm/ajv-formats-draft2019@1.6.1",
       "externalReferences": [
         {
           "url": "https://github.com/luzlab/ajv-formats-draft2019/issues",
@@ -700,7 +699,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv@8.12.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git",
+      "purl": "pkg:npm/ajv@8.12.0",
       "externalReferences": [
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
@@ -734,7 +733,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-regex.git",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-regex/issues",
@@ -768,7 +767,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-regex@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-regex.git",
+      "purl": "pkg:npm/ansi-regex@6.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-regex/issues",
@@ -802,7 +801,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-styles/issues",
@@ -836,7 +835,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ansi-styles@6.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git",
+      "purl": "pkg:npm/ansi-styles@6.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/ansi-styles/issues",
@@ -870,7 +869,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aproba@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Faproba.git",
+      "purl": "pkg:npm/aproba@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Faproba",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/aproba/issues",
@@ -904,7 +903,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/are-we-there-yet@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git",
+      "purl": "pkg:npm/are-we-there-yet@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/are-we-there-yet/issues",
@@ -937,7 +936,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/argparse@1.0.10?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodeca%2Fargparse.git",
+      "purl": "pkg:npm/argparse@1.0.10",
       "externalReferences": [
         {
           "url": "https://github.com/nodeca/argparse/issues",
@@ -1107,7 +1106,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacache@18.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git",
+      "purl": "pkg:npm/cacache@18.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/cacache/issues",
@@ -1175,7 +1174,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/clean-stack@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fclean-stack.git",
+      "purl": "pkg:npm/clean-stack@2.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/clean-stack/issues",
@@ -1209,7 +1208,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FQix-%2Fcolor-convert.git",
+      "purl": "pkg:npm/color-convert@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/Qix-/color-convert/issues",
@@ -1243,7 +1242,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fcolorjs%2Fcolor-name.git",
+      "purl": "pkg:npm/color-name@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/colorjs/color-name/issues",
@@ -1311,7 +1310,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/commander@2.20.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git",
+      "purl": "pkg:npm/commander@2.20.3?vcs_url=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/tj/commander.js/issues",
@@ -1379,7 +1378,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/console-control-strings@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings.git",
+      "purl": "pkg:npm/console-control-strings@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/console-control-strings/issues",
@@ -1413,7 +1412,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cross-spawn@7.0.3?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fmoxystudio%2Fnode-cross-spawn.git",
+      "purl": "pkg:npm/cross-spawn@7.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/moxystudio/node-cross-spawn/issues",
@@ -1480,7 +1479,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/delegates@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvisionmedia%2Fnode-delegates.git",
+      "purl": "pkg:npm/delegates@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/visionmedia/node-delegates/issues",
@@ -1514,7 +1513,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc.git",
+      "purl": "pkg:npm/detect-libc@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc",
       "externalReferences": [
         {
           "url": "https://github.com/lovell/detect-libc/issues",
@@ -1548,7 +1547,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/discontinuous-range@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdtudury%2Fdiscontinuous-range.git",
+      "purl": "pkg:npm/discontinuous-range@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fdtudury%2Fdiscontinuous-range.git",
       "externalReferences": [
         {
           "url": "https://github.com/dtudury/discontinuous-range/issues",
@@ -1582,7 +1581,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fkomagata%2Feastasianwidth.git",
+      "purl": "pkg:npm/eastasianwidth@0.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/komagata/eastasianwidth/issues",
@@ -1616,7 +1615,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -1650,7 +1649,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -1684,7 +1683,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/encoding@0.1.13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fandris9%2Fencoding.git",
+      "purl": "pkg:npm/encoding@0.1.13",
       "externalReferences": [
         {
           "url": "https://github.com/andris9/encoding/issues",
@@ -1718,7 +1717,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/env-paths@2.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fenv-paths.git",
+      "purl": "pkg:npm/env-paths@2.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/env-paths/issues",
@@ -1786,7 +1785,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
       "externalReferences": [
         {
           "url": "https://github.com/jquery/esprima/issues",
@@ -1854,7 +1853,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/extend@3.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git",
+      "purl": "pkg:npm/extend@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git",
       "externalReferences": [
         {
           "url": "https://github.com/justmoon/node-extend/issues",
@@ -2024,7 +2023,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git",
+      "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs-minipass/issues",
@@ -2092,7 +2091,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gauge@3.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fgauge.git",
+      "purl": "pkg:npm/gauge@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fgauge",
       "externalReferences": [
         {
           "url": "https://github.com/npm/gauge/issues",
@@ -2193,7 +2192,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs.git",
+      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-graceful-fs/issues",
@@ -2227,7 +2226,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-unicode@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode.git",
+      "purl": "pkg:npm/has-unicode@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/has-unicode/issues",
@@ -2261,7 +2260,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-cache-semantics@4.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkornelski%2Fhttp-cache-semantics.git",
+      "purl": "pkg:npm/http-cache-semantics@4.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/kornelski/http-cache-semantics/issues",
@@ -2295,7 +2294,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/http-proxy-agent",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttp-proxy-agent",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -2363,7 +2362,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/https-proxy-agent",
+      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttps-proxy-agent",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -2431,7 +2430,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js.git",
+      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js",
       "externalReferences": [
         {
           "url": "https://github.com/jensyt/imurmurhash-js/issues",
@@ -2465,7 +2464,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/indent-string@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Findent-string.git",
+      "purl": "pkg:npm/indent-string@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/indent-string/issues",
@@ -2499,7 +2498,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inflight@1.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git",
+      "purl": "pkg:npm/inflight@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inflight/issues",
@@ -2532,7 +2531,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+      "purl": "pkg:npm/inherits@2.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inherits/issues",
@@ -2600,7 +2599,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/is-fullwidth-code-point/issues",
@@ -2634,7 +2633,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git",
+      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git",
       "externalReferences": [
         {
           "url": "https://github.com/watson/is-lambda/issues",
@@ -2702,7 +2701,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isexe@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fisexe.git",
+      "purl": "pkg:npm/isexe@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/isexe/issues",
@@ -2770,7 +2769,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/js-yaml@3.14.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodeca%2Fjs-yaml.git",
+      "purl": "pkg:npm/js-yaml@3.14.1",
       "externalReferences": [
         {
           "url": "https://github.com/nodeca/js-yaml/issues",
@@ -2804,7 +2803,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git",
+      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git",
       "externalReferences": [
         {
           "url": "https://github.com/andyperlitch/jsbn/issues",
@@ -2872,7 +2871,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/libxmljs2@0.33.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fmarudor%2Flibxmljs2.git",
+      "purl": "pkg:npm/libxmljs2@0.33.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmarudor%2Flibxmljs2.git",
       "externalReferences": [
         {
           "url": "http://github.com/marudor/libxmljs2/issues",
@@ -2940,7 +2939,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lru-cache@6.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-lru-cache.git",
+      "purl": "pkg:npm/lru-cache@6.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-lru-cache/issues",
@@ -2974,7 +2973,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-dir@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fmake-dir.git",
+      "purl": "pkg:npm/make-dir@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/make-dir/issues",
@@ -3008,7 +3007,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git",
+      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/make-fetch-happen/issues",
@@ -3110,7 +3109,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-collect@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-collect.git",
+      "purl": "pkg:npm/minipass-collect@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass-collect/issues",
@@ -3144,7 +3143,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/minipass-fetch/issues",
@@ -3331,7 +3330,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@7.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git",
+      "purl": "pkg:npm/minipass@7.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass/issues",
@@ -3398,7 +3397,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git",
+      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-mkdirp/issues",
@@ -3432,7 +3431,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/moo@0.5.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftjvr%2Fmoo.git",
+      "purl": "pkg:npm/moo@0.5.2",
       "externalReferences": [
         {
           "url": "https://github.com/tjvr/moo/issues",
@@ -3465,7 +3464,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ms@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fzeit%2Fms.git",
+      "purl": "pkg:npm/ms@2.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/zeit/ms/issues",
@@ -3532,7 +3531,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nearley@2.20.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fhardmath123%2Fnearley.git",
+      "purl": "pkg:npm/nearley@2.20.1?vcs_url=https%3A%2F%2Fgithub.com%2Fhardmath123%2Fnearley.git",
       "externalReferences": [
         {
           "url": "https://github.com/hardmath123/nearley/issues",
@@ -3565,7 +3564,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/negotiator@0.6.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjshttp%2Fnegotiator.git",
+      "purl": "pkg:npm/negotiator@0.6.3",
       "externalReferences": [
         {
           "url": "https://github.com/jshttp/negotiator/issues",
@@ -3599,7 +3598,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-fetch@2.7.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fbitinn%2Fnode-fetch.git",
+      "purl": "pkg:npm/node-fetch@2.7.0?vcs_url=https%3A%2F%2Fgithub.com%2Fbitinn%2Fnode-fetch.git",
       "externalReferences": [
         {
           "url": "https://github.com/bitinn/node-fetch/issues",
@@ -3667,7 +3666,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@5.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -3701,7 +3700,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@7.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@7.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -3735,7 +3734,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npmlog@5.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git",
+      "purl": "pkg:npm/npmlog@5.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npmlog/issues",
@@ -3769,7 +3768,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-assign@4.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fobject-assign.git",
+      "purl": "pkg:npm/object-assign@4.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/object-assign/issues",
@@ -3803,7 +3802,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce.git",
+      "purl": "pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/once/issues",
@@ -3837,7 +3836,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/p-map@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fp-map.git",
+      "purl": "pkg:npm/p-map@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/p-map/issues",
@@ -3905,7 +3904,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-is-absolute@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-is-absolute.git",
+      "purl": "pkg:npm/path-is-absolute@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/path-is-absolute/issues",
@@ -3939,7 +3938,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-key@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-key.git",
+      "purl": "pkg:npm/path-key@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/path-key/issues",
@@ -3973,7 +3972,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry.git",
+      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/path-scurry/issues",
@@ -4007,7 +4006,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/proc-log@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git",
+      "purl": "pkg:npm/proc-log@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/proc-log/issues",
@@ -4075,7 +4074,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/punycode@2.3.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git",
+      "purl": "pkg:npm/punycode@2.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/punycode.js/issues",
@@ -4109,7 +4108,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/railroad-diagrams@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftabatkins%2Frailroad-diagrams.git",
+      "purl": "pkg:npm/railroad-diagrams@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftabatkins%2Frailroad-diagrams.git",
       "externalReferences": [
         {
           "url": "https://github.com/tabatkins/railroad-diagrams/issues",
@@ -4176,7 +4175,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -4210,7 +4209,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-from-string@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Frequire-from-string.git",
+      "purl": "pkg:npm/require-from-string@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/floatdrop/require-from-string/issues",
@@ -4312,7 +4311,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/rimraf@3.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Frimraf.git",
+      "purl": "pkg:npm/rimraf@3.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/rimraf/issues",
@@ -4448,7 +4447,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@6.3.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@6.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -4482,7 +4481,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.6.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@7.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -4550,7 +4549,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-command@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkevva%2Fshebang-command.git",
+      "purl": "pkg:npm/shebang-command@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/kevva/shebang-command/issues",
@@ -4584,7 +4583,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/shebang-regex@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fshebang-regex.git",
+      "purl": "pkg:npm/shebang-regex@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/shebang-regex/issues",
@@ -4618,7 +4617,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -4652,7 +4651,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -4686,7 +4685,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git",
+      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/smart-buffer/issues",
@@ -4754,7 +4753,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/socks-proxy-agent",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fsocks-proxy-agent",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -4788,7 +4787,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks@2.8.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git",
+      "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/socks/issues",
@@ -4822,7 +4821,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-exceptions.json.git",
+      "purl": "pkg:npm/spdx-exceptions@2.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/kemitchell/spdx-exceptions.json/issues",
@@ -4856,7 +4855,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-expression-parse@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjslicense%2Fspdx-expression-parse.js.git",
+      "purl": "pkg:npm/spdx-expression-parse@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/jslicense/spdx-expression-parse.js/issues",
@@ -4890,7 +4889,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjslicense%2Fspdx-license-ids.git",
+      "purl": "pkg:npm/spdx-license-ids@3.0.17",
       "externalReferences": [
         {
           "url": "https://github.com/jslicense/spdx-license-ids/issues",
@@ -4924,7 +4923,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/alexei/sprintf.js/issues",
@@ -4958,7 +4957,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
       "externalReferences": [
         {
           "url": "https://github.com/alexei/sprintf.js/issues",
@@ -4992,7 +4991,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ssri@10.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git",
+      "purl": "pkg:npm/ssri@10.0.5?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/ssri/issues",
@@ -5059,7 +5058,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git",
+      "purl": "pkg:npm/string-width@4.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
@@ -5093,7 +5092,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string-width@5.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git",
+      "purl": "pkg:npm/string-width@5.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/string-width/issues",
@@ -5127,7 +5126,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
@@ -5161,7 +5160,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/strip-ansi@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git",
+      "purl": "pkg:npm/strip-ansi@7.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/strip-ansi/issues",
@@ -5195,7 +5194,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@6.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git",
+      "purl": "pkg:npm/tar@6.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-tar/issues",
@@ -5263,7 +5262,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git",
+      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/unique-filename/issues",
@@ -5297,7 +5296,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git",
+      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/unique-slug/issues",
@@ -5331,7 +5330,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fgarycourt%2Furi-js.git",
+      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=http%3A%2F%2Fgithub.com%2Fgarycourt%2Furi-js",
       "externalReferences": [
         {
           "url": "https://github.com/garycourt/uri-js/issues",
@@ -5399,7 +5398,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/webidl-conversions@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjsdom%2Fwebidl-conversions.git",
+      "purl": "pkg:npm/webidl-conversions@3.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/jsdom/webidl-conversions/issues",
@@ -5433,7 +5432,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/whatwg-url@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjsdom%2Fwhatwg-url.git",
+      "purl": "pkg:npm/whatwg-url@5.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/jsdom/whatwg-url/issues",
@@ -5501,7 +5500,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git",
+      "purl": "pkg:npm/which@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-which/issues",
@@ -5535,7 +5534,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wide-align@1.1.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align.git",
+      "purl": "pkg:npm/wide-align@1.1.5?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/wide-align/issues",
@@ -5569,7 +5568,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@7.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git",
+      "purl": "pkg:npm/wrap-ansi@7.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",
@@ -5603,7 +5602,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrap-ansi@8.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git",
+      "purl": "pkg:npm/wrap-ansi@8.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/chalk/wrap-ansi/issues",
@@ -5637,7 +5636,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrappy@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy.git",
+      "purl": "pkg:npm/wrappy@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy",
       "externalReferences": [
         {
           "url": "https://github.com/npm/wrappy/issues",

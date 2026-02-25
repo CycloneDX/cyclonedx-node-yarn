@@ -56,7 +56,6 @@
       <name>testing-yarn3-zeroinstall</name>
       <version>0.0.0</version>
       <description>A yarn4 zero-install setup.</description>
-      <purl>pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>

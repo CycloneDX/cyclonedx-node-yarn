@@ -55,7 +55,6 @@
       <name>package-aliasing</name>
       <version>0.0.1</version>
       <description>demo: a package is aliased with a different name</description>
-      <purl>pkg:npm/package-aliasing@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
@@ -114,7 +113,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40isaacs/cliui@8.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git</purl>
+      <purl>pkg:npm/%40isaacs/cliui@8.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/cliui/issues</url>
@@ -168,7 +167,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/agent@2.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git</purl>
+      <purl>pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/agent/issues</url>
@@ -195,7 +194,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/fs@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git</purl>
+      <purl>pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs/issues</url>
@@ -329,7 +328,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40pkgjs/parseargs@0.11.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fpkgjs%2Fparseargs.git</purl>
+      <purl>pkg:npm/%40pkgjs/parseargs@0.11.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/pkgjs/parseargs/issues</url>
@@ -355,7 +354,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/abbrev@1.1.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fisaacs%2Fabbrev-js.git</purl>
+      <purl>pkg:npm/abbrev@1.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/abbrev-js/issues</url>
@@ -381,7 +380,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/abbrev@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git</purl>
+      <purl>pkg:npm/abbrev@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/abbrev-js/issues</url>
@@ -433,7 +432,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/agent-base@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/agent-base</purl>
+      <purl>pkg:npm/agent-base@7.1.0?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fagent-base</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -459,7 +458,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/aggregate-error@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Faggregate-error.git</purl>
+      <purl>pkg:npm/aggregate-error@3.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/aggregate-error/issues</url>
@@ -485,7 +484,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv-formats-draft2019@1.6.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fluzlab%2Fajv-formats-draft2019.git</purl>
+      <purl>pkg:npm/ajv-formats-draft2019@1.6.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/luzlab/ajv-formats-draft2019/issues</url>
@@ -537,7 +536,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ajv@8.12.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git</purl>
+      <purl>pkg:npm/ajv@8.12.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ajv-validator/ajv/issues</url>
@@ -563,7 +562,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-regex@5.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-regex.git</purl>
+      <purl>pkg:npm/ansi-regex@5.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -589,7 +588,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-regex@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-regex.git</purl>
+      <purl>pkg:npm/ansi-regex@6.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-regex/issues</url>
@@ -615,7 +614,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-styles@4.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git</purl>
+      <purl>pkg:npm/ansi-styles@4.3.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-styles/issues</url>
@@ -641,7 +640,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ansi-styles@6.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fansi-styles.git</purl>
+      <purl>pkg:npm/ansi-styles@6.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/ansi-styles/issues</url>
@@ -667,7 +666,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/aproba@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Faproba.git</purl>
+      <purl>pkg:npm/aproba@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Faproba</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/aproba/issues</url>
@@ -693,7 +692,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/are-we-there-yet@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git</purl>
+      <purl>pkg:npm/are-we-there-yet@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/are-we-there-yet/issues</url>
@@ -718,7 +717,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/argparse@1.0.10?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodeca%2Fargparse.git</purl>
+      <purl>pkg:npm/argparse@1.0.10</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/argparse/issues</url>
@@ -848,7 +847,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cacache@18.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git</purl>
+      <purl>pkg:npm/cacache@18.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/cacache/issues</url>
@@ -900,7 +899,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/clean-stack@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fclean-stack.git</purl>
+      <purl>pkg:npm/clean-stack@2.2.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/clean-stack/issues</url>
@@ -926,7 +925,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/color-convert@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FQix-%2Fcolor-convert.git</purl>
+      <purl>pkg:npm/color-convert@2.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/Qix-/color-convert/issues</url>
@@ -952,7 +951,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/color-name@1.1.4?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fcolorjs%2Fcolor-name.git</purl>
+      <purl>pkg:npm/color-name@1.1.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/colorjs/color-name/issues</url>
@@ -1004,7 +1003,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/commander@2.20.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git</purl>
+      <purl>pkg:npm/commander@2.20.3?vcs_url=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tj/commander.js/issues</url>
@@ -1056,7 +1055,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/console-control-strings@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings.git</purl>
+      <purl>pkg:npm/console-control-strings@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/console-control-strings/issues</url>
@@ -1082,7 +1081,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cross-spawn@7.0.3?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fmoxystudio%2Fnode-cross-spawn.git</purl>
+      <purl>pkg:npm/cross-spawn@7.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/moxystudio/node-cross-spawn/issues</url>
@@ -1133,7 +1132,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/delegates@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvisionmedia%2Fnode-delegates.git</purl>
+      <purl>pkg:npm/delegates@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/visionmedia/node-delegates/issues</url>
@@ -1159,7 +1158,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/detect-libc@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc.git</purl>
+      <purl>pkg:npm/detect-libc@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/lovell/detect-libc/issues</url>
@@ -1185,7 +1184,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/discontinuous-range@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdtudury%2Fdiscontinuous-range.git</purl>
+      <purl>pkg:npm/discontinuous-range@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fdtudury%2Fdiscontinuous-range.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/dtudury/discontinuous-range/issues</url>
@@ -1211,7 +1210,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/eastasianwidth@0.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fkomagata%2Feastasianwidth.git</purl>
+      <purl>pkg:npm/eastasianwidth@0.2.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/komagata/eastasianwidth/issues</url>
@@ -1237,7 +1236,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
+      <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -1263,7 +1262,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/emoji-regex@9.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
+      <purl>pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -1289,7 +1288,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/encoding@0.1.13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fandris9%2Fencoding.git</purl>
+      <purl>pkg:npm/encoding@0.1.13</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/andris9/encoding/issues</url>
@@ -1315,7 +1314,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/env-paths@2.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fenv-paths.git</purl>
+      <purl>pkg:npm/env-paths@2.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/env-paths/issues</url>
@@ -1367,7 +1366,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git</purl>
+      <purl>pkg:npm/esprima@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jquery/esprima/issues</url>
@@ -1419,7 +1418,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/extend@3.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git</purl>
+      <purl>pkg:npm/extend@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/justmoon/node-extend/issues</url>
@@ -1549,7 +1548,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs-minipass@3.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git</purl>
+      <purl>pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs-minipass/issues</url>
@@ -1601,7 +1600,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/gauge@3.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fgauge.git</purl>
+      <purl>pkg:npm/gauge@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fgauge</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/gauge/issues</url>
@@ -1678,7 +1677,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs.git</purl>
+      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
@@ -1704,7 +1703,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/has-unicode@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode.git</purl>
+      <purl>pkg:npm/has-unicode@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/has-unicode/issues</url>
@@ -1730,7 +1729,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/http-cache-semantics@4.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkornelski%2Fhttp-cache-semantics.git</purl>
+      <purl>pkg:npm/http-cache-semantics@4.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kornelski/http-cache-semantics/issues</url>
@@ -1756,7 +1755,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/http-proxy-agent@7.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/http-proxy-agent</purl>
+      <purl>pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttp-proxy-agent</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -1808,7 +1807,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/https-proxy-agent@7.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/https-proxy-agent</purl>
+      <purl>pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttps-proxy-agent</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -1860,7 +1859,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/imurmurhash@0.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js.git</purl>
+      <purl>pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jensyt/imurmurhash-js/issues</url>
@@ -1886,7 +1885,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/indent-string@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Findent-string.git</purl>
+      <purl>pkg:npm/indent-string@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/indent-string/issues</url>
@@ -1912,7 +1911,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inflight@1.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git</purl>
+      <purl>pkg:npm/inflight@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inflight/issues</url>
@@ -1937,7 +1936,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git</purl>
+      <purl>pkg:npm/inherits@2.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inherits/issues</url>
@@ -1989,7 +1988,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-fullwidth-code-point@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fis-fullwidth-code-point.git</purl>
+      <purl>pkg:npm/is-fullwidth-code-point@3.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/is-fullwidth-code-point/issues</url>
@@ -2015,7 +2014,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-lambda@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git</purl>
+      <purl>pkg:npm/is-lambda@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/watson/is-lambda/issues</url>
@@ -2067,7 +2066,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/isexe@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fisexe.git</purl>
+      <purl>pkg:npm/isexe@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/isexe/issues</url>
@@ -2119,7 +2118,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/js-yaml@3.14.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodeca%2Fjs-yaml.git</purl>
+      <purl>pkg:npm/js-yaml@3.14.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodeca/js-yaml/issues</url>
@@ -2145,7 +2144,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jsbn@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git</purl>
+      <purl>pkg:npm/jsbn@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/andyperlitch/jsbn/issues</url>
@@ -2197,7 +2196,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/libxmljs2@0.33.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fmarudor%2Flibxmljs2.git</purl>
+      <purl>pkg:npm/libxmljs2@0.33.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmarudor%2Flibxmljs2.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/marudor/libxmljs2/issues</url>
@@ -2249,7 +2248,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lru-cache@6.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-lru-cache.git</purl>
+      <purl>pkg:npm/lru-cache@6.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-lru-cache/issues</url>
@@ -2275,7 +2274,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/make-dir@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fmake-dir.git</purl>
+      <purl>pkg:npm/make-dir@3.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/make-dir/issues</url>
@@ -2301,7 +2300,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/make-fetch-happen@13.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git</purl>
+      <purl>pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/make-fetch-happen/issues</url>
@@ -2379,7 +2378,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-collect@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-collect.git</purl>
+      <purl>pkg:npm/minipass-collect@2.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-collect/issues</url>
@@ -2405,7 +2404,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-fetch@3.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git</purl>
+      <purl>pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/minipass-fetch/issues</url>
@@ -2547,7 +2546,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass@7.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git</purl>
+      <purl>pkg:npm/minipass@7.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
@@ -2598,7 +2597,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/mkdirp@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git</purl>
+      <purl>pkg:npm/mkdirp@1.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-mkdirp/issues</url>
@@ -2624,7 +2623,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/moo@0.5.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftjvr%2Fmoo.git</purl>
+      <purl>pkg:npm/moo@0.5.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tjvr/moo/issues</url>
@@ -2649,7 +2648,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ms@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fzeit%2Fms.git</purl>
+      <purl>pkg:npm/ms@2.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/zeit/ms/issues</url>
@@ -2700,7 +2699,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nearley@2.20.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fhardmath123%2Fnearley.git</purl>
+      <purl>pkg:npm/nearley@2.20.1?vcs_url=https%3A%2F%2Fgithub.com%2Fhardmath123%2Fnearley.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/hardmath123/nearley/issues</url>
@@ -2725,7 +2724,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/negotiator@0.6.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjshttp%2Fnegotiator.git</purl>
+      <purl>pkg:npm/negotiator@0.6.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jshttp/negotiator/issues</url>
@@ -2751,7 +2750,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/node-fetch@2.7.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fbitinn%2Fnode-fetch.git</purl>
+      <purl>pkg:npm/node-fetch@2.7.0?vcs_url=https%3A%2F%2Fgithub.com%2Fbitinn%2Fnode-fetch.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/bitinn/node-fetch/issues</url>
@@ -2803,7 +2802,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
+      <purl>pkg:npm/nopt@5.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -2829,7 +2828,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@7.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
+      <purl>pkg:npm/nopt@7.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -2855,7 +2854,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/npmlog@5.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git</purl>
+      <purl>pkg:npm/npmlog@5.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/npmlog/issues</url>
@@ -2881,7 +2880,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/object-assign@4.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fobject-assign.git</purl>
+      <purl>pkg:npm/object-assign@4.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/object-assign/issues</url>
@@ -2907,7 +2906,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce.git</purl>
+      <purl>pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/once/issues</url>
@@ -2933,7 +2932,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/p-map@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fp-map.git</purl>
+      <purl>pkg:npm/p-map@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/p-map/issues</url>
@@ -2985,7 +2984,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-is-absolute@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-is-absolute.git</purl>
+      <purl>pkg:npm/path-is-absolute@1.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-is-absolute/issues</url>
@@ -3011,7 +3010,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-key@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fpath-key.git</purl>
+      <purl>pkg:npm/path-key@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/path-key/issues</url>
@@ -3037,7 +3036,7 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry.git</purl>
+      <purl>pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/path-scurry/issues</url>
@@ -3063,7 +3062,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/proc-log@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
+      <purl>pkg:npm/proc-log@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
@@ -3115,7 +3114,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/punycode@2.3.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git</purl>
+      <purl>pkg:npm/punycode@2.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/punycode.js/issues</url>
@@ -3141,7 +3140,7 @@
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/railroad-diagrams@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftabatkins%2Frailroad-diagrams.git</purl>
+      <purl>pkg:npm/railroad-diagrams@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftabatkins%2Frailroad-diagrams.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tabatkins/railroad-diagrams/issues</url>
@@ -3192,7 +3191,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git</purl>
+      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/readable-stream/issues</url>
@@ -3218,7 +3217,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-from-string@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffloatdrop%2Frequire-from-string.git</purl>
+      <purl>pkg:npm/require-from-string@2.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/floatdrop/require-from-string/issues</url>
@@ -3296,7 +3295,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/rimraf@3.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Frimraf.git</purl>
+      <purl>pkg:npm/rimraf@3.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/rimraf/issues</url>
@@ -3400,7 +3399,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@6.3.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@6.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -3426,7 +3425,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@7.6.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@7.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -3478,7 +3477,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/shebang-command@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkevva%2Fshebang-command.git</purl>
+      <purl>pkg:npm/shebang-command@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kevva/shebang-command/issues</url>
@@ -3504,7 +3503,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/shebang-regex@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fshebang-regex.git</purl>
+      <purl>pkg:npm/shebang-regex@3.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/shebang-regex/issues</url>
@@ -3530,7 +3529,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/signal-exit@3.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
+      <purl>pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
@@ -3556,7 +3555,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/signal-exit@4.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
+      <purl>pkg:npm/signal-exit@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
@@ -3582,7 +3581,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/smart-buffer@4.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git</purl>
+      <purl>pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/smart-buffer/issues</url>
@@ -3634,7 +3633,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks-proxy-agent@8.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git#packages/socks-proxy-agent</purl>
+      <purl>pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fsocks-proxy-agent</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -3660,7 +3659,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks@2.8.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git</purl>
+      <purl>pkg:npm/socks@2.8.1?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/socks/issues</url>
@@ -3686,7 +3685,7 @@
           <id>CC-BY-3.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-exceptions@2.5.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fkemitchell%2Fspdx-exceptions.json.git</purl>
+      <purl>pkg:npm/spdx-exceptions@2.5.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kemitchell/spdx-exceptions.json/issues</url>
@@ -3712,7 +3711,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-expression-parse@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjslicense%2Fspdx-expression-parse.js.git</purl>
+      <purl>pkg:npm/spdx-expression-parse@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-expression-parse.js/issues</url>
@@ -3738,7 +3737,7 @@
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/spdx-license-ids@3.0.17?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjslicense%2Fspdx-license-ids.git</purl>
+      <purl>pkg:npm/spdx-license-ids@3.0.17</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jslicense/spdx-license-ids/issues</url>
@@ -3764,7 +3763,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/sprintf-js@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
+      <purl>pkg:npm/sprintf-js@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -3790,7 +3789,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/sprintf-js@1.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
+      <purl>pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -3816,7 +3815,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ssri@10.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git</purl>
+      <purl>pkg:npm/ssri@10.0.5?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/ssri/issues</url>
@@ -3867,7 +3866,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@4.2.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git</purl>
+      <purl>pkg:npm/string-width@4.2.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -3893,7 +3892,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string-width@5.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsindresorhus%2Fstring-width.git</purl>
+      <purl>pkg:npm/string-width@5.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/sindresorhus/string-width/issues</url>
@@ -3919,7 +3918,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@6.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@6.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
@@ -3945,7 +3944,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/strip-ansi@7.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fstrip-ansi.git</purl>
+      <purl>pkg:npm/strip-ansi@7.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/strip-ansi/issues</url>
@@ -3971,7 +3970,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar@6.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git</purl>
+      <purl>pkg:npm/tar@6.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-tar/issues</url>
@@ -4023,7 +4022,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-filename@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git</purl>
+      <purl>pkg:npm/unique-filename@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/unique-filename/issues</url>
@@ -4049,7 +4048,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-slug@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git</purl>
+      <purl>pkg:npm/unique-slug@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/unique-slug/issues</url>
@@ -4075,7 +4074,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uri-js@4.4.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fgarycourt%2Furi-js.git</purl>
+      <purl>pkg:npm/uri-js@4.4.1?vcs_url=http%3A%2F%2Fgithub.com%2Fgarycourt%2Furi-js</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/garycourt/uri-js/issues</url>
@@ -4127,7 +4126,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/webidl-conversions@3.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjsdom%2Fwebidl-conversions.git</purl>
+      <purl>pkg:npm/webidl-conversions@3.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jsdom/webidl-conversions/issues</url>
@@ -4153,7 +4152,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/whatwg-url@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjsdom%2Fwhatwg-url.git</purl>
+      <purl>pkg:npm/whatwg-url@5.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jsdom/whatwg-url/issues</url>
@@ -4205,7 +4204,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/which@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git</purl>
+      <purl>pkg:npm/which@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-which/issues</url>
@@ -4231,7 +4230,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wide-align@1.1.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align.git</purl>
+      <purl>pkg:npm/wide-align@1.1.5?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/wide-align/issues</url>
@@ -4257,7 +4256,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@7.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@7.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
@@ -4283,7 +4282,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrap-ansi@8.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fchalk%2Fwrap-ansi.git</purl>
+      <purl>pkg:npm/wrap-ansi@8.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/chalk/wrap-ansi/issues</url>
@@ -4309,7 +4308,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrappy@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy.git</purl>
+      <purl>pkg:npm/wrappy@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/wrappy/issues</url>

@@ -71,8 +71,7 @@
       "group": "@cyclonedx",
       "version": "0.0.0",
       "bom-ref": "@cyclonedx/testing-yarn3-zeroinstall@workspace:.",
-      "description": "A yarn4 zero-install setup.",
-      "purl": "pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0"
+      "description": "A yarn4 zero-install setup."
     },
     "properties": [
       {
@@ -97,7 +96,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-sorted@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdcousens%2Fis-sorted.git",
+      "purl": "pkg:npm/is-sorted@1.0.5?vcs_url=https%3A%2F%2Fgithub.com%2Fdcousens%2Fis-sorted.git",
       "externalReferences": [
         {
           "url": "https://github.com/dcousens/is-sorted/issues",
