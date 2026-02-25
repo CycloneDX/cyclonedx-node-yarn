@@ -200,7 +200,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:9.2.0, @cyclonedx/cyclonedx-library@npm:^9.2.0":
+"@cyclonedx/cyclonedx-library@npm:^10.0.0-rc.2":
+  version: 10.0.0-rc.2
+  resolution: "@cyclonedx/cyclonedx-library@npm:10.0.0-rc.2"
+  peerDependencies:
+    ajv: ^8.12.0
+    ajv-formats: ^3.0.1
+    ajv-formats-draft2019: ^1.6.1
+    libxmljs2: ^0.35||^0.37
+    packageurl-js: "*"
+    spdx-expression-parse: "*"
+    xmlbuilder2: ^3.0.2||^4.0.0
+  peerDependenciesMeta:
+    ajv:
+      optional: true
+    ajv-formats:
+      optional: true
+    ajv-formats-draft2019:
+      optional: true
+    libxmljs2:
+      optional: true
+    packageurl-js:
+      optional: true
+    spdx-expression-parse:
+      optional: true
+    xmlbuilder2:
+      optional: true
+  checksum: 10c0/aaba994f6005f28593407272a460febc61e5c80855299efa39ea96e19e58d52e1aa29dd6f310d54c4d1aceff326b806646db9ada03929a7f5fffe653a55198f3
+  languageName: node
+  linkType: hard
+
+"@cyclonedx/cyclonedx-library@npm:^9.2.0":
   version: 9.2.0
   resolution: "@cyclonedx/cyclonedx-library@npm:9.2.0"
   dependencies:
@@ -232,7 +262,7 @@ __metadata:
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
     "@cyclonedx/cyclonedx-esbuild": "npm:1.0.0"
-    "@cyclonedx/cyclonedx-library": "npm:9.2.0"
+    "@cyclonedx/cyclonedx-library": "npm:^10.0.0-rc.2"
     "@eslint/js": "npm:9.39.2"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
