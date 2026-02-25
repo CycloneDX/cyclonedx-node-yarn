@@ -61,13 +61,17 @@ export class PackageUrlFactory {
       ) {
         qualifiers[PurlQualifierNames.DownloadUrl] = tarball
       } else if (typeof manifest.repository === 'object') {
-        const url = new URL(manifest.repository.url)
-        /* @ts-expect-error -- missing type docs */
-        const subdir = manifest.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
-        if (isString(subdir)) {
-          url.hash = subdir
+        try {
+          const url = new URL(manifest.repository.url)
+          /* @ts-expect-error -- missing type docs */
+          const subdir = manifest.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
+          if (isString(subdir)) {
+            url.hash = subdir
+          }
+          qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
+        } catch {
+          /* pass */
         }
-        qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
       }
     }
 
