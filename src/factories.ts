@@ -44,39 +44,6 @@ export class PackageUrlFactory {
       name = nameParts.join('/')
     }
 
-    const qualifiers: PurlQualifiers = {}
-    if (YarnPluginGitUtils.isGitUrl(locator.reference)) {
-      qualifiers[PurlQualifierNames.VcsUrl] = locator.reference
-    } else if (locator.reference.startsWith('http:')
-      || locator.reference.startsWith('https:')
-    ) {
-      if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(locator.reference)) {
-        qualifiers[PurlQualifierNames.DownloadUrl] = locator.reference
-      }
-    } else {
-      // "dist" might be used in bundled dependencies' manifests.
-      // docs: https://blog.npmjs.org/post/172999548390/new-pgp-machinery
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- acknowledged */
-      const {tarball} = manifest.dist ?? {}
-      if (isString(tarball) && tarball.length > 5 ) {
-        if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball)) {
-          qualifiers[PurlQualifierNames.DownloadUrl] = tarball
-        }
-      } else if (typeof manifest.repository === 'object') {
-        try {
-          const url = new URL(manifest.repository.url)
-          /* @ts-expect-error -- missing type docs */
-          const subdir = manifest.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
-          if (isString(subdir)) {
-            url.hash = subdir
-          }
-          qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
-        } catch {
-          /* pass */
-        }
-      }
-    }
-
     try {
       // Do not beautify the parameters here, because that is in the domain of PackageURL and its representation.
       // No need to convert an empty "subpath" string to `undefined` and such.
@@ -85,12 +52,72 @@ export class PackageUrlFactory {
         namespace,
         name,
         manifest.version,
-        qualifiers,
+        this.makeQualifiers(locator, manifest),
         undefined
       )
     } catch {
       return undefined
     }
+  }
+
+  /* eslint-disable-next-line complexity -- ack */
+  private makeQualifiers (locator: Locator, manifest: normalizePackageData.Package): PurlQualifiers  {
+    const qualifiers: PurlQualifiers = {}
+
+    const reference = locator.reference
+    switch (true) {
+      case reference.startsWith('workspace:'): {
+        /* pass */ break
+      }
+      case reference.startsWith('npm:'): {
+        /* pass */ break
+      }
+      case YarnPluginGitUtils.isGitUrl(reference): {
+        qualifiers[PurlQualifierNames.VcsUrl] = reference
+        break
+      }
+      case reference.startsWith('http:')|| reference.startsWith('https:'): {
+        if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(reference)) {
+          qualifiers[PurlQualifierNames.DownloadUrl] = reference
+        }
+        break
+      }
+      case reference.startsWith('link:'): {
+        /* pass */ break
+      }
+      case reference.startsWith('portal:'): {
+        /* pass */ break
+      }
+      default: {
+        // "dist" might be used in bundled dependencies' manifests.
+        // docs: https://blog.npmjs.org/post/172999548390/new-pgp-machinery
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- acknowledged */
+        const { tarball } = manifest.dist ?? {}
+        if ( isString(tarball) && tarball.length > 5 ) {
+          if ( !FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball) ) {
+            qualifiers[PurlQualifierNames.DownloadUrl] = tarball
+          }
+          break
+        }
+        if ( typeof manifest.repository === 'object' ) {
+          try {
+            const url = new URL(manifest.repository.url)
+            /* @ts-expect-error -- missing type docs */
+            const subdir = manifest.repository.directory /* eslint-disable-line @typescript-eslint/no-unsafe-assignment -- ack */
+            if ( isString(subdir) ) {
+              url.hash = subdir
+            }
+            qualifiers[PurlQualifierNames.VcsUrl] = url.toString()
+          } catch {
+            /* pass */
+          }
+          break
+        }
+        break
+      }
+    }
+
+    return qualifiers
   }
 
 }
