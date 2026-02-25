@@ -54,12 +54,14 @@ export class PackageUrlFactory {
         qualifiers[PurlQualifierNames.DownloadUrl] = locator.reference
       }
     } else {
+      // "dist" might be used in bundled dependencies' manifests.
+      // docs: https://blog.npmjs.org/post/172999548390/new-pgp-machinery
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- acknowledged */
       const {tarball} = manifest.dist ?? {}
-      if (isString(tarball) && tarball.length > 5
-        && !FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball)
-      ) {
-        qualifiers[PurlQualifierNames.DownloadUrl] = tarball
+      if (isString(tarball) && tarball.length > 5 ) {
+        if (!FromNodePackageJsonUtils.defaultRegistryMatcher.test(tarball)) {
+          qualifiers[PurlQualifierNames.DownloadUrl] = tarball
+        }
       } else if (typeof manifest.repository === 'object') {
         try {
           const url = new URL(manifest.repository.url)
