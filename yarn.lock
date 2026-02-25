@@ -268,6 +268,7 @@ __metadata:
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:ts5.8"
     "@types/normalize-package-data": "npm:^2.4.4"
+    "@types/spdx-expression-parse": "npm:^3.0.5"
     "@yarnpkg/builder": "npm:4.2.3"
     "@yarnpkg/cli": "npm:^4"
     "@yarnpkg/core": "npm:^4"
@@ -297,7 +298,9 @@ __metadata:
     neostandard: "npm:0.12.2"
     normalize-package-data: "npm:8.0.0"
     npm-run-all2: "npm:^8.0.0"
+    packageurl-js: "npm:^2.0.1"
     rimraf: "npm:^6.0.1"
+    spdx-expression-parse: "npm:^3.0.1 || ^4.0.0"
     typanion: "npm:^3.14.0"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.53.0"
@@ -1102,6 +1105,13 @@ __metadata:
   version: 7.7.1
   resolution: "@types/semver@npm:7.7.1"
   checksum: 10c0/c938aef3bf79a73f0f3f6037c16e2e759ff40c54122ddf0b2583703393d8d3127130823facb880e694caa324eb6845628186aac1997ee8b31dc2d18fafe26268
+  languageName: node
+  linkType: hard
+
+"@types/spdx-expression-parse@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "@types/spdx-expression-parse@npm:3.0.5"
+  checksum: 10c0/364dc4814cf19a4d4c4e23b2fd6655c41fe3e162fec66dd5942a10b72da0f3c9a64d1e6c3d1dcd0cf29ccb5b4484721ab92ffc81171f26aa174144115102108d
   languageName: node
   linkType: hard
 
@@ -6844,7 +6854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spdx-expression-parse@npm:^3.0.1 || ^4, spdx-expression-parse@npm:^4.0.0":
+"spdx-expression-parse@npm:^3.0.1 || ^4, spdx-expression-parse@npm:^3.0.1 || ^4.0.0, spdx-expression-parse@npm:^4.0.0":
   version: 4.0.0
   resolution: "spdx-expression-parse@npm:4.0.0"
   dependencies:
