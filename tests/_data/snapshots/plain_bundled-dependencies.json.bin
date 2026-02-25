@@ -154,7 +154,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bundle-dependencies@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fgajus%2Fbundle-dependencies",
+      "purl": "pkg:npm/bundle-dependencies@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/gajus/bundle-dependencies/issues",
@@ -222,7 +222,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cliui@3.2.0?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git",
+      "purl": "pkg:npm/cliui@3.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/cliui/issues",
@@ -391,7 +391,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git",
+      "purl": "pkg:npm/function-bind@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/Raynos/function-bind/issues",
@@ -424,7 +424,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/get-caller-file@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fstefanpenner%2Fget-caller-file.git",
+      "purl": "pkg:npm/get-caller-file@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/stefanpenner/get-caller-file/issues",
@@ -457,7 +457,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs",
+      "purl": "pkg:npm/graceful-fs@4.2.11",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-graceful-fs/issues",
@@ -491,7 +491,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hasown@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2FhasOwn.git",
+      "purl": "pkg:npm/hasown@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/hasOwn/issues",
@@ -525,7 +525,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hosted-git-info@2.8.9?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git",
+      "purl": "pkg:npm/hosted-git-info@2.8.9",
       "externalReferences": [
         {
           "url": "https://github.com/npm/hosted-git-info/issues",
@@ -593,7 +593,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/qix-/node-is-arrayish/issues",
@@ -627,7 +627,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-core-module@2.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-core-module.git",
+      "purl": "pkg:npm/is-core-module@2.13.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-core-module/issues",
@@ -831,7 +831,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/normalize-package-data@2.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git",
+      "purl": "pkg:npm/normalize-package-data@2.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/normalize-package-data/issues",
@@ -1001,7 +1001,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-parse@1.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Fjbgutierrez%2Fpath-parse.git",
+      "purl": "pkg:npm/path-parse@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/jbgutierrez/path-parse/issues",
@@ -1239,7 +1239,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-directory@2.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Ftroygoode%2Fnode-require-directory.git",
+      "purl": "pkg:npm/require-directory@2.1.1",
       "externalReferences": [
         {
           "url": "http://github.com/troygoode/node-require-directory/issues/",
@@ -1273,7 +1273,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git",
+      "purl": "pkg:npm/require-main-filename@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/require-main-filename/issues",
@@ -1341,7 +1341,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@5.7.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@5.7.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -1375,7 +1375,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fset-blocking.git",
+      "purl": "pkg:npm/set-blocking@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/set-blocking/issues",
@@ -1646,7 +1646,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fnode-supports-preserve-symlinks-flag.git",
+      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag/issues",
@@ -1714,7 +1714,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which-module@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnexdrew%2Fwhich-module.git",
+      "purl": "pkg:npm/which-module@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/nexdrew/which-module/issues",
@@ -1883,7 +1883,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs@4.8.1?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fyargs.git",
+      "purl": "pkg:npm/yargs@4.8.1",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/yargs/issues",

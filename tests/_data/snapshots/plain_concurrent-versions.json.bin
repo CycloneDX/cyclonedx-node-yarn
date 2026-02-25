@@ -113,7 +113,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40ljharb/through@2.3.12?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fthrough.git",
+      "purl": "pkg:npm/%40ljharb/through@2.3.12",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/through/issues",
@@ -249,7 +249,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
+      "purl": "pkg:npm/base64-js@1.5.1",
       "externalReferences": [
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
@@ -282,7 +282,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Frvagg%2Fbl.git",
+      "purl": "pkg:npm/bl@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/bl/issues",
@@ -316,7 +316,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/buffer@5.7.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
+      "purl": "pkg:npm/buffer@5.7.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/buffer/issues",
@@ -350,7 +350,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fcall-bind.git",
+      "purl": "pkg:npm/call-bind@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/call-bind/issues",
@@ -586,7 +586,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/clone@1.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fpvorb%2Fnode-clone.git",
+      "purl": "pkg:npm/clone@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/pvorb/node-clone/issues",
@@ -688,7 +688,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/defaults@1.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fsindresorhus%2Fnode-defaults.git",
+      "purl": "pkg:npm/defaults@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/node-defaults/issues",
@@ -722,7 +722,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fdefine-data-property.git",
+      "purl": "pkg:npm/define-data-property@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/define-data-property/issues",
@@ -756,7 +756,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -790,7 +790,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fes-define-property.git",
+      "purl": "pkg:npm/es-define-property@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/es-define-property/issues",
@@ -824,7 +824,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fes-errors.git",
+      "purl": "pkg:npm/es-errors@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/es-errors/issues",
@@ -892,7 +892,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/external-editor@3.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmrkmg%2Fnode-external-editor.git",
+      "purl": "pkg:npm/external-editor@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/mrkmg/node-external-editor/issues",
@@ -960,7 +960,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git",
+      "purl": "pkg:npm/function-bind@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/Raynos/function-bind/issues",
@@ -994,7 +994,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fget-intrinsic.git",
+      "purl": "pkg:npm/get-intrinsic@1.2.4",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/get-intrinsic/issues",
@@ -1028,7 +1028,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fgopd.git",
+      "purl": "pkg:npm/gopd@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/gopd/issues",
@@ -1096,7 +1096,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-property-descriptors.git",
+      "purl": "pkg:npm/has-property-descriptors@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-property-descriptors/issues",
@@ -1130,7 +1130,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-proto.git",
+      "purl": "pkg:npm/has-proto@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-proto/issues",
@@ -1164,7 +1164,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git",
+      "purl": "pkg:npm/has-symbols@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-symbols/issues",
@@ -1198,7 +1198,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hasown@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2FhasOwn.git",
+      "purl": "pkg:npm/hasown@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/hasOwn/issues",
@@ -1232,7 +1232,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A%2F%2Fgithub.com%2Fashtuchkin%2Ficonv-lite.git",
+      "purl": "pkg:npm/iconv-lite@0.4.24",
       "externalReferences": [
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
@@ -1266,7 +1266,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
+      "purl": "pkg:npm/ieee754@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/ieee754/issues",
@@ -1333,7 +1333,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inquirer@9.2.15?vcs_url=https%3A%2F%2Fgithub.com%2FSBoudrias%2FInquirer.js.git",
+      "purl": "pkg:npm/inquirer@9.2.15",
       "externalReferences": [
         {
           "url": "https://github.com/SBoudrias/Inquirer.js/issues",
@@ -1571,7 +1571,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mute-stream@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmute-stream.git",
+      "purl": "pkg:npm/mute-stream@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/mute-stream/issues",
@@ -1706,7 +1706,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream",
+      "purl": "pkg:npm/readable-stream@3.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -1808,7 +1808,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/rxjs@7.8.1?vcs_url=https%3A%2F%2Fgithub.com%2Freactivex%2Frxjs.git",
+      "purl": "pkg:npm/rxjs@7.8.1",
       "externalReferences": [
         {
           "url": "https://github.com/ReactiveX/RxJS/issues",
@@ -1842,7 +1842,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/safe-buffer/issues",
@@ -1876,7 +1876,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FChALkeR%2Fsafer-buffer.git",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/ChALkeR/safer-buffer/issues",
@@ -1910,7 +1910,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/set-function-length@1.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fset-function-length.git",
+      "purl": "pkg:npm/set-function-length@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/set-function-length/issues",
@@ -1944,7 +1944,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@3.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -1977,7 +1977,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
@@ -2147,7 +2147,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
+      "purl": "pkg:npm/tslib@2.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -2213,7 +2213,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/util-deprecate/issues",
@@ -2247,7 +2247,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wcwidth@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftimoxley%2Fwcwidth.git",
+      "purl": "pkg:npm/wcwidth@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/timoxley/wcwidth/issues",

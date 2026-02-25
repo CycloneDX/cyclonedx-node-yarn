@@ -110,7 +110,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fnode",
+      "purl": "pkg:npm/%40types/node@20.11.30",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -144,7 +144,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/uuid@8.3.4?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fuuid",
+      "purl": "pkg:npm/%40types/uuid@8.3.4",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -177,7 +177,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodejs%2Fundici.git",
+      "purl": "pkg:npm/undici-types@5.26.5",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/undici/issues",
@@ -210,7 +210,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@8.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Fuuidjs%2Fuuid.git",
+      "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/uuidjs/uuid/issues",
@@ -243,7 +243,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuidv4@6.2.13?vcs_url=git%3A%2F%2Fgithub.com%2Fthenativeweb%2Fuuidv4.git",
+      "purl": "pkg:npm/uuidv4@6.2.13",
       "externalReferences": [
         {
           "url": "https://github.com/thenativeweb/uuidv4/issues",

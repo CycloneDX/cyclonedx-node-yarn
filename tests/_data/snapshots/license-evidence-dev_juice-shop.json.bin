@@ -122,7 +122,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40adraffy/ens-normalize@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fadraffy%2Fens-normalize.js.git",
+      "purl": "pkg:npm/%40adraffy/ens-normalize@1.10.1",
       "externalReferences": [
         {
           "url": "https://github.com/adraffy/ens-normalize.js/issues",
@@ -171,7 +171,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/helper-string-parser@7.24.1?vcs_url=https%3A%2F%2Fgithub.com%2Fbabel%2Fbabel.git%23packages%2Fbabel-helper-string-parser",
+      "purl": "pkg:npm/%40babel/helper-string-parser@7.24.1",
       "externalReferences": [
         {
           "url": "https://github.com/babel/babel/issues",
@@ -220,7 +220,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/helper-validator-identifier@7.22.20?vcs_url=https%3A%2F%2Fgithub.com%2Fbabel%2Fbabel.git%23packages%2Fbabel-helper-validator-identifier",
+      "purl": "pkg:npm/%40babel/helper-validator-identifier@7.22.20",
       "externalReferences": [
         {
           "url": "https://github.com/babel/babel/issues",
@@ -269,7 +269,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/parser@7.24.1?vcs_url=https%3A%2F%2Fgithub.com%2Fbabel%2Fbabel.git%23packages%2Fbabel-parser",
+      "purl": "pkg:npm/%40babel/parser@7.24.1",
       "externalReferences": [
         {
           "url": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A+parser+%28babylon%29%22+is%3Aopen",
@@ -318,7 +318,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/runtime@7.24.1?vcs_url=https%3A%2F%2Fgithub.com%2Fbabel%2Fbabel.git%23packages%2Fbabel-runtime",
+      "purl": "pkg:npm/%40babel/runtime@7.24.1",
       "externalReferences": [
         {
           "url": "https://github.com/babel/babel/issues",
@@ -367,7 +367,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40babel/types@7.24.0?vcs_url=https%3A%2F%2Fgithub.com%2Fbabel%2Fbabel.git%23packages%2Fbabel-types",
+      "purl": "pkg:npm/%40babel/types@7.24.0",
       "externalReferences": [
         {
           "url": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen",
@@ -416,7 +416,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40colors/colors@1.6.0?vcs_url=http%3A%2F%2Fgithub.com%2FDABH%2Fcolors.js.git",
+      "purl": "pkg:npm/%40colors/colors@1.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/DABH/colors.js/issues",
@@ -465,7 +465,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40dabh/diagnostics@2.0.3?vcs_url=git%3A%2F%2Fgithub.com%2F3rd-Eden%2Fdiagnostics.git",
+      "purl": "pkg:npm/%40dabh/diagnostics@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/diagnostics/issues",
@@ -514,7 +514,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40ethereumjs/rlp@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fethereumjs%2Fethereumjs-monorepo.git",
+      "purl": "pkg:npm/%40ethereumjs/rlp@4.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/ethereumjs/ethereumjs-monorepo/issues?q=is%3Aissue+label%3A%22package%3A+rlp%22",
@@ -563,7 +563,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40gar/promisify@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Fwraithgar%2Fgar-promisify.git",
+      "purl": "pkg:npm/%40gar/promisify@1.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/wraithgar/gar-promisify/issues",
@@ -661,7 +661,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11?vcs_url=git%3A%2F%2Fgithub.com%2Fmapbox%2Fnode-pre-gyp.git",
+      "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.11",
       "externalReferences": [
         {
           "url": "https://github.com/mapbox/node-pre-gyp/issues",
@@ -710,7 +710,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/core-loader@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/core-loader@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -759,7 +759,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/core@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/core@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -808,7 +808,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/evaluator@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/evaluator@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -857,7 +857,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/lang-en-min@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/lang-en-min@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -906,7 +906,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/lang-en@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/lang-en@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -955,7 +955,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/language-min@4.25.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/language-min@4.25.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1004,7 +1004,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/language@4.25.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/language@4.25.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1053,7 +1053,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/ner@4.27.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/ner@4.27.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1102,7 +1102,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/neural@4.25.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/neural@4.25.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1151,7 +1151,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/nlg@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/nlg@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1200,7 +1200,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/nlp@4.27.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/nlp@4.27.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1249,7 +1249,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/nlu@4.27.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/nlu@4.27.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1298,7 +1298,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/request@4.25.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/request@4.25.0",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1347,7 +1347,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/sentiment@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/sentiment@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1396,7 +1396,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/similarity@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/similarity@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1445,7 +1445,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40nlpjs/slot@4.26.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Faxa-group%2Fnlp.js.git",
+      "purl": "pkg:npm/%40nlpjs/slot@4.26.1",
       "externalReferences": [
         {
           "url": "https://github.com/axa-group/nlp.js/issues",
@@ -1494,7 +1494,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40noble/curves@1.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fnoble-curves.git",
+      "purl": "pkg:npm/%40noble/curves@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/noble-curves/issues",
@@ -1543,7 +1543,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40noble/curves@1.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fnoble-curves.git",
+      "purl": "pkg:npm/%40noble/curves@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/noble-curves/issues",
@@ -1592,7 +1592,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40noble/hashes@1.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fnoble-hashes.git",
+      "purl": "pkg:npm/%40noble/hashes@1.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/noble-hashes/issues",
@@ -1641,7 +1641,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40noble/hashes@1.3.3?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fnoble-hashes.git",
+      "purl": "pkg:npm/%40noble/hashes@1.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/noble-hashes/issues",
@@ -1690,7 +1690,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/agent@2.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git",
+      "purl": "pkg:npm/%40npmcli/agent@2.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/npm/agent/issues",
@@ -1758,7 +1758,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/fs@3.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git",
+      "purl": "pkg:npm/%40npmcli/fs@3.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs/issues",
@@ -1806,7 +1806,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40npmcli/move-file@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fmove-file",
+      "purl": "pkg:npm/%40npmcli/move-file@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/move-file/issues",
@@ -2148,7 +2148,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40scure/base@1.1.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpaulmillr%2Fscure-base.git",
+      "purl": "pkg:npm/%40scure/base@1.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/scure-base/issues",
@@ -2197,7 +2197,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40scure/bip32@1.3.3?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fscure-bip32.git",
+      "purl": "pkg:npm/%40scure/bip32@1.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/scure-bip32/issues",
@@ -2246,7 +2246,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40scure/bip39@1.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpaulmillr%2Fscure-bip39.git",
+      "purl": "pkg:npm/%40scure/bip39@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/scure-bip39/issues",
@@ -2344,7 +2344,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40swc/helpers@0.3.17?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fswc-project%2Fswc.git",
+      "purl": "pkg:npm/%40swc/helpers@0.3.17",
       "externalReferences": [
         {
           "url": "https://github.com/swc-project/swc/issues",
@@ -2380,7 +2380,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40tokenizer/token@0.3.0?vcs_url=https%3A%2F%2Fgithub.com%2FBorewit%2Ftokenizer-token.git",
+      "purl": "pkg:npm/%40tokenizer/token@0.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/Borewit/tokenizer-token/issues",
@@ -2416,7 +2416,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40tootallnate/once@1.1.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fonce.git",
+      "purl": "pkg:npm/%40tootallnate/once@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/once/issues",
@@ -2452,7 +2452,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40tootallnate/once@2.0.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fonce.git",
+      "purl": "pkg:npm/%40tootallnate/once@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/once/issues",
@@ -2500,7 +2500,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/component-emitter@1.2.14?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fcomponent-emitter",
+      "purl": "pkg:npm/%40types/component-emitter@1.2.14",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2548,7 +2548,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/cookie@0.4.1?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fcookie",
+      "purl": "pkg:npm/%40types/cookie@0.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2596,7 +2596,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/cors@2.8.17?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fcors",
+      "purl": "pkg:npm/%40types/cors@2.8.17",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2644,7 +2644,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/debug@4.1.12?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fdebug",
+      "purl": "pkg:npm/%40types/debug@4.1.12",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2692,7 +2692,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/keyv@3.1.4?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fkeyv",
+      "purl": "pkg:npm/%40types/keyv@3.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2740,7 +2740,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/ms@0.7.34?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fms",
+      "purl": "pkg:npm/%40types/ms@0.7.34",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2788,7 +2788,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@18.15.13?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fnode",
+      "purl": "pkg:npm/%40types/node@18.15.13",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2836,7 +2836,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/node@20.11.30?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fnode",
+      "purl": "pkg:npm/%40types/node@20.11.30",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2884,7 +2884,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/responselike@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fresponselike",
+      "purl": "pkg:npm/%40types/responselike@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2933,7 +2933,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/strip-bom@3.0.0?vcs_url=https%3A%2F%2Fwww.github.com%2FDefinitelyTyped%2FDefinitelyTyped.git",
+      "purl": "pkg:npm/%40types/strip-bom@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -2968,7 +2968,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/strip-json-comments@0.0.30?vcs_url=https%3A%2F%2Fwww.github.com%2FDefinitelyTyped%2FDefinitelyTyped.git",
+      "purl": "pkg:npm/%40types/strip-json-comments@0.0.30",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -3016,7 +3016,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/triple-beam@1.3.5?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Ftriple-beam",
+      "purl": "pkg:npm/%40types/triple-beam@1.3.5",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -3064,7 +3064,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/validator@13.11.9?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fvalidator",
+      "purl": "pkg:npm/%40types/validator@13.11.9",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -3112,7 +3112,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40types/ws@8.5.3?vcs_url=https%3A%2F%2Fgithub.com%2FDefinitelyTyped%2FDefinitelyTyped.git%23types%2Fws",
+      "purl": "pkg:npm/%40types/ws@8.5.3",
       "externalReferences": [
         {
           "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
@@ -3208,7 +3208,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/abbrev@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git",
+      "purl": "pkg:npm/abbrev@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/abbrev-js/issues",
@@ -3349,7 +3349,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/acorn-walk@8.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Facornjs%2Facorn.git",
+      "purl": "pkg:npm/acorn-walk@8.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/acornjs/acorn/issues",
@@ -3396,7 +3396,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/acorn@7.4.1?vcs_url=https%3A%2F%2Fgithub.com%2Facornjs%2Facorn.git",
+      "purl": "pkg:npm/acorn@7.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/acornjs/acorn/issues",
@@ -3443,7 +3443,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/acorn@8.11.3?vcs_url=https%3A%2F%2Fgithub.com%2Facornjs%2Facorn.git",
+      "purl": "pkg:npm/acorn@8.11.3",
       "externalReferences": [
         {
           "url": "https://github.com/acornjs/acorn/issues",
@@ -3491,7 +3491,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aes-js@4.0.0-beta.5?vcs_url=git%3A%2F%2Fgithub.com%2Fricmoo%2Faes-js.git",
+      "purl": "pkg:npm/aes-js@4.0.0-beta.5",
       "externalReferences": [
         {
           "url": "http://github.com/ricmoo/aes-js/issues",
@@ -3539,7 +3539,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@6.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-agent-base.git",
+      "purl": "pkg:npm/agent-base@6.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-agent-base/issues",
@@ -3574,7 +3574,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/agent-base@7.1.0?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fagent-base",
+      "purl": "pkg:npm/agent-base@7.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -3609,7 +3609,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/agentkeepalive@4.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnode-modules%2Fagentkeepalive.git",
+      "purl": "pkg:npm/agentkeepalive@4.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/node-modules/agentkeepalive/issues",
@@ -3705,7 +3705,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ajv@6.12.6?vcs_url=https%3A%2F%2Fgithub.com%2Fajv-validator%2Fajv.git",
+      "purl": "pkg:npm/ajv@6.12.6",
       "externalReferences": [
         {
           "url": "https://github.com/ajv-validator/ajv/issues",
@@ -4137,7 +4137,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/anymatch@3.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Fmicromatch%2Fanymatch",
+      "purl": "pkg:npm/anymatch@3.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/micromatch/anymatch/issues",
@@ -4184,7 +4184,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/append-field@1.0.0?vcs_url=http%3A%2F%2Fgithub.com%2FLinusU%2Fnode-append-field.git",
+      "purl": "pkg:npm/append-field@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/LinusU/node-append-field/issues",
@@ -4232,7 +4232,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aproba@1.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Faproba",
+      "purl": "pkg:npm/aproba@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/aproba/issues",
@@ -4280,7 +4280,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aproba@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Faproba",
+      "purl": "pkg:npm/aproba@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/aproba/issues",
@@ -4376,7 +4376,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/archiver-utils@1.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Farchiverjs%2Farchiver-utils.git",
+      "purl": "pkg:npm/archiver-utils@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/archiverjs/archiver-utils/issues",
@@ -4424,7 +4424,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/archiver@1.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Farchiverjs%2Fnode-archiver.git",
+      "purl": "pkg:npm/archiver@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/archiverjs/node-archiver/issues",
@@ -4472,7 +4472,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/are-we-there-yet@1.1.7?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fare-we-there-yet.git",
+      "purl": "pkg:npm/are-we-there-yet@1.1.7",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/are-we-there-yet/issues",
@@ -4520,7 +4520,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/are-we-there-yet@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git",
+      "purl": "pkg:npm/are-we-there-yet@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/are-we-there-yet/issues",
@@ -4568,7 +4568,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/are-we-there-yet@3.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git",
+      "purl": "pkg:npm/are-we-there-yet@3.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/npm/are-we-there-yet/issues",
@@ -4855,7 +4855,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/array-buffer-byte-length@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Farray-buffer-byte-length.git",
+      "purl": "pkg:npm/array-buffer-byte-length@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/array-buffer-byte-length/issues",
@@ -4951,7 +4951,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/array-flatten@1.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Fblakeembrey%2Farray-flatten.git",
+      "purl": "pkg:npm/array-flatten@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/blakeembrey/array-flatten/issues",
@@ -5094,7 +5094,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/asap@2.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fkriskowal%2Fasap.git",
+      "purl": "pkg:npm/asap@2.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/kriskowal/asap/issues",
@@ -5142,7 +5142,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/asn1@0.2.6?vcs_url=https%3A%2F%2Fgithub.com%2Fjoyent%2Fnode-asn1.git",
+      "purl": "pkg:npm/asn1@0.2.6",
       "externalReferences": [
         {
           "url": "https://github.com/joyent/node-asn1/issues",
@@ -5225,7 +5225,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/assert-plus@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmcavage%2Fnode-assert-plus.git",
+      "purl": "pkg:npm/assert-plus@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/mcavage/node-assert-plus/issues",
@@ -5308,7 +5308,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/async@2.6.4?vcs_url=https%3A%2F%2Fgithub.com%2Fcaolan%2Fasync.git",
+      "purl": "pkg:npm/async@2.6.4",
       "externalReferences": [
         {
           "url": "https://github.com/caolan/async/issues",
@@ -5356,7 +5356,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/async@3.2.5?vcs_url=https%3A%2F%2Fgithub.com%2Fcaolan%2Fasync.git",
+      "purl": "pkg:npm/async@3.2.5",
       "externalReferences": [
         {
           "url": "https://github.com/caolan/async/issues",
@@ -5404,7 +5404,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/asynckit@0.4.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Falexindigo%2Fasynckit.git",
+      "purl": "pkg:npm/asynckit@0.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/alexindigo/asynckit/issues",
@@ -5452,7 +5452,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/at-least-node@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FRyanZim%2Fat-least-node.git",
+      "purl": "pkg:npm/at-least-node@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/RyanZim/at-least-node/issues",
@@ -5498,7 +5498,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/atob@2.1.2?vcs_url=git%3A%2F%2Fgit.coolaj86.com%2Fcoolaj86%2Fatob.js.git",
+      "purl": "pkg:npm/atob@2.1.2",
       "externalReferences": [
         {
           "url": "git://git.coolaj86.com/coolaj86/atob.js.git",
@@ -5541,7 +5541,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/available-typed-arrays@1.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Favailable-typed-arrays.git",
+      "purl": "pkg:npm/available-typed-arrays@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/available-typed-arrays/issues",
@@ -5589,7 +5589,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/aws-sign2@0.7.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmikeal%2Faws-sign",
+      "purl": "pkg:npm/aws-sign2@0.7.0",
       "externalReferences": [
         {
           "url": "https://github.com/mikeal/aws-sign/issues",
@@ -5685,7 +5685,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/babel-walk@3.0.0-canary-5?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fbabel-walk.git",
+      "purl": "pkg:npm/babel-walk@3.0.0-canary-5",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/babel-walk/issues",
@@ -5733,7 +5733,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/balanced-match@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbalanced-match.git",
+      "purl": "pkg:npm/balanced-match@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/balanced-match/issues",
@@ -5830,7 +5830,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64-arraybuffer@0.1.4?vcs_url=https%3A%2F%2Fgithub.com%2Fniklasvh%2Fbase64-arraybuffer",
+      "purl": "pkg:npm/base64-arraybuffer@0.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/niklasvh/base64-arraybuffer/issues",
@@ -5878,7 +5878,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@0.0.8?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
+      "purl": "pkg:npm/base64-js@0.0.8",
       "externalReferences": [
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
@@ -5926,7 +5926,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
+      "purl": "pkg:npm/base64-js@1.5.1",
       "externalReferences": [
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
@@ -5974,7 +5974,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64id@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Ffaeldt%2Fbase64id.git",
+      "purl": "pkg:npm/base64id@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/faeldt/base64id/issues",
@@ -6022,7 +6022,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/base64url@0.0.6?vcs_url=git%3A%2F%2Fgithub.com%2Fbrianloveswords%2Fbase64url.git",
+      "purl": "pkg:npm/base64url@0.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/brianloveswords/base64url/issues",
@@ -6117,7 +6117,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/batch@0.6.1?vcs_url=https%3A%2F%2Fgithub.com%2Fvisionmedia%2Fbatch.git",
+      "purl": "pkg:npm/batch@0.6.1",
       "externalReferences": [
         {
           "url": "https://github.com/visionmedia/batch/issues",
@@ -6164,7 +6164,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bcrypt-pbkdf@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fjoyent%2Fnode-bcrypt-pbkdf.git",
+      "purl": "pkg:npm/bcrypt-pbkdf@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/joyent/node-bcrypt-pbkdf/issues",
@@ -6308,7 +6308,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/binary@0.3.0?vcs_url=http%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-binary.git",
+      "purl": "pkg:npm/binary@0.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-binary/issues",
@@ -6343,7 +6343,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bindings@1.5.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-bindings.git",
+      "purl": "pkg:npm/bindings@1.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-bindings/issues",
@@ -6391,7 +6391,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bintrees@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fvadimg%2Fjs_bintrees.git",
+      "purl": "pkg:npm/bintrees@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/vadimg/js_bintrees/issues",
@@ -6438,7 +6438,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@1.2.3?vcs_url=https%3A%2F%2Fgithub.com%2Frvagg%2Fbl.git",
+      "purl": "pkg:npm/bl@1.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/bl/issues",
@@ -6485,7 +6485,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bl@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Frvagg%2Fbl.git",
+      "purl": "pkg:npm/bl@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/bl/issues",
@@ -6533,7 +6533,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bluebird@3.4.7?vcs_url=git%3A%2F%2Fgithub.com%2Fpetkaantonov%2Fbluebird.git",
+      "purl": "pkg:npm/bluebird@3.4.7",
       "externalReferences": [
         {
           "url": "http://github.com/petkaantonov/bluebird/issues",
@@ -6581,7 +6581,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bluebird@3.7.2?vcs_url=git%3A%2F%2Fgithub.com%2Fpetkaantonov%2Fbluebird.git",
+      "purl": "pkg:npm/bluebird@3.7.2",
       "externalReferences": [
         {
           "url": "http://github.com/petkaantonov/bluebird/issues",
@@ -6724,7 +6724,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/brace-expansion@1.1.11?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbrace-expansion.git",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/brace-expansion/issues",
@@ -6772,7 +6772,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbrace-expansion.git",
+      "purl": "pkg:npm/brace-expansion@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/brace-expansion/issues",
@@ -6916,7 +6916,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/brotli@1.3.3?vcs_url=https%3A%2F%2Fgithub.com%2Fdevongovett%2Fbrotli.js.git",
+      "purl": "pkg:npm/brotli@1.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/brotli.js/issues",
@@ -7024,7 +7024,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/buffer-crc32@0.2.13?vcs_url=git%3A%2F%2Fgithub.com%2Fbrianloveswords%2Fbuffer-crc32.git",
+      "purl": "pkg:npm/buffer-crc32@0.2.13",
       "externalReferences": [
         {
           "url": "https://github.com/brianloveswords/buffer-crc32/issues",
@@ -7151,7 +7151,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/buffer-indexof-polyfill@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsarosia%2Fbuffer-indexof-polyfill.git",
+      "purl": "pkg:npm/buffer-indexof-polyfill@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/sarosia/buffer-indexof-polyfill/issues",
@@ -7199,7 +7199,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/buffer@5.7.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
+      "purl": "pkg:npm/buffer@5.7.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/buffer/issues",
@@ -7275,7 +7275,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/busboy@1.6.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmscdex%2Fbusboy.git",
+      "purl": "pkg:npm/busboy@1.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/mscdex/busboy/issues",
@@ -7323,7 +7323,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/byline@4.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjahewson%2Fnode-byline",
+      "purl": "pkg:npm/byline@4.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/jahewson/node-byline/issues",
@@ -7514,7 +7514,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacache@18.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git",
+      "purl": "pkg:npm/cacache@18.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/cacache/issues",
@@ -7610,7 +7610,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cacheable-request@2.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flukechilds%2Fcacheable-request.git",
+      "purl": "pkg:npm/cacheable-request@2.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/lukechilds/cacheable-request/issues",
@@ -7658,7 +7658,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/call-bind@1.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fcall-bind.git",
+      "purl": "pkg:npm/call-bind@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/call-bind/issues",
@@ -7754,7 +7754,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/caseless@0.12.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmikeal%2Fcaseless",
+      "purl": "pkg:npm/caseless@0.12.0",
       "externalReferences": [
         {
           "url": "https://github.com/mikeal/caseless/issues",
@@ -7802,7 +7802,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chainsaw@0.1.0?vcs_url=http%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-chainsaw.git",
+      "purl": "pkg:npm/chainsaw@0.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-chainsaw/issues",
@@ -7978,7 +7978,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/character-parser@2.2.0?vcs_url=https%3A%2F%2Fgithub.com%2FForbesLindesay%2Fcharacter-parser.git",
+      "purl": "pkg:npm/character-parser@2.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/ForbesLindesay/character-parser/issues",
@@ -8026,7 +8026,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/check-dependencies@1.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmgol%2Fcheck-dependencies.git",
+      "purl": "pkg:npm/check-dependencies@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/mgol/check-dependencies/issues",
@@ -8122,7 +8122,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/check-types@6.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fphilbooth%2Fcheck-types.js.git",
+      "purl": "pkg:npm/check-types@6.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/philbooth/check-types.js/issues",
@@ -8157,7 +8157,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chokidar@3.6.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpaulmillr%2Fchokidar.git",
+      "purl": "pkg:npm/chokidar@3.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/chokidar/issues",
@@ -8205,7 +8205,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chownr@1.1.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fchownr.git",
+      "purl": "pkg:npm/chownr@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/chownr/issues",
@@ -8253,7 +8253,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/chownr@2.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fchownr.git",
+      "purl": "pkg:npm/chownr@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/chownr/issues",
@@ -8301,7 +8301,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/clarinet@0.12.6?vcs_url=http%3A%2F%2Fgithub.com%2Fdscape%2Fclarinet.git",
+      "purl": "pkg:npm/clarinet@0.12.6",
       "externalReferences": [
         {
           "url": "http://github.com/dscape/clarinet/issues",
@@ -8445,7 +8445,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cliui@5.0.0?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git",
+      "purl": "pkg:npm/cliui@5.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/cliui/issues",
@@ -8493,7 +8493,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cliui@6.0.0?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git",
+      "purl": "pkg:npm/cliui@6.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/cliui/issues",
@@ -8541,7 +8541,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/clone-response@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flukechilds%2Fclone-response.git",
+      "purl": "pkg:npm/clone-response@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/lukechilds/clone-response/issues",
@@ -8589,7 +8589,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/clone@2.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Fpvorb%2Fnode-clone.git",
+      "purl": "pkg:npm/clone@2.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/pvorb/node-clone/issues",
@@ -8973,7 +8973,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/color-support@1.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fcolor-support.git",
+      "purl": "pkg:npm/color-support@1.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/color-support/issues",
@@ -9068,7 +9068,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/colors@1.1.2?vcs_url=http%3A%2F%2Fgithub.com%2FMarak%2Fcolors.js.git",
+      "purl": "pkg:npm/colors@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/Marak/colors.js/issues",
@@ -9116,7 +9116,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/colors@1.4.0?vcs_url=http%3A%2F%2Fgithub.com%2FMarak%2Fcolors.js.git",
+      "purl": "pkg:npm/colors@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/Marak/colors.js/issues",
@@ -9164,7 +9164,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/colorspace@1.1.4?vcs_url=https%3A%2F%2Fgithub.com%2F3rd-Eden%2Fcolorspace",
+      "purl": "pkg:npm/colorspace@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/colorspace/issues",
@@ -9212,7 +9212,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/combined-stream@1.0.8?vcs_url=git%3A%2F%2Fgithub.com%2Ffelixge%2Fnode-combined-stream.git",
+      "purl": "pkg:npm/combined-stream@1.0.8",
       "externalReferences": [
         {
           "url": "https://github.com/felixge/node-combined-stream/issues",
@@ -9260,7 +9260,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/commander@2.20.3?vcs_url=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git",
+      "purl": "pkg:npm/commander@2.20.3",
       "externalReferences": [
         {
           "url": "https://github.com/tj/commander.js/issues",
@@ -9307,7 +9307,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/component-emitter@1.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fsindresorhus%2Fcomponent-emitter.git",
+      "purl": "pkg:npm/component-emitter@1.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/sindresorhus/component-emitter/issues",
@@ -9354,7 +9354,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/component-type@1.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fcomponent%2Ftype.git",
+      "purl": "pkg:npm/component-type@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/component/type/issues",
@@ -9389,7 +9389,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/compress-commons@1.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Farchiverjs%2Fnode-compress-commons.git",
+      "purl": "pkg:npm/compress-commons@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/archiverjs/node-compress-commons/issues",
@@ -9531,7 +9531,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/concat-map@0.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-concat-map.git",
+      "purl": "pkg:npm/concat-map@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-concat-map/issues",
@@ -9579,7 +9579,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/concat-stream@1.6.2?vcs_url=http%3A%2F%2Fgithub.com%2Fmaxogden%2Fconcat-stream.git",
+      "purl": "pkg:npm/concat-stream@1.6.2",
       "externalReferences": [
         {
           "url": "http://github.com/maxogden/concat-stream/issues",
@@ -9627,7 +9627,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/concurrently@5.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Fkimmobrunfeldt%2Fconcurrently.git",
+      "purl": "pkg:npm/concurrently@5.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/kimmobrunfeldt/concurrently/issues",
@@ -9675,7 +9675,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/config@3.3.11?vcs_url=http%3A%2F%2Fgithub.com%2Fnode-config%2Fnode-config.git",
+      "purl": "pkg:npm/config@3.3.11",
       "externalReferences": [
         {
           "url": "https://github.com/node-config/node-config/issues",
@@ -9723,7 +9723,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/console-control-strings@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings",
+      "purl": "pkg:npm/console-control-strings@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/console-control-strings/issues",
@@ -9771,7 +9771,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/constantinople@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2FForbesLindesay%2Fconstantinople.git",
+      "purl": "pkg:npm/constantinople@4.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/ForbesLindesay/constantinople/issues",
@@ -9963,7 +9963,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cookie-signature@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fvisionmedia%2Fnode-cookie-signature.git",
+      "purl": "pkg:npm/cookie-signature@1.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/visionmedia/node-cookie-signature/issues",
@@ -10190,7 +10190,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/core-util-is@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fcore-util-is",
+      "purl": "pkg:npm/core-util-is@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/core-util-is/issues",
@@ -10238,7 +10238,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/core-util-is@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fcore-util-is",
+      "purl": "pkg:npm/core-util-is@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/core-util-is/issues",
@@ -10334,7 +10334,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/crc-32@1.2.2?vcs_url=git%3A%2F%2Fgithub.com%2FSheetJS%2Fjs-crc32.git",
+      "purl": "pkg:npm/crc-32@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/SheetJS/js-crc32/issues",
@@ -10382,7 +10382,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/crc@3.8.0?vcs_url=git%3A%2F%2Fgithub.com%2Falexgorbatchev%2Fnode-crc.git",
+      "purl": "pkg:npm/crc@3.8.0",
       "externalReferences": [
         {
           "url": "https://github.com/alexgorbatchev/node-crc/issues",
@@ -10430,7 +10430,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/crc32-stream@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Farchiverjs%2Fnode-crc32-stream.git",
+      "purl": "pkg:npm/crc32-stream@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/archiverjs/node-crc32-stream/issues",
@@ -10525,7 +10525,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/cross-fetch@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Flquixada%2Fcross-fetch.git",
+      "purl": "pkg:npm/cross-fetch@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/lquixada/cross-fetch/issues",
@@ -10621,7 +10621,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/crypto-js@3.3.0?vcs_url=http%3A%2F%2Fgithub.com%2Fbrix%2Fcrypto-js.git",
+      "purl": "pkg:npm/crypto-js@3.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/brix/crypto-js/issues",
@@ -10669,7 +10669,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/dashdash@1.14.1?vcs_url=git%3A%2F%2Fgithub.com%2Ftrentm%2Fnode-dashdash.git",
+      "purl": "pkg:npm/dashdash@1.14.1",
       "externalReferences": [
         {
           "url": "https://github.com/trentm/node-dashdash/issues",
@@ -10764,7 +10764,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/dateformat@4.6.3?vcs_url=https%3A%2F%2Fgithub.com%2Ffelixge%2Fnode-dateformat.git",
+      "purl": "pkg:npm/dateformat@4.6.3",
       "externalReferences": [
         {
           "url": "https://github.com/felixge/node-dateformat/issues",
@@ -11435,7 +11435,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/deep-equal@2.2.3?vcs_url=http%3A%2F%2Fgithub.com%2Finspect-js%2Fnode-deep-equal.git",
+      "purl": "pkg:npm/deep-equal@2.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/node-deep-equal/issues",
@@ -11490,7 +11490,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/deep-extend@0.6.0?vcs_url=git%3A%2F%2Fgithub.com%2Funclechu%2Fnode-deep-extend.git",
+      "purl": "pkg:npm/deep-extend@0.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/unclechu/node-deep-extend/issues",
@@ -11538,7 +11538,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/define-data-property@1.1.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fdefine-data-property.git",
+      "purl": "pkg:npm/define-data-property@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/define-data-property/issues",
@@ -11586,7 +11586,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/define-properties@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fdefine-properties.git",
+      "purl": "pkg:npm/define-properties@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/define-properties/issues",
@@ -11778,7 +11778,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/delayed-stream@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Ffelixge%2Fnode-delayed-stream.git",
+      "purl": "pkg:npm/delayed-stream@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/felixge/node-delayed-stream/issues",
@@ -12065,7 +12065,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc",
+      "purl": "pkg:npm/detect-libc@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/lovell/detect-libc/issues",
@@ -12113,7 +12113,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/detect-libc@2.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc",
+      "purl": "pkg:npm/detect-libc@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/lovell/detect-libc/issues",
@@ -12161,7 +12161,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/dfa@1.2.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fdevongovett%2Fdfa.git",
+      "purl": "pkg:npm/dfa@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/dfa/issues",
@@ -12195,7 +12195,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/diff@4.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fkpdecker%2Fjsdiff.git",
+      "purl": "pkg:npm/diff@4.0.2",
       "externalReferences": [
         {
           "url": "http://github.com/kpdecker/jsdiff/issues",
@@ -12243,7 +12243,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/doctypes@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fdoctypes.git",
+      "purl": "pkg:npm/doctypes@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/doctypes/issues",
@@ -12291,7 +12291,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/domelementtype@1.3.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffb55%2Fdomelementtype.git",
+      "purl": "pkg:npm/domelementtype@1.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/fb55/domelementtype/issues",
@@ -12331,7 +12331,7 @@
       "bom-ref": "domhandler@npm:2.1.0",
       "author": "Felix Boehm",
       "description": "handler for htmlparser2 that turns pages into a dom",
-      "purl": "pkg:npm/domhandler@2.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Ffb55%2Fdomhandler.git",
+      "purl": "pkg:npm/domhandler@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/fb55/domhandler/issues",
@@ -12371,7 +12371,7 @@
       "bom-ref": "domutils@npm:1.1.6",
       "author": "Felix Boehm",
       "description": "utilities for working with htmlparser2's dom",
-      "purl": "pkg:npm/domutils@1.1.6?vcs_url=git%3A%2F%2Fgithub.com%2FFB55%2Fdomutils.git",
+      "purl": "pkg:npm/domutils@1.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/FB55/domutils/issues",
@@ -12419,7 +12419,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/dottie@2.0.6?vcs_url=git%3A%2F%2Fgithub.com%2Fmickhansen%2Fdottie.js.git",
+      "purl": "pkg:npm/dottie@2.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/mickhansen/dottie.js/issues",
@@ -12467,7 +12467,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/double-ended-queue@0.9.7?vcs_url=git%3A%2F%2Fgithub.com%2Fpetkaantonov%2Fdeque.git",
+      "purl": "pkg:npm/double-ended-queue@0.9.7",
       "externalReferences": [
         {
           "url": "http://github.com/petkaantonov/deque/issues",
@@ -12650,7 +12650,7 @@
       "bom-ref": "dynamic-dedupe@npm:0.3.0",
       "author": "Thorsten Lorenz",
       "description": "Dedupes node modules as they are being required  which works even when dependencies are linked via ln -s or npm link.",
-      "purl": "pkg:npm/dynamic-dedupe@0.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fthlorenz%2Fdynamic-dedupe.git",
+      "purl": "pkg:npm/dynamic-dedupe@0.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/thlorenz/dynamic-dedupe/issues",
@@ -12733,7 +12733,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ecc-jsbn@0.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fquartzjer%2Fecc-jsbn.git",
+      "purl": "pkg:npm/ecc-jsbn@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/quartzjer/ecc-jsbn/issues",
@@ -12828,7 +12828,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/eivindfjeldstad-dot@0.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Feivindfjeldstad%2Fdot.git",
+      "purl": "pkg:npm/eivindfjeldstad-dot@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/eivindfjeldstad/dot/issues",
@@ -12863,7 +12863,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@7.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@7.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -12911,7 +12911,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -12959,7 +12959,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git",
+      "purl": "pkg:npm/emoji-regex@9.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/emoji-regex/issues",
@@ -13007,7 +13007,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/enabled@2.0.0?vcs_url=git%3A%2F%2Fgithub.com%2F3rd-Eden%2Fenabled.git",
+      "purl": "pkg:npm/enabled@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/enabled/issues",
@@ -13150,7 +13150,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/end-of-stream@1.4.4?vcs_url=git%3A%2F%2Fgithub.com%2Fmafintosh%2Fend-of-stream.git",
+      "purl": "pkg:npm/end-of-stream@1.4.4",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/end-of-stream/issues",
@@ -13341,7 +13341,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/err-code@1.1.2?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fjs-err-code.git",
+      "purl": "pkg:npm/err-code@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/IndigoUnited/js-err-code/issues/",
@@ -13376,7 +13376,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/err-code@2.0.3?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fjs-err-code.git",
+      "purl": "pkg:npm/err-code@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/IndigoUnited/js-err-code/issues/",
@@ -13505,7 +13505,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/es-define-property@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fes-define-property.git",
+      "purl": "pkg:npm/es-define-property@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/es-define-property/issues",
@@ -13553,7 +13553,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/es-errors@1.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fes-errors.git",
+      "purl": "pkg:npm/es-errors@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/es-errors/issues",
@@ -13601,7 +13601,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/es-get-iterator@1.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fes-get-iterator.git",
+      "purl": "pkg:npm/es-get-iterator@1.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/es-get-iterator/issues",
@@ -13743,7 +13743,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/escodegen@2.1.0?vcs_url=http%3A%2F%2Fgithub.com%2Festools%2Fescodegen.git",
+      "purl": "pkg:npm/escodegen@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/estools/escodegen/issues",
@@ -13791,7 +13791,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/esprima@1.0.4?vcs_url=http%3A%2F%2Fgithub.com%2Fariya%2Fesprima.git",
+      "purl": "pkg:npm/esprima@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/ariya/esprima/issues",
@@ -13826,7 +13826,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
+      "purl": "pkg:npm/esprima@4.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/jquery/esprima/issues",
@@ -13873,7 +13873,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/estraverse@5.3.0?vcs_url=http%3A%2F%2Fgithub.com%2Festools%2Festraverse.git",
+      "purl": "pkg:npm/estraverse@5.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/estools/estraverse/issues",
@@ -13920,7 +13920,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/esutils@2.0.3?vcs_url=http%3A%2F%2Fgithub.com%2Festools%2Fesutils.git",
+      "purl": "pkg:npm/esutils@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/estools/esutils/issues",
@@ -14062,7 +14062,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ethers@6.11.1?vcs_url=git%3A%2F%2Fgithub.com%2Fethers-io%2Fethers.js.git",
+      "purl": "pkg:npm/ethers@6.11.1",
       "externalReferences": [
         {
           "url": "https://github.com/ethers-io/ethers.js/issues",
@@ -14145,7 +14145,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/eventemitter3@1.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Fprimus%2Feventemitter3.git",
+      "purl": "pkg:npm/eventemitter3@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/primus/eventemitter3/issues",
@@ -14193,7 +14193,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/eventemitter3@5.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fprimus%2Feventemitter3.git",
+      "purl": "pkg:npm/eventemitter3@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/primus/eventemitter3/issues",
@@ -14232,7 +14232,7 @@
       "version": "0.6.0",
       "bom-ref": "exif@npm:0.6.0",
       "description": "A node.js library to extract Exif metadata from images.",
-      "purl": "pkg:npm/exif@0.6.0?vcs_url=http%3A%2F%2Fgithub.com%2Fgomfunkel%2Fnode-exif.git",
+      "purl": "pkg:npm/exif@0.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/gomfunkel/node-exif/issues",
@@ -14281,7 +14281,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/exit@0.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Fcowboy%2Fnode-exit.git",
+      "purl": "pkg:npm/exit@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/cowboy/node-exit/issues",
@@ -14375,7 +14375,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/expand-template@2.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fralphtheninja%2Fexpand-template.git",
+      "purl": "pkg:npm/expand-template@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/ralphtheninja/expand-template/issues",
@@ -14471,7 +14471,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fcoveo%2Fexponential-backoff.git",
+      "purl": "pkg:npm/exponential-backoff@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/coveo/exponential-backoff/issues",
@@ -14568,7 +14568,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/express-jwt@0.1.3?vcs_url=git%3A%2F%2Fgithub.com%2Fauth0%2Fexpress-jwt.git",
+      "purl": "pkg:npm/express-jwt@0.1.3",
       "externalReferences": [
         {
           "url": "http://github.com/auth0/express-jwt/issues",
@@ -14684,7 +14684,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/express-security.txt@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fgergelyke%2Fexpress-security.txt.git",
+      "purl": "pkg:npm/express-security.txt@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/gergelyke/express-security.txt/issues",
@@ -14959,7 +14959,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/extend@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git",
+      "purl": "pkg:npm/extend@3.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/justmoon/node-extend/issues",
@@ -15054,7 +15054,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/extsprintf@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fdavepacheco%2Fnode-extsprintf.git",
+      "purl": "pkg:npm/extsprintf@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/davepacheco/node-extsprintf/issues",
@@ -15101,7 +15101,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/extsprintf@1.4.1?vcs_url=https%3A%2F%2Fgithub.com%2Fdavepacheco%2Fnode-extsprintf.git",
+      "purl": "pkg:npm/extsprintf@1.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/davepacheco/node-extsprintf/issues",
@@ -15149,7 +15149,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast-deep-equal@3.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fepoberezkin%2Ffast-deep-equal.git",
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/epoberezkin/fast-deep-equal/issues",
@@ -15197,7 +15197,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast-json-stable-stringify@2.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fepoberezkin%2Ffast-json-stable-stringify.git",
+      "purl": "pkg:npm/fast-json-stable-stringify@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/epoberezkin/fast-json-stable-stringify/issues",
@@ -15245,7 +15245,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fast.js@0.1.1?vcs_url=http%3A%2F%2Fgithub.com%2Fcodemix%2Ffast.js",
+      "purl": "pkg:npm/fast.js@0.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/codemix/fast.js/issues",
@@ -15293,7 +15293,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fd-slicer@1.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fandrewrk%2Fnode-fd-slicer.git",
+      "purl": "pkg:npm/fd-slicer@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/andrewrk/node-fd-slicer/issues",
@@ -15341,7 +15341,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/feature-policy@0.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fhelmetjs%2Ffeature-policy.git",
+      "purl": "pkg:npm/feature-policy@0.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/helmetjs/feature-policy/issues",
@@ -15389,7 +15389,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fecha@4.2.3?vcs_url=https%3A%2F%2Ftaylorhakes%40github.com%2Ftaylorhakes%2Ffecha.git",
+      "purl": "pkg:npm/fecha@4.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/taylorhakes/fecha/issues",
@@ -15437,7 +15437,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/file-js@0.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnspragg%2Ffile-js.git",
+      "purl": "pkg:npm/file-js@0.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/nspragg/file-js/issues",
@@ -15485,7 +15485,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/file-stream-rotator@0.5.7?vcs_url=git%3A%2F%2Fgithub.com%2Frogerc%2Ffile-stream-rotator.git",
+      "purl": "pkg:npm/file-stream-rotator@0.5.7",
       "externalReferences": [
         {
           "url": "https://github.com/rogerc/file-stream-rotator/issues",
@@ -15808,7 +15808,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/file-uri-to-path@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Ffile-uri-to-path.git",
+      "purl": "pkg:npm/file-uri-to-path@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/file-uri-to-path/issues",
@@ -15855,7 +15855,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/filehound@1.17.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnspragg%2Ffilehound.git",
+      "purl": "pkg:npm/filehound@1.17.6",
       "externalReferences": [
         {
           "url": "https://github.com/nspragg/filehound/issues",
@@ -15998,7 +15998,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/filesniffer@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnspragg%2Ffilesniffer.git",
+      "purl": "pkg:npm/filesniffer@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/nspragg/filesniffer/issues",
@@ -16129,7 +16129,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/finale-rest@1.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Ftommybananas%2Ffinale.git",
+      "purl": "pkg:npm/finale-rest@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/tommybananas/finale/issues",
@@ -16535,7 +16535,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fn.name@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2F3rd-Eden%2Ffn.name",
+      "purl": "pkg:npm/fn.name@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/fn.name/issues",
@@ -16583,7 +16583,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fontkit@1.9.0?vcs_url=git%3A%2F%2Fgithub.com%2Ffoliojs%2Ffontkit.git",
+      "purl": "pkg:npm/fontkit@1.9.0",
       "externalReferences": [
         {
           "url": "https://github.com/foliojs/fontkit/issues",
@@ -16769,7 +16769,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/foreachasync@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2FFuturesJS%2FforEachAsync.git",
+      "purl": "pkg:npm/foreachasync@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/FuturesJS/forEachAsync/issues",
@@ -16817,7 +16817,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/foreground-child@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fforeground-child.git",
+      "purl": "pkg:npm/foreground-child@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/foreground-child/issues",
@@ -16865,7 +16865,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/forever-agent@0.6.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmikeal%2Fforever-agent",
+      "purl": "pkg:npm/forever-agent@0.6.1",
       "externalReferences": [
         {
           "url": "https://github.com/mikeal/forever-agent/issues",
@@ -16913,7 +16913,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/form-data@2.3.3?vcs_url=git%3A%2F%2Fgithub.com%2Fform-data%2Fform-data.git",
+      "purl": "pkg:npm/form-data@2.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/form-data/form-data/issues",
@@ -16953,7 +16953,7 @@
       "bom-ref": "formatio@npm:1.1.1",
       "author": "Christian Johansen",
       "description": "Human-readable object formatting",
-      "purl": "pkg:npm/formatio@1.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fbusterjs%2Fformatio.git",
+      "purl": "pkg:npm/formatio@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/busterjs/formatio/issues",
@@ -17144,7 +17144,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/from2@2.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fhughsk%2Ffrom2",
+      "purl": "pkg:npm/from2@2.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/hughsk/from2/issues",
@@ -17192,7 +17192,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-constants@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmafintosh%2Ffs-constants.git",
+      "purl": "pkg:npm/fs-constants@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/fs-constants/issues",
@@ -17240,7 +17240,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-extra@9.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fjprichardson%2Fnode-fs-extra",
+      "purl": "pkg:npm/fs-extra@9.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/jprichardson/node-fs-extra/issues",
@@ -17288,7 +17288,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-minipass@1.2.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git",
+      "purl": "pkg:npm/fs-minipass@1.2.7",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs-minipass/issues",
@@ -17336,7 +17336,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git",
+      "purl": "pkg:npm/fs-minipass@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs-minipass/issues",
@@ -17384,7 +17384,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git",
+      "purl": "pkg:npm/fs-minipass@3.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fs-minipass/issues",
@@ -17432,7 +17432,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fs.realpath@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Ffs.realpath.git",
+      "purl": "pkg:npm/fs.realpath@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/fs.realpath/issues",
@@ -17527,7 +17527,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fstream@1.0.12?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffstream.git",
+      "purl": "pkg:npm/fstream@1.0.12",
       "externalReferences": [
         {
           "url": "https://github.com/npm/fstream/issues",
@@ -17575,7 +17575,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/function-bind@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git",
+      "purl": "pkg:npm/function-bind@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/Raynos/function-bind/issues",
@@ -17623,7 +17623,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/functions-have-names@1.2.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Ffunctions-have-names.git",
+      "purl": "pkg:npm/functions-have-names@1.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/functions-have-names/issues",
@@ -17671,7 +17671,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fuzzball@1.4.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnol13%2Ffuzzball.js.git",
+      "purl": "pkg:npm/fuzzball@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/nol13/fuzzball.js/issues",
@@ -17719,7 +17719,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gauge@2.7.4?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fgauge",
+      "purl": "pkg:npm/gauge@2.7.4",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/gauge/issues",
@@ -17767,7 +17767,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gauge@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fgauge",
+      "purl": "pkg:npm/gauge@3.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/gauge/issues",
@@ -17815,7 +17815,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gauge@4.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fgauge.git",
+      "purl": "pkg:npm/gauge@4.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/npm/gauge/issues",
@@ -17863,7 +17863,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/geojson-utils@1.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fmaxogden%2Fgeojson-js-utils.git",
+      "purl": "pkg:npm/geojson-utils@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/maxogden/geojson-js-utils/issues",
@@ -17910,7 +17910,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/get-caller-file@2.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fstefanpenner%2Fget-caller-file.git",
+      "purl": "pkg:npm/get-caller-file@2.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/stefanpenner/get-caller-file/issues",
@@ -17958,7 +17958,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/get-intrinsic@1.2.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fget-intrinsic.git",
+      "purl": "pkg:npm/get-intrinsic@1.2.4",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/get-intrinsic/issues",
@@ -18199,7 +18199,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/getobject@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fcowboy%2Fnode-getobject.git",
+      "purl": "pkg:npm/getobject@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/cowboy/node-getobject/issues",
@@ -18234,7 +18234,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/getpass@0.1.7?vcs_url=https%3A%2F%2Fgithub.com%2Farekinath%2Fnode-getpass.git",
+      "purl": "pkg:npm/getpass@0.1.7",
       "externalReferences": [
         {
           "url": "https://github.com/arekinath/node-getpass/issues",
@@ -18282,7 +18282,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/github-from-package@0.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fgithub-from-package.git",
+      "purl": "pkg:npm/github-from-package@0.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/substack/github-from-package/issues",
@@ -18378,7 +18378,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@10.3.10?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-glob.git",
+      "purl": "pkg:npm/glob@10.3.10",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-glob/issues",
@@ -18426,7 +18426,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@7.1.7?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-glob.git",
+      "purl": "pkg:npm/glob@7.1.7",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-glob/issues",
@@ -18474,7 +18474,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/glob@7.2.3?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-glob.git",
+      "purl": "pkg:npm/glob@7.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-glob/issues",
@@ -18618,7 +18618,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/gopd@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fgopd.git",
+      "purl": "pkg:npm/gopd@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/gopd/issues",
@@ -18712,7 +18712,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs",
+      "purl": "pkg:npm/graceful-fs@4.2.11",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-graceful-fs/issues",
@@ -18878,7 +18878,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/grunt-legacy-log-utils@2.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fgruntjs%2Fgrunt-legacy-log-utils.git",
+      "purl": "pkg:npm/grunt-legacy-log-utils@2.1.0",
       "externalReferences": [
         {
           "url": "http://github.com/gruntjs/grunt-legacy-log-utils/issues",
@@ -18913,7 +18913,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/grunt-legacy-log@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fgruntjs%2Fgrunt-legacy-log.git",
+      "purl": "pkg:npm/grunt-legacy-log@3.0.0",
       "externalReferences": [
         {
           "url": "http://github.com/gruntjs/grunt-legacy-log/issues",
@@ -18961,7 +18961,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/grunt-legacy-util@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fgruntjs%2Fgrunt-legacy-util.git",
+      "purl": "pkg:npm/grunt-legacy-util@2.0.1",
       "externalReferences": [
         {
           "url": "http://github.com/gruntjs/grunt-legacy-util/issues",
@@ -19010,7 +19010,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/grunt-replace-json@0.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fexo-dev%2Fgrunt-replace-json.git",
+      "purl": "pkg:npm/grunt-replace-json@0.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/exo-dev/grunt-replace-json/issues",
@@ -19106,7 +19106,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/handlebars@4.7.7?vcs_url=https%3A%2F%2Fgithub.com%2Fwycats%2Fhandlebars.js.git",
+      "purl": "pkg:npm/handlebars@4.7.7",
       "externalReferences": [
         {
           "url": "https://github.com/wycats/handlebars.js/issues",
@@ -19154,7 +19154,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/har-schema@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fahmadnassri%2Fhar-schema.git",
+      "purl": "pkg:npm/har-schema@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ahmadnassri/har-schema/issues",
@@ -19202,7 +19202,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/har-validator@5.1.5?vcs_url=https%3A%2F%2Fgithub.com%2Fahmadnassri%2Fnode-har-validator.git",
+      "purl": "pkg:npm/har-validator@5.1.5",
       "externalReferences": [
         {
           "url": "https://github.com/ahmadnassri/node-har-validator/issues",
@@ -19298,7 +19298,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-bigints@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fhas-bigints.git",
+      "purl": "pkg:npm/has-bigints@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-bigints/issues",
@@ -19442,7 +19442,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-property-descriptors@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-property-descriptors.git",
+      "purl": "pkg:npm/has-property-descriptors@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-property-descriptors/issues",
@@ -19490,7 +19490,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-proto@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-proto.git",
+      "purl": "pkg:npm/has-proto@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-proto/issues",
@@ -19538,7 +19538,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbol-support-x@1.4.2?vcs_url=https%3A%2F%2Fgithub.com%2FXotic750%2Fhas-symbol-support-x.git",
+      "purl": "pkg:npm/has-symbol-support-x@1.4.2",
       "externalReferences": [
         {
           "url": "https://github.com/Xotic750/has-symbol-support-x/issues",
@@ -19586,7 +19586,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git",
+      "purl": "pkg:npm/has-symbols@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-symbols/issues",
@@ -19634,7 +19634,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-to-string-tag-x@1.4.1?vcs_url=https%3A%2F%2Fgithub.com%2FXotic750%2Fhas-to-string-tag-x.git",
+      "purl": "pkg:npm/has-to-string-tag-x@1.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/Xotic750/has-to-string-tag-x/issues",
@@ -19682,7 +19682,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-tostringtag.git",
+      "purl": "pkg:npm/has-tostringtag@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-tostringtag/issues",
@@ -19730,7 +19730,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-unicode@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode",
+      "purl": "pkg:npm/has-unicode@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/has-unicode/issues",
@@ -19970,7 +19970,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hashids@2.3.0?vcs_url=https%3A%2F%2Fgithub.com%2Fniieani%2Fhashids.js.git",
+      "purl": "pkg:npm/hashids@2.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/niieani/hashids.js/issues",
@@ -20018,7 +20018,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hasown@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2FhasOwn.git",
+      "purl": "pkg:npm/hasown@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/hasOwn/issues",
@@ -20115,7 +20115,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/he@0.4.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fhe.git",
+      "purl": "pkg:npm/he@0.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/he/issues",
@@ -20163,7 +20163,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/heap@0.2.7?vcs_url=git%3A%2F%2Fgithub.com%2Fqiao%2Fheap.js.git",
+      "purl": "pkg:npm/heap@0.2.7",
       "externalReferences": [
         {
           "url": "https://github.com/qiao/heap.js/issues",
@@ -20211,7 +20211,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/helmet@4.6.0?vcs_url=git%3A%2F%2Fgithub.com%2Fhelmetjs%2Fhelmet.git",
+      "purl": "pkg:npm/helmet@4.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/helmetjs/helmet/issues",
@@ -20259,7 +20259,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hoister@0.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmmckegg%2Fhoister.git",
+      "purl": "pkg:npm/hoister@0.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/mmckegg/hoister/issues",
@@ -20343,7 +20343,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hooker@0.2.3?vcs_url=git%3A%2F%2Fgithub.com%2Fcowboy%2Fjavascript-hooker.git",
+      "purl": "pkg:npm/hooker@0.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/cowboy/javascript-hooker/issues",
@@ -20391,7 +20391,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/hosted-git-info@2.8.9?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git",
+      "purl": "pkg:npm/hosted-git-info@2.8.9",
       "externalReferences": [
         {
           "url": "https://github.com/npm/hosted-git-info/issues",
@@ -20439,7 +20439,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/html-entities@1.4.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmdevils%2Fnode-html-entities.git",
+      "purl": "pkg:npm/html-entities@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/mdevils/node-html-entities/issues",
@@ -20488,7 +20488,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/htmlparser2@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Ffb55%2Fhtmlparser2.git",
+      "purl": "pkg:npm/htmlparser2@3.3.0",
       "externalReferences": [
         {
           "url": "http://github.com/fb55/htmlparser2/issues",
@@ -20715,7 +20715,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@4.0.1?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-http-proxy-agent.git",
+      "purl": "pkg:npm/http-proxy-agent@4.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-http-proxy-agent/issues",
@@ -20750,7 +20750,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@5.0.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-http-proxy-agent.git",
+      "purl": "pkg:npm/http-proxy-agent@5.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-http-proxy-agent/issues",
@@ -20785,7 +20785,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttp-proxy-agent",
+      "purl": "pkg:npm/http-proxy-agent@7.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -20833,7 +20833,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/http-signature@1.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fjoyent%2Fnode-http-signature.git",
+      "purl": "pkg:npm/http-signature@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/joyent/node-http-signature/issues",
@@ -20881,7 +20881,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/https-proxy-agent@5.0.1?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-https-proxy-agent.git",
+      "purl": "pkg:npm/https-proxy-agent@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-https-proxy-agent/issues",
@@ -20916,7 +20916,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttps-proxy-agent",
+      "purl": "pkg:npm/https-proxy-agent@7.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -20964,7 +20964,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/humanize-ms@1.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnode-modules%2Fhumanize-ms",
+      "purl": "pkg:npm/humanize-ms@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/node-modules/humanize-ms/issues",
@@ -21012,7 +21012,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/i18n@0.11.1?vcs_url=http%3A%2F%2Fgithub.com%2Fmashpie%2Fi18n-node.git",
+      "purl": "pkg:npm/i18n@0.11.1",
       "externalReferences": [
         {
           "url": "https://github.com/mashpie/i18n-node/issues",
@@ -21060,7 +21060,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/iconv-lite@0.4.24?vcs_url=git%3A%2F%2Fgithub.com%2Fashtuchkin%2Ficonv-lite.git",
+      "purl": "pkg:npm/iconv-lite@0.4.24",
       "externalReferences": [
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
@@ -21108,7 +21108,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A%2F%2Fgithub.com%2Fashtuchkin%2Ficonv-lite.git",
+      "purl": "pkg:npm/iconv-lite@0.6.3",
       "externalReferences": [
         {
           "url": "https://github.com/ashtuchkin/iconv-lite/issues",
@@ -21156,7 +21156,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
+      "purl": "pkg:npm/ieee754@1.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/ieee754/issues",
@@ -21204,7 +21204,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ignore-walk@3.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fignore-walk.git",
+      "purl": "pkg:npm/ignore-walk@3.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/ignore-walk/issues",
@@ -21251,7 +21251,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/iltorb@2.4.5?vcs_url=git%3A%2F%2Fgithub.com%2Fnstepien%2Filtorb.git",
+      "purl": "pkg:npm/iltorb@2.4.5",
       "externalReferences": [
         {
           "url": "https://github.com/nstepien/iltorb/issues",
@@ -21299,7 +21299,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js",
+      "purl": "pkg:npm/imurmurhash@0.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/jensyt/imurmurhash-js/issues",
@@ -21430,7 +21430,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inflection@1.13.4?vcs_url=https%3A%2F%2Fgithub.com%2Fdreamerslab%2Fnode.inflection.git",
+      "purl": "pkg:npm/inflection@1.13.4",
       "externalReferences": [
         {
           "url": "https://github.com/dreamerslab/node.inflection/issues",
@@ -21478,7 +21478,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/inflight@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git",
+      "purl": "pkg:npm/inflight@1.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inflight/issues",
@@ -21620,7 +21620,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ini@1.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fini.git",
+      "purl": "pkg:npm/ini@1.3.8",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/ini/issues",
@@ -21668,7 +21668,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/internal-slot@1.0.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Finternal-slot.git",
+      "purl": "pkg:npm/internal-slot@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/internal-slot/issues",
@@ -21716,7 +21716,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/interpret@1.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Ftkellen%2Fnode-interpret.git",
+      "purl": "pkg:npm/interpret@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/tkellen/node-interpret/issues",
@@ -21860,7 +21860,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ip-address@9.0.5?vcs_url=git%3A%2F%2Fgithub.com%2Fbeaugunderson%2Fip-address.git",
+      "purl": "pkg:npm/ip-address@9.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/beaugunderson/ip-address/issues",
@@ -21907,7 +21907,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ip@2.0.1?vcs_url=http%3A%2F%2Fgithub.com%2Findutny%2Fnode-ip.git",
+      "purl": "pkg:npm/ip@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/indutny/node-ip/issues",
@@ -21942,7 +21942,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ip6@0.2.10?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Felgs%2Fip6.git",
+      "purl": "pkg:npm/ip6@0.2.10",
       "externalReferences": [
         {
           "url": "https://github.com/elgs/ip6/issues",
@@ -22086,7 +22086,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-accessor-descriptor@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-accessor-descriptor.git",
+      "purl": "pkg:npm/is-accessor-descriptor@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-accessor-descriptor/issues",
@@ -22134,7 +22134,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-arguments@1.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-arguments.git",
+      "purl": "pkg:npm/is-arguments@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-arguments/issues",
@@ -22182,7 +22182,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-array-buffer@3.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-array-buffer.git",
+      "purl": "pkg:npm/is-array-buffer@3.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-array-buffer/issues",
@@ -22230,7 +22230,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-arrayish@0.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/qix-/node-is-arrayish/issues",
@@ -22278,7 +22278,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-arrayish@0.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git",
+      "purl": "pkg:npm/is-arrayish@0.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/qix-/node-is-arrayish/issues",
@@ -22326,7 +22326,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-bigint@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-bigint.git",
+      "purl": "pkg:npm/is-bigint@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-bigint/issues",
@@ -22422,7 +22422,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-boolean-object@1.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-boolean-object.git",
+      "purl": "pkg:npm/is-boolean-object@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-boolean-object/issues",
@@ -22470,7 +22470,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-buffer@1.1.6?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fis-buffer.git",
+      "purl": "pkg:npm/is-buffer@1.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/feross/is-buffer/issues",
@@ -22518,7 +22518,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-callable@1.2.7?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-callable.git",
+      "purl": "pkg:npm/is-callable@1.2.7",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-callable/issues",
@@ -22566,7 +22566,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-core-module@2.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-core-module.git",
+      "purl": "pkg:npm/is-core-module@2.13.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-core-module/issues",
@@ -22614,7 +22614,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-data-descriptor@1.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-data-descriptor.git",
+      "purl": "pkg:npm/is-data-descriptor@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-data-descriptor/issues",
@@ -22662,7 +22662,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-date-object@1.0.5?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-date-object.git",
+      "purl": "pkg:npm/is-date-object@1.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-date-object/issues",
@@ -22710,7 +22710,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-descriptor@0.1.7?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-descriptor.git",
+      "purl": "pkg:npm/is-descriptor@0.1.7",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-descriptor/issues",
@@ -22758,7 +22758,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-descriptor@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-descriptor.git",
+      "purl": "pkg:npm/is-descriptor@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-descriptor/issues",
@@ -22806,7 +22806,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-expression@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fis-expression.git",
+      "purl": "pkg:npm/is-expression@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/is-expression/issues",
@@ -23142,7 +23142,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-generator-function@1.0.10?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-generator-function.git",
+      "purl": "pkg:npm/is-generator-function@1.0.10",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-generator-function/issues",
@@ -23286,7 +23286,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-lambda@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git",
+      "purl": "pkg:npm/is-lambda@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/watson/is-lambda/issues",
@@ -23334,7 +23334,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-map@2.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-map.git",
+      "purl": "pkg:npm/is-map@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-map/issues",
@@ -23430,7 +23430,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-number-like@1.0.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvigour-io%2Fis-number-like.git",
+      "purl": "pkg:npm/is-number-like@1.0.8",
       "externalReferences": [
         {
           "url": "https://github.com/vigour-io/is-number-like/issues",
@@ -23478,7 +23478,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-number-object@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-number-object.git",
+      "purl": "pkg:npm/is-number-object@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-number-object/issues",
@@ -23773,7 +23773,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-promise@2.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fthen%2Fis-promise.git",
+      "purl": "pkg:npm/is-promise@2.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/then/is-promise/issues",
@@ -23821,7 +23821,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-regex@1.1.4?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-regex.git",
+      "purl": "pkg:npm/is-regex@1.1.4",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-regex/issues",
@@ -23965,7 +23965,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-set@2.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-set.git",
+      "purl": "pkg:npm/is-set@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-set/issues",
@@ -24013,7 +24013,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-shared-array-buffer@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-shared-array-buffer.git",
+      "purl": "pkg:npm/is-shared-array-buffer@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-shared-array-buffer/issues",
@@ -24157,7 +24157,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
+      "purl": "pkg:npm/is-string@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",
@@ -24205,7 +24205,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-symbol@1.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-symbol.git",
+      "purl": "pkg:npm/is-symbol@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-symbol/issues",
@@ -24253,7 +24253,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-typed-array@1.1.13?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fis-typed-array.git",
+      "purl": "pkg:npm/is-typed-array@1.1.13",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-typed-array/issues",
@@ -24301,7 +24301,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-typedarray@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fhughsk%2Fis-typedarray.git",
+      "purl": "pkg:npm/is-typedarray@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/hughsk/is-typedarray/issues",
@@ -24397,7 +24397,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-weakmap@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-weakmap.git",
+      "purl": "pkg:npm/is-weakmap@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-weakmap/issues",
@@ -24445,7 +24445,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-weakset@2.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-weakset.git",
+      "purl": "pkg:npm/is-weakset@2.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/is-weakset/issues",
@@ -24541,7 +24541,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isarray@0.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fisarray.git",
+      "purl": "pkg:npm/isarray@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/isarray/issues",
@@ -24576,7 +24576,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isarray@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fisarray.git",
+      "purl": "pkg:npm/isarray@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/isarray/issues",
@@ -24611,7 +24611,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isarray@2.0.5?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fisarray.git",
+      "purl": "pkg:npm/isarray@2.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/juliangruber/isarray/issues",
@@ -24659,7 +24659,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fisexe.git",
+      "purl": "pkg:npm/isexe@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/isexe/issues",
@@ -24899,7 +24899,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/isstream@0.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Frvagg%2Fisstream.git",
+      "purl": "pkg:npm/isstream@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/isstream/issues",
@@ -24995,7 +24995,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jackspeak@2.3.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fjackspeak.git",
+      "purl": "pkg:npm/jackspeak@2.3.6",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/jackspeak/issues",
@@ -25043,7 +25043,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/js-stringify@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjadejs%2Fjs-stringify.git",
+      "purl": "pkg:npm/js-stringify@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/jadejs/js-stringify/issues",
@@ -25187,7 +25187,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsbn@0.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git",
+      "purl": "pkg:npm/jsbn@0.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/andyperlitch/jsbn/issues",
@@ -25235,7 +25235,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsbn@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git",
+      "purl": "pkg:npm/jsbn@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/andyperlitch/jsbn/issues",
@@ -25283,7 +25283,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/json-buffer@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fdominictarr%2Fjson-buffer.git",
+      "purl": "pkg:npm/json-buffer@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/dominictarr/json-buffer/issues",
@@ -25379,7 +25379,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/json-schema-traverse@0.4.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fepoberezkin%2Fjson-schema-traverse.git",
+      "purl": "pkg:npm/json-schema-traverse@0.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/epoberezkin/json-schema-traverse/issues",
@@ -25425,7 +25425,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/json-schema@0.4.0?vcs_url=http%3A%2F%2Fgithub.com%2Fkriszyp%2Fjson-schema",
+      "purl": "pkg:npm/json-schema@0.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/kriszyp/json-schema/issues",
@@ -25473,7 +25473,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/json-stringify-safe@5.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fjson-stringify-safe",
+      "purl": "pkg:npm/json-stringify-safe@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/json-stringify-safe/issues",
@@ -25521,7 +25521,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/json5@2.2.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjson5%2Fjson5.git",
+      "purl": "pkg:npm/json5@2.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/json5/json5/issues",
@@ -25617,7 +25617,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsonwebtoken@0.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fauth0%2Fnode-jsonwebtoken",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/auth0/node-jsonwebtoken/issues",
@@ -25652,7 +25652,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsonwebtoken@0.4.0?vcs_url=https%3A%2F%2Fgithub.com%2Fauth0%2Fnode-jsonwebtoken",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/auth0/node-jsonwebtoken/issues",
@@ -25699,7 +25699,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jsprim@1.4.2?vcs_url=git%3A%2F%2Fgithub.com%2Fjoyent%2Fnode-jsprim.git",
+      "purl": "pkg:npm/jsprim@1.4.2",
       "externalReferences": [
         {
           "url": "https://github.com/joyent/node-jsprim/issues",
@@ -25747,7 +25747,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jssha@3.3.1?vcs_url=https%3A%2F%2Fgithub.com%2FCaligatio%2FjsSHA.git",
+      "purl": "pkg:npm/jssha@3.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/Caligatio/jsSHA/issues",
@@ -25795,7 +25795,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jstransformer@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fjstransformers%2Fjstransformer.git",
+      "purl": "pkg:npm/jstransformer@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/jstransformers/jstransformer/issues",
@@ -25843,7 +25843,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/juicy-chat-bot@0.8.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjuice-shop%2Fjuicy-chat-bot.git",
+      "purl": "pkg:npm/juicy-chat-bot@0.8.0",
       "externalReferences": [
         {
           "url": "https://github.com/juice-shop/juicy-chat-bot/issues",
@@ -25891,7 +25891,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jwa@0.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbrianloveswords%2Fnode-jwa.git",
+      "purl": "pkg:npm/jwa@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/brianloveswords/node-jwa/issues",
@@ -25926,7 +25926,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/jws@0.2.6?vcs_url=git%3A%2F%2Fgithub.com%2Fbrianloveswords%2Fnode-jws.git",
+      "purl": "pkg:npm/jws@0.2.6",
       "externalReferences": [
         {
           "url": "https://github.com/brianloveswords/node-jws/issues",
@@ -25974,7 +25974,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/keyv@3.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Flukechilds%2Fkeyv.git",
+      "purl": "pkg:npm/keyv@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/lukechilds/keyv/issues",
@@ -26166,7 +26166,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/kuler@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2F3rd-Eden%2Fkuler",
+      "purl": "pkg:npm/kuler@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/kuler/issues",
@@ -26214,7 +26214,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lazystream@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fjpommerening%2Fnode-lazystream.git",
+      "purl": "pkg:npm/lazystream@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/jpommerening/node-lazystream/issues",
@@ -26262,7 +26262,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/libxmljs2@0.33.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmarudor%2Flibxmljs2.git",
+      "purl": "pkg:npm/libxmljs2@0.33.0",
       "externalReferences": [
         {
           "url": "http://github.com/marudor/libxmljs2/issues",
@@ -26358,7 +26358,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/linebreak@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fdevongovett%2Flinebreaker.git",
+      "purl": "pkg:npm/linebreak@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/linebreaker/issues",
@@ -26694,7 +26694,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lodash@2.4.2?vcs_url=https%3A%2F%2Fgithub.com%2Flodash%2Flodash.git",
+      "purl": "pkg:npm/lodash@2.4.2",
       "externalReferences": [
         {
           "url": "https://github.com/lodash/lodash/issues",
@@ -26790,7 +26790,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/logform@2.6.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwinstonjs%2Flogform.git",
+      "purl": "pkg:npm/logform@2.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/winstonjs/logform/issues",
@@ -26838,7 +26838,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lolex@1.3.2?vcs_url=http%3A%2F%2Fgithub.com%2Fsinonjs%2Flolex.git",
+      "purl": "pkg:npm/lolex@1.3.2",
       "externalReferences": [
         {
           "url": "http://github.com/sinonjs/lolex/issues",
@@ -26886,7 +26886,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/loose-envify@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fzertosh%2Floose-envify.git",
+      "purl": "pkg:npm/loose-envify@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/zertosh/loose-envify/issues",
@@ -27017,7 +27017,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/lru-cache@10.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-lru-cache.git",
+      "purl": "pkg:npm/lru-cache@10.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-lru-cache/issues",
@@ -27257,7 +27257,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-error@1.3.6?vcs_url=git%3A%2F%2Fgithub.com%2FJsCommunity%2Fmake-error.git",
+      "purl": "pkg:npm/make-error@1.3.6",
       "externalReferences": [
         {
           "url": "https://github.com/JsCommunity/make-error/issues",
@@ -27305,7 +27305,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-fetch-happen@13.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git",
+      "purl": "pkg:npm/make-fetch-happen@13.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/make-fetch-happen/issues",
@@ -27497,7 +27497,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/make-plural@6.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Feemeli%2Fmake-plural.git%23packages%2Fplurals",
+      "purl": "pkg:npm/make-plural@6.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/eemeli/make-plural/issues",
@@ -27785,7 +27785,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/median@0.0.2?vcs_url=http%3A%2F%2Fgithub.com%2Flafikl%2Fmedian",
+      "purl": "pkg:npm/median@0.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/lafikl/median/issues",
@@ -27881,7 +27881,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/messageformat-formatters@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmessageformat%2Fmessageformat.git%23packages%2Fformatters",
+      "purl": "pkg:npm/messageformat-formatters@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/messageformat/messageformat/issues",
@@ -27928,7 +27928,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/messageformat-parser@4.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Fmessageformat%2Fmessageformat.git%23packages%2Fparser",
+      "purl": "pkg:npm/messageformat-parser@4.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/messageformat/messageformat/issues",
@@ -28261,7 +28261,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mime@1.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Fbroofa%2Fnode-mime",
+      "purl": "pkg:npm/mime@1.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/broofa/node-mime/issues",
@@ -28453,7 +28453,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@3.0.5?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git",
+      "purl": "pkg:npm/minimatch@3.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -28501,7 +28501,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@3.0.8?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git",
+      "purl": "pkg:npm/minimatch@3.0.8",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -28549,7 +28549,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@3.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git",
+      "purl": "pkg:npm/minimatch@3.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -28597,7 +28597,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@5.1.6?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git",
+      "purl": "pkg:npm/minimatch@5.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -28645,7 +28645,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimatch@9.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git",
+      "purl": "pkg:npm/minimatch@9.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minimatch/issues",
@@ -28693,7 +28693,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimist@0.2.4?vcs_url=git%3A%2F%2Fgithub.com%2Fminimistjs%2Fminimist.git",
+      "purl": "pkg:npm/minimist@0.2.4",
       "externalReferences": [
         {
           "url": "https://github.com/minimistjs/minimist/issues",
@@ -28741,7 +28741,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minimist@1.2.8?vcs_url=git%3A%2F%2Fgithub.com%2Fminimistjs%2Fminimist.git",
+      "purl": "pkg:npm/minimist@1.2.8",
       "externalReferences": [
         {
           "url": "https://github.com/minimistjs/minimist/issues",
@@ -28867,7 +28867,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@1.4.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@1.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/npm/minipass-fetch/issues",
@@ -28915,7 +28915,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-fetch@3.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git",
+      "purl": "pkg:npm/minipass-fetch@3.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/npm/minipass-fetch/issues",
@@ -28963,7 +28963,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-flush.git",
+      "purl": "pkg:npm/minipass-flush@1.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass-flush/issues",
@@ -29042,7 +29042,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-sized.git",
+      "purl": "pkg:npm/minipass-sized@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass-sized/issues",
@@ -29090,7 +29090,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@2.9.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git",
+      "purl": "pkg:npm/minipass@2.9.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass/issues",
@@ -29138,7 +29138,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git",
+      "purl": "pkg:npm/minipass@3.3.6",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass/issues",
@@ -29186,7 +29186,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git",
+      "purl": "pkg:npm/minipass@5.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minipass/issues",
@@ -29282,7 +29282,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minizlib@1.3.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git",
+      "purl": "pkg:npm/minizlib@1.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minizlib/issues",
@@ -29330,7 +29330,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git",
+      "purl": "pkg:npm/minizlib@2.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/minizlib/issues",
@@ -29426,7 +29426,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp-classic@0.5.3?vcs_url=https%3A%2F%2Fgithub.com%2Fmafintosh%2Fmkdirp-classic.git",
+      "purl": "pkg:npm/mkdirp-classic@0.5.3",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/mkdirp-classic/issues",
@@ -29474,7 +29474,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp@0.5.6?vcs_url=https%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-mkdirp.git",
+      "purl": "pkg:npm/mkdirp@0.5.6",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-mkdirp/issues",
@@ -29521,7 +29521,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mkdirp@1.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git",
+      "purl": "pkg:npm/mkdirp@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-mkdirp/issues",
@@ -29569,7 +29569,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/moment-timezone@0.5.45?vcs_url=https%3A%2F%2Fgithub.com%2Fmoment%2Fmoment-timezone.git",
+      "purl": "pkg:npm/moment-timezone@0.5.45",
       "externalReferences": [
         {
           "url": "https://github.com/moment/moment-timezone/issues",
@@ -29617,7 +29617,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/moment@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftimrwood%2Fmoment.git",
+      "purl": "pkg:npm/moment@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/timrwood/moment/issues",
@@ -29665,7 +29665,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/moment@2.30.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmoment%2Fmoment.git",
+      "purl": "pkg:npm/moment@2.30.1",
       "externalReferences": [
         {
           "url": "https://github.com/moment/moment/issues",
@@ -29760,7 +29760,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mout@1.2.4?vcs_url=git%3A%2F%2Fgithub.com%2Fmout%2Fmout.git",
+      "purl": "pkg:npm/mout@1.2.4",
       "externalReferences": [
         {
           "url": "https://github.com/mout/mout/issues/",
@@ -29996,7 +29996,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/mustache@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fjanl%2Fmustache.js.git",
+      "purl": "pkg:npm/mustache@4.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/janl/mustache.js/issues",
@@ -30043,7 +30043,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nan@2.18.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnan.git",
+      "purl": "pkg:npm/nan@2.18.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/nan/issues",
@@ -30090,7 +30090,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nan@2.19.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnan.git",
+      "purl": "pkg:npm/nan@2.19.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/nan/issues",
@@ -30186,7 +30186,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/napi-build-utils@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspiredware%2Fnapi-build-utils.git",
+      "purl": "pkg:npm/napi-build-utils@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspiredware/napi-build-utils/issues",
@@ -30234,7 +30234,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/needle@2.9.1?vcs_url=https%3A%2F%2Fgithub.com%2Ftomas%2Fneedle.git",
+      "purl": "pkg:npm/needle@2.9.1",
       "externalReferences": [
         {
           "url": "https://github.com/tomas/needle/issues",
@@ -30376,7 +30376,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-abi@2.30.1?vcs_url=https%3A%2F%2Fgithub.com%2Flgeiger%2Fnode-abi.git",
+      "purl": "pkg:npm/node-abi@2.30.1",
       "externalReferences": [
         {
           "url": "https://github.com/lgeiger/node-abi/issues",
@@ -30424,7 +30424,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-abi@3.56.0?vcs_url=https%3A%2F%2Fgithub.com%2Felectron%2Fnode-abi.git",
+      "purl": "pkg:npm/node-abi@3.56.0",
       "externalReferences": [
         {
           "url": "https://github.com/electron/node-abi/issues",
@@ -30471,7 +30471,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-addon-api@7.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnode-addon-api.git",
+      "purl": "pkg:npm/node-addon-api@7.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/node-addon-api/issues",
@@ -30567,7 +30567,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-gyp@10.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnode-gyp.git",
+      "purl": "pkg:npm/node-gyp@10.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/node-gyp/issues",
@@ -30615,7 +30615,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-gyp@8.4.1?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnode-gyp.git",
+      "purl": "pkg:npm/node-gyp@8.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/node-gyp/issues",
@@ -30663,7 +30663,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/node-pre-gyp@0.15.0?vcs_url=git%3A%2F%2Fgithub.com%2Fmapbox%2Fnode-pre-gyp.git",
+      "purl": "pkg:npm/node-pre-gyp@0.15.0",
       "externalReferences": [
         {
           "url": "https://github.com/mapbox/node-pre-gyp/issues",
@@ -30745,7 +30745,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@3.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@3.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -30793,7 +30793,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@4.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@4.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -30841,7 +30841,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@5.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@5.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -30889,7 +30889,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/nopt@7.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git",
+      "purl": "pkg:npm/nopt@7.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/nopt/issues",
@@ -30937,7 +30937,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/normalize-package-data@2.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git",
+      "purl": "pkg:npm/normalize-package-data@2.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/normalize-package-data/issues",
@@ -31129,7 +31129,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/notevil@1.3.3?vcs_url=https%3A%2F%2Fgithub.com%2Fmmckegg%2Fnotevil",
+      "purl": "pkg:npm/notevil@1.3.3",
       "externalReferences": [
         {
           "url": "https://github.com/mmckegg/notevil/issues",
@@ -31164,7 +31164,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npm-bundled@1.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnpm-bundled.git",
+      "purl": "pkg:npm/npm-bundled@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npm-bundled/issues",
@@ -31260,7 +31260,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npm-packlist@1.4.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnpm-packlist.git",
+      "purl": "pkg:npm/npm-packlist@1.4.8",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npm-packlist/issues",
@@ -31308,7 +31308,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npmlog@4.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git",
+      "purl": "pkg:npm/npmlog@4.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npmlog/issues",
@@ -31356,7 +31356,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npmlog@5.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git",
+      "purl": "pkg:npm/npmlog@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npmlog/issues",
@@ -31404,7 +31404,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/npmlog@6.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git",
+      "purl": "pkg:npm/npmlog@6.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/npmlog/issues",
@@ -31500,7 +31500,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/oauth-sign@0.9.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmikeal%2Foauth-sign",
+      "purl": "pkg:npm/oauth-sign@0.9.0",
       "externalReferences": [
         {
           "url": "https://github.com/mikeal/oauth-sign/issues",
@@ -31644,7 +31644,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-inspect@1.13.1?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fobject-inspect.git",
+      "purl": "pkg:npm/object-inspect@1.13.1",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/object-inspect/issues",
@@ -31692,7 +31692,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-is@1.1.6?vcs_url=git%3A%2F%2Fgithub.com%2Fes-shims%2Fobject-is.git",
+      "purl": "pkg:npm/object-is@1.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/es-shims/object-is/issues",
@@ -31740,7 +31740,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/object-keys@1.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fobject-keys.git",
+      "purl": "pkg:npm/object-keys@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/object-keys/issues",
@@ -31836,7 +31836,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/object.assign@4.1.5?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fobject.assign.git",
+      "purl": "pkg:npm/object.assign@4.1.5",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/object.assign/issues",
@@ -32170,7 +32170,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce",
+      "purl": "pkg:npm/once@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/once/issues",
@@ -32218,7 +32218,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/one-time@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2F3rd-Eden%2Fone-time.git",
+      "purl": "pkg:npm/one-time@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/one-time/issues",
@@ -32266,7 +32266,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/opentype.js@0.7.3?vcs_url=git%3A%2F%2Fgithub.com%2Fnodebox%2Fopentype.js.git",
+      "purl": "pkg:npm/opentype.js@0.7.3",
       "externalReferences": [
         {
           "url": "https://github.com/nodebox/opentype.js/issues",
@@ -33464,7 +33464,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-parse@1.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Fjbgutierrez%2Fpath-parse.git",
+      "purl": "pkg:npm/path-parse@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/jbgutierrez/path-parse/issues",
@@ -33608,7 +33608,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-scurry@1.10.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry",
+      "purl": "pkg:npm/path-scurry@1.10.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/path-scurry/issues",
@@ -33655,7 +33655,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/path-to-regexp@0.1.7?vcs_url=https%3A%2F%2Fgithub.com%2Fcomponent%2Fpath-to-regexp.git",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
       "externalReferences": [
         {
           "url": "https://github.com/component/path-to-regexp/issues",
@@ -33703,7 +33703,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pdfkit@0.11.0?vcs_url=https%3A%2F%2Fgithub.com%2Ffoliojs%2Fpdfkit.git",
+      "purl": "pkg:npm/pdfkit@0.11.0",
       "externalReferences": [
         {
           "url": "https://github.com/foliojs/pdfkit/issues",
@@ -33751,7 +33751,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/peek-readable@4.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FBorewit%2Fpeek-readable",
+      "purl": "pkg:npm/peek-readable@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/Borewit/peek-readable/issues",
@@ -33799,7 +33799,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pend@1.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fandrewrk%2Fnode-pend.git",
+      "purl": "pkg:npm/pend@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/andrewrk/node-pend/issues",
@@ -33847,7 +33847,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/performance-now@2.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbraveg1rl%2Fperformance-now.git",
+      "purl": "pkg:npm/performance-now@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/braveg1rl/performance-now/issues",
@@ -33895,7 +33895,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pg-connection-string@2.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fbrianc%2Fnode-postgres.git%23packages%2Fpg-connection-string",
+      "purl": "pkg:npm/pg-connection-string@2.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/brianc/node-postgres/issues",
@@ -34223,7 +34223,7 @@
       "bom-ref": "png-js@npm:1.0.0",
       "author": "Devon Govett",
       "description": "A PNG decoder in JavaScript",
-      "purl": "pkg:npm/png-js@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fdevongovett%2Fpng.js.git",
+      "purl": "pkg:npm/png-js@1.0.0",
       "externalReferences": [
         {
           "url": "http://github.com/devongovett/png.js/issues",
@@ -34270,7 +34270,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/portscanner@2.2.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbaalexander%2Fnode-portscanner.git",
+      "purl": "pkg:npm/portscanner@2.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/baalexander/node-portscanner/issues",
@@ -34366,7 +34366,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/possible-typed-array-names@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fpossible-typed-array-names.git",
+      "purl": "pkg:npm/possible-typed-array-names@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/possible-typed-array-names/issues",
@@ -34414,7 +34414,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/prebuild-install@5.3.6?vcs_url=https%3A%2F%2Fgithub.com%2Fprebuild%2Fprebuild-install.git",
+      "purl": "pkg:npm/prebuild-install@5.3.6",
       "externalReferences": [
         {
           "url": "https://github.com/prebuild/prebuild-install/issues",
@@ -34462,7 +34462,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/prebuild-install@7.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fprebuild%2Fprebuild-install.git",
+      "purl": "pkg:npm/prebuild-install@7.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/prebuild/prebuild-install/issues",
@@ -34606,7 +34606,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/proc-log@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git",
+      "purl": "pkg:npm/proc-log@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/proc-log/issues",
@@ -34653,7 +34653,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/process-nextick-args@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fcalvinmetcalf%2Fprocess-nextick-args.git",
+      "purl": "pkg:npm/process-nextick-args@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/calvinmetcalf/process-nextick-args/issues",
@@ -34797,7 +34797,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/promise-retry@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fnode-promise-retry.git",
+      "purl": "pkg:npm/promise-retry@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/IndigoUnited/node-promise-retry/issues/",
@@ -34845,7 +34845,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/promise@7.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fthen%2Fpromise.git",
+      "purl": "pkg:npm/promise@7.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/then/promise/issues",
@@ -34893,7 +34893,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/proper-lockfile@1.2.0?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fnode-proper-lockfile.git",
+      "purl": "pkg:npm/proper-lockfile@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/IndigoUnited/node-proper-lockfile/issues/",
@@ -35037,7 +35037,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-attrs@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-attrs",
+      "purl": "pkg:npm/pug-attrs@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35085,7 +35085,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-code-gen@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-code-gen",
+      "purl": "pkg:npm/pug-code-gen@3.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35133,7 +35133,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-error@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-error",
+      "purl": "pkg:npm/pug-error@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35181,7 +35181,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-filters@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-filters",
+      "purl": "pkg:npm/pug-filters@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35229,7 +35229,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-lexer@5.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-lexer",
+      "purl": "pkg:npm/pug-lexer@5.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35277,7 +35277,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-linker@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-linker",
+      "purl": "pkg:npm/pug-linker@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35325,7 +35325,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-load@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-load",
+      "purl": "pkg:npm/pug-load@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35373,7 +35373,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-parser@6.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-parser",
+      "purl": "pkg:npm/pug-parser@6.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35421,7 +35421,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-runtime@3.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-runtime",
+      "purl": "pkg:npm/pug-runtime@3.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35469,7 +35469,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-strip-comments@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-strip-comments",
+      "purl": "pkg:npm/pug-strip-comments@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35517,7 +35517,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug-walk@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug-walk",
+      "purl": "pkg:npm/pug-walk@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35565,7 +35565,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/pug@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fpug%2Ftree%2Fmaster%2Fpackages%2Fpug",
+      "purl": "pkg:npm/pug@3.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/pug/issues",
@@ -35661,7 +35661,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/punycode@2.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git",
+      "purl": "pkg:npm/punycode@2.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/punycode.js/issues",
@@ -35708,7 +35708,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/qs@6.11.0?vcs_url=https%3A%2F%2Fgithub.com%2Fljharb%2Fqs.git",
+      "purl": "pkg:npm/qs@6.11.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/qs/issues",
@@ -35755,7 +35755,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/qs@6.5.3?vcs_url=https%3A%2F%2Fgithub.com%2Fljharb%2Fqs.git",
+      "purl": "pkg:npm/qs@6.5.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/qs/issues",
@@ -35851,7 +35851,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/range_check@2.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fkeverw%2Frange_check",
+      "purl": "pkg:npm/range_check@2.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/keverw/range_check/issues",
@@ -35993,7 +35993,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/rc@1.2.8?vcs_url=https%3A%2F%2Fgithub.com%2Fdominictarr%2Frc.git",
+      "purl": "pkg:npm/rc@1.2.8",
       "externalReferences": [
         {
           "url": "https://github.com/dominictarr/rc/issues",
@@ -36099,7 +36099,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@1.0.34?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Freadable-stream",
+      "purl": "pkg:npm/readable-stream@1.0.34",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/readable-stream/issues",
@@ -36146,7 +36146,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@2.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream",
+      "purl": "pkg:npm/readable-stream@2.3.8",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -36193,7 +36193,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream",
+      "purl": "pkg:npm/readable-stream@3.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -36276,7 +36276,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/readdirp@3.6.0?vcs_url=git%3A%2F%2Fgithub.com%2Fpaulmillr%2Freaddirp.git",
+      "purl": "pkg:npm/readdirp@3.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/paulmillr/readdirp/issues",
@@ -36372,7 +36372,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/regenerator-runtime@0.14.1?vcs_url=https%3A%2F%2Fgithub.com%2Ffacebook%2Fregenerator%2Ftree%2Fmain%2Fpackages%2Fruntime",
+      "purl": "pkg:npm/regenerator-runtime@0.14.1",
       "externalReferences": [
         {
           "url": "https://github.com/facebook/regenerator/issues",
@@ -36468,7 +36468,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/regexp.prototype.flags@1.5.2?vcs_url=git%3A%2F%2Fgithub.com%2Fes-shims%2FRegExp.prototype.flags.git",
+      "purl": "pkg:npm/regexp.prototype.flags@1.5.2",
       "externalReferences": [
         {
           "url": "https://github.com/es-shims/RegExp.prototype.flags/issues",
@@ -36516,7 +36516,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/remove-trailing-separator@1.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdarsain%2Fremove-trailing-separator.git",
+      "purl": "pkg:npm/remove-trailing-separator@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/darsain/remove-trailing-separator/issues",
@@ -36660,7 +36660,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/replace@1.2.2?vcs_url=https%3A%2F%2Fgithub.com%2FALMaclaine%2Freplace",
+      "purl": "pkg:npm/replace@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/ALMaclaine/replace/issues",
@@ -36708,7 +36708,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/request@2.88.2?vcs_url=https%3A%2F%2Fgithub.com%2Frequest%2Frequest.git",
+      "purl": "pkg:npm/request@2.88.2",
       "externalReferences": [
         {
           "url": "http://github.com/request/request/issues",
@@ -36756,7 +36756,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-directory@2.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Ftroygoode%2Fnode-require-directory.git",
+      "purl": "pkg:npm/require-directory@2.1.1",
       "externalReferences": [
         {
           "url": "http://github.com/troygoode/node-require-directory/issues/",
@@ -36804,7 +36804,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/require-main-filename@2.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git",
+      "purl": "pkg:npm/require-main-filename@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/require-main-filename/issues",
@@ -36996,7 +36996,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/responselike@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Flukechilds%2Fresponselike.git",
+      "purl": "pkg:npm/responselike@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/lukechilds/responselike/issues",
@@ -37044,7 +37044,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/restructure@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fdevongovett%2Frestructure.git",
+      "purl": "pkg:npm/restructure@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/restructure/issues",
@@ -37092,7 +37092,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ret@0.1.15?vcs_url=git%3A%2F%2Fgithub.com%2Ffent%2Fret.js.git",
+      "purl": "pkg:npm/ret@0.1.15",
       "externalReferences": [
         {
           "url": "https://github.com/fent/ret.js/issues",
@@ -37140,7 +37140,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/retry-as-promised@7.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fmickhansen%2Fretry-as-promised.git",
+      "purl": "pkg:npm/retry-as-promised@7.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/mickhansen/retry-as-promised/issues",
@@ -37188,7 +37188,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/retry@0.10.1?vcs_url=git%3A%2F%2Fgithub.com%2Ftim-kos%2Fnode-retry.git",
+      "purl": "pkg:npm/retry@0.10.1",
       "externalReferences": [
         {
           "url": "https://github.com/tim-kos/node-retry/issues",
@@ -37236,7 +37236,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/retry@0.12.0?vcs_url=git%3A%2F%2Fgithub.com%2Ftim-kos%2Fnode-retry.git",
+      "purl": "pkg:npm/retry@0.12.0",
       "externalReferences": [
         {
           "url": "https://github.com/tim-kos/node-retry/issues",
@@ -37380,7 +37380,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/rxjs@6.6.7?vcs_url=https%3A%2F%2Fgithub.com%2Freactivex%2Frxjs.git",
+      "purl": "pkg:npm/rxjs@6.6.7",
       "externalReferences": [
         {
           "url": "https://github.com/ReactiveX/RxJS/issues",
@@ -37428,7 +37428,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/feross/safe-buffer/issues",
@@ -37476,7 +37476,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/safe-buffer/issues",
@@ -37524,7 +37524,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-regex@1.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fsafe-regex.git",
+      "purl": "pkg:npm/safe-regex@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/substack/safe-regex/issues",
@@ -37572,7 +37572,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safe-stable-stringify@2.4.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FBridgeAR%2Fsafe-stable-stringify.git",
+      "purl": "pkg:npm/safe-stable-stringify@2.4.3",
       "externalReferences": [
         {
           "url": "https://github.com/BridgeAR/safe-stable-stringify/issues",
@@ -37620,7 +37620,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FChALkeR%2Fsafer-buffer.git",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/ChALkeR/safer-buffer/issues",
@@ -37660,7 +37660,7 @@
       "bom-ref": "samsam@npm:1.1.2",
       "author": "Christian Johansen",
       "description": "Value identification and comparison functions",
-      "purl": "pkg:npm/samsam@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fbusterjs%2Fsamsam.git",
+      "purl": "pkg:npm/samsam@1.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/busterjs/samsam/issues",
@@ -37708,7 +37708,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/samsam@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Fbusterjs%2Fsamsam.git",
+      "purl": "pkg:npm/samsam@1.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/busterjs/samsam/issues",
@@ -37802,7 +37802,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sanitize-html@1.4.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpunkave%2Fsanitize-html.git",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
       "externalReferences": [
         {
           "url": "https://github.com/punkave/sanitize-html/issues",
@@ -37897,7 +37897,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/seek-bzip@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fcscott%2Fseek-bzip.git",
+      "purl": "pkg:npm/seek-bzip@1.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/cscott/seek-bzip/issues",
@@ -37945,7 +37945,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@5.7.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@5.7.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -37993,7 +37993,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@6.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@6.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -38041,7 +38041,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git",
+      "purl": "pkg:npm/semver@7.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-semver/issues",
@@ -38137,7 +38137,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sequelize-pool@7.1.0?vcs_url=http%3A%2F%2Fgithub.com%2Fsushantdhiman%2Fsequelize-pool.git",
+      "purl": "pkg:npm/sequelize-pool@7.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/sushantdhiman/sequelize-pool/issues",
@@ -38328,7 +38328,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fset-blocking.git",
+      "purl": "pkg:npm/set-blocking@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/set-blocking/issues",
@@ -38376,7 +38376,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/set-function-length@1.2.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fset-function-length.git",
+      "purl": "pkg:npm/set-function-length@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/set-function-length/issues",
@@ -38424,7 +38424,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/set-function-name@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fset-function-name.git",
+      "purl": "pkg:npm/set-function-name@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/set-function-name/issues",
@@ -38568,7 +38568,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/setprototypeof@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fwesleytodd%2Fsetprototypeof.git",
+      "purl": "pkg:npm/setprototypeof@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/wesleytodd/setprototypeof/issues",
@@ -38616,7 +38616,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/setprototypeof@1.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fwesleytodd%2Fsetprototypeof.git",
+      "purl": "pkg:npm/setprototypeof@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/wesleytodd/setprototypeof/issues",
@@ -38760,7 +38760,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/side-channel@1.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fside-channel.git",
+      "purl": "pkg:npm/side-channel@1.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/side-channel/issues",
@@ -38808,7 +38808,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@3.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -38856,7 +38856,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/signal-exit@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git",
+      "purl": "pkg:npm/signal-exit@4.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/tapjs/signal-exit/issues",
@@ -38904,7 +38904,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/simple-concat@1.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsimple-concat.git",
+      "purl": "pkg:npm/simple-concat@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/simple-concat/issues",
@@ -38952,7 +38952,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/simple-get@3.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsimple-get.git",
+      "purl": "pkg:npm/simple-get@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/simple-get/issues",
@@ -39000,7 +39000,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/simple-get@4.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsimple-get.git",
+      "purl": "pkg:npm/simple-get@4.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/feross/simple-get/issues",
@@ -39096,7 +39096,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sinon@1.17.7?vcs_url=http%3A%2F%2Fgithub.com%2Fcjohansen%2FSinon.JS.git",
+      "purl": "pkg:npm/sinon@1.17.7",
       "externalReferences": [
         {
           "url": "http://github.com/cjohansen/Sinon.JS/issues",
@@ -39144,7 +39144,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git",
+      "purl": "pkg:npm/smart-buffer@4.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/smart-buffer/issues",
@@ -39335,7 +39335,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socket.io-adapter@2.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fsocketio%2Fsocket.io-adapter.git",
+      "purl": "pkg:npm/socket.io-adapter@2.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/socketio/socket.io-adapter/issues",
@@ -39382,7 +39382,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socket.io-parser@4.0.5?vcs_url=https%3A%2F%2Fgithub.com%2Fsocketio%2Fsocket.io-parser.git",
+      "purl": "pkg:npm/socket.io-parser@4.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/socketio/socket.io-parser/issues",
@@ -39429,7 +39429,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socket.io@3.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Fsocketio%2Fsocket.io",
+      "purl": "pkg:npm/socket.io@3.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/socketio/socket.io/issues",
@@ -39477,7 +39477,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@6.2.1?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-socks-proxy-agent.git",
+      "purl": "pkg:npm/socks-proxy-agent@6.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/node-socks-proxy-agent/issues",
@@ -39512,7 +39512,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks-proxy-agent@8.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fsocks-proxy-agent",
+      "purl": "pkg:npm/socks-proxy-agent@8.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/proxy-agents/issues",
@@ -39547,7 +39547,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/socks@2.8.1?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git",
+      "purl": "pkg:npm/socks@2.8.1",
       "externalReferences": [
         {
           "url": "https://github.com/JoshGlazebrook/socks/issues",
@@ -39786,7 +39786,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/source-map-support@0.5.21?vcs_url=https%3A%2F%2Fgithub.com%2Fevanw%2Fnode-source-map-support",
+      "purl": "pkg:npm/source-map-support@0.5.21",
       "externalReferences": [
         {
           "url": "https://github.com/evanw/node-source-map-support/issues",
@@ -39882,7 +39882,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/source-map@0.5.7?vcs_url=http%3A%2F%2Fgithub.com%2Fmozilla%2Fsource-map.git",
+      "purl": "pkg:npm/source-map@0.5.7",
       "externalReferences": [
         {
           "url": "https://github.com/mozilla/source-map/issues",
@@ -39930,7 +39930,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/source-map@0.6.1?vcs_url=http%3A%2F%2Fgithub.com%2Fmozilla%2Fsource-map.git",
+      "purl": "pkg:npm/source-map@0.6.1",
       "externalReferences": [
         {
           "url": "https://github.com/mozilla/source-map/issues",
@@ -40214,7 +40214,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/alexei/sprintf.js/issues",
@@ -40262,7 +40262,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git",
+      "purl": "pkg:npm/sprintf-js@1.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/alexei/sprintf.js/issues",
@@ -40358,7 +40358,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/sshpk@1.18.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjoyent%2Fnode-sshpk.git",
+      "purl": "pkg:npm/sshpk@1.18.0",
       "externalReferences": [
         {
           "url": "https://github.com/arekinath/node-sshpk/issues",
@@ -40406,7 +40406,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/ssri@10.0.5?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git",
+      "purl": "pkg:npm/ssri@10.0.5",
       "externalReferences": [
         {
           "url": "https://github.com/npm/ssri/issues",
@@ -40502,7 +40502,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/stack-trace@0.0.10?vcs_url=git%3A%2F%2Fgithub.com%2Ffelixge%2Fnode-stack-trace.git",
+      "purl": "pkg:npm/stack-trace@0.0.10",
       "externalReferences": [
         {
           "url": "https://github.com/felixge/node-stack-trace/issues",
@@ -40692,7 +40692,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/stop-iteration-iterator@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fljharb%2Fstop-iteration-iterator.git",
+      "purl": "pkg:npm/stop-iteration-iterator@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/stop-iteration-iterator/issues",
@@ -40740,7 +40740,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/stream-buffers@2.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fsamcday%2Fnode-stream-buffer.git",
+      "purl": "pkg:npm/stream-buffers@2.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/samcday/node-stream-buffer/issues",
@@ -40789,7 +40789,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/streamsearch@1.1.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmscdex%2Fstreamsearch.git",
+      "purl": "pkg:npm/streamsearch@1.1.0",
       "externalReferences": [
         {
           "url": "https://github.com/mscdex/streamsearch/issues",
@@ -40884,7 +40884,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@0.10.31?vcs_url=git%3A%2F%2Fgithub.com%2Frvagg%2Fstring_decoder.git",
+      "purl": "pkg:npm/string_decoder@0.10.31",
       "externalReferences": [
         {
           "url": "https://github.com/rvagg/string_decoder/issues",
@@ -40931,7 +40931,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
@@ -40978,7 +40978,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
@@ -41219,7 +41219,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string.fromcodepoint@0.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2FString.fromCodePoint.git",
+      "purl": "pkg:npm/string.fromcodepoint@0.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/String.fromCodePoint/issues",
@@ -41267,7 +41267,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/string.prototype.codepointat@0.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2FString.prototype.codePointAt.git",
+      "purl": "pkg:npm/string.prototype.codepointat@0.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/mathiasbynens/String.prototype.codePointAt/issues",
@@ -41699,7 +41699,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/strtok3@6.3.0?vcs_url=https%3A%2F%2Fgithub.com%2FBorewit%2Fstrtok3.git",
+      "purl": "pkg:npm/strtok3@6.3.0",
       "externalReferences": [
         {
           "url": "https://github.com/Borewit/strtok3/issues",
@@ -41939,7 +41939,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fnode-supports-preserve-symlinks-flag.git",
+      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag/issues",
@@ -41987,7 +41987,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/svg-captcha@1.4.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fsteambap%2Fsvg-captcha.git",
+      "purl": "pkg:npm/svg-captcha@1.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/steambap/svg-captcha/issues",
@@ -42139,7 +42139,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-fs@2.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmafintosh%2Ftar-fs.git",
+      "purl": "pkg:npm/tar-fs@2.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/tar-fs/issues",
@@ -42187,7 +42187,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-stream@1.6.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmafintosh%2Ftar-stream.git",
+      "purl": "pkg:npm/tar-stream@1.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/tar-stream/issues",
@@ -42235,7 +42235,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar-stream@2.2.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmafintosh%2Ftar-stream.git",
+      "purl": "pkg:npm/tar-stream@2.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/tar-stream/issues",
@@ -42283,7 +42283,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@4.4.19?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-tar.git",
+      "purl": "pkg:npm/tar@4.4.19",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-tar/issues",
@@ -42331,7 +42331,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tar@6.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git",
+      "purl": "pkg:npm/tar@6.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-tar/issues",
@@ -42379,7 +42379,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tdigest@0.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fwelch%2Ftdigest.git",
+      "purl": "pkg:npm/tdigest@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/welch/tdigest/issues",
@@ -42427,7 +42427,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/text-hex@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2F3rd-Eden%2Ftext-hex",
+      "purl": "pkg:npm/text-hex@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/3rd-Eden/text-hex/issues",
@@ -42467,7 +42467,7 @@
       "bom-ref": "thirty-two@npm:1.0.2",
       "author": "Chris Umbel",
       "description": "Implementation RFC 3548 Base32 encoding/decoding for node.",
-      "purl": "pkg:npm/thirty-two@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fchrisumbel%2Fthirty-two.git",
+      "purl": "pkg:npm/thirty-two@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/chrisumbel/thirty-two/issues",
@@ -42515,7 +42515,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/through@2.3.8?vcs_url=https%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
+      "purl": "pkg:npm/through@2.3.8",
       "externalReferences": [
         {
           "url": "https://github.com/dominictarr/through/issues",
@@ -42611,7 +42611,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tiny-inflate@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Fdevongovett%2Ftiny-inflate.git",
+      "purl": "pkg:npm/tiny-inflate@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/tiny-inflate/issues",
@@ -42659,7 +42659,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/to-buffer@1.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmafintosh%2Fto-buffer.git",
+      "purl": "pkg:npm/to-buffer@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/mafintosh/to-buffer/issues",
@@ -42995,7 +42995,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/token-stream@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Ftoken-stream.git",
+      "purl": "pkg:npm/token-stream@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/token-stream/issues",
@@ -43043,7 +43043,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/token-types@4.2.1?vcs_url=https%3A%2F%2Fgithub.com%2FBorewit%2Ftoken-types",
+      "purl": "pkg:npm/token-types@4.2.1",
       "externalReferences": [
         {
           "url": "https://github.com/Borewit/token-types/issues",
@@ -43090,7 +43090,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/toposort-class@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fgustavohenke%2Ftoposort.git",
+      "purl": "pkg:npm/toposort-class@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/gustavohenke/toposort/issues",
@@ -43138,7 +43138,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tough-cookie@2.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fsalesforce%2Ftough-cookie.git",
+      "purl": "pkg:npm/tough-cookie@2.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/salesforce/tough-cookie/issues",
@@ -43186,7 +43186,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tr46@0.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FSebmaster%2Ftr46.js.git",
+      "purl": "pkg:npm/tr46@0.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/Sebmaster/tr46.js/issues",
@@ -43221,7 +43221,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/traverse@0.3.9?vcs_url=http%3A%2F%2Fgithub.com%2Fsubstack%2Fjs-traverse.git",
+      "purl": "pkg:npm/traverse@0.3.9",
       "externalReferences": [
         {
           "url": "https://github.com/substack/js-traverse/issues",
@@ -43269,7 +43269,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tree-kill@1.2.2?vcs_url=git%3A%2F%2Fgithub.com%2Fpkrumins%2Fnode-tree-kill.git",
+      "purl": "pkg:npm/tree-kill@1.2.2",
       "externalReferences": [
         {
           "url": "https://github.com/pkrumins/node-tree-kill/issues",
@@ -43365,7 +43365,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/triple-beam@1.4.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fwinstonjs%2Ftriple-beam.git",
+      "purl": "pkg:npm/triple-beam@1.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/winstonjs/triple-beam/issues",
@@ -43413,7 +43413,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/truncate-utf8-bytes@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fparshap%2Ftruncate-utf8-bytes.git",
+      "purl": "pkg:npm/truncate-utf8-bytes@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/parshap/truncate-utf8-bytes/issues",
@@ -43543,7 +43543,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tsconfig@7.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FTypeStrong%2Ftsconfig.git",
+      "purl": "pkg:npm/tsconfig@7.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/TypeStrong/tsconfig/issues",
@@ -43591,7 +43591,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@1.14.1?vcs_url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
+      "purl": "pkg:npm/tslib@1.14.1",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -43639,7 +43639,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@2.4.0?vcs_url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
+      "purl": "pkg:npm/tslib@2.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -43687,7 +43687,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tslib@2.6.2?vcs_url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Ftslib.git",
+      "purl": "pkg:npm/tslib@2.6.2",
       "externalReferences": [
         {
           "url": "https://github.com/Microsoft/TypeScript/issues",
@@ -43735,7 +43735,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tunnel-agent@0.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmikeal%2Ftunnel-agent",
+      "purl": "pkg:npm/tunnel-agent@0.6.0",
       "externalReferences": [
         {
           "url": "https://github.com/mikeal/tunnel-agent/issues",
@@ -43783,7 +43783,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/tweetnacl@0.14.5?vcs_url=https%3A%2F%2Fgithub.com%2Fdchest%2Ftweetnacl-js.git",
+      "purl": "pkg:npm/tweetnacl@0.14.5",
       "externalReferences": [
         {
           "url": "https://github.com/dchest/tweetnacl-js/issues",
@@ -43877,7 +43877,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/typecast@0.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Feivindfjeldstad%2Ftypecast.git",
+      "purl": "pkg:npm/typecast@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/eivindfjeldstad/typecast/issues",
@@ -43912,7 +43912,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/typedarray@0.0.6?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Ftypedarray.git",
+      "purl": "pkg:npm/typedarray@0.0.6",
       "externalReferences": [
         {
           "url": "https://github.com/substack/typedarray/issues",
@@ -44008,7 +44008,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unbzip2-stream@1.4.3?vcs_url=https%3A%2F%2Fgithub.com%2Fregular%2Funbzip2-stream.git",
+      "purl": "pkg:npm/unbzip2-stream@1.4.3",
       "externalReferences": [
         {
           "url": "https://github.com/regular/unbzip2-stream/issues",
@@ -44056,7 +44056,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unc-path-regex@0.1.2?vcs_url=https%3A%2F%2Fgithub.com%2Fregexhq%2Func-path-regex.git",
+      "purl": "pkg:npm/unc-path-regex@0.1.2",
       "externalReferences": [
         {
           "url": "https://github.com/regexhq/unc-path-regex/issues",
@@ -44103,7 +44103,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/underscore.string@3.3.6?vcs_url=https%3A%2F%2Fgithub.com%2Fepeli%2Funderscore.string.git",
+      "purl": "pkg:npm/underscore.string@3.3.6",
       "externalReferences": [
         {
           "url": "https://github.com/epeli/underscore.string/issues",
@@ -44137,7 +44137,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/undici-types@5.26.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnodejs%2Fundici.git",
+      "purl": "pkg:npm/undici-types@5.26.5",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/undici/issues",
@@ -44172,7 +44172,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unicode-properties@1.4.1?vcs_url=git%3A%2F%2Fgithub.com%2Fdevongovett%2Funicode-properties.git",
+      "purl": "pkg:npm/unicode-properties@1.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/unicode-properties/issues",
@@ -44220,7 +44220,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unicode-trie@2.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fdevongovett%2Funicode-trie.git",
+      "purl": "pkg:npm/unicode-trie@2.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/devongovett/unicode-trie/issues",
@@ -44316,7 +44316,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-filename@1.1.1?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Funique-filename.git",
+      "purl": "pkg:npm/unique-filename@1.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/unique-filename/issues",
@@ -44364,7 +44364,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-filename@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git",
+      "purl": "pkg:npm/unique-filename@3.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/unique-filename/issues",
@@ -44412,7 +44412,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-slug@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fiarna%2Funique-slug.git",
+      "purl": "pkg:npm/unique-slug@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/unique-slug/issues",
@@ -44460,7 +44460,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unique-slug@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git",
+      "purl": "pkg:npm/unique-slug@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/unique-slug/issues",
@@ -44508,7 +44508,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unit-compare@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnspragg%2Funit-compare.git",
+      "purl": "pkg:npm/unit-compare@1.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/nspragg/unit-compare/issues",
@@ -44543,7 +44543,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/universalify@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FRyanZim%2Funiversalify.git",
+      "purl": "pkg:npm/universalify@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/RyanZim/universalify/issues",
@@ -44735,7 +44735,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/unzipper@0.9.15?vcs_url=https%3A%2F%2Fgithub.com%2FZJONSSON%2Fnode-unzipper.git",
+      "purl": "pkg:npm/unzipper@0.9.15",
       "externalReferences": [
         {
           "url": "https://github.com/ZJONSSON/node-unzipper/issues",
@@ -44783,7 +44783,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uri-js@4.4.1?vcs_url=http%3A%2F%2Fgithub.com%2Fgarycourt%2Furi-js",
+      "purl": "pkg:npm/uri-js@4.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/garycourt/uri-js/issues",
@@ -45023,7 +45023,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/utf8-byte-length@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fparshap%2Futf8-byte-length.git",
+      "purl": "pkg:npm/utf8-byte-length@1.0.4",
       "externalReferences": [
         {
           "url": "https://github.com/parshap/utf8-byte-length/issues",
@@ -45058,7 +45058,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/util-deprecate/issues",
@@ -45106,7 +45106,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/util@0.12.5?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fnode-util",
+      "purl": "pkg:npm/util@0.12.5",
       "externalReferences": [
         {
           "url": "https://github.com/browserify/node-util/issues",
@@ -45161,7 +45161,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/utils-merge@1.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fjaredhanson%2Futils-merge.git",
+      "purl": "pkg:npm/utils-merge@1.0.1",
       "externalReferences": [
         {
           "url": "http://github.com/jaredhanson/utils-merge/issues",
@@ -45208,7 +45208,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@3.4.0?vcs_url=https%3A%2F%2Fgithub.com%2Fuuidjs%2Fuuid.git",
+      "purl": "pkg:npm/uuid@3.4.0",
       "externalReferences": [
         {
           "url": "https://github.com/uuidjs/uuid/issues",
@@ -45255,7 +45255,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/uuid@8.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Fuuidjs%2Fuuid.git",
+      "purl": "pkg:npm/uuid@8.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/uuidjs/uuid/issues",
@@ -45447,7 +45447,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/validator@13.11.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvalidatorjs%2Fvalidator.js.git",
+      "purl": "pkg:npm/validator@13.11.0",
       "externalReferences": [
         {
           "url": "https://github.com/validatorjs/validator.js/issues",
@@ -45542,7 +45542,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/verror@1.10.0?vcs_url=git%3A%2F%2Fgithub.com%2Fdavepacheco%2Fnode-verror.git",
+      "purl": "pkg:npm/verror@1.10.0",
       "externalReferences": [
         {
           "url": "https://github.com/davepacheco/node-verror/issues",
@@ -45684,7 +45684,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/walk@2.3.15?vcs_url=https%3A%2F%2Fgit.coolaj86.com%2Fcoolaj86%2Ffs-walk.js.git",
+      "purl": "pkg:npm/walk@2.3.15",
       "externalReferences": [
         {
           "url": "https://git.coolaj86.com/coolaj86/fs-walk.js/issues",
@@ -45732,7 +45732,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/walkdir@0.0.11?vcs_url=git%3A%2F%2Fgithub.com%2Fsoldair%2Fnode-walkdir.git",
+      "purl": "pkg:npm/walkdir@0.0.11",
       "externalReferences": [
         {
           "url": "https://github.com/soldair/node-walkdir/issues",
@@ -46740,7 +46740,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which-boxed-primitive@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fwhich-boxed-primitive.git",
+      "purl": "pkg:npm/which-boxed-primitive@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/which-boxed-primitive/issues",
@@ -46788,7 +46788,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which-collection@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fwhich-collection.git",
+      "purl": "pkg:npm/which-collection@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/which-collection/issues",
@@ -46836,7 +46836,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which-module@2.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnexdrew%2Fwhich-module.git",
+      "purl": "pkg:npm/which-module@2.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/nexdrew/which-module/issues",
@@ -46932,7 +46932,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which-typed-array@1.1.15?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fwhich-typed-array.git",
+      "purl": "pkg:npm/which-typed-array@1.1.15",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/which-typed-array/issues",
@@ -46980,7 +46980,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@1.3.1?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-which.git",
+      "purl": "pkg:npm/which@1.3.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-which/issues",
@@ -47028,7 +47028,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-which.git",
+      "purl": "pkg:npm/which@2.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/node-which/issues",
@@ -47076,7 +47076,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/which@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git",
+      "purl": "pkg:npm/which@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/npm/node-which/issues",
@@ -47124,7 +47124,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wide-align@1.1.5?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align",
+      "purl": "pkg:npm/wide-align@1.1.5",
       "externalReferences": [
         {
           "url": "https://github.com/iarna/wide-align/issues",
@@ -47220,7 +47220,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/winston@3.13.0?vcs_url=https%3A%2F%2Fgithub.com%2Fwinstonjs%2Fwinston.git",
+      "purl": "pkg:npm/winston@3.13.0",
       "externalReferences": [
         {
           "url": "https://github.com/winstonjs/winston/issues",
@@ -47268,7 +47268,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/with@7.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fpugjs%2Fwith.git",
+      "purl": "pkg:npm/with@7.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/pugjs/with/issues",
@@ -47316,7 +47316,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wkx@0.5.0?vcs_url=http%3A%2F%2Fgithub.com%2Fcschwarz%2Fwkx.git",
+      "purl": "pkg:npm/wkx@0.5.0",
       "externalReferences": [
         {
           "url": "https://github.com/cschwarz/wkx/issues",
@@ -47364,7 +47364,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wordwrap@0.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-wordwrap.git",
+      "purl": "pkg:npm/wordwrap@0.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-wordwrap/issues",
@@ -47412,7 +47412,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wordwrap@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-wordwrap.git",
+      "purl": "pkg:npm/wordwrap@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/substack/node-wordwrap/issues",
@@ -47652,7 +47652,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/wrappy@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy",
+      "purl": "pkg:npm/wrappy@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/npm/wrappy/issues",
@@ -47940,7 +47940,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yallist@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git",
+      "purl": "pkg:npm/yallist@3.1.1",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/yallist/issues",
@@ -47988,7 +47988,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git",
+      "purl": "pkg:npm/yallist@4.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/yallist/issues",
@@ -48036,7 +48036,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yaml-schema-validator@1.2.3?vcs_url=https%3A%2F%2Fgithub.com%2FketanTechracers%2Fschema-validator",
+      "purl": "pkg:npm/yaml-schema-validator@1.2.3",
       "externalReferences": [
         {
           "url": "https://github.com/ketanTechracers/schema-validator/issues",
@@ -48132,7 +48132,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs-parser@18.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Fyargs%2Fyargs-parser.git",
+      "purl": "pkg:npm/yargs-parser@18.1.3",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/yargs-parser/issues",
@@ -48179,7 +48179,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs@13.3.2?vcs_url=https%3A%2F%2Fgithub.com%2Fyargs%2Fyargs.git",
+      "purl": "pkg:npm/yargs@13.3.2",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/yargs/issues",
@@ -48226,7 +48226,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yargs@15.4.1?vcs_url=https%3A%2F%2Fgithub.com%2Fyargs%2Fyargs.git",
+      "purl": "pkg:npm/yargs@15.4.1",
       "externalReferences": [
         {
           "url": "https://github.com/yargs/yargs/issues",
@@ -48274,7 +48274,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/yauzl@2.10.0?vcs_url=https%3A%2F%2Fgithub.com%2Fthejoshwolfe%2Fyauzl.git",
+      "purl": "pkg:npm/yauzl@2.10.0",
       "externalReferences": [
         {
           "url": "https://github.com/thejoshwolfe/yauzl/issues",
@@ -48370,7 +48370,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/z85@0.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmsealand%2Fz85.node.git",
+      "purl": "pkg:npm/z85@0.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/msealand/z85.node/issues",
@@ -48418,7 +48418,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/zip-stream@1.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Farchiverjs%2Fnode-zip-stream.git",
+      "purl": "pkg:npm/zip-stream@1.2.0",
       "externalReferences": [
         {
           "url": "https://github.com/archiverjs/node-zip-stream/issues",
@@ -48466,7 +48466,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/zod@3.22.4?vcs_url=https%3A%2F%2Fgithub.com%2Fcolinhacks%2Fzod",
+      "purl": "pkg:npm/zod@3.22.4",
       "externalReferences": [
         {
           "url": "https://github.com/colinhacks/zod/issues",

@@ -77,7 +77,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40db-ui/base@0.29.2?vcs_url=https%3A%2F%2Fgithub.com%2Fdb-ui%2Fbase</purl>
+      <purl>pkg:npm/%40db-ui/base@0.29.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/db-ui/base/issues</url>

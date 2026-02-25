@@ -142,7 +142,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git",
+      "purl": "pkg:npm/has-symbols@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-symbols/issues",
@@ -176,7 +176,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-tostringtag.git",
+      "purl": "pkg:npm/has-tostringtag@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-tostringtag/issues",
@@ -210,7 +210,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
+      "purl": "pkg:npm/is-string@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",
@@ -244,7 +244,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
+      "purl": "pkg:npm/is-string@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",

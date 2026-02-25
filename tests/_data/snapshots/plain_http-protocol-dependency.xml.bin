@@ -149,7 +149,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40mapbox/node-pre-gyp@1.0.11?vcs_url=git%3A%2F%2Fgithub.com%2Fmapbox%2Fnode-pre-gyp.git</purl>
+      <purl>pkg:npm/%40mapbox/node-pre-gyp@1.0.11</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mapbox/node-pre-gyp/issues</url>
@@ -176,7 +176,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/agent@2.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fagent.git</purl>
+      <purl>pkg:npm/%40npmcli/agent@2.2.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/agent/issues</url>
@@ -203,7 +203,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40npmcli/fs@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs.git</purl>
+      <purl>pkg:npm/%40npmcli/fs@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs/issues</url>
@@ -230,7 +230,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/dom@1.15.10?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Fdom.git</purl>
+      <purl>pkg:npm/%40oozcitak/dom@1.15.10</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/dom/issues</url>
@@ -257,7 +257,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/infra@1.0.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Foozcitak%2Finfra.git</purl>
+      <purl>pkg:npm/%40oozcitak/infra@1.0.8</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/infra/issues</url>
@@ -284,7 +284,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/url@1.0.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Foozcitak%2Furl.git</purl>
+      <purl>pkg:npm/%40oozcitak/url@1.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/url/issues</url>
@@ -311,7 +311,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40oozcitak/util@8.3.8?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Futil.git</purl>
+      <purl>pkg:npm/%40oozcitak/util@8.3.8</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/util/issues</url>
@@ -389,7 +389,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/abbrev@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fabbrev-js.git</purl>
+      <purl>pkg:npm/abbrev@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/abbrev-js/issues</url>
@@ -415,7 +415,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/agent-base@6.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-agent-base.git</purl>
+      <purl>pkg:npm/agent-base@6.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/node-agent-base/issues</url>
@@ -441,7 +441,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/agent-base@7.1.1?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fagent-base</purl>
+      <purl>pkg:npm/agent-base@7.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -675,7 +675,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/aproba@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Faproba</purl>
+      <purl>pkg:npm/aproba@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/aproba/issues</url>
@@ -701,7 +701,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/are-we-there-yet@2.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fare-we-there-yet.git</purl>
+      <purl>pkg:npm/are-we-there-yet@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/are-we-there-yet/issues</url>
@@ -752,7 +752,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/balanced-match@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbalanced-match.git</purl>
+      <purl>pkg:npm/balanced-match@1.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/balanced-match/issues</url>
@@ -778,7 +778,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/bindings@1.5.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-bindings.git</purl>
+      <purl>pkg:npm/bindings@1.5.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/node-bindings/issues</url>
@@ -804,7 +804,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/brace-expansion@1.1.11?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbrace-expansion.git</purl>
+      <purl>pkg:npm/brace-expansion@1.1.11</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/brace-expansion/issues</url>
@@ -830,7 +830,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/brace-expansion@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fjuliangruber%2Fbrace-expansion.git</purl>
+      <purl>pkg:npm/brace-expansion@2.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juliangruber/brace-expansion/issues</url>
@@ -856,7 +856,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cacache@18.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fcacache.git</purl>
+      <purl>pkg:npm/cacache@18.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/cacache/issues</url>
@@ -882,7 +882,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/chownr@2.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fchownr.git</purl>
+      <purl>pkg:npm/chownr@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/chownr/issues</url>
@@ -986,7 +986,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/color-support@1.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fcolor-support.git</purl>
+      <purl>pkg:npm/color-support@1.1.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/color-support/issues</url>
@@ -1012,7 +1012,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/commander@2.20.3?vcs_url=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js.git</purl>
+      <purl>pkg:npm/commander@2.20.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tj/commander.js/issues</url>
@@ -1038,7 +1038,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/concat-map@0.0.1?vcs_url=git%3A%2F%2Fgithub.com%2Fsubstack%2Fnode-concat-map.git</purl>
+      <purl>pkg:npm/concat-map@0.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/substack/node-concat-map/issues</url>
@@ -1064,7 +1064,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/console-control-strings@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fconsole-control-strings</purl>
+      <purl>pkg:npm/console-control-strings@1.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/console-control-strings/issues</url>
@@ -1167,7 +1167,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/detect-libc@2.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Flovell%2Fdetect-libc</purl>
+      <purl>pkg:npm/detect-libc@2.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/lovell/detect-libc/issues</url>
@@ -1193,7 +1193,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/discontinuous-range@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fdtudury%2Fdiscontinuous-range.git</purl>
+      <purl>pkg:npm/discontinuous-range@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/dtudury/discontinuous-range/issues</url>
@@ -1245,7 +1245,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/emoji-regex@8.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
+      <purl>pkg:npm/emoji-regex@8.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -1271,7 +1271,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/emoji-regex@9.2.2?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Femoji-regex.git</purl>
+      <purl>pkg:npm/emoji-regex@9.2.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/emoji-regex/issues</url>
@@ -1349,7 +1349,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/err-code@2.0.3?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fjs-err-code.git</purl>
+      <purl>pkg:npm/err-code@2.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/js-err-code/issues/</url>
@@ -1375,7 +1375,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/esprima@4.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git</purl>
+      <purl>pkg:npm/esprima@4.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jquery/esprima/issues</url>
@@ -1401,7 +1401,7 @@
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/exponential-backoff@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fcoveo%2Fexponential-backoff.git</purl>
+      <purl>pkg:npm/exponential-backoff@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/coveo/exponential-backoff/issues</url>
@@ -1427,7 +1427,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/extend@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fjustmoon%2Fnode-extend.git</purl>
+      <purl>pkg:npm/extend@3.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/justmoon/node-extend/issues</url>
@@ -1453,7 +1453,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fast-deep-equal@3.1.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fepoberezkin%2Ffast-deep-equal.git</purl>
+      <purl>pkg:npm/fast-deep-equal@3.1.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/fast-deep-equal/issues</url>
@@ -1479,7 +1479,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/file-uri-to-path@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Ffile-uri-to-path.git</purl>
+      <purl>pkg:npm/file-uri-to-path@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/file-uri-to-path/issues</url>
@@ -1505,7 +1505,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/foreground-child@3.1.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftapjs%2Fforeground-child.git</purl>
+      <purl>pkg:npm/foreground-child@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/foreground-child/issues</url>
@@ -1531,7 +1531,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs-minipass@2.1.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git</purl>
+      <purl>pkg:npm/fs-minipass@2.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs-minipass/issues</url>
@@ -1557,7 +1557,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs-minipass@3.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Ffs-minipass.git</purl>
+      <purl>pkg:npm/fs-minipass@3.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/fs-minipass/issues</url>
@@ -1583,7 +1583,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/fs.realpath@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Ffs.realpath.git</purl>
+      <purl>pkg:npm/fs.realpath@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/fs.realpath/issues</url>
@@ -1609,7 +1609,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/gauge@3.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fgauge</purl>
+      <purl>pkg:npm/gauge@3.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/gauge/issues</url>
@@ -1635,7 +1635,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/glob@10.4.1?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-glob.git</purl>
+      <purl>pkg:npm/glob@10.4.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-glob/issues</url>
@@ -1661,7 +1661,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/glob@7.2.3?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-glob.git</purl>
+      <purl>pkg:npm/glob@7.2.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-glob/issues</url>
@@ -1686,7 +1686,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs</purl>
+      <purl>pkg:npm/graceful-fs@4.2.11</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
@@ -1712,7 +1712,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/has-unicode@2.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fhas-unicode</purl>
+      <purl>pkg:npm/has-unicode@2.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/has-unicode/issues</url>
@@ -1764,7 +1764,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/http-proxy-agent@7.0.2?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttp-proxy-agent</purl>
+      <purl>pkg:npm/http-proxy-agent@7.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -1790,7 +1790,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/https-proxy-agent@5.0.1?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Fnode-https-proxy-agent.git</purl>
+      <purl>pkg:npm/https-proxy-agent@5.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/node-https-proxy-agent/issues</url>
@@ -1816,7 +1816,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/https-proxy-agent@7.0.4?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fhttps-proxy-agent</purl>
+      <purl>pkg:npm/https-proxy-agent@7.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -1842,7 +1842,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/iconv-lite@0.6.3?vcs_url=git%3A%2F%2Fgithub.com%2Fashtuchkin%2Ficonv-lite.git</purl>
+      <purl>pkg:npm/iconv-lite@0.6.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
@@ -1868,7 +1868,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/imurmurhash@0.1.4?vcs_url=https%3A%2F%2Fgithub.com%2Fjensyt%2Fimurmurhash-js</purl>
+      <purl>pkg:npm/imurmurhash@0.1.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jensyt/imurmurhash-js/issues</url>
@@ -1920,7 +1920,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inflight@1.0.6?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Finflight.git</purl>
+      <purl>pkg:npm/inflight@1.0.6</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inflight/issues</url>
@@ -1971,7 +1971,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ip-address@9.0.5?vcs_url=git%3A%2F%2Fgithub.com%2Fbeaugunderson%2Fip-address.git</purl>
+      <purl>pkg:npm/ip-address@9.0.5</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/beaugunderson/ip-address/issues</url>
@@ -2023,7 +2023,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-lambda@1.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fwatson%2Fis-lambda.git</purl>
+      <purl>pkg:npm/is-lambda@1.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/watson/is-lambda/issues</url>
@@ -2049,7 +2049,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/isexe@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fisexe.git</purl>
+      <purl>pkg:npm/isexe@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/isexe/issues</url>
@@ -2101,7 +2101,7 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jackspeak@3.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fjackspeak.git</purl>
+      <purl>pkg:npm/jackspeak@3.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/jackspeak/issues</url>
@@ -2153,7 +2153,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/jsbn@1.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Fandyperlitch%2Fjsbn.git</purl>
+      <purl>pkg:npm/jsbn@1.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/andyperlitch/jsbn/issues</url>
@@ -2179,7 +2179,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/json-schema-traverse@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fepoberezkin%2Fjson-schema-traverse.git</purl>
+      <purl>pkg:npm/json-schema-traverse@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/epoberezkin/json-schema-traverse/issues</url>
@@ -2205,7 +2205,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/libxmljs2@0.33.0?vcs_url=http%3A%2F%2Fgithub.com%2Fmarudor%2Flibxmljs2.git</purl>
+      <purl>pkg:npm/libxmljs2@0.33.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/marudor/libxmljs2/issues</url>
@@ -2231,7 +2231,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/lru-cache@10.2.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-lru-cache.git</purl>
+      <purl>pkg:npm/lru-cache@10.2.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-lru-cache/issues</url>
@@ -2283,7 +2283,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/make-fetch-happen@13.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fmake-fetch-happen.git</purl>
+      <purl>pkg:npm/make-fetch-happen@13.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/make-fetch-happen/issues</url>
@@ -2309,7 +2309,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minimatch@3.1.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git</purl>
+      <purl>pkg:npm/minimatch@3.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minimatch/issues</url>
@@ -2335,7 +2335,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minimatch@9.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fminimatch.git</purl>
+      <purl>pkg:npm/minimatch@9.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minimatch/issues</url>
@@ -2387,7 +2387,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-fetch@3.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fminipass-fetch.git</purl>
+      <purl>pkg:npm/minipass-fetch@3.0.5</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/minipass-fetch/issues</url>
@@ -2413,7 +2413,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-flush@1.0.5?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-flush.git</purl>
+      <purl>pkg:npm/minipass-flush@1.0.5</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-flush/issues</url>
@@ -2451,7 +2451,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass-sized@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass-sized.git</purl>
+      <purl>pkg:npm/minipass-sized@1.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass-sized/issues</url>
@@ -2477,7 +2477,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass@3.3.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git</purl>
+      <purl>pkg:npm/minipass@3.3.6</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
@@ -2503,7 +2503,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minipass@5.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminipass.git</purl>
+      <purl>pkg:npm/minipass@5.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minipass/issues</url>
@@ -2555,7 +2555,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/minizlib@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fminizlib.git</purl>
+      <purl>pkg:npm/minizlib@2.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/minizlib/issues</url>
@@ -2580,7 +2580,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/mkdirp@1.0.4?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-mkdirp.git</purl>
+      <purl>pkg:npm/mkdirp@1.0.4</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-mkdirp/issues</url>
@@ -2656,7 +2656,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nan@2.18.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnan.git</purl>
+      <purl>pkg:npm/nan@2.18.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/nan/issues</url>
@@ -2682,7 +2682,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nearley@2.20.1?vcs_url=https%3A%2F%2Fgithub.com%2Fhardmath123%2Fnearley.git</purl>
+      <purl>pkg:npm/nearley@2.20.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/hardmath123/nearley/issues</url>
@@ -2759,7 +2759,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/node-gyp@10.1.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fnode-gyp.git</purl>
+      <purl>pkg:npm/node-gyp@10.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/node-gyp/issues</url>
@@ -2785,7 +2785,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@5.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
+      <purl>pkg:npm/nopt@5.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -2811,7 +2811,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/nopt@7.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnopt.git</purl>
+      <purl>pkg:npm/nopt@7.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/nopt/issues</url>
@@ -2837,7 +2837,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/npmlog@5.0.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpmlog.git</purl>
+      <purl>pkg:npm/npmlog@5.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/npmlog/issues</url>
@@ -2889,7 +2889,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/once@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fonce</purl>
+      <purl>pkg:npm/once@1.4.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/once/issues</url>
@@ -2941,7 +2941,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/packageurl-js@1.2.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpackage-url%2Fpackageurl-js.git</purl>
+      <purl>pkg:npm/packageurl-js@1.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/package-url/packageurl-js/issues</url>
@@ -3019,7 +3019,7 @@
           <id>BlueOak-1.0.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-scurry@1.11.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fpath-scurry</purl>
+      <purl>pkg:npm/path-scurry@1.11.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/path-scurry/issues</url>
@@ -3045,7 +3045,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/proc-log@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
+      <purl>pkg:npm/proc-log@3.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
@@ -3071,7 +3071,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/proc-log@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fproc-log.git</purl>
+      <purl>pkg:npm/proc-log@4.2.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/proc-log/issues</url>
@@ -3097,7 +3097,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/promise-retry@2.0.1?vcs_url=git%3A%2F%2Fgithub.com%2FIndigoUnited%2Fnode-promise-retry.git</purl>
+      <purl>pkg:npm/promise-retry@2.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/IndigoUnited/node-promise-retry/issues/</url>
@@ -3123,7 +3123,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/punycode@2.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fmathiasbynens%2Fpunycode.js.git</purl>
+      <purl>pkg:npm/punycode@2.3.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/mathiasbynens/punycode.js/issues</url>
@@ -3149,7 +3149,7 @@
           <id>CC0-1.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/railroad-diagrams@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftabatkins%2Frailroad-diagrams.git</purl>
+      <purl>pkg:npm/railroad-diagrams@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tabatkins/railroad-diagrams/issues</url>
@@ -3175,7 +3175,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/randexp@0.4.6?vcs_url=git%3A%2F%2Fgithub.com%2Ffent%2Frandexp.js.git</purl>
+      <purl>pkg:npm/randexp@0.4.6</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/fent/randexp.js/issues</url>
@@ -3200,7 +3200,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream</purl>
+      <purl>pkg:npm/readable-stream@3.6.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/readable-stream/issues</url>
@@ -3252,7 +3252,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ret@0.1.15?vcs_url=git%3A%2F%2Fgithub.com%2Ffent%2Fret.js.git</purl>
+      <purl>pkg:npm/ret@0.1.15</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/fent/ret.js/issues</url>
@@ -3278,7 +3278,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/retry@0.12.0?vcs_url=git%3A%2F%2Fgithub.com%2Ftim-kos%2Fnode-retry.git</purl>
+      <purl>pkg:npm/retry@0.12.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tim-kos/node-retry/issues</url>
@@ -3330,7 +3330,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git</purl>
+      <purl>pkg:npm/safe-buffer@5.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/feross/safe-buffer/issues</url>
@@ -3356,7 +3356,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safer-buffer@2.1.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FChALkeR%2Fsafer-buffer.git</purl>
+      <purl>pkg:npm/safer-buffer@2.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/ChALkeR/safer-buffer/issues</url>
@@ -3382,7 +3382,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/schemes@1.4.0?vcs_url=git%3A%2F%2Fgithub.com%2FMunter%2Fschemes.git</purl>
+      <purl>pkg:npm/schemes@1.4.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/Munter/schemes/issues</url>
@@ -3408,7 +3408,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@6.3.1?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@6.3.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -3434,7 +3434,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@7.6.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@7.6.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -3460,7 +3460,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fset-blocking.git</purl>
+      <purl>pkg:npm/set-blocking@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/set-blocking/issues</url>
@@ -3538,7 +3538,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/signal-exit@3.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
+      <purl>pkg:npm/signal-exit@3.0.7</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
@@ -3564,7 +3564,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/signal-exit@4.1.0?vcs_url=https%3A%2F%2Fgithub.com%2Ftapjs%2Fsignal-exit.git</purl>
+      <purl>pkg:npm/signal-exit@4.1.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/tapjs/signal-exit/issues</url>
@@ -3590,7 +3590,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/smart-buffer@4.2.0?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsmart-buffer.git</purl>
+      <purl>pkg:npm/smart-buffer@4.2.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/smart-buffer/issues</url>
@@ -3616,7 +3616,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/smtp-address-parser@1.0.10?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fgene-hightower%2Fsmtp-address-parser.git</purl>
+      <purl>pkg:npm/smtp-address-parser@1.0.10</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/gene-hightower/smtp-address-parser/issues</url>
@@ -3642,7 +3642,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks-proxy-agent@8.0.3?vcs_url=https%3A%2F%2Fgithub.com%2FTooTallNate%2Fproxy-agents.git%23packages%2Fsocks-proxy-agent</purl>
+      <purl>pkg:npm/socks-proxy-agent@8.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/proxy-agents/issues</url>
@@ -3668,7 +3668,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/socks@2.8.3?vcs_url=https%3A%2F%2Fgithub.com%2FJoshGlazebrook%2Fsocks.git</purl>
+      <purl>pkg:npm/socks@2.8.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/JoshGlazebrook/socks/issues</url>
@@ -3772,7 +3772,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/sprintf-js@1.0.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
+      <purl>pkg:npm/sprintf-js@1.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -3798,7 +3798,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/sprintf-js@1.1.3?vcs_url=https%3A%2F%2Fgithub.com%2Falexei%2Fsprintf.js.git</purl>
+      <purl>pkg:npm/sprintf-js@1.1.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/alexei/sprintf.js/issues</url>
@@ -3824,7 +3824,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ssri@10.0.6?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fssri.git</purl>
+      <purl>pkg:npm/ssri@10.0.6</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/ssri/issues</url>
@@ -3849,7 +3849,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git</purl>
+      <purl>pkg:npm/string_decoder@1.3.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/string_decoder/issues</url>
@@ -3979,7 +3979,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tar@6.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-tar.git</purl>
+      <purl>pkg:npm/tar@6.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-tar/issues</url>
@@ -4005,7 +4005,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tr46@0.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FSebmaster%2Ftr46.js.git</purl>
+      <purl>pkg:npm/tr46@0.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/Sebmaster/tr46.js/issues</url>
@@ -4031,7 +4031,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-filename@3.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-filename.git</purl>
+      <purl>pkg:npm/unique-filename@3.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/unique-filename/issues</url>
@@ -4057,7 +4057,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/unique-slug@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Funique-slug.git</purl>
+      <purl>pkg:npm/unique-slug@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/unique-slug/issues</url>
@@ -4083,7 +4083,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/uri-js@4.4.1?vcs_url=http%3A%2F%2Fgithub.com%2Fgarycourt%2Furi-js</purl>
+      <purl>pkg:npm/uri-js@4.4.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/garycourt/uri-js/issues</url>
@@ -4109,7 +4109,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git</purl>
+      <purl>pkg:npm/util-deprecate@1.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/util-deprecate/issues</url>
@@ -4187,7 +4187,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/which@2.0.2?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-which.git</purl>
+      <purl>pkg:npm/which@2.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-which/issues</url>
@@ -4213,7 +4213,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/which@4.0.0?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-which.git</purl>
+      <purl>pkg:npm/which@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-which/issues</url>
@@ -4239,7 +4239,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wide-align@1.1.5?vcs_url=https%3A%2F%2Fgithub.com%2Fiarna%2Fwide-align</purl>
+      <purl>pkg:npm/wide-align@1.1.5</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/iarna/wide-align/issues</url>
@@ -4317,7 +4317,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/wrappy@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fwrappy</purl>
+      <purl>pkg:npm/wrappy@1.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/wrappy/issues</url>
@@ -4343,7 +4343,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/xmlbuilder2@3.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Foozcitak%2Fxmlbuilder2.git</purl>
+      <purl>pkg:npm/xmlbuilder2@3.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/oozcitak/xmlbuilder2/issues</url>
@@ -4369,7 +4369,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yallist@4.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fisaacs%2Fyallist.git</purl>
+      <purl>pkg:npm/yallist@4.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/yallist/issues</url>

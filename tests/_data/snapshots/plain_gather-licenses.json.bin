@@ -104,7 +104,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40db-ui/base@0.29.2?vcs_url=https%3A%2F%2Fgithub.com%2Fdb-ui%2Fbase",
+      "purl": "pkg:npm/%40db-ui/base@0.29.2",
       "externalReferences": [
         {
           "url": "https://github.com/db-ui/base/issues",

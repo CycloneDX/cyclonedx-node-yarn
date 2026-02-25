@@ -116,7 +116,7 @@
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/bundle-dependencies@1.0.2?vcs_url=https%3A%2F%2Fgithub.com%2Fgajus%2Fbundle-dependencies</purl>
+      <purl>pkg:npm/bundle-dependencies@1.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/gajus/bundle-dependencies/issues</url>
@@ -168,7 +168,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/cliui@3.2.0?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fcliui.git</purl>
+      <purl>pkg:npm/cliui@3.2.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/cliui/issues</url>
@@ -297,7 +297,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/function-bind@1.1.2?vcs_url=https%3A%2F%2Fgithub.com%2FRaynos%2Ffunction-bind.git</purl>
+      <purl>pkg:npm/function-bind@1.1.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/Raynos/function-bind/issues</url>
@@ -322,7 +322,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/get-caller-file@1.0.3?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fstefanpenner%2Fget-caller-file.git</purl>
+      <purl>pkg:npm/get-caller-file@1.0.3</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/stefanpenner/get-caller-file/issues</url>
@@ -347,7 +347,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/graceful-fs@4.2.11?vcs_url=https%3A%2F%2Fgithub.com%2Fisaacs%2Fnode-graceful-fs</purl>
+      <purl>pkg:npm/graceful-fs@4.2.11</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/node-graceful-fs/issues</url>
@@ -373,7 +373,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/hasown@2.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2FhasOwn.git</purl>
+      <purl>pkg:npm/hasown@2.0.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/inspect-js/hasOwn/issues</url>
@@ -399,7 +399,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/hosted-git-info@2.8.9?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnpm%2Fhosted-git-info.git</purl>
+      <purl>pkg:npm/hosted-git-info@2.8.9</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/hosted-git-info/issues</url>
@@ -451,7 +451,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-arrayish@0.2.1?vcs_url=https%3A%2F%2Fgithub.com%2Fqix-%2Fnode-is-arrayish.git</purl>
+      <purl>pkg:npm/is-arrayish@0.2.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/qix-/node-is-arrayish/issues</url>
@@ -477,7 +477,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/is-core-module@2.13.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fis-core-module.git</purl>
+      <purl>pkg:npm/is-core-module@2.13.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/inspect-js/is-core-module/issues</url>
@@ -633,7 +633,7 @@
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/normalize-package-data@2.5.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnpm%2Fnormalize-package-data.git</purl>
+      <purl>pkg:npm/normalize-package-data@2.5.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/normalize-package-data/issues</url>
@@ -763,7 +763,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/path-parse@1.0.7?vcs_url=https%3A%2F%2Fgithub.com%2Fjbgutierrez%2Fpath-parse.git</purl>
+      <purl>pkg:npm/path-parse@1.0.7</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jbgutierrez/path-parse/issues</url>
@@ -945,7 +945,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-directory@2.1.1?vcs_url=git%3A%2F%2Fgithub.com%2Ftroygoode%2Fnode-require-directory.git</purl>
+      <purl>pkg:npm/require-directory@2.1.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/troygoode/node-require-directory/issues/</url>
@@ -971,7 +971,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/require-main-filename@1.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2Fyargs%2Frequire-main-filename.git</purl>
+      <purl>pkg:npm/require-main-filename@1.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/require-main-filename/issues</url>
@@ -1023,7 +1023,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/semver@5.7.2?vcs_url=https%3A%2F%2Fgithub.com%2Fnpm%2Fnode-semver.git</purl>
+      <purl>pkg:npm/semver@5.7.2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/npm/node-semver/issues</url>
@@ -1049,7 +1049,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/set-blocking@2.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fyargs%2Fset-blocking.git</purl>
+      <purl>pkg:npm/set-blocking@2.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/set-blocking/issues</url>
@@ -1256,7 +1256,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/supports-preserve-symlinks-flag@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fnode-supports-preserve-symlinks-flag.git</purl>
+      <purl>pkg:npm/supports-preserve-symlinks-flag@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/inspect-js/node-supports-preserve-symlinks-flag/issues</url>
@@ -1308,7 +1308,7 @@
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/which-module@1.0.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fnexdrew%2Fwhich-module.git</purl>
+      <purl>pkg:npm/which-module@1.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nexdrew/which-module/issues</url>
@@ -1437,7 +1437,7 @@
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/yargs@4.8.1?vcs_url=http%3A%2F%2Fgithub.com%2Fyargs%2Fyargs.git</purl>
+      <purl>pkg:npm/yargs@4.8.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/yargs/yargs/issues</url>
