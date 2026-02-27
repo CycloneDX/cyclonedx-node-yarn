@@ -200,7 +200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:^10.0.0-rc.2":
+"@cyclonedx/cyclonedx-library@npm:10.0.0-rc.2":
   version: 10.0.0-rc.2
   resolution: "@cyclonedx/cyclonedx-library@npm:10.0.0-rc.2"
   peerDependencies:
@@ -262,7 +262,7 @@ __metadata:
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
     "@cyclonedx/cyclonedx-esbuild": "npm:1.0.0"
-    "@cyclonedx/cyclonedx-library": "npm:^10.0.0-rc.2"
+    "@cyclonedx/cyclonedx-library": "npm:10.0.0-rc.2"
     "@eslint/js": "npm:9.39.2"
     "@types/hosted-git-info": "npm:^3.0.5"
     "@types/mocha": "npm:^10.0.6"
@@ -298,9 +298,9 @@ __metadata:
     neostandard: "npm:0.12.2"
     normalize-package-data: "npm:8.0.0"
     npm-run-all2: "npm:^8.0.0"
-    packageurl-js: "npm:^2.0.1"
+    packageurl-js: "npm:2.0.1"
     rimraf: "npm:^6.0.1"
-    spdx-expression-parse: "npm:^3.0.1 || ^4.0.0"
+    spdx-expression-parse: "npm:4.0.0"
     typanion: "npm:^3.14.0"
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.53.0"
@@ -5960,7 +5960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"packageurl-js@npm:^2.0.1":
+"packageurl-js@npm:2.0.1, packageurl-js@npm:^2.0.1":
   version: 2.0.1
   resolution: "packageurl-js@npm:2.0.1"
   checksum: 10c0/8a45bc925243bea0fd7f027b54bf7c363ab70dae2b01676d67856eb788352d7344f38b86c8cfa510410220c6848dc57bc152146bf6518fb06c272d3dbe003b55
@@ -6844,6 +6844,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"spdx-expression-parse@npm:4.0.0, spdx-expression-parse@npm:^3.0.1 || ^4, spdx-expression-parse@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "spdx-expression-parse@npm:4.0.0"
+  dependencies:
+    spdx-exceptions: "npm:^2.1.0"
+    spdx-license-ids: "npm:^3.0.0"
+  checksum: 10c0/965c487e77f4fb173f1c471f3eef4eb44b9f0321adc7f93d95e7620da31faa67d29356eb02523cd7df8a7fc1ec8238773cdbf9e45bd050329d2b26492771b736
+  languageName: node
+  linkType: hard
+
 "spdx-expression-parse@npm:^3.0.0":
   version: 3.0.1
   resolution: "spdx-expression-parse@npm:3.0.1"
@@ -6851,16 +6861,6 @@ __metadata:
     spdx-exceptions: "npm:^2.1.0"
     spdx-license-ids: "npm:^3.0.0"
   checksum: 10c0/6f8a41c87759fa184a58713b86c6a8b028250f158159f1d03ed9d1b6ee4d9eefdc74181c8ddc581a341aa971c3e7b79e30b59c23b05d2436d5de1c30bdef7171
-  languageName: node
-  linkType: hard
-
-"spdx-expression-parse@npm:^3.0.1 || ^4, spdx-expression-parse@npm:^3.0.1 || ^4.0.0, spdx-expression-parse@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "spdx-expression-parse@npm:4.0.0"
-  dependencies:
-    spdx-exceptions: "npm:^2.1.0"
-    spdx-license-ids: "npm:^3.0.0"
-  checksum: 10c0/965c487e77f4fb173f1c471f3eef4eb44b9f0321adc7f93d95e7620da31faa67d29356eb02523cd7df8a7fc1ec8238773cdbf9e45bd050329d2b26492771b736
   languageName: node
   linkType: hard
 

@@ -55,7 +55,7 @@
     }
   ],
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^10.0.0-rc.2",
+    "@cyclonedx/cyclonedx-library": "10.0.0-rc.2",
     "@yarnpkg/cli": "^4",
     "@yarnpkg/core": "^4",
     "@yarnpkg/fslib": "^3",
@@ -63,8 +63,8 @@
     "clipanion": "^4.0.0-rc.2",
     "hosted-git-info": "9.0.2",
     "normalize-package-data": "8.0.0",
-    "packageurl-js": "^2.0.1",
-    "spdx-expression-parse": "^3.0.1 || ^4.0.0",
+    "packageurl-js": "2.0.1",
+    "spdx-expression-parse": "4.0.0",
     "typanion": "^3.14.0",
     "xmlbuilder2": "4.0.3"
   },
