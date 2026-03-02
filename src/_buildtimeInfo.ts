@@ -26,5 +26,5 @@ interface BuildtimeInfo {
 
 export async function getBuildtimeInfo (): Promise<BuildtimeInfo> {
   /* if this fails, run `yarn run build:gbti` in your dev-env */
-  return (await import('./__buildtimeInfo.json')).default satisfies BuildtimeInfo
+  return (await import('./__buildtimeInfo.json', {with:{type:'json'}})).default satisfies BuildtimeInfo
 }
