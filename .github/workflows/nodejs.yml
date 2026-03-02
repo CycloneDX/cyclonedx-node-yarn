@@ -191,14 +191,19 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '24'      # Current
-          - '22'      # LTS
+          - "25"      # Current
+          - '24'      # LTS
+          - '22'
           - '20'
           - "20.18.0" # lowest supported
         os:
           - 'ubuntu-latest'
           - 'windows-latest'
           - 'macos-latest'
+        include:
+          - node: "25"
+            experimental: true
+    continue-on-error: ${{ matrix.experimental == true }}
     timeout-minutes: 15
     steps:
       - name: Checkout
