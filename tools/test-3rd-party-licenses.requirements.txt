@@ -1,2 +1,2 @@
 # https://pypi.org/project/flict/
-flict==1.2.14
+licomp-toolkit==0.5.20
