@@ -56,8 +56,8 @@ function main (outputFile) {
   manifest.dependencies = {}
   // move deps to devDeps - for documentation purposes
   manifest.devDependencies = {
-    ...manifestSource.dependencies
-  //  ...manifestSource.devDependencies
+    ...manifestSource.dependencies,
+    ...manifestSource.devDependencies,
   }
 
   writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
