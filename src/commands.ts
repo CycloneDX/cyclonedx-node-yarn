@@ -18,19 +18,24 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
+import { Builders as FromNodePackageJsonBuilders,Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Factories as LicenseFactories } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import { ComponentType } from '@cyclonedx/cyclonedx-library/Enums'
-import { FromNodePackageJson as PJF, LicenseFactory } from '@cyclonedx/cyclonedx-library/Factories'
-import { JSON as SerializeJSON, JsonSerializer, type Types as SerializeTypes, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
-import { type CommandContext, Configuration, Project, YarnVersion } from '@yarnpkg/core'
+import type { CommandContext } from '@yarnpkg/core'
+import { Configuration, Project, YarnVersion } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
+import spdxExpressionParse from "spdx-expression-parse"
 import { isEnum } from 'typanion'
 
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
+import { PackageUrlFactory } from './factories'
 import { makeConsoleLogger } from './logger'
+
 
 const OutputStdOut = '-'
 
@@ -167,16 +172,16 @@ export class MakeSbomCommand extends Command<CommandContext> {
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
     await workspace.project.restoreInstallState()
 
-    const extRefFactory = new PJF.ExternalReferenceFactory()
+    const extRefFactory = new FromNodePackageJsonFactories.ExternalReferenceFactory()
 
     myConsole.log('LOG   | gathering BOM data ...')
     const bom = await (new BomBuilder(
-      new PJB.ToolBuilder(extRefFactory),
-      new PJB.ComponentBuilder(
+      new FromNodePackageJsonBuilders.ToolBuilder(extRefFactory),
+      new FromNodePackageJsonBuilders.ComponentBuilder(
         extRefFactory,
-        new LicenseFactory()
+        new LicenseFactories.LicenseFactory(spdxExpressionParse)
       ),
-      new PJF.PackageUrlFactory('npm'),
+      new PackageUrlFactory(),
       {
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,

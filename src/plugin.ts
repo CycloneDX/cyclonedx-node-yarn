@@ -23,6 +23,7 @@ import type { Plugin } from '@yarnpkg/core'
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import { MakeSbomCommand } from './commands'
 
+
 class CyclonedxCommand extends MakeSbomCommand {
   static override readonly paths = [
     ['cyclonedx'], // <-- this is the preferred entry point

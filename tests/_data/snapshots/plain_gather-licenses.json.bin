@@ -78,8 +78,7 @@
             "acknowledgement": "declared"
           }
         }
-      ],
-      "purl": "pkg:npm/demo-gather-licenses@0.0.0"
+      ]
     },
     "properties": [
       {
@@ -105,7 +104,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/%40db-ui/base@0.29.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdb-ui%2Fbase.git",
+      "purl": "pkg:npm/%40db-ui/base@0.29.2",
       "externalReferences": [
         {
           "url": "https://github.com/db-ui/base/issues",
