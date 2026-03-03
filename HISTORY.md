@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.3.0 - 2026-03-03
+
 * Fixed
   * Qualified PackageURLs
 * Changed
