@@ -11,7 +11,7 @@ mapfile -t ILS < <(jq -r '.ils[]' "$LICENSES_JSON")
 for IL in "${ILS[@]}"; do
   # we are explicitly attributing the authors in our NOTICE files -- NO further checks needed.
   [[ "$IL" == CC-BY* ]] && continue
-  # we are explicitly linking the original license in our NOTICE file -- NO further checks needed.
+  # we are explicitly citing/linking the original license in our NOTICE file -- NO further checks needed.
   [[ "$IL" == "BlueOak-1.0.0" ]] && continue
 
   licomp-toolkit verify \
