@@ -7,7 +7,7 @@ LICENSES_JSON="$1"
 
 OL="$(jq -r '.ol' "$LICENSES_JSON")"
 
-flict verify -ip \
+flict verify \
 -ol "$OL" \
 -il "$(jq -r '.ils | join(" AND ")' "$LICENSES_JSON")" \
 || EC=$?;
@@ -26,7 +26,7 @@ echo "ERROR: found license issues. lets see details..." >&2
 
 jq -r '.ils[]' "$LICENSES_JSON" | while read -r IL
 do
-  flict verify -ip -ol "$OL" -il "$IL" >&2
+  flict verify -ol "$OL" -il "$IL" >&2
 done
 
 exit $EC
