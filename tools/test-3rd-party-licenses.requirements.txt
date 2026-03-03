@@ -1,2 +1,2 @@
 # https://pypi.org/project/flict/
-flict==1.2.14
+flict==1.3.0
