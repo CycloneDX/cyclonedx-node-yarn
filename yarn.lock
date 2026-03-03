@@ -172,16 +172,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-esbuild@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@cyclonedx/cyclonedx-esbuild@npm:1.0.0"
+"@cyclonedx/cyclonedx-esbuild@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@cyclonedx/cyclonedx-esbuild@npm:1.1.0"
   dependencies:
-    "@cyclonedx/cyclonedx-library": "npm:^9.2.0"
+    "@cyclonedx/cyclonedx-library": "npm:^10.0.0"
     ajv: "npm:^8.12.0"
     ajv-formats: "npm:^3.0.1"
     ajv-formats-draft2019: "npm:^1.6.1"
     commander: "npm:^14.0.0"
     normalize-package-data: "npm:^7.0.0 || ^8.0.0"
+    packageurl-js: "npm:^2.0.1"
+    spdx-expression-parse: "npm:^3.0.1 || ^4.0.0"
   peerDependencies:
     esbuild: ">=0.11.15"
   dependenciesMeta:
@@ -196,11 +198,11 @@ __metadata:
       optional: true
   bin:
     cyclonedx-esbuild: bin/cyclonedx-esbuild-cli.js
-  checksum: 10c0/9412783334f310de4ea1d8a202ee1eab0145db1b2a301642b64dde61ac1ec9c53356779f534cb408dfa269d62dcc704a4fab6f8d58e62c50f9958543b61f2796
+  checksum: 10c0/4c0b8984e218d1f8f325c1e716329fdbdb5766dece8c8e2e230c6c594e0dcad80dc5d46bcc5ff36978251bc89d0b1d40726dea866235954b9828472d010c1aa2
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:10.0.0":
+"@cyclonedx/cyclonedx-library@npm:10.0.0, @cyclonedx/cyclonedx-library@npm:^10.0.0":
   version: 10.0.0
   resolution: "@cyclonedx/cyclonedx-library@npm:10.0.0"
   peerDependencies:
@@ -230,38 +232,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/cyclonedx-library@npm:^9.2.0":
-  version: 9.2.0
-  resolution: "@cyclonedx/cyclonedx-library@npm:9.2.0"
-  dependencies:
-    packageurl-js: "npm:^2.0.1"
-    spdx-expression-parse: "npm:^3.0.1 || ^4"
-  peerDependencies:
-    ajv: ^8.12.0
-    ajv-formats: ^3.0.1
-    ajv-formats-draft2019: ^1.6.1
-    libxmljs2: ^0.35||^0.37
-    xmlbuilder2: ^3.0.2||^4.0.0
-  peerDependenciesMeta:
-    ajv:
-      optional: true
-    ajv-formats:
-      optional: true
-    ajv-formats-draft2019:
-      optional: true
-    libxmljs2:
-      optional: true
-    xmlbuilder2:
-      optional: true
-  checksum: 10c0/dc901a303e0cfe9671e31e902fd91779592e085364dc1e538f02e4d17160daf200c34e9975bcd5e97f1acc9c86887bd18dbd0f95da50897e1c5d306fd73b9bce
-  languageName: node
-  linkType: hard
-
 "@cyclonedx/yarn-plugin-cyclonedx@workspace:.":
   version: 0.0.0-use.local
   resolution: "@cyclonedx/yarn-plugin-cyclonedx@workspace:."
   dependencies:
-    "@cyclonedx/cyclonedx-esbuild": "npm:1.0.0"
+    "@cyclonedx/cyclonedx-esbuild": "npm:1.1.0"
     "@cyclonedx/cyclonedx-library": "npm:10.0.0"
     "@eslint/js": "npm:9.39.3"
     "@types/hosted-git-info": "npm:^3.0.5"
@@ -6646,7 +6621,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spdx-expression-parse@npm:4.0.0, spdx-expression-parse@npm:^3.0.1 || ^4, spdx-expression-parse@npm:^4.0.0":
+"spdx-expression-parse@npm:4.0.0, spdx-expression-parse@npm:^3.0.1 || ^4.0.0, spdx-expression-parse@npm:^4.0.0":
   version: 4.0.0
   resolution: "spdx-expression-parse@npm:4.0.0"
   dependencies:
