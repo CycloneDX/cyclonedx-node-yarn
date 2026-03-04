@@ -27,7 +27,7 @@ env:
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   PACKED_DIR: CI_packed
-  NODE_ACTIVE_LTS: "22"  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:
@@ -220,18 +220,12 @@ jobs:
         run: corepack enable yarn
       - name: yarn install
         run: yarn install --no-immutable
-      - name: Set NPM authentication
-        run: yarn config set npmAuthToken "$NPM_AUTH_TOKEN"
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           yarn npm publish
           --provenance
           --access public
           --tag "$NPMJS_RELEASE_TAG"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
