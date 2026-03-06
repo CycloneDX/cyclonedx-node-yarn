@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Fixed
+  * Properly generate PackageURLs for private packages (via [#481])
+
+[#481]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/481
+
 ## 3.3.0 - 2026-03-04
 
 * Fixed

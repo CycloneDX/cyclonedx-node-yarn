@@ -78,7 +78,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/demo-local-deps@0.0.0"
     },
     "properties": [
       {
@@ -102,6 +103,7 @@
           }
         }
       ],
+      "purl": "pkg:npm/my-local-a@0.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
@@ -133,7 +135,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/my-local-b-off@0.0.0"
     },
     {
       "type": "library",
@@ -148,7 +151,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/my-noname@0.0.0"
     }
   ],
   "dependencies": [

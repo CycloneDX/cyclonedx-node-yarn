@@ -55,6 +55,7 @@
       <name>package-aliasing</name>
       <version>0.0.1</version>
       <description>demo: a package is aliased with a different name</description>
+      <purl>pkg:npm/package-aliasing@0.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>

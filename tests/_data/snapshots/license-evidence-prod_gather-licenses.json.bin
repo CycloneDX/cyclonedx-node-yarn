@@ -78,7 +78,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/demo-gather-licenses@0.0.0"
     },
     "properties": [
       {
