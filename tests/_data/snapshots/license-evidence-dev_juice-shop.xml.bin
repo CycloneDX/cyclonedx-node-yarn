@@ -61,6 +61,7 @@
           <id>MIT</id>
         </license>
       </licenses>
+      <purl>pkg:npm/juice-shop@16.0.0</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/juice-shop/juice-shop/issues</url>

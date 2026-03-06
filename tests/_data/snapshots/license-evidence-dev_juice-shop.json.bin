@@ -80,6 +80,7 @@
           }
         }
       ],
+      "purl": "pkg:npm/juice-shop@16.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/juice-shop/juice-shop/issues",

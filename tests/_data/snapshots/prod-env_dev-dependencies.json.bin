@@ -79,6 +79,7 @@
           }
         }
       ],
+      "purl": "pkg:npm/demo-dev-dependencies@0.0.0",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/dev-dependencies",

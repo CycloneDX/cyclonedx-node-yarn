@@ -71,6 +71,7 @@
       "version": "0.0.1",
       "bom-ref": "concurrent-peer-deps@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of a transitive peer dep",
+      "purl": "pkg:npm/concurrent-peer-deps@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
@@ -110,7 +111,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/has-peer@0.0.0"
     },
     {
       "type": "library",
@@ -125,7 +127,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/has-peer@0.0.0"
     },
     {
       "type": "library",
@@ -276,7 +279,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/provides-peer-100@0.0.0"
     },
     {
       "type": "library",
@@ -291,7 +295,8 @@
             "acknowledgement": "declared"
           }
         }
-      ]
+      ],
+      "purl": "pkg:npm/provides-peer-107@0.0.0"
     }
   ],
   "dependencies": [

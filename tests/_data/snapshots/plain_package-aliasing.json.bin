@@ -71,6 +71,7 @@
       "version": "0.0.1",
       "bom-ref": "package-aliasing@workspace:.",
       "description": "demo: a package is aliased with a different name",
+      "purl": "pkg:npm/package-aliasing@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",

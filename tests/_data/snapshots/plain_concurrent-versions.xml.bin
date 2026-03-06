@@ -55,6 +55,7 @@
       <name>concurrent-versions</name>
       <version>0.0.1</version>
       <description>demo: multiple dependencies requiring concurrent versions of `chalk`</description>
+      <purl>pkg:npm/concurrent-versions@0.0.1</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
