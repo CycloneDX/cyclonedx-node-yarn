@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "@cyclonedx/cyclonedx-esbuild": "1.1.0",
-    "@eslint/js": "9.39.3",
+    "@eslint/js": "9.39.4",
     "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "ts5.8",
@@ -81,7 +81,7 @@
     "ajv-formats": "^3.0.1",
     "ajv-formats-draft2019": "^1.6.1",
     "c8": "^11.0.0",
-    "eslint": "9.39.3",
+    "eslint": "9.39.4",
     "eslint-config-love": "134.0.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "2.32.0",
