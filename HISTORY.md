@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.3.1 - 2026-03-09
+
 * Fixed
   * Properly generate PackageURLs for private packages (via [#481])
 
