@@ -6,13 +6,31 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.3.1 - 2026-03-09
+
+* Fixed
+  * Properly generate PackageURLs for private packages (via [#481])
+
+[#481]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/481
+
+## 3.3.0 - 2026-03-04
+
+* Fixed
+  * Qualified PackageURLs
+* Changed
+  * Take care of PackageURL generation ourselves, now (via [#467])  
+    Previously, this was done at best-effort by a 3rd-party library.
 * Dependencies
+  * Added runtime-dependency `packageurl-js@2.0.1",` (via [#467])
+  * Added runtime-dependency `spdx-expression-parse@4.0.0",` (via [#467])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@10.0.0`, was `9.2.0` (via [#467])
   * Upgraded runtime-dependency `@xmlbuilder2@4.0.3`, was `4.0.0` (via [#441])
 * Style
   * Applied latest code style (via [#438])
 
 [#438]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/438
 [#441]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/441
+[#467]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/467
 
 ## 3.2.1 - 2025-11-18
 

@@ -20,14 +20,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 /* eslint-disable @typescript-eslint/max-params -- bassdscho */
 
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
-import type { FromNodePackageJson as PJB } from '@cyclonedx/cyclonedx-library/Builders'
+import { Utils as BomUUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
+import type { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
 import { ComponentType, ExternalReferenceType, LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
-import type { FromNodePackageJson as PJF } from '@cyclonedx/cyclonedx-library/Factories'
-import { Bom, Component, ComponentEvidence, ExternalReference, type License, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
-import { BomUtility, LicenseUtility } from '@cyclonedx/cyclonedx-library/Utils'
-import { Cache, type FetchOptions, type Locator, type LocatorHash, type Package, type Project, structUtils, ThrowReport, type Workspace, YarnVersion } from '@yarnpkg/core'
-import { type PortablePath,ppath } from '@yarnpkg/fslib'
+import type { License } from '@cyclonedx/cyclonedx-library/Models'
+import { Bom, Component, ComponentEvidence, ExternalReference, NamedLicense, Property } from '@cyclonedx/cyclonedx-library/Models'
+import type { FetchOptions, Locator, LocatorHash, Package, Project, Workspace } from '@yarnpkg/core'
+import { Cache, structUtils, ThrowReport, YarnVersion } from '@yarnpkg/core'
+import type { PortablePath } from '@yarnpkg/fslib'
+import { ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
+import type { PackageURL } from "packageurl-js"
 
 import { getBuildtimeInfo } from './_buildtimeInfo'
 import {
@@ -36,7 +40,9 @@ import {
   tryRemoveSecretsFromUrl,
   trySanitizeGitUrl
 } from './_helpers'
+import type { PackageUrlFactory } from './factories'
 import { PropertyNames, PropertyValueBool } from './properties'
+
 
 type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
 type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
@@ -50,9 +56,9 @@ interface BomBuilderOptions {
 }
 
 export class BomBuilder {
-  readonly toolBuilder: PJB.ToolBuilder
-  readonly componentBuilder: PJB.ComponentBuilder
-  readonly purlFactory: PJF.PackageUrlFactory
+  readonly toolBuilder: FromNodePackageJsonBuilders.ToolBuilder
+  readonly componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder
+  readonly purlFactory: PackageUrlFactory
 
   readonly omitDevDependencies: boolean
   readonly metaComponentType: ComponentType
@@ -112,7 +118,7 @@ export class BomBuilder {
         new Property(PropertyNames.Reproducible, PropertyValueBool.True)
       )
     } else {
-      bom.serialNumber = BomUtility.randomSerialNumber()
+      bom.serialNumber = BomUUtils.randomSerialNumber()
       bom.metadata.timestamp = new Date()
     }
 
@@ -193,7 +199,7 @@ export class BomBuilder {
     const console_ = this.console
     return async function * (pkg: Package): AsyncGenerator<License> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
-      const leGatherer = new LicenseUtility.LicenseEvidenceGatherer<PortablePath>({fs: packageFs, path: ppath})
+      const leGatherer = new LicenseUtils.LicenseEvidenceGatherer<PortablePath>({fs: packageFs, path: ppath})
       const files = leGatherer.getFileAttachments(
         prefixPath,
         (error: Error): void => {
@@ -312,26 +318,25 @@ export class BomBuilder {
         break
     }
 
-    // even private packages may have a PURL for identification
-    component.purl = this.makePurl(component)
+    component.purl = this.finalizePurl(this.purlFactory.makeFromLocatedManifest(
+      locator,
+      manifest // eslint-disable-line @typescript-eslint/no-unsafe-argument -- false positive
+    ))
 
     component.bomRef.value = structUtils.prettyLocatorNoColors(locator)
 
     return component
   }
 
-  private makePurl (component: Component): ReturnType<BomBuilder['purlFactory']['makeFromComponent']> {
-    const purl = this.purlFactory.makeFromComponent(component, this.reproducible)
-    if (purl === undefined) {
-      return undefined
-    }
-
+  private finalizePurl (purl: PackageURL|undefined): string|undefined {
+    if (purl === undefined) { return purl }
     if (this.shortPURLs) {
+      /* eslint-disable no-param-reassign -- ack */
       purl.qualifiers = undefined
       purl.subpath = undefined
+      /* eslint-enable no-param-reassign */
     }
-
-    return purl
+    return purl.toString()
   }
 
   private async * makeToolCs (): AsyncGenerator<Component> {

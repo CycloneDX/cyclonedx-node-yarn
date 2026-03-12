@@ -71,7 +71,7 @@
       "version": "0.0.1",
       "bom-ref": "concurrent-peer-deps@workspace:.",
       "description": "demo: multiple dependencies requiring concurrent versions of a transitive peer dep",
-      "purl": "pkg:npm/concurrent-peer-deps@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-node-yarn.git",
+      "purl": "pkg:npm/concurrent-peer-deps@0.0.1",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
@@ -145,7 +145,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-symbols@1.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-symbols.git",
+      "purl": "pkg:npm/has-symbols@1.0.3",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/has-symbols/issues",
@@ -179,7 +179,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/has-tostringtag@1.0.2?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Finspect-js%2Fhas-tostringtag.git",
+      "purl": "pkg:npm/has-tostringtag@1.0.2",
       "externalReferences": [
         {
           "url": "https://github.com/inspect-js/has-tostringtag/issues",
@@ -213,7 +213,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
+      "purl": "pkg:npm/is-string@1.0.0",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",
@@ -247,7 +247,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/is-string@1.0.7?vcs_url=git%3A%2F%2Fgithub.com%2Fljharb%2Fis-string.git",
+      "purl": "pkg:npm/is-string@1.0.7",
       "externalReferences": [
         {
           "url": "https://github.com/ljharb/is-string/issues",

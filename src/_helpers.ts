@@ -23,6 +23,7 @@ import { xfs } from '@yarnpkg/fslib'
 import GitHost from 'hosted-git-info'
 import normalizePackageData from 'normalize-package-data'
 
+
 export async function writeAllSync (fd: number, data: string): Promise<number> {
   const b = Buffer.from(data)
   const l = b.byteLength
