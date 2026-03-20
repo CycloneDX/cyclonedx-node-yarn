@@ -25,7 +25,7 @@ import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Seria
 import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import type { CommandContext } from '@yarnpkg/core'
-import { Configuration, Project, YarnVersion } from '@yarnpkg/core'
+import { Configuration, Project, ThrowReport, YarnVersion } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import spdxExpressionParse from "spdx-expression-parse"
@@ -88,6 +88,10 @@ export class MakeSbomCommand extends Command<CommandContext> {
   readonly gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
     description: 'Search for license files in components and include them as license evidence.\n' +
       'This feature is experimental.'
+  })
+
+  readonly packageLockOnly = Option.Boolean('--package-lock-only', false, {
+    description: 'Only use the yarn.lock file for dependency information. No network calls will be made.'
   })
 
   readonly shortPURLs = Option.Boolean('--short-PURLs', false, {
@@ -158,6 +162,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       outputReproducible: this.outputReproducible,
       gatherLicenseTexts: this.gatherLicenseTexts,
       verbosity: this.verbosity,
+      packageLockOnly: this.packageLockOnly,
       projectDir
     })
 
@@ -170,7 +175,13 @@ export class MakeSbomCommand extends Command<CommandContext> {
     }
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
-    await workspace.project.restoreInstallState()
+
+    if (this.packageLockOnly) {
+      myConsole.info('INFO  | skipping workspace installation state restoration (--package-lock-only)')
+      await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
+    } else {
+      await workspace.project.restoreInstallState()
+    }
 
     const extRefFactory = new FromNodePackageJsonFactories.ExternalReferenceFactory()
 
@@ -187,7 +198,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
         metaComponentType: this.mcType,
         reproducible: this.outputReproducible,
         shortPURLs: this.shortPURLs,
-        gatherLicenseTexts: this.gatherLicenseTexts
+        gatherLicenseTexts: this.gatherLicenseTexts,
+        packageLockOnly: this.packageLockOnly
       },
       myConsole
     )).buildFromWorkspace(workspace)
