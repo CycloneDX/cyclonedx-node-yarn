@@ -53,6 +53,7 @@ interface BomBuilderOptions {
   reproducible?: BomBuilder['reproducible']
   shortPURLs?: BomBuilder['shortPURLs']
   gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
+  packageLockOnly?: BomBuilder['packageLockOnly']
 }
 
 export class BomBuilder {
@@ -65,6 +66,7 @@ export class BomBuilder {
   readonly reproducible: boolean
   readonly shortPURLs: boolean
   readonly gatherLicenseTexts: boolean
+  readonly packageLockOnly: boolean
 
   readonly console: Console
 
@@ -84,6 +86,7 @@ export class BomBuilder {
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
     this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
+    this.packageLockOnly = options.packageLockOnly ?? false
 
     this.console = console_
   }
@@ -157,6 +160,16 @@ export class BomBuilder {
   }
 
   private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
+    if (this.packageLockOnly) {
+      /* eslint-disable-next-line @typescript-eslint/require-await -- needed for signature */
+      return async function (pkg: Package): Promise<NonNullable<any>> {
+        return {
+          name: pkg.name,
+          version: pkg.version
+        }
+      }
+    }
+
     const fetcher = project.configuration.makeFetcher()
     const fetcherOptions: FetchOptions = {
       project,
@@ -180,6 +193,12 @@ export class BomBuilder {
   }
 
   private async makeLicenseEvidenceFetcher (project: Project): Promise<LicenseEvidenceFetcher> {
+    if (this.packageLockOnly) {
+      return async function * (_pkg: Package): AsyncGenerator<License> {
+        // no-op, yield nothing
+      }
+    }
+
     const fetcher = project.configuration.makeFetcher()
     const fetcherOptions: FetchOptions = {
       project,
