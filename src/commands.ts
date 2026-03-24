@@ -76,6 +76,11 @@ export class MakeSbomCommand extends Command<CommandContext> {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
+  readonly packageLockOnly = Option.Boolean('--package-lock-only', false, {
+    description: 'Only use the yarn.lock file for dependency information.\n'+
+        'No network calls will be made.'
+  })
+
   /* mimic option from yarn.
     - see  https://classic.yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-production-true-false
     - see https://yarnpkg.com/cli/workspaces/focus
@@ -88,10 +93,6 @@ export class MakeSbomCommand extends Command<CommandContext> {
   readonly gatherLicenseTexts = Option.Boolean('--gather-license-texts', false, {
     description: 'Search for license files in components and include them as license evidence.\n' +
       'This feature is experimental.'
-  })
-
-  readonly packageLockOnly = Option.Boolean('--package-lock-only', false, {
-    description: 'Only use the yarn.lock file for dependency information. No network calls will be made.'
   })
 
   readonly shortPURLs = Option.Boolean('--short-PURLs', false, {

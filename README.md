@@ -67,12 +67,12 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+  --package-lock-only        Only use the yarn.lock file for dependency information.
+                             No network calls will be made.
   --production,--prod        Exclude development dependencies.
                              (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
   --gather-license-texts     Search for license files in components and include them as license evidence.
                              This feature is experimental.
-  --package-lock-only        Only use the yarn.lock file for dependency information.
-                             No network calls will be made.
   --short-PURLs              Omit all qualifiers from PackageURLs.
                              This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.
   --sv,--spec-version #0     Which version of CycloneDX to use.
