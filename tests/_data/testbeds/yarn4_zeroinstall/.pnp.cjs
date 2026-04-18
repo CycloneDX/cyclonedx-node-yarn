@@ -11,7 +11,7 @@ const RAW_RUNTIME_STATE =
   ],\
   "dependencyTreeRoots": [\
     {\
-      "name": "@cyclonedx/testing-yarn3-zeroinstall",\
+      "name": "@cyclonedx/testing-yarn4-zeroinstall",\
       "reference": "workspace:."\
     }\
   ],\
@@ -19,7 +19,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "pnpZipBackend": "libzip",\
   "fallbackExclusionList": [\
-    ["@cyclonedx/testing-yarn3-zeroinstall", ["workspace:."]]\
+    ["@cyclonedx/testing-yarn4-zeroinstall", ["workspace:."]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -28,18 +28,18 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@cyclonedx/testing-yarn3-zeroinstall", "workspace:."],\
+          ["@cyclonedx/testing-yarn4-zeroinstall", "workspace:."],\
           ["in-array", "npm:0.1.2"],\
           ["is-sorted", "npm:1.0.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
-    ["@cyclonedx/testing-yarn3-zeroinstall", [\
+    ["@cyclonedx/testing-yarn4-zeroinstall", [\
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@cyclonedx/testing-yarn3-zeroinstall", "workspace:."],\
+          ["@cyclonedx/testing-yarn4-zeroinstall", "workspace:."],\
           ["in-array", "npm:0.1.2"],\
           ["is-sorted", "npm:1.0.5"]\
         ],\
