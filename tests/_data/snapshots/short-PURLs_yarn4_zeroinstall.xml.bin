@@ -51,12 +51,12 @@
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="@cyclonedx/testing-yarn3-zeroinstall@workspace:.">
+    <component type="application" bom-ref="@cyclonedx/testing-yarn4-zeroinstall@workspace:.">
       <group>@cyclonedx</group>
-      <name>testing-yarn3-zeroinstall</name>
+      <name>testing-yarn4-zeroinstall</name>
       <version>0.0.0</version>
       <description>A yarn4 zero-install setup.</description>
-      <purl>pkg:npm/%40cyclonedx/testing-yarn3-zeroinstall@0.0.0</purl>
+      <purl>pkg:npm/%40cyclonedx/testing-yarn4-zeroinstall@0.0.0</purl>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
@@ -117,7 +117,7 @@
     </component>
   </components>
   <dependencies>
-    <dependency ref="@cyclonedx/testing-yarn3-zeroinstall@workspace:.">
+    <dependency ref="@cyclonedx/testing-yarn4-zeroinstall@workspace:.">
       <dependency ref="in-array@npm:0.1.2"/>
       <dependency ref="is-sorted@npm:1.0.5"/>
     </dependency>
