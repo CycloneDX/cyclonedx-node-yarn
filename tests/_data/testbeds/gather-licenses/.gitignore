@@ -1,7 +1,14 @@
 *
 !/.gitignore
 !/README.md
+!/LICENCE
+!/LICENCE*
+!/LICENSE
+!/LICENSE*
+!/LICENSES/**
 !/package.json
 !/yarn.lock
+!/.yarnrc.yml
 !/packages/
 !/packages/**
+

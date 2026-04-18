@@ -3,6 +3,7 @@
 !/README.md
 !/package.json
 !/yarn.lock
+!/.yarnrc.yml
 !/packages
 !/packages/*
 
