@@ -1,7 +1,7 @@
 {
+  "packageManager": "yarn@4.14.1",
   "private": true,
-  "packageManager": "yarn@4.2.2",
-  "name": "@cyclonedx/testing-yarn3-zeroinstall",
+  "name": "@cyclonedx/testing-yarn4-zeroinstall",
   "version": "0.0.0",
   "description": "A yarn4 zero-install setup.",
   "scripts": {

@@ -2,12 +2,12 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 9
   cacheKey: 10c0
 
-"@cyclonedx/testing-yarn3-zeroinstall@workspace:.":
+"@cyclonedx/testing-yarn4-zeroinstall@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@cyclonedx/testing-yarn3-zeroinstall@workspace:."
+  resolution: "@cyclonedx/testing-yarn4-zeroinstall@workspace:."
   dependencies:
     in-array: "npm:^0.1.2"
     is-sorted: "npm:^1"
