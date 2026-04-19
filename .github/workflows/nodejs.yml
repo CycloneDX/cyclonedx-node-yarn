@@ -234,6 +234,7 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn
         run: |
+          corepack disable
           corepack enable yarn
           corepack prepare --activate yarn@4
           yarn -v
