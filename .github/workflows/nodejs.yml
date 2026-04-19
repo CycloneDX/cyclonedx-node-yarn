@@ -234,12 +234,12 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn
         run: |
-          corepack disable
           corepack enable yarn
           corepack prepare --activate yarn@4
           yarn -v
       - name: find yarn (debug)
-        if: ${{ matrix.os == 'windows-latest' }}
+        # NODE25 on WIN has some flaws - need to call `corepack yarn` ...
+        if: ${{ matrix.node-version == '25' && matrix.os == 'windows-latest' }}
         run: |
           corepack yarn -v
           Get-Command yarn
@@ -256,11 +256,11 @@ jobs:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
       - name: run tests
-        run: yarn run test:node
+        run: corepack yarn run test:node
       - name: collect coverage
         if: ${{ failure() || success() }}
         run: >
-          yarn exec c8 report
+          corepack yarn exec c8 report
           --reporter clover
           --reports-dir '${{ env.REPORTS_DIR }}/coverage/${{ matrix.os }}_node${{ matrix.node-version }}'
       - name: artifact test reports
