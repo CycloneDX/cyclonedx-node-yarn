@@ -237,6 +237,9 @@ jobs:
           corepack enable yarn
           corepack prepare --activate yarn@4
           yarn -v
+      - name: find yarn (debug)
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: where yarn
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
