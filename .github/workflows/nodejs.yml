@@ -248,6 +248,13 @@ jobs:
           corepack yarn -v
           yarn -v
           where yarn
+      - name: find yarn (debug)
+        # NODE25 on WIN has some flaws - need to call `corepack yarn` ...
+        if: ${{ matrix.node-version == '25' && matrix.os != 'windows-latest' }}
+        run: |
+          corepack yarn -v
+          yarn -v
+          which yarn
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
