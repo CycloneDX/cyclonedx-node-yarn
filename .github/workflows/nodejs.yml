@@ -266,7 +266,9 @@ jobs:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
       - name: run tests
-        run: yarn run test:node
+        run: |
+          yarn -v
+          yarn run test:node
       - name: collect coverage
         if: ${{ failure() || success() }}
         run: >
