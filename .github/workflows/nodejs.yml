@@ -242,6 +242,7 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         run: |
           corepack yarn -v
+          Get-Command yarn
           where yarn
           yarn -v
       - name: Setup subject
