@@ -238,23 +238,6 @@ jobs:
           corepack enable yarn
           corepack prepare --activate yarn@4
           yarn -v
-      - name: find yarn (debug)
-        # NODE25 on WIN has some flaws - need to call `corepack yarn` ...
-        if: ${{ matrix.node-version == '25' && matrix.os == 'windows-latest' }}
-        run: |
-          Get-Command yarn
-          Remove-Item C:\npm\prefix\yarn* -Force
-          Get-Command yarn
-          corepack yarn -v
-          yarn -v
-          where yarn
-      - name: find yarn (debug)
-        # NODE25 on WIN has some flaws - need to call `corepack yarn` ...
-        if: ${{ matrix.node-version == '25' && matrix.os != 'windows-latest' }}
-        run: |
-          corepack yarn -v
-          yarn -v
-          which yarn
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
@@ -266,9 +249,7 @@ jobs:
           name: ${{ env.BUNDLES_DIR }}
           path: ${{ env.BUNDLES_DIR }}
       - name: run tests
-        run: |
-          yarn -v
-          yarn run test:node
+        run: yarn run test:node
       - name: collect coverage
         if: ${{ failure() || success() }}
         run: >
