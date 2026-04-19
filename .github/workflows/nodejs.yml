@@ -43,7 +43,11 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          npm uninstall -g yarn
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -86,7 +90,11 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          npm uninstall -g yarn
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -128,7 +136,11 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          npm uninstall -g yarn
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -153,7 +165,11 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          npm uninstall -g yarn
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -221,7 +237,11 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          npm uninstall -g yarn
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
@@ -288,8 +308,10 @@ jobs:
           # cache: 'yarn'
       - name: Setup yarn ${{ env.YARN_VERSION }}
         run: |
+          npm uninstall -g yarn
           corepack enable yarn
           yarn set version "$YARN_VERSION"
+          yarn -v
       - name: Setup subject
         run: yarn install --no-immutable  # we might be changing yarn version for tests -- require to ignore lock
       - name: fetch build artifact
