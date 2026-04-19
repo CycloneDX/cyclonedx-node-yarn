@@ -43,7 +43,10 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          corepack enable yarn
+          corepack prepare  --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build

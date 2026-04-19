@@ -62,9 +62,10 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
-      - name: Setup yarn
-        run: yarn
+        run: |
+          corepack enable yarn
+          corepack prepare  --activate yarn@4
+          yarn -v
       - name: bump VERSION
         id: bump
         # `npm version` seams superior to `yarn version` ...
