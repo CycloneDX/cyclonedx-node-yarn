@@ -239,7 +239,10 @@ jobs:
           yarn -v
       - name: find yarn (debug)
         if: ${{ matrix.os == 'windows-latest' }}
-        run: where yarn
+        run: |
+          corepack yarn -v
+          where yarn
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
