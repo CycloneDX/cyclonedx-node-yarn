@@ -64,7 +64,7 @@ jobs:
       - name: Setup yarn
         run: |
           corepack enable yarn
-          corepack prepare  --activate yarn@4
+          corepack prepare --activate yarn@4
           yarn -v
       - name: bump VERSION
         id: bump
@@ -112,7 +112,10 @@ jobs:
           package-manager-cache: false
           # cache: 'yarn'
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: build
@@ -178,7 +181,10 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: Setup subject
         run: yarn install --immutable
       - name: setup-tests
@@ -218,7 +224,10 @@ jobs:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
       - name: Setup yarn
-        run: corepack enable yarn
+        run: |
+          corepack enable yarn
+          corepack prepare --activate yarn@4
+          yarn -v
       - name: yarn install
         run: yarn install --no-immutable
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
