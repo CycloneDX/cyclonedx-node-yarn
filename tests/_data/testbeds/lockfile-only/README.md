@@ -1,4 +1,4 @@
-# Integration test: package lock only
+# Integration test: lockfile only
 
 *ATTENTION*: this demo might use known vulnerable dependencies for showcasing purposes.
 
