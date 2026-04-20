@@ -274,17 +274,17 @@ suite('integration', () => {
           })
         })
 
-        suite('package-lock-only', () => {
+        suite('lockfile-only', () => {
           test('plain',
-            () => runTest('plain', 'package-lock-only', format, ['--package-lock-only'])
+            () => runTest('plain', 'lockfile-only', format, ['--lockfile-only'])
           ).timeout(longTestTimeout)
 
           test('prod',
-            () => runTest('prod', 'package-lock-only', format, ['--package-lock-only', '--prod'])
+            () => runTest('prod', 'lockfile-only', format, ['--lockfile-only', '--prod'])
           ).timeout(longTestTimeout)
 
           test('short PURLs',
-            () => runTest('short-PURLs', 'package-lock-only', format, ['--package-lock-only', '--short-PURLs'])
+            () => runTest('short-PURLs', 'lockfile-only', format, ['--lockfile-only', '--short-PURLs'])
           ).timeout(longTestTimeout)
         })
 

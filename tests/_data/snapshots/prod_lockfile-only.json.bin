@@ -67,10 +67,10 @@
     },
     "component": {
       "type": "application",
-      "name": "package-lock-only-testbed",
+      "name": "lockfile-only-testbed",
       "version": "1.0.0",
-      "bom-ref": "package-lock-only-testbed@workspace:.",
-      "purl": "pkg:npm/package-lock-only-testbed@1.0.0"
+      "bom-ref": "lockfile-only-testbed@workspace:.",
+      "purl": "pkg:npm/lockfile-only-testbed@1.0.0"
     },
     "properties": [
       {
@@ -93,7 +93,7 @@
       "ref": "is-positive@npm:3.1.0"
     },
     {
-      "ref": "package-lock-only-testbed@workspace:.",
+      "ref": "lockfile-only-testbed@workspace:.",
       "dependsOn": [
         "is-positive@npm:3.1.0"
       ]

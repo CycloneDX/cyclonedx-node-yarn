@@ -14,7 +14,7 @@ __metadata:
 
 "package-lock-only-testbed@workspace:.":
   version: 0.0.0-use.local
-  resolution: "package-lock-only-testbed@workspace:."
+  resolution: "lockfile-only-testbed@workspace:."
   dependencies:
     is-positive: "npm:^3.1.0"
   languageName: unknown

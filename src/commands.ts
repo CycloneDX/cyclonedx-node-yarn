@@ -76,7 +76,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
   })
 
-  readonly packageLockOnly = Option.Boolean('--package-lock-only', false, {
+  readonly lockfileOnly = Option.Boolean('--lockfile-only', false, {
     description: 'Only use the yarn.lock file for dependency information.\n'+
         'No network calls will be made.'
   })
@@ -163,7 +163,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       outputReproducible: this.outputReproducible,
       gatherLicenseTexts: this.gatherLicenseTexts,
       verbosity: this.verbosity,
-      packageLockOnly: this.packageLockOnly,
+      lockfileOnly: this.lockfileOnly,
       projectDir
     })
 
@@ -177,8 +177,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
 
-    if (this.packageLockOnly) {
-      myConsole.info('INFO  | skipping workspace installation state restoration (--package-lock-only)')
+    if (this.lockfileOnly) {
+      myConsole.info('INFO  | skipping workspace installation state restoration (--lockfile-only)')
       await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
     } else {
       await workspace.project.restoreInstallState()
@@ -200,7 +200,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
         reproducible: this.outputReproducible,
         shortPURLs: this.shortPURLs,
         gatherLicenseTexts: this.gatherLicenseTexts,
-        packageLockOnly: this.packageLockOnly
+        lockfileOnly: this.lockfileOnly
       },
       myConsole
     )).buildFromWorkspace(workspace)
