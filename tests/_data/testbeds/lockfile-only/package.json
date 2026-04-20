@@ -1,5 +1,5 @@
 {
-  "name": "package-lock-only-testbed",
+  "name": "lockfile-only-testbed",
   "version": "1.0.0",
   "packageManager": "yarn@4.12.0",
   "dependencies": {

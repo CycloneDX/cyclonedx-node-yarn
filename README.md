@@ -67,7 +67,7 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --package-lock-only        Only use the yarn.lock file for dependency information.
+  --lockfile-only            Only use the yarn.lock file for dependency information.
                              No network calls will be made.
   --production,--prod        Exclude development dependencies.
                              (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
