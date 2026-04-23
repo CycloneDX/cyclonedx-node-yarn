@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/node": ">=16",
     "@types/uuid": "^8",
-    "uuid": "^8"
+    "uuid": "^14"
   },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"
