@@ -294,17 +294,14 @@ jobs:
           "$DIST_DIR/NOTICE" \
           "$DIST_DIR/bom.json"
       - name: Create Release
+        id: release
+        # see https://github.com/softprops/action-gh-release
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION: ${{ needs.bump.outputs.version }}
-          VERSION_PLAIN: ${{ needs.bump.outputs.version_plain }}
-          PRERELEASE: ${{ github.event.inputs.prerelease }}
-        run: |
-          set -exu
-          ARGS=("$VERSION" --title "$VERSION_PLAIN" --notes "")
-          if [[ "$PRERELEASE" == "true" ]]; then
-            ARGS+=(--prerelease)
-          fi
-          ARGS+=("$ASSETS_DIR"/*)
-          # Create the release, or upload assets if a release for the tag already exists
-          gh release create "${ARGS[@]}" || gh release upload "$VERSION" "$ASSETS_DIR"/*
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name:   ${{ needs.bump.outputs.version }}
+          name:       ${{ needs.bump.outputs.version_plain }}
+          prerelease: ${{ github.event.inputs.prerelease }}
+          files:      '${{ env.ASSETS_DIR }}/*'
+          # If a tag already has a GitHub release, the existing release will be updated with the release assets.
