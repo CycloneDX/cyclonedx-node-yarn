@@ -294,14 +294,20 @@ jobs:
           "$DIST_DIR/NOTICE" \
           "$DIST_DIR/bom.json"
       - name: Create Release
-        id: release
-        # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:   ${{ needs.bump.outputs.version }}
-          name:       ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-          files:      '${{ env.ASSETS_DIR }}/*'
-          # If a tag already has a GitHub release, the existing release will be updated with the release assets.
+          R_PRERELEASE: ${{ github.event.inputs.prerelease }}
+          R_TITLE: ${{ needs.bump.outputs.version_plain }}
+          R_VERSION: ${{ needs.bump.outputs.version }}
+        run: |
+          set -exu
+          prerelease_flag=""
+          if [ "$R_PRERELEASE" = "true" ]; then
+            prerelease_flag="--prerelease"
+          fi
+          gh release create \
+            "$R_VERSION" \
+            $prerelease_flag \
+            --title "$R_TITLE" \
+            --notes "" \
+            "$ASSETS_DIR"/*
