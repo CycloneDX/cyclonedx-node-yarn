@@ -48,6 +48,7 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
           fetch-depth: 0
           fetch-tags: true
+          persist-credentials: false
       - name: Configure Git
         # needed for push back of changes
         run: |
@@ -56,7 +57,7 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -88,11 +89,13 @@ jobs:
           git add package.json yarn.lock
           git commit -s -m "$GCOMMIT_MESSAGE"
           git tag -a  -m "$GCOMMIT_MESSAGE" "$GTAG_NAME"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --follow-tags
         env:
           COMMIT_MESSAGE: ${{ github.event.inputs.commitMessage }}
           GTAG_NAME: ${{ steps.bump.outputs.version }}
           VERSION_PLAIN: ${{ steps.bump.outputs.version_plain }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     needs: [ "bump" ]
@@ -105,9 +108,10 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -152,6 +156,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
@@ -176,9 +181,10 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -222,7 +228,7 @@ jobs:
           path: .
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -288,14 +294,17 @@ jobs:
           "$DIST_DIR/NOTICE" \
           "$DIST_DIR/bom.json"
       - name: Create Release
-        id: release
-        # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:   ${{ needs.bump.outputs.version }}
-          name:       ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-          files:      '${{ env.ASSETS_DIR }}/*'
-          # If a tag already has a GitHub release, the existing release will be updated with the release assets.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ needs.bump.outputs.version }}
+          VERSION_PLAIN: ${{ needs.bump.outputs.version_plain }}
+          PRERELEASE: ${{ github.event.inputs.prerelease }}
+        run: |
+          set -exu
+          ARGS=("$VERSION" --title "$VERSION_PLAIN" --notes "")
+          if [[ "$PRERELEASE" == "true" ]]; then
+            ARGS+=(--prerelease)
+          fi
+          ARGS+=("$ASSETS_DIR"/*)
+          # Create the release, or upload assets if a release for the tag already exists
+          gh release create "${ARGS[@]}" || gh release upload "$VERSION" "$ASSETS_DIR"/*
