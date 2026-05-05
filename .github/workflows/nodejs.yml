@@ -107,7 +107,7 @@ jobs:
       - name: Annotate Code
         if: ${{ failure() || success() }}
         # see https://github.com/DerLev/eslint-annotations
-        uses: DerLev/eslint-annotations@e75c54a2984700c03d60c5252c9c6a203bf013f5 # v2
+        uses: DerLev/eslint-annotations@a79ea65c1b45a649c48bcc6efc0103b6fd2e4c5f # v2
         with:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
