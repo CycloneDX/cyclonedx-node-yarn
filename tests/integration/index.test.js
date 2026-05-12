@@ -274,6 +274,20 @@ suite('integration', () => {
           })
         })
 
+        suite('lockfile-only', () => {
+          test('plain',
+            () => runTest('plain', 'lockfile-only', format, ['--lockfile-only'])
+          ).timeout(longTestTimeout)
+
+          test('prod',
+            () => runTest('prod', 'lockfile-only', format, ['--lockfile-only', '--prod'])
+          ).timeout(longTestTimeout)
+
+          test('short PURLs',
+            () => runTest('short-PURLs', 'lockfile-only', format, ['--lockfile-only', '--short-PURLs'])
+          ).timeout(longTestTimeout)
+        })
+
         suite('license evidence', () => {
           [
             'gather-licenses', // https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1385
