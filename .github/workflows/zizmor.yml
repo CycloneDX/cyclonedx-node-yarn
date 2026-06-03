@@ -1,24 +1,21 @@
 # For details of what checks are run for PRs please refer below
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
-name: GitHub Actions Security with zizmor
+name: Zizmor
 
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/**'
   push:
-    paths:
-      - ".github/workflows/**"
+    branches: ['master', 'main']
+  pull_request:
+    branches: ['**']
   schedule:
-    # Every Saturday 00:00 UTC
     - cron: '0 0 * * 6'
+
+permissions: {}
 
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
-
-permissions: {}
 
 jobs:
   zizmor:
