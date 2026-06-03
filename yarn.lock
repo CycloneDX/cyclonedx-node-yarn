@@ -265,7 +265,7 @@ __metadata:
     eslint-plugin-simple-import-sort: "npm:12.1.1"
     eslint-plugin-tsdoc: "npm:0.5.2"
     globals: "npm:^17.0.0"
-    hosted-git-info: "npm:9.0.2"
+    hosted-git-info: "npm:10.1.1"
     knip: "npm:5.88.1"
     libxmljs2: "npm:^0.35||^0.37"
     mkdirp: "npm:^3.0.1"
@@ -3985,12 +3985,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:9.0.2":
-  version: 9.0.2
-  resolution: "hosted-git-info@npm:9.0.2"
+"hosted-git-info@npm:10.1.1":
+  version: 10.1.1
+  resolution: "hosted-git-info@npm:10.1.1"
   dependencies:
     lru-cache: "npm:^11.1.0"
-  checksum: 10c0/6c616339b61a103e3de4fef2776bc2b797767c3ed58fc2e3bb2e3b49294740c8c5ec3dde2d6440b09729e5a1d661dab6bacf54fdec46d1c466407a8df045d7a1
+  checksum: 10c0/cabc45fe4b429bbff051899f9f74982e05bcded72ced74ffbad3fceae64b34b643df57f780c896ea8a774188948e9ff1faed33322a7de89c64ac6c3be3efac76
   languageName: node
   linkType: hard
 
