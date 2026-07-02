@@ -227,12 +227,19 @@ export class MakeSbomCommand extends Command<CommandContext> {
       }
       outputFD = xfs.openSync(npath.toPortablePath(outputFPn), 'w')
     }
-    myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
-    const written = await writeAllSync(outputFD, serialized)
-    myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
 
-    return written > 0
-      ? ExitCode.SUCCESS
-      : ExitCode.FAILURE
+    try {
+      myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
+      const written = await writeAllSync(outputFD, serialized)
+      myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
+
+      return written > 0
+        ? ExitCode.SUCCESS
+        : ExitCode.FAILURE
+    } finally {
+      if (outputFD !== process.stdout.fd) {
+        xfs.closeSync(outputFD)
+      }
+    }
   }
 }
