@@ -281,47 +281,9 @@ __metadata:
     typescript-eslint: "npm:8.62.1"
     xmlbuilder2: "npm:4.0.3"
   dependenciesMeta:
-    eslint-compat-utils@0.5.1:
+    eslint:
       unplugged: true
-    eslint-config-love@134.0.0:
-      unplugged: true
-    eslint-import-resolver-node@0.3.10:
-      unplugged: true
-    eslint-import-resolver-node@0.4.0:
-      unplugged: true
-    eslint-module-utils@2.13.0:
-      unplugged: true
-    eslint-plugin-es-x@7.8.0:
-      unplugged: true
-    eslint-plugin-eslint-comments@3.2.0:
-      unplugged: true
-    eslint-plugin-import@2.32.0:
-      unplugged: true
-    eslint-plugin-jsdoc@61.7.1:
-      unplugged: true
-    eslint-plugin-license-header@0.9.0:
-      unplugged: true
-    eslint-plugin-n@17.24.0:
-      unplugged: true
-    eslint-plugin-promise@7.3.0:
-      unplugged: true
-    eslint-plugin-react@7.37.5:
-      unplugged: true
-    eslint-plugin-simple-import-sort@12.1.1:
-      unplugged: true
-    eslint-plugin-tsdoc@0.5.2:
-      unplugged: true
-    eslint-scope@8.4.0:
-      unplugged: true
-    eslint-visitor-keys@3.4.3:
-      unplugged: true
-    eslint-visitor-keys@4.2.1:
-      unplugged: true
-    eslint-visitor-keys@5.0.1:
-      unplugged: true
-    eslint@9.39.4:
-      unplugged: true
-    typescript-eslint@8.62.1:
+    eslint-plugin-eslint-comments:
       unplugged: true
   bin:
     cyclonedx-yarn: bin/cyclonedx-yarn-cli.js
