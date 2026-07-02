@@ -295,7 +295,7 @@ jobs:
           - '26'      # Current
           - '24'      # LTS
           - '22'
-          - '20'
+          - '20'      # lowest supported
         yarn-version:
           - '4.x'    # Current
           - '4.0.0'  # lowest supported
