@@ -6,12 +6,15 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Fixed
+  * Properly closing output file (via [#545])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@10.1.0`, was `10.0.0` (via [#540])
   * Upgraded runtime-dependency `hosted-git-info@0.0.3`, was `9.0.3` (via [#513])
 
 [#513]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/513
 [#540]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/540
+[#545]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/545
 
 ## 3.3.1 - 2026-03-09
 
