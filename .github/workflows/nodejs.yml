@@ -19,7 +19,7 @@ concurrency:
 permissions: {}
 
 env:
-  NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
   BUNDLES_DIR: bundles
   DIST_DIR: dist
   REPORTS_DIR: "CI_reports"
@@ -290,20 +290,18 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '26'      # Current
-          - '24'      # LTS
-          - '22'
-          - '20'
-          - "20.18.0" # lowest supported
+          - '24'      # Current
+          - '22'      # LTS
+          - '20'      # lowest supported
         yarn-version:
           - '4.x'    # Current
           - '4.0.0'  # lowest supported
         os: [ 'ubuntu-latest' ]
         include:
-          - node-version: '24'   # LTS
+          - node-version: '22'   # LTS
             yarn-version: '4.x'  # latest
             os: 'windows-latest'
-          - node-version: '24'   # LTS
+          - node-version: '22'   # LTS
             yarn-version: '4.x'  # latest
             os: 'macos-latest'
     env:
