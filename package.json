@@ -102,6 +102,14 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.62.1"
   },
+  "dependenciesMeta": {
+    "eslint": {
+      "unplugged": true
+    },
+    "eslint-plugin-eslint-comments": {
+      "unplugged": true
+    }
+  },
   "type": "commonjs",
   "engines": {
     "yarn": ">=4",

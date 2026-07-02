@@ -280,6 +280,11 @@ __metadata:
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.62.1"
     xmlbuilder2: "npm:4.0.3"
+  dependenciesMeta:
+    eslint:
+      unplugged: true
+    eslint-plugin-eslint-comments:
+      unplugged: true
   bin:
     cyclonedx-yarn: bin/cyclonedx-yarn-cli.js
   languageName: unknown
