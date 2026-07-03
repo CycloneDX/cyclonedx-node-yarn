@@ -55,7 +55,7 @@ function main (outputFile) {
   manifest.publishReplace = undefined
   // dist is expected to be a bundle - no deps need install
   manifest.dependencies = {}
-  // move deps to devDeps - for documentation purposes
+  // move deps to devDeps - for documentation purposes and release pipeline
   manifest.devDependencies = {
     ...manifestSource.dependencies,
     ...manifestSource.devDependencies,
