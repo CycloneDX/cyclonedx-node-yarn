@@ -23,7 +23,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
 const { cpSync, readFileSync, writeFileSync } = require('node:fs')
-const { dirname, basename,  join } = require('node:path')
+const { basename, dirname, join } = require('node:path')
 
 const projectRoot = join(__dirname, '..')
 
