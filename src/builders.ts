@@ -29,7 +29,7 @@ import { Bom, Component, ComponentEvidence, ExternalReference, NamedLicense, Pro
 import type { FetchOptions, Locator, LocatorHash, Package, Project, Workspace } from '@yarnpkg/core'
 import { Cache, structUtils, ThrowReport, YarnVersion } from '@yarnpkg/core'
 import type { PortablePath } from '@yarnpkg/fslib'
-import { ppath } from '@yarnpkg/fslib'
+import { Filename, ppath } from '@yarnpkg/fslib'
 import { gitUtils as YarnPluginGitUtils } from '@yarnpkg/plugin-git'
 import type { PackageURL } from "packageurl-js"
 
@@ -169,7 +169,7 @@ export class BomBuilder {
     return async function (pkg: Package): Promise<NonNullable<any>> {
       const { packageFs, prefixPath, releaseFs } = await fetcher.fetch(pkg, fetcherOptions)
       try {
-        const manifestPath = ppath.join(prefixPath, 'package.json')
+        const manifestPath = ppath.join(prefixPath, Filename.manifest)
         return JSON.parse(await packageFs.readFilePromise(manifestPath, 'utf8')) ?? {}
       } finally {
         if (releaseFs !== undefined) {
