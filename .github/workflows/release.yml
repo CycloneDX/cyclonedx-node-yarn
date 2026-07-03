@@ -238,6 +238,12 @@ jobs:
           corepack enable yarn
           corepack prepare --activate yarn@4
           yarn -v
+      - name: clear yarn caches
+        run: |
+          yarn config set enableMetadataCheck false
+          rm -rf .yarn/berry/metadata
+          rm -rf ~/.yarn/berry/metadata/npm
+          yarn cache clean
       - name: yarn install
         run: yarn install --no-immutable
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
