@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
-## 3.3.2 - 2026-07-03
+## 3.3.3 - 2026-07-03
 
 * Fixed
   * Properly closing output file (via [#545])
