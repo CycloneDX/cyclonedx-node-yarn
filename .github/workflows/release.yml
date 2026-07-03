@@ -239,8 +239,7 @@ jobs:
           corepack prepare --activate yarn@4
           yarn -v
       - name: Setup subject
-        run: |  # dist dir does not come with a lock file
-          yarn install --no-immutable
+        run: yarn install --immutable
       - name: publish to registry as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           yarn npm publish

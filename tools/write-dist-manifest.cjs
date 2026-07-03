@@ -22,12 +22,13 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  * @internal
  */
 
-const { readFileSync, writeFileSync } = require('node:fs')
-const { dirname, join } = require('node:path')
+const { cpSync, readFileSync, writeFileSync } = require('node:fs')
+const { dirname, basename,  join } = require('node:path')
 
 const projectRoot = join(__dirname, '..')
 
 const manifestSourceFile = join(projectRoot, 'package.json')
+const lockSourceFile = join(projectRoot, 'yarn.lock')
 
 const structuredClonePolyfill =
   typeof structuredClone === 'function'
@@ -62,8 +63,8 @@ function main (outputFile) {
 
   writeFileSync(outputFile, JSON.stringify(manifest, undefined, 2))
 
-  // also write an empty yarn.lock
-  writeFileSync(join(dirname(outputFile), 'yarn.lock'), '')
+  // also copy the original yarn.lock
+  cpSync(lockSourceFile, join(dirname(outputFile), basename(lockSourceFile)))
 }
 
 if (require.main === module) {
