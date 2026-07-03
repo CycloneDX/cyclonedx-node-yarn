@@ -61,7 +61,7 @@
     "@yarnpkg/fslib": "^3",
     "@yarnpkg/plugin-git": "^3",
     "clipanion": "^4.0.0-rc.2",
-    "hosted-git-info": "9.0.3",
+    "hosted-git-info": "10.1.1",
     "normalize-package-data": "8.0.0",
     "packageurl-js": "2.0.1",
     "spdx-expression-parse": "4.0.0",
