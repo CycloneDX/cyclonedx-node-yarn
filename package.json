@@ -180,6 +180,6 @@
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
   "preferUnplugged": true,
-  "packageManager": "yarn@4.16.0",
+  "packageManager": "yarn@4.15.0",
   "stableVersion": "3.3.1"
 }
