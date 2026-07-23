@@ -1,0 +1,15 @@
+{
+  "name": "demo-workspace-peer-dev-dependencies-child",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: child for regression test transitive dev dependency omission with --prod flag in virtual workspace",
+  "dependencies": {
+    "use-sync-external-store": "^1"
+  },
+  "peerDependencies": {
+    "react": "^19"
+  },
+  "devDependencies": {
+    "is-number": "^7"
+  }
+}
