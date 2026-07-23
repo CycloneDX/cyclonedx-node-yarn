@@ -128,8 +128,15 @@ export class BomBuilder {
 
     const rootPackage = workspace.anchoredPackage
     if (this.omitDevDependencies) {
-      for (const dep of workspace.manifest.devDependencies.keys()) {
-        rootPackage.dependencies.delete(dep)
+      for (const pkg of workspace.project.storedPackages.values()) {
+        const locator = structUtils.isVirtualLocator(pkg)
+          ? structUtils.devirtualizeLocator(pkg)
+          : pkg
+        const ws = workspace.project.tryWorkspaceByLocator(locator)
+        if (ws === null) { continue }
+        for (const devDep of ws.manifest.devDependencies.keys()) {
+          pkg.dependencies.delete(devDep)
+        }
       }
     }
     for await (const component of this.gatherDependencies(
