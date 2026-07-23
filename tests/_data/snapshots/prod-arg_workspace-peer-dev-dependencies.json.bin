@@ -1,0 +1,184 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "yarnVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "demo-workspace-peer-dev-dependencies",
+      "version": "0.0.1",
+      "bom-ref": "demo-workspace-peer-dev-dependencies@workspace:.",
+      "description": "demo: regression test transitive dev dependency omission with --prod flag in virtual workspace",
+      "purl": "pkg:npm/demo-workspace-peer-dev-dependencies@0.0.1"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "demo-workspace-peer-dev-dependencies-child",
+      "version": "0.0.0",
+      "bom-ref": "demo-workspace-peer-dev-dependencies-child@workspace:packages/child [ead27]",
+      "description": "demo: child for regression test transitive dev dependency omission with --prod flag in virtual workspace",
+      "purl": "pkg:npm/demo-workspace-peer-dev-dependencies-child@0.0.0"
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "19.2.8",
+      "bom-ref": "react@npm:19.2.8",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/react@19.2.8",
+      "externalReferences": [
+        {
+          "url": "https://github.com/react/react/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/react/react.git#packages/react",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://react.dev/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "use-sync-external-store",
+      "version": "1.6.0",
+      "bom-ref": "use-sync-external-store@npm:1.6.0 [9bc52]",
+      "description": "Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/use-sync-external-store@1.6.0?vcs_url=https%3A%2F%2Fgithub.com%2Ffacebook%2Freact.git%23packages%2Fuse-sync-external-store",
+      "externalReferences": [
+        {
+          "url": "https://github.com/facebook/react/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "git+https://github.com/facebook/react.git#packages/use-sync-external-store",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/facebook/react#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "demo-workspace-peer-dev-dependencies-child@workspace:packages/child [ead27]",
+      "dependsOn": [
+        "react@npm:19.2.8",
+        "use-sync-external-store@npm:1.6.0 [9bc52]"
+      ]
+    },
+    {
+      "ref": "demo-workspace-peer-dev-dependencies@workspace:.",
+      "dependsOn": [
+        "demo-workspace-peer-dev-dependencies-child@workspace:packages/child [ead27]",
+        "react@npm:19.2.8"
+      ]
+    },
+    {
+      "ref": "react@npm:19.2.8"
+    },
+    {
+      "ref": "use-sync-external-store@npm:1.6.0 [9bc52]",
+      "dependsOn": [
+        "react@npm:19.2.8"
+      ]
+    }
+  ]
+}
