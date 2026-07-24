@@ -47,6 +47,7 @@ const testSetups = [
   /* endregion functional tests */
   /* region regression tests */
   'gather-licenses', // https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1385
+  'workspace-peer-dev-dependencies' // https://github.com/CycloneDX/cyclonedx-node-yarn/issues/256
   /* endregion regression tests */
 ]
 
@@ -251,7 +252,8 @@ suite('integration', () => {
         suite('prod', () => {
           [
             'dev-dependencies',
-            'yarn4_zeroinstall'
+            'yarn4_zeroinstall',
+            'workspace-peer-dev-dependencies'
           ].forEach(testSetup => {
             test(`arg: ${testSetup}`,
               () => runTest('prod-arg', testSetup, format, ['--prod'])
