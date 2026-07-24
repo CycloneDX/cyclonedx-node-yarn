@@ -271,7 +271,7 @@ __metadata:
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.7.6"
     neostandard: "npm:0.13.0"
-    normalize-package-data: "npm:8.0.0"
+    normalize-package-data: "npm:9.0.0"
     npm-run-all2: "npm:^9.0.0"
     packageurl-js: "npm:2.0.1"
     rimraf: "npm:^6.0.1"
@@ -4443,6 +4443,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hosted-git-info@npm:^10.1.0":
+  version: 10.1.1
+  resolution: "hosted-git-info@npm:10.1.1"
+  dependencies:
+    lru-cache: "npm:^11.1.0"
+  checksum: 10c0/cabc45fe4b429bbff051899f9f74982e05bcded72ced74ffbad3fceae64b34b643df57f780c896ea8a774188948e9ff1faed33322a7de89c64ac6c3be3efac76
+  languageName: node
+  linkType: hard
+
 "hpagent@npm:^1.2.0":
   version: 1.2.0
   resolution: "hpagent@npm:1.2.0"
@@ -5669,7 +5678,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"normalize-package-data@npm:8.0.0, normalize-package-data@npm:^7.0.0 || ^8.0.0":
+"normalize-package-data@npm:9.0.0":
+  version: 9.0.0
+  resolution: "normalize-package-data@npm:9.0.0"
+  dependencies:
+    hosted-git-info: "npm:^10.1.0"
+    semver: "npm:^7.3.5"
+    validate-npm-package-license: "npm:^3.0.4"
+  checksum: 10c0/510182b76e96adf6c9ebde55d407104698e2a20d61582073fab7d496236f02abc1f0f5210a13ffbdf083f24ddc94947b7e5b045859fc4ec01af27f2effb5fd78
+  languageName: node
+  linkType: hard
+
+"normalize-package-data@npm:^7.0.0 || ^8.0.0":
   version: 8.0.0
   resolution: "normalize-package-data@npm:8.0.0"
   dependencies:
