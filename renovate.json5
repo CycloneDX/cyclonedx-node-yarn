@@ -7,6 +7,7 @@
     ":prHourlyLimitNone",
     "schedule:weekends",
   ],
+  "minimumReleaseAge": 7,
   "labels": [
     "dependencies"
   ],
