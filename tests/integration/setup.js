@@ -40,10 +40,10 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'local-dependencies',
     'local-workspaces',
     'package-aliasing',
-    'package-with-build-id'
+    'package-with-build-id',
     /* endregion functional tests */
     /* region regression tests */
-    // ... none so far
+    'workspace-peer-dev-dependencies'
     /* endregion regression tests */
   ]
 
