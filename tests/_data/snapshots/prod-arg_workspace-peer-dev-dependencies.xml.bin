@@ -54,7 +54,7 @@
     <component type="application" bom-ref="demo-workspace-peer-dev-dependencies@workspace:.">
       <name>demo-workspace-peer-dev-dependencies</name>
       <version>0.0.1</version>
-      <description>demo: regression test transitive dev dependency omission with --prod flag in virtual workspace</description>
+      <description>demo: devDependencies of workspaces are wrongly included under --production when the workspace is virtualized via a peerDependency</description>
       <purl>pkg:npm/demo-workspace-peer-dev-dependencies@0.0.1</purl>
     </component>
     <properties>

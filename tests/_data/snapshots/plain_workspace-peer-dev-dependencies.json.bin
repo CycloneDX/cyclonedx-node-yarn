@@ -70,7 +70,7 @@
       "name": "demo-workspace-peer-dev-dependencies",
       "version": "0.0.1",
       "bom-ref": "demo-workspace-peer-dev-dependencies@workspace:.",
-      "description": "demo: regression test transitive dev dependency omission with --prod flag in virtual workspace",
+      "description": "demo: devDependencies of workspaces are wrongly included under --production when the workspace is virtualized via a peerDependency",
       "purl": "pkg:npm/demo-workspace-peer-dev-dependencies@0.0.1"
     },
     "properties": [
