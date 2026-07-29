@@ -1,0 +1,11 @@
+{
+  "name": "with-dev-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: with-dev-deps - package with devDependencies, some are runtime-deps in parent, some are devDependencies in parent",
+  "devDependencies": {
+    "is-decimal": "^2",
+    "is-number": "^7",
+    "is-stream": "^4"
+  }
+}

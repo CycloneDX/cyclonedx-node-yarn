@@ -439,10 +439,8 @@
     {
       "ref": "demo-workspaces@workspace:.",
       "dependsOn": [
-        "is-alphanumerical@npm:2.0.1",
         "is-bigint@npm:1.1.0",
         "is-decimal@npm:2.0.1",
-        "is-stream@npm:4.0.1",
         "my-local-a@workspace:workspaces/my-local-a",
         "with-dev-deps@workspace:workspaces/with-dev-deps",
         "with-peer-deps@workspace:workspaces/with-peer-deps [be205]",

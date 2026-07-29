@@ -8,7 +8,16 @@
     "workspaces/*"
   ],
   "dependencies": {
-    "my-local-a": "workspace:*"
+    "is-bigint": "^1",
+    "is-decimal": "^2",
+    "my-local-a": "workspace:*",
+    "with-dev-deps": "workspace:*",
+    "with-peer-deps": "workspace:*",
+    "with-runtime-deps": "workspace:*"
+  },
+  "devDependencies": {
+    "is-alphanumerical": "^2",
+    "is-stream": "^4"
   },
   "scripts": {
     "SBOM": "YARN_PLUGINS=$PROJECT_CWD/../../../../bundles/@yarnpkg/plugin-cyclonedx.js yarn cyclonedx"

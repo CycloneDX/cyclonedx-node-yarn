@@ -43,7 +43,7 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     'package-with-build-id',
     /* endregion functional tests */
     /* region regression tests */
-    'workspace-peer-dev-dependencies'
+    // none so far
     /* endregion regression tests */
   ]
 

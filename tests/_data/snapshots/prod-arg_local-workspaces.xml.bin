@@ -332,10 +332,8 @@
   </components>
   <dependencies>
     <dependency ref="demo-workspaces@workspace:.">
-      <dependency ref="is-alphanumerical@npm:2.0.1"/>
       <dependency ref="is-bigint@npm:1.1.0"/>
       <dependency ref="is-decimal@npm:2.0.1"/>
-      <dependency ref="is-stream@npm:4.0.1"/>
       <dependency ref="my-local-a@workspace:workspaces/my-local-a"/>
       <dependency ref="with-dev-deps@workspace:workspaces/with-dev-deps"/>
       <dependency ref="with-peer-deps@workspace:workspaces/with-peer-deps [be205]"/>
