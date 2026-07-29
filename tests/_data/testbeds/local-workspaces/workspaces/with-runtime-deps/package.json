@@ -1,0 +1,10 @@
+{
+  "name": "with-runtime-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: with-dev-deps2 - package with runtime-dependencies, some are devDependencies in parent",
+  "dependencies": {
+    "is-alphanumerical": "^2",
+    "is-hexadecimal": "^2"
+  }
+}

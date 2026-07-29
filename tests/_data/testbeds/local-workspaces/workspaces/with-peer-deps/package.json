@@ -1,0 +1,9 @@
+{
+  "name": "with-peer-deps",
+  "private": true,
+  "version": "0.0.0",
+  "description": "demo: with-peer-deps - package with peerDependencies",
+  "peerDependencies": {
+    "is-bigint": "^1"
+  }
+}
