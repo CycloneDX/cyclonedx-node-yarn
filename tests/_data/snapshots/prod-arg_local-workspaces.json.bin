@@ -295,74 +295,6 @@
     },
     {
       "type": "library",
-      "name": "is-number",
-      "version": "7.0.0",
-      "bom-ref": "is-number@npm:7.0.0",
-      "author": "Jon Schlinkert",
-      "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-number@7.0.0",
-      "externalReferences": [
-        {
-          "url": "https://github.com/jonschlinkert/is-number/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/jonschlinkert/is-number.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/jonschlinkert/is-number",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "name": "is-stream",
-      "version": "4.0.1",
-      "bom-ref": "is-stream@npm:4.0.1",
-      "author": "Sindre Sorhus",
-      "description": "Check if something is a Node.js stream",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/is-stream@4.0.1",
-      "externalReferences": [
-        {
-          "url": "https://github.com/sindresorhus/is-stream/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \"bugs.url\""
-        },
-        {
-          "url": "git+https://github.com/sindresorhus/is-stream.git",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \"repository.url\""
-        },
-        {
-          "url": "https://github.com/sindresorhus/is-stream#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \"homepage\""
-        }
-      ]
-    },
-    {
-      "type": "library",
       "name": "my-local-a",
       "version": "0.1.0",
       "bom-ref": "my-local-a@workspace:workspaces/my-local-a",
@@ -473,12 +405,6 @@
       "ref": "is-hexadecimal@npm:2.0.1"
     },
     {
-      "ref": "is-number@npm:7.0.0"
-    },
-    {
-      "ref": "is-stream@npm:4.0.1"
-    },
-    {
       "ref": "my-local-a@workspace:workspaces/my-local-a",
       "dependsOn": [
         "my-local-b-off@workspace:workspaces/my-local-b"
@@ -488,12 +414,7 @@
       "ref": "my-local-b-off@workspace:workspaces/my-local-b"
     },
     {
-      "ref": "with-dev-deps@workspace:workspaces/with-dev-deps",
-      "dependsOn": [
-        "is-decimal@npm:2.0.1",
-        "is-number@npm:7.0.0",
-        "is-stream@npm:4.0.1"
-      ]
+      "ref": "with-dev-deps@workspace:workspaces/with-dev-deps"
     },
     {
       "ref": "with-peer-deps@workspace:workspaces/with-peer-deps [be205]",
