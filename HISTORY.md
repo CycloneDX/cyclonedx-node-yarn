@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.3.3 - 2026-07-30
+
 * Fixed
   * When using `--prod`, workspace `devDependencies` are now properly excluded ([#256] via [#563])
 
