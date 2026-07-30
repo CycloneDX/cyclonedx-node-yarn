@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Fixed
+  * When using `--prod`, workspace `devDependencies` are now properly excluded ([#256] via [#563])
+
+[#256]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/256
+[#563]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/563
+
 ## 3.3.2 - 2026-07-03
 
 * Fixed
