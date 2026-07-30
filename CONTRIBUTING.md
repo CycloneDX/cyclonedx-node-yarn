@@ -10,13 +10,15 @@ first.
 When creating a new issue, please select the appropriate issue type from the available templates and fill out the provided form.  
 These templates ensure that all necessary information is captured consistently.
 
-## Pullrequests
+## Pull Requests
 
 When opening a pull request, use the repository’s pull request template and complete all required fields.  
 Keep each pull request focused on a single topic or problem.
 
 Every pull request must reference an existing issue that it aims to address.  
 If no issue exists for your topic, please create one first using the appropriate issue template, then link your pull request to it.
+
+When opening a pull request, use the [`PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
 
 ## Setup
 
