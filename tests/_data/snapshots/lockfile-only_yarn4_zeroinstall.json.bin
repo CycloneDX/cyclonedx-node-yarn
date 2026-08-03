@@ -1,0 +1,115 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "yarnVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "testing-yarn4-zeroinstall",
+      "group": "@cyclonedx",
+      "version": "0.0.0",
+      "bom-ref": "@cyclonedx/testing-yarn4-zeroinstall@workspace:.",
+      "description": "A yarn4 zero-install setup.",
+      "purl": "pkg:npm/%40cyclonedx/testing-yarn4-zeroinstall@0.0.0"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "in-array",
+      "version": "0.1.2",
+      "bom-ref": "in-array@npm:0.1.2",
+      "purl": "pkg:npm/in-array@0.1.2"
+    },
+    {
+      "type": "library",
+      "name": "is-sorted",
+      "version": "1.0.5",
+      "bom-ref": "is-sorted@npm:1.0.5",
+      "purl": "pkg:npm/is-sorted@1.0.5"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "@cyclonedx/testing-yarn4-zeroinstall@workspace:.",
+      "dependsOn": [
+        "in-array@npm:0.1.2",
+        "is-sorted@npm:1.0.5"
+      ]
+    },
+    {
+      "ref": "in-array@npm:0.1.2"
+    },
+    {
+      "ref": "is-sorted@npm:1.0.5"
+    }
+  ]
+}
