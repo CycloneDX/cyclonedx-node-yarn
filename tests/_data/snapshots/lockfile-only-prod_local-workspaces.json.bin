@@ -1,0 +1,233 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "yarn",
+          "version": "yarnVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "yarn-plugin-cyclonedx",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-yarn.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-yarn#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "demo-workspaces",
+      "version": "0.0.0",
+      "bom-ref": "demo-workspaces@workspace:.",
+      "description": "demo: demo-workspaces -- showcase how workspaces look like",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-workspaces@0.0.0"
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "has-bigints",
+      "version": "1.1.0",
+      "bom-ref": "has-bigints@npm:1.1.0",
+      "purl": "pkg:npm/has-bigints@1.1.0"
+    },
+    {
+      "type": "library",
+      "name": "is-alphabetical",
+      "version": "2.0.1",
+      "bom-ref": "is-alphabetical@npm:2.0.1",
+      "purl": "pkg:npm/is-alphabetical@2.0.1"
+    },
+    {
+      "type": "library",
+      "name": "is-alphanumerical",
+      "version": "2.0.1",
+      "bom-ref": "is-alphanumerical@npm:2.0.1",
+      "purl": "pkg:npm/is-alphanumerical@2.0.1"
+    },
+    {
+      "type": "library",
+      "name": "is-bigint",
+      "version": "1.1.0",
+      "bom-ref": "is-bigint@npm:1.1.0",
+      "purl": "pkg:npm/is-bigint@1.1.0"
+    },
+    {
+      "type": "library",
+      "name": "is-decimal",
+      "version": "2.0.1",
+      "bom-ref": "is-decimal@npm:2.0.1",
+      "purl": "pkg:npm/is-decimal@2.0.1"
+    },
+    {
+      "type": "library",
+      "name": "is-hexadecimal",
+      "version": "2.0.1",
+      "bom-ref": "is-hexadecimal@npm:2.0.1",
+      "purl": "pkg:npm/is-hexadecimal@2.0.1"
+    },
+    {
+      "type": "library",
+      "name": "my-local-a",
+      "version": "0.0.0-use.local",
+      "bom-ref": "my-local-a@workspace:workspaces/my-local-a",
+      "purl": "pkg:npm/my-local-a@0.0.0-use.local"
+    },
+    {
+      "type": "library",
+      "name": "my-local-b-off",
+      "version": "0.0.0-use.local",
+      "bom-ref": "my-local-b-off@workspace:workspaces/my-local-b",
+      "purl": "pkg:npm/my-local-b-off@0.0.0-use.local"
+    },
+    {
+      "type": "library",
+      "name": "with-dev-deps",
+      "version": "0.0.0-use.local",
+      "bom-ref": "with-dev-deps@workspace:workspaces/with-dev-deps",
+      "purl": "pkg:npm/with-dev-deps@0.0.0-use.local"
+    },
+    {
+      "type": "library",
+      "name": "with-peer-deps",
+      "version": "0.0.0-use.local",
+      "bom-ref": "with-peer-deps@workspace:workspaces/with-peer-deps [be205]",
+      "purl": "pkg:npm/with-peer-deps@0.0.0-use.local"
+    },
+    {
+      "type": "library",
+      "name": "with-runtime-deps",
+      "version": "0.0.0-use.local",
+      "bom-ref": "with-runtime-deps@workspace:workspaces/with-runtime-deps",
+      "purl": "pkg:npm/with-runtime-deps@0.0.0-use.local"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "demo-workspaces@workspace:.",
+      "dependsOn": [
+        "is-bigint@npm:1.1.0",
+        "is-decimal@npm:2.0.1",
+        "my-local-a@workspace:workspaces/my-local-a",
+        "with-dev-deps@workspace:workspaces/with-dev-deps",
+        "with-peer-deps@workspace:workspaces/with-peer-deps [be205]",
+        "with-runtime-deps@workspace:workspaces/with-runtime-deps"
+      ]
+    },
+    {
+      "ref": "has-bigints@npm:1.1.0"
+    },
+    {
+      "ref": "is-alphabetical@npm:2.0.1"
+    },
+    {
+      "ref": "is-alphanumerical@npm:2.0.1",
+      "dependsOn": [
+        "is-alphabetical@npm:2.0.1",
+        "is-decimal@npm:2.0.1"
+      ]
+    },
+    {
+      "ref": "is-bigint@npm:1.1.0",
+      "dependsOn": [
+        "has-bigints@npm:1.1.0"
+      ]
+    },
+    {
+      "ref": "is-decimal@npm:2.0.1"
+    },
+    {
+      "ref": "is-hexadecimal@npm:2.0.1"
+    },
+    {
+      "ref": "my-local-a@workspace:workspaces/my-local-a",
+      "dependsOn": [
+        "my-local-b-off@workspace:workspaces/my-local-b"
+      ]
+    },
+    {
+      "ref": "my-local-b-off@workspace:workspaces/my-local-b"
+    },
+    {
+      "ref": "with-dev-deps@workspace:workspaces/with-dev-deps"
+    },
+    {
+      "ref": "with-peer-deps@workspace:workspaces/with-peer-deps [be205]",
+      "dependsOn": [
+        "is-bigint@npm:1.1.0"
+      ]
+    },
+    {
+      "ref": "with-runtime-deps@workspace:workspaces/with-runtime-deps",
+      "dependsOn": [
+        "is-alphanumerical@npm:2.0.1",
+        "is-hexadecimal@npm:2.0.1"
+      ]
+    }
+  ]
+}
