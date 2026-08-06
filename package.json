@@ -180,5 +180,8 @@
     "dogfooding": "node $PROJECT_CWD/bin/cyclonedx-yarn-cli.js"
   },
   "preferUnplugged": true,
-  "packageManager": "yarn@4.18.0"
+  "packageManager": "yarn@4.18.0",
+  "resolutions": {
+    "serialize-javascript": "7.0.3"
+  }
 }
