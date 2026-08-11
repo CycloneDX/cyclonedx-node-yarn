@@ -88,6 +88,16 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=18"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:yarn",
+          "value": ">=4"
+        }
       ]
     },
     "properties": [

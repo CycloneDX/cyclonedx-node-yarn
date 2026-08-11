@@ -76,6 +76,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">18 - 21</property>
+      </properties>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>

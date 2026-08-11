@@ -33,6 +33,10 @@ export const enum PropertyNames {
   PackageDevelopment = 'cdx:npm:package:development',
 }
 
+export const enum PropertyNamePrefixes {
+  PackageEngineConstraint = 'cdx:npm:package:constraint:engine:',
+}
+
 /**
  * CDX properties' values' boolean representation - specific to this very tool.
  * @see {@link https://github.com/CycloneDX/cyclonedx-property-taxonomy/blob/main/cdx/npm.md | npm property taxonomy}
