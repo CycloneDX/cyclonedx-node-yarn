@@ -81,12 +81,12 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.purlFactory = purlFactory
 
+    this.lockfileOnly = options.lockfileOnly ?? false
     this.omitDevDependencies = options.omitDevDependencies ?? false
     this.metaComponentType = options.metaComponentType ?? ComponentType.Application
     this.reproducible = options.reproducible ?? false
     this.shortPURLs = options.shortPURLs ?? false
     this.gatherLicenseTexts = options.gatherLicenseTexts ?? false
-    this.lockfileOnly = options.lockfileOnly ?? false
 
     this.console = console_
   }
