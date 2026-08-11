@@ -198,8 +198,8 @@ export class BomBuilder {
 
   private async makeLicenseEvidenceFetcher (project: Project): Promise<LicenseEvidenceFetcher> {
     if (this.lockfileOnly) {
-      return async function * (_pkg: Package): AsyncGenerator<License> {
-        // no-op, yield nothing
+      return async function * (): AsyncGenerator<License> {
+        /* no-op, yield nothing */
       }
     }
 
