@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!/README.md
+!/.yarnrc.yml
+!/package.json
+!/yarn.lock
