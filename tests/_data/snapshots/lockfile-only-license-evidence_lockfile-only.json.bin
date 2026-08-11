@@ -82,6 +82,24 @@
   "components": [
     {
       "type": "library",
+      "name": "cyclonedx-library",
+      "group": "@cyclonedx",
+      "version": "10.1.1",
+      "bom-ref": "@cyclonedx/cyclonedx-library@npm:10.1.1 [9ac51]",
+      "purl": "pkg:npm/%40cyclonedx/cyclonedx-library@10.1.1",
+      "evidence": {}
+    },
+    {
+      "type": "library",
+      "name": "chalk-animation",
+      "group": "@types",
+      "version": "1.6.3",
+      "bom-ref": "@types/chalk-animation@npm:1.6.3",
+      "purl": "pkg:npm/%40types/chalk-animation@1.6.3",
+      "evidence": {}
+    },
+    {
+      "type": "library",
       "name": "is-positive",
       "version": "3.1.0",
       "bom-ref": "is-positive@npm:3.1.0",
@@ -91,11 +109,19 @@
   ],
   "dependencies": [
     {
+      "ref": "@cyclonedx/cyclonedx-library@npm:10.1.1 [9ac51]"
+    },
+    {
+      "ref": "@types/chalk-animation@npm:1.6.3"
+    },
+    {
       "ref": "is-positive@npm:3.1.0"
     },
     {
       "ref": "lockfile-only-testbed@workspace:.",
       "dependsOn": [
+        "@cyclonedx/cyclonedx-library@npm:10.1.1 [9ac51]",
+        "@types/chalk-animation@npm:1.6.3",
         "is-positive@npm:3.1.0"
       ]
     }
