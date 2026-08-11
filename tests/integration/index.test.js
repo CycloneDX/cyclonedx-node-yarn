@@ -283,7 +283,7 @@ suite('integration', () => {
             'juice-shop'
           ].forEach(testSetup => {
             test(`${testSetup}`,
-              () => runTest('lockfile-only', testSetup, format, ['--lockfile-only'])
+              () => runTest('lockfile-only-dev', testSetup, format, ['--lockfile-only'])
             ).timeout(longTestTimeout)
           });
 
@@ -297,22 +297,7 @@ suite('integration', () => {
             test(`${testSetup} prod`,
               () => runTest('lockfile-only-prod', testSetup, format, ['--lockfile-only', '--prod'])
             ).timeout(longTestTimeout)
-          });
-
-          [
-            'lockfile-only',
-            'gather-licenses',
-            'dev-dependencies',
-            'juice-shop'
-          ].forEach(testSetup => {
-            test(`${testSetup} license evidence`,
-              () => runTest('lockfile-only-license-evidence', testSetup, format, ['--lockfile-only', '--gather-license-texts'])
-            ).timeout(longTestTimeout)
           })
-
-          test('short PURLs',
-            () => runTest('short-PURLs', 'lockfile-only', format, ['--lockfile-only', '--short-PURLs'])
-          ).timeout(longTestTimeout)
         })
 
         suite('license evidence', () => {
