@@ -48,12 +48,12 @@ type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
 type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
 
 interface BomBuilderOptions {
+  lockfileOnly?: BomBuilder['lockfileOnly']
   omitDevDependencies?: BomBuilder['omitDevDependencies']
   metaComponentType?: BomBuilder['metaComponentType']
   reproducible?: BomBuilder['reproducible']
   shortPURLs?: BomBuilder['shortPURLs']
   gatherLicenseTexts?: BomBuilder['gatherLicenseTexts']
-  lockfileOnly?: BomBuilder['lockfileOnly']
 }
 
 export class BomBuilder {
@@ -61,12 +61,12 @@ export class BomBuilder {
   readonly componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder
   readonly purlFactory: PackageUrlFactory
 
+  readonly lockfileOnly: boolean
   readonly omitDevDependencies: boolean
   readonly metaComponentType: ComponentType
   readonly reproducible: boolean
   readonly shortPURLs: boolean
   readonly gatherLicenseTexts: boolean
-  readonly lockfileOnly: boolean
 
   readonly console: Console
 
