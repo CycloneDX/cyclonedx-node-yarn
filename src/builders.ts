@@ -169,11 +169,8 @@ export class BomBuilder {
   private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
     if (this.lockfileOnly) {
       /* eslint-disable-next-line @typescript-eslint/require-await -- needed for signature */
-      return async function (pkg: Package): Promise<NonNullable<any>> {
-        return {
-          name: pkg.name,
-          version: pkg.version
-        }
+      return async function (): Promise<NonNullable<any>> {
+        return {/* empty */}
       }
     }
 
