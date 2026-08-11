@@ -195,12 +195,12 @@ export class MakeSbomCommand extends Command<CommandContext> {
       ),
       new PackageUrlFactory(),
       {
+        lockfileOnly: this.lockfileOnly,
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
         reproducible: this.outputReproducible,
         shortPURLs: this.shortPURLs,
-        gatherLicenseTexts: this.gatherLicenseTexts,
-        lockfileOnly: this.lockfileOnly
+        gatherLicenseTexts: this.gatherLicenseTexts
       },
       myConsole
     )).buildFromWorkspace(workspace)
