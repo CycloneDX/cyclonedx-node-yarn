@@ -19,6 +19,18 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import type { BaseContext } from 'clipanion'
 
+/* c8 ignore start -- const enums are not compiled to any code */
+
+export const enum LogPrefixes {
+  DEBUG = 'DEBUG |',
+  INFO = 'INFO  |',
+  LOG = 'LOG   |',
+  WARN = 'WARN  |',
+  ERROR = 'ERROR |',
+}
+
+/* c8 ignore stop */
+
 function noop (): void {
   // do nothing
 }

@@ -34,7 +34,7 @@ import { isEnum } from 'typanion'
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
 import { PackageUrlFactory } from './factories'
-import { makeConsoleLogger } from './logger'
+import {LogPrefixes, makeConsoleLogger} from './logger'
 
 
 const OutputStdOut = '-'
@@ -163,8 +163,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
       return ExitCode.INVALID
     }
 
-    myConsole.debug('DEBUG | YARN_VERSION:', YarnVersionTuple)
-    myConsole.debug('DEBUG | options: %j', {
+    myConsole.debug(LogPrefixes.DEBUG, 'YARN_VERSION:', YarnVersionTuple)
+    myConsole.debug('%s options: %j', LogPrefixes.DEBUG, {
       specVersion: this.specVersion,
       outputFormat: this.outputFormat,
       outputFile: this.outputFile,
@@ -178,18 +178,18 @@ export class MakeSbomCommand extends Command<CommandContext> {
       projectDir
     })
 
-    myConsole.info('INFO  | gathering project & workspace ...')
+    myConsole.info(LogPrefixes.INFO, 'gathering project & workspace ...')
     const { project, workspace } = await Project.find(
       await Configuration.find(projectDir, this.context.plugins),
       projectDir)
     if (workspace === null) {
       throw new Error(`missing workspace for project ${project.cwd} in ${projectDir}`)
     }
-    myConsole.debug('DEBUG | project:', project.cwd)
-    myConsole.debug('DEBUG | workspace:', workspace.cwd)
+    myConsole.debug(LogPrefixes.DEBUG, 'project:', project.cwd)
+    myConsole.debug(LogPrefixes.DEBUG, 'workspace:', workspace.cwd)
 
     if (this.lockfileOnly) {
-      myConsole.info('INFO  | skipping workspace installation state restoration (--lockfile-only)')
+      myConsole.info(LogPrefixes.INFO, 'skipping workspace installation state restoration (--lockfile-only)')
       await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
     } else {
       myConsole.info('INFO  | restoring workspace installation state ...')
