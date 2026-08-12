@@ -192,6 +192,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       myConsole.info('INFO  | skipping workspace installation state restoration (--lockfile-only)')
       await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
     } else {
+      myConsole.info('INFO  | restoring workspace installation state ...')
       await workspace.project.restoreInstallState()
     }
 
