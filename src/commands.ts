@@ -143,12 +143,23 @@ export class MakeSbomCommand extends Command<CommandContext> {
     })
    */
 
+  /* cannot use for yarn3-compat reasons - see below
+  static override schema = [
+    typanion.hasMutuallyExclusiveKeys(['lockfileOnly', 'gatherLicenseTexts'], {missingIf: 'falsy'}),
+  ] */
+
   async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
     const projectDir = this.context.cwd
 
     if (YarnVersionTuple !== null && YarnVersionTuple[0] < 4) {
       myConsole.error('Error: expected yarn version >= 4 - got', YarnVersionTuple)
+      return ExitCode.INVALID
+    }
+
+    // for yarn3-compat reasons, instead of `typanion.hasMutuallyExclusiveKeys`
+    if (this.lockfileOnly && this.gatherLicenseTexts) {
+      myConsole.error('Error: mutually exclusive options "--lockfile-only" and "--gather-license-texts"')
       return ExitCode.INVALID
     }
 

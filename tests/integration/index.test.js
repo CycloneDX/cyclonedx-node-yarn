@@ -175,6 +175,14 @@ suite('integration', () => {
         /error: expected yarn version >= 4/i)
     }).timeout(longTestTimeout)
 
+    test('mutually exclusive: lockfileOnly gatherLicenseTexts', () => {
+      const res = _rawRunCLI(
+        path.join(testbedsPath, 'yarn4_zeroinstall'),
+        ['--lockfile-only', '--gather-license-texts'])
+      assert.notEqual(res.status, 0)
+      assert.match(res.stderr, /error: mutually exclusive options "--lockfile-only" and "--gather-license-texts"/i)
+    })
+
     test('silent', async () => {
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
