@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+## 3.4.0 - 2026-08-12
+
 * Added
   * New CLI switch `--logfile-only` ([#49] via [#490])
 
