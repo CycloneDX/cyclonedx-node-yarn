@@ -67,8 +67,8 @@ $ yarn cyclonedx
 
 ━━━ Options ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  --lockfile-only            Only use the yarn.lock file for dependency information.
-                             No network calls will be made.
+  --lockfile-only            Only use the "yarn.lock" file for analysis.
+                             This means the output will be based only on the few details in this file, rather than the contents of installed/cached/downloaded packages.
   --production,--prod        Exclude development dependencies.
                              (default: true if the NODE_ENV environment variable is set to "production", otherwise false)
   --gather-license-texts     Search for license files in components and include them as license evidence.

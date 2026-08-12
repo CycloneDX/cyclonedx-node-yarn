@@ -77,8 +77,8 @@ export class MakeSbomCommand extends Command<CommandContext> {
   })
 
   readonly lockfileOnly = Option.Boolean('--lockfile-only', false, {
-    description: 'Only use the yarn.lock file for dependency information.\n'+
-        'No network calls will be made.'
+    description: 'Only use the "yarn.lock" file for analysis.\n'+
+        'This means the output will be based only on the few details in this file, rather than the contents of installed/cached/downloaded packages.'
   })
 
   /* mimic option from yarn.
