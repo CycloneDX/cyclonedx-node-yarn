@@ -175,6 +175,14 @@ suite('integration', () => {
         /error: expected yarn version >= 4/i)
     }).timeout(longTestTimeout)
 
+    test('mutually exclusive: lockfileOnly gatherLicenseTexts', () => {
+      const res = _rawRunCLI(
+        path.join(testbedsPath, 'yarn4_zeroinstall'),
+        ['--lockfile-only', '--gather-license-texts'])
+      assert.notEqual(res.status, 0)
+      assert.match(res.stderr, /error: mutually exclusive options "--lockfile-only" and "--gather-license-texts"/i)
+    })
+
     test('silent', async () => {
       const res = _rawRunCLI(
         path.join(testbedsPath, 'dev-dependencies'),
@@ -271,6 +279,31 @@ suite('integration', () => {
           ].forEach(testSetup => {
             test(`${testSetup}`,
               () => runTest('short-PURLs', testSetup, format, ['--short-PURLs'])
+            ).timeout(longTestTimeout)
+          })
+        })
+
+        suite('lockfile-only', () => {
+          [
+            'lockfile-only',
+            'dev-dependencies',
+            'yarn4_zeroinstall',
+            'juice-shop'
+          ].forEach(testSetup => {
+            test(`${testSetup}`,
+              () => runTest('lockfile-only-dev', testSetup, format, ['--lockfile-only'])
+            ).timeout(longTestTimeout)
+          });
+
+          [
+            'lockfile-only',
+            'dev-dependencies',
+            'yarn4_zeroinstall',
+            'local-workspaces',
+            'juice-shop'
+          ].forEach(testSetup => {
+            test(`${testSetup} prod`,
+              () => runTest('lockfile-only-prod', testSetup, format, ['--lockfile-only', '--prod'])
             ).timeout(longTestTimeout)
           })
         })

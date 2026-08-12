@@ -48,6 +48,7 @@ type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
 type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
 
 interface BomBuilderOptions {
+  lockfileOnly?: BomBuilder['lockfileOnly']
   omitDevDependencies?: BomBuilder['omitDevDependencies']
   metaComponentType?: BomBuilder['metaComponentType']
   reproducible?: BomBuilder['reproducible']
@@ -60,6 +61,7 @@ export class BomBuilder {
   readonly componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder
   readonly purlFactory: PackageUrlFactory
 
+  readonly lockfileOnly: boolean
   readonly omitDevDependencies: boolean
   readonly metaComponentType: ComponentType
   readonly reproducible: boolean
@@ -79,6 +81,7 @@ export class BomBuilder {
     this.componentBuilder = componentBuilder
     this.purlFactory = purlFactory
 
+    this.lockfileOnly = options.lockfileOnly ?? false
     this.omitDevDependencies = options.omitDevDependencies ?? false
     this.metaComponentType = options.metaComponentType ?? ComponentType.Application
     this.reproducible = options.reproducible ?? false
@@ -164,6 +167,13 @@ export class BomBuilder {
   }
 
   private async makeManifestFetcher (project: Project): Promise<ManifestFetcher> {
+    if (this.lockfileOnly) {
+      /* eslint-disable-next-line @typescript-eslint/require-await -- needed for signature */
+      return async function (): Promise<NonNullable<any>> {
+        return {/* empty */}
+      }
+    }
+
     const fetcher = project.configuration.makeFetcher()
     const fetcherOptions: FetchOptions = {
       project,
@@ -187,6 +197,12 @@ export class BomBuilder {
   }
 
   private async makeLicenseEvidenceFetcher (project: Project): Promise<LicenseEvidenceFetcher> {
+    if (this.lockfileOnly) {
+      return async function * (): AsyncGenerator<License> {
+        /* no-op, yield nothing */
+      }
+    }
+
     const fetcher = project.configuration.makeFetcher()
     const fetcherOptions: FetchOptions = {
       project,

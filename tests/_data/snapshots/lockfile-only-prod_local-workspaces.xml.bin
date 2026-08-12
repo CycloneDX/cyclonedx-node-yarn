@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
+  <metadata>
+    <tools>
+      <components>
+        <component type="application">
+          <name>yarn</name>
+          <version>yarnVersion-testing</version>
+        </component>
+        <component type="library">
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>libVersion-testing</version>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>yarn-plugin-cyclonedx</name>
+          <version>thisVersion-testing</version>
+          <description>Create CycloneDX Software Bill of Materials (SBOM) from yarn projects.</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-node-yarn.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-node-yarn#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </tools>
+    <component type="application" bom-ref="demo-workspaces@workspace:.">
+      <name>demo-workspaces</name>
+      <version>0.0.0</version>
+      <description>demo: demo-workspaces -- showcase how workspaces look like</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/demo-workspaces@0.0.0</purl>
+    </component>
+    <properties>
+      <property name="cdx:reproducible">true</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="has-bigints@npm:1.1.0">
+      <name>has-bigints</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/has-bigints@1.1.0</purl>
+    </component>
+    <component type="library" bom-ref="is-alphabetical@npm:2.0.1">
+      <name>is-alphabetical</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/is-alphabetical@2.0.1</purl>
+    </component>
+    <component type="library" bom-ref="is-alphanumerical@npm:2.0.1">
+      <name>is-alphanumerical</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/is-alphanumerical@2.0.1</purl>
+    </component>
+    <component type="library" bom-ref="is-bigint@npm:1.1.0">
+      <name>is-bigint</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/is-bigint@1.1.0</purl>
+    </component>
+    <component type="library" bom-ref="is-decimal@npm:2.0.1">
+      <name>is-decimal</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/is-decimal@2.0.1</purl>
+    </component>
+    <component type="library" bom-ref="is-hexadecimal@npm:2.0.1">
+      <name>is-hexadecimal</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/is-hexadecimal@2.0.1</purl>
+    </component>
+    <component type="library" bom-ref="my-local-a@workspace:workspaces/my-local-a">
+      <name>my-local-a</name>
+      <version>0.0.0-use.local</version>
+      <purl>pkg:npm/my-local-a@0.0.0-use.local</purl>
+    </component>
+    <component type="library" bom-ref="my-local-b-off@workspace:workspaces/my-local-b">
+      <name>my-local-b-off</name>
+      <version>0.0.0-use.local</version>
+      <purl>pkg:npm/my-local-b-off@0.0.0-use.local</purl>
+    </component>
+    <component type="library" bom-ref="with-dev-deps@workspace:workspaces/with-dev-deps">
+      <name>with-dev-deps</name>
+      <version>0.0.0-use.local</version>
+      <purl>pkg:npm/with-dev-deps@0.0.0-use.local</purl>
+    </component>
+    <component type="library" bom-ref="with-peer-deps@workspace:workspaces/with-peer-deps [be205]">
+      <name>with-peer-deps</name>
+      <version>0.0.0-use.local</version>
+      <purl>pkg:npm/with-peer-deps@0.0.0-use.local</purl>
+    </component>
+    <component type="library" bom-ref="with-runtime-deps@workspace:workspaces/with-runtime-deps">
+      <name>with-runtime-deps</name>
+      <version>0.0.0-use.local</version>
+      <purl>pkg:npm/with-runtime-deps@0.0.0-use.local</purl>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="demo-workspaces@workspace:.">
+      <dependency ref="is-bigint@npm:1.1.0"/>
+      <dependency ref="is-decimal@npm:2.0.1"/>
+      <dependency ref="my-local-a@workspace:workspaces/my-local-a"/>
+      <dependency ref="with-dev-deps@workspace:workspaces/with-dev-deps"/>
+      <dependency ref="with-peer-deps@workspace:workspaces/with-peer-deps [be205]"/>
+      <dependency ref="with-runtime-deps@workspace:workspaces/with-runtime-deps"/>
+    </dependency>
+    <dependency ref="has-bigints@npm:1.1.0"/>
+    <dependency ref="is-alphabetical@npm:2.0.1"/>
+    <dependency ref="is-alphanumerical@npm:2.0.1">
+      <dependency ref="is-alphabetical@npm:2.0.1"/>
+      <dependency ref="is-decimal@npm:2.0.1"/>
+    </dependency>
+    <dependency ref="is-bigint@npm:1.1.0">
+      <dependency ref="has-bigints@npm:1.1.0"/>
+    </dependency>
+    <dependency ref="is-decimal@npm:2.0.1"/>
+    <dependency ref="is-hexadecimal@npm:2.0.1"/>
+    <dependency ref="my-local-a@workspace:workspaces/my-local-a">
+      <dependency ref="my-local-b-off@workspace:workspaces/my-local-b"/>
+    </dependency>
+    <dependency ref="my-local-b-off@workspace:workspaces/my-local-b"/>
+    <dependency ref="with-dev-deps@workspace:workspaces/with-dev-deps"/>
+    <dependency ref="with-peer-deps@workspace:workspaces/with-peer-deps [be205]">
+      <dependency ref="is-bigint@npm:1.1.0"/>
+    </dependency>
+    <dependency ref="with-runtime-deps@workspace:workspaces/with-runtime-deps">
+      <dependency ref="is-alphanumerical@npm:2.0.1"/>
+      <dependency ref="is-hexadecimal@npm:2.0.1"/>
+    </dependency>
+  </dependencies>
+</bom>

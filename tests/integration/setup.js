@@ -46,6 +46,10 @@ const testbedsPath = path.join(testRootPath, '_data', 'testbeds');
     // none so far
     /* endregion regression tests */
   ]
+  // Every testbed NOT listed above (e.g. 'lockfile-only', '*_zeroinstall')
+  // is left without an install on purpose:
+  // they exist to exercise CLI paths that must work without a full install -
+  // running `yarn install` on them would defeat their purpose.
 
   console.warn(`
   WILL SETUP INTEGRATION TEST BEDS

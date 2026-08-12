@@ -25,7 +25,7 @@ import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Seria
 import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML, XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
 import { SpecVersionDict, Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
 import type { CommandContext } from '@yarnpkg/core'
-import { Configuration, Project, YarnVersion } from '@yarnpkg/core'
+import { Configuration, Project, ThrowReport, YarnVersion } from '@yarnpkg/core'
 import { npath, xfs } from '@yarnpkg/fslib'
 import { Command, Option } from 'clipanion'
 import spdxExpressionParse from "spdx-expression-parse"
@@ -74,6 +74,11 @@ export class MakeSbomCommand extends Command<CommandContext> {
   static override readonly usage = Command.Usage({
     description: 'Generates CycloneDX SBOM for current workspace.',
     details: 'Recursively scan workspace dependencies and emits them as Software-Bill-of-Materials(SBOM) in CycloneDX format.'
+  })
+
+  readonly lockfileOnly = Option.Boolean('--lockfile-only', false, {
+    description: 'Only use the "yarn.lock" file for analysis.\n'+
+        'This means the output will be based only on the few details in this file, rather than the contents of installed/cached/downloaded packages.'
   })
 
   /* mimic option from yarn.
@@ -138,12 +143,23 @@ export class MakeSbomCommand extends Command<CommandContext> {
     })
    */
 
+  /* cannot use for yarn3-compat reasons - see below
+  static override schema = [
+    typanion.hasMutuallyExclusiveKeys(['lockfileOnly', 'gatherLicenseTexts'], {missingIf: 'falsy'}),
+  ] */
+
   async execute (): Promise<number> {
     const myConsole = makeConsoleLogger(this.verbosity, this.context)
     const projectDir = this.context.cwd
 
     if (YarnVersionTuple !== null && YarnVersionTuple[0] < 4) {
       myConsole.error('Error: expected yarn version >= 4 - got', YarnVersionTuple)
+      return ExitCode.INVALID
+    }
+
+    // for yarn3-compat reasons, instead of `typanion.hasMutuallyExclusiveKeys`
+    if (this.lockfileOnly && this.gatherLicenseTexts) {
+      myConsole.error('Error: mutually exclusive options "--lockfile-only" and "--gather-license-texts"')
       return ExitCode.INVALID
     }
 
@@ -158,6 +174,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       outputReproducible: this.outputReproducible,
       gatherLicenseTexts: this.gatherLicenseTexts,
       verbosity: this.verbosity,
+      lockfileOnly: this.lockfileOnly,
       projectDir
     })
 
@@ -170,7 +187,13 @@ export class MakeSbomCommand extends Command<CommandContext> {
     }
     myConsole.debug('DEBUG | project:', project.cwd)
     myConsole.debug('DEBUG | workspace:', workspace.cwd)
-    await workspace.project.restoreInstallState()
+
+    if (this.lockfileOnly) {
+      myConsole.info('INFO  | skipping workspace installation state restoration (--lockfile-only)')
+      await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
+    } else {
+      await workspace.project.restoreInstallState()
+    }
 
     const extRefFactory = new FromNodePackageJsonFactories.ExternalReferenceFactory()
 
@@ -183,6 +206,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
       ),
       new PackageUrlFactory(),
       {
+        lockfileOnly: this.lockfileOnly,
         omitDevDependencies: this.production,
         metaComponentType: this.mcType,
         reproducible: this.outputReproducible,
