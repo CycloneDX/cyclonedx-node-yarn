@@ -71,7 +71,7 @@ suite('integration', () => {
   // testing complex setups - this may take some time
   const longTestTimeout = 120000
 
-  /* eslint-disable jsdoc/valid-types -- jsdoc doesnot knowimport, yet */
+  /* eslint-disable jsdoc/valid-types -- jsdoc does not know import, yet */
 
   /**
    * @param {string} cwd
@@ -92,9 +92,9 @@ suite('integration', () => {
           CI: '1'
         }
       })
-
-    /* eslint-ensable jsdoc/valid-types */
   }
+
+  /* eslint-enable jsdoc/valid-types */
 
   /**
    * @param {string} cwd

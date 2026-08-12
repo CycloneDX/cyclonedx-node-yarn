@@ -126,7 +126,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
     ComponentType.Application,
     'Type of the main component.'
   )
-  readonly    verbosity = Option.Counter('-v,--verbose', 1, {
+  readonly verbosity = Option.Counter('-v,--verbose', 1, {
     description: 'Increase the verbosity of messages.\n' +
         'Use multiple times to increase the verbosity even more.'
   })
