@@ -34,7 +34,7 @@ import { isEnum } from 'typanion'
 import { writeAllSync } from './_helpers'
 import { BomBuilder } from './builders'
 import { PackageUrlFactory } from './factories'
-import {LogPrefixes, makeConsoleLogger} from './logger'
+import { LogPrefixes, makeConsoleLogger } from './logger'
 
 
 const OutputStdOut = '-'
@@ -192,13 +192,13 @@ export class MakeSbomCommand extends Command<CommandContext> {
       myConsole.info(LogPrefixes.INFO, 'skipping workspace installation state restoration (--lockfile-only)')
       await workspace.project.resolveEverything({ lockfileOnly: true, report: new ThrowReport() })
     } else {
-      myConsole.info('INFO  | restoring workspace installation state ...')
+      myConsole.info(LogPrefixes.INFO, 'restoring workspace installation state ...')
       await workspace.project.restoreInstallState()
     }
 
     const extRefFactory = new FromNodePackageJsonFactories.ExternalReferenceFactory()
 
-    myConsole.log('LOG   | gathering BOM data ...')
+    myConsole.log(LogPrefixes.LOG, 'gathering BOM data ...')
     const bom = await (new BomBuilder(
       new FromNodePackageJsonBuilders.ToolBuilder(extRefFactory),
       new FromNodePackageJsonBuilders.ComponentBuilder(
@@ -233,7 +233,7 @@ export class MakeSbomCommand extends Command<CommandContext> {
         break
     }
 
-    myConsole.log('LOG   | serializing BOM ...')
+    myConsole.log(LogPrefixes.LOG, 'serializing BOM ...')
     const serialized = serializer.serialize(bom, {
       sortLists: this.outputReproducible,
       space: 2
@@ -244,19 +244,19 @@ export class MakeSbomCommand extends Command<CommandContext> {
     let outputFD: number = process.stdout.fd
     if (this.outputFile !== OutputStdOut) {
       const outputFPn = npath.resolve(process.cwd(), this.outputFile)
-      myConsole.debug('DEBUG | outputFPn:', outputFPn)
+      myConsole.debug(LogPrefixes.DEBUG, 'outputFPn:', outputFPn)
       const outputFDir = npath.toPortablePath(npath.dirname(outputFPn))
       if (!xfs.existsSync(outputFDir)) {
-        myConsole.info('INFO  | creating directory', outputFDir)
+        myConsole.info(LogPrefixes.INFO, 'creating directory', outputFDir)
         xfs.mkdirSync(outputFDir, { recursive: true })
       }
       outputFD = xfs.openSync(npath.toPortablePath(outputFPn), 'w')
     }
 
     try {
-      myConsole.log('LOG   | writing BOM to: %s', this.outputFile)
+      myConsole.log('%s writing BOM to: %s', LogPrefixes.LOG, this.outputFile)
       const written = await writeAllSync(outputFD, serialized)
-      myConsole.info('INFO  | wrote %d bytes to: %s', written, this.outputFile)
+      myConsole.info('%s wrote %d bytes to: %s', LogPrefixes.INFO, written, this.outputFile)
 
       return written > 0
         ? ExitCode.SUCCESS
