@@ -41,11 +41,26 @@ import {
   trySanitizeGitUrl
 } from './_helpers'
 import type { PackageUrlFactory } from './factories'
-import { PropertyNames, PropertyValueBool } from './properties'
+import { PropertyNamePrefixes, PropertyNames, PropertyValueBool } from './properties'
 
 
 type ManifestFetcher = (pkg: Package) => Promise<NonNullable<any>>
 type LicenseEvidenceFetcher = (pkg: Package) => AsyncGenerator<License>
+
+function addEngineConstraintProperties (component: Component, engines: unknown): void {
+  if (engines === null || typeof engines !== 'object' || Array.isArray(engines)) {
+    return
+  }
+
+  for (const [name, constraint] of Object.entries(engines)) {
+    if (isString(constraint)) {
+      component.properties.add(new Property(
+        `${PropertyNamePrefixes.PackageEngineConstraint}${name}`,
+        constraint
+      ))
+    }
+  }
+}
 
 interface BomBuilderOptions {
   omitDevDependencies?: BomBuilder['omitDevDependencies']
@@ -102,6 +117,7 @@ export class BomBuilder {
     const rootComponent: Component = this.makeComponentFromWorkspace(workspace, this.metaComponentType)
       ?? new DummyComponent(this.metaComponentType, 'RootComponent')
     rootComponent.licenses.forEach(setLicensesDeclared)
+    addEngineConstraintProperties(rootComponent, workspace.manifest.raw.engines)
 
     const bom = new Bom()
 

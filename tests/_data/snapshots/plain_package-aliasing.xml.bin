@@ -70,6 +70,10 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=18</property>
+        <property name="cdx:npm:package:constraint:engine:yarn">&gt;=4</property>
+      </properties>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
