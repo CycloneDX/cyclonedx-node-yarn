@@ -121,7 +121,6 @@ export class BomBuilder {
       bom.metadata.properties.add(
         new Property(PropertyNames.Reproducible, PropertyValueBool.True)
       )
-      bom.metadata.properties.
     } else {
       bom.serialNumber = BomUUtils.randomSerialNumber()
       bom.metadata.timestamp = new Date()
