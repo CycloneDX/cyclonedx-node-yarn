@@ -41,6 +41,7 @@ import {
   trySanitizeGitUrl
 } from './_helpers'
 import type { PackageUrlFactory } from './factories'
+import { LogPrefixes } from './logger'
 import { PropertyNames, PropertyValueBool } from './properties'
 
 
@@ -149,7 +150,7 @@ export class BomBuilder {
     )) {
       component.licenses.forEach(setLicensesDeclared)
 
-      this.console.info('INFO  | add component for %s/%s@%s',
+      this.console.info('%s add component for %s/%s@%s', LogPrefixes.INFO,
         component.group ?? '-',
         component.name,
         component.version ?? '-'
@@ -275,7 +276,7 @@ export class BomBuilder {
     normalizePackageManifest(manifestC)
     const component = this.componentBuilder.makeComponent(manifestC, type)
     if (component === undefined) {
-      this.console.debug('DEBUG | skip broken component: %j', locator)
+      this.console.debug('%s skip broken component: %j', LogPrefixes.DEBUG, locator)
       return undefined
     }
 
@@ -401,10 +402,10 @@ export class BomBuilder {
             fetchManifest, fetchLicenseEvidences)
           if (_depC === undefined) {
             depComponent = new DummyComponent(ComponentType.Library, `InterferedDependency.${_depIDN}`)
-            this.console.warn('WARN  | InterferedDependency %j', _depIDN)
+            this.console.warn('%s InterferedDependency %j', LogPrefixes.WARN, _depIDN)
           } else {
             depComponent = _depC
-            this.console.debug('DEBUG | built component %j: %j', _depIDN, depComponent)
+            this.console.debug('%s built component %j: %j', LogPrefixes.DEBUG, _depIDN, depComponent)
           }
           yield depComponent
           knownComponents.set(depPkg.locatorHash, depComponent)
