@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- add unreleased items here -->
 
+* Added
+  * New CLI switch `--logfile-only` ([#49] via [#490])
+
+[#49]: https://github.com/CycloneDX/cyclonedx-node-yarn/issues/49
+[#490]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/490
+
 ## 3.3.3 - 2026-07-30
 
 * Fixed
