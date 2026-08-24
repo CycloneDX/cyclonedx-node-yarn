@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file.
 <!-- add unreleased items here -->
 
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@10.2.0`, was `10.1.0` (via [#])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@10.2.0`, was `10.1.0` (via [#596])
 
-[#]:
+[#596]: https://github.com/CycloneDX/cyclonedx-node-yarn/pull/596
 
 ## 3.4.0 - 2026-08-12
 
