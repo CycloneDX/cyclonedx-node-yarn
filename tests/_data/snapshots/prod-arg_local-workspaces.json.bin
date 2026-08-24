@@ -121,6 +121,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
+        }
       ]
     },
     {
@@ -222,6 +228,12 @@
           "url": "https://github.com/inspect-js/is-bigint#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
         }
       ]
     },

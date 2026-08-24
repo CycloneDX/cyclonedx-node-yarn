@@ -92,6 +92,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-alphabetical@npm:2.0.1">
       <author>Titus Wormer</author>
@@ -170,6 +173,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-decimal@npm:2.0.1">
       <author>Titus Wormer</author>

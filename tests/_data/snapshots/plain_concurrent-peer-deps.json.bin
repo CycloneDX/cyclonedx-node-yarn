@@ -162,6 +162,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
+        }
       ]
     },
     {
@@ -195,6 +201,12 @@
           "url": "https://github.com/inspect-js/has-tostringtag#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
         }
       ]
     },
@@ -230,6 +242,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
+        }
       ]
     },
     {
@@ -263,6 +281,12 @@
           "url": "https://github.com/ljharb/is-string#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
         }
       ]
     },

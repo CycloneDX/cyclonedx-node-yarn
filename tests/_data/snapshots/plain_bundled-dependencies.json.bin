@@ -138,6 +138,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -205,6 +211,12 @@
           "url": "https://github.com/sindresorhus/camelcase#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -274,6 +286,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -307,6 +325,12 @@
           "url": "https://github.com/sindresorhus/decamelize#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -374,6 +398,12 @@
           "url": "https://github.com/sindresorhus/find-up#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -509,6 +539,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
+        }
       ]
     },
     {
@@ -576,6 +612,12 @@
           "url": "https://github.com/sindresorhus/invert-kv#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -679,6 +721,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -747,6 +795,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -780,6 +834,12 @@
           "url": "https://github.com/sindresorhus/load-json-file#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -883,6 +943,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -916,6 +982,12 @@
           "url": "https://github.com/sindresorhus/os-locale#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -951,6 +1023,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -984,6 +1062,12 @@
           "url": "https://github.com/sindresorhus/path-exists#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -1053,6 +1137,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1086,6 +1176,12 @@
           "url": "https://github.com/sindresorhus/pify#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -1121,6 +1217,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1154,6 +1256,12 @@
           "url": "https://github.com/floatdrop/pinkie#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -1189,6 +1297,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1223,6 +1337,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1256,6 +1376,12 @@
           "url": "https://github.com/troygoode/node-require-directory/",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -1562,6 +1688,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1595,6 +1727,12 @@
           "url": "https://github.com/chalk/strip-ansi#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -1630,6 +1768,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -1663,6 +1807,12 @@
           "url": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.4"
         }
       ]
     },
@@ -1766,6 +1916,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.10.0"
+        }
       ]
     },
     {
@@ -1799,6 +1955,12 @@
           "url": "https://github.com/chalk/wrap-ansi#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },

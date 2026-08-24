@@ -88,6 +88,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-sorted@npm:1.0.5">
       <author>Daniel Cousens</author>

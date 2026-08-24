@@ -144,6 +144,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14.0.0"
+        }
       ]
     },
     {
@@ -178,6 +184,12 @@
           "url": "https://github.com/yargs/cliui#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
         }
       ]
     },
@@ -249,6 +261,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -283,6 +301,12 @@
           "url": "https://github.com/npm/fs#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -319,6 +343,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        }
       ]
     },
     {
@@ -353,6 +383,12 @@
           "url": "http://github.com/oozcitak/infra",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6.0"
         }
       ]
     },
@@ -389,6 +425,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        }
       ]
     },
     {
@@ -424,6 +466,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0"
+        }
       ]
     },
     {
@@ -457,6 +505,12 @@
           "url": "https://github.com/pkgjs/parseargs#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
         }
       ]
     },
@@ -526,6 +580,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -559,6 +619,12 @@
           "url": "https://github.com/TooTallNate/node-agent-base#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6.0.0"
         }
       ]
     },
@@ -594,6 +660,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        }
       ]
     },
     {
@@ -627,6 +699,12 @@
           "url": "https://github.com/sindresorhus/aggregate-error#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -764,6 +842,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -797,6 +881,12 @@
           "url": "https://github.com/chalk/ansi-regex#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
         }
       ]
     },
@@ -832,6 +922,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -865,6 +961,12 @@
           "url": "https://github.com/chalk/ansi-styles#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
         }
       ]
     },
@@ -933,6 +1035,12 @@
           "url": "https://github.com/npm/are-we-there-yet",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
         }
       ]
     },
@@ -1137,6 +1245,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -1170,6 +1284,12 @@
           "url": "https://github.com/isaacs/chownr#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
         }
       ]
     },
@@ -1205,6 +1325,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        }
       ]
     },
     {
@@ -1238,6 +1364,12 @@
           "url": "https://github.com/Qix-/color-convert#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=7.0.0"
         }
       ]
     },
@@ -1443,6 +1575,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        }
       ]
     },
     {
@@ -1476,6 +1614,12 @@
           "url": "https://github.com/debug-js/debug#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6.0"
         }
       ]
     },
@@ -1543,6 +1687,12 @@
           "url": "https://github.com/lovell/detect-libc#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -1748,6 +1898,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        }
       ]
     },
     {
@@ -1815,6 +1971,12 @@
           "url": "http://esprima.org",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=4"
         }
       ]
     },
@@ -1986,6 +2148,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
+        }
       ]
     },
     {
@@ -2020,6 +2188,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        }
       ]
     },
     {
@@ -2053,6 +2227,12 @@
           "url": "https://github.com/npm/fs-minipass#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -2122,6 +2302,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        }
       ]
     },
     {
@@ -2156,6 +2342,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.18"
+        }
       ]
     },
     {
@@ -2189,6 +2381,12 @@
           "url": "https://github.com/isaacs/node-glob#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "*"
         }
       ]
     },
@@ -2325,6 +2523,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        }
       ]
     },
     {
@@ -2358,6 +2562,12 @@
           "url": "https://github.com/TooTallNate/node-https-proxy-agent#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6"
         }
       ]
     },
@@ -2393,6 +2603,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        }
       ]
     },
     {
@@ -2426,6 +2642,12 @@
           "url": "https://github.com/ashtuchkin/iconv-lite",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
         }
       ]
     },
@@ -2461,6 +2683,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.8.19"
+        }
       ]
     },
     {
@@ -2494,6 +2722,12 @@
           "url": "https://github.com/sindresorhus/indent-string#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -2596,6 +2830,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 12"
+        }
       ]
     },
     {
@@ -2629,6 +2869,12 @@
           "url": "https://github.com/sindresorhus/is-fullwidth-code-point#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -2732,6 +2978,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16"
+        }
       ]
     },
     {
@@ -2765,6 +3017,12 @@
           "url": "https://github.com/isaacs/jackspeak#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
         }
       ]
     },
@@ -2902,6 +3160,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=18"
+        }
       ]
     },
     {
@@ -2935,6 +3199,12 @@
           "url": "https://github.com/isaacs/node-lru-cache#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "14 || >=16.14"
         }
       ]
     },
@@ -2970,6 +3240,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -3003,6 +3279,12 @@
           "url": "https://github.com/npm/make-fetch-happen#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
         }
       ]
     },
@@ -3038,6 +3320,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "*"
+        }
       ]
     },
     {
@@ -3071,6 +3359,12 @@
           "url": "https://github.com/isaacs/minimatch#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
         }
       ]
     },
@@ -3106,6 +3400,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
+        }
       ]
     },
     {
@@ -3139,6 +3439,12 @@
           "url": "https://github.com/npm/minipass-fetch#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -3174,6 +3480,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        }
       ]
     },
     {
@@ -3191,7 +3503,13 @@
           }
         }
       ],
-      "purl": "pkg:npm/minipass-pipeline@1.2.4"
+      "purl": "pkg:npm/minipass-pipeline@1.2.4",
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
+      ]
     },
     {
       "type": "library",
@@ -3224,6 +3542,12 @@
           "url": "https://github.com/isaacs/minipass-sized#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -3259,6 +3583,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -3292,6 +3622,12 @@
           "url": "https://github.com/isaacs/minipass#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -3327,6 +3663,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.17"
+        }
       ]
     },
     {
@@ -3361,6 +3703,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        }
       ]
     },
     {
@@ -3393,6 +3741,12 @@
           "url": "https://github.com/isaacs/node-mkdirp#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
         }
       ]
     },
@@ -3561,6 +3915,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 0.6"
+        }
       ]
     },
     {
@@ -3594,6 +3954,12 @@
           "url": "https://github.com/bitinn/node-fetch",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "4.x || >=6.0.0"
         }
       ]
     },
@@ -3629,6 +3995,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.14.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -3663,6 +4035,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        }
       ]
     },
     {
@@ -3696,6 +4074,12 @@
           "url": "https://github.com/npm/nopt#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -3765,6 +4149,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -3832,6 +4222,12 @@
           "url": "https://github.com/sindresorhus/p-map#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
         }
       ]
     },
@@ -3901,6 +4297,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -3934,6 +4336,12 @@
           "url": "https://github.com/sindresorhus/path-key#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -3969,6 +4377,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=16 || 14 >=14.18"
+        }
       ]
     },
     {
@@ -4002,6 +4416,12 @@
           "url": "https://github.com/npm/proc-log#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -4037,6 +4457,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -4071,6 +4497,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        }
       ]
     },
     {
@@ -4104,6 +4536,12 @@
           "url": "https://mths.be/punycode",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
         }
       ]
     },
@@ -4173,6 +4611,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.12"
+        }
       ]
     },
     {
@@ -4205,6 +4649,12 @@
           "url": "https://github.com/nodejs/readable-stream#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6"
         }
       ]
     },
@@ -4240,6 +4690,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        }
       ]
     },
     {
@@ -4274,6 +4730,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.12"
+        }
       ]
     },
     {
@@ -4307,6 +4769,12 @@
           "url": "https://github.com/tim-kos/node-retry",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 4"
         }
       ]
     },
@@ -4512,6 +4980,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        }
       ]
     },
     {
@@ -4580,6 +5054,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -4613,6 +5093,12 @@
           "url": "https://github.com/sindresorhus/shebang-regex#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
         }
       ]
     },
@@ -4682,6 +5168,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14"
+        }
       ]
     },
     {
@@ -4715,6 +5207,16 @@
           "url": "https://github.com/JoshGlazebrook/smart-buffer/",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 6.0.0"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:npm",
+          "value": ">= 3.0.0"
         }
       ]
     },
@@ -4750,6 +5252,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10"
+        }
       ]
     },
     {
@@ -4784,6 +5292,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 14"
+        }
       ]
     },
     {
@@ -4817,6 +5331,16 @@
           "url": "https://github.com/JoshGlazebrook/socks/",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 10.0.0"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:npm",
+          "value": ">= 3.0.0"
         }
       ]
     },
@@ -5022,6 +5546,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -5089,6 +5619,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -5122,6 +5658,12 @@
           "url": "https://github.com/sindresorhus/string-width#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
         }
       ]
     },
@@ -5157,6 +5699,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8"
+        }
       ]
     },
     {
@@ -5191,6 +5739,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
+        }
       ]
     },
     {
@@ -5224,6 +5778,12 @@
           "url": "https://github.com/isaacs/node-tar#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
         }
       ]
     },
@@ -5293,6 +5853,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
+        }
       ]
     },
     {
@@ -5326,6 +5892,12 @@
           "url": "https://github.com/npm/unique-slug#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^14.17.0 || ^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -5497,6 +6069,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 8"
+        }
       ]
     },
     {
@@ -5530,6 +6108,12 @@
           "url": "https://github.com/npm/node-which#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": "^16.13.0 || >=18.0.0"
         }
       ]
     },
@@ -5599,6 +6183,12 @@
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
         }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        }
       ]
     },
     {
@@ -5632,6 +6222,12 @@
           "url": "https://github.com/chalk/wrap-ansi#readme",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12"
         }
       ]
     },
@@ -5700,6 +6296,12 @@
           "url": "http://github.com/oozcitak/xmlbuilder2",
           "type": "website",
           "comment": "as detected from PackageJson property \"homepage\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=12.0"
         }
       ]
     },
