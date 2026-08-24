@@ -123,6 +123,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="has-tostringtag@npm:1.0.2">
       <author>Jordan Harband</author>
@@ -149,6 +152,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-string@npm:1.0.0">
       <author>Jordan Harband</author>
@@ -175,6 +181,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-string@npm:1.0.7">
       <author>Jordan Harband</author>
@@ -201,6 +210,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="provides-peer-100@portal:packages/provides-peer-100::locator=concurrent-peer-deps%40workspace%3A.">
       <name>provides-peer-100</name>

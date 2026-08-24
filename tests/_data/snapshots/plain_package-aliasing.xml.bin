@@ -70,6 +70,10 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=18</property>
+        <property name="cdx:npm:package:constraint:engine:yarn">&gt;=4</property>
+      </properties>
     </component>
     <properties>
       <property name="cdx:reproducible">true</property>
@@ -102,6 +106,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@isaacs/cliui@npm:8.0.2">
       <author>Ben Coe</author>
@@ -129,6 +136,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@mapbox/node-pre-gyp@npm:1.0.11">
       <author>Dane Springmeyer</author>
@@ -183,6 +193,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@npmcli/fs@npm:3.1.0">
       <author>GitHub Inc.</author>
@@ -210,6 +223,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@oozcitak/dom@npm:1.15.10">
       <author>Ozgur Ozcitak</author>
@@ -237,6 +253,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@oozcitak/infra@npm:1.0.8">
       <author>Ozgur Ozcitak</author>
@@ -264,6 +283,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@oozcitak/url@npm:1.0.4">
       <author>Ozgur Ozcitak</author>
@@ -291,6 +313,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@oozcitak/util@npm:8.3.8">
       <author>Ozgur Ozcitak</author>
@@ -318,6 +343,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="@pkgjs/parseargs@npm:0.11.0">
       <group>@pkgjs</group>
@@ -344,6 +372,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="abbrev@npm:1.1.1">
       <author>Isaac Z. Schlueter</author>
@@ -396,6 +427,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="agent-base@npm:6.0.2">
       <author>Nathan Rajlich</author>
@@ -422,6 +456,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="agent-base@npm:7.1.0">
       <author>Nathan Rajlich</author>
@@ -448,6 +485,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="aggregate-error@npm:3.1.0">
       <author>Sindre Sorhus</author>
@@ -474,6 +514,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="ajv-formats-draft2019@npm:1.6.1 [eccf6]">
       <author>Carlo Quinonez</author>
@@ -578,6 +621,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="ansi-regex@npm:6.0.1">
       <author>Sindre Sorhus</author>
@@ -604,6 +650,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="ansi-styles@npm:4.3.0">
       <author>Sindre Sorhus</author>
@@ -630,6 +679,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="ansi-styles@npm:6.2.1">
       <author>Sindre Sorhus</author>
@@ -656,6 +708,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="aproba@npm:2.0.0">
       <author>Rebecca Turner</author>
@@ -708,6 +763,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="argparse@npm:1.0.10">
       <name>argparse</name>
@@ -863,6 +921,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="chownr@npm:2.0.0">
       <author>Isaac Z. Schlueter</author>
@@ -889,6 +950,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="clean-stack@npm:2.2.0">
       <author>Sindre Sorhus</author>
@@ -915,6 +979,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="color-convert@npm:2.0.1">
       <author>Heather Arthur</author>
@@ -941,6 +1008,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=7.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="color-name@npm:1.1.4">
       <author>DY</author>
@@ -1097,6 +1167,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="debug@npm:4.3.4 [428f3]">
       <author>Josh Junon</author>
@@ -1123,6 +1196,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="delegates@npm:1.0.0">
       <name>delegates</name>
@@ -1174,6 +1250,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="discontinuous-range@npm:1.0.0">
       <author>David Tudury</author>
@@ -1330,6 +1409,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="err-code@npm:2.0.3">
       <author>IndigoUnited</author>
@@ -1382,6 +1464,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="exponential-backoff@npm:3.1.1">
       <author>Sami Sayegh</author>
@@ -1512,6 +1597,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="fs-minipass@npm:2.1.0">
       <author>Isaac Z. Schlueter</author>
@@ -1538,6 +1626,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="fs-minipass@npm:3.0.3">
       <author>GitHub Inc.</author>
@@ -1564,6 +1655,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="fs.realpath@npm:1.0.0">
       <author>Isaac Z. Schlueter</author>
@@ -1616,6 +1710,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="glob@npm:10.3.10">
       <author>Isaac Z. Schlueter</author>
@@ -1642,6 +1739,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
+      </properties>
     </component>
     <component type="library" bom-ref="glob@npm:7.2.3">
       <author>Isaac Z. Schlueter</author>
@@ -1668,6 +1768,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">*</property>
+      </properties>
     </component>
     <component type="library" bom-ref="graceful-fs@npm:4.2.11">
       <name>graceful-fs</name>
@@ -1771,6 +1874,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="https-proxy-agent@npm:5.0.1">
       <author>Nathan Rajlich</author>
@@ -1797,6 +1903,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="https-proxy-agent@npm:7.0.4">
       <author>Nathan Rajlich</author>
@@ -1823,6 +1932,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="iconv-lite@npm:0.6.3">
       <author>Alexander Shtuchkin</author>
@@ -1849,6 +1961,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="imurmurhash@npm:0.1.4">
       <author>Jens Taylor</author>
@@ -1875,6 +1990,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.8.19</property>
+      </properties>
     </component>
     <component type="library" bom-ref="indent-string@npm:4.0.0">
       <author>Sindre Sorhus</author>
@@ -1901,6 +2019,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="inflight@npm:1.0.6">
       <author>Isaac Z. Schlueter</author>
@@ -1978,6 +2099,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-fullwidth-code-point@npm:3.0.0">
       <author>Sindre Sorhus</author>
@@ -2004,6 +2128,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="is-lambda@npm:1.0.1">
       <author>Thomas Watson Steen</author>
@@ -2082,6 +2209,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16</property>
+      </properties>
     </component>
     <component type="library" bom-ref="jackspeak@npm:2.3.6">
       <author>Isaac Z. Schlueter</author>
@@ -2108,6 +2238,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="js-yaml@npm:3.14.1">
       <author>Vladimir Zapparov</author>
@@ -2212,6 +2345,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=18</property>
+      </properties>
     </component>
     <component type="library" bom-ref="lru-cache@npm:10.2.0">
       <author>Isaac Z. Schlueter</author>
@@ -2238,6 +2374,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">14 || &gt;=16.14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="lru-cache@npm:6.0.0">
       <author>Isaac Z. Schlueter</author>
@@ -2264,6 +2403,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="make-dir@npm:3.1.0">
       <author>Sindre Sorhus</author>
@@ -2290,6 +2432,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="make-fetch-happen@npm:13.0.0">
       <author>GitHub Inc.</author>
@@ -2316,6 +2461,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minimatch@npm:3.1.2">
       <author>Isaac Z. Schlueter</author>
@@ -2342,6 +2490,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">*</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minimatch@npm:9.0.3">
       <author>Isaac Z. Schlueter</author>
@@ -2368,6 +2519,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass-collect@npm:2.0.1">
       <author>Isaac Z. Schlueter</author>
@@ -2394,6 +2548,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass-fetch@npm:3.0.4">
       <author>GitHub Inc.</author>
@@ -2420,6 +2577,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass-flush@npm:1.0.5">
       <author>Isaac Z. Schlueter</author>
@@ -2446,6 +2606,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass-pipeline@npm:1.2.4">
       <author>Isaac Z. Schlueter</author>
@@ -2458,6 +2621,9 @@
         </license>
       </licenses>
       <purl>pkg:npm/minipass-pipeline@1.2.4</purl>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass-sized@npm:1.0.3">
       <author>Isaac Z. Schlueter</author>
@@ -2484,6 +2650,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass@npm:3.3.6">
       <author>Isaac Z. Schlueter</author>
@@ -2510,6 +2679,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass@npm:5.0.0">
       <author>Isaac Z. Schlueter</author>
@@ -2536,6 +2708,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minipass@npm:7.0.4">
       <author>Isaac Z. Schlueter</author>
@@ -2562,6 +2737,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
+      </properties>
     </component>
     <component type="library" bom-ref="minizlib@npm:2.1.2">
       <author>Isaac Z. Schlueter</author>
@@ -2588,6 +2766,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="mkdirp@npm:1.0.4">
       <name>mkdirp</name>
@@ -2613,6 +2794,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="moo@npm:0.5.2">
       <author>Tim Radvan</author>
@@ -2740,6 +2924,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 0.6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="node-fetch@npm:2.7.0 [5547f]">
       <author>David Frank</author>
@@ -2766,6 +2953,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">4.x || &gt;=6.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="node-gyp@npm:10.0.1">
       <author>Nathan Rajlich</author>
@@ -2792,6 +2982,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.14.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="nopt@npm:5.0.0">
       <author>Isaac Z. Schlueter</author>
@@ -2818,6 +3011,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="nopt@npm:7.2.0">
       <author>GitHub Inc.</author>
@@ -2844,6 +3040,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="npmlog@npm:5.0.1">
       <author>Isaac Z. Schlueter</author>
@@ -2896,6 +3095,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="once@npm:1.4.0">
       <author>Isaac Z. Schlueter</author>
@@ -2948,6 +3150,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="packageurl-js@npm:1.2.1">
       <author>the purl authors</author>
@@ -3000,6 +3205,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="path-key@npm:3.1.1">
       <author>Sindre Sorhus</author>
@@ -3026,6 +3234,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="path-scurry@npm:1.10.1">
       <author>Isaac Z. Schlueter</author>
@@ -3052,6 +3263,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=16 || 14 &gt;=14.17</property>
+      </properties>
     </component>
     <component type="library" bom-ref="proc-log@npm:3.0.0">
       <author>GitHub Inc.</author>
@@ -3078,6 +3292,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="promise-retry@npm:2.0.1">
       <author>IndigoUnited</author>
@@ -3104,6 +3321,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="punycode@npm:2.3.1">
       <author>Mathias Bynens</author>
@@ -3130,6 +3350,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="railroad-diagrams@npm:1.0.0">
       <author>Tab Atkins Jr.</author>
@@ -3182,6 +3405,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="readable-stream@npm:3.6.2">
       <name>readable-stream</name>
@@ -3207,6 +3433,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6</property>
+      </properties>
     </component>
     <component type="library" bom-ref="require-from-string@npm:2.0.2">
       <author>Vsevolod Strukchinsky</author>
@@ -3233,6 +3462,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="ret@npm:0.1.15">
       <author>Roly Fentanes</author>
@@ -3259,6 +3491,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="retry@npm:0.12.0">
       <author>Tim Koschützki</author>
@@ -3285,6 +3520,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 4</property>
+      </properties>
     </component>
     <component type="library" bom-ref="rimraf@npm:3.0.2">
       <author>Isaac Z. Schlueter</author>
@@ -3441,6 +3679,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="set-blocking@npm:2.0.0">
       <author>Ben Coe</author>
@@ -3493,6 +3734,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="shebang-regex@npm:3.0.0">
       <author>Sindre Sorhus</author>
@@ -3519,6 +3763,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="signal-exit@npm:3.0.7">
       <author>Ben Coe</author>
@@ -3571,6 +3818,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="smart-buffer@npm:4.2.0">
       <author>Josh Glazebrook</author>
@@ -3597,6 +3847,10 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 6.0.0</property>
+        <property name="cdx:npm:package:constraint:engine:npm">&gt;= 3.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="smtp-address-parser@npm:1.0.10">
       <author>Gene Hightower</author>
@@ -3623,6 +3877,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=0.10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="socks-proxy-agent@npm:8.0.2">
       <author>Nathan Rajlich</author>
@@ -3649,6 +3906,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 14</property>
+      </properties>
     </component>
     <component type="library" bom-ref="socks@npm:2.8.1">
       <author>Josh Glazebrook</author>
@@ -3675,6 +3935,10 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 10.0.0</property>
+        <property name="cdx:npm:package:constraint:engine:npm">&gt;= 3.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="spdx-exceptions@npm:2.5.0">
       <author>The Linux Foundation</author>
@@ -3831,6 +4095,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="string_decoder@npm:1.3.0">
       <name>string_decoder</name>
@@ -3882,6 +4149,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="string-width@npm:5.1.2">
       <author>Sindre Sorhus</author>
@@ -3908,6 +4178,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="strip-ansi@npm:6.0.1">
       <author>Sindre Sorhus</author>
@@ -3934,6 +4207,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="strip-ansi@npm:7.1.0">
       <author>Sindre Sorhus</author>
@@ -3960,6 +4236,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="tar@npm:6.2.0">
       <author>GitHub Inc.</author>
@@ -3986,6 +4265,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="tr46@npm:0.0.3">
       <author>Sebastian Mayr</author>
@@ -4038,6 +4320,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="unique-slug@npm:4.0.0">
       <author>GitHub Inc.</author>
@@ -4064,6 +4349,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^14.17.0 || ^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="uri-js@npm:4.4.1">
       <author>Gary Court</author>
@@ -4194,6 +4482,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;= 8</property>
+      </properties>
     </component>
     <component type="library" bom-ref="which@npm:4.0.0">
       <author>GitHub Inc.</author>
@@ -4220,6 +4511,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">^16.13.0 || &gt;=18.0.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="wide-align@npm:1.1.5">
       <author>Rebecca Turner</author>
@@ -4272,6 +4566,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=10</property>
+      </properties>
     </component>
     <component type="library" bom-ref="wrap-ansi@npm:8.1.0">
       <author>Sindre Sorhus</author>
@@ -4298,6 +4595,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12</property>
+      </properties>
     </component>
     <component type="library" bom-ref="wrappy@npm:1.0.2">
       <author>Isaac Z. Schlueter</author>
@@ -4350,6 +4650,9 @@
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+      <properties>
+        <property name="cdx:npm:package:constraint:engine:node">&gt;=12.0</property>
+      </properties>
     </component>
     <component type="library" bom-ref="yallist@npm:4.0.0">
       <author>Isaac Z. Schlueter</author>
