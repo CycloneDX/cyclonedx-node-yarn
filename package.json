@@ -90,7 +90,7 @@
     "eslint-plugin-n": "17.24.0",
     "eslint-plugin-promise": "7.3.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "eslint-plugin-tsdoc": "0.5.2",
+    "eslint-plugin-tsdoc": "0.5.4",
     "globals": "^17.0.0",
     "knip": "6.41.0",
     "libxmljs2": "^0.35||^0.37",
