@@ -293,7 +293,7 @@ __metadata:
     eslint-plugin-n: "npm:17.24.0"
     eslint-plugin-promise: "npm:7.3.0"
     eslint-plugin-simple-import-sort: "npm:12.1.1"
-    eslint-plugin-tsdoc: "npm:0.5.2"
+    eslint-plugin-tsdoc: "npm:0.5.4"
     globals: "npm:^17.0.0"
     hosted-git-info: "npm:9.0.3"
     knip: "npm:6.41.0"
@@ -565,22 +565,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc-config@npm:0.18.1":
-  version: 0.18.1
-  resolution: "@microsoft/tsdoc-config@npm:0.18.1"
+"@microsoft/tsdoc-config@npm:0.18.3":
+  version: 0.18.3
+  resolution: "@microsoft/tsdoc-config@npm:0.18.3"
   dependencies:
-    "@microsoft/tsdoc": "npm:0.16.0"
+    "@microsoft/tsdoc": "npm:0.17.1"
     ajv: "npm:~8.18.0"
     jju: "npm:~1.4.0"
     resolve: "npm:~1.22.2"
-  checksum: 10c0/06507f7ced4fadf3e68368c60810c1e057403581f720e6cf96b4d6b6bc7a927232510da40425ffd67d5d918ec7cfba8baec56406687330f233f67eb11b9d8d65
+  checksum: 10c0/8a065caa452bb7f6aa6b0cf95acad970b7e10af39a856988ba5df7e19bc482444454f7dc48b86d98908b6600b009757c34a769ba302e3bc5ef04d1076ac71fc9
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc@npm:0.16.0":
-  version: 0.16.0
-  resolution: "@microsoft/tsdoc@npm:0.16.0"
-  checksum: 10c0/8883bb0ed22753af7360e9222687fda4eb448f0a574ea34b4596c11e320148b3ae0d24e00f8923df8ba7bc62a46a6f53b9343243a348640d923dfd55d52cd6bb
+"@microsoft/tsdoc@npm:0.17.1":
+  version: 0.17.1
+  resolution: "@microsoft/tsdoc@npm:0.17.1"
+  checksum: 10c0/a8d5dd60edc60a8f4de7b1b260cd0633205457a630316b75fd2afe0a633d3acd3389b4e483c047d681981da89cd6448e8f6e0387dc32533ecd63fbce3a580a92
   languageName: node
   linkType: hard
 
@@ -3647,14 +3647,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tsdoc@npm:0.5.2":
-  version: 0.5.2
-  resolution: "eslint-plugin-tsdoc@npm:0.5.2"
+"eslint-plugin-tsdoc@npm:0.5.4":
+  version: 0.5.4
+  resolution: "eslint-plugin-tsdoc@npm:0.5.4"
   dependencies:
-    "@microsoft/tsdoc": "npm:0.16.0"
-    "@microsoft/tsdoc-config": "npm:0.18.1"
+    "@microsoft/tsdoc": "npm:0.17.1"
+    "@microsoft/tsdoc-config": "npm:0.18.3"
     "@typescript-eslint/utils": "npm:~8.56.0"
-  checksum: 10c0/ce6c9f7776c06dbf21273096d4a827ad99378966ed834026b0248390b4a2ea5ce0731623a48835989d13e0aea48a4ffde613449a4c1393ff3ab4bd5ad7fdf0f6
+  peerDependencies:
+    eslint: ">=7"
+  peerDependenciesMeta:
+    eslint:
+      optional: true
+  checksum: 10c0/8824530a0474323e470cf0dd6b9475dcce32012493c68a0d4bba9303bd5590f4914c5ed9fbb8aec67ae9851057e2cc27573da532f1a6148006574bc8a0788c6f
   languageName: node
   linkType: hard
 
