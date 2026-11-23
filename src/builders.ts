@@ -17,8 +17,6 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/* eslint-disable @typescript-eslint/max-params -- bassdscho */
-
 // import submodules so to prevent load of unused not-tree-shakable dependencies - like 'AJV'
 import { Utils as BomUUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
 import type { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
@@ -71,6 +69,7 @@ export class BomBuilder {
 
   readonly console: Console
 
+  /* eslint-disable-next-line @typescript-eslint/max-params -- ack */
   constructor (
     toolBuilder: BomBuilder['toolBuilder'],
     componentBuilder: BomBuilder['componentBuilder'],
@@ -380,6 +379,7 @@ export class BomBuilder {
     }
   }
 
+  /* eslint-disable-next-line @typescript-eslint/max-params -- ack */
   async * gatherDependencies (
     component: Component, pkg: Package,
     project: Project,
