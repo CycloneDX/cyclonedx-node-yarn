@@ -4,7 +4,7 @@
     "config:recommended",
     ":configMigration",
     ":gitSignOff",
-    ":prHourlyLimitNone",
+    ":disableRateLimiting",
     "schedule:weekends",
   ],
   "minimumReleaseAge": "7 days",
