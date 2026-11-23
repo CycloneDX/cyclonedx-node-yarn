@@ -2403,13 +2403,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "ansi-styles@npm:7.0.0"
-  checksum: 10c0/406cf8984c682d632738964db918d895d84ec4ff39bffd0dddc81c4a4669a77b57adb0b58b26a1cc6ebcff0e30581d5946fc9b6f0394f6d9ac0b42f5ea97d216
-  languageName: node
-  linkType: hard
-
 "are-docs-informative@npm:^0.0.2":
   version: 0.0.2
   resolution: "are-docs-informative@npm:0.0.2"
@@ -2428,6 +2421,13 @@ __metadata:
   version: 3.0.4
   resolution: "argparse@npm:3.0.4"
   checksum: 10c0/845346e39e677b46f8558cece7c8dad1f7045f8b86af33356d8565b26a16940bf770a14a51d6da40ce76554a141e0e95b514d055d1da17a2f1b42df7d523fa0f
+  languageName: node
+  linkType: hard
+
+"argsclopts@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "argsclopts@npm:1.1.1"
+  checksum: 10c0/3dc60b93a03f18bbb7f14d02ca32960d3408ecfd2de3b6d3239e186b1d81e3c17f28178ed8c93b68165aa7f26206007fd746514db0eb5213353b7c869830a9af
   languageName: node
   linkType: hard
 
@@ -5172,13 +5172,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memorystream@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "memorystream@npm:0.3.1"
-  checksum: 10c0/4bd164657711d9747ff5edb0508b2944414da3464b7fe21ac5c67cf35bba975c4b446a0124bd0f9a8be54cfc18faf92e92bd77563a20328b1ccf2ff04e9f39b9
-  languageName: node
-  linkType: hard
-
 "merge2@npm:^1.3.0":
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
@@ -5596,23 +5589,22 @@ __metadata:
   linkType: hard
 
 "npm-run-all2@npm:^9.0.0":
-  version: 9.0.3
-  resolution: "npm-run-all2@npm:9.0.3"
+  version: 9.1.0
+  resolution: "npm-run-all2@npm:9.1.0"
   dependencies:
-    ansi-styles: "npm:^7.0.0"
+    argsclopts: "npm:^1.1.1"
     cross-spawn: "npm:^7.0.6"
-    memorystream: "npm:^0.3.1"
     picomatch: "npm:^4.0.2"
     pidtree: "npm:^1.0.0"
     read-package-json-fast: "npm:^6.0.0"
-    shell-quote: "npm:^1.8.4"
+    shell-quote: "npm:^1.12.0"
     which: "npm:^7.0.0"
   bin:
     npm-run-all: bin/npm-run-all/index.js
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10c0/71a72e7ed7e11a8f4e326ab9769333a4f096998c1117e6cf804f7d0cf6e6fe04725a5c80a509b1d6275015d33d3f41f13c530e01dbd5e89b5bad6cf499deebe1
+  checksum: 10c0/2b9cd42da31d08e4fd7a25aa15ef66f602d670ea63bdf3923f00b8ca77d5929d1ac9848ec9e920de4f8f8d41b40614764a8952e4f99061bb79f960fae153779e
   languageName: node
   linkType: hard
 
@@ -6677,7 +6669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shell-quote@npm:^1.6.1, shell-quote@npm:^1.8.4":
+"shell-quote@npm:^1.12.0, shell-quote@npm:^1.6.1":
   version: 1.12.0
   resolution: "shell-quote@npm:1.12.0"
   checksum: 10c0/1605a4ed6a758bf13de7cb8197a4184d8015f7a4dbdcd6cd4a717d5b30b3ae7666300cc4ae7f3155cf80ace9739e9e82061ee5aa1a648f53f5fab31a220816d0
