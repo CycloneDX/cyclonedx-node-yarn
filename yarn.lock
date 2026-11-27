@@ -266,7 +266,7 @@ __metadata:
     eslint-plugin-tsdoc: "npm:0.5.4"
     globals: "npm:^17.0.0"
     hosted-git-info: "npm:9.0.3"
-    knip: "npm:6.45.1"
+    knip: "npm:6.47.0"
     libxmljs2: "npm:^0.35||^0.37"
     mkdirp: "npm:^3.0.1"
     mocha: "npm:11.8.0"
@@ -4923,9 +4923,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"knip@npm:6.45.1":
-  version: 6.45.1
-  resolution: "knip@npm:6.45.1"
+"knip@npm:6.47.0":
+  version: 6.47.0
+  resolution: "knip@npm:6.47.0"
   dependencies:
     formatly: "npm:^0.11.4"
     get-tsconfig: "npm:4.14.3"
@@ -4941,7 +4941,7 @@ __metadata:
   bin:
     knip: bin/knip.js
     knip-bun: bin/knip-bun.js
-  checksum: 10c0/22ead3ad1f50f35b83e67e26f9e4624fe849e840146c03954dec6a062fcda520e2311daec6f7326f46a55f3e6cb06f1243e6a2f3fb0fadd14dbc04b94a268320
+  checksum: 10c0/5abb7feba98eac44f89047f819ec1e2ffae376e49807d5f9815493fb33314255f0b4b81e441c590c2f9e7407017537544816e3f07983ce6347b720009eadc3d6
   languageName: node
   linkType: hard
 
